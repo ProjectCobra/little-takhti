@@ -1339,6 +1339,11 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
  .st-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.st-cover{height:90px}.st-cover .emo{font-size:46px}.st-body{padding:10px 12px 12px}.st-body b{font-size:16px}
  .st-list{grid-template-columns:1fr}.srq-o .qo{flex:1 1 auto}.tools{grid-template-columns:1fr}}
 .tchip.more{background:#F1F2F6!important;color:var(--muted)!important}
+.pu-pick2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:12px;max-width:620px;margin:14px 0 4px}
+.pu-pick2 label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ai,#7C5CFF)}
+.pu-pick2 select{border:1.5px solid #DCD3FF;border-radius:16px;padding:12px 14px;font-weight:800;background:#fff;color:#2B2550;font-size:16px;text-transform:none;letter-spacing:0;width:100%;min-width:0}
+.pu-wrap .pu-pick2{margin:4px 0 16px;max-width:none}
+@media (max-width:600px){.pu-pick2{grid-template-columns:1fr}}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 30px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -5514,19 +5519,27 @@ function puRow(r){return `<section class="pu-sec"><div class="sec-h"><div><span 
  <div class="pu-grid">${puList().map(k=>`<a class="pu-card" href="#pu-${k}-${r.id}">${puIcon(k)}<b>${k==='listen'&&pug().listen==='spell'?'Listen and spell':PU[k].name}</b><small>${puDesc(k)}</small>${PU[k].ai?'<span class="pu-ai">AI</span>':''}</a>`).join('')}</div></section>`}
 
 /* PowerUps hub */
+function puPicker(sel,id){const r=RID[sel],s=r?SUB[r.sub]:subjectsOf(grade)[0];const packs=RES.filter(x=>!x.set&&!x.quizOnly&&x.sub===s.id);
+ const nm=x=>s.rtl?(UR_EN[x.topic]||x.topic)+' · '+x.topic:x.title.replace(/ Practice$/,'');
+ return `<div class="pu-pick2"><label>Subject<select data-pusub="${id}">${subjectsOf(grade).filter(z=>RES.some(x=>x.sub===z.id&&!x.set)).map(z=>`<option value="${z.id}" ${z.id===s.id?'selected':''}>${z.name}</option>`).join('')}</select></label>
+ <label>Topic<select data-putop="${id}">${packs.map(x=>`<option value="${x.id}" ${x.id===sel?'selected':''}>${nm(x)}</option>`).join('')}</select></label></div>`}
 function powerupsPage(){
- const packs=RES.filter(r=>!r.set&&SUB[r.sub].grade===grade);const sel=puState.hub&&RID[puState.hub]&&SUB[RID[puState.hub].sub].grade===grade?puState.hub:(packs[0]||{}).id;
- app.innerHTML=`<div class="pu-hero"><div><span class="kick pu-kick">${ic.spark}PowerUps</span><h1>Learning tools for every topic</h1><p>Pick a topic, then choose a PowerUp. Flip flashcards, doodle and trace, explore a mindmap, listen to new words, or time a short practice.</p>
-  <div class="pu-pick"><label for="putopic">Topic</label><select id="putopic">${subjectsOf(grade).map(s=>`<optgroup label="${s.name}">${packs.filter(r=>r.sub===s.id).map(r=>`<option value="${r.id}" ${r.id===sel?'selected':''}>${s.rtl?(UR_EN[r.topic]||r.topic)+' · '+r.topic:r.title.replace(/ Practice$/,'')}</option>`).join('')}</optgroup>`).join('')}</select></div></div>
+ const packs=RES.filter(r=>!r.set&&!r.quizOnly&&SUB[r.sub].grade===grade);const sel=puState.hub&&RID[puState.hub]&&SUB[RID[puState.hub].sub].grade===grade?puState.hub:(packs[0]||{}).id;
+ app.innerHTML=`<div class="pu-hero"><div><span class="kick pu-kick">${ic.spark}PowerUps</span><h1>Learning tools for every topic</h1><p>Choose a subject and a topic, then pick a PowerUp. Flip flashcards, doodle and trace, explore a mindmap, listen to new words, or time a short practice.</p>
+  ${puPicker(sel,'hub')}</div>
   <div class="pu-orbs" aria-hidden="true">${['flash','doodle','mind','listen','timer','ask'].map(k=>puIcon(k)).join('')}</div></div>
  <div class="pu-grid big">${puList().map(k=>`<a class="pu-card" data-pu="${k}" href="#pu-${k}-${sel}">${puIcon(k)}<b>${k==='listen'&&pug().listen==='spell'?'Listen and spell':PU[k].name}</b><small>${puDesc(k)}</small>${PU[k].ai?'<span class="pu-ai">AI</span>':''}<span class="pu-go">Open ${ic.arrow}</span></a>`).join('')}</div>`;
- const s=document.getElementById('putopic');s&&s.addEventListener('change',e=>{puState.hub=e.target.value;document.querySelectorAll('[data-pu]').forEach(a=>a.href=`#pu-${a.dataset.pu}-${e.target.value}`)});
 }
+/* subject and topic pickers: on the hub they update the links, inside a PowerUp they switch the topic */
+document.addEventListener('change',e=>{const sb=e.target.closest('[data-pusub]'),tp=e.target.closest('[data-putop]');if(!sb&&!tp)return;
+ let rid;if(sb){const first=RES.find(x=>x.sub===sb.value&&!x.set&&!x.quizOnly);if(!first)return;rid=first.id}else rid=tp.value;
+ const where=(sb||tp).dataset.pusub||(sb||tp).dataset.putop;puState.hub=rid;
+ if(where==='hub')powerupsPage();else location.hash=`#pu-${where}-${rid}`});
 
 /* shared frame for an open PowerUp */
 function puShell(k,r,body){const s=SUB[r.sub];
  return `<div class="pu-wrap s-${s.id}"><div class="pu-top"><a class="ibtn" href="#res-${r.id}" aria-label="Back to the topic">${ic.l}</a>${puIcon(k)}<div class="pu-tt"><h1>${k==='listen'&&pug().listen==='spell'&&!SUB[r.sub].rtl?'Listen and spell':PU[k].name}</h1><small>${GR[s.grade].name} · ${s.name} · ${rTitle(r)}</small></div>
- <div class="pu-sw">${puList().filter(x=>x!==k).map(x=>`<a href="#pu-${x}-${r.id}" title="${PU[x].name}" aria-label="${PU[x].name}">${puIcon(x)}</a>`).join('')}</div></div>${body}</div>`}
+ <div class="pu-sw">${puList().filter(x=>x!==k).map(x=>`<a href="#pu-${x}-${r.id}" title="${PU[x].name}" aria-label="${PU[x].name}">${puIcon(x)}</a>`).join('')}</div></div>${puPicker(r.id,k)}${body}</div>`}
 
 function powerup(h){const m=/^pu-(\w+)-(.+)$/.exec(h);const k=m&&m[1],r=m&&RID[m[2]];
  if(!r||!PU[k]||!puAvail(k)){powerupsPage();return}

@@ -49,7 +49,7 @@ function funHub(){const st=totalStars(),un=stickersUnlocked(),nx=Math.min(STK.le
   <a class="fz-card g-story" href="#stories"><span class="emo big">📖</span><b>Story corner</b><small>Read along stories with questions.</small></a></div>`}
 
 function funBand(){const un=stickersUnlocked(),done=dailyDays().includes(todayStr());
- return `<section class="fz-band"><div class="fz-band-t"><span class="kick">${ic.game}Play zone</span><h2>Daily challenge, games, stories and stickers</h2><p>Five mini games, read-along stories and a sticker book of Pakistan to fill. Keep a daily streak going!</p>
+ return `<section class="fz-band"><div class="fz-band-t"><div><span class="kick">${ic.game}Play zone</span><h2>Daily challenge, games, stories and stickers</h2><p>Play a quick game, read along with a story and fill your sticker book of Pakistan.</p></div>
  <div class="acts"><a class="btn sun lg" href="#play-qx-daily-${grade}">${ic.play}${done?'Play again':'Daily challenge'}</a><a class="btn lg" href="#fun">Open play zone</a></div></div>
  <div class="fz-band-g">${GAMES.map(([k,t,d,e])=>`<a class="fz-mini" href="#game-${k}"><span class="emo">${e}</span><span>${t}</span></a>`).join('')}<a class="fz-mini" href="#stories"><span class="emo">📖</span><span>Story corner</span></a><a class="fz-mini" href="#stickers"><span class="emo">🗂️</span><span>${un}/${STK.length} stickers</span></a></div></section>`}
 function stickerBook(){const un=stickersUnlocked(),st=totalStars();
@@ -166,12 +166,14 @@ const STORIES=[
  {id:'s-chiriya',g:['g2','g3'],ur:true,t:'چڑیا کا گھونسلا',e:'🐦',x:'گرمیوں میں ایک چڑیا نے ہمارے برآمدے میں گھونسلا بنایا۔ وہ تنکے اور دھاگے لا لا کر گھونسلا بناتی رہی۔ کچھ دن بعد گھونسلے میں تین ننھے بچے نکلے۔ میں روز ان کے لیے پانی اور دانہ رکھتی۔ ایک دن بچے اڑنا سیکھ گئے اور آسمان میں اڑ گئے۔ مجھے بہت خوشی ہوئی۔',
   q:[['چڑیا نے گھونسلا کہاں بنایا؟',['برآمدے میں','درخت پر','چھت پر'],0],['گھونسلے میں کتنے بچے نکلے؟',['تین','دو','پانچ'],0],['بچوں نے آخر میں کیا سیکھا؟',['اڑنا','گانا','تیرنا'],0]]}];
 function storiesHub(){const mine=STORIES.filter(s=>s.g.includes(grade));
- const weekly=subjectsOf(grade).flatMap(s=>(PLAN[s.id]||[]).map((p,i)=>({s,p,i}))).filter(o=>o.p&&o.p[4]&&o.p[4][1]).slice(0,40);
+ const subs=subjectsOf(grade).map(s=>({s,list:(PLAN[s.id]||[]).map((p,i)=>({p,i})).filter(o=>o.p&&o.p[4]&&o.p[4][1]&&!/^(Revision|دہرائی)$/.test(o.p[0]))})).filter(x=>x.list.length);
+ const COLS=['#FFF1C2','#DDF4FF','#E3F9D6','#FBE1EB','#ECE7FB','#FDEAD9'];
  app.innerHTML=`<div class="crumbs"><a href="#fun">Play zone</a>/<span>Story corner</span></div>
- <div class="phead"><div style="flex:1"><span class="kick">Story corner</span><h1>Read along stories</h1><p>Tap Read aloud and follow the highlighted words. Answer three questions at the end to earn stars.</p></div><div class="ph-art">${art('english')}</div></div>
- <div class="st-grid">${mine.map(s=>`<a class="st-card" href="#story-${s.id}"><span class="emo big">${s.e}</span><b class="${s.ur?'ur-t':''}">${s.t}</b><small>${s.ur?'Urdu story':'English story'} · 3 questions${bestFor('story-'+s.id)?' · '+[1,2,3].map(k=>k<=bestFor('story-'+s.id)?'★':'☆').join(''):''}</small></a>`).join('')}</div>
- <div class="sec-h"><h2>More short stories from the weekly guide</h2></div>
- <div class="st-list">${weekly.map(o=>`<a class="st-row" href="#story-w-${o.s.id}-${o.i}"><span class="tag">${o.s.name}</span><b class="${isUr(o.p[4][0])?'ur-t':''}">${o.p[4][0]}</b></a>`).join('')}</div>`}
+ <div class="phead"><div style="flex:1"><span class="kick">${ic.book}Story corner</span><h1>Read along stories</h1><p>Tap Read aloud and follow the highlighted words. Answer three questions at the end to earn stars.</p></div><div class="ph-art">${art('english')}</div></div>
+ <section class="st-sec"><div class="sec-h"><h2>Stories with questions</h2><span class="count">${mine.length} stories for ${GR[grade].name}</span></div>
+ <div class="st-grid">${mine.map((s,i)=>{const b=bestFor('story-'+s.id);return `<a class="st-card" href="#story-${s.id}"><span class="st-cover" style="background:${COLS[i%COLS.length]}"><span class="emo">${s.e}</span></span><span class="st-body"><b class="${s.ur?'ur-t':''}" ${s.ur?'dir="rtl"':''}>${s.t}</b><small>${s.ur?'Urdu':'English'} story · 3 questions</small><span class="st-stars">${[1,2,3].map(k=>starSVG(k<=b)).join('')}</span></span></a>`}).join('')}</div></section>
+ <section class="st-sec"><div class="sec-h"><h2>More stories from the weekly guide</h2><span class="count">Read aloud and talk about them</span></div>
+ ${subs.map(x=>`<div class="st-subj s-${x.s.id}"><h3><span class="dot"></span>${x.s.name}</h3><div class="st-list">${x.list.map(o=>{const t=o.p[4][0],u=isUr(t);return `<a class="st-row" href="#story-w-${x.s.id}-${o.i}"><span class="wkn">W${o.i+1}</span><b class="${u?'ur-t':''}" ${u?'dir="rtl"':''}>${t}</b>${ic.arrow}</a>`}).join('')}</div></div>`).join('')}</section>`}
 function storyRead(id){let st=STORIES.find(s=>s.id===id),ask='';
  if(!st){const m=/^w-(.+)-(\d+)$/.exec(id);if(m&&PLAN[m[1]]&&PLAN[m[1]][+m[2]]){const p=PLAN[m[1]][+m[2]],ur=isUr(p[4][1]);const sp=p[4][1].split(ur?'سوال:':'Ask:');st={id,t:p[4][0],e:'📖',x:sp[0].trim(),ur,q:[]};ask=(sp[1]||'').trim()}else return storiesHub()}
  const words=st.x.split(/\s+/);GM={k:'story',st,ans:[],right:0};

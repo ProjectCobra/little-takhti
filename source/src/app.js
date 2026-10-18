@@ -52,9 +52,17 @@ function buildQuiz(r){
  r.pages.forEach(pi=>{const p=PAGES[r.sub][pi];let story='';p.blocks.forEach(b=>{
   if(b.t==='passage'){story=b.text;return}
   const push=x=>{if(x){if(story&&!x.story)x.story=story;out.push(x)}};const ctx=quizify(b.h||p.instr,ur);
+  if(b.nq)return;
   if(b.t==='fill'){const all=b.items.map(it=>{const m=[...it.matchAll(/\{\{(.+?)\}\}/g)];return m.length===1?m[0][1]:null});
+    /* ordering exercises ("number the steps") become first/last questions instead of guessing a number */
+    const toN=x=>x==null?NaN:+String(x).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d));const nums=all.map(toN);
+    if(nums.length>=3&&nums.every(n=>Number.isInteger(n))&&[...nums].sort((x,y)=>x-y).every((v,k)=>v===k+1)&&!nums.every((v,k)=>v===k+1)&&b.items.every(it=>/\{\{[^}]+\}\}\s*$/.test(it))){
+      const txt=b.items.map(it=>it.replace(/\s*\{\{[^}]+\}\}\s*$/,'').trim());const first=txt[nums.indexOf(1)],last=txt[nums.indexOf(nums.length)];
+      push(mkQ(ur?'سب سے پہلے کیا ہوگا؟':'Which comes first?',[first,...shuffle(txt.filter(t=>t!==first)).slice(0,3)],first,{sub:ctx||(ur?'ترتیب کے بارے میں سوچیں۔':'Think about the right order.'),exp:`${ur?'پہلے':'First'}: <b class="exa">${first}</b>`,kind:'order'}));
+      push(mkQ(ur?'سب سے آخر میں کیا ہوگا؟':'Which comes last?',[last,...shuffle(txt.filter(t=>t!==last)).slice(0,3)],last,{sub:ctx||(ur?'ترتیب کے بارے میں سوچیں۔':'Think about the right order.'),exp:`${ur?'آخر میں':'Last'}: <b class="exa">${last}</b>`,kind:'order'}));
+      return}
     const kind=x=>/^\d+$/.test(x)?'n':/^[½¼¾⅓⅔]$|^\d+\/\d+$/.test(x)?'f':'t';
-    b.items.forEach((it,i)=>{const a=all[i];if(a==null||a.length>30)return;let d=all.filter(x=>x&&x!==a&&kind(x)===kind(a));
+    b.items.forEach((it,i)=>{const a=all[i];if(a==null||a.length>30)return;if(it.replace(/\{\{.+?\}\}/,'').replace(/[^\p{L}\p{N}]/gu,'').length<2)return;let d=all.filter(x=>x&&x!==a&&kind(x)===kind(a));
       if(kind(a)==='n')d=uniq(d.filter(x=>Math.abs(+x-+a)<=5).concat(near(+a).map(String)));if(d.length<2&&kind(a)==='f')d=uniq(d.concat(['½','¼','¾','⅓','⅔'].filter(x=>x!==a)));
       if(d.length<1)return;const q=it.replace(/\{\{(.+?)\}\}/,'<span class="qbl"></span>');const exp=it.replace(/\{\{(.+?)\}\}/,'<b class="exa">$1</b>');
       push(mkQ(q,[a,...shuffle(d).slice(0,3)],a,{sub:ctx||(ur?'صحیح جواب چنیں':'Choose the missing answer.'),exp,kind:'fill',raw:it,pool:d}))})}
@@ -110,7 +118,7 @@ function privacy(){app.innerHTML=`<article class="legal"><span class="kick">Priv
 <h2>Contact</h2><p>For any privacy question, write to the email address listed on this site.</p></article>`}
 function home(){
  const subs=subjectsOf(grade),G=GR[grade];
- const newRes=grade==='g1'?RES.filter(r=>r.set):subs.map(s=>RID[s.id+'-t1']);
+ const wkI=Math.min(WEEK_NOW,10);const newRes=uniq(subs.map(s=>{const p=(PLAN[s.id]||[])[wkI];if(!p)return null;const x=p[1].find(v=>typeof v==='string');return x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1))}).filter(Boolean));
  const quizN=RES.filter(r=>!r.set&&hasQuiz(r)).length;
  app.innerHTML=`
  <div class="hero"><div class="hdeco" aria-hidden="true"><i class="sunb"></i><i class="cl c1"></i><i class="cl c2"></i><i class="cl c3"></i><span class="hk k1">${kiteSVG}</span><span class="hk k2">${kiteSVG}</span><i class="hills"></i></div><div class="hero-in"><div>
@@ -140,9 +148,9 @@ function home(){
   <div class="recs wide">${recs.map(x=>`<a class="rec s-${x.r.sub}" href="${x.q?'#play-'+x.r.id:'#res-'+x.r.id}"><span class="sic">${subIcon(SUB[x.r.sub])}</span><span class="t">${T(SUB[x.r.sub].rtl?x.r.topic:x.r.title.replace(/ Practice$/,''))}<small>${SUB[x.r.sub].name} · ${x.why}</small></span><span class="pq">${x.q?ic.play+'Play':ic.sheet+'Open'}</span></a>`).join('')}</div></section>`})()}
  <section id="subjects"><div class="sec-h"><div><span class="kick">${G.name} · ${G.age}</span><h2>Browse by subject</h2></div><a class="lnk" href="#quiz">Play ${G.name} quizzes →</a></div>
  <div class="subs n${subs.length}">${subs.map(s=>`<a class="subj s-${s.id}" href="#subject-${s.id}"><div class="sart">${art(s.kind)}</div><span class="sic">${subIcon(s)}</span><h3>${s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h3><p class="meta2">${RES.filter(r=>r.sub===s.id).length} resources · ${s.topics.length} topics</p>
-  <div class="chips">${s.topics.map(t=>`<span class="tchip${isUr(t)?' ur-t':''}"${isUr(t)?' dir="rtl"':''}>${t}</span>`).join('')}</div><span class="go">Explore ${ic.arrow}</span></a>`).join('')}</div></section>
+  <div class="chips">${s.topics.slice(0,5).map(t=>`<span class="tchip${isUr(t)?' ur-t':''}"${isUr(t)?' dir="rtl"':''}>${t}</span>`).join('')}${s.topics.length>5?`<span class="tchip more">+${s.topics.length-5} more</span>`:''}</div><span class="go">Explore ${ic.arrow}</span></a>`).join('')}</div></section>
 
- <section><div class="sec-h"><div><span class="kick">Fresh</span><h2>New this week</h2></div><span class="lnk">${G.name} · added 12 Oct 2026</span></div>
+ <section><div class="sec-h"><div><span class="kick">This week</span><h2>This week's packs</h2></div><a class="lnk" href="#class">${G.name} · ${WEEKS[wkI][0]}, ${WEEKS[wkI][1]}</a></div>
  <div class="strip">${newRes.map(card).join('')}</div></section>
 
  ${funBand()}${adSlot('home')}<section class="pu-band"><div class="pu-band-t"><span class="kick pu-kick">${ic.spark}New · PowerUps</span><h2>Learning tools that power up every topic</h2><p>Flashcards, a doodleboard for tracing, mindmaps, listen-and-read, a study timer${puAvail('ask')?' and Takhti, an AI study buddy':''}. Open any worksheet to use them.</p><a class="btn sun lg" href="#powerups">${ic.spark}Explore PowerUps</a></div>

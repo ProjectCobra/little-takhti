@@ -84,7 +84,33 @@ SUBJECTS.forEach(s=>{
       obj:[...new Set(idx.map(i=>pages[i].obj))]});
   });
 });
+
+/* blocks where more than one word bank answer would fit the sentence: kept on worksheets, left out of quizzes */
+['A giraffe is {{taller}}','The {{tiny}} ant','{{First}}, boil the water','Turn {{left}} at the shop','آسمان {{نیلا}}','{{یہ}} میرا قلم','The cat is {{sleeping}}','Belief in {{Allah}}'].forEach(m=>SUBJECTS.forEach(s=>PAGES[s.id].forEach(p=>p.blocks.forEach(b=>{if(b.t==='fill'&&b.items.some(it=>it.includes(m)))b.nq=1}))));
 const RID=Object.fromEntries(RES.map(r=>[r.id,r]));
+/* every subject gets a final revision week so all subjects run to the same number of weeks */
+const WEEKS_TARGET=Math.max(...SUBJECTS.filter(s=>!s.community).map(s=>(PLAN[s.id]||[]).length));
+const REV_STORY={
+ english:["The Word Detective","Sara looked back at her English book and found her favourite words from every week: nouns, rhymes and new spellings. She made a word wall for the fridge. Ask: Which word from this term is your favourite?"],
+ maths:["The Maths Fair","At the maths fair, each stall showed something the class had learnt: counting, shapes, money and time. Bilal won a prize for the fastest answers! Ask: What maths did you learn this term?"],
+ science:["The Science Show","Hira's class held a science show. They showed plants, magnets, light and water. Parents asked lots of questions. Ask: Which experiment would you show?"],
+ social:["The Class Scrapbook","Grade students made a scrapbook of everything they learnt about family, community and Pakistan. Ask: What would you add to the scrapbook?"],
+ history:["The Time Machine","Usman pretended to travel in a time machine to every place he studied this term. He waved to ancient builders and great leaders. Ask: Where would you travel in a time machine?"],
+ geography:["Around Pakistan","Zara drew a big map and marked every place she learnt about: mountains, rivers, cities and deserts. Ask: Which place would you like to visit?"],
+ gk:["The Quiz Show","The class held a quiz show with questions from every topic. Everyone got stars for trying. Ask: What is one new fact you learnt?"],
+ islamiat:["The Good Deeds Tree","The class made a paper tree. Each leaf had a good deed or lesson from Islamiat this term. Ask: Which lesson will you remember most?"],
+ computer:["The Computer Showcase","Each child showed their best computer work: drawings, slides and safe internet posters. Ask: What computer skill are you proud of?"],
+ urdu:["دہرائی کا دن","آج سب بچوں نے اپنی اردو کی کاپیاں دیکھیں اور اپنے پسندیدہ اسباق دوبارہ پڑھے۔ استانی نے سب کو شاباش دی۔ سوال: آپ کا پسندیدہ اردو سبق کون سا ہے؟"]};
+SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||plan.length!==WEEKS_TARGET-1)return;
+ const pages=[];s.topics.forEach(t=>{const i=PAGES[s.id].findIndex(p=>p.topic===t);if(i>=0)pages.push(i)});
+ const ur=!!s.rtl,G=GR[s.grade].name;
+ const r={id:s.id+'-rev',sub:s.id,set:true,rev:true,title:ur?'دہرائی سیٹ':s.name+' Revision Set',en:ur?'Urdu revision set':'',topic:'Revision',pages:pages.slice(0,10),
+  desc:`${Math.min(10,pages.length)} pages of ${G} ${s.name} revision, one from each topic this term, with an answer key for every page.`,obj:['Revise every topic from the term before a test.'],isNew:true};
+ RES.push(r);RID[r.id]=r;
+ plan.push([ur?'دہرائی':'Revision',['rev'],'Revise every topic from this term before the test.',['Do two pages of the revision set each day.','Check with the answer key together and redo mistakes the next day.'],REV_STORY[s.kind]||REV_STORY.gk]);
+ (GUIDE[s.id]=GUIDE[s.id]||[]);
+ if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].push(W('Revision',['Revise every Urdu topic from this term.','اس ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Revision Day','Today everyone looked back at their Urdu notebooks and read their favourite lessons again. Ask: Which Urdu lesson is your favourite?']))});
+
 
 /* subject colour classes for every subject id */
 (function(){let css='';SUBJECTS.forEach(s=>{const k=KIND[s.kind].sheet;css+=`.s-${s.id}{--sc:var(--k-${s.kind});--st:var(--k-${s.kind}-t)}.sheet.s-${s.id}{--pc:${k[0]};--pt:${k[1]}}`});

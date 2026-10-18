@@ -1316,3 +1316,8 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
  .st-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.st-cover{height:90px}.st-cover .emo{font-size:46px}.st-body{padding:10px 12px 12px}.st-body b{font-size:16px}
  .st-list{grid-template-columns:1fr}.srq-o .qo{flex:1 1 auto}.tools{grid-template-columns:1fr}}
 .tchip.more{background:#F1F2F6!important;color:var(--muted)!important}
+.pu-pick2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:12px;max-width:620px;margin:14px 0 4px}
+.pu-pick2 label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ai,#7C5CFF)}
+.pu-pick2 select{border:1.5px solid #DCD3FF;border-radius:16px;padding:12px 14px;font-weight:800;background:#fff;color:#2B2550;font-size:16px;text-transform:none;letter-spacing:0;width:100%;min-width:0}
+.pu-wrap .pu-pick2{margin:4px 0 16px;max-width:none}
+@media (max-width:600px){.pu-pick2{grid-template-columns:1fr}}

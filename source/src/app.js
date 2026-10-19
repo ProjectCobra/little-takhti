@@ -222,7 +222,7 @@ function classPage(){
  const attOf=p=>uniq(p[1].map(x=>x==='set'?RID[s.id+'-set']:typeof x==='string'?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(x-1)))).filter(Boolean);
  const wsHTML=att=>`<div class="att">${att.map(r=>`<a class="row" href="#res-${r.id}"><span class="mini">${frame(r.sub,r.pages[0],false)}</span><span class="t">${T(r.title)}<small>${r.pages.length} pages · answer key</small></span></a>${hasQuiz(r)?`<a class="row" href="#play-${r.id}"><span class="gi" style="width:46px;height:46px;border-radius:12px">${ic.game}</span><span class="t">Quiz game<small>${buildQuiz(r).length} questions from this pack</small></span><span class="pq">${ic.play}Play</span></a>`:''}`).join('')}</div>`;
  const split=(sx,ask)=>{const c=sx.lastIndexOf(ask);return c>0?[sx.slice(0,c).trim(),sx.slice(c+ask.length).trim()]:[sx,'']};
- app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
+ app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward. <a href="#map">See the whole term on one page</a>.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
  ${subTabs(cur,'cs')}
  <div class="weeks">${wk.map(i=>`<button class="wk" data-wk="${i}">${WEEKS[i][0]}</button>`).join('')}</div>
  <div class="feed s-${s.id}">${wk.map((i,n)=>{const p=plan[i],att=attOf(p);const now=i===WEEK_NOW;
@@ -483,7 +483,7 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'?'class':'home';
  try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
@@ -502,6 +502,7 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='policy')policyPage();
  else if(h==='help'||h.startsWith('help-'))helpPage(h.slice(5));
  else if(h==='share')sharePage();
+ else if(h==='map')curriculumMap();
  else if(h.startsWith('pu-'))powerup(h);
  else if(h==='search')search(lastQ);
  else if(funRoute(h)){}

@@ -22,7 +22,7 @@ function ltVisit(){const day=new Date().toISOString().slice(0,10);
  if(!store.get('ltFirst',null)){store.set('ltFirst',day);ltStat('nv')}
  if(store.get('ltDay',null)!==day){store.set('ltDay',day);ltStat('uv');ltStat('dev.'+(matchMedia('(max-width:760px)').matches?'mobile':'desktop'));ltStat('gr.'+ltKey(grade))}}
 function ltRoute(h){if(!window.LT_STATIC)return;ltStat('pv');
- const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
+ const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'||h==='map'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
  ltStat('mod.'+mod);
  if(h.startsWith('res-')){ltStat('ws.'+ltKey(h.slice(4)));lastSeen={page:h,rid:h.slice(4)}}
  else if(h.startsWith('print-'))ltStat('pr.'+ltKey(h.slice(6)));
@@ -183,3 +183,15 @@ document.addEventListener('click',e=>{
  else if(t.dataset.hrm!=null){const f=HELP.files.splice(+t.dataset.hrm,1)[0];if(f&&f.prev)URL.revokeObjectURL(f.prev);HELP.err='';helpRedraw()}
  else if(t.dataset.hnew){HELP.done=null;helpPage()}
  else if(t.dataset.srm!=null){SHARE.files.splice(+t.dataset.srm,1);SHARE.err='';sharePage()}});
+
+/* ---------- curriculum map: every subject, every week, one page ---------- */
+function curriculumMap(){const subs=subjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
+ const link=(s,p)=>{const x=p[1].find(v=>typeof v==='string');const r=x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1));return r?'#res-'+r.id:'#class'};
+ const row=(s,p,i)=>{const bi=URW[s.id]&&URW[s.id][i];const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
+  const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const rev=p[1].includes('rev')||/revision/i.test(bi?bi.en:p[0]);
+  return `<li class="${i===WEEK_NOW?'cm-now':''}${rev?' rev':''}"><span class="cm-wk">W${i+1}</span><a href="${link(s,p)}"><b>${name}</b><small>${goal}</small></a></li>`};
+ const total=subs.reduce((a,s)=>a+PLAN[s.id].filter(Boolean).length,0);
+ app.innerHTML=`<div class="phead cmap"><div style="flex:1;min-width:0"><span class="kick">Curriculum map</span><h1>${G.name}: the whole term at a glance</h1>
+  <p>${subs.length} subjects, ${Math.max(...subs.map(s=>PLAN[s.id].length))} weeks, ${total} weekly topics. Each topic links to its worksheets and quiz. Week ${Math.min(WEEK_NOW+1,99)} is highlighted.</p>
+  ${gradePick()}<div class="acts cm-bar" style="margin-top:14px"><button class="btn sun" type="button" onclick="window.print()">${ic.print}Print the map</button><a class="btn" href="#class">${ic.cal}Weekly guide</a></div></div></div>
+ <div class="cm-grid">${subs.map(s=>`<section class="cm-sub s-${s.id}"><h2><span class="sic">${subIcon(s)}</span>${s.name}</h2><ol>${PLAN[s.id].map((p,i)=>p?row(s,p,i):'').join('')}</ol></section>`).join('')}</div>`}

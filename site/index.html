@@ -505,7 +505,7 @@ footer .fm .ur-t{line-height:1.8}
   .pages .frame{width:210mm;height:297mm;aspect-ratio:auto;box-shadow:none;border-radius:0;break-after:page;page-break-after:always}
   .pages .frame:last-child{break-after:auto;page-break-after:auto}
   .pages .frame>.sheet{transform:none!important}
-  main>*:not(.pv){display:none!important}
+  main>*:not(.pv):not(.cmap):not(.cm-grid){display:none!important}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
@@ -1388,6 +1388,33 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
 @media (max-width:860px){.hgrid{grid-template-columns:1fr}.hcard{padding:18px;border-radius:20px}}
 @media (max-width:560px){.hform{grid-template-columns:1fr}}
 .hgrid>section.hcard{margin-top:0}
+/* curriculum map */
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:22px}
+.cm-sub{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px;min-width:0;margin:0}
+.cm-sub h2{display:flex;align-items:center;gap:10px;font-size:20px;margin:0 0 10px}
+.cm-sub h2 .sic{width:34px;height:34px;flex:none}
+.cm-sub ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.cm-sub li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:8px;align-items:start;border-radius:12px;padding:7px 8px}
+.cm-sub li.cm-now{background:var(--sun-soft,#FFF6CC);outline:2px solid var(--y,#FFC800)}
+.cm-sub li.rev .cm-wk{background:var(--ink);color:var(--surface)}
+.cm-wk{font:800 12px/1 var(--display);background:var(--chip);border-radius:8px;padding:6px 0;text-align:center;margin-top:2px}
+.cm-sub li a{color:inherit;text-decoration:none;min-width:0}
+.cm-sub li a:hover b{text-decoration:underline}
+.cm-sub li b{display:block;font-size:15px;line-height:1.35}
+.cm-sub li small{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:2px}
+.cm-sub .ur-t{font-size:17px}
+.cm-en{font-weight:600;font-size:13px;color:var(--muted)}
+@media (max-width:560px){.cm-grid{grid-template-columns:1fr}.cm-sub{padding:14px}}
+@media print{
+ body:has(.cmap) .top,body:has(.cmap) footer,body:has(.cmap) .tabbar,body:has(.cmap) .cm-bar,body:has(.cmap) .gpick,body:has(.cmap) .lt-ad{display:none!important}
+ body:has(.cmap) main{padding:10mm 10mm 0!important}body:has(.cmap) .phead{border:0;padding:0 0 8px;box-shadow:none}body:has(.cmap) .phead h1{font-size:24px}body:has(.cmap) .phead::after,body:has(.cmap) .phead::before{display:none}
+ body:has(.cmap) .cm-grid{display:block!important;columns:3;column-gap:8px;margin-top:6px}
+ body:has(.cmap) .cm-sub{break-inside:avoid;display:block;border:1px solid #ccc;padding:8px;margin:0 0 8px;border-radius:10px}body:has(.cmap) .cm-sub h2{font-size:14px;margin-bottom:4px}body:has(.cmap) .cm-sub h2 .sic{width:20px;height:20px}body:has(.cmap) .cm-sub li{grid-template-columns:26px minmax(0,1fr);gap:4px}body:has(.cmap) .cm-wk{font-size:9px;padding:3px 0}
+ body:has(.cmap) .cm-sub li{padding:3px 4px}
+ body:has(.cmap) .cm-sub li.cm-now{outline:0;background:none}
+ body:has(.cmap) .cm-sub li small{font-size:10px}
+ body:has(.cmap) .cm-sub li b{font-size:12px}
+}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -1529,7 +1556,7 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
 <footer><div class="wrap">
  <div><a class="logo" href="#home"><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
  <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
- <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
+ <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>
  <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span></div>
 </div></footer>
@@ -6353,7 +6380,7 @@ function ltVisit(){const day=new Date().toISOString().slice(0,10);
  if(!store.get('ltFirst',null)){store.set('ltFirst',day);ltStat('nv')}
  if(store.get('ltDay',null)!==day){store.set('ltDay',day);ltStat('uv');ltStat('dev.'+(matchMedia('(max-width:760px)').matches?'mobile':'desktop'));ltStat('gr.'+ltKey(grade))}}
 function ltRoute(h){if(!window.LT_STATIC)return;ltStat('pv');
- const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
+ const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'||h==='map'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
  ltStat('mod.'+mod);
  if(h.startsWith('res-')){ltStat('ws.'+ltKey(h.slice(4)));lastSeen={page:h,rid:h.slice(4)}}
  else if(h.startsWith('print-'))ltStat('pr.'+ltKey(h.slice(6)));
@@ -6514,6 +6541,18 @@ document.addEventListener('click',e=>{
  else if(t.dataset.hrm!=null){const f=HELP.files.splice(+t.dataset.hrm,1)[0];if(f&&f.prev)URL.revokeObjectURL(f.prev);HELP.err='';helpRedraw()}
  else if(t.dataset.hnew){HELP.done=null;helpPage()}
  else if(t.dataset.srm!=null){SHARE.files.splice(+t.dataset.srm,1);SHARE.err='';sharePage()}});
+
+/* ---------- curriculum map: every subject, every week, one page ---------- */
+function curriculumMap(){const subs=subjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
+ const link=(s,p)=>{const x=p[1].find(v=>typeof v==='string');const r=x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1));return r?'#res-'+r.id:'#class'};
+ const row=(s,p,i)=>{const bi=URW[s.id]&&URW[s.id][i];const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
+  const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const rev=p[1].includes('rev')||/revision/i.test(bi?bi.en:p[0]);
+  return `<li class="${i===WEEK_NOW?'cm-now':''}${rev?' rev':''}"><span class="cm-wk">W${i+1}</span><a href="${link(s,p)}"><b>${name}</b><small>${goal}</small></a></li>`};
+ const total=subs.reduce((a,s)=>a+PLAN[s.id].filter(Boolean).length,0);
+ app.innerHTML=`<div class="phead cmap"><div style="flex:1;min-width:0"><span class="kick">Curriculum map</span><h1>${G.name}: the whole term at a glance</h1>
+  <p>${subs.length} subjects, ${Math.max(...subs.map(s=>PLAN[s.id].length))} weeks, ${total} weekly topics. Each topic links to its worksheets and quiz. Week ${Math.min(WEEK_NOW+1,99)} is highlighted.</p>
+  ${gradePick()}<div class="acts cm-bar" style="margin-top:14px"><button class="btn sun" type="button" onclick="window.print()">${ic.print}Print the map</button><a class="btn" href="#class">${ic.cal}Weekly guide</a></div></div></div>
+ <div class="cm-grid">${subs.map(s=>`<section class="cm-sub s-${s.id}"><h2><span class="sic">${subIcon(s)}</span>${s.name}</h2><ol>${PLAN[s.id].map((p,i)=>p?row(s,p,i):'').join('')}</ol></section>`).join('')}</div>`}
 
 /* ---------------- site ---------------- */
 const app=document.getElementById('app');
@@ -6739,7 +6778,7 @@ function classPage(){
  const attOf=p=>uniq(p[1].map(x=>x==='set'?RID[s.id+'-set']:typeof x==='string'?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(x-1)))).filter(Boolean);
  const wsHTML=att=>`<div class="att">${att.map(r=>`<a class="row" href="#res-${r.id}"><span class="mini">${frame(r.sub,r.pages[0],false)}</span><span class="t">${T(r.title)}<small>${r.pages.length} pages · answer key</small></span></a>${hasQuiz(r)?`<a class="row" href="#play-${r.id}"><span class="gi" style="width:46px;height:46px;border-radius:12px">${ic.game}</span><span class="t">Quiz game<small>${buildQuiz(r).length} questions from this pack</small></span><span class="pq">${ic.play}Play</span></a>`:''}`).join('')}</div>`;
  const split=(sx,ask)=>{const c=sx.lastIndexOf(ask);return c>0?[sx.slice(0,c).trim(),sx.slice(c+ask.length).trim()]:[sx,'']};
- app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
+ app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward. <a href="#map">See the whole term on one page</a>.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
  ${subTabs(cur,'cs')}
  <div class="weeks">${wk.map(i=>`<button class="wk" data-wk="${i}">${WEEKS[i][0]}</button>`).join('')}</div>
  <div class="feed s-${s.id}">${wk.map((i,n)=>{const p=plan[i],att=attOf(p);const now=i===WEEK_NOW;
@@ -7000,7 +7039,7 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'?'class':'home';
  try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
@@ -7019,6 +7058,7 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='policy')policyPage();
  else if(h==='help'||h.startsWith('help-'))helpPage(h.slice(5));
  else if(h==='share')sharePage();
+ else if(h==='map')curriculumMap();
  else if(h.startsWith('pu-'))powerup(h);
  else if(h==='search')search(lastQ);
  else if(funRoute(h)){}

@@ -281,7 +281,7 @@ function parentsBase(){
  ${subTabs(cur,'ps')}
  <div class="guides s-${s.id}">${s.topics.map((t,k)=>{const g=GUIDE[s.id][k],pk=RID[s.id+'-t'+(k+1)];const kw=keyWords(pk),qs=askQs(pk);
   const p=a&&progOf(a,pk.id),weak=p&&p.total&&p.right/p.total<.6;
-  return `<details class="gd"${k===0?' open':''}><summary><span class="gd-n">${k+1}</span><span class="gd-t"><b>${s.rtl?`<span class="ur-t">${t}</span> <span class="gd-en">${UR_EN[t]}</span>`:(PACK_T[s.id]?PACK_T[s.id][k]:t)}${weak?` <span class="tag" style="background:var(--sun-soft)">Needs practice</span>`:''}</b><small>${mixUr(g[0])}</small></span><span class="gd-c" aria-hidden="true"></span></summary>
+  return `<details class="gd"${k===0?' open':''}><summary><span class="gd-n">${k+1}</span><span class="gd-t"><b>${s.rtl?`<span class="ur-t">${t}</span> <span class="gd-en">${UR_EN[t]||""}</span>`:(PACK_T[s.id]?PACK_T[s.id][k]:t)}${weak?` <span class="tag" style="background:var(--sun-soft)">Needs practice</span>`:''}</b><small>${mixUr(g[0])}</small></span><span class="gd-c" aria-hidden="true"></span></summary>
   <div class="gd-b">
    <div class="gcard2"><h4 class="gh"><span class="gi">${ic.spark}</span>By the end, your child can</h4><ul class="obj">${pk.obj.map(o=>`<li>${mixUr(o)}</li>`).join('')}</ul></div>
    <div class="gcard2"><h4 class="gh"><span class="gi">${ic.cal}</span>Time and materials</h4><p><b>10 to 15 minutes</b> a day, about one week for this topic.</p><p class="muted">You'll need: ${kh.need}.</p></div>
@@ -353,7 +353,7 @@ function intro(){const {r,s}=G,ur=!!s.rtl,best=bestFor(r.id);
  app.innerHTML=`<div class="game s-${s.id}"><div class="gcardq gintro">
   <div class="gi-art">${art('quiz')}</div>
   <span class="kick">${GR[s.grade].name} · ${s.name} quiz</span>
-  <h1 class="${ur?'ur-t':''}">${T(gTitle())}</h1>${ur?`<p class="gloss">${UR_EN[r.topic]}</p>`:''}
+  <h1 class="${ur?'ur-t':''}">${T(gTitle())}</h1>${ur&&(UR_EN[r.topic]||r.en)?`<p class="gloss">${UR_EN[r.topic]||r.en}</p>`:''}
   <div class="lvpick" role="radiogroup" aria-label="Level">${Object.entries(LV).map(([k,v])=>`<button type="button" role="radio" class="lv-${k}" data-lv="${k}" aria-checked="${G.level===k}"><b>${ur?v.ur:v.label}</b><small>${v.desc}</small></button>`).join('')}</div>
   <div class="gi-meta"><span>${ic.sheet}${G.qs.length} questions</span><span>${ic.bulb}${G.hints} hints</span><span>${starSVG(true)}Up to 3 stars</span></div>
   <ul class="how"><li><b>Tap an answer</b> or press 1 to 4.</li><li><b>Answer quickly</b> for a speed bonus.</li><li><b>3 in a row</b> doubles your points and lifts your kite higher.</li></ul>
@@ -427,7 +427,7 @@ function endGame(){
  <h2>${title}</h2>${newBest&&G.score>0?`<span class="newbest">${ur?'نیا ریکارڈ!':'New best score!'}</span>`:''}
  <div class="estats"><div><b>${G.score}</b><small>points</small></div><div><b>${right}/${n}</b><small>correct</small></div><div><b>${G.bestStreak}</b><small>best streak</small></div></div>
  ${G.missed.length?`<div class="review"><h3>${ur?'یہ دوبارہ دیکھیں':'Let\'s look at these again'}</h3><ul>${G.missed.map(q=>`<li class="${isUr(q.exp||'')?'ur-t':''}" ${isUr(q.exp||'')?'dir="rtl"':''}>${q.exp||optHTML(q.ans)}</li>`).join('')}</ul></div>`:`<p>${ur?'سب جواب صحیح!':'Every answer right. Amazing!'}</p>`}
- <p class="savednote">${who?`${ic.ok}Saved to ${esc(whoN)}'s profile${FAM.mode==='cloud'?'':' on this device'}.`:`<a href="#account">Add your child</a> to keep stars and get tailored picks.`}</p>
+ <p class="savednote">${who?`${ic.ok}Saved to ${esc(whoN)}'s profile${FAM.mode==='cloud'?'':' on this device'}.`:`<span><a href="#account">Add your child</a> to keep stars and get tailored picks.</span>`}</p>
  <div class="acts endacts"><button class="btn lg" data-replay="${G.r.id}">${ic.play}${ur?'دوبارہ کھیلیں':'Play again'}</button>${stars===3&&G.level!=='hard'?`<button class="btn lg" data-uplevel="1">${ic.spark}Try ${G.level==='easy'?'Medium':'Hard'}</button>`:''}${nx?`<a class="btn fill lg nextq" href="#play-${nx.id}"><span ${ur?'dir="rtl"':''}>${ur?'اگلا کھیل':'Next quiz'}: <span class="${SUB[nx.sub].rtl?'ur-t':''}">${SUB[nx.sub].rtl?nx.topic:nx.title.replace(/ Practice$/,'')}</span></span> ${ic.arrow}</a>`:`<a class="btn fill lg" href="#quiz">${ur?'مزید کھیل':'More quizzes'} ${ic.arrow}</a>`}${G.r.quizOnly?'':`<a class="btn lg" href="#res-${G.r.id}">${ic.sheet}${ur?'ورک شیٹس':'Practice pack'}</a>`}</div></div></div>`;
  funAfter(G.r,stars);window.scrollTo(0,0);stars?sfx.win():0;if(stars>=2)confetti();G=null;
 }

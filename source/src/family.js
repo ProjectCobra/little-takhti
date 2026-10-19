@@ -113,7 +113,7 @@ function account(){
 }
 
 /* who is playing: shown on the quiz start screen */
-function whoPlays(){const kids=childList();if(!kids.length)return `<p class="gbest"><a href="#account">Add your child</a> to save progress and get tailored picks.</p>`;
+function whoPlays(){const kids=childList();if(!kids.length)return `<p class="gbest gb-add"><a href="#account">Add your child</a> to save progress and get tailored picks.</p>`;
  const a=activeChild();return `<div class="who2"><span class="who-l">Who's playing?</span><div class="who-c">${kids.map(([id,c])=>`<button class="wchip${a===id?' on':''}" data-who="${id}" aria-pressed="${a===id}">${avSVG(c.avatar)}${esc(c.name)}</button>`).join('')}<button class="wchip${a?'':' on'}" data-who="" aria-pressed="${!a}"><span class="av2 avg">${I('<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>',2.2)}</span>Guest</button></div></div>`}
 
 /* ---------- read aloud ---------- */

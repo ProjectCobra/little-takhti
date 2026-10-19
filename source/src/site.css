@@ -1406,3 +1406,6 @@ a.cm-wk:hover{background:var(--ink);color:var(--surface)}
 @media print{body:has(.cmap) .cm-tabs,body:has(.cmap) .cm-weeks{display:none!important}body:has(.cmap) .cm-wcard h3{font-size:12px}body:has(.cmap) .cm-goal,body:has(.cmap) .cm-acts,body:has(.cmap) .cm-story,body:has(.cmap) .cm-packs a{font-size:10px}body:has(.cmap) .cm-packs a.q{display:none}}
 .cm-sub .cm-acts li{display:list-item;padding:0;border-radius:0}
 @media (max-width:600px){.fz-band-t .acts{flex:1 1 100%;min-width:0}.fz-band-t .acts .btn{flex:1 1 140px;white-space:normal;text-align:center}}
+@media (max-width:600px){.endacts .btn{white-space:normal;max-width:100%;flex:1 1 100%;text-align:center}.endacts .nextq>span{min-width:0}}
+p.gbest.gb-add{display:block;text-align:center}p.gbest.gb-add a{display:inline}
+.savednote{text-align:center}

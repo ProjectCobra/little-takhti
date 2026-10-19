@@ -1,3 +1,9 @@
 /pdf/*
   Content-Disposition: attachment
   Cache-Control: public, max-age=604800
+/build.json
+  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app
+  Cache-Control: no-cache
+/deploys.json
+  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app
+  Cache-Control: no-cache

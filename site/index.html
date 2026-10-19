@@ -1,10 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Free printable worksheets, quiz games and parent guides for Nursery, KG, Class 1, Class 2 and Class 3. English, Maths, Urdu, Science and more, made for homes and schools in Pakistan."><meta name="theme-color" content="#123B28"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:title" content="Little Takhti"><meta property="og:description" content="Worksheets and quiz games for every subject, Nursery to Grade 3."><script>window.LT_STATIC=1;document.documentElement.classList.add("static");window.LTFB_READY=new Promise(r=>window.__ltfbResolve=r);window.LT_ADS={client:"ca-pub-7392407974381857",slots:{home:"6635133987",resource:"2232109685"}}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZBZQEBGQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-SLZBZQEBGQ",{allow_google_signals:false,allow_ad_personalization_signals:false,send_page_view:false})</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392407974381857" crossorigin="anonymous"></script><script type="module">/* Firebase for the public website: Google sign-in, Firestore profiles, Analytics (child-directed settings) */
 import {initializeApp} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signInWithRedirect,signOut} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
-import {getFirestore,doc,getDoc,setDoc,deleteDoc,collection,getDocs} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
+import {getFirestore,doc,getDoc,setDoc,deleteDoc,collection,getDocs,addDoc,increment,serverTimestamp,query,where} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
+import {getStorage,ref as sref,uploadBytesResumable} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-storage.js";
 const firebaseConfig={apiKey:"AIzaSyC1rvub_YPgzf1HQkMER8DpJY_9MVnOMlI",authDomain:"littletakhti.firebaseapp.com",projectId:"littletakhti",
  storageBucket:"littletakhti.firebasestorage.app",messagingSenderId:"127926542888",appId:"1:127926542888:web:4f7e47563a3db269bb0b1d",measurementId:"G-SLZBZQEBGQ"};
-const app=initializeApp(firebaseConfig),auth=getAuth(app),fs=getFirestore(app);
+const app=initializeApp(firebaseConfig),auth=getAuth(app),fs=getFirestore(app);let st=null;try{st=getStorage(app)}catch(e){}
 const snap=s=>({id:s.id,exists:s.exists(),data:()=>s.data()});
 const docRef=p=>{const r=doc(fs,p);return {get:async()=>snap(await getDoc(r)),set:d=>setDoc(r,d),delete:()=>deleteDoc(r),collection:c=>collRef(p+'/'+c)}};
 const collRef=p=>({doc:id=>docRef(p+'/'+id),get:async()=>{const q=await getDocs(collection(fs,p));return {docs:q.docs.map(snap),size:q.size}}});
@@ -12,9 +13,18 @@ const F=window.LTFB={db:{doc:docRef,collection:collRef},user:null,
  async signIn(){const pr=new GoogleAuthProvider();pr.setCustomParameters({prompt:'select_account'});
   try{await signInWithPopup(auth,pr);F.log('login',{method:'Google'})}catch(e){if(e&&(e.code==='auth/popup-blocked'||e.code==='auth/operation-not-supported-in-this-environment'))return signInWithRedirect(auth,pr);throw e}},
  signOut:()=>signOut(auth),
- log(n,p){try{window.gtag&&gtag('event',n,p||{})}catch(e){}}};
+ log(n,p){try{window.gtag&&gtag('event',n,p||{})}catch(e){}},
+ /* new document with a server time stamp; returns its id */
+ async add(col,data){const r=await addDoc(collection(fs,col),{...data,created:serverTimestamp()});return r.id},
+ /* merge counters: {a:1,'m.k':2} becomes nested increments */
+ bump(path,counts){const o={};for(const [k,v] of Object.entries(counts)){const ks=k.split('.');let t=o;ks.slice(0,-1).forEach(x=>t=t[x]=t[x]||{});t[ks[ks.length-1]]=increment(v)}return setDoc(doc(fs,path),o,{merge:true})},
+ async mine(col,uid){const q=await getDocs(query(collection(fs,col),where('uid','==',uid)));return q.docs.map(d=>({id:d.id,...d.data()}))},
+ merge:(path,data)=>setDoc(doc(fs,path),{...data,updated:serverTimestamp()},{merge:true}),
+ /* upload a file to Firebase Storage; resolves with its storage path */
+ upload(path,file,onp){return new Promise((ok,no)=>{if(!st)return no(new Error('storage'));const t=uploadBytesResumable(sref(st,path),file,{contentType:file.type||'application/octet-stream'});
+  t.on('state_changed',s=>onp&&onp(s.bytesTransferred/s.totalBytes),no,()=>ok(path))})}};
 let first=true;
-onAuthStateChanged(auth,u=>{F.user=u?{id:u.uid,name:u.displayName||'',avatarUrl:u.photoURL||''}:null;
+onAuthStateChanged(auth,u=>{F.user=u?{id:u.uid,name:u.displayName||'',avatarUrl:u.photoURL||'',email:u.email||''}:null;
  if(first){first=false;window.__ltfbResolve&&window.__ltfbResolve()}else window.dispatchEvent(new Event('ltfb-auth'))});
 </script></head><body><title>Little Takhti | Free Worksheets and Quiz Games for Nursery to Class 3 (Pakistan)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1344,6 +1354,40 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
 .pu-pick2 select{border:1.5px solid #DCD3FF;border-radius:16px;padding:12px 14px;font-weight:800;background:#fff;color:#2B2550;font-size:16px;text-transform:none;letter-spacing:0;width:100%;min-width:0}
 .pu-wrap .pu-pick2{margin:4px 0 16px;max-width:none}
 @media (max-width:600px){.pu-pick2{grid-template-columns:1fr}}
+/* help desk and sharing */
+.hgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;margin-top:22px;align-items:start}
+.hcard{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;min-width:0}
+.hcard h2{font-size:21px;margin:0 0 14px}
+.hform .full{grid-column:1/-1}
+.opt{font-weight:500;color:var(--muted);font-size:13px}
+.hatt{display:flex;flex-wrap:wrap;gap:8px}
+.hatt label.btn{cursor:pointer}
+.hfiles{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.hfiles li{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:14px;padding:8px 10px;min-width:0}
+.hfiles img,.hfiles .fic{width:44px;height:44px;border-radius:10px;object-fit:cover;flex:none;display:grid;place-items:center;background:var(--chip);font-weight:800;font-size:12px}
+.hfiles .fn{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;font-size:14px}
+.hfiles .fn small{display:block;color:var(--muted);font-weight:500}
+.btn.sm{padding:6px 10px;font-size:12px;border-bottom-width:2px}
+.hagree{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;cursor:pointer}
+.hagree input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--g)}
+.herr{background:#FFE9E9;color:#B42318;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600;margin:0}
+.btn.recing{border-color:var(--r);color:var(--r)}
+.rdot{width:10px;height:10px;border-radius:50%;background:var(--r);animation:rblink 1s infinite}
+@keyframes rblink{50%{opacity:.25}}
+.hfaq details{border-bottom:1px solid var(--line);padding:10px 0}
+.hfaq summary{font-weight:700;cursor:pointer;font-size:15px}
+.hfaq details p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
+.mysubs{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.mysubs li{border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;display:grid;gap:4px}
+.mysubs small{color:var(--muted)}
+.mysubs .tag{justify-self:start}
+.tag.bad{background:#FFE9E9;color:#B42318}
+.rep{margin:10px 0 0;font-size:14px}
+.rep a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-weight:600}
+.rep svg{width:16px;height:16px}
+@media (max-width:860px){.hgrid{grid-template-columns:1fr}.hcard{padding:18px;border-radius:20px}}
+@media (max-width:560px){.hform{grid-template-columns:1fr}}
+.hgrid>section.hcard{margin-top:0}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -1365,7 +1409,7 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
 .sheet.ur .sh-instr{font-size:17px;line-height:2.1;margin-top:0}
 .sh-body{flex:1;overflow:hidden}
 .sh-in{display:flex;flex-direction:column;gap:16px}
-.sh-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1;font-family:'Baloo 2',sans-serif;font-size:12px;color:#7a8199;border-top:1.5px dashed #c9cfdc;padding-top:6px;line-height:1.4;text-align:left}
+.sh-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;position:relative;z-index:1;font-family:'Baloo 2',sans-serif;font-size:12px;color:#7a8199;border-top:1.5px dashed #c9cfdc;padding-top:6px;line-height:1.4;text-align:left}
 .bh{font-family:'Baloo 2',sans-serif;font-size:19px;font-weight:700;color:var(--pc);margin:2px 0 6px}
 .sheet.ur .bh{font-family:var(--urdu);font-size:18px;line-height:2;margin:0}
 .g{display:grid;gap:10px 22px}
@@ -1484,8 +1528,8 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
 <main id="app" class="wrap"></main>
 <footer><div class="wrap">
  <div><a class="logo" href="#home"><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
- <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
- <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li></ul></div>
+ <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
+ <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>
  <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span></div>
 </div></footer>
@@ -5204,7 +5248,7 @@ async function famInit(){
   /* first sign-in on a device that already has local profiles: carry them over once */
   if(!hadCloud&&Object.keys(FAM.children).length){for(const [id,c] of Object.entries(FAM.children))await famWrite(pRef().collection('children').doc(id),c);for(const [id,p] of Object.entries(FAM.progress))await famWrite(pRef().collection('progress').doc(id),p)}
  }catch(e){FAM.mode='device';if(window.LT_STATIC&&FAM.me)FAM.note='Could not reach your saved profiles just now, so this device copy is shown.'}
- famReady();
+ famReady();if(FAM.mode==='cloud')syncMember();
 }
 if(window.LT_STATIC)window.addEventListener('ltfb-auth',()=>famInit());
 function famReady(){if(FAM.mode==='loading')FAM.mode='device';renderAcct();const h=(location.hash||'').slice(1);if(['account','home','','quiz','parents','class'].includes(h)||h.startsWith('play-'))route(true)}
@@ -5214,7 +5258,7 @@ async function famWrite(ref,data){if(FAM.mode!=='cloud'){famLocalSave();return t
   try{await new Promise(r=>setTimeout(r,400+Math.random()*600));await ref.set(data);return true}catch(e2){FAM.note='Could not save just now. Please try again.';return false}}}
 async function famDelete(ref){if(FAM.mode!=='cloud'){famLocalSave();return}try{await ref.delete()}catch(e){}}
 const saveProfile=()=>famWrite(FAM.mode==='cloud'?pRef():null,{...FAM.profile});
-async function saveChild(id,c){FAM.children[id]=c;return famWrite(FAM.mode==='cloud'?pRef().collection('children').doc(id):null,c)}
+async function saveChild(id,c){FAM.children[id]=c;setTimeout(syncMember,50);return famWrite(FAM.mode==='cloud'?pRef().collection('children').doc(id):null,c)}
 async function removeChild(id){delete FAM.children[id];const ids=Object.keys(FAM.progress).filter(k=>k.startsWith(id+'__'));ids.forEach(k=>delete FAM.progress[k]);
  if(FAM.mode==='cloud'){await famDelete(pRef().collection('children').doc(id));for(const k of ids)await famDelete(pRef().collection('progress').doc(k))}else famLocalSave();
  if(activeChild()===id)setActive(null)}
@@ -5254,13 +5298,20 @@ function account(){
   return `<form class="kform" id="kform" data-id="${id||''}"><div class="kf-row"><label for="kname">First name or nickname</label><input id="kname" maxlength="24" required value="${esc(c.name)}" placeholder="e.g. Zara"></div>
   <div class="kf-row"><label for="kgrade">Grade</label><select id="kgrade">${LIVE.map(g=>`<option value="${g.id}" ${g.id===c.grade?'selected':''}>${g.name}</option>`).join('')}</select></div>
   <div class="kf-row"><span class="lbl">Picture</span><div class="avpick" role="radiogroup" aria-label="Picture">${Object.keys(AVATARS).map(k=>`<label class="avopt"><input type="radio" name="kav" value="${k}" ${k===c.avatar?'checked':''}>${avSVG(k)}<span class="vh">${k}</span></label>`).join('')}</div></div>
+  <div class="kf-row"><label for="kage">Age <span class="opt">(optional)</span></label><select id="kage"><option value="">Prefer not to say</option>${[2,3,4,5,6,7,8,9,10,11,12].map(n=>`<option value="${n}" ${String(c.age)===String(n)?'selected':''}>${n} years</option>`).join('')}</select></div>
+  <div class="kf-row"><label for="kgen">Boy or girl <span class="opt">(optional)</span></label><select id="kgen"><option value="">Prefer not to say</option><option value="girl" ${c.gender==='girl'?'selected':''}>Girl</option><option value="boy" ${c.gender==='boy'?'selected':''}>Boy</option></select></div>
   <div class="kf-row"><label for="kfav">Favourite subject (optional)</label><select id="kfav"><option value="">No favourite</option>${Object.entries(KIND).map(([k,v])=>`<option value="${k}" ${k===c.fav?'selected':''}>${v.name}</option>`).join('')}</select></div>
   <div class="acts"><button class="btn sun" type="submit">${id?'Save changes':'Add child'}</button>${id||kids.length?`<button class="btn" type="button" data-kcancel="1">Cancel</button>`:''}</div></form>`};
  app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Family</span><h1>${signed?`Hello${me.name?', '+esc(me.name.split(' ')[0]):''}`:window.LT_STATIC?'Family profiles':'Sign in and family profiles'}</h1>
   <p>${signed?'You are signed in. Add each child to save their quiz progress and get recommendations made for them.':window.LT_STATIC?'Sign in with Google to keep your children\'s profiles and quiz progress on every phone and computer. Without signing in, they stay on this device.':'Profiles and quiz progress save to your account when you are signed in. Right now they are kept on this device only.'}</p>
   <div class="tags" style="margin-top:12px">${modeTag}${signed?'<span class="tag">Private to you</span>':''}</div>${FAM.note?`<p class="fnote">${FAM.note}</p>`:''}</div>
   <div class="acct-card">${signed?`${me.avatarUrl?`<img src="${esc(me.avatarUrl)}" alt="" class="meimg">`:`<span class="meimg av0" style="background:var(--sun);color:var(--on-sun);font:800 26px var(--display)">${esc((me.name||"?")[0])}</span>`}<b>${esc(me.name||'Signed in')}</b><small>${window.LT_STATIC?'Signed in with Google':'Signed in'}</small>${window.LT_STATIC&&window.LTFB?'<button class="btn" data-gsignout="1" type="button" style="margin-top:8px">Sign out</button>':''}`:`<span class="meimg av0">${I('<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>')}</span><b>Not signed in</b><small>${window.LT_STATIC?'Profiles stay on this device':'Sign in to save across devices'}</small>${window.LT_STATIC&&window.LTFB?`<button class="btn gbtn" data-gsignin="1" type="button">${GLOGO}Sign in with Google</button>`:''}`}
-   <div class="kf-row" style="margin-top:12px;text-align:left"><label for="plang">Weekly guide language for Urdu</label><select id="plang"><option value="both" ${FAM.profile.lang==='both'?'selected':''}>English and Urdu</option><option value="en" ${FAM.profile.lang==='en'?'selected':''}>English only</option><option value="ur" ${FAM.profile.lang==='ur'?'selected':''}>Urdu only</option></select></div></div></div>
+   <div class="kf-row" style="margin-top:12px;text-align:left"><label for="plang">Weekly guide language for Urdu</label><select id="plang"><option value="both" ${FAM.profile.lang==='both'?'selected':''}>English and Urdu</option><option value="en" ${FAM.profile.lang==='en'?'selected':''}>English only</option><option value="ur" ${FAM.profile.lang==='ur'?'selected':''}>Urdu only</option></select></div>
+   ${signed?`<div class="kf-row" style="margin-top:10px;text-align:left"><label for="prole">I am a <span class="opt">(optional)</span></label><select id="prole" data-pf="role"><option value="">Prefer not to say</option>${[['parent','Parent'],['teacher','Teacher'],['tutor','Tutor'],['school','School'],['other','Other']].map(([k,v])=>`<option value="${k}" ${FAM.profile.role===k?'selected':''}>${v}</option>`).join('')}</select></div>
+   <div class="kf-row" style="margin-top:10px;text-align:left"><label for="pcity">City <span class="opt">(optional)</span></label><input id="pcity" data-pf="city" maxlength="40" value="${esc(FAM.profile.city||'')}" placeholder="e.g. Lahore"></div>
+   <div class="kf-row" style="margin-top:10px;text-align:left"><label for="pprov">Province <span class="opt">(optional)</span></label><select id="pprov" data-pf="province"><option value="">Prefer not to say</option>${['Punjab','Sindh','Khyber Pakhtunkhwa','Balochistan','Islamabad Capital Territory','Gilgit-Baltistan','Azad Jammu and Kashmir','Outside Pakistan'].map(p=>`<option ${FAM.profile.province===p?'selected':''}>${p}</option>`).join('')}</select></div>
+   <p class="pnote" style="text-align:left">Optional. Helps us plan content for your area. Never shown publicly.</p>
+   <div class="acts" style="margin-top:10px"><a class="btn" href="#share">${I('<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>',2)}Share material</a><a class="btn" href="#help">Help</a></div>`:''}</div></div>
  <section style="margin-top:30px"><div class="sec-h"><div><span class="kick">Children</span><h2>${kids.length?'Your children':'Add your first child'}</h2></div>${kids.length&&editChild===null?`<button class="btn sun" data-kadd="1">${I('<path d="M12 5v14M5 12h14"/>',2.5)}Add a child</button>`:''}</div>
  ${editChild!==null||!kids.length?`<div class="kwrap">${form(editChild||null)}<p class="pnote">Use a first name or nickname only. Details stay private to your account and are used only to tailor practice.</p></div>`:''}
  <div class="kids">${kids.map(([id,c])=>{const st=childStats(id),recs=recommend(id),w=weakest(id),act=activeChild()===id;
@@ -5272,9 +5323,10 @@ function account(){
    <div class="recs">${recs.length?recs.map(x=>{const s=SUB[x.r.sub];return `<a class="rec s-${x.r.sub}" href="${x.q?'#play-'+x.r.id:'#res-'+x.r.id}" data-play-as-go="${id}"><span class="sic">${subIcon(s)}</span><span class="t">${T(s.rtl?x.r.topic:x.r.title.replace(/ Practice$/,''))}<small>${s.name} · ${x.why}</small></span><span class="pq">${x.q?ic.play+'Play':ic.sheet+'Open'}</span></a>`}).join(''):`<p class="count">Every topic has 3 stars. Try the next grade or replay favourites.</p>`}</div>
    <div class="acts kacts"><a class="btn" href="#parents" data-pg-grade="${c.grade}">${ic.heart}Parent guides</a><a class="btn" href="#class" data-pg-grade="${c.grade}">${ic.cal}Weekly guide</a>
    <button class="btn" data-kedit="${id}">Edit</button>${confirmDel===id?`<button class="btn" data-kdel-yes="${id}" style="border-color:var(--bad);color:var(--bad)">Remove ${esc(c.name)} and progress</button><button class="btn" data-kdel-no="1">Keep</button>`:`<button class="btn" data-kdel="${id}">Remove</button>`}</div></article>`}).join('')}</div></section>`;
+ document.querySelectorAll('[data-pf]').forEach(el=>el.addEventListener('change',async()=>{FAM.profile[el.dataset.pf]=el.value.trim().slice(0,40);await saveProfile();syncMember()}));
  const pl=document.getElementById('plang');pl&&pl.addEventListener('change',async e=>{FAM.profile.lang=e.target.value;await saveProfile()});
  const f=document.getElementById('kform');f&&f.addEventListener('submit',async e=>{e.preventDefault();const id=f.dataset.id||('c'+Date.now().toString(36));const old=FAM.children[id]||{};
-  const c={name:document.getElementById('kname').value.trim().slice(0,24),grade:document.getElementById('kgrade').value,avatar:(f.querySelector('input[name=kav]:checked')||{}).value||'kite',fav:document.getElementById('kfav').value,created:old.created||new Date().toISOString()};
+  const c={name:document.getElementById('kname').value.trim().slice(0,24),grade:document.getElementById('kgrade').value,avatar:(f.querySelector('input[name=kav]:checked')||{}).value||'kite',fav:document.getElementById('kfav').value,age:document.getElementById('kage').value,gender:document.getElementById('kgen').value,created:old.created||new Date().toISOString()};
   if(!c.name)return;if(!FAM.children[id]&&window.LTFB)window.LTFB.log('add_child',{grade:c.grade});await saveChild(id,c);if(!activeChild())setActive(id);editChild=null;account();fit()});
 }
 
@@ -6277,6 +6329,192 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-wsc],[data
  else if(t.dataset.sq!=null)storyAnswer(+t.dataset.sq,+t.dataset.so);else if(t.dataset.rwt){RW.tab=t.dataset.rwt;store.set('rewards',RW);rewardsPage()}});
 document.addEventListener('keydown',e=>{if(!GM||GM.k!=='race'||location.hash!=='#game-race')return;if(/^\d$/.test(e.key))padTap(e.key);else if(e.key==='Backspace')padTap('⌫');else if(e.key==='Enter')padTap('✓')});
 
+/* ---------- help desk, content policy, sharing material, usage counters, member registry ---------- */
+const HELP_MAX_FILES=5,HELP_MAX_MB=50,SHARE_MAX_MB=20;
+const HELP_TYPES=[['worksheet','Problem with a worksheet'],['quiz','Quiz or game problem'],['site','Website problem'],['account','Sign in or account'],['idea','Suggestion or idea'],['other','Something else']];
+const SHARE_TYPES=[['worksheet','Worksheet'],['notes','Notes or summary'],['paper','Test or past paper'],['activity','Activity or game idea'],['syllabus','Syllabus or book list'],['other','Other']];
+const OK_HELP=/^(image\/(png|jpe?g|webp|gif)|video\/(webm|mp4|quicktime)|application\/pdf)$/;
+const OK_SHARE=/^(image\/(png|jpe?g|webp)|application\/pdf|application\/vnd\.openxmlformats-officedocument\.(wordprocessingml\.document|presentationml\.presentation)|application\/msword)$/;
+/* words that never belong in a children's learning site; caught before anything is sent */
+const BLOCK_WORDS=/\b(porn\w*|sex(y|ual)?|nude|nudity|naked|xxx|onlyfans|escort|fuck\w*|shit\w*|bitch\w*|cunt|dick|pussy|rape|kill yourself|terroris\w*|casino|betting|crypto ?signal)\b/i;
+const fmtMB=b=>(b/1048576).toFixed(b<1048576?2:1)+' MB';
+const newId=()=>{const a=new Uint8Array(12);(crypto||window.msCrypto).getRandomValues(a);return Array.from(a,x=>x.toString(36).padStart(2,'0')).join('').slice(0,20)};
+const safeName=n=>String(n||'file').replace(/[^\w.\-]+/g,'_').slice(-60);
+let lastSeen={page:'',rid:''};
+
+/* ---------- usage counters: batched, one small write every 20 seconds at most ---------- */
+const LTS={c:{},t:null};
+function ltStat(k,n=1){if(!window.LT_STATIC)return;LTS.c[k]=(LTS.c[k]||0)+n;if(!LTS.t)LTS.t=setTimeout(ltFlush,20000)}
+function ltFlush(){clearTimeout(LTS.t);LTS.t=null;const F=window.LTFB;const c=LTS.c;if(!F||!F.bump||!Object.keys(c).length)return;LTS.c={};
+ const day=new Date().toISOString().slice(0,10);F.bump('stats/'+day,c).catch(()=>{})}
+addEventListener('pagehide',ltFlush);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')ltFlush()});
+const ltKey=s=>String(s).replace(/[^\w\-]/g,'_').slice(0,60);
+function ltVisit(){const day=new Date().toISOString().slice(0,10);
+ if(!store.get('ltFirst',null)){store.set('ltFirst',day);ltStat('nv')}
+ if(store.get('ltDay',null)!==day){store.set('ltDay',day);ltStat('uv');ltStat('dev.'+(matchMedia('(max-width:760px)').matches?'mobile':'desktop'));ltStat('gr.'+ltKey(grade))}}
+function ltRoute(h){if(!window.LT_STATIC)return;ltStat('pv');
+ const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
+ ltStat('mod.'+mod);
+ if(h.startsWith('res-')){ltStat('ws.'+ltKey(h.slice(4)));lastSeen={page:h,rid:h.slice(4)}}
+ else if(h.startsWith('print-'))ltStat('pr.'+ltKey(h.slice(6)));
+ else if(h.startsWith('play-'))ltStat('qz.'+ltKey(h.slice(5)));
+ else if(h.startsWith('pu-'))ltStat('pu.'+ltKey(h.slice(3).split('-')[0]));
+ else if(h.startsWith('game-'))ltStat('gm.'+ltKey(h.slice(5)));
+ else if(h.startsWith('story-'))ltStat('st.'+ltKey(h.slice(6)));
+ if(!h.startsWith('help'))lastSeen.page=h}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href$=".pdf"]');if(a){const m=a.getAttribute('href').match(/little-takhti-(.+)\.pdf$/);if(m)ltStat('dl.'+ltKey(m[1]))}},true);
+
+/* ---------- member registry: lets the owner count families and see who uses the site ---------- */
+async function syncMember(){const F=window.LTFB;if(!window.LT_STATIC||!F||!F.merge||!FAM.uid||FAM.mode!=='cloud')return;
+ try{if(!FAM.profile.joined){FAM.profile.joined=new Date().toISOString();await saveProfile()}
+  const kids=Object.values(FAM.children).map(c=>({grade:c.grade||'',age:c.age||'',gender:c.gender||''}));
+  await F.merge('members/'+FAM.uid,{name:(FAM.me&&FAM.me.name)||'',email:(FAM.me&&FAM.me.email)||'',photo:(FAM.me&&FAM.me.avatarUrl)||'',joined:FAM.profile.joined,lastSeen:new Date().toISOString(),
+   role:FAM.profile.role||'',city:FAM.profile.city||'',province:FAM.profile.province||'',kids,kidsN:kids.length})}catch(e){}}
+
+/* ---------- content policy ---------- */
+function policyPage(){app.innerHTML=`<article class="legal"><span class="kick">Policy</span><h1>Content and upload policy</h1><p class="muted">Last updated 19 October 2026</p>
+<p>Little Takhti is a learning website for children from Nursery to Grade 3. Everything people send us, whether a help request, a screenshot or shared teaching material, must be suitable for young children and related to learning or to this website.</p>
+<h2>What you can send</h2><ul><li>Screenshots, screen recordings or PDFs that show a problem with a worksheet, quiz or page on this website.</li><li>Teaching material you made yourself or have permission to share: worksheets, notes, tests, activity ideas, syllabus or book lists for Nursery to Grade 3.</li><li>Material in English, Urdu or any subject we teach, including Islamiat taken from authentic, school-approved course books.</li></ul>
+<h2>What is never allowed</h2><ul><li>Nudity, sexual or suggestive content of any kind.</li><li>Violence, gore, weapons, drugs, gambling or anything frightening for children.</li><li>Hate, bullying, insults, or content that mocks any religion, sect, ethnicity, gender or group.</li><li>Children's faces, full names, school names, addresses, phone numbers or other personal details. Please crop or cover them in screenshots.</li><li>Material copied from publishers or other websites without permission.</li><li>Adverts, spam, links to other sites, or files with viruses or hidden code.</li><li>Political campaigning or content unrelated to learning.</li></ul>
+<h2>How we check</h2><ul><li>Uploads are private. Only the site owner can see them, and nothing is ever published automatically.</li><li>Every help request and every shared file is reviewed by a person before any action is taken. Shared material is only used on the site after review and editing.</li><li>Files are limited to images, short screen recordings, PDF and Word or PowerPoint files, with size limits.</li><li>Messages containing blocked words cannot be sent.</li></ul>
+<h2>If a rule is broken</h2><p>The upload is deleted, and the account may be blocked from sending anything again. Where the law requires it, we report illegal material to the authorities.</p>
+<h2>Report something</h2><p>If you see anything on Little Takhti that should not be here, please <a href="#help">tell us on the Help page</a> and we will remove it quickly.</p></article>`}
+
+/* ---------- help page ---------- */
+const HELP={files:[],busy:false,done:null,rec:null,err:''};
+const HELP_FAQ=[['How do I print a worksheet at the right size?','Open the worksheet, press Print, then choose A4 paper and 100% scale (or "Actual size"). The Download PDF button gives the same pages ready to print.'],
+ ['Where are the answers?','Every pack has an answer key. On the worksheet page tick "Include answer key" before printing, or open the PDF, where the key comes after the worksheets.'],
+ ['My child\'s stars disappeared.','Without signing in, progress is saved only on that phone or computer. Sign in with Google on the Family page to keep it on every device.'],
+ ['The Urdu text looks wrong.','Urdu needs a moment to load its font the first time. Refresh the page once. If it still looks broken, send us a screenshot below.'],
+ ['Can I share my own worksheets?','Yes. Sign in, then use Share material on the Family page. Every file is checked by a person first.']];
+function helpPage(rid){if(rid&&RID[rid])lastSeen={page:'res-'+rid,rid};
+ if(HELP.done){app.innerHTML=`<div class="phead hdone"><div style="flex:1;min-width:0"><span class="kick">Help</span><h1>Thank you, we got it</h1><p>Your reference is <b>${esc(HELP.done)}</b>. We read every message and fix worksheet problems in the next update. ${HELP.mail?'We will reply to your email if we need more details.':''}</p>
+  <div class="acts" style="margin-top:14px"><a class="btn sun" href="#home">Back to worksheets</a><button class="btn" type="button" data-hnew="1">Send another</button></div></div></div>`;return}
+ const me=FAM.me&&FAM.me.id?FAM.me:null,r=lastSeen.rid&&RID[lastSeen.rid];
+ const canCap=!!(navigator.mediaDevices&&navigator.mediaDevices.getDisplayMedia)&&!matchMedia('(max-width:760px)').matches;
+ app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Help</span><h1>How can we help?</h1><p>Tell us about a mistake in a worksheet, a page that does not work, or an idea. You can add screenshots, a screen recording or a PDF.</p></div></div>
+ <div class="hgrid"><section class="hcard"><h2>Send us a message</h2>
+ <form id="hform" class="kform hform" novalidate>
+  <div class="kf-row"><label for="htype">What is it about?</label><select id="htype">${HELP_TYPES.map(([k,v])=>`<option value="${k}" ${r&&k==='worksheet'?'selected':''}>${v}</option>`).join('')}</select></div>
+  <div class="kf-row"><label for="hwhere">Which worksheet or page? <span class="opt">(optional)</span></label><input id="hwhere" maxlength="140" value="${esc(r?`${GR[SUB[r.sub].grade].name} · ${SUB[r.sub].name} · ${r.title}`:'')}" placeholder="e.g. Grade 2 Maths, Numbers to 1000, page 2"></div>
+  <div class="kf-row full"><label for="hmsg">What happened?</label><textarea id="hmsg" rows="5" maxlength="3000" required placeholder="Describe the problem. If a question has a wrong answer, tell us the page and question number."></textarea></div>
+  <div class="kf-row full"><label for="hmail">Your email <span class="opt">${me?'':'(optional, so we can reply)'}</span></label><input id="hmail" type="email" maxlength="120" value="${esc(me&&me.email||'')}" placeholder="you@example.com"></div>
+  <div class="kf-row full"><span class="lbl">Attachments <span class="opt">(up to ${HELP_MAX_FILES} files, ${HELP_MAX_MB} MB in total)</span></span>
+   <div class="hatt"><label class="btn"><input type="file" id="hfile" multiple accept="image/png,image/jpeg,image/webp,image/gif,video/webm,video/mp4,video/quicktime,application/pdf" hidden>${I('<path d="M21 12.5l-8.5 8.5a5 5 0 0 1-7-7L14 5.5a3.3 3.3 0 0 1 4.7 4.7L10.2 18.7a1.7 1.7 0 0 1-2.4-2.4L15.5 8.6"/>',2)}Add files</label>
+   ${canCap?`<button class="btn" type="button" data-hshot="1">${I('<rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/>',2)}Take a screenshot</button>
+   <button class="btn${HELP.rec?' recing':''}" type="button" data-hrec="1">${HELP.rec?`<span class="rdot"></span>Stop recording <span id="hrt">0:00</span>`:`${I('<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="currentColor"/>',2)}Record my screen`}</button>`:''}</div>
+   <ul class="hfiles">${HELP.files.map((f,i)=>`<li>${f.type.startsWith('image/')&&f.prev?`<img src="${f.prev}" alt="">`:`<span class="fic">${f.type.startsWith('video/')?'▶':'PDF'}</span>`}<span class="fn">${esc(f.name)}<small>${fmtMB(f.size)}</small></span><button type="button" class="btn sm" data-hrm="${i}" aria-label="Remove ${esc(f.name)}">Remove</button></li>`).join('')}</ul>
+   <p class="pnote">Images, PDF and short screen recordings only. Please crop out children's faces and full names.</p></div>
+  <label class="hagree full"><input type="checkbox" id="hok"> <span>I have read the <a href="#policy">content policy</a>. My message and files are about Little Takhti and suitable for children.</span></label>
+  ${HELP.err?`<p class="herr full" role="alert">${esc(HELP.err)}</p>`:''}
+  <div class="acts full"><button class="btn sun" type="submit" ${HELP.busy?'disabled':''}>${HELP.busy?`Sending <span id="hpct"></span>`:'Send message'}</button></div>
+ </form></section>
+ <aside class="hcard hfaq"><h2>Quick answers</h2>${HELP_FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}
+  <p class="pnote" style="margin-top:14px">Want to share your own worksheets or notes? ${me?'<a href="#share">Share material</a>':'<a href="#account">Sign in</a>, then use Share material'}.</p></aside></div>`;
+ const keep=['hmsg','hmail','hwhere','htype'];keep.forEach(k=>{const el=document.getElementById(k);if(el&&HELP['v_'+k]!=null)el.value=HELP['v_'+k];el&&el.addEventListener('input',()=>HELP['v_'+k]=el.value)});
+ const hf=document.getElementById('hfile');hf&&hf.addEventListener('change',()=>{addHelpFiles([...hf.files]);hf.value=''});
+ const ok=document.getElementById('hok');if(ok&&HELP.agree)ok.checked=true;ok&&ok.addEventListener('change',()=>HELP.agree=ok.checked);
+ document.getElementById('hform').addEventListener('submit',e=>{e.preventDefault();sendHelp()});
+}
+function helpRedraw(){if(location.hash.startsWith('#help'))helpPage()}
+function addHelpFiles(list){HELP.err='';for(const f of list){if(HELP.files.length>=HELP_MAX_FILES){HELP.err=`You can attach up to ${HELP_MAX_FILES} files.`;break}
+  if(!OK_HELP.test(f.type)){HELP.err=`${f.name} is not an image, PDF or screen recording.`;continue}
+  const tot=HELP.files.reduce((a,x)=>a+x.size,0)+f.size;if(tot>HELP_MAX_MB*1048576){HELP.err=`Attachments can be ${HELP_MAX_MB} MB in total.`;continue}
+  const o={file:f,name:f.name||'file',type:f.type,size:f.size};if(f.type.startsWith('image/'))o.prev=URL.createObjectURL(f);HELP.files.push(o)}
+ helpRedraw()}
+async function captureShot(){try{const s=await navigator.mediaDevices.getDisplayMedia({video:true,audio:false,preferCurrentTab:true,selfBrowserSurface:'include'});
+  const v=document.createElement('video');v.srcObject=s;v.muted=true;await v.play();await new Promise(r=>setTimeout(r,350));
+  const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);s.getTracks().forEach(t=>t.stop());
+  const b=await new Promise(r=>c.toBlob(r,'image/png'));addHelpFiles([new File([b],'screenshot-'+Date.now()+'.png',{type:'image/png'})])}catch(e){}}
+async function toggleRec(){if(HELP.rec){HELP.rec.stop();return}
+ try{const s=await navigator.mediaDevices.getDisplayMedia({video:{frameRate:15},audio:false,selfBrowserSurface:'include'});
+  const mt=['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm','video/mp4'].find(t=>window.MediaRecorder&&MediaRecorder.isTypeSupported(t));
+  const mr=new MediaRecorder(s,mt?{mimeType:mt,videoBitsPerSecond:900000}:{}),parts=[],t0=Date.now();HELP.rec=mr;
+  mr.ondataavailable=e=>e.data&&e.data.size&&parts.push(e.data);
+  const tick=setInterval(()=>{const el=document.getElementById('hrt'),sec=Math.round((Date.now()-t0)/1000);if(el)el.textContent=Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');if(sec>=90)mr.state==='recording'&&mr.stop()},500);
+  s.getVideoTracks()[0].addEventListener('ended',()=>mr.state==='recording'&&mr.stop());
+  mr.onstop=()=>{clearInterval(tick);s.getTracks().forEach(t=>t.stop());HELP.rec=null;const type=(mr.mimeType||'video/webm').split(';')[0];
+   addHelpFiles([new File([new Blob(parts,{type})],'screen-recording-'+Date.now()+(type==='video/mp4'?'.mp4':'.webm'),{type})])};
+  mr.start(1000);helpRedraw()}catch(e){HELP.rec=null;helpRedraw()}}
+/* smaller copy of a picture, used only when cloud file storage is not available */
+async function shrinkImage(f,max=1280,q=.72){const img=await createImageBitmap(f);const k=Math.min(1,max/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',q)}
+async function sendHelp(){if(HELP.busy)return;const v=k=>(document.getElementById(k)||{}).value||'';HELP.err='';
+ const msg=v('hmsg').trim(),mail=v('hmail').trim(),where=v('hwhere').trim();
+ if(msg.length<10)HELP.err='Please tell us a little more about the problem (at least 10 characters).';
+ else if(mail&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail))HELP.err='That email address does not look right.';
+ else if(!document.getElementById('hok').checked)HELP.err='Please tick the box to agree to the content policy.';
+ else if(BLOCK_WORDS.test(msg+' '+where))HELP.err='Your message contains words that are not allowed on a children\'s site. Please rewrite it.';
+ const F=window.LTFB;if(!HELP.err&&(!F||!F.merge))HELP.err='Sending is not available right now. Please check your internet connection and try again.';
+ if(HELP.err){helpRedraw();return}
+ HELP.busy=true;helpRedraw();const id=newId(),atts=[],inline=[];const pct=t=>{const el=document.getElementById('hpct');if(el)el.textContent=t};
+ try{let i=0;for(const f of HELP.files){i++;pct(`file ${i} of ${HELP.files.length}`);
+   try{const path=await F.upload(`help/${id}/${i}-${safeName(f.name)}`,f.file,p=>pct(`file ${i} of ${HELP.files.length}, ${Math.round(p*100)}%`));atts.push({name:f.name,type:f.type,size:f.size,path})}
+   catch(e){if(f.type.startsWith('image/')&&inline.length<3){try{inline.push({name:f.name,type:'image/jpeg',data:await shrinkImage(f.file)});atts.push({name:f.name,type:f.type,size:f.size,inline:inline.length-1});continue}catch(e2){}}
+    atts.push({name:f.name,type:f.type,size:f.size,failed:true})}}
+  pct('');
+  await F.merge('help/'+id,{type:v('htype'),where,message:msg,email:mail,uid:FAM.uid||'',name:(FAM.me&&FAM.me.name)||'',page:lastSeen.page||'',rid:lastSeen.rid||'',grade,
+   attachments:atts,status:'new',device:{ua:navigator.userAgent.slice(0,240),w:innerWidth,h:innerHeight,lang:navigator.language||''},agree:true,createdAt:new Date().toISOString()});
+  for(let k=0;k<inline.length;k++)await F.merge(`help/${id}/files/${k}`,inline[k]);
+  ltStat('help');window.LTFB.log('help_sent',{type:v('htype')});
+  HELP.done=id.slice(0,8).toUpperCase();HELP.mail=!!mail;HELP.files=[];HELP.agree=false;keepClear()}
+ catch(e){HELP.err='We could not send your message just now. Please try again in a minute.'}
+ HELP.busy=false;helpRedraw();window.scrollTo(0,0)}
+function keepClear(){['hmsg','hmail','hwhere','htype'].forEach(k=>delete HELP['v_'+k])}
+
+/* ---------- share teaching material (signed-in families and teachers) ---------- */
+const SHARE={files:[],busy:false,err:'',done:false,mine:null};
+async function loadMySubs(){const F=window.LTFB;if(!F||!F.mine||!FAM.uid)return;try{SHARE.mine=await F.mine('submissions',FAM.uid)}catch(e){SHARE.mine=[]}if(location.hash==='#share')sharePage()}
+function sharePage(){const me=FAM.me&&FAM.me.id?FAM.me:null;
+ if(!me){app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Share material</span><h1>Share your teaching material</h1><p>Teachers and parents can send worksheets, notes and test papers for Nursery to Grade 3. Please sign in first so we can credit you and tell you when it is reviewed.</p><div class="acts" style="margin-top:14px"><a class="btn sun" href="#account">Sign in on the Family page</a><a class="btn" href="#policy">Read the content policy</a></div></div></div>`;return}
+ if(SHARE.mine===null)loadMySubs();
+ const st={pending:['Waiting for review',''],approved:['Approved','key'],rejected:['Not accepted','bad'],removed:['Removed','bad']};
+ app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Share material</span><h1>Share your teaching material</h1><p>Send worksheets, notes or test papers you made. Everything stays private until it has been checked by a person. Good material is turned into free Little Takhti packs, with credit to you if you like.</p></div></div>
+ ${SHARE.done?`<p class="fnote" role="status">Thank you. Your material was sent and is waiting for review.</p>`:''}
+ <div class="hgrid"><section class="hcard"><h2>Send material</h2><form id="sform" class="kform hform" novalidate>
+  <div class="kf-row full"><label for="stitle">Title</label><input id="stitle" maxlength="100" required placeholder="e.g. Grade 1 Urdu haroof tahaji practice"></div>
+  <div class="kf-row"><label for="stype">Type</label><select id="stype">${SHARE_TYPES.map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></div>
+  <div class="kf-row"><label for="sgrade">Grade</label><select id="sgrade">${GRADES.filter(g=>!g.hidden).map(g=>`<option value="${g.id}" ${g.id===grade?'selected':''}>${g.name}</option>`).join('')}</select></div>
+  <div class="kf-row"><label for="ssub">Subject</label><select id="ssub">${Object.entries(KIND).map(([k,v])=>`<option value="${k}">${v.name}</option>`).join('')}</select></div>
+  <div class="kf-row"><label for="scredit">Credit as <span class="opt">(optional)</span></label><input id="scredit" maxlength="60" placeholder="e.g. Ms Ayesha, Lahore"></div>
+  <div class="kf-row full"><label for="sdesc">Short description</label><textarea id="sdesc" rows="3" maxlength="1200" placeholder="What does it cover? Which book or chapter is it from?"></textarea></div>
+  <div class="kf-row full"><span class="lbl">Files <span class="opt">(PDF, Word, PowerPoint or pictures, up to 5 files, ${SHARE_MAX_MB} MB each)</span></span>
+   <div class="hatt"><label class="btn"><input type="file" id="sfile" multiple accept=".pdf,.doc,.docx,.pptx,image/png,image/jpeg,image/webp" hidden>${I('<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>',2)}Choose files</label></div>
+   <ul class="hfiles">${SHARE.files.map((f,i)=>`<li><span class="fic">${f.type.startsWith('image/')?'IMG':f.type.includes('pdf')?'PDF':'DOC'}</span><span class="fn">${esc(f.name)}<small>${fmtMB(f.size)}</small></span><button type="button" class="btn sm" data-srm="${i}">Remove</button></li>`).join('')}</ul></div>
+  <label class="hagree full"><input type="checkbox" id="sown"> <span>I made this material or have permission to share it.</span></label>
+  <label class="hagree full"><input type="checkbox" id="sok"> <span>It follows the <a href="#policy">content policy</a>: educational, suitable for young children, with no children's photos or personal details.</span></label>
+  ${SHARE.err?`<p class="herr full" role="alert">${esc(SHARE.err)}</p>`:''}
+  <div class="acts full"><button class="btn sun" type="submit" ${SHARE.busy?'disabled':''}>${SHARE.busy?'Sending <span id="spct"></span>':'Send for review'}</button></div></form></section>
+ <aside class="hcard"><h2>Your shared material</h2>${SHARE.mine===null?'<p class="pnote">Loading…</p>':SHARE.mine.length?`<ul class="mysubs">${SHARE.mine.sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).map(s=>`<li><b>${esc(s.title||'Untitled')}</b><small>${esc((GR[s.grade]||{}).name||'')} · ${esc((KIND[s.kind]||{}).name||'')} · ${esc((s.createdAt||'').slice(0,10))}</small><span class="tag ${(st[s.status]||st.pending)[1]}">${(st[s.status]||st.pending)[0]}</span>${s.note?`<p class="pnote">${esc(s.note)}</p>`:''}</li>`).join('')}</ul>`:'<p class="pnote">Nothing yet. Material you send will appear here with its review status.</p>'}</aside></div>`;
+ const sf=document.getElementById('sfile');sf.addEventListener('change',()=>{SHARE.err='';for(const f of sf.files){if(SHARE.files.length>=5){SHARE.err='You can send up to 5 files at a time.';break}
+  const type=f.type||(/\.docx$/i.test(f.name)?'application/vnd.openxmlformats-officedocument.wordprocessingml.document':/\.pptx$/i.test(f.name)?'application/vnd.openxmlformats-officedocument.presentationml.presentation':/\.doc$/i.test(f.name)?'application/msword':'');
+  if(!OK_SHARE.test(type)){SHARE.err=`${f.name} is not a PDF, Word, PowerPoint or picture file.`;continue}if(f.size>SHARE_MAX_MB*1048576){SHARE.err=`${f.name} is bigger than ${SHARE_MAX_MB} MB.`;continue}
+  SHARE.files.push({file:f,name:f.name,type,size:f.size})}sf.value='';SHARE.done=false;sharePage()});
+ document.getElementById('sform').addEventListener('submit',e=>{e.preventDefault();sendShare()});
+}
+async function sendShare(){if(SHARE.busy)return;const v=k=>(document.getElementById(k)||{}).value||'';SHARE.err='';const F=window.LTFB;
+ const title=v('stitle').trim(),desc=v('sdesc').trim(),credit=v('scredit').trim();
+ if(title.length<4)SHARE.err='Please give the material a title.';
+ else if(!SHARE.files.length)SHARE.err='Please choose at least one file.';
+ else if(!document.getElementById('sown').checked||!document.getElementById('sok').checked)SHARE.err='Please tick both boxes to confirm.';
+ else if(BLOCK_WORDS.test(title+' '+desc+' '+credit))SHARE.err='Some words are not allowed on a children\'s site. Please rewrite the title or description.';
+ else if(!F||!F.upload)SHARE.err='Sending is not available right now. Please try again later.';
+ if(SHARE.err){sharePage();return}
+ const keep={title,desc,credit,type:v('stype'),grade:v('sgrade'),kind:v('ssub')};
+ SHARE.busy=true;sharePage();['stitle','sdesc','scredit','stype','sgrade','ssub'].forEach((k,i)=>{const el=document.getElementById(k);if(el)el.value=Object.values(keep)[i]});
+ const id=newId(),files=[];
+ try{let i=0;for(const f of SHARE.files){i++;const path=await F.upload(`submissions/${FAM.uid}/${id}/${i}-${safeName(f.name)}`,f.file,p=>{const el=document.getElementById('spct');if(el)el.textContent=`file ${i}, ${Math.round(p*100)}%`});files.push({name:f.name,type:f.type,size:f.size,path})}
+  await F.merge('submissions/'+id,{...keep,files,uid:FAM.uid,name:(FAM.me&&FAM.me.name)||'',email:(FAM.me&&FAM.me.email)||'',status:'pending',agree:true,createdAt:new Date().toISOString()});
+  ltStat('share');F.log('share_material',{grade:keep.grade,kind:keep.kind});SHARE.files=[];SHARE.done=true;SHARE.mine=null}
+ catch(e){SHARE.err=String(e&&e.code||'').includes('storage')||String(e&&e.message).includes('storage')?'File upload is not switched on yet. Please try again later.':'We could not send this just now. Please try again in a minute.'}
+ SHARE.busy=false;sharePage();window.scrollTo(0,0)}
+
+document.addEventListener('click',e=>{
+ const t=e.target.closest('[data-hshot],[data-hrec],[data-hrm],[data-hnew],[data-srm]');if(!t)return;
+ if(t.dataset.hshot)captureShot();else if(t.dataset.hrec)toggleRec();
+ else if(t.dataset.hrm!=null){const f=HELP.files.splice(+t.dataset.hrm,1)[0];if(f&&f.prev)URL.revokeObjectURL(f.prev);HELP.err='';helpRedraw()}
+ else if(t.dataset.hnew){HELP.done=null;helpPage()}
+ else if(t.dataset.srm!=null){SHARE.files.splice(+t.dataset.srm,1);SHARE.err='';sharePage()}});
+
 /* ---------------- site ---------------- */
 const app=document.getElementById('app');
 const store={get(k,d){try{const v=localStorage.getItem('lt-'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('lt-'+k,JSON.stringify(v))}catch(e){}}};
@@ -6476,6 +6714,7 @@ function detail(id){
   <div class="info">${ur?`<h1 class="ur-t" dir="rtl" lang="ur">${r.title}</h1><div class="gloss">${r.en}</div>`:`<h1>${r.title}</h1>`}
    <div class="tags"><span class="tag">${GR[s.grade].name}</span><span class="tag">${s.name}</span><span class="tag">${T(r.topic)}</span><span class="tag">${r.pages.length} pages + answer keys</span><span class="tag key">${ic.ok}Answer key included</span></div>
    ${acts(r,q?`<a class="btn sun" href="#play-${r.id}">${ic.play}Play the quiz</a>`:'')}
+   <p class="rep"><a href="#help-${r.id}">${I('<path d="M4 21V4h11l-1.5 4L15 12H4"/>',2)}Found a mistake? Report it</a></p>
    <h2>About this resource</h2><p>${r.desc}</p>
    <h2>Learning objectives</h2><ul class="obj">${r.obj.map(o=>`<li>${T(o)}</li>`).join('')}</ul>
    <h2>What's inside</h2><ul class="inside">${r.pages.map((i,j)=>{const p=PAGES[s.id][i];const pk=r.set?RES.find(x=>x.sub===s.id&&!x.set&&x.pages.includes(i)):null;return `<li><a href="${pk?'#res-'+pk.id:'#'}" data-pg="${j}"><span class="no">${j+1}</span>${T(p.title)}<small>${r.set?T(p.topic):(RID[s.id+'-set']&&i<10?'Also in revision set':'Practice page')}</small></a></li>`}).join('')}</ul>
@@ -6738,13 +6977,21 @@ function printView(id,auto){
  <div class="pages">${sheets.join('')}</div></div>`;
  document.getElementById('pk').onchange=e=>{pvKey=e.target.checked;printView(id);fit()};
  document.getElementById('pp').onclick=()=>window.print();
+ try{document.fonts.ready.then(()=>paginate())}catch(e){}
  if(auto)setTimeout(()=>{try{window.print()}catch(e){}},500);
 }
 
 /* ---------- scaling, routing, events ---------- */
 const SW=793.7;
 const ro=('ResizeObserver' in window)?new ResizeObserver(es=>es.forEach(e=>e.target.style.setProperty('--s',(e.contentRect.width/SW).toFixed(4)))):null;
-function fit(){document.querySelectorAll('.frame').forEach(f=>{f.style.setProperty('--s',(f.clientWidth/SW).toFixed(4));ro&&ro.observe(f)})}
+/* any sheet whose content would run into the footer moves its last blocks onto a continuation page */
+function paginate(root){(root||document).querySelectorAll('.pages .frame').forEach(f=>{let sh=f.querySelector('.sheet');let guard=0;
+ while(sh&&guard++<6){const b=sh.querySelector('.sh-body'),inn=sh.querySelector('.sh-in');if(!b||!inn||b.scrollHeight<=b.clientHeight+1)break;
+  const blks=[...inn.children];if(blks.length<2)break;const nf=f.cloneNode(true),ns=nf.querySelector('.sheet'),ni=ns.querySelector('.sh-in');ni.innerHTML='';
+  const ins=ns.querySelector('.sh-instr');if(ins)ins.textContent=(sh.classList.contains('ur')?'(جاری) ':'(continued) ')+ins.textContent;
+  while(inn.children.length>1&&b.scrollHeight>b.clientHeight+1){ni.prepend(inn.lastElementChild)}
+  f.after(nf);ro&&ro.observe(nf);sh=ns;f=nf}})}
+function fit(){paginate();document.querySelectorAll('.frame').forEach(f=>{f.style.setProperty('--s',(f.clientWidth/SW).toFixed(4));ro&&ro.observe(f)})}
 const track=(n,p)=>{try{window.gtag&&gtag('event',n,p||{})}catch(e){}};
 function voicePick(ur){const vl=voiceList(ur).slice(0,8);if(vl.length<2)return '';const cur=voiceFor(ur);
  return `<label class="vpick"><span>Voice</span><select id="vsel" data-ur="${ur?1:0}">${vl.map(v=>`<option value="${esc(v.voiceURI)}" ${cur&&v.voiceURI===cur.voiceURI?'selected':''}>${esc(v.name.replace(/Microsoft |Google |\(Natural\)|Online/g,'').replace(/\s+/g,' ').trim())}</option>`).join('')}</select></label>`}
@@ -6753,7 +7000,8 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':'home';
+ try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
  else if(h.startsWith('res-'))detail(h.slice(4));
@@ -6768,6 +7016,9 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='library')library();
  else if(h==='powerups')powerupsPage();
  else if(h==='privacy')privacy();
+ else if(h==='policy')policyPage();
+ else if(h==='help'||h.startsWith('help-'))helpPage(h.slice(5));
+ else if(h==='share')sharePage();
  else if(h.startsWith('pu-'))powerup(h);
  else if(h==='search')search(lastQ);
  else if(funRoute(h)){}
@@ -6831,7 +7082,7 @@ window.addEventListener('resize',fit);
  const lift=()=>{document.querySelectorAll('body > *:not(script):not(style)').forEach(e=>{if(mine(e))return;const cs=getComputedStyle(e);
   if(cs.position==='fixed'&&parseFloat(cs.bottom)<80)e.classList.add('lt-lift');e.querySelectorAll('*').forEach(c=>{const s=getComputedStyle(c);if(s.position==='fixed'&&parseFloat(s.bottom)<80)c.classList.add('lt-lift')})})};
  new MutationObserver(lift).observe(document.body,{childList:true});setTimeout(lift,1500);setTimeout(lift,5000)})();
-regQuizOnly();regFun();renderAcct();route();famInit().then(cmInit);
+regQuizOnly();regFun();renderAcct();try{ltVisit()}catch(e){}route();famInit().then(cmInit);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
 
 </script>

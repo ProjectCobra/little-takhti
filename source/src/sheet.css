@@ -18,7 +18,7 @@
 .sheet.ur .sh-instr{font-size:17px;line-height:2.1;margin-top:0}
 .sh-body{flex:1;overflow:hidden}
 .sh-in{display:flex;flex-direction:column;gap:16px}
-.sh-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1;font-family:'Baloo 2',sans-serif;font-size:12px;color:#7a8199;border-top:1.5px dashed #c9cfdc;padding-top:6px;line-height:1.4;text-align:left}
+.sh-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;position:relative;z-index:1;font-family:'Baloo 2',sans-serif;font-size:12px;color:#7a8199;border-top:1.5px dashed #c9cfdc;padding-top:6px;line-height:1.4;text-align:left}
 .bh{font-family:'Baloo 2',sans-serif;font-size:19px;font-weight:700;color:var(--pc);margin:2px 0 6px}
 .sheet.ur .bh{font-family:var(--urdu);font-size:18px;line-height:2;margin:0}
 .g{display:grid;gap:10px 22px}

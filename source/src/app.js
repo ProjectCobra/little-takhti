@@ -197,6 +197,7 @@ function detail(id){
   <div class="info">${ur?`<h1 class="ur-t" dir="rtl" lang="ur">${r.title}</h1><div class="gloss">${r.en}</div>`:`<h1>${r.title}</h1>`}
    <div class="tags"><span class="tag">${GR[s.grade].name}</span><span class="tag">${s.name}</span><span class="tag">${T(r.topic)}</span><span class="tag">${r.pages.length} pages + answer keys</span><span class="tag key">${ic.ok}Answer key included</span></div>
    ${acts(r,q?`<a class="btn sun" href="#play-${r.id}">${ic.play}Play the quiz</a>`:'')}
+   <p class="rep"><a href="#help-${r.id}">${I('<path d="M4 21V4h11l-1.5 4L15 12H4"/>',2)}Found a mistake? Report it</a></p>
    <h2>About this resource</h2><p>${r.desc}</p>
    <h2>Learning objectives</h2><ul class="obj">${r.obj.map(o=>`<li>${T(o)}</li>`).join('')}</ul>
    <h2>What's inside</h2><ul class="inside">${r.pages.map((i,j)=>{const p=PAGES[s.id][i];const pk=r.set?RES.find(x=>x.sub===s.id&&!x.set&&x.pages.includes(i)):null;return `<li><a href="${pk?'#res-'+pk.id:'#'}" data-pg="${j}"><span class="no">${j+1}</span>${T(p.title)}<small>${r.set?T(p.topic):(RID[s.id+'-set']&&i<10?'Also in revision set':'Practice page')}</small></a></li>`}).join('')}</ul>
@@ -459,13 +460,21 @@ function printView(id,auto){
  <div class="pages">${sheets.join('')}</div></div>`;
  document.getElementById('pk').onchange=e=>{pvKey=e.target.checked;printView(id);fit()};
  document.getElementById('pp').onclick=()=>window.print();
+ try{document.fonts.ready.then(()=>paginate())}catch(e){}
  if(auto)setTimeout(()=>{try{window.print()}catch(e){}},500);
 }
 
 /* ---------- scaling, routing, events ---------- */
 const SW=793.7;
 const ro=('ResizeObserver' in window)?new ResizeObserver(es=>es.forEach(e=>e.target.style.setProperty('--s',(e.contentRect.width/SW).toFixed(4)))):null;
-function fit(){document.querySelectorAll('.frame').forEach(f=>{f.style.setProperty('--s',(f.clientWidth/SW).toFixed(4));ro&&ro.observe(f)})}
+/* any sheet whose content would run into the footer moves its last blocks onto a continuation page */
+function paginate(root){(root||document).querySelectorAll('.pages .frame').forEach(f=>{let sh=f.querySelector('.sheet');let guard=0;
+ while(sh&&guard++<6){const b=sh.querySelector('.sh-body'),inn=sh.querySelector('.sh-in');if(!b||!inn||b.scrollHeight<=b.clientHeight+1)break;
+  const blks=[...inn.children];if(blks.length<2)break;const nf=f.cloneNode(true),ns=nf.querySelector('.sheet'),ni=ns.querySelector('.sh-in');ni.innerHTML='';
+  const ins=ns.querySelector('.sh-instr');if(ins)ins.textContent=(sh.classList.contains('ur')?'(جاری) ':'(continued) ')+ins.textContent;
+  while(inn.children.length>1&&b.scrollHeight>b.clientHeight+1){ni.prepend(inn.lastElementChild)}
+  f.after(nf);ro&&ro.observe(nf);sh=ns;f=nf}})}
+function fit(){paginate();document.querySelectorAll('.frame').forEach(f=>{f.style.setProperty('--s',(f.clientWidth/SW).toFixed(4));ro&&ro.observe(f)})}
 const track=(n,p)=>{try{window.gtag&&gtag('event',n,p||{})}catch(e){}};
 function voicePick(ur){const vl=voiceList(ur).slice(0,8);if(vl.length<2)return '';const cur=voiceFor(ur);
  return `<label class="vpick"><span>Voice</span><select id="vsel" data-ur="${ur?1:0}">${vl.map(v=>`<option value="${esc(v.voiceURI)}" ${cur&&v.voiceURI===cur.voiceURI?'selected':''}>${esc(v.name.replace(/Microsoft |Google |\(Natural\)|Online/g,'').replace(/\s+/g,' ').trim())}</option>`).join('')}</select></label>`}
@@ -474,7 +483,8 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':'home';
+ try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
  else if(h.startsWith('res-'))detail(h.slice(4));
@@ -489,6 +499,9 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='library')library();
  else if(h==='powerups')powerupsPage();
  else if(h==='privacy')privacy();
+ else if(h==='policy')policyPage();
+ else if(h==='help'||h.startsWith('help-'))helpPage(h.slice(5));
+ else if(h==='share')sharePage();
  else if(h.startsWith('pu-'))powerup(h);
  else if(h==='search')search(lastQ);
  else if(funRoute(h)){}
@@ -552,5 +565,5 @@ window.addEventListener('resize',fit);
  const lift=()=>{document.querySelectorAll('body > *:not(script):not(style)').forEach(e=>{if(mine(e))return;const cs=getComputedStyle(e);
   if(cs.position==='fixed'&&parseFloat(cs.bottom)<80)e.classList.add('lt-lift');e.querySelectorAll('*').forEach(c=>{const s=getComputedStyle(c);if(s.position==='fixed'&&parseFloat(s.bottom)<80)c.classList.add('lt-lift')})})};
  new MutationObserver(lift).observe(document.body,{childList:true});setTimeout(lift,1500);setTimeout(lift,5000)})();
-regQuizOnly();regFun();renderAcct();route();famInit().then(cmInit);
+regQuizOnly();regFun();renderAcct();try{ltVisit()}catch(e){}route();famInit().then(cmInit);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);

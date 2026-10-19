@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Little Takhti Admin</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='10' width='52' height='48' rx='12' fill='%23123B28'/%3E%3Cpath d='M22 34c3 6 17 6 20 0' fill='none' stroke='%23FFD93B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F4F6F3;--surface:#fff;--ink:#14241B;--muted:#5F6B64;--line:#E1E6E0;--brand:#123B28;--brand-2:#2F8F55;--sun:#FFD93B;--bad:#C2410C;--bad-soft:#FFEDE3;--ok-soft:#E3F4E8;--chip:#EEF1ED;--accent:#2563EB;--s1:#2F8F55;--s2:#2563EB;--s3:#C2410C;--s4:#7C3AED;--s5:#0E7490;--s6:#B45309}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1512;--surface:#18201B;--ink:#E8EEE9;--muted:#9AA79F;--line:#2A342E;--brand:#9BE3B5;--brand-2:#5CC287;--chip:#222B25;--bad-soft:#3A2116;--ok-soft:#1C3324;--accent:#7AA7FF;--s1:#5CC287;--s2:#7AA7FF;--s3:#F08A5D;--s4:#B794F6;--s5:#4FC3D9;--s6:#E0A84A}}
+:root[data-theme="dark"]{--bg:#0F1512;--surface:#18201B;--ink:#E8EEE9;--muted:#9AA79F;--line:#2A342E;--brand:#9BE3B5;--brand-2:#5CC287;--chip:#222B25;--bad-soft:#3A2116;--ok-soft:#1C3324;--accent:#7AA7FF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Lexend,system-ui,sans-serif}
+a{color:var(--accent)}
+button,select,input,textarea{font:inherit;color:inherit}
+.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+.logo{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{font-style:normal;font-size:11px;background:var(--brand);color:var(--bg);padding:2px 7px;border-radius:999px;font-weight:600;letter-spacing:.04em}
+.tabs{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+.tabs button{border:0;background:none;padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--chip);color:var(--ink)}
+.tabs .n{background:var(--bad);color:#fff;border-radius:999px;font-size:11px;padding:1px 6px;margin-left:5px}
+.me{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);white-space:nowrap}
+.me img{width:28px;height:28px;border-radius:50%}
+main{max-width:1240px;margin:0 auto;padding:22px 20px 60px}
+h1{font-size:26px;margin:0 0 4px}
+h2{font-size:18px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 18px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 13px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-size:14px}
+.btn.pri{background:var(--brand);border-color:var(--brand);color:var(--bg)}
+.btn.warn{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line))}
+.btn:disabled{opacity:.5;cursor:default}
+select,input[type=search],input[type=text],textarea{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 11px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.kpi b{display:block;font-size:26px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--muted);font-size:13px}
+.kpi small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0}
+.hb{display:grid;gap:8px}
+.hb .r{display:grid;grid-template-columns:minmax(0,150px) 1fr auto;gap:10px;align-items:center;font-size:14px}
+.hb .l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb .t{height:12px;background:var(--chip);border-radius:6px;overflow:hidden}
+.hb .t i{display:block;height:100%;background:var(--brand-2);border-radius:6px}
+.hb .v{font-variant-numeric:tabular-nums;color:var(--muted);min-width:42px;text-align:right}
+.chart svg{width:100%;height:auto;display:block}
+.chart .ax{fill:var(--muted);font-size:10px}
+.legend{display:flex;gap:14px;font-size:13px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--chip);white-space:nowrap}
+.tag.new,.tag.pending{background:#FFF3C4;color:#7A5A00}
+.tag.progress{background:#DCE8FF;color:#1D4ED8}
+.tag.resolved,.tag.approved{background:var(--ok-soft);color:var(--brand-2)}
+.tag.spam,.tag.rejected,.tag.removed{background:var(--bad-soft);color:var(--bad)}
+.tix{display:grid;gap:12px}
+.tk{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.tk-h{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.tk-h h3{margin:0;font-size:16px;flex:1;min-width:200px}
+.tk .meta{color:var(--muted);font-size:13px;margin:4px 0 8px}
+.tk .msg{white-space:pre-wrap;background:var(--bg);border-radius:12px;padding:10px 12px;font-size:14px;margin:8px 0}
+.atts{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
+.att{border:1px solid var(--line);border-radius:12px;padding:6px;max-width:260px;font-size:12px}
+.att img,.att video{display:block;max-width:100%;max-height:200px;border-radius:8px;background:#000}
+.att a{display:block;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.acts textarea{flex:1;min-width:220px;min-height:38px}
+.gate{min-height:80vh;display:grid;place-items:center;text-align:center;padding:20px}
+.gate .card{max-width:420px}
+.muted{color:var(--muted)}
+.empty{color:var(--muted);padding:30px;text-align:center;background:var(--surface);border:1px dashed var(--line);border-radius:16px}
+.note{background:var(--chip);border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:14px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:20}
+@media (max-width:760px){.top .in{flex-wrap:wrap;padding:10px 16px}.tabs{order:3;flex-basis:100%}main{padding:16px}.hb .r{grid-template-columns:minmax(0,110px) 1fr auto}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root"><div class="gate"><p class="muted">Loading…</p></div></div>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signOut} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
+import {getFirestore,collection,getDocs,doc,setDoc,deleteDoc,updateDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
+import {getStorage,ref,getDownloadURL,deleteObject} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-storage.js";
+
+const SITE='https://littletakhti.netlify.app';
+const ADMINS=['sumbulaftab@gmail.com'];
+const app=initializeApp({apiKey:"AIzaSyC1rvub_YPgzf1HQkMER8DpJY_9MVnOMlI",authDomain:"littletakhti.firebaseapp.com",projectId:"littletakhti",storageBucket:"littletakhti.firebasestorage.app",messagingSenderId:"127926542888",appId:"1:127926542888:web:4f7e47563a3db269bb0b1d"});
+const auth=getAuth(app),db=getFirestore(app);let st=null;try{st=getStorage(app)}catch(e){}
+const $=s=>document.querySelector(s),root=$('#root');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>Number(n||0).toLocaleString('en-PK');
+const day=d=>d.toISOString().slice(0,10);
+const ago=n=>{const d=new Date();d.setDate(d.getDate()-n);return day(d)};
+const tsStr=v=>v&&v.toDate?v.toDate().toISOString():String(v||'');
+const when=v=>{const s=tsStr(v);return s?s.slice(0,16).replace('T',' '):''};
+const toast=m=>{const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2600)};
+const S={tab:'overview',range:30,stats:[],members:[],help:[],subs:[],banned:[],build:null,deploys:[],hf:'open',sf:'pending',q:'',sort:'ws',usort:'lastSeen',err:{}};
+
+function gate(msg,btn){root.innerHTML=`<div class="gate"><div class="card"><h1>Little Takhti Admin</h1><p class="sub">${msg}</p>${btn||''}</div></div>`}
+onAuthStateChanged(auth,async u=>{
+ if(!u){gate('Sign in with the owner Google account to continue.','<button class="btn pri" id="si">Sign in with Google</button>');$('#si').onclick=()=>signInWithPopup(auth,new GoogleAuthProvider()).catch(e=>toast(e.code||'Sign in failed'));return}
+ if(!ADMINS.includes((u.email||'').toLowerCase())){gate(`${esc(u.email)} does not have admin access.`,'<button class="btn" id="so">Sign out</button>');$('#so').onclick=()=>signOut(auth);return}
+ S.user=u;shell();await loadAll();render()});
+
+async function grab(name,fn){try{S.err[name]='';return await fn()}catch(e){S.err[name]=e.code||e.message||'error';return null}}
+async function loadAll(){
+ const [stats,members,help,subs,banned]=await Promise.all([
+  grab('stats',async()=>(await getDocs(collection(db,'stats'))).docs.map(d=>({id:d.id,...d.data()}))),
+  grab('members',async()=>(await getDocs(collection(db,'members'))).docs.map(d=>({id:d.id,...d.data()}))),
+  grab('help',async()=>(await getDocs(collection(db,'help'))).docs.map(d=>({id:d.id,...d.data()}))),
+  grab('subs',async()=>(await getDocs(collection(db,'submissions'))).docs.map(d=>({id:d.id,...d.data()}))),
+  grab('banned',async()=>(await getDocs(collection(db,'banned'))).docs.map(d=>({id:d.id,...d.data()})))]);
+ S.stats=(stats||[]).sort((a,b)=>a.id.localeCompare(b.id));S.members=members||[];S.banned=banned||[];
+ S.help=(help||[]).sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));S.subs=(subs||[]).sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+ const j=async u=>{try{const r=await fetch(u+'?t='+Date.now());return r.ok?await r.json():null}catch(e){return null}};
+ [S.build,S.deploys]=await Promise.all([j(SITE+'/build.json'),j(SITE+'/deploys.json')]);S.deploys=S.deploys||[];
+}
+const TABS=[['overview','Overview'],['worksheets','Worksheets'],['modules','Modules'],['users','Users'],['help','Help queries'],['subs','Submissions'],['deploys','Deployments'],['safety','Safety']];
+function shell(){root.innerHTML=`<header class="top"><div class="in"><span class="logo">Little Takhti <i>ADMIN</i></span><nav class="tabs" id="tabs"></nav>
+ <span class="me">${S.user.photoURL?`<img src="${esc(S.user.photoURL)}" alt="">`:''}<button class="btn" id="rf" title="Reload data">Refresh</button><button class="btn" id="so">Sign out</button></span></div></header><main id="main"></main>`;
+ $('#so').onclick=()=>signOut(auth);$('#rf').onclick=async()=>{$('#main').innerHTML='<p class="muted">Loading…</p>';await loadAll();render();toast('Data refreshed')}}
+function tabs(){const openH=S.help.filter(h=>['new','progress'].includes(h.status||'new')).length,pend=S.subs.filter(s=>(s.status||'pending')==='pending').length;
+ $('#tabs').innerHTML=TABS.map(([k,v])=>`<button class="${S.tab===k?'on':''}" data-tab="${k}">${v}${k==='help'&&openH?`<span class="n">${openH}</span>`:''}${k==='subs'&&pend?`<span class="n">${pend}</span>`:''}</button>`).join('')}
+function render(){tabs();const m=$('#main');const f={overview,worksheets,modules,users,help,subs,deploys,safety}[S.tab];m.innerHTML=f();wire()}
+
+/* ---------- stats helpers ---------- */
+const inRange=()=>{const from=S.range?ago(S.range-1):'0000';return S.stats.filter(d=>d.id>=from)};
+const sumK=(rows,k)=>rows.reduce((a,d)=>a+(+d[k]||0),0);
+function sumMap(rows,k){const o={};rows.forEach(d=>Object.entries(d[k]||{}).forEach(([x,v])=>o[x]=(o[x]||0)+(+v||0)));return o}
+const RES=()=>(S.build&&S.build.res)||{};
+const rname=id=>{const r=RES()[id];return r?`${r[0]} <span class="muted">· ${esc(r[1])} · ${esc(r[2])}</span>`:esc(id)};
+function hbars(obj,limit=12,label=x=>esc(x)){const e=Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,limit);if(!e.length)return '<p class="muted">No data yet.</p>';const mx=e[0][1]||1;
+ return `<div class="hb">${e.map(([k,v])=>`<div class="r"><span class="l" title="${esc(k)}">${label(k)}</span><span class="t"><i style="width:${Math.max(2,v/mx*100)}%"></i></span><span class="v">${fmt(v)}</span></div>`).join('')}</div>`}
+function lineChart(rows,keys){const days=[];const n=Math.min(S.range||90,90);for(let i=n-1;i>=0;i--)days.push(ago(i));const by=Object.fromEntries(rows.map(d=>[d.id,d]));
+ const W=760,H=200,P=28,cols=['var(--s1)','var(--s2)','var(--s3)'];const mx=Math.max(1,...days.flatMap(d=>keys.map(([k])=>+(by[d]||{})[k]||0)));
+ const x=i=>P+i*(W-P-8)/Math.max(1,days.length-1),y=v=>H-20-(v/mx)*(H-36);
+ const lines=keys.map(([k],j)=>`<polyline fill="none" stroke="${cols[j]}" stroke-width="2.2" stroke-linejoin="round" points="${days.map((d,i)=>x(i)+','+y(+(by[d]||{})[k]||0)).join(' ')}"/>`).join('');
+ const ticks=[0,.5,1].map(t=>`<text class="ax" x="2" y="${y(mx*t)+3}">${fmt(Math.round(mx*t))}</text><line x1="${P}" x2="${W}" y1="${y(mx*t)}" y2="${y(mx*t)}" stroke="var(--line)"/>`).join('');
+ const lab=[0,Math.floor(days.length/2),days.length-1].map(i=>`<text class="ax" x="${x(i)}" y="${H-4}" text-anchor="${i===0?'start':i===days.length-1?'end':'middle'}">${days[i].slice(5)}</text>`).join('');
+ return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Daily trend">${ticks}${lines}${lab}</svg><div class="legend">${keys.map(([k,l],j)=>`<span><i style="background:${cols[j]}"></i>${l}</span>`).join('')}</div></div>`}
+const rangeSel=()=>`<label class="muted">Period <select id="range">${[[1,'Today'],[7,'Last 7 days'],[30,'Last 30 days'],[90,'Last 90 days'],[0,'All time']].map(([v,l])=>`<option value="${v}" ${S.range===v?'selected':''}>${l}</option>`).join('')}</select></label>`;
+const errNote=k=>S.err[k]?`<p class="note">Could not read ${k} (${esc(S.err[k])}). Check that the Firestore rules from the setup notes are published.</p>`:'';
+
+/* ---------- views ---------- */
+function overview(){const rows=inRange(),today=S.stats.find(d=>d.id===day(new Date()))||{};
+ const ws=Object.values(sumMap(rows,'ws')).reduce((a,b)=>a+b,0),dl=Object.values(sumMap(rows,'dl')).reduce((a,b)=>a+b,0),pr=Object.values(sumMap(rows,'pr')).reduce((a,b)=>a+b,0),qz=Object.values(sumMap(rows,'qz')).reduce((a,b)=>a+b,0);
+ const newM=S.members.filter(m=>(m.joined||'')>=ago(6)).length,openH=S.help.filter(h=>['new','progress'].includes(h.status||'new')).length,pend=S.subs.filter(s=>(s.status||'pending')==='pending').length;
+ const dev=sumMap(rows,'dev');const last=S.deploys[S.deploys.length-1];
+ return `<h1>Overview</h1><p class="sub">Visitors are counted once per device per day. Signed-in families are counted from their accounts.</p>${errNote('stats')}
+ <div class="bar">${rangeSel()}</div>
+ <div class="kpis">
+  <div class="kpi"><span>Visitors</span><b>${fmt(sumK(rows,'uv'))}</b><small>${fmt(today.uv)} today</small></div>
+  <div class="kpi"><span>New visitors</span><b>${fmt(sumK(rows,'nv'))}</b><small>first visit on a device</small></div>
+  <div class="kpi"><span>Page views</span><b>${fmt(sumK(rows,'pv'))}</b><small>${fmt(today.pv)} today</small></div>
+  <div class="kpi"><span>Worksheet views</span><b>${fmt(ws)}</b><small>${fmt(pr)} print previews</small></div>
+  <div class="kpi"><span>PDF downloads</span><b>${fmt(dl)}</b></div>
+  <div class="kpi"><span>Quiz plays</span><b>${fmt(qz)}</b></div>
+  <div class="kpi"><span>Signed-in families</span><b>${fmt(S.members.length)}</b><small>${fmt(newM)} joined this week</small></div>
+  <div class="kpi"><span>Open help queries</span><b>${fmt(openH)}</b><small>${fmt(pend)} submissions to review</small></div>
+  <div class="kpi"><span>Last deploy</span><b style="font-size:18px">${last?esc(last.date.slice(0,10)):'–'}</b><small>${last?esc(last.note||''):'No record yet'}</small></div>
+ </div>
+ <div class="card" style="margin-bottom:16px"><h2>Daily traffic</h2>${lineChart(S.stats,[['uv','Visitors'],['pv','Page views']])}</div>
+ <div class="grid"><div class="card"><h2>Modules used</h2>${hbars(sumMap(rows,'mod'),12)}</div>
+  <div class="card"><h2>Devices</h2>${hbars(dev,4,k=>k==='mobile'?'Phone':k==='desktop'?'Computer':esc(k))}<h2 style="margin-top:18px">Grade chosen</h2>${hbars(sumMap(rows,'gr'),8,k=>esc(gname(k)))}</div></div>`}
+const gname=k=>({nursery:'Nursery',kg:'KG',g1:'Grade 1',g2:'Grade 2',g3:'Grade 3'})[k]||k;
+function worksheets(){const rows=inRange(),ws=sumMap(rows,'ws'),dl=sumMap(rows,'dl'),pr=sumMap(rows,'pr'),qz=sumMap(rows,'qz');
+ const ids=[...new Set([...Object.keys(ws),...Object.keys(dl),...Object.keys(pr),...Object.keys(qz)])];const q=S.q.toLowerCase();
+ const list=ids.map(id=>({id,ws:ws[id]||0,dl:dl[id]||0,pr:pr[id]||0,qz:qz[id]||0,t:(RES()[id]||[id]).join(' ').toLowerCase()})).filter(r=>!q||r.t.includes(q)||r.id.includes(q)).sort((a,b)=>b[S.sort]-a[S.sort]).slice(0,100);
+ const never=Object.keys(RES()).filter(id=>!ws[id]&&!dl[id]&&!qz[id]).length;
+ return `<h1>Worksheets</h1><p class="sub">Most viewed, downloaded and played packs. ${S.build?`${fmt(never)} of ${fmt(Object.keys(RES()).length)} packs had no visits in this period.`:''}</p>
+ <div class="bar">${rangeSel()}<input type="search" id="q" placeholder="Search packs" value="${esc(S.q)}"></div>
+ ${list.length?`<div class="card tw"><table><thead><tr><th>Pack</th>${[['ws','Views'],['pr','Print'],['dl','Downloads'],['qz','Quiz plays']].map(([k,l])=>`<th class="n" data-sort="${k}">${l}${S.sort===k?' ↓':''}</th>`).join('')}</tr></thead>
+ <tbody>${list.map(r=>`<tr><td><a href="${SITE}/#res-${esc(r.id)}" target="_blank" rel="noopener">${rname(r.id)}</a></td><td class="n">${fmt(r.ws)}</td><td class="n">${fmt(r.pr)}</td><td class="n">${fmt(r.dl)}</td><td class="n">${fmt(r.qz)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">No worksheet activity in this period yet.</p>'}`}
+function modules(){const rows=inRange();
+ return `<h1>Modules</h1><p class="sub">How families use each part of the site.</p><div class="bar">${rangeSel()}</div>
+ <div class="grid"><div class="card"><h2>Sections</h2>${hbars(sumMap(rows,'mod'),20)}</div>
+ <div class="card"><h2>PowerUps</h2>${hbars(sumMap(rows,'pu'),10)}</div>
+ <div class="card"><h2>Mini games</h2>${hbars(sumMap(rows,'gm'),10)}</div>
+ <div class="card"><h2>Stories</h2>${hbars(sumMap(rows,'st'),12)}</div>
+ <div class="card"><h2>Help and sharing</h2>${hbars({'Help messages':sumK(rows,'help'),'Material shared':sumK(rows,'share')},4)}</div></div>`}
+function count(arr,fn){const o={};arr.forEach(x=>{[].concat(fn(x)).forEach(k=>{k=k||'Not given';o[k]=(o[k]||0)+1})});return o}
+function users(){const M=S.members,kids=M.flatMap(m=>m.kids||[]);const q=S.q.toLowerCase();
+ const list=M.filter(m=>!q||[m.name,m.email,m.city,m.province].join(' ').toLowerCase().includes(q)).sort((a,b)=>String(b[S.usort]||'').localeCompare(String(a[S.usort]||'')));
+ const act7=M.filter(m=>(m.lastSeen||'')>=ago(6)).length;
+ return `<h1>Users</h1><p class="sub">Families who signed in with Google. Age, gender, city and role are optional, so totals include "Not given".</p>${errNote('members')}
+ <div class="kpis"><div class="kpi"><span>Accounts</span><b>${fmt(M.length)}</b></div><div class="kpi"><span>Active this week</span><b>${fmt(act7)}</b></div><div class="kpi"><span>Child profiles</span><b>${fmt(kids.length)}</b></div><div class="kpi"><span>Average children per account</span><b>${M.length?(kids.length/M.length).toFixed(1):'–'}</b></div></div>
+ <div class="grid"><div class="card"><h2>Children by age</h2>${hbars(count(kids,k=>k.age?k.age+' years':''),12)}</div>
+ <div class="card"><h2>Children by gender</h2>${hbars(count(kids,k=>k.gender==='girl'?'Girl':k.gender==='boy'?'Boy':''),4)}</div>
+ <div class="card"><h2>Children by grade</h2>${hbars(count(kids,k=>gname(k.grade)),6)}</div>
+ <div class="card"><h2>Account holders</h2>${hbars(count(M,m=>({parent:'Parent',teacher:'Teacher',tutor:'Tutor',school:'School',other:'Other'})[m.role]||''),6)}</div>
+ <div class="card"><h2>Province</h2>${hbars(count(M,m=>m.province),9)}</div>
+ <div class="card"><h2>City</h2>${hbars(count(M,m=>(m.city||'').trim().replace(/\b\w/g,c=>c.toUpperCase())),10)}</div></div>
+ <h2 style="margin-top:22px">All accounts</h2><div class="bar"><input type="search" id="q" placeholder="Search name, email or city" value="${esc(S.q)}"></div>
+ <div class="card tw"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>City</th><th class="n">Children</th><th data-usort="joined">Joined${S.usort==='joined'?' ↓':''}</th><th data-usort="lastSeen">Last seen${S.usort==='lastSeen'?' ↓':''}</th></tr></thead>
+ <tbody>${list.slice(0,300).map(m=>`<tr><td>${esc(m.name)}${S.banned.some(b=>b.id===m.id)?' <span class="tag spam">blocked</span>':''}</td><td>${esc(m.email)}</td><td>${esc(m.role)}</td><td>${esc([m.city,m.province].filter(Boolean).join(', '))}</td><td class="n">${fmt(m.kidsN||0)}</td><td>${esc((m.joined||'').slice(0,10))}</td><td>${esc((m.lastSeen||'').slice(0,10))}</td></tr>`).join('')||'<tr><td colspan="7" class="muted">No accounts yet.</td></tr>'}</tbody></table></div>`}
+const HT={worksheet:'Worksheet',quiz:'Quiz or game',site:'Website',account:'Account',idea:'Idea',other:'Other'};
+const HS=[['new','New'],['progress','In progress'],['resolved','Resolved'],['spam','Spam']];
+function help(){const list=S.help.filter(h=>S.hf==='all'||(S.hf==='open'?['new','progress'].includes(h.status||'new'):(h.status||'new')===S.hf));
+ return `<h1>Help queries</h1><p class="sub">Messages sent from the Help page, newest first.</p>${errNote('help')}
+ <div class="bar"><select id="hf">${[['open','Open'],['new','New'],['progress','In progress'],['resolved','Resolved'],['spam','Spam'],['all','All']].map(([k,l])=>`<option value="${k}" ${S.hf===k?'selected':''}>${l} (${k==='all'?S.help.length:k==='open'?S.help.filter(h=>['new','progress'].includes(h.status||'new')).length:S.help.filter(h=>(h.status||'new')===k).length})</option>`).join('')}</select></div>
+ <div class="tix">${list.map(h=>`<article class="tk" data-id="${h.id}"><div class="tk-h"><h3>${esc(HT[h.type]||h.type)}${h.where?': '+esc(h.where):''}</h3><span class="tag ${esc(h.status||'new')}">${esc((HS.find(x=>x[0]===(h.status||'new'))||[,'New'])[1])}</span></div>
+  <div class="meta">${esc(when(h.createdAt||h.created))} · Ref ${esc(h.id.slice(0,8).toUpperCase())} · ${h.email?`<a href="mailto:${esc(h.email)}?subject=${encodeURIComponent('Little Takhti help: ref '+h.id.slice(0,8).toUpperCase())}">${esc(h.email)}</a>`:'no email'}${h.name?' · '+esc(h.name):''}${h.page?` · <a href="${SITE}/#${esc(h.page)}" target="_blank" rel="noopener">open page</a>`:''}</div>
+  <div class="msg">${esc(h.message)}</div>
+  ${(h.attachments||[]).length?`<div class="atts" data-atts="${h.id}">${h.attachments.map((a,i)=>`<div class="att" data-att="${i}">${esc(a.name)} <span class="muted">${a.failed?'(upload failed)':''}</span></div>`).join('')}</div>`:''}
+  <div class="meta">${h.device?esc(`${h.device.w}×${h.device.h} · ${h.device.ua}`):''}</div>
+  <div class="acts"><select data-hstatus="${h.id}">${HS.map(([k,l])=>`<option value="${k}" ${(h.status||'new')===k?'selected':''}>${l}</option>`).join('')}</select>
+   <textarea data-hnote="${h.id}" placeholder="Private note">${esc(h.note||'')}</textarea><button class="btn" data-hsave="${h.id}">Save note</button><button class="btn warn" data-hdel="${h.id}">Delete</button></div></article>`).join('')||'<p class="empty">Nothing here.</p>'}</div>`}
+const SS=[['pending','Waiting'],['approved','Approved'],['rejected','Not accepted'],['removed','Removed']];
+function subs(){const list=S.subs.filter(s=>S.sf==='all'||(s.status||'pending')===S.sf);
+ return `<h1>Submissions</h1><p class="sub">Teaching material families and teachers sent from their accounts. Nothing is public until you use it.</p>${errNote('subs')}
+ <div class="bar"><select id="sf">${[...SS,['all','All']].map(([k,l])=>`<option value="${k}" ${S.sf===k?'selected':''}>${l} (${k==='all'?S.subs.length:S.subs.filter(s=>(s.status||'pending')===k).length})</option>`).join('')}</select></div>
+ <div class="tix">${list.map(s=>`<article class="tk"><div class="tk-h"><h3>${esc(s.title)}</h3><span class="tag ${esc(s.status||'pending')}">${esc((SS.find(x=>x[0]===(s.status||'pending'))||[,'Waiting'])[1])}</span></div>
+  <div class="meta">${esc(gname(s.grade))} · ${esc(s.kind)} · ${esc(s.type)} · ${esc(when(s.createdAt||s.created))} · ${esc(s.name)} <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>${s.credit?' · credit: '+esc(s.credit):''}${S.banned.some(b=>b.id===s.uid)?' · <span class="tag spam">user blocked</span>':''}</div>
+  ${s.desc?`<div class="msg">${esc(s.desc)}</div>`:''}
+  <div class="atts" data-satts="${s.id}">${(s.files||[]).map((f,i)=>`<div class="att" data-att="${i}">${esc(f.name)}</div>`).join('')}</div>
+  <div class="acts"><textarea data-snote="${s.id}" placeholder="Note shown to the sender">${esc(s.note||'')}</textarea>
+   <button class="btn pri" data-sact="approved" data-id="${s.id}">Approve</button><button class="btn" data-sact="rejected" data-id="${s.id}">Not accepted</button>
+   <button class="btn warn" data-sact="removed" data-id="${s.id}" title="Deletes the files">Remove files</button>${S.banned.some(b=>b.id===s.uid)?'':`<button class="btn warn" data-ban="${esc(s.uid)}" data-email="${esc(s.email)}">Block user</button>`}</div></article>`).join('')||'<p class="empty">Nothing here.</p>'}</div>`}
+function deploys(){const b=S.build;
+ return `<h1>Deployments</h1><p class="sub">What is live on <a href="${SITE}" target="_blank" rel="noopener">${SITE.replace('https://','')}</a>.</p>
+ ${b?`<div class="kpis"><div class="kpi"><span>Built</span><b style="font-size:18px">${esc(b.built.slice(0,16).replace('T',' '))}</b><small>UTC</small></div><div class="kpi"><span>Worksheet packs</span><b>${fmt(b.packs)}</b></div><div class="kpi"><span>Printable pages</span><b>${fmt(b.pages)}</b></div><div class="kpi"><span>Subjects</span><b>${fmt(b.subjects)}</b></div><div class="kpi"><span>Quiz packs</span><b>${fmt(b.quizzes)}</b></div><div class="kpi"><span>SEO pages</span><b>${fmt(b.seo||0)}</b></div></div>`:'<p class="note">Could not read build.json from the live site.</p>'}
+ <div class="card tw"><h2>Deploy history</h2><table><thead><tr><th>Date</th><th>Version</th><th>What changed</th></tr></thead><tbody>${S.deploys.slice().reverse().map(d=>`<tr><td>${esc(d.date.slice(0,16).replace('T',' '))}</td><td><a href="https://github.com/ProjectCobra/little-takhti/commit/${esc(d.commit)}" target="_blank" rel="noopener">${esc((d.commit||'').slice(0,7))}</a></td><td>${esc(d.note)}</td></tr>`).join('')||'<tr><td colspan="3" class="muted">No deploys recorded yet.</td></tr>'}</tbody></table></div>
+ <div class="acts"><a class="btn" href="https://app.netlify.com/" target="_blank" rel="noopener">Netlify dashboard</a><a class="btn" href="https://github.com/ProjectCobra/little-takhti/commits/main" target="_blank" rel="noopener">GitHub history</a><a class="btn" href="https://console.firebase.google.com/project/littletakhti" target="_blank" rel="noopener">Firebase console</a><a class="btn" href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a></div>`}
+function safety(){return `<h1>Safety</h1><p class="sub">The content policy shown to families is at <a href="${SITE}/#policy" target="_blank" rel="noopener">#policy</a>. Uploads are private, limited to images, short recordings, PDF, Word and PowerPoint, and checked for blocked words before sending.</p>
+ <div class="card tw"><h2>Blocked users</h2><table><thead><tr><th>Email</th><th>Blocked on</th><th></th></tr></thead><tbody>${S.banned.map(b=>`<tr><td>${esc(b.email||b.id)}</td><td>${esc(when(b.at))}</td><td><button class="btn" data-unban="${b.id}">Unblock</button></td></tr>`).join('')||'<tr><td colspan="3" class="muted">No one is blocked.</td></tr>'}</tbody></table></div>
+ <div class="card" style="margin-top:16px"><h2>Review checklist</h2><ul><li>Open every attachment before acting on a message.</li><li>Delete anything indecent, violent or hateful straight away, then block the sender.</li><li>Remove children's faces or personal details before using any shared material.</li><li>Only use shared material that matches the school syllabus and is age-appropriate. For Islamiat, check against authentic course books.</li></ul></div>`}
+
+/* ---------- attachments: resolve storage links only when shown ---------- */
+async function attHTML(a,inlineData){let url='';if(a.path&&st){try{url=await getDownloadURL(ref(st,a.path))}catch(e){}}if(!url&&inlineData)url=inlineData;
+ if(!url)return `${esc(a.name)} <span class="muted">${a.failed?'upload failed':'not available'}</span>`;
+ const t=a.type||'';return (t.startsWith('image/')||url.startsWith('data:image')?`<a href="${url}" target="_blank" rel="noopener"><img src="${url}" alt="${esc(a.name)}" loading="lazy"></a>`:t.startsWith('video/')?`<video src="${url}" controls preload="metadata"></video>`:'')+`<a href="${url}" target="_blank" rel="noopener" download>${esc(a.name)}</a>`}
+async function fillAtts(){for(const box of document.querySelectorAll('[data-atts]')){const h=S.help.find(x=>x.id===box.dataset.atts);if(!h)continue;let inl=[];
+  if(h.attachments.some(a=>a.inline!=null)){try{inl=(await getDocs(collection(db,'help',h.id,'files'))).docs.sort((a,b)=>a.id.localeCompare(b.id)).map(d=>d.data().data)}catch(e){}}
+  for(const el of box.querySelectorAll('[data-att]')){const a=h.attachments[+el.dataset.att];el.innerHTML=await attHTML(a,a.inline!=null?inl[a.inline]:null)}}
+ for(const box of document.querySelectorAll('[data-satts]')){const s=S.subs.find(x=>x.id===box.dataset.satts);if(!s)continue;for(const el of box.querySelectorAll('[data-att]')){el.innerHTML=await attHTML(s.files[+el.dataset.att])}}}
+
+/* ---------- actions ---------- */
+async function upd(col,id,data,list){try{await updateDoc(doc(db,col,id),{...data,reviewedAt:new Date().toISOString(),reviewedBy:S.user.email});Object.assign(list.find(x=>x.id===id),data);toast('Saved');render()}catch(e){toast('Could not save: '+(e.code||e.message))}}
+function wire(){
+ document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{S.tab=b.dataset.tab;S.q='';render();scrollTo(0,0)});
+ const r=$('#range');r&&(r.onchange=()=>{S.range=+r.value;render()});
+ const q=$('#q');q&&(q.oninput=()=>{S.q=q.value;const pos=q.selectionStart;render();const nq=$('#q');nq.focus();nq.setSelectionRange(pos,pos)});
+ document.querySelectorAll('[data-sort]').forEach(t=>t.onclick=()=>{S.sort=t.dataset.sort;render()});
+ document.querySelectorAll('[data-usort]').forEach(t=>t.onclick=()=>{S.usort=t.dataset.usort;render()});
+ const hf=$('#hf');hf&&(hf.onchange=()=>{S.hf=hf.value;render()});const sf=$('#sf');sf&&(sf.onchange=()=>{S.sf=sf.value;render()});
+ document.querySelectorAll('[data-hstatus]').forEach(s=>s.onchange=()=>upd('help',s.dataset.hstatus,{status:s.value},S.help));
+ document.querySelectorAll('[data-hsave]').forEach(b=>b.onclick=()=>upd('help',b.dataset.hsave,{note:document.querySelector(`[data-hnote="${b.dataset.hsave}"]`).value},S.help));
+ document.querySelectorAll('[data-hdel]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this message and its attachments for good?'))return;const h=S.help.find(x=>x.id===b.dataset.hdel);
+  try{for(const a of h.attachments||[])if(a.path&&st)await deleteObject(ref(st,a.path)).catch(()=>{});for(const d of (await getDocs(collection(db,'help',h.id,'files')).catch(()=>({docs:[]}))).docs)await deleteDoc(d.ref);await deleteDoc(doc(db,'help',h.id));S.help=S.help.filter(x=>x!==h);toast('Deleted');render()}catch(e){toast('Could not delete: '+(e.code||e.message))}});
+ document.querySelectorAll('[data-sact]').forEach(b=>b.onclick=async()=>{const id=b.dataset.id,s=S.subs.find(x=>x.id===id),act=b.dataset.sact,note=document.querySelector(`[data-snote="${id}"]`).value;
+  if(act==='removed'){if(!confirm('Delete the files of this submission for good?'))return;for(const f of s.files||[])if(f.path&&st)await deleteObject(ref(st,f.path)).catch(()=>{});return upd('submissions',id,{status:act,note,files:(s.files||[]).map(f=>({...f,path:'',deleted:true}))},S.subs)}
+  upd('submissions',id,{status:act,note},S.subs)});
+ document.querySelectorAll('[data-ban]').forEach(b=>b.onclick=async()=>{if(!b.dataset.ban||!confirm(`Block ${b.dataset.email}? They will not be able to send help messages or material while signed in.`))return;
+  try{await setDoc(doc(db,'banned',b.dataset.ban),{email:b.dataset.email,at:serverTimestamp(),by:S.user.email});S.banned.push({id:b.dataset.ban,email:b.dataset.email});toast('User blocked');render()}catch(e){toast('Could not block: '+(e.code||e.message))}});
+ document.querySelectorAll('[data-unban]').forEach(b=>b.onclick=async()=>{try{await deleteDoc(doc(db,'banned',b.dataset.unban));S.banned=S.banned.filter(x=>x.id!==b.dataset.unban);toast('Unblocked');render()}catch(e){toast('Could not unblock')}});
+ fillAtts();
+}
+</script>
+</body>
+</html>

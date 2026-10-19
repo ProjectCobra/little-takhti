@@ -148,3 +148,18 @@ open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding=
     ''.join(f'<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in allu) + '</urlset>\n')
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 print('pages', len(urls), 'site', SITE)
+# build summary and deploy history, read by the separate admin site
+import datetime
+res = {r['id']: [r['title'] if not r.get('rtl') else (r.get('en') or r['title']), r['gradeName'], r['subject']] for r in data}
+pages = sum(len(r['pages']) for r in data if not r.get('set'))
+build = {'built': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'packs': sum(1 for r in data if not r.get('set')),
+         'sets': sum(1 for r in data if r.get('set')), 'pages': pages, 'subjects': len({r['sub'] for r in data}),
+         'quizzes': sum(1 for r in data if r.get('quiz')), 'seo': len(urls), 'res': res}
+json.dump(build, open(os.path.join(OUT, 'build.json'), 'w'), separators=(',', ':'))
+dp = os.path.join(ROOT, 'deploys.json')
+shutil.copy(dp, os.path.join(OUT, 'deploys.json')) if os.path.exists(dp) else open(os.path.join(OUT, 'deploys.json'), 'w').write('[]')
+hp = os.path.join(OUT, '_headers')
+if '/build.json' not in open(hp).read():
+  with open(hp, 'a') as h:
+    h.write('/build.json\n  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app\n  Cache-Control: no-cache\n/deploys.json\n  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app\n  Cache-Control: no-cache\n')
+print('build.json', build['packs'], 'packs', build['pages'], 'pages')

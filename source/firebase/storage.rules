@@ -1,0 +1,28 @@
+rules_version = '2';
+// Little Takhti: Cloud Storage security rules. Paste into Firebase console > Storage > Rules, then Publish.
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isAdmin() { return request.auth != null && request.auth.token.email_verified == true
+      && request.auth.token.email in ['sumbulaftab@gmail.com']; }
+
+    // screenshots, short screen recordings and PDFs attached to help messages
+    match /help/{ticket}/{file} {
+      allow create: if request.resource.size < 50 * 1024 * 1024
+        && request.resource.contentType.matches('image/(png|jpeg|webp|gif)|video/(webm|mp4|quicktime)|application/pdf');
+      allow read, delete: if isAdmin();
+    }
+
+    // material shared from family accounts
+    match /submissions/{uid}/{sid}/{file} {
+      allow create: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 20 * 1024 * 1024
+        && request.resource.contentType.matches('image/(png|jpeg|webp)|application/pdf|application/msword|application/vnd[.]openxmlformats-officedocument[.](wordprocessingml[.]document|presentationml[.]presentation)');
+      allow read: if isAdmin() || (request.auth != null && request.auth.uid == uid);
+      allow delete: if isAdmin();
+    }
+
+    match /{all=**} {
+      allow read, write: if false;
+    }
+  }
+}

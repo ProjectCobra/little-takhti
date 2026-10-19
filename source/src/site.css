@@ -33,7 +33,7 @@ p{margin:0}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:14px;padding-block:10px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.02em}
-.logo svg{width:36px;height:42px;flex:none;filter:drop-shadow(0 3px 4px rgba(18,59,40,.18))}
+.logo svg{width:40px;height:40px;flex:none;filter:drop-shadow(0 3px 5px rgba(18,59,40,.2))}
 .nav{display:flex;gap:2px;margin-left:auto}
 .nav a{white-space:nowrap;text-decoration:none;padding:8px 13px;border-radius:12px;font-weight:600;font-size:15px;color:var(--muted);transition:background .15s,color .15s}
 .nav a:hover{background:var(--chip);color:var(--ink)}
@@ -1227,7 +1227,7 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
  body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
  .top .wrap{gap:8px}
  .logo{min-width:0;flex:0 1 auto;font-size:clamp(17px,5.4vw,21px);gap:7px}
- .logo svg{width:30px;height:36px}
+ .logo svg{width:34px;height:34px}
  .gsel{margin-left:auto;flex:0 1 auto;min-width:0}
  .gsel select{width:auto;max-width:112px;min-width:0}
  .motto{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border-radius:18px;padding:10px 16px;font-size:12px;letter-spacing:.08em;width:max-content;max-width:100%}
@@ -1405,3 +1405,4 @@ a.cm-wk:hover{background:var(--ink);color:var(--surface)}
 .cm-story b{color:var(--ink)}
 @media print{body:has(.cmap) .cm-tabs,body:has(.cmap) .cm-weeks{display:none!important}body:has(.cmap) .cm-wcard h3{font-size:12px}body:has(.cmap) .cm-goal,body:has(.cmap) .cm-acts,body:has(.cmap) .cm-story,body:has(.cmap) .cm-packs a{font-size:10px}body:has(.cmap) .cm-packs a.q{display:none}}
 .cm-sub .cm-acts li{display:list-item;padding:0;border-radius:0}
+@media (max-width:600px){.fz-band-t .acts{flex:1 1 100%;min-width:0}.fz-band-t .acts .btn{flex:1 1 140px;white-space:normal;text-align:center}}

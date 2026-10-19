@@ -28,7 +28,7 @@ for r in data:
 
 HEAD_TAGS = '''<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#58CC02">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#58CC02">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZBZQEBGQ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-SLZBZQEBGQ",{allow_google_signals:false,allow_ad_personalization_signals:false})</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392407974381857" crossorigin="anonymous"></script>'''
@@ -56,7 +56,7 @@ ul.c{padding-left:20px}ul.c li{margin:4px 0}ol.s li{margin:6px 0}
 .ad{margin:34px 0;text-align:center}.ad small{display:block;color:#AFAFAF;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 footer{margin-top:56px;background:#58CC02;color:#fff;padding:26px 0}footer a{color:#fff}
 @media(max-width:720px){.grid{grid-template-columns:minmax(0,1fr)}.thumb{max-width:320px;margin:0 auto}}'''
-LOGO = '<svg width="28" height="32" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="14" width="44" height="44" rx="12" fill="#FFD93B" stroke="#123B28" stroke-width="4"/><path d="M24 14v-4a8 8 0 0 1 16 0v4" fill="none" stroke="#123B28" stroke-width="4"/><path d="M24 34c3 5 13 5 16 0" fill="none" stroke="#2E9E4F" stroke-width="4" stroke-linecap="round"/></svg>'
+LOGO = '<svg width="30" height="30" viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg>'
 def ad(slot):
     return f'<div class="ad"><small>Advertisement</small><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7392407974381857" data-ad-slot="{slot}" data-ad-format="auto" data-full-width-responsive="true" data-tag-for-age-treatment="1"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({{}})</script></div>'
 def page(path, title, desc, body, crumbs, image=None, jsonld=None):

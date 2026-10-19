@@ -9,13 +9,13 @@ head='''<title>Little Takhti</title>
 '''+r('site.css')+'\n'+r('sheet.css')+'''
 </style>
 <header class="top"><div class="wrap">
- <a class="logo" href="#home" aria-label="Little Takhti home"><svg viewBox="0 0 34 40" aria-hidden="true"><rect x="12" y="1.5" width="10" height="9" rx="3" fill="#FFD93B" stroke="#123B28" stroke-width="2"/><circle cx="17" cy="6" r="1.8" fill="#123B28"/><rect x="2" y="8" width="30" height="30" rx="7" fill="#FFD93B" stroke="#123B28" stroke-width="2"/><path d="M11 20c3 5 9 5 12 0" fill="none" stroke="#2F8F55" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="28.5" r="1.8" fill="#2F8F55"/></svg><span>Little Takhti</span></a>
+ <a class="logo" href="#home" aria-label="Little Takhti home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a>
  <nav class="nav" aria-label="Main"><a href="#home" data-nav="home">Worksheets</a><a href="#class" data-nav="class">Weekly</a><a href="#quiz" data-nav="quiz">Quizzes</a><a href="#fun" data-nav="fun">Play</a><a href="#parents" data-nav="parents">Parents</a><a href="#powerups" data-nav="powerups">PowerUps</a></nav>
  <label class="gsel"><span>Grade</span><select id="gs" aria-label="Choose a grade"></select></label><span id="acct"></span>
 </div></header>
 <main id="app" class="wrap"></main>
 <footer><div class="wrap">
- <div><a class="logo" href="#home"><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
+ <div><a class="logo" href="#home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
  <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
  <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>
@@ -38,11 +38,13 @@ print('built',len(head))
 import sys,shutil
 if '--static' in sys.argv:
   out=os.path.join(D,'..','..','little-takhti-netlify');shutil.rmtree(out,ignore_errors=True);os.makedirs(out)
-  fav='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="44" rx="12" fill="#FFD93B" stroke="#123B28" stroke-width="4"/><path d="M24 14v-4a8 8 0 0 1 16 0v4" fill="none" stroke="#123B28" stroke-width="4"/><path d="M24 34c3 5 13 5 16 0" fill="none" stroke="#2E9E4F" stroke-width="4" stroke-linecap="round"/></svg>'
+  fav=r('favicon.svg')
   open(os.path.join(out,'favicon.svg'),'w').write(fav)
+  ap=os.path.join(D,'apple-touch-icon.png')
+  os.path.exists(ap) and shutil.copy(ap,os.path.join(out,'apple-touch-icon.png'))
   doc=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
    '<meta name="description" content="Free printable worksheets, quiz games and parent guides for Nursery, KG, Class 1, Class 2 and Class 3. English, Maths, Urdu, Science and more, made for homes and schools in Pakistan.">'
-   '<meta name="theme-color" content="#123B28"><link rel="icon" href="favicon.svg" type="image/svg+xml">'
+   '<meta name="theme-color" content="#123B28"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png">'
    '<meta property="og:title" content="Little Takhti"><meta property="og:description" content="Worksheets and quiz games for every subject, Nursery to Grade 3.">'
    '<script>window.LT_STATIC=1;document.documentElement.classList.add("static");window.LTFB_READY=new Promise(r=>window.__ltfbResolve=r);window.LT_ADS={client:"ca-pub-7392407974381857",slots:{home:\"6635133987\",resource:\"2232109685\"}}</script>'
    '<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZBZQEBGQ"></script>'

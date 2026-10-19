@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Free printable worksheets, quiz games and parent guides for Nursery, KG, Class 1, Class 2 and Class 3. English, Maths, Urdu, Science and more, made for homes and schools in Pakistan."><meta name="theme-color" content="#123B28"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:title" content="Little Takhti"><meta property="og:description" content="Worksheets and quiz games for every subject, Nursery to Grade 3."><script>window.LT_STATIC=1;document.documentElement.classList.add("static");window.LTFB_READY=new Promise(r=>window.__ltfbResolve=r);window.LT_ADS={client:"ca-pub-7392407974381857",slots:{home:"6635133987",resource:"2232109685"}}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZBZQEBGQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-SLZBZQEBGQ",{allow_google_signals:false,allow_ad_personalization_signals:false,send_page_view:false})</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392407974381857" crossorigin="anonymous"></script><script type="module">/* Firebase for the public website: Google sign-in, Firestore profiles, Analytics (child-directed settings) */
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Free printable worksheets, quiz games and parent guides for Nursery, KG, Class 1, Class 2 and Class 3. English, Maths, Urdu, Science and more, made for homes and schools in Pakistan."><meta name="theme-color" content="#123B28"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta property="og:title" content="Little Takhti"><meta property="og:description" content="Worksheets and quiz games for every subject, Nursery to Grade 3."><script>window.LT_STATIC=1;document.documentElement.classList.add("static");window.LTFB_READY=new Promise(r=>window.__ltfbResolve=r);window.LT_ADS={client:"ca-pub-7392407974381857",slots:{home:"6635133987",resource:"2232109685"}}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-SLZBZQEBGQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-SLZBZQEBGQ",{allow_google_signals:false,allow_ad_personalization_signals:false,send_page_view:false})</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392407974381857" crossorigin="anonymous"></script><script type="module">/* Firebase for the public website: Google sign-in, Firestore profiles, Analytics (child-directed settings) */
 import {initializeApp} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signInWithRedirect,signOut} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
 import {getFirestore,doc,getDoc,setDoc,deleteDoc,collection,getDocs,addDoc,increment,serverTimestamp,query,where} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
@@ -66,7 +66,7 @@ p{margin:0}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:14px;padding-block:10px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.02em}
-.logo svg{width:36px;height:42px;flex:none;filter:drop-shadow(0 3px 4px rgba(18,59,40,.18))}
+.logo svg{width:40px;height:40px;flex:none;filter:drop-shadow(0 3px 5px rgba(18,59,40,.2))}
 .nav{display:flex;gap:2px;margin-left:auto}
 .nav a{white-space:nowrap;text-decoration:none;padding:8px 13px;border-radius:12px;font-weight:600;font-size:15px;color:var(--muted);transition:background .15s,color .15s}
 .nav a:hover{background:var(--chip);color:var(--ink)}
@@ -1260,7 +1260,7 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
  body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
  .top .wrap{gap:8px}
  .logo{min-width:0;flex:0 1 auto;font-size:clamp(17px,5.4vw,21px);gap:7px}
- .logo svg{width:30px;height:36px}
+ .logo svg{width:34px;height:34px}
  .gsel{margin-left:auto;flex:0 1 auto;min-width:0}
  .gsel select{width:auto;max-width:112px;min-width:0}
  .motto{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border-radius:18px;padding:10px 16px;font-size:12px;letter-spacing:.08em;width:max-content;max-width:100%}
@@ -1438,6 +1438,7 @@ a.cm-wk:hover{background:var(--ink);color:var(--surface)}
 .cm-story b{color:var(--ink)}
 @media print{body:has(.cmap) .cm-tabs,body:has(.cmap) .cm-weeks{display:none!important}body:has(.cmap) .cm-wcard h3{font-size:12px}body:has(.cmap) .cm-goal,body:has(.cmap) .cm-acts,body:has(.cmap) .cm-story,body:has(.cmap) .cm-packs a{font-size:10px}body:has(.cmap) .cm-packs a.q{display:none}}
 .cm-sub .cm-acts li{display:list-item;padding:0;border-radius:0}
+@media (max-width:600px){.fz-band-t .acts{flex:1 1 100%;min-width:0}.fz-band-t .acts .btn{flex:1 1 140px;white-space:normal;text-align:center}}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -1571,13 +1572,13 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
 
 </style>
 <header class="top"><div class="wrap">
- <a class="logo" href="#home" aria-label="Little Takhti home"><svg viewBox="0 0 34 40" aria-hidden="true"><rect x="12" y="1.5" width="10" height="9" rx="3" fill="#FFD93B" stroke="#123B28" stroke-width="2"/><circle cx="17" cy="6" r="1.8" fill="#123B28"/><rect x="2" y="8" width="30" height="30" rx="7" fill="#FFD93B" stroke="#123B28" stroke-width="2"/><path d="M11 20c3 5 9 5 12 0" fill="none" stroke="#2F8F55" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="28.5" r="1.8" fill="#2F8F55"/></svg><span>Little Takhti</span></a>
+ <a class="logo" href="#home" aria-label="Little Takhti home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a>
  <nav class="nav" aria-label="Main"><a href="#home" data-nav="home">Worksheets</a><a href="#class" data-nav="class">Weekly</a><a href="#quiz" data-nav="quiz">Quizzes</a><a href="#fun" data-nav="fun">Play</a><a href="#parents" data-nav="parents">Parents</a><a href="#powerups" data-nav="powerups">PowerUps</a></nav>
  <label class="gsel"><span>Grade</span><select id="gs" aria-label="Choose a grade"></select></label><span id="acct"></span>
 </div></header>
 <main id="app" class="wrap"></main>
 <footer><div class="wrap">
- <div><a class="logo" href="#home"><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
+ <div><a class="logo" href="#home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
  <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
  <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>

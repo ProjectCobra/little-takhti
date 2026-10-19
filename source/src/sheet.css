@@ -41,9 +41,9 @@ ol.fl li{display:flex;align-items:baseline}
 ol.fl li>span:last-child{min-width:0}
 ol.fl.nw li>span:last-child{white-space:nowrap}
 .n{flex:none}
-.ch{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center;padding:5px 0;border-bottom:1px dotted #d5dbe8}
+.ch{display:grid;grid-template-columns:minmax(42%,1fr) minmax(0,auto);gap:8px 16px;align-items:center;padding:5px 0;border-bottom:1px dotted #d5dbe8}
 .ch:last-child{border-bottom:0}
-.opts{display:flex;gap:10px}
+.opts{display:flex;gap:8px 10px;flex-wrap:wrap;justify-content:flex-end}
 .op{border:1.5px solid #b9c1d3;border-radius:999px;padding:1px 14px;white-space:nowrap}
 .op.pick{border:3px solid #D62828;color:#D62828;font-weight:700}
 .sheet.ur .op{padding:0 14px}

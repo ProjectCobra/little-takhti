@@ -22,7 +22,7 @@ function ltVisit(){const day=new Date().toISOString().slice(0,10);
  if(!store.get('ltFirst',null)){store.set('ltFirst',day);ltStat('nv')}
  if(store.get('ltDay',null)!==day){store.set('ltDay',day);ltStat('uv');ltStat('dev.'+(matchMedia('(max-width:760px)').matches?'mobile':'desktop'));ltStat('gr.'+ltKey(grade))}}
 function ltRoute(h){if(!window.LT_STATIC)return;ltStat('pv');
- const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'||h==='map'?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
+ const mod=h.startsWith('res-')||h==='home'||h.startsWith('subject-')||h==='search'?'worksheets':h.startsWith('print-')?'print':h==='class'||h.startsWith('map')?'weekly':h==='quiz'||h.startsWith('play-')?'quizzes':h==='powerups'||h.startsWith('pu-')?'powerups':h==='stories'||h.startsWith('story-')?'stories':h.startsWith('game-')?'games':h==='stickers'||h==='fun'?'play':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parent-tools':h==='parents'?'parents':h==='account'?'account':h.startsWith('help')?'help':h==='share'?'share':'other';
  ltStat('mod.'+mod);
  if(h.startsWith('res-')){ltStat('ws.'+ltKey(h.slice(4)));lastSeen={page:h,rid:h.slice(4)}}
  else if(h.startsWith('print-'))ltStat('pr.'+ltKey(h.slice(6)));
@@ -184,14 +184,32 @@ document.addEventListener('click',e=>{
  else if(t.dataset.hnew){HELP.done=null;helpPage()}
  else if(t.dataset.srm!=null){SHARE.files.splice(+t.dataset.srm,1);SHARE.err='';sharePage()}});
 
-/* ---------- curriculum map: every subject, every week, one page ---------- */
-function curriculumMap(){const subs=subjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
- const link=(s,p)=>{const x=p[1].find(v=>typeof v==='string');const r=x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1));return r?'#res-'+r.id:'#class'};
- const row=(s,p,i)=>{const bi=URW[s.id]&&URW[s.id][i];const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
-  const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const rev=p[1].includes('rev')||/revision/i.test(bi?bi.en:p[0]);
-  return `<li class="${i===WEEK_NOW?'cm-now':''}${rev?' rev':''}"><span class="cm-wk">W${i+1}</span><a href="${link(s,p)}"><b>${name}</b><small>${goal}</small></a></li>`};
- const total=subs.reduce((a,s)=>a+PLAN[s.id].filter(Boolean).length,0);
- app.innerHTML=`<div class="phead cmap"><div style="flex:1;min-width:0"><span class="kick">Curriculum map</span><h1>${G.name}: the whole term at a glance</h1>
-  <p>${subs.length} subjects, ${Math.max(...subs.map(s=>PLAN[s.id].length))} weeks, ${total} weekly topics. Each topic links to its worksheets and quiz. Week ${Math.min(WEEK_NOW+1,99)} is highlighted.</p>
-  ${gradePick()}<div class="acts cm-bar" style="margin-top:14px"><button class="btn sun" type="button" onclick="window.print()">${ic.print}Print the map</button><a class="btn" href="#class">${ic.cal}Weekly guide</a></div></div></div>
- <div class="cm-grid">${subs.map(s=>`<section class="cm-sub s-${s.id}"><h2><span class="sic">${subIcon(s)}</span>${s.name}</h2><ol>${PLAN[s.id].map((p,i)=>p?row(s,p,i):'').join('')}</ol></section>`).join('')}</div>`}
+/* ---------- curriculum map: whole term by subject, or one week across every subject ---------- */
+const cmPacks=(s,p)=>uniq(p[1].map(x=>x==='set'?RID[s.id+'-set']:x==='rev'?RID[s.id+'-rev']:typeof x==='string'?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(x-1)))).filter(Boolean);
+const cmUrw=(s,i)=>URW[s.id]&&URW[s.id][PLAN[s.id].slice(0,i).filter(Boolean).length];
+const cmWeeks=subs=>Math.max(0,...subs.map(s=>PLAN[s.id].length));
+function cmHead(G,subs,view,wi){const n=cmWeeks(subs);
+ return `<div class="phead cmap"><div style="flex:1;min-width:0"><span class="kick">Curriculum map</span><h1>${view==='term'?`${G.name}: the whole term at a glance`:`${G.name}: Week ${wi+1} guide`}</h1>
+  <p>${view==='term'?`${subs.length} subjects, ${n} weeks, ${subs.reduce((a,s)=>a+PLAN[s.id].filter(Boolean).length,0)} weekly topics. Each topic links to its worksheets and quiz. Tap a week number to see that week's guide.`:`${WEEKS[wi][1]}. What every subject covers this week, with the goal, activities, worksheets and story.`}</p>
+  ${gradePick()}
+  <div class="cm-tabs" role="tablist"><a role="tab" aria-selected="${view==='term'}" class="${view==='term'?'on':''}" href="#map">Whole term</a><a role="tab" aria-selected="${view==='week'}" class="${view==='week'?'on':''}" href="#map-w${(view==='week'?wi:Math.min(WEEK_NOW,n-1))+1}">Week by week</a></div>
+  ${view==='week'?`<div class="cm-weeks">${Array.from({length:n},(_,i)=>`<a href="#map-w${i+1}" class="${i===wi?'on':''}${i===WEEK_NOW?' cur':''}" title="${WEEKS[i][1]}">W${i+1}</a>`).join('')}</div>`:''}
+  <div class="acts cm-bar" style="margin-top:14px"><button class="btn sun" type="button" onclick="window.print()">${ic.print}${view==='term'?'Print the map':'Print this week'}</button>${view==='week'?`${wi>0?`<a class="btn" href="#map-w${wi}">${ic.l}Week ${wi}</a>`:''}${wi<n-1?`<a class="btn" href="#map-w${wi+2}">Week ${wi+2}${ic.r}</a>`:''}`:`<a class="btn" href="#class">${ic.cal}Weekly guide</a>`}</div></div></div>`}
+function curriculumMap(arg){const subs=subjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
+ const wm=/^w(\d+)$/.exec(arg||'');if(wm)return weekGuide(subs,G,Math.min(Math.max(+wm[1]-1,0),cmWeeks(subs)-1));
+ const row=(s,p,i)=>{const bi=cmUrw(s,i);const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
+  const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const rev=p[1].includes('rev')||/revision/i.test(bi?bi.en:p[0]);const r=cmPacks(s,p)[0];
+  return `<li class="${i===WEEK_NOW?'cm-now':''}${rev?' rev':''}"><a class="cm-wk" href="#map-w${i+1}" title="Week ${i+1} guide for every subject">W${i+1}</a><a href="${r?'#res-'+r.id:'#map-w'+(i+1)}"><b>${name}</b><small>${goal}</small></a></li>`};
+ app.innerHTML=cmHead(G,subs,'term')+`<div class="cm-grid">${subs.map(s=>`<section class="cm-sub s-${s.id}"><h2><span class="sic">${subIcon(s)}</span>${s.name}</h2><ol>${PLAN[s.id].map((p,i)=>p?row(s,p,i):'').join('')}</ol></section>`).join('')}</div>`}
+function weekGuide(subs,G,wi){
+ const card=s=>{const p=PLAN[s.id][wi];if(!p)return '';const bi=cmUrw(s,wi);const packs=cmPacks(s,p);
+  const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
+  const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const acts=bi?bi.acts.map(a=>mixUr(a[0])):(p[3]||[]).map(T);
+  const story=bi?bi.story[0]:p[4]&&p[4][0];
+  return `<section class="cm-sub cm-wcard s-${s.id}"><h2><span class="sic">${subIcon(s)}</span>${s.name}</h2><h3>${name}</h3>
+   <p class="cm-goal"><b>Goal</b>${goal}</p>
+   ${acts.length?`<b class="cm-lbl">Activities</b><ul class="cm-acts">${acts.slice(0,4).map(a=>`<li>${a}</li>`).join('')}</ul>`:''}
+   ${packs.length?`<b class="cm-lbl">Worksheets</b><div class="cm-packs">${packs.map(r=>`<a href="#res-${r.id}">${ic.sheet}${T(SUB[r.sub].rtl&&r.en?r.en:r.title).replace(/ Practice$/,'')}<small>${r.pages.length} pages</small></a>${hasQuiz(r)?`<a href="#play-${r.id}" class="q">${ic.play}Quiz</a>`:''}`).join('')}</div>`:''}
+   ${story?`<p class="cm-story">${ic.book}<span><b>Story:</b> ${esc(story)}</span></p>`:''}</section>`};
+ app.innerHTML=cmHead(G,subs,'week',wi)+`<div class="cm-grid cm-wgrid">${subs.map(card).join('')}</div>
+  <p class="pnote noprint" style="margin-top:16px">Full stories, Urdu translations and step-by-step activities are in the <a href="#class">Weekly guide</a> for each subject.</p>`}

@@ -1382,3 +1382,26 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
  body:has(.cmap) .cm-sub li small{font-size:10px}
  body:has(.cmap) .cm-sub li b{font-size:12px}
 }
+.cm-tabs{display:inline-flex;gap:4px;background:var(--chip);border-radius:14px;padding:4px;margin-top:14px}
+.cm-tabs a{padding:8px 14px;border-radius:10px;font-weight:700;font-size:14px;color:var(--muted);text-decoration:none}
+.cm-tabs a.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.cm-weeks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.cm-weeks a{min-width:44px;text-align:center;padding:7px 8px;border-radius:10px;border:1.5px solid var(--line);font:800 13px/1 var(--display);color:var(--ink);text-decoration:none;background:var(--surface)}
+.cm-weeks a.cur{border-color:var(--y,#FFC800)}
+.cm-weeks a.on{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+a.cm-wk{color:inherit;text-decoration:none}
+a.cm-wk:hover{background:var(--ink);color:var(--surface)}
+.cm-wcard h3{font-size:17px;margin:0 0 8px;line-height:1.35}
+.cm-goal{margin:0 0 10px;font-size:14px;line-height:1.5}
+.cm-goal b,.cm-lbl{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800;margin-bottom:3px}
+.cm-acts{margin:0 0 10px;padding-left:18px;font-size:14px;line-height:1.5}
+.cm-acts li{margin-bottom:3px}
+.cm-packs{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px}
+.cm-packs a{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:10px;padding:6px 9px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;min-width:0}
+.cm-packs a small{color:var(--muted);font-weight:500}
+.cm-packs a.q{color:var(--g-d,#2F8F55)}
+.cm-packs svg,.cm-story svg{width:16px;height:16px;flex:none}
+.cm-story{display:flex;gap:8px;align-items:flex-start;font-size:14px;margin:0;color:var(--muted)}
+.cm-story b{color:var(--ink)}
+@media print{body:has(.cmap) .cm-tabs,body:has(.cmap) .cm-weeks{display:none!important}body:has(.cmap) .cm-wcard h3{font-size:12px}body:has(.cmap) .cm-goal,body:has(.cmap) .cm-acts,body:has(.cmap) .cm-story,body:has(.cmap) .cm-packs a{font-size:10px}body:has(.cmap) .cm-packs a.q{display:none}}
+.cm-sub .cm-acts li{display:list-item;padding:0;border-radius:0}

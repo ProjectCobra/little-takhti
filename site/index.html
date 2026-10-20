@@ -1452,6 +1452,7 @@ p.gbest.gb-add{display:block;text-align:center}p.gbest.gb-add a{display:inline}
 @media (max-width:900px){.pdet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.pdet{padding:18px 16px}.pdet-grid{grid-template-columns:minmax(0,1fr)}.pdet-links{width:100%}.pdet-links .btn{flex:1 1 0;justify-content:center;padding-left:8px;padding-right:8px;font-size:13px;white-space:nowrap;gap:6px}.pdet-links .btn:first-child{flex:2 1 0}}
 @media (max-width:700px){.acct-card{display:grid!important;grid-template-columns:48px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;text-align:left}.acct-card .meimg{grid-row:1/3;width:48px;height:48px;margin:0}.acct-card>b,.acct-card>small{grid-column:2}.acct-card .btn{grid-column:1/-1;width:100%;margin-top:10px!important}}
+.ws-grid{touch-action:none;user-select:none;-webkit-user-select:none}.ws-c.drag{background:#FFE27A;border-color:#F2A900;transform:scale(1.06)}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -5423,16 +5424,16 @@ function whoPlays(){const kids=childList();if(!kids.length)return `<p class="gbe
 const SPEECH='speechSynthesis' in window;
 let voices=[];function loadVoices(){try{voices=speechSynthesis.getVoices()}catch(e){voices=[]}}
 if(SPEECH){loadVoices();try{speechSynthesis.onvoiceschanged=loadVoices}catch(e){}}
-/* prefer a South Asian English accent: Pakistan, then India (closest widely available), then British; natural/neural voices first */
+/* English is read in a British or American accent everywhere; only Urdu uses an Urdu voice. South Asian English voices are used only if nothing else exists */
 const vScore=(v,ur)=>{const l=(v.lang||'').replace('_','-').toLowerCase(),n=(v.name||'').toLowerCase();let s=0;
  if(ur){if(!l.startsWith('ur'))return -1;s=l==='ur-pk'?50:40}
- else{if(!l.startsWith('en'))return -1;s=l==='en-pk'?60:l==='en-in'?50:l==='en-gb'?30:l==='en-au'||l==='en-ie'?20:10}
+ else{if(!l.startsWith('en'))return -1;s=l==='en-gb'?60:l==='en-us'?55:/^en-(au|ie|nz|ca)/.test(l)?40:/^en-(in|pk|bd|lk|np)/.test(l)?0:30}
  if(/natural|neural|online|premium|enhanced/.test(n))s+=6;if(/google/.test(n))s+=3;if(/female|heera|neerja|uzma|swara|kalpana|veena|isha/.test(n))s+=2;return s};
-const voiceList=ur=>voices.map(v=>[v,vScore(v,ur)]).filter(x=>x[1]>=0).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
-const voiceFor=ur=>{const pick=store.get(ur?'voiceUr':'voiceEn',''),l=voiceList(ur);return (pick&&l.find(v=>v.voiceURI===pick))||l[0]};
+const voiceList=ur=>{const l=voices.map(v=>[v,vScore(v,ur)]).filter(x=>x[1]>=0).sort((a,b)=>b[1]-a[1]);const good=l.filter(x=>ur||!/^en-(in|pk|bd|lk|np)/.test((x[0].lang||'').replace('_','-').toLowerCase()));return (good.length?good:l).map(x=>x[0])};
+const voiceFor=ur=>{const pick=store.get(ur?'voiceUr':'voiceEn2',''),l=voiceList(ur);return (pick&&l.find(v=>v.voiceURI===pick))||l[0]};
 const canSpeak=ur=>SPEECH&&(!ur||!!voiceFor(true));
 function sayText(html){const d=document.createElement('div');html=String(html).replace(/(^|[^A-Za-z])([Zz])(?=$|[^A-Za-z])/g,'$1zed');d.innerHTML=String(html).replace(/<span class="qbl"><\/span>/g,' blank ').replace(/<span class="qnext">\?<\/span>/g,' what comes next ');return d.textContent.replace(/→|←/g,' goes with ').replace(/[×]/g,' times ').replace(/−/g,' minus ').replace(/÷/g,' divided by ').replace(/_{2,}/g,' blank ').replace(/\s+/g,' ').trim()}
-function speak(parts,ur){if(!canSpeak(ur))return;try{speechSynthesis.cancel();let t=parts.filter(Boolean).join('. ');if(ur)t=t.replace(/\bblank\b/g,'خالی جگہ').replace(/what comes next/g,'آگے کیا آئے گا').replace(/goes with/g,'کے ساتھ').replace(/\bOption (\d)/g,'جواب $1');const u=new SpeechSynthesisUtterance(t);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-IN');u.rate=.88;u.pitch=1.05;speechSynthesis.speak(u)}catch(e){}}
+function speak(parts,ur){if(!canSpeak(ur))return;try{speechSynthesis.cancel();let t=parts.filter(Boolean).join('. ');if(ur)t=t.replace(/\bblank\b/g,'خالی جگہ').replace(/what comes next/g,'آگے کیا آئے گا').replace(/goes with/g,'کے ساتھ').replace(/\bOption (\d)/g,'جواب $1');const u=new SpeechSynthesisUtterance(t);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-GB');u.rate=.88;u.pitch=1.05;speechSynthesis.speak(u)}catch(e){}}
 const stopSpeak=()=>{try{SPEECH&&speechSynthesis.cancel()}catch(e){}};
 const optSay=o=>o[0]==='@'?SHN[o.slice(1)]:o[0]==='#'?o.slice(1).split('|')[0]+' '+SHN[o.slice(1).split('|')[1]]+'s':sayText(o);
 function readQ(){if(!G)return;const q=G.qs[G.i],ur=!!G.s.rtl;speak([q.story?sayText(q.story):'',sayText(q.sub||''),sayText(q.q),...q.opts.map((o,j)=>(ur?'':'Option '+(j+1)+', ')+optSay(o))],ur)}
@@ -6179,12 +6180,25 @@ function wordSearch(){const n={nursery:6,kg:7,g1:8,g2:9,g3:10}[grade]||8,diag=gr
    let fits=true;for(let i=0;i<w.length;i++){const ch=grid[r0+dr*i][c0+dc*i];if(ch&&ch!==w[i]){fits=false;break}}if(fits){for(let i=0;i<w.length;i++)grid[r0+dr*i][c0+dc*i]=w[i];placed.push({w,cells:w.split('').map((_,i)=>(r0+dr*i)*n+(c0+dc*i))});done=true}}if(!done){ok=false;break}}if(ok)break}
  const AZ='ABCDEFGHIJKLMNOPRSTUVWY';grid=grid.map(row=>row.map(c=>c||AZ[Math.floor(Math.random()*AZ.length)]));
  GM={...GM,n,placed,found:[],first:null,start:Date.now()};
- app.innerHTML=gameShell('ws',`<div id="mgb"><p class="mg-help">Tap the first letter of a word, then the last letter.</p><div class="ws-wrap"><div class="ws-grid" style="--n:${n}">${grid.flat().map((c,i)=>`<button type="button" class="ws-c" data-wsc="${i}">${c}</button>`).join('')}</div>
+ app.innerHTML=gameShell('ws',`<div id="mgb"><p class="mg-help">Swipe across a word to mark it, or tap its first and last letter.</p><div class="ws-wrap"><div class="ws-grid" style="--n:${n}">${grid.flat().map((c,i)=>`<button type="button" class="ws-c" data-wsc="${i}">${c}</button>`).join('')}</div>
   <ul class="ws-list">${placed.map(p=>`<li data-wsw="${p.w}">${p.w}</li>`).join('')}</ul></div></div>`);
- document.getElementById('mgs').textContent=`0/${placed.length}`}
+ document.getElementById('mgs').textContent=`0/${placed.length}`;wsDrag(diag)}
+/* swipe to mark: drag from the first letter to the last in a straight line */
+function wsDrag(diag){const gd=document.querySelector('.ws-grid');if(!gd)return;let d=null;
+ const cellAt=e=>{const el=document.elementFromPoint(e.clientX,e.clientY);return el&&el.closest?el.closest('[data-wsc]'):null};
+ const line=(a,j)=>{const n=GM.n,r1=Math.floor(a/n),c1=a%n;let r2=Math.floor(j/n),c2=j%n;const dr=r2-r1,dc=c2-c1;
+  if(dr&&dc&&!(diag&&Math.abs(dr)===Math.abs(dc))){if(diag&&Math.abs(Math.abs(dr)-Math.abs(dc))<=1){const k=Math.min(Math.abs(dr),Math.abs(dc));r2=r1+Math.sign(dr)*k;c2=c1+Math.sign(dc)*k}else if(Math.abs(dr)>=Math.abs(dc))c2=c1;else r2=r1}
+  const len=Math.max(Math.abs(r2-r1),Math.abs(c2-c1)),sr=Math.sign(r2-r1),sc=Math.sign(c2-c1),out=[];for(let i=0;i<=len;i++)out.push((r1+sr*i)*n+(c1+sc*i));return out};
+ const paint=cells=>{document.querySelectorAll('.ws-c.drag').forEach(x=>x.classList.remove('drag'));cells.forEach(c=>{const x=document.querySelector(`[data-wsc="${c}"]`);x&&x.classList.add('drag')})};
+ gd.addEventListener('pointerdown',e=>{const c=e.target.closest('[data-wsc]');if(!c)return;e.preventDefault();d={a:+c.dataset.wsc,end:+c.dataset.wsc,moved:false};try{gd.setPointerCapture(e.pointerId)}catch(_){}paint([d.a])});
+ gd.addEventListener('pointermove',e=>{if(!d)return;const c=cellAt(e);if(!c)return;const j=+c.dataset.wsc;const path=line(d.a,j);const end=path[path.length-1];if(end!==d.end){d.end=end;d.moved=d.moved||end!==d.a;paint(path)}});
+ const up=()=>{if(!d)return;const {a,end,moved}=d;d=null;paint([]);GM.wsSkip=Date.now();
+  if(moved&&end!==a){GM.first=null;document.querySelectorAll('.ws-c.sel').forEach(x=>x.classList.remove('sel'));wsCheck(a,end)}else wsTap(a)};
+ gd.addEventListener('pointerup',up);gd.addEventListener('pointercancel',()=>{d=null;paint([])})}
 function wsTap(i){const g=GM;if(!g||g.k!=='ws')return;const el=document.querySelector(`[data-wsc="${i}"]`);
  if(g.first===null){g.first=i;el.classList.add('sel');return}
- const a=g.first;g.first=null;document.querySelectorAll('.ws-c.sel').forEach(e=>e.classList.remove('sel'));
+ const a=g.first;g.first=null;document.querySelectorAll('.ws-c.sel').forEach(e=>e.classList.remove('sel'));wsCheck(a,i)}
+function wsCheck(a,i){const g=GM;const el=document.querySelector(`[data-wsc="${i}"]`);
  const hit=g.placed.find(p=>!g.found.includes(p.w)&&((p.cells[0]===a&&p.cells[p.cells.length-1]===i)||(p.cells[0]===i&&p.cells[p.cells.length-1]===a)));
  if(hit){g.found.push(hit.w);hit.cells.forEach(c=>document.querySelector(`[data-wsc="${c}"]`).classList.add('got'));document.querySelector(`[data-wsw="${hit.w}"]`).classList.add('got');sfx.ok();speakW(hit.w.toLowerCase());
   document.getElementById('mgs').textContent=`${g.found.length}/${g.placed.length}`;
@@ -6289,7 +6303,7 @@ function storyRead(id){let st=STORIES.find(s=>s.id===id),ask='';
  const rb=document.getElementById('sread');if(rb){rb.onclick=()=>readStory(st,words);document.getElementById('sstop').onclick=()=>{stopSpeak();clearInterval(GM&&GM.ht);document.querySelectorAll('.sr-text .hl').forEach(e=>e.classList.remove('hl'))}}}
 function readStory(st,words){if(!canSpeak(!!st.ur))return;stopSpeak();clearInterval(GM.ht);const ur=!!st.ur;
  const text=words.join(' ');const starts=[];let p=0;words.forEach(w=>{starts.push(p);p+=w.length+1});const hl=i=>{document.querySelectorAll('.sr-text .hl').forEach(e=>e.classList.remove('hl'));const e=document.querySelector(`.sr-text [data-w="${i}"]`);e&&e.classList.add('hl')};
- try{const u=new SpeechSynthesisUtterance(text);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-IN');u.rate=.82;let gotB=false;
+ try{const u=new SpeechSynthesisUtterance(text);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-GB');u.rate=.82;let gotB=false;
   u.onboundary=e=>{if(e.name&&e.name!=='word')return;gotB=true;let i=starts.findIndex((s,k)=>e.charIndex>=s&&(k===starts.length-1||e.charIndex<starts[k+1]));if(i>=0)hl(i)};
   u.onstart=()=>{let i=0;GM.ht=setInterval(()=>{if(gotB){clearInterval(GM.ht);return}if(i<words.length)hl(i++);else clearInterval(GM.ht)},ur?520:430)};
   u.onend=()=>{clearInterval(GM.ht);document.querySelectorAll('.sr-text .hl').forEach(e=>e.classList.remove('hl'))};speechSynthesis.speak(u)}catch(e){}}
@@ -6415,7 +6429,7 @@ function funRoute(h){initFun();
  if(h==='rewards-print'){rewardsPrint();return true}
  return false}
 document.addEventListener('click',e=>{const t=e.target.closest('[data-wsc],[data-mem],[data-pad],[data-bee],[data-pop],[data-race],[data-gagain],[data-sq],[data-rwt]');if(!t)return;
- if(t.dataset.wsc!=null)wsTap(+t.dataset.wsc);else if(t.dataset.mem!=null)memTap(+t.dataset.mem);else if(t.dataset.pad!=null)padTap(t.dataset.pad);
+ if(t.dataset.wsc!=null){if(Date.now()-(GM&&GM.wsSkip||0)>600)wsTap(+t.dataset.wsc)}else if(t.dataset.mem!=null)memTap(+t.dataset.mem);else if(t.dataset.pad!=null)padTap(t.dataset.pad);
  else if(t.dataset.bee!=null)beeTap(+t.dataset.bee);else if(t.dataset.pop!=null)popTap(t);else if(t.dataset.race!=null)tableRace(+t.dataset.race);
  else if(t.dataset.gagain){const k=t.dataset.gagain;if(k==='bee'&&GM&&GM.list)spellBee(GM.list);else miniGame(k)}
  else if(t.dataset.sq!=null)storyAnswer(+t.dataset.sq,+t.dataset.so);else if(t.dataset.rwt){RW.tab=t.dataset.rwt;store.set('rewards',RW);rewardsPage()}});
@@ -7192,7 +7206,7 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('keydown',e=>{if(!G||e.target.closest('input,select,textarea'))return;const n=+e.key;const b=document.querySelectorAll('.qo')[n-1];if(n>=1&&n<=4&&!G.lock&&b&&!b.disabled){answer(n-1)}else if((e.key==='h'||e.key==='H')&&!G.lock)useHint()});
 window.addEventListener('hashchange',()=>clearInterval(tmr));
-document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn',e.target.value);speak([ur?'السلام علیکم! آئیے کھیلیں۔':'Assalam o Alaikum! Let us play.'],ur)}});
+document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn2',e.target.value);speak([ur?'ہیلو! آئیے کھیلیں۔':'Hello! Let\'s play.'],ur)}});
 document.addEventListener('submit',e=>{if(e.target.id==='sf'){e.preventDefault();lastQ=document.getElementById('q').value;track('search',{search_term:lastQ});if(location.hash==='#search'){search(lastQ);fit()}else location.hash='search'}});
 window.addEventListener('hashchange',()=>route());
 window.addEventListener('resize',fit);

@@ -553,7 +553,7 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('keydown',e=>{if(!G||e.target.closest('input,select,textarea'))return;const n=+e.key;const b=document.querySelectorAll('.qo')[n-1];if(n>=1&&n<=4&&!G.lock&&b&&!b.disabled){answer(n-1)}else if((e.key==='h'||e.key==='H')&&!G.lock)useHint()});
 window.addEventListener('hashchange',()=>clearInterval(tmr));
-document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn',e.target.value);speak([ur?'السلام علیکم! آئیے کھیلیں۔':'Assalam o Alaikum! Let us play.'],ur)}});
+document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn2',e.target.value);speak([ur?'ہیلو! آئیے کھیلیں۔':'Hello! Let\'s play.'],ur)}});
 document.addEventListener('submit',e=>{if(e.target.id==='sf'){e.preventDefault();lastQ=document.getElementById('q').value;track('search',{search_term:lastQ});if(location.hash==='#search'){search(lastQ);fit()}else location.hash='search'}});
 window.addEventListener('hashchange',()=>route());
 window.addEventListener('resize',fit);

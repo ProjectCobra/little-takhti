@@ -121,16 +121,16 @@ function whoPlays(){const kids=childList();if(!kids.length)return `<p class="gbe
 const SPEECH='speechSynthesis' in window;
 let voices=[];function loadVoices(){try{voices=speechSynthesis.getVoices()}catch(e){voices=[]}}
 if(SPEECH){loadVoices();try{speechSynthesis.onvoiceschanged=loadVoices}catch(e){}}
-/* prefer a South Asian English accent: Pakistan, then India (closest widely available), then British; natural/neural voices first */
+/* English is read in a British or American accent everywhere; only Urdu uses an Urdu voice. South Asian English voices are used only if nothing else exists */
 const vScore=(v,ur)=>{const l=(v.lang||'').replace('_','-').toLowerCase(),n=(v.name||'').toLowerCase();let s=0;
  if(ur){if(!l.startsWith('ur'))return -1;s=l==='ur-pk'?50:40}
- else{if(!l.startsWith('en'))return -1;s=l==='en-pk'?60:l==='en-in'?50:l==='en-gb'?30:l==='en-au'||l==='en-ie'?20:10}
+ else{if(!l.startsWith('en'))return -1;s=l==='en-gb'?60:l==='en-us'?55:/^en-(au|ie|nz|ca)/.test(l)?40:/^en-(in|pk|bd|lk|np)/.test(l)?0:30}
  if(/natural|neural|online|premium|enhanced/.test(n))s+=6;if(/google/.test(n))s+=3;if(/female|heera|neerja|uzma|swara|kalpana|veena|isha/.test(n))s+=2;return s};
-const voiceList=ur=>voices.map(v=>[v,vScore(v,ur)]).filter(x=>x[1]>=0).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
-const voiceFor=ur=>{const pick=store.get(ur?'voiceUr':'voiceEn',''),l=voiceList(ur);return (pick&&l.find(v=>v.voiceURI===pick))||l[0]};
+const voiceList=ur=>{const l=voices.map(v=>[v,vScore(v,ur)]).filter(x=>x[1]>=0).sort((a,b)=>b[1]-a[1]);const good=l.filter(x=>ur||!/^en-(in|pk|bd|lk|np)/.test((x[0].lang||'').replace('_','-').toLowerCase()));return (good.length?good:l).map(x=>x[0])};
+const voiceFor=ur=>{const pick=store.get(ur?'voiceUr':'voiceEn2',''),l=voiceList(ur);return (pick&&l.find(v=>v.voiceURI===pick))||l[0]};
 const canSpeak=ur=>SPEECH&&(!ur||!!voiceFor(true));
 function sayText(html){const d=document.createElement('div');html=String(html).replace(/(^|[^A-Za-z])([Zz])(?=$|[^A-Za-z])/g,'$1zed');d.innerHTML=String(html).replace(/<span class="qbl"><\/span>/g,' blank ').replace(/<span class="qnext">\?<\/span>/g,' what comes next ');return d.textContent.replace(/→|←/g,' goes with ').replace(/[×]/g,' times ').replace(/−/g,' minus ').replace(/÷/g,' divided by ').replace(/_{2,}/g,' blank ').replace(/\s+/g,' ').trim()}
-function speak(parts,ur){if(!canSpeak(ur))return;try{speechSynthesis.cancel();let t=parts.filter(Boolean).join('. ');if(ur)t=t.replace(/\bblank\b/g,'خالی جگہ').replace(/what comes next/g,'آگے کیا آئے گا').replace(/goes with/g,'کے ساتھ').replace(/\bOption (\d)/g,'جواب $1');const u=new SpeechSynthesisUtterance(t);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-IN');u.rate=.88;u.pitch=1.05;speechSynthesis.speak(u)}catch(e){}}
+function speak(parts,ur){if(!canSpeak(ur))return;try{speechSynthesis.cancel();let t=parts.filter(Boolean).join('. ');if(ur)t=t.replace(/\bblank\b/g,'خالی جگہ').replace(/what comes next/g,'آگے کیا آئے گا').replace(/goes with/g,'کے ساتھ').replace(/\bOption (\d)/g,'جواب $1');const u=new SpeechSynthesisUtterance(t);const v=voiceFor(ur);if(v)u.voice=v;u.lang=ur?'ur-PK':(v?v.lang:'en-GB');u.rate=.88;u.pitch=1.05;speechSynthesis.speak(u)}catch(e){}}
 const stopSpeak=()=>{try{SPEECH&&speechSynthesis.cancel()}catch(e){}};
 const optSay=o=>o[0]==='@'?SHN[o.slice(1)]:o[0]==='#'?o.slice(1).split('|')[0]+' '+SHN[o.slice(1).split('|')[1]]+'s':sayText(o);
 function readQ(){if(!G)return;const q=G.qs[G.i],ur=!!G.s.rtl;speak([q.story?sayText(q.story):'',sayText(q.sub||''),sayText(q.q),...q.opts.map((o,j)=>(ur?'':'Option '+(j+1)+', ')+optSay(o))],ur)}

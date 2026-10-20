@@ -18,5 +18,10 @@
   "date": "2026-10-19T20:08:24+05:00",
   "commit": "bf4f634cd57284d74f302d8b3fe49e8742f14a02",
   "note": "Help desk, content policy, admin site files, curriculum map, new logo, site test fixes, worksheet layout fix"
+ },
+ {
+  "date": "2026-10-20T21:10:00+05:00",
+  "commit": "fed2c1678a8ed6964624a9e8785c2224aca890a7",
+  "note": "English moved up a level (Grade 1 Warm-up kept, new Grade 3 English), English games and power-ups updated, family page account details layout"
  }
 ]

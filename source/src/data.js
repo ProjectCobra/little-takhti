@@ -50,6 +50,11 @@ const SUBJECTS=[
  {id:'social',kind:'social',grade:'g1',topics:['Family','Feelings','House rules']},
  {id:'urdu',kind:'urdu',grade:'g1',rtl:true,topics:['چھوٹی اشکال','شرارتی نو','مصوّتے','بصری الفاظ']}];
 const ORDER=['english','maths','science','history','geography','social','gk','urdu','islamiat','computer'];
+/* English levels moved up one grade: Grade 1 English uses the former Grade 2 topics, Grade 2 the former Grade 3,
+   and Grade 3 has new topics at Grade 4 level. The original Grade 1 English stays in Grade 1 as an English Warm-up. */
+{const take=g=>{const a=[...((GRADE_DATA[g]||{}).english||[]),...((PLUS[g]||{}).english||[])];if(PLUS[g])delete PLUS[g].english;return a};
+ const e2=take('g2'),e3=take('g3');
+ GRADE_DATA.g1=GRADE_DATA.g1||{};GRADE_DATA.g1.english=e2;GRADE_DATA.g2.english=e3;GRADE_DATA.g3.english=G3_ENGLISH;}
 /* extra topics (PLUS): other grades join GRADE_DATA; Grade 1 extends its original subjects */
 Object.entries(PLUS).forEach(([g,kinds])=>{if(g==='g1')return;GRADE_DATA[g]=GRADE_DATA[g]||{};Object.entries(kinds).forEach(([k,tps])=>{(GRADE_DATA[g][k]=GRADE_DATA[g][k]||[]).push(...tps)})});
 Object.entries(GRADE_DATA).forEach(([g,subs])=>{
@@ -67,8 +72,10 @@ Object.entries(PLUS.g1||{}).forEach(([kind,tps])=>{const s=SUBJECTS.find(x=>x.gr
  tps.forEach(t=>{const k=s.topics.length;s.topics.push(t.t);if(PACK_T[s.id])PACK_T[s.id][k]=t.t;if(t.en)UR_EN[t.t]=t.en;
   PAGES[s.id].push(...t.pages.map(p=>({...p,topic:t.t})));(GUIDE[s.id]=GUIDE[s.id]||[]).push(t.g);PLAN[s.id].push([t.t,['t'+(k+1)],t.g[0],t.g[2],t.story])})});
 SUBJECTS.forEach(s=>{s.name=KIND[s.kind].name;s.ur=KIND[s.kind].ur});
+{const w=SUBJECTS.find(s=>s.id==='english'),m=SUBJECTS.findIndex(s=>s.id==='g1-english');if(w&&m>=0){w.name='English Warm-up';w.warm=true;const at=SUBJECTS.indexOf(w),g=SUBJECTS[m];SUBJECTS.splice(m,1);SUBJECTS.splice(at,1,g,w)}}
 const SUB=Object.fromEntries(SUBJECTS.map(s=>[s.id,s]));
 const subjectsOf=g=>SUBJECTS.filter(s=>s.grade===g&&!s.community);
+const planSubjectsOf=g=>subjectsOf(g).filter(s=>!s.warm);
 
 const RES=[];
 SUBJECTS.forEach(s=>{

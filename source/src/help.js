@@ -195,7 +195,7 @@ function cmHead(G,subs,view,wi){const n=cmWeeks(subs);
   <div class="cm-tabs" role="tablist"><a role="tab" aria-selected="${view==='term'}" class="${view==='term'?'on':''}" href="#map">Whole term</a><a role="tab" aria-selected="${view==='week'}" class="${view==='week'?'on':''}" href="#map-w${(view==='week'?wi:Math.min(WEEK_NOW,n-1))+1}">Week by week</a></div>
   ${view==='week'?`<div class="cm-weeks">${Array.from({length:n},(_,i)=>`<a href="#map-w${i+1}" class="${i===wi?'on':''}${i===WEEK_NOW?' cur':''}" title="${WEEKS[i][1]}">W${i+1}</a>`).join('')}</div>`:''}
   <div class="acts cm-bar" style="margin-top:14px"><button class="btn sun" type="button" onclick="window.print()">${ic.print}${view==='term'?'Print the map':'Print this week'}</button>${view==='week'?`${wi>0?`<a class="btn" href="#map-w${wi}">${ic.l}Week ${wi}</a>`:''}${wi<n-1?`<a class="btn" href="#map-w${wi+2}">Week ${wi+2}${ic.r}</a>`:''}`:`<a class="btn" href="#class">${ic.cal}Weekly guide</a>`}</div></div></div>`}
-function curriculumMap(arg){const subs=subjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
+function curriculumMap(arg){const subs=planSubjectsOf(grade).filter(s=>PLAN[s.id]&&PLAN[s.id].length);const G=GR[grade];
  const wm=/^w(\d+)$/.exec(arg||'');if(wm)return weekGuide(subs,G,Math.min(Math.max(+wm[1]-1,0),cmWeeks(subs)-1));
  const row=(s,p,i)=>{const bi=cmUrw(s,i);const name=bi?`<span class="ur-t" dir="rtl" lang="ur">${p[0]}</span> <span class="cm-en">${esc(bi.en)}</span>`:T(p[0]);
   const goal=bi?mixUr(bi.goal[0]):T(p[2]||'');const rev=p[1].includes('rev')||/revision/i.test(bi?bi.en:p[0]);const r=cmPacks(s,p)[0];

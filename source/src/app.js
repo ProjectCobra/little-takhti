@@ -102,7 +102,7 @@ function card(r){const s=SUB[r.sub],n=r.pages.length,q=hasQuiz(r);
  <div class="meta"><span class="dot"></span>${GR[s.grade].name} · ${s.name} · ${T(r.topic)}</div>
  <div class="cfoot"><div class="tags"><span class="tag">${n} page${n>1?'s':''}</span><span class="tag key">${ic.ok}Answer key included</span></div>${acts(r)}</div></div></article>`}
 const gradePick=(attr)=>`<div class="gpick" role="group" aria-label="Choose a grade">${GRADES.filter(g=>!g.hidden).map(g=>`<button type="button" ${g.soon?'disabled':`data-grade="${g.id}"`} aria-pressed="${g.id===grade}">${g.name}${g.soon?' · soon':''}</button>`).join('')}</div>`;
-const subTabs=(cur,attr)=>`<div class="tabs" role="tablist">${subjectsOf(grade).map(x=>`<button role="tab" class="tab s-${x.id}" data-${attr}="${x.id}" aria-selected="${x.id===cur}"><span class="sw"></span>${x.name}</button>`).join('')}</div>`;
+const subTabs=(cur,attr)=>`<div class="tabs" role="tablist">${(attr==='cs'?planSubjectsOf(grade):subjectsOf(grade)).map(x=>`<button role="tab" class="tab s-${x.id}" data-${attr}="${x.id}" aria-selected="${x.id===cur}"><span class="sw"></span>${x.name}</button>`).join('')}</div>`;
 const totalPages=()=>Object.values(PAGES).reduce((a,p)=>a+p.length,0);
 
 /* ---------- home ---------- */
@@ -117,7 +117,7 @@ function privacy(){app.innerHTML=`<article class="legal"><span class="kick">Priv
 <h2>Deleting data</h2><p>Parents can remove a child and all their progress from the Family page at any time. To delete an account completely, contact us and we will remove it.</p>
 <h2>Contact</h2><p>For any privacy question, write to the email address listed on this site.</p></article>`}
 function home(){
- const subs=subjectsOf(grade),G=GR[grade];
+ const subs=planSubjectsOf(grade),G=GR[grade];
  const wkI=Math.min(WEEK_NOW,10);const newRes=uniq(subs.map(s=>{const p=(PLAN[s.id]||[])[wkI];if(!p)return null;const x=p[1].find(v=>typeof v==='string');return x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1))}).filter(Boolean));
  const quizN=RES.filter(r=>!r.set&&hasQuiz(r)).length;
  app.innerHTML=`
@@ -215,7 +215,7 @@ function detail(id){
 /* ---------- class material ---------- */
 let classSub={};
 function classPage(){
- const subs=subjectsOf(grade);let cur=classSub[grade];if(!cur||!SUB[cur]||SUB[cur].grade!==grade)cur=subs[0].id;
+ const subs=planSubjectsOf(grade);let cur=classSub[grade];if(SUB[cur]&&SUB[cur].warm)cur=null;if(!cur||!SUB[cur]||SUB[cur].grade!==grade)cur=subs[0].id;
  const s=SUB[cur],plan=PLAN[cur],bi=URW[s.id];
  const H=(t,i)=>`<h4 class="gh"><span class="gi" aria-hidden="true">${i}</span>${t}</h4>`;
  const wk=plan.map((p,i)=>p?i:-1).filter(i=>i>=0);

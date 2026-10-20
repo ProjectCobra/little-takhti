@@ -166,7 +166,7 @@ const STORIES=[
  {id:'s-chiriya',g:['g2','g3'],ur:true,t:'چڑیا کا گھونسلا',e:'🐦',x:'گرمیوں میں ایک چڑیا نے ہمارے برآمدے میں گھونسلا بنایا۔ وہ تنکے اور دھاگے لا لا کر گھونسلا بناتی رہی۔ کچھ دن بعد گھونسلے میں تین ننھے بچے نکلے۔ میں روز ان کے لیے پانی اور دانہ رکھتی۔ ایک دن بچے اڑنا سیکھ گئے اور آسمان میں اڑ گئے۔ مجھے بہت خوشی ہوئی۔',
   q:[['چڑیا نے گھونسلا کہاں بنایا؟',['برآمدے میں','درخت پر','چھت پر'],0],['گھونسلے میں کتنے بچے نکلے؟',['تین','دو','پانچ'],0],['بچوں نے آخر میں کیا سیکھا؟',['اڑنا','گانا','تیرنا'],0]]}];
 function storiesHub(){const mine=STORIES.filter(s=>s.g.includes(grade));
- const subs=subjectsOf(grade).map(s=>({s,list:(PLAN[s.id]||[]).map((p,i)=>({p,i})).filter(o=>o.p&&o.p[4]&&o.p[4][1]&&!/^(Revision|دہرائی)$/.test(o.p[0]))})).filter(x=>x.list.length);
+ const subs=planSubjectsOf(grade).map(s=>({s,list:(PLAN[s.id]||[]).map((p,i)=>({p,i})).filter(o=>o.p&&o.p[4]&&o.p[4][1]&&!/^(Revision|دہرائی)$/.test(o.p[0]))})).filter(x=>x.list.length);
  const COLS=['#FFF1C2','#DDF4FF','#E3F9D6','#FBE1EB','#ECE7FB','#FDEAD9'];
  app.innerHTML=`<div class="crumbs"><a href="#fun">Play zone</a>/<span>Story corner</span></div>
  <div class="phead"><div style="flex:1"><span class="kick">${ic.book}Story corner</span><h1>Read along stories</h1><p>Tap Read aloud and follow the highlighted words. Answer three questions at the end to earn stars.</p></div><div class="ph-art">${art('english')}</div></div>

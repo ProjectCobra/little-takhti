@@ -1453,6 +1453,36 @@ p.gbest.gb-add{display:block;text-align:center}p.gbest.gb-add a{display:inline}
 @media (max-width:560px){.pdet{padding:18px 16px}.pdet-grid{grid-template-columns:minmax(0,1fr)}.pdet-links{width:100%}.pdet-links .btn{flex:1 1 0;justify-content:center;padding-left:8px;padding-right:8px;font-size:13px;white-space:nowrap;gap:6px}.pdet-links .btn:first-child{flex:2 1 0}}
 @media (max-width:700px){.acct-card{display:grid!important;grid-template-columns:48px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;text-align:left}.acct-card .meimg{grid-row:1/3;width:48px;height:48px;margin:0}.acct-card>b,.acct-card>small{grid-column:2}.acct-card .btn{grid-column:1/-1;width:100%;margin-top:10px!important}}
 .ws-grid{touch-action:none;user-select:none;-webkit-user-select:none}.ws-c.drag{background:#FFE27A;border-color:#F2A900;transform:scale(1.06)}
+/* leave-quiz prompt */
+.lq-back{position:fixed;inset:0;z-index:200;background:rgba(18,59,40,.45);display:grid;place-items:center;padding:16px}
+.lq{background:var(--surface);border-radius:26px;padding:24px;max-width:400px;width:100%;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.lq .mascot{margin:0 auto 6px}.lq h2{font-size:24px}.lq p{color:var(--muted);margin:8px 0 18px}.lq .acts{justify-content:center;flex-wrap:wrap}
+/* quizzes on phones: no site header, footer or tab bar, a compact top, and the answer panel fixed at the bottom */
+@media (max-width:760px){
+ body.inquiz header.top,body.inquiz footer,body.inquiz .tabbar{display:none!important}
+ body.inquiz main{padding-top:10px!important;padding-bottom:16px!important}
+ body.inquiz .sky{height:auto;margin:6px 0 8px}
+ body.inquiz .sky .cloud{display:none}
+ body.inquiz .gcardq{padding:14px 14px 16px}
+ body.inquiz .qhead{gap:8px}
+ body.inquiz .qhead .mascot{width:44px;height:52px}
+ body.inquiz .bubble{font-size:14px;padding:8px 12px}
+ body.inquiz .hintb{padding:6px 10px}
+ body.inquiz .qstory{padding:10px 12px;margin-top:10px}
+ body.inquiz .qstory p{font-size:16px;line-height:1.5}
+ body.inquiz .qsub{margin-top:10px;font-size:15px}
+ body.inquiz .qtext{font-size:22px;margin:10px 0 4px}
+ body.inquiz .tbar{margin-top:6px}
+ body.inquiz .qopts{gap:8px;margin-top:12px}
+ body.inquiz .qo{padding:10px 12px;font-size:17px;border-radius:14px;min-height:52px}
+ body.inquiz .qo .k{width:26px;height:26px;font-size:13px}
+ body.inquiz .gcardq.answered{padding-bottom:170px}
+ body.inquiz .fb{position:fixed;left:0;right:0;bottom:0;z-index:60;margin:0;border-radius:22px 22px 0 0;padding:14px 16px calc(14px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(0,0,0,.15);flex-direction:column;align-items:stretch;gap:10px;max-height:60vh;overflow:auto;animation:fbup .25s ease}
+ body.inquiz .fb .btn{width:100%;justify-content:center}
+ body.inquiz .fb[hidden]{display:none!important}
+}
+@keyframes fbup{from{transform:translateY(100%)}to{transform:none}}
+footer .nlfy{font-size:13px;opacity:.85;text-decoration:underline}
 
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
@@ -1596,7 +1626,7 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
  <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
  <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>
- <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span></div>
+ <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span><a class="nlfy" href="https://www.netlify.com" target="_blank" rel="noopener">This site is powered by Netlify</a></div>
 </div></footer>
 <nav class="tabbar" aria-label="Main">
  <a href="#home" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>Worksheets</span></a>
@@ -7036,7 +7066,7 @@ function renderQ(){
   <div class="tbar" aria-hidden="true"><i id="tb"></i><span id="tbl">${ic.flame} Speed bonus</span></div>
   <div class="qopts${q.opts.length===2?' two':''}">${q.opts.map((o,j)=>`<button class="qo" data-ans="${j}"><span class="k">${j+1}</span><span class="v${isUr(o)?' ur-t':''}">${optHTML(o)}</span></button>`).join('')}</div>
   <div class="fb" id="fb" hidden></div></div></div>`;
- G.t0=Date.now();G.lock=false;clearInterval(tmr);
+ G.t0=Date.now();G.lock=false;clearInterval(tmr);if(G.i>0)window.scrollTo({top:0,behavior:'instant'});
  if(store.get('autoread',['nursery','kg'].includes(G.s.grade))&&canSpeak(ur))setTimeout(readQ,250);
  const tb=document.getElementById('tb');tmr=setInterval(()=>{const left=Math.max(0,1-(Date.now()-G.t0)/(G.speed*1000));if(tb)tb.style.width=(left*100)+'%';if(left<=0){clearInterval(tmr);const l=document.getElementById('tbl');if(l)l.textContent='Take your time'}},100);
 }
@@ -7062,12 +7092,13 @@ function answer(j){
  fb.className='fb '+(ok?'good':'bad');fb.hidden=false;
  fb.innerHTML=`<div class="fbt${isUr(q.exp||'')?' ur-t':''}" ${isUr(q.exp||'')?'dir="rtl"':''}>${ok?ic.ok:ic.bulb}<span>${q.exp||''}</span></div><button class="btn fill lg" id="gn">${last?(ur?'نتیجہ دیکھیں':'See my stars'):(ur?'اگلا سوال':'Next question')} ${ic.arrow}</button>`;
  const sky=document.querySelector('.sky');if(sky)sky.outerHTML='<div class="sky"'+gameTop().split('<div class="sky"')[1];
- setTimeout(()=>{const b=document.getElementById('gn');b&&b.focus()},30);
+ document.querySelector('.gcardq').classList.add('answered');
+ setTimeout(()=>{const b=document.getElementById('gn');b&&b.focus({preventScroll:true});if(!matchMedia('(max-width:760px)').matches){const r=fb.getBoundingClientRect();if(r.bottom>innerHeight-10)fb.scrollIntoView({behavior:'smooth',block:'end'})}},30);
  if(store.get('autoread',['nursery','kg'].includes(G.s.grade))&&canSpeak(ur))speak([head.replace(/!/g,'.'),sayText(q.exp||'')],ur);
 }
 function next(){if(!G)return;stopSpeak();if(G.i<G.qs.length-1){G.i++;renderQ()}else endGame()}
 function endGame(){
- clearInterval(tmr);const n=G.qs.length,right=G.right,pct=right/n,stars=pct>=.9?3:pct>=.6?2:right>0?1:0,ur=!!G.s.rtl;
+ clearInterval(tmr);G.live=false;document.body.classList.remove('inquiz');const n=G.qs.length,right=G.right,pct=right/n,stars=pct>=.9?3:pct>=.6?2:right>0?1:0,ur=!!G.s.rtl;
  const best=store.get('best',{}),bs=store.get('bestScore',{});const newBest=G.score>(bs[G.r.id]||0);
  if(stars>(best[G.r.id]||0)){best[G.r.id]=stars;store.set('best',best)}if(newBest){bs[G.r.id]=G.score;store.set('bestScore',bs)}
  track('quiz_complete',{level:G.level,quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,correct:right,total:n,score:G.score,stars});
@@ -7182,7 +7213,7 @@ document.addEventListener('click',e=>{
  if(e.target.closest('#gn')){next();return}
  if(e.target.closest('[data-uplevel]')&&G){store.set('level',G.level==='easy'?'medium':'hard');play(G.r.id);return}
  const lvb=e.target.closest('[data-lv]');if(lvb&&G){store.set('level',lvb.dataset.lv);setLevel(lvb.dataset.lv);intro();return}
- if(e.target.closest('[data-start]')){track('quiz_start',{quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,level:G.level});renderQ();window.scrollTo(0,0);return}
+ if(e.target.closest('[data-start]')){track('quiz_start',{quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,level:G.level});G.live=true;G.hash=location.hash;document.body.classList.add('inquiz');renderQ();window.scrollTo(0,0);return}
  if(e.target.closest('#hint')){useHint();return}
  if(e.target.closest('#say')){readQ();return}
  const at=e.target.closest('#autoread');if(at){store.set('autoread',at.checked);return}
@@ -7205,6 +7236,14 @@ document.addEventListener('click',e=>{
  if(e.target.closest('#snd')){store.set('sound',!store.get('sound',true));const b=document.getElementById('snd');const on=store.get('sound',true);b.innerHTML=on?ic.sound:ic.mute;b.setAttribute('aria-label',on?'Turn sound off':'Turn sound on');return}
 });
 document.addEventListener('keydown',e=>{if(!G||e.target.closest('input,select,textarea'))return;const n=+e.key;const b=document.querySelectorAll('.qo')[n-1];if(n>=1&&n<=4&&!G.lock&&b&&!b.disabled){answer(n-1)}else if((e.key==='h'||e.key==='H')&&!G.lock)useHint()});
+/* leaving a quiz half way: ask first */
+const quizLive=()=>!!(G&&G.live&&G.res.length<G.qs.length);
+function leaveAsk(to){if(document.getElementById('leaveq'))return;const ur=!!(G&&G.s.rtl);const d=document.createElement('div');d.id='leaveq';d.className='lq-back';
+ d.innerHTML=`<div class="lq" role="dialog" aria-modal="true" aria-labelledby="lqh">${mascot('oops')}<h2 id="lqh">Leave this quiz?</h2><p>You are on question ${G.i+1} of ${G.qs.length}. If you leave now, your answers and points for this quiz will be lost.</p><div class="acts"><button class="btn fill lg" id="lqstay">Keep playing</button><button class="btn lg" id="lqgo">Leave quiz</button></div></div>`;
+ document.body.appendChild(d);const close=()=>d.remove();document.getElementById('lqstay').onclick=close;d.onclick=e=>{if(e.target===d)close()};
+ document.getElementById('lqgo').onclick=()=>{close();if(G)G.live=false;document.body.classList.remove('inquiz');stopSpeak();location.hash=to};setTimeout(()=>document.getElementById('lqstay').focus(),30)}
+window.addEventListener('hashchange',e=>{if(quizLive()&&location.hash!==G.hash){e.stopImmediatePropagation();const to=location.hash||'#home';history.replaceState(null,'',G.hash);leaveAsk(to)}else if(!quizLive())document.body.classList.remove('inquiz')});
+window.addEventListener('beforeunload',e=>{if(quizLive()){e.preventDefault();e.returnValue=''}});
 window.addEventListener('hashchange',()=>clearInterval(tmr));
 document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn2',e.target.value);speak([ur?'ہیلو! آئیے کھیلیں۔':'Hello! Let\'s play.'],ur)}});
 document.addEventListener('submit',e=>{if(e.target.id==='sf'){e.preventDefault();lastQ=document.getElementById('q').value;track('search',{search_term:lastQ});if(location.hash==='#search'){search(lastQ);fit()}else location.hash='search'}});

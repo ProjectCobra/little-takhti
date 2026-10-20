@@ -383,7 +383,7 @@ function renderQ(){
   <div class="tbar" aria-hidden="true"><i id="tb"></i><span id="tbl">${ic.flame} Speed bonus</span></div>
   <div class="qopts${q.opts.length===2?' two':''}">${q.opts.map((o,j)=>`<button class="qo" data-ans="${j}"><span class="k">${j+1}</span><span class="v${isUr(o)?' ur-t':''}">${optHTML(o)}</span></button>`).join('')}</div>
   <div class="fb" id="fb" hidden></div></div></div>`;
- G.t0=Date.now();G.lock=false;clearInterval(tmr);
+ G.t0=Date.now();G.lock=false;clearInterval(tmr);if(G.i>0)window.scrollTo({top:0,behavior:'instant'});
  if(store.get('autoread',['nursery','kg'].includes(G.s.grade))&&canSpeak(ur))setTimeout(readQ,250);
  const tb=document.getElementById('tb');tmr=setInterval(()=>{const left=Math.max(0,1-(Date.now()-G.t0)/(G.speed*1000));if(tb)tb.style.width=(left*100)+'%';if(left<=0){clearInterval(tmr);const l=document.getElementById('tbl');if(l)l.textContent='Take your time'}},100);
 }
@@ -409,12 +409,13 @@ function answer(j){
  fb.className='fb '+(ok?'good':'bad');fb.hidden=false;
  fb.innerHTML=`<div class="fbt${isUr(q.exp||'')?' ur-t':''}" ${isUr(q.exp||'')?'dir="rtl"':''}>${ok?ic.ok:ic.bulb}<span>${q.exp||''}</span></div><button class="btn fill lg" id="gn">${last?(ur?'نتیجہ دیکھیں':'See my stars'):(ur?'اگلا سوال':'Next question')} ${ic.arrow}</button>`;
  const sky=document.querySelector('.sky');if(sky)sky.outerHTML='<div class="sky"'+gameTop().split('<div class="sky"')[1];
- setTimeout(()=>{const b=document.getElementById('gn');b&&b.focus()},30);
+ document.querySelector('.gcardq').classList.add('answered');
+ setTimeout(()=>{const b=document.getElementById('gn');b&&b.focus({preventScroll:true});if(!matchMedia('(max-width:760px)').matches){const r=fb.getBoundingClientRect();if(r.bottom>innerHeight-10)fb.scrollIntoView({behavior:'smooth',block:'end'})}},30);
  if(store.get('autoread',['nursery','kg'].includes(G.s.grade))&&canSpeak(ur))speak([head.replace(/!/g,'.'),sayText(q.exp||'')],ur);
 }
 function next(){if(!G)return;stopSpeak();if(G.i<G.qs.length-1){G.i++;renderQ()}else endGame()}
 function endGame(){
- clearInterval(tmr);const n=G.qs.length,right=G.right,pct=right/n,stars=pct>=.9?3:pct>=.6?2:right>0?1:0,ur=!!G.s.rtl;
+ clearInterval(tmr);G.live=false;document.body.classList.remove('inquiz');const n=G.qs.length,right=G.right,pct=right/n,stars=pct>=.9?3:pct>=.6?2:right>0?1:0,ur=!!G.s.rtl;
  const best=store.get('best',{}),bs=store.get('bestScore',{});const newBest=G.score>(bs[G.r.id]||0);
  if(stars>(best[G.r.id]||0)){best[G.r.id]=stars;store.set('best',best)}if(newBest){bs[G.r.id]=G.score;store.set('bestScore',bs)}
  track('quiz_complete',{level:G.level,quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,correct:right,total:n,score:G.score,stars});
@@ -529,7 +530,7 @@ document.addEventListener('click',e=>{
  if(e.target.closest('#gn')){next();return}
  if(e.target.closest('[data-uplevel]')&&G){store.set('level',G.level==='easy'?'medium':'hard');play(G.r.id);return}
  const lvb=e.target.closest('[data-lv]');if(lvb&&G){store.set('level',lvb.dataset.lv);setLevel(lvb.dataset.lv);intro();return}
- if(e.target.closest('[data-start]')){track('quiz_start',{quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,level:G.level});renderQ();window.scrollTo(0,0);return}
+ if(e.target.closest('[data-start]')){track('quiz_start',{quiz:G.r.id,subject:G.s.kind,grade:G.s.grade,level:G.level});G.live=true;G.hash=location.hash;document.body.classList.add('inquiz');renderQ();window.scrollTo(0,0);return}
  if(e.target.closest('#hint')){useHint();return}
  if(e.target.closest('#say')){readQ();return}
  const at=e.target.closest('#autoread');if(at){store.set('autoread',at.checked);return}
@@ -552,6 +553,14 @@ document.addEventListener('click',e=>{
  if(e.target.closest('#snd')){store.set('sound',!store.get('sound',true));const b=document.getElementById('snd');const on=store.get('sound',true);b.innerHTML=on?ic.sound:ic.mute;b.setAttribute('aria-label',on?'Turn sound off':'Turn sound on');return}
 });
 document.addEventListener('keydown',e=>{if(!G||e.target.closest('input,select,textarea'))return;const n=+e.key;const b=document.querySelectorAll('.qo')[n-1];if(n>=1&&n<=4&&!G.lock&&b&&!b.disabled){answer(n-1)}else if((e.key==='h'||e.key==='H')&&!G.lock)useHint()});
+/* leaving a quiz half way: ask first */
+const quizLive=()=>!!(G&&G.live&&G.res.length<G.qs.length);
+function leaveAsk(to){if(document.getElementById('leaveq'))return;const ur=!!(G&&G.s.rtl);const d=document.createElement('div');d.id='leaveq';d.className='lq-back';
+ d.innerHTML=`<div class="lq" role="dialog" aria-modal="true" aria-labelledby="lqh">${mascot('oops')}<h2 id="lqh">Leave this quiz?</h2><p>You are on question ${G.i+1} of ${G.qs.length}. If you leave now, your answers and points for this quiz will be lost.</p><div class="acts"><button class="btn fill lg" id="lqstay">Keep playing</button><button class="btn lg" id="lqgo">Leave quiz</button></div></div>`;
+ document.body.appendChild(d);const close=()=>d.remove();document.getElementById('lqstay').onclick=close;d.onclick=e=>{if(e.target===d)close()};
+ document.getElementById('lqgo').onclick=()=>{close();if(G)G.live=false;document.body.classList.remove('inquiz');stopSpeak();location.hash=to};setTimeout(()=>document.getElementById('lqstay').focus(),30)}
+window.addEventListener('hashchange',e=>{if(quizLive()&&location.hash!==G.hash){e.stopImmediatePropagation();const to=location.hash||'#home';history.replaceState(null,'',G.hash);leaveAsk(to)}else if(!quizLive())document.body.classList.remove('inquiz')});
+window.addEventListener('beforeunload',e=>{if(quizLive()){e.preventDefault();e.returnValue=''}});
 window.addEventListener('hashchange',()=>clearInterval(tmr));
 document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn2',e.target.value);speak([ur?'ہیلو! آئیے کھیلیں۔':'Hello! Let\'s play.'],ur)}});
 document.addEventListener('submit',e=>{if(e.target.id==='sf'){e.preventDefault();lastQ=document.getElementById('q').value;track('search',{search_term:lastQ});if(location.hash==='#search'){search(lastQ);fit()}else location.hash='search'}});

@@ -19,7 +19,7 @@ head='''<title>Little Takhti</title>
  <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
  <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li><li><a href="#admin">Review uploads</a></li></ul></div>
- <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span></div>
+ <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span><a class="nlfy" href="https://www.netlify.com" target="_blank" rel="noopener">This site is powered by Netlify</a></div>
 </div></footer>
 <nav class="tabbar" aria-label="Main">
  <a href="#home" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>Worksheets</span></a>

@@ -74,7 +74,7 @@ def page(path, title, desc, body, crumbs, image=None, jsonld=None):
 <header><div class="w"><a class="logo" href="/">{LOGO}Little Takhti</a><a class="cta g" href="/#home">Open the app</a></div></header>
 <main class="w"><nav class="crumb" aria-label="Breadcrumb">{cr}</nav>{body}</main>
 <footer><div class="w"><b>Little Takhti</b> · Free printable worksheets, quiz games and parent guides for Nursery to Class 3, made for Pakistan.<br>
-<a href="/worksheets/">All worksheets</a> · <a href="/#quiz">Quiz games</a> · <a href="/#parents">Parents' corner</a> · <a href="/#privacy">Privacy</a></div></footer></body></html>'''
+<a href="/worksheets/">All worksheets</a> · <a href="/#quiz">Quiz games</a> · <a href="/#parents">Parents' corner</a> · <a href="/#privacy">Privacy</a> · <a href="https://www.netlify.com" rel="noopener">This site is powered by Netlify</a></div></footer></body></html>'''
     d = os.path.join(OUT, path) if path else OUT
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w').write(doc)
@@ -163,3 +163,6 @@ if '/build.json' not in open(hp).read():
   with open(hp, 'a') as h:
     h.write('/build.json\n  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app\n  Cache-Control: no-cache\n/deploys.json\n  Access-Control-Allow-Origin: https://littletakhti-admin.netlify.app\n  Cache-Control: no-cache\n')
 print('build.json', build['packs'], 'packs', build['pages'], 'pages')
+# moved pages (English levels moved up a grade in October 2026)
+rp = os.path.join(ROOT, 'src', '_redirects')
+if os.path.exists(rp): shutil.copy(rp, os.path.join(OUT, '_redirects'))

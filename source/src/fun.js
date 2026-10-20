@@ -5,9 +5,10 @@
 const WORDS={
  nursery:['cat','sun','dog','hat','pen','bus','cup','egg','box','red'],
  kg:['fish','frog','milk','duck','ship','tree','book','star','cake','moon','rain','king'],
- g1:['apple','green','chair','house','mango','table','water','happy','plant','train','sleep','school'],
- g2:['garden','yellow','basket','summer','friend','teacher','kitchen','rainbow','bottle','animal','monkey','pencil'],
- g3:['beautiful','elephant','mountain','question','language','birthday','computer','festival','vegetable','tomorrow','different','important']};
+ g1:['garden','yellow','basket','summer','friend','teacher','kitchen','rainbow','bottle','animal','monkey','pencil'],
+ g2:['beautiful','elephant','mountain','question','language','birthday','computer','festival','vegetable','tomorrow','different','important'],
+ g3:['adventure','knowledge','scientist','neighbour','favourite','dangerous','paragraph','celebrate','exercise','character','continent','discovery']};
+/* English word games run one level above the grade (October 2026): Grade 1 uses the old Grade 2 words, and so on */
 const UR_LETTERS='ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ی ے'.split(' ');
 
 /* stickers: unlocked every 3 stars */
@@ -91,7 +92,7 @@ function wsTap(i){const g=GM;if(!g||g.k!=='ws')return;const el=document.querySel
 const speakW=w=>{if(store.get('sound',true))speak([w],false)};
 
 /* memory match */
-function memPairs(){const subs=subjectsOf(grade).filter(s=>!s.rtl);const pairs=[];
+function memPairs(){const subs=subjectsOf(grade).filter(s=>!s.rtl&&!s.warm);const pairs=[];
  subs.forEach(s=>PAGES[s.id].forEach(p=>p.blocks.forEach(b=>{if(b.t==='match')b.left.forEach((l,i)=>{const r=b.right[i];if(l&&r&&String(l).length<26&&String(r).length<26&&!/[<{]/.test(l+r))pairs.push([String(l),String(r)])})})));
  const seen=new Set();return shuffle(pairs).filter(([l,r])=>{if(seen.has(l)||seen.has(r))return false;seen.add(l);seen.add(r);return true})}
 function memoryMatch(){const np=grade==='nursery'?4:grade==='kg'?5:6;const pairs=memPairs().slice(0,np);

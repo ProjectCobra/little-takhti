@@ -20,6 +20,8 @@ const PUG={
  g3:{tools:['flash','mind','listen','doodle','timer','ask'],flash:15,timer:[15,20,25],tdef:20,listen:'spell',trace:'words',
   d:{flash:'Longer revision sets for tests. Missed cards come back.',listen:'Spelling test: hear the word, type it, check it.',doodle:'Handwriting and quick diagrams.',mind:'Build a mind map to revise the whole topic.',timer:'Up to 25 minutes, like a real study session.',ask:'Ask for hints, examples and quick checks.'}}};
 const pug=()=>PUG[grade]||PUG.g1;
+/* English runs one level above the child's grade, so its cards, tracing and listening match that level */
+const pugL=r=>{const s=r&&SUB[r.sub];const lv=s&&s.kind==='english'&&!s.warm?({g1:'g2',g2:'g3'}[s.grade]||s.grade):(s?s.grade:grade);return PUG[lv]||pug()};
 const puDesc=k=>(pug().d||{})[k]||PU[k].desc;
 const puAvail=k=>pug().tools.includes(k)&&(k!=='ask'||!!(typeof CMS!=='undefined'&&CMS.sample));
 const puList=()=>pug().tools.filter(puAvail);
@@ -30,7 +32,7 @@ let puState={};
 
 /* row of PowerUp tiles for one resource (detail page) */
 function puRow(r){return `<section class="pu-sec"><div class="sec-h"><div><span class="kick pu-kick">${ic.spark}PowerUps</span><h2>Practise ${rTitle(r)} your way</h2></div></div>
- <div class="pu-grid">${puList().map(k=>`<a class="pu-card" href="#pu-${k}-${r.id}">${puIcon(k)}<b>${k==='listen'&&pug().listen==='spell'?'Listen and spell':PU[k].name}</b><small>${puDesc(k)}</small>${PU[k].ai?'<span class="pu-ai">AI</span>':''}</a>`).join('')}</div></section>`}
+ <div class="pu-grid">${puList().map(k=>`<a class="pu-card" href="#pu-${k}-${r.id}">${puIcon(k)}<b>${k==='listen'&&pugL(r).listen==='spell'?'Listen and spell':PU[k].name}</b><small>${puDesc(k)}</small>${PU[k].ai?'<span class="pu-ai">AI</span>':''}</a>`).join('')}</div></section>`}
 
 /* PowerUps hub */
 function puPicker(sel,id){const r=RID[sel],s=r?SUB[r.sub]:subjectsOf(grade)[0];const packs=RES.filter(x=>!x.set&&!x.quizOnly&&x.sub===s.id);
@@ -52,7 +54,7 @@ document.addEventListener('change',e=>{const sb=e.target.closest('[data-pusub]')
 
 /* shared frame for an open PowerUp */
 function puShell(k,r,body){const s=SUB[r.sub];
- return `<div class="pu-wrap s-${s.id}"><div class="pu-top"><a class="ibtn" href="#res-${r.id}" aria-label="Back to the topic">${ic.l}</a>${puIcon(k)}<div class="pu-tt"><h1>${k==='listen'&&pug().listen==='spell'&&!SUB[r.sub].rtl?'Listen and spell':PU[k].name}</h1><small>${GR[s.grade].name} · ${s.name} · ${rTitle(r)}</small></div>
+ return `<div class="pu-wrap s-${s.id}"><div class="pu-top"><a class="ibtn" href="#res-${r.id}" aria-label="Back to the topic">${ic.l}</a>${puIcon(k)}<div class="pu-tt"><h1>${k==='listen'&&pugL(r).listen==='spell'&&!SUB[r.sub].rtl?'Listen and spell':PU[k].name}</h1><small>${GR[s.grade].name} · ${s.name} · ${rTitle(r)}</small></div>
  <div class="pu-sw">${puList().filter(x=>x!==k).map(x=>`<a href="#pu-${x}-${r.id}" title="${PU[x].name}" aria-label="${PU[x].name}">${puIcon(x)}</a>`).join('')}</div></div>${puPicker(r.id,k)}${body}</div>`}
 
 function powerup(h){const m=/^pu-(\w+)-(.+)$/.exec(h);const k=m&&m[1],r=m&&RID[m[2]];
@@ -63,7 +65,7 @@ function powerup(h){const m=/^pu-(\w+)-(.+)$/.exec(h);const k=m&&m[1],r=m&&RID[m
 }
 
 /* --- Flashcards --- */
-function puFlash(r){const qs=shuffle(buildQuiz(r).filter(q=>grade!=='nursery'||!q.story)).slice(0,pug().flash);if(!qs.length){app.innerHTML=puShell('flash',r,'<div class="empty">No cards for this topic yet.</div>');return}
+function puFlash(r){const qs=shuffle(buildQuiz(r).filter(q=>grade!=='nursery'||!q.story)).slice(0,pugL(r).flash);if(!qs.length){app.innerHTML=puShell('flash',r,'<div class="empty">No cards for this topic yet.</div>');return}
  const F=puState.flash={deck:qs.map((_,i)=>i),qs,done:0,again:0,flip:false,total:qs.length};
  const draw=()=>{const box=document.getElementById('fcb');if(!F.deck.length){box.innerHTML=`<div class="fc-end">${art('quiz')}<h2>All ${F.total} cards done!</h2><p>${F.again?`${F.again} card${F.again>1?'s':''} needed another go. Well done for practising.`:'You knew every card first time. Shabash!'}</p><div class="acts" style="justify-content:center"><a class="btn sun lg" href="#pu-flash-${r.id}" data-reload="1">Shuffle again</a>${hasQuiz(r)?`<a class="btn lg" href="#play-${r.id}">${ic.play}Play the quiz</a>`:''}</div></div>`;return}
   const q=F.qs[F.deck[0]],ur=isUr(q.q),ans=q.ans;
@@ -79,10 +81,10 @@ function puFlash(r){const qs=shuffle(buildQuiz(r).filter(q=>grade!=='nursery'||!
 }
 
 /* --- Doodleboard with tracing guides --- */
-function traceSet(r){const s=SUB[r.sub],t=pug().trace;
+function traceSet(r){const s=SUB[r.sub],t=pugL(r).trace;
  if(t==='big'){if(s.kind==='urdu')return ['ا','ب','پ','ت','ج','د','ر','س','ک','م'];if(s.kind==='maths')return ['1','2','3','4','5','6','7','8','9','10'];return ['|','—','○','A','B','C','a','b','c','1','2','3']}
  if(t==='letters'&&s.kind!=='urdu'&&s.kind!=='maths'){const w=keyWords(r).filter(x=>x.length<=4&&!isUr(x));return ['Aa','Bb','Cc','Dd','Ee'].concat(w).slice(0,10)}
- if(['g2','g3'].includes(s.grade)&&s.kind!=='urdu'&&s.kind!=='maths'){const w=keyWords(r).filter(x=>!isUr(x)&&x.length<=12);if(w.length>=3)return w.slice(0,10)}
+ if((['g2','g3'].includes(s.grade)||(s.kind==='english'&&!s.warm))&&s.kind!=='urdu'&&s.kind!=='maths'){const w=keyWords(r).filter(x=>!isUr(x)&&x.length<=12);if(w.length>=3)return w.slice(0,10)}
  if(['g2','g3'].includes(s.grade)&&s.kind==='maths')return ['12','25','48','99','100','×','÷','=','½','¼'];
  if(s.kind==='urdu'&&['g2','g3'].includes(s.grade)){const w=keyWords(r).filter(x=>isUr(x)&&x.length<=6);if(w.length>=3)return w.slice(0,10)}
 if(s.kind==='urdu')return ['ا','ب','پ','ت','ٹ','ث','ج','چ','ح','خ','د','ڈ'];if(s.kind==='maths')return ['1','2','3','4','5','6','7','8','9','10','+','='];
@@ -127,7 +129,7 @@ function puMind(r){const s=SUB[r.sub],g=guideOf(r)||[],kw=keyWords(r).slice(0,8)
 }
 
 /* --- Listen and read --- */
-function puListen(r){if(pug().listen==='spell'&&!SUB[r.sub].rtl&&canSpeak(false))return puSpell(r);const s=SUB[r.sub],ur=!!s.rtl;let words=keyWords(r);if(words.length<4)words=buildQuiz(r).map(q=>q.ans).filter(x=>!/^[@#]/.test(x)&&String(x).length<24);words=[...new Set(words)].slice(0,12);
+function puListen(r){if(pugL(r).listen==='spell'&&!SUB[r.sub].rtl&&canSpeak(false))return puSpell(r);const s=SUB[r.sub],ur=!!s.rtl;let words=keyWords(r);if(words.length<4)words=buildQuiz(r).map(q=>q.ans).filter(x=>!/^[@#]/.test(x)&&String(x).length<24);words=[...new Set(words)].slice(0,12);
  const L=puState.listen={i:0,words};const can=canSpeak(ur);
  const draw=()=>{const w=L.words[L.i];document.getElementById('lsw').innerHTML=`<span class="${isUr(w)?'ur-t':''}">${optHTML(w)}</span>`;document.getElementById('lsn').textContent=`${L.i+1} of ${L.words.length}`;
   document.querySelectorAll('.ls-dots i').forEach((d,j)=>d.classList.toggle('on',j===L.i));if(can)speak([sayText(optHTML(w))],isUr(w))};

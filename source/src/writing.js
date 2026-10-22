@@ -29,6 +29,7 @@ const UR_NAMES={"ا":"alif","ب":"bay","پ":"pay","ت":"tay","ٹ":"ttay","ث":"s
 /* 1 to 100 chart: each number takes two boxes */
 const chart=blank=>{const rows=[];for(let r=0;r<10;r++){const row=[];for(let c=1;c<=10;c++){const n=r*10+c;if(n===100)continue;const d=String(n).padStart(2,' ').split('');row.push(...d.map(x=>x===' '?'':blank(n)?'{{'+x+'}}':x))}rows.push(pad(row))}rows.push(pad(['{{1}}','{{0}}','{{0}}']));return rows};
 const sumRow=(a,op,b,trace)=>{const ans=op==='+'?a+b:a-b;return pad([...digits(a,trace),(trace?'~':'')+op,...digits(b,trace),(trace?'~':'')+'=',...digits(ans).map(c=>trace?'~'+c:'{{'+c+'}}')])};
+let WRITE_WARM={};
 const WRITE={
  english:{
   nursery:[...chunk(CAPS.slice(0,25),5).map(g=>pg(`Capital Letters ${g[0]} to ${g[g.length-1]}`,"Trace each letter, then write it on the empty line.",`Write capital letters ${g[0]} to ${g[g.length-1]} on four lines.`,FL("",g,"rep","big"))),
@@ -131,3 +132,28 @@ const WRITE={
    pg("The 8 and 9 Times Tables","Write the answers in the boxes.","Write the 8 and 9 times tables.",GRD("",[...tableRows(8,1,10,false),pad([]),...tableRows(9,1,5,false)]))]
  }
 };
+
+/* Writing levels moved up one grade for English and Maths (October 2026): Grade 1 uses the former Grade 2 sets, Grade 2 the former Grade 3,
+   and Grade 3 gets new, harder sets. The former Grade 1 English set stays in Grade 1 as part of the English Warm-up. */
+const divRow=(a,b)=>pad([...digits(a),'÷',...digits(b),'=',...digits(a/b).map(c=>'{{'+c+'}}')]);
+const G3W_EN=[
+ pg("Spelling: ough Words","Trace each word, then write it on the empty line.","Spell words with the ough pattern.",FL("",["although","through","thought","enough","cough","bought"],"rep")),
+ pg("Spelling: Silent Letters","Trace each word, then write it on the empty line.","Spell words with silent letters.",FL("",["island","answer","knight","listen","whistle","autumn"],"rep")),
+ pg("Complex Sentences","Read the sentence, trace it, then write it yourself.","Copy sentences with a main and a joining clause.",FL("",["When the bell rang, we ran outside.","Although it was late, Ali kept reading.","The boy who won the race was smiling.","If it rains, we will stay at home."],"copy")),
+ pg("Apostrophes and Dialogue","Read the sentence, trace it, then write it yourself.","Copy sentences with apostrophes and speech marks.",FL("",["\"Where's my book?\" asked Hamza.","\"It's on the shelf,\" replied Ammi.","The children's shoes were muddy.","We couldn't find the teacher's pen."],"copy")),
+ pg("Story: The Honest Woodcutter","Read the story. Trace each line, then write it below.","Copy a story with dialogue neatly.",PA("A woodcutter dropped his axe in the river. A spirit showed him a golden axe. He said, \"That is not my axe.\" He was rewarded for being honest."),FL("",["A woodcutter dropped his axe in the river.","A spirit showed him a golden axe.","He said, \"That is not my axe.\"","He was rewarded for being honest."],"story")),
+ pg("Story: The Ant and the Grasshopper","Read the story. Trace each line, then write it below.","Copy a story neatly.",PA("All summer, the ant stored food. The grasshopper sang and played. When winter came, he was hungry. The ant shared her food and gave him advice."),FL("",["All summer, the ant stored food.","The grasshopper sang and played.","When winter came, he was hungry.","The ant shared her food and gave him advice."],"story")),
+ pg("Paragraph: Our National Poet","Read the paragraph. Copy it neatly on the lines.","Copy an information paragraph with neat, joined-up spacing.",PA("Allama Iqbal is our national poet. He wrote poems in Urdu and Persian. He dreamed of a separate homeland for the Muslims of India."),...free(11)),
+ pg("Paragraph: Saving Water","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("Water is precious. We should turn off the tap while brushing our teeth. Small habits like this can save many litres every day."),...free(11)),
+ pg("A Letter to a Friend","Read the letter. Copy it neatly on the lines.","Copy an informal letter in the right layout.",PA("Dear Hina, I hope you are well. Last week we visited the Lahore Museum. I saw old coins and the big cannon outside. Please write back soon. Your friend, Sara"),...free(11)),
+ pg("Write a Story: The Lost Key","Write a story called The Lost Key.","Write a story with a beginning, middle and end.",NO("Beginning: who lost the key and where? Middle: how did they search? End: where was it found?"),...free(12))];
+const G3W_MA=[
+ pg("Five-Digit Numbers","Fill in the missing numbers.","Write numbers to 100,000.",GRD("",[numRow([10000,20000,30000],(n,c)=>n===20000?'{{'+c+'}}':c),pad([]),numRow([40000,50000,60000],(n,c)=>n>40000?'{{'+c+'}}':c),pad([]),numRow([12500,13000,13500],(n,c)=>n>12500?'{{'+c+'}}':c),pad([]),numRow([25000,24000,23000],(n,c)=>n<25000?'{{'+c+'}}':c),pad([]),numRow([99997,99998,99999],(n,c)=>n===99998?'{{'+c+'}}':c),pad([]),...blankRows(3)])),
+ pg("Five-Digit Addition","Write the answer under each sum.","Add five-digit numbers in columns.",GRD("",[...vsums([[23456,'+',41237],[35718,'+',26495]],6),pad([]),...vsums([[47206,'+',18594],[52839,'+',36478]],6),pad([]),...vsums([[61425,'+',27386],[38067,'+',45958]],6)])),
+ pg("Five-Digit Subtraction","Write the answer under each sum.","Subtract five-digit numbers in columns.",GRD("",[...vsums([[58342,'−',21217],[73015,'−',46382]],6),pad([]),...vsums([[90000,'−',35427],[64503,'−',28769]],6),pad([]),...vsums([[81236,'−',57458],[47120,'−',19875]],6)])),
+ pg("Multiplying Three Digits","Write the answer under each sum.","Multiply three-digit numbers by one-digit numbers.",GRD("",[...vsums([[214,'×',3],[125,'×',4],[306,'×',5]],5),pad([]),...vsums([[218,'×',6],[143,'×',7],[257,'×',8]],5),pad([]),...vsums([[409,'×',9],[365,'×',2],[178,'×',5]],5)])),
+ pg("The 11 and 12 Times Tables","Write the answers in the boxes.","Write the 11 and 12 times tables.",GRD("",[...tableRows(11,1,10,false),pad([]),...tableRows(12,1,8,false)])),
+ pg("Division Facts","Write the answers in the boxes.","Write division facts from the times tables.",GRD("",[[48,6],[63,7],[56,8],[81,9],[72,8],[54,6],[84,12],[99,11],[96,12],[70,7]].flatMap(([a,b])=>[divRow(a,b)])))];
+WRITE_WARM={english:WRITE.english.g1};
+WRITE.english={...WRITE.english,g1:WRITE.english.g2,g2:WRITE.english.g3,g3:G3W_EN};
+WRITE.maths={...WRITE.maths,g1:WRITE.maths.g2,g2:WRITE.maths.g3,g3:G3W_MA};

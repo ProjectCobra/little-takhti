@@ -127,3 +127,4 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
 .sh-fl{flex:1;min-width:0}
 .sh-fq{display:flex;align-items:center;gap:8px;text-align:right;white-space:nowrap;font-size:11px}
 .sh-qr{width:40px;height:40px;flex:none;order:2}
+.flw,.ulw,.grdw{display:block;width:100%;height:auto;margin:0 0 6px}.grdw{margin-bottom:10px}

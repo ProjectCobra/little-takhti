@@ -118,6 +118,15 @@ SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||pla
  (GUIDE[s.id]=GUIDE[s.id]||[]);
  if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].push(W('Revision',['Revise every Urdu topic from this term.','اس ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Revision Day','Today everyone looked back at their Urdu notebooks and read their favourite lessons again. Ask: Which Urdu lesson is your favourite?']))});
 
+/* handwriting practice sets: English on four lines, Urdu copy lines, Maths square grid. Kept out of the weekly plan and quizzes */
+if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';
+ Object.entries(WRITE).forEach(([kind,byG])=>Object.entries(byG).forEach(([g,pages])=>{
+  const s=subjectsOf(g).find(x=>x.kind===kind&&!x.warm);if(!s)return;const ur=!!s.rtl,topic=ur?'خوش خطی':'Writing practice',G=GR[g].name;
+  const start=PAGES[s.id].length;PAGES[s.id].push(...pages.map(p=>({...p,topic})));
+  const r={id:s.id+'-write',sub:s.id,set:true,write:true,title:ur?'خوش خطی کی مشق':s.name+' Writing Practice',en:ur?'Urdu handwriting practice':'',topic,pages:pages.map((_,i)=>start+i),
+   desc:kind==='english'?`${pages.length} pages of ${G} English handwriting on four lines, like a school copy: trace, then write letters, words and sentences.`:kind==='urdu'?`${pages.length} pages of ${G} Urdu handwriting (khush khati) on copy lines: trace, then write letters, words and sentences.`:`${pages.length} pages of ${G} maths writing in a square-grid copy: write numbers, sums and tables neatly in boxes.`,
+   obj:[...new Set(pages.map(p=>p.obj))],isNew:true};
+  RES.push(r);RID[r.id]=r}))}
 
 /* subject colour classes for every subject id */
 (function(){let css='';SUBJECTS.forEach(s=>{const k=KIND[s.kind].sheet;css+=`.s-${s.id}{--sc:var(--k-${s.kind});--st:var(--k-${s.kind}-t)}.sheet.s-${s.id}{--pc:${k[0]};--pt:${k[1]}}`});

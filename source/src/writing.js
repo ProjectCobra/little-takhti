@@ -20,8 +20,8 @@ function vsums(list,width){const w=width||4,rows=[[],[],[],[]];
 const blankRows=n=>Array.from({length:n},()=>pad([]));
 const tableRows=(t,from,to,trace)=>Array.from({length:to-from+1},(_,i)=>{const k=from+i,s=`${t}×${k}=`;return pad([...s.split('').map(c=>(trace?'~':'')+c),...digits(t*k).map(c=>trace?'~'+c:'{{'+c+'}}')])});
 
-const free=n=>Array.from({length:n},()=>FL("",[""],"free"));
-const ufree=n=>Array.from({length:n},()=>UL("",[""],"free"));
+const free=n=>[FL("",Array(n).fill(""),"free")];
+const ufree=n=>[UL("",Array(n).fill(""),"free")];
 const chunk=(a,n)=>a.reduce((o,x,i)=>(i%n?o[o.length-1].push(x):o.push([x]),o),[]);
 const CAPS="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(''),SMALL="abcdefghijklmnopqrstuvwxyz".split('');
 const UR_ABC=["ا","ب","پ","ت","ٹ","ث","ج","چ","ح","خ","د","ڈ","ذ","ر","ڑ","ز","ژ","س","ش","ص","ض","ط","ظ","ع","غ","ف","ق","ک","گ","ل","م","ن","و","ہ","ھ","ء","ی","ے"];
@@ -33,7 +33,7 @@ const WRITE={
  english:{
   nursery:[...chunk(CAPS.slice(0,25),5).map(g=>pg(`Capital Letters ${g[0]} to ${g[g.length-1]}`,"Trace each letter, then write it on the empty line.",`Write capital letters ${g[0]} to ${g[g.length-1]} on four lines.`,FL("",g,"rep","big"))),
    pg("Capital Letter Z and My Name","Trace Z. Then write your name on the lines.","Write capital Z and write own name.",FL("",["Z"],"rep","big"),FL("My name:",[""],"free","big"),FL("",[""],"free","big"),FL("",[""],"free","big"),FL("",[""],"free","big"),FL("",[""],"free","big"),FL("",[""],"free","big"))],
-  kg:[...chunk(SMALL.slice(0,25),5).map(g=>pg(`Small Letters ${g[0]} to ${g[g.length-1]}`,"Trace each letter, then write it on the empty line. Small letters sit between the red lines.",`Write small letters ${g[0]} to ${g[g.length-1]} on four lines.`,FL("",g,"rep","big"))),
+  kg:[...chunk(SMALL.slice(0,25),5).map(g=>pg(`Small Letters ${g[0]} to ${g[g.length-1]}`,"Trace, then write on the empty line. Small letters sit between the blue lines.",`Write small letters ${g[0]} to ${g[g.length-1]} on four lines.`,FL("",g,"rep","big"))),
    pg("Small z and Capital Pairs","Trace, then write on the empty line.","Write z and capital and small letter pairs.",FL("",["z","Aa","Bb","Cc","Dd"],"rep","big")),
    pg("Three Letter Words","Trace the words, then write them on the empty line.","Write CVC words neatly.",FL("",["cat","hat","pen","hen","pig"],"rep","big")),
    pg("More Short Words","Trace the words, then write them on the empty line.","Write CVC words neatly.",FL("",["sun","box","bed","mug","bus"],"rep","big"))],
@@ -43,21 +43,21 @@ const WRITE={
    pg("My First Sentences","Read, trace, then write each sentence twice.","Copy short sentences with capitals and full stops.",FL("",["I can run fast.","The cat is on the mat.","We go to school."],"copy")),
    pg("Sentences About Home","Read, trace, then write each sentence twice.","Copy short sentences with capitals and full stops.",FL("",["Ammi is in the kitchen.","My bag is red.","I like to read books."],"copy")),
    pg("Asking Sentences","Read, trace, then write each question twice.","Copy questions with question marks.",FL("",["What is your name?","Where is my pencil?","Can you see the moon?"],"copy")),
-   pg("Write About You","Write sentences about yourself.","Write simple sentences independently.",NO("Start with a capital letter. End with a full stop."),...free(9))],
+   pg("Write About You","Write sentences about yourself.","Write simple sentences independently.",NO("Start with a capital letter. End with a full stop."),...free(14))],
   g2:[
    pg("Months of the Year","Copy each month neatly.","Spell and write the months of the year.",FL("",["January","February","March","April","May","June"],"rep")),
    pg("More Months","Copy each month neatly.","Spell and write the months of the year.",FL("",["July","August","September","October","November","December"],"rep")),
    pg("Neat Sentences","Read, trace, then write each sentence twice.","Copy longer sentences neatly.",FL("",["The sun rises in the east.","Birds build nests in trees.","We drink milk every day."],"copy")),
    pg("Commas in Lists","Read, trace, then write each sentence twice.","Copy sentences with commas in lists.",FL("",["I like red, blue and green.","We ate rice, daal and salad.","Hira has a cat and a fish."],"copy")),
    pg("Speech Marks","Read, trace, then write each sentence twice.","Copy sentences with speech marks.",FL("",["\"Come here,\" said Ammi.","\"I am hungry,\" said Ali.","\"Let's play,\" said Sara."],"copy")),
-   pg("My Weekend","Write about your weekend.","Write sentences independently with correct punctuation.",NO("Use words like first, then, next and last."),...free(9))],
+   pg("My Weekend","Write about your weekend.","Write sentences independently with correct punctuation.",NO("Use words like first, then, next and last."),...free(14))],
   g3:[
-   pg("Paragraph: Pakistan","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("Pakistan is our country. It has high mountains, long rivers and busy cities. Its capital is Islamabad."),...free(8)),
-   pg("Paragraph: The Mango","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("The mango is the national fruit of Pakistan. It is sweet and juicy. Many mangoes grow in Multan."),...free(8)),
-   pg("Paragraph: Rainy Day","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("Dark clouds filled the sky. Soon it began to rain. The children ran inside and watched from the window."),...free(8)),
+   pg("Paragraph: Pakistan","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("Pakistan is our country. It has high mountains, long rivers and busy cities. Its capital is Islamabad."),...free(12)),
+   pg("Paragraph: The Mango","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("The mango is the national fruit of Pakistan. It is sweet and juicy. Many mangoes grow in Multan."),...free(12)),
+   pg("Paragraph: Rainy Day","Read the paragraph. Copy it neatly on the lines.","Copy a paragraph with neat, even handwriting.",PA("Dark clouds filled the sky. Soon it began to rain. The children ran inside and watched from the window."),...free(12)),
    pg("Joining Sentences","Read, trace, then write each sentence twice.","Copy compound sentences neatly.",FL("",["It was hot, so we swam.","I was tired, but I won.","We stayed in because it rained."],"copy")),
    pg("Tricky Spellings","Trace each word, then write it on the empty line.","Practise spelling tricky words.",FL("",["because","beautiful","different","favourite","neighbour","library","surprise"],"rep")),
-   pg("My Favourite Place","Write a short paragraph about your favourite place.","Write a paragraph with a topic sentence.",NO("Start with a topic sentence. Add two or three details. End with how you feel."),...free(9))]
+   pg("My Favourite Place","Write a short paragraph about your favourite place.","Write a paragraph with a topic sentence.",NO("Start with a topic sentence. Add two or three details. End with how you feel."),...free(13))]
  },
  urdu:{
   nursery:chunk(UR_ABC,5).map(g=>pg(`حروف: ${g[0]} سے ${g[g.length-1]}|Letters ${UR_NAMES[g[0]]} to ${UR_NAMES[g[g.length-1]]}`,"حرف کو دیکھیں، اس پر لکھیں، پھر خالی لائن پر خود لکھیں۔",`Write Urdu letters ${UR_NAMES[g[0]]} to ${UR_NAMES[g[g.length-1]]}.`,UL("",g))),
@@ -75,12 +75,12 @@ const WRITE={
    pg("دنوں کے نام|Days of the week","ہر دن کا نام صاف لکھیں۔","Write the days of the week in Urdu.",UL("",["پیر","منگل","بدھ","جمعرات","جمعہ"])),
    pg("خوش خطی: جملے|Neat sentences","جملہ پڑھیں، اس پر لکھیں، پھر خود لکھیں۔","Copy Urdu sentences neatly.",UL("",["پاکستان ہمارا وطن ہے۔","صبح سویرے اٹھنا اچھا ہے۔","درخت ہمیں سایہ دیتے ہیں۔"],"copy")),
    pg("خوش خطی: مزید جملے|More neat sentences","جملہ پڑھیں، اس پر لکھیں، پھر خود لکھیں۔","Copy Urdu sentences neatly.",UL("",["ہمیں بڑوں کا ادب کرنا چاہیے۔","بارش کے بعد موسم ٹھنڈا ہو گیا۔","میری امی مزے کا کھانا پکاتی ہیں۔"],"copy")),
-   pg("اپنے بارے میں لکھیں|Write about you","اپنے بارے میں چند جملے لکھیں۔","Write Urdu sentences independently.",...ufree(7))],
+   pg("اپنے بارے میں لکھیں|Write about you","اپنے بارے میں چند جملے لکھیں۔","Write Urdu sentences independently.",...ufree(11))],
   g3:[
-   pg("پیراگراف: ہمارا ملک|Paragraph: our country","پیراگراف پڑھیں اور لائنوں پر صاف لکھیں۔","Copy an Urdu paragraph neatly.",PA("ہمارا ملک پاکستان بہت خوبصورت ہے۔ اس کے شمال میں اونچے پہاڑ ہیں۔ دریائے سندھ اس کا سب سے بڑا دریا ہے۔"),...ufree(6)),
-   pg("پیراگراف: میرا اسکول|Paragraph: my school","پیراگراف پڑھیں اور لائنوں پر صاف لکھیں۔","Copy an Urdu paragraph neatly.",PA("میرا اسکول بہت اچھا ہے۔ اس میں ایک بڑا میدان ہے۔ ہمارے استاد ہمیں محنت سے پڑھاتے ہیں۔"),...ufree(6)),
+   pg("پیراگراف: ہمارا ملک|Paragraph: our country","پیراگراف پڑھیں اور لائنوں پر صاف لکھیں۔","Copy an Urdu paragraph neatly.",PA("ہمارا ملک پاکستان بہت خوبصورت ہے۔ اس کے شمال میں اونچے پہاڑ ہیں۔ دریائے سندھ اس کا سب سے بڑا دریا ہے۔"),...ufree(9)),
+   pg("پیراگراف: میرا اسکول|Paragraph: my school","پیراگراف پڑھیں اور لائنوں پر صاف لکھیں۔","Copy an Urdu paragraph neatly.",PA("میرا اسکول بہت اچھا ہے۔ اس میں ایک بڑا میدان ہے۔ ہمارے استاد ہمیں محنت سے پڑھاتے ہیں۔"),...ufree(9)),
    pg("خوش خطی: لمبے جملے|Longer sentences","جملہ پڑھیں، اس پر لکھیں، پھر خود لکھیں۔","Copy longer Urdu sentences neatly.",UL("",["محنت کرنے والا ہمیشہ کامیاب ہوتا ہے۔","ہمیں پانی ضائع نہیں کرنا چاہیے۔","کتابیں ہماری بہترین دوست ہیں۔"],"copy")),
-   pg("مضمون: میرا پسندیدہ کھیل|Essay: my favourite game","اپنے پسندیدہ کھیل پر چند جملے لکھیں۔","Write a short Urdu paragraph independently.",...ufree(7))]
+   pg("مضمون: میرا پسندیدہ کھیل|Essay: my favourite game","اپنے پسندیدہ کھیل پر چند جملے لکھیں۔","Write a short Urdu paragraph independently.",...ufree(11))]
  },
  maths:{
   nursery:[

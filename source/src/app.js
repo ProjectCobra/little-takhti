@@ -221,6 +221,8 @@ function classPage(){
  const wk=plan.map((p,i)=>p?i:-1).filter(i=>i>=0);
  const attOf=p=>uniq(p[1].map(x=>x==='set'?RID[s.id+'-set']:typeof x==='string'?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(x-1)))).filter(Boolean);
  const wsHTML=att=>`<div class="att">${att.map(r=>`<a class="row" href="#res-${r.id}"><span class="mini">${frame(r.sub,r.pages[0],false)}</span><span class="t">${T(r.title)}<small>${r.pages.length} pages · answer key</small></span></a>${hasQuiz(r)?`<a class="row" href="#play-${r.id}"><span class="gi" style="width:46px;height:46px;border-radius:12px">${ic.game}</span><span class="t">Quiz game<small>${buildQuiz(r).length} questions from this pack</small></span><span class="pq">${ic.play}Play</span></a>`:''}`).join('')}</div>`;
+ const wr=RID[s.id+'-write'];
+ const wrHTML=n=>{if(!wr)return '';const k=n%wr.pages.length,pg=PAGES[wr.sub][wr.pages[k]];return `<div class="att" style="margin-top:8px"><a class="row" href="#res-${wr.id}"><span class="mini">${frame(wr.sub,wr.pages[k],false)}</span><span class="t">Handwriting: ${T(pg.title)}<small>Page ${k+1} of ${s.rtl?'خوش خطی کی مشق':wr.title} · print and practise</small></span></a></div>`};
  const split=(sx,ask)=>{const c=sx.lastIndexOf(ask);return c>0?[sx.slice(0,c).trim(),sx.slice(c+ask.length).trim()]:[sx,'']};
  app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward. <a href="#map">See the whole term on one page</a>.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
  ${subTabs(cur,'cs')}
@@ -231,7 +233,7 @@ function classPage(){
    body=`<div class="pc-top"><span class="tag">${GR[grade].name} · Urdu</span><h3><span class="ur-t">${p[0]}</span> <span class="gloss" style="font-family:var(--body);font-size:16px;font-weight:600">${b.en}</span></h3></div>
    <div class="bil goalb lang-${FAM.profile.lang||'both'}"><div class="en-c"><b class="bl-h">This week's goal</b><p>${mixUr(b.goal[0])}</p></div><div class="ur ur-c" dir="rtl" lang="ur"><b class="bl-h ur-t">اس ہفتے کا مقصد</b><p class="ur-t">${b.goal[1]}</p></div></div>
    <div class="guide">
-    <div>${H('Worksheets and quiz',ic.sheet)}${wsHTML(att)}</div>
+    <div>${H('Worksheets and quiz',ic.sheet)}${wsHTML(att)}${wrHTML(n)}</div>
     <div>${H('Activities · <span class="ur-t">سرگرمیاں</span>',ic.spark)}<div class="bil acts2 lang-${FAM.profile.lang||'both'}"><ul class="acts-l en-c">${b.acts.map(a=>`<li>${mixUr(a[0])}</li>`).join('')}</ul><ul class="acts-l ur-t ur-c" dir="rtl" lang="ur">${b.acts.map(a=>`<li>${a[1]}</li>`).join('')}</ul></div></div>
     <div class="story">${H('Story time · <span class="ur-t">کہانی</span>',ic.book)}<div class="bil lang-${FAM.profile.lang||'both'}">
      <div class="stx ur-t ur-c" dir="rtl" lang="ur"><b class="st-t">${p[4][0]}</b><p>${ub}</p>${uq?`<p class="ask"><b>سوال:</b> ${uq}</p>`:''}</div>
@@ -241,7 +243,7 @@ function classPage(){
    body=`<div class="pc-top"><span class="tag">${GR[grade].name} · ${s.name}</span><h3>${p[0]}</h3></div>
    <p class="goal"><b>This week's goal:</b> ${p[2]}</p>
    <div class="guide">
-    <div>${H('Worksheets and quiz',ic.sheet)}${wsHTML(att)}</div>
+    <div>${H('Worksheets and quiz',ic.sheet)}${wsHTML(att)}${wrHTML(n)}</div>
     <div>${H('Activities',ic.spark)}<ul class="acts-l">${p[3].map(a=>`<li>${a}</li>`).join('')}</ul></div>
     <div class="story">${H('Story time',ic.book)}<div class="stx"><b class="st-t">${st}</b><p>${sb}</p>${sq?`<p class="ask"><b>Ask:</b> ${sq}</p>`:''}</div></div>
    </div>`}
@@ -559,7 +561,15 @@ function leaveAsk(to){if(document.getElementById('leaveq'))return;const ur=!!(G&
  d.innerHTML=`<div class="lq" role="dialog" aria-modal="true" aria-labelledby="lqh">${mascot('oops')}<h2 id="lqh">Leave this quiz?</h2><p>You are on question ${G.i+1} of ${G.qs.length}. If you leave now, your answers and points for this quiz will be lost.</p><div class="acts"><button class="btn fill lg" id="lqstay">Keep playing</button><button class="btn lg" id="lqgo">Leave quiz</button></div></div>`;
  document.body.appendChild(d);const close=()=>d.remove();document.getElementById('lqstay').onclick=close;d.onclick=e=>{if(e.target===d)close()};
  document.getElementById('lqgo').onclick=()=>{close();if(G)G.live=false;document.body.classList.remove('inquiz');stopSpeak();location.hash=to};setTimeout(()=>document.getElementById('lqstay').focus(),30)}
-window.addEventListener('hashchange',e=>{if(quizLive()&&location.hash!==G.hash){e.stopImmediatePropagation();const to=location.hash||'#home';history.replaceState(null,'',G.hash);leaveAsk(to)}else if(!quizLive())document.body.classList.remove('inquiz')});
+let qRestore=false;
+/* links are caught before they change the address, so the history stays clean */
+document.addEventListener('click',e=>{if(!quizLive())return;const l=e.target.closest('a[href^="#"]');if(!l||l.getAttribute('href')===G.hash)return;e.preventDefault();e.stopImmediatePropagation();leaveAsk(l.getAttribute('href'))},true);
+/* the back button already moved: step forward again quietly, then ask */
+window.addEventListener('hashchange',e=>{
+ if(qRestore&&G&&location.hash===G.hash){qRestore=false;e.stopImmediatePropagation();return}
+ if(quizLive()&&location.hash!==G.hash){e.stopImmediatePropagation();const to=location.hash||'#home';qRestore=true;history.forward();
+  setTimeout(()=>{if(G&&location.hash!==G.hash){qRestore=false;history.replaceState(null,'',G.hash)}},350);leaveAsk(to)}
+ else if(!quizLive())document.body.classList.remove('inquiz')});
 window.addEventListener('beforeunload',e=>{if(quizLive()){e.preventDefault();e.returnValue=''}});
 window.addEventListener('hashchange',()=>clearInterval(tmr));
 document.addEventListener('change',e=>{if(e.target.id==='vsel'){const ur=e.target.dataset.ur==='1';store.set(ur?'voiceUr':'voiceEn2',e.target.value);speak([ur?'ہیلو! آئیے کھیلیں۔':'Hello! Let\'s play.'],ur)}});

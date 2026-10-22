@@ -18,10 +18,11 @@ COL = {'english': '#1CB0F6', 'maths': '#FF9600', 'science': '#58CC02', 'social':
        'geography': '#2B70C9', 'gk': '#00CD9C', 'urdu': '#CE82FF', 'islamiat': '#0F9D6E', 'computer': '#64748B'}
 slug = lambda s: re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', s.lower())).strip('-')
 def topic_en(r):
-    if r['id']=='english-write': return 'Warm-up Handwriting Practice'
+    if r['id']=='english-write' or r['id'].endswith('-write-warmup'): return 'Warm-up Handwriting Practice'
     if r['id'].endswith('-write'): return 'Handwriting Practice'
-    if r['set'] and r['sub']=='english': return 'Warm-up Revision'
-    if r['set']: return 'Revision'
+    if r['set']:
+        base = 'Revision Pack' if r['id'].endswith('-set') else 'Revision'
+        return ('Warm-up ' + base) if r['sub'] in ('english', 'urdu') else base
     if r['rtl']: return r['topicEn'] or r['en'] or 'Urdu'
     return re.sub(r' Practice$', '', r['title'])
 for r in data:

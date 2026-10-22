@@ -29,7 +29,7 @@ head='''<title>Little Takhti</title>
  <a href="#fun" data-nav="fun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15.5 12h.01M18 13.5h.01"/></svg><span>Play</span></a>
 </nav>
 <script>
-'''+r('g1.js')+'\n'+r('grades.js')+'\n'+r('english_plus.js')+'\n'+r('english_g3.js')+'\n'+r('writing.js')+'\n'+r('urdu_weeks.js')+'\n'+r('plus_a.js')+'\n'+r('plus_b.js')+'\n'+r('plus_c.js')+'\n'+r('plus_d.js')+'\n'+r('plus_e.js')+'\n'+r('plus_f.js')+'\n'+r('plus_g.js')+'\n'+r('data.js')+'\n'+r('render.js')+'\n'+r('art.js')+'\n'+r('family.js')+'\n'+r('contrib.js')+'\n'+r('powerups.js')+'\n'+r('search.js')+'\n'+r('levels.js')+'\n'+r('quizbank.js')+'\n'+r('fun.js')+'\n'+r('help.js')+'\n'+r('app.js')+'''
+'''+r('g1.js')+'\n'+r('grades.js')+'\n'+r('english_plus.js')+'\n'+r('english_g3.js')+'\n'+r('urdu_g1.js')+'\n'+r('writing.js')+'\n'+r('urdu_weeks.js')+'\n'+r('plus_a.js')+'\n'+r('plus_b.js')+'\n'+r('plus_c.js')+'\n'+r('plus_d.js')+'\n'+r('plus_e.js')+'\n'+r('plus_f.js')+'\n'+r('plus_g.js')+'\n'+r('data.js')+'\n'+r('render.js')+'\n'+r('art.js')+'\n'+r('family.js')+'\n'+r('contrib.js')+'\n'+r('powerups.js')+'\n'+r('search.js')+'\n'+r('levels.js')+'\n'+r('quizbank.js')+'\n'+r('xq_more.js')+'\n'+r('fun.js')+'\n'+r('help.js')+'\n'+r('app.js')+'''
 </script>
 '''
 open(os.path.join(D,'..','index.html'),'w').write(head)

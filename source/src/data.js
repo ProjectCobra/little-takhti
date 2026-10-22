@@ -54,7 +54,9 @@ const ORDER=['english','maths','science','history','geography','social','gk','ur
    and Grade 3 has new topics at Grade 4 level. The original Grade 1 English stays in Grade 1 as an English Warm-up. */
 {const take=g=>{const a=[...((GRADE_DATA[g]||{}).english||[]),...((PLUS[g]||{}).english||[])];if(PLUS[g])delete PLUS[g].english;return a};
  const e2=take('g2'),e3=take('g3');
- GRADE_DATA.g1=GRADE_DATA.g1||{};GRADE_DATA.g1.english=e2;GRADE_DATA.g2.english=e3;GRADE_DATA.g3.english=G3_ENGLISH;}
+ GRADE_DATA.g1=GRADE_DATA.g1||{};GRADE_DATA.g1.english=e2;GRADE_DATA.g2.english=e3;GRADE_DATA.g3.english=G3_ENGLISH;
+ /* Grade 1 Urdu follows Urdu ka Guldasta: Motia; the earlier Grade 1 Urdu stays as an Urdu Warm-up */
+ if(typeof G1_URDU!=='undefined')GRADE_DATA.g1.urdu=G1_URDU;}
 /* extra topics (PLUS): other grades join GRADE_DATA; Grade 1 extends its original subjects */
 Object.entries(PLUS).forEach(([g,kinds])=>{if(g==='g1')return;GRADE_DATA[g]=GRADE_DATA[g]||{};Object.entries(kinds).forEach(([k,tps])=>{(GRADE_DATA[g][k]=GRADE_DATA[g][k]||[]).push(...tps)})});
 Object.entries(GRADE_DATA).forEach(([g,subs])=>{
@@ -72,7 +74,7 @@ Object.entries(PLUS.g1||{}).forEach(([kind,tps])=>{const s=SUBJECTS.find(x=>x.gr
  tps.forEach(t=>{const k=s.topics.length;s.topics.push(t.t);if(PACK_T[s.id])PACK_T[s.id][k]=t.t;if(t.en)UR_EN[t.t]=t.en;
   PAGES[s.id].push(...t.pages.map(p=>({...p,topic:t.t})));(GUIDE[s.id]=GUIDE[s.id]||[]).push(t.g);PLAN[s.id].push([t.t,['t'+(k+1)],t.g[0],t.g[2],t.story])})});
 SUBJECTS.forEach(s=>{s.name=KIND[s.kind].name;s.ur=KIND[s.kind].ur});
-{const w=SUBJECTS.find(s=>s.id==='english'),m=SUBJECTS.findIndex(s=>s.id==='g1-english');if(w&&m>=0){w.name='English Warm-up';w.warm=true;const at=SUBJECTS.indexOf(w),g=SUBJECTS[m];SUBJECTS.splice(m,1);SUBJECTS.splice(at,1,g,w)}}
+[['english','g1-english','English Warm-up'],['urdu','g1-urdu','Urdu Warm-up']].forEach(([wid,nid,nm])=>{const w=SUBJECTS.find(s=>s.id===wid),m=SUBJECTS.findIndex(s=>s.id===nid);if(w&&m>=0){w.name=nm;w.warm=true;const at=SUBJECTS.indexOf(w),g=SUBJECTS[m];SUBJECTS.splice(m,1);SUBJECTS.splice(at,1,g,w)}});
 const SUB=Object.fromEntries(SUBJECTS.map(s=>[s.id,s]));
 const subjectsOf=g=>SUBJECTS.filter(s=>s.grade===g&&!s.community);
 const planSubjectsOf=g=>subjectsOf(g).filter(s=>!s.warm);
@@ -121,9 +123,9 @@ SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||pla
 /* handwriting practice sets: English on four lines, Urdu copy lines, Maths square grid. Kept out of the weekly plan and quizzes */
 if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';
  [[WRITE,false],[WRITE_WARM,true]].forEach(([SET,warm])=>Object.entries(SET).forEach(([kind,byG])=>Object.entries(warm?{g1:byG}:byG).forEach(([g,pages])=>{
-  const s=subjectsOf(g).find(x=>x.kind===kind&&!!x.warm===warm);if(!s)return;const ur=!!s.rtl,topic=ur?'خوش خطی':'Writing practice',G=GR[g].name;
+  let s=subjectsOf(g).find(x=>x.kind===kind&&!!x.warm===warm),suf='-write';if(!s&&warm){s=subjectsOf(g).find(x=>x.kind===kind&&!x.warm);suf='-write-warmup'}if(!s)return;const wu=suf!=='-write';const ur=!!s.rtl,topic=ur?'خوش خطی':'Writing practice',G=GR[g].name;
   const start=PAGES[s.id].length;PAGES[s.id].push(...pages.map(p=>({...p,topic})));
-  const r={id:s.id+'-write',sub:s.id,set:true,write:true,title:ur?'خوش خطی کی مشق':s.name+' Writing Practice',en:ur?'Urdu handwriting practice':'',topic,pages:pages.map((_,i)=>start+i),
+  const r={id:s.id+suf,sub:s.id,set:true,write:true,title:ur?'خوش خطی کی مشق':s.name+(wu?' Writing Warm-up':' Writing Practice'),en:ur?'Urdu handwriting practice':'',topic,pages:pages.map((_,i)=>start+i),
    desc:kind==='english'?`${pages.length} pages of ${G} English handwriting on four lines, like a school copy: trace, then write letters, words and sentences.`:kind==='urdu'?`${pages.length} pages of ${G} Urdu handwriting (khush khati) on copy lines: trace, then write letters, words and sentences.`:`${pages.length} pages of ${G} maths writing in a square-grid copy: write numbers, sums and tables neatly in boxes.`,
    obj:[...new Set(pages.map(p=>p.obj))],isNew:true};
   RES.push(r);RID[r.id]=r})))}

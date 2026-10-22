@@ -154,6 +154,6 @@ const G3W_MA=[
  pg("Multiplying Three Digits","Write the answer under each sum.","Multiply three-digit numbers by one-digit numbers.",GRD("",[...vsums([[214,'×',3],[125,'×',4],[306,'×',5]],5),pad([]),...vsums([[218,'×',6],[143,'×',7],[257,'×',8]],5),pad([]),...vsums([[409,'×',9],[365,'×',2],[178,'×',5]],5)])),
  pg("The 11 and 12 Times Tables","Write the answers in the boxes.","Write the 11 and 12 times tables.",GRD("",[...tableRows(11,1,10,false),pad([]),...tableRows(12,1,8,false)])),
  pg("Division Facts","Write the answers in the boxes.","Write division facts from the times tables.",GRD("",[[48,6],[63,7],[56,8],[81,9],[72,8],[54,6],[84,12],[99,11],[96,12],[70,7]].flatMap(([a,b])=>[divRow(a,b)])))];
-WRITE_WARM={english:WRITE.english.g1};
+WRITE_WARM={english:WRITE.english.g1,maths:WRITE.maths.g1};
 WRITE.english={...WRITE.english,g1:WRITE.english.g2,g2:WRITE.english.g3,g3:G3W_EN};
 WRITE.maths={...WRITE.maths,g1:WRITE.maths.g2,g2:WRITE.maths.g3,g3:G3W_MA};

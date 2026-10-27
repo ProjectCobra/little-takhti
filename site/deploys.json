@@ -23,5 +23,10 @@
   "date": "2026-10-20T21:10:00+05:00",
   "commit": "fed2c1678a8ed6964624a9e8785c2224aca890a7",
   "note": "English moved up a level (Grade 1 Warm-up kept, new Grade 3 English), English games and power-ups updated, family page account details layout"
+ },
+ {
+  "date": "2026-10-27T13:08:00+05:00",
+  "commit": "9db2faefff7a8847e2d8d77499219e19b7cf3b79",
+  "note": "Handwriting practice sets, Grade 1 Urdu on Motia, quiz leave prompt and phone layout, read-aloud voices, word search swipe, extra quiz questions, Netlify footer credit, SEO fixes"
  }
 ]

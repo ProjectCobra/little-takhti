@@ -41,7 +41,7 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 
 ## Content decisions already made
 
-- Page IDs are `subject-n` (1-based page number), packs are `subject-tN` (topic N), e.g. `g2-english-t3`. Grade 1 subjects have no prefix in some places (`english`, `urdu`, `maths` are the Grade 1 Warm-up subjects; `g1-english`, `g1-urdu` are the main Grade 1 subjects).
+- Page IDs are `subject-n` (1-based page number), packs are `subject-tN` (topic N), e.g. `g2-english-t3`. Grade 1 ids are mixed: `g1-english` and `g1-urdu` are the main Grade 1 English and Urdu, `english` and `urdu` are their Warm-ups, and `maths` is the main Grade 1 Maths (its old writing set is `maths-write-warmup`).
 - **English is one level up**: Grade 1 English uses former Grade 2 work, Grade 2 former Grade 3, Grade 3 is written at Grade 4 level. The old Grade 1 English is "English Warm-up" (kept out of the weekly plan).
 - **Grade 1 Urdu follows Urdu ka Guldasta: Motia (OUP, Class 1)**, in its lesson order, with original exercises (not copied). Old Grade 1 Urdu is "Urdu Warm-up".
 - **Grade 1 Maths should follow Shapes Mathematics Book 1.** Waiting for Sumbul to share its contents page.

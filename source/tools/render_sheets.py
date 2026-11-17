@@ -1,8 +1,9 @@
 import re, sys, os, json
 from playwright.sync_api import sync_playwright
 
-SITE = '/home/claude/little-takhti'
 SP = os.path.dirname(os.path.abspath(__file__))
+SITE = os.path.abspath(os.path.join(SP, '..'))
+OUTD = os.path.join(SP, 'out')
 F = SP + '/fonts/node_modules/@fontsource'
 faces = []
 def face(fam, path, w):
@@ -32,6 +33,7 @@ with sync_playwright() as p:
     pg.goto('file://' + local)
     pg.wait_for_timeout(800)
     ids = pg.evaluate('RES.map(r=>r.id)')
+    if os.environ.get('ONLY'): ids = [i for i in ids if os.environ['ONLY'] in i]
     if mode == 'check':
         # overflow check: render every sheet (worksheet + key) at full size
         over = pg.evaluate('''()=>{const out=[];const box=document.createElement('div');document.body.appendChild(box);
@@ -39,23 +41,24 @@ with sync_playwright() as p:
             const b=box.querySelector('.sh-body');if(b.scrollHeight>b.clientHeight+1)out.push([s.id,i+1,k,b.scrollHeight-b.clientHeight]);
             const br=b.getBoundingClientRect();for(const el of b.querySelectorAll('*')){const r=el.getBoundingClientRect();if(r.width&&(r.right>br.right+1||r.left<br.left-1)){out.push(['W',s.id,i+1,k,el.className]);break}}}})}box.remove();return out}''')
         print('overflow:', over)
+        bad = bool(over) or bool(errs)
         print('errors:', errs)
-        os.makedirs(SP + '/shots', exist_ok=True)
+        os.makedirs(OUTD + '/shots', exist_ok=True)
         for h in ['home', 'subject-urdu', 'res-maths-set', 'class']:
             pg.goto('file://' + local + '#' + h); pg.wait_for_timeout(500)
-            pg.screenshot(path=f'{SP}/shots/{h}.png', full_page=False)
+            pg.screenshot(path=f'{OUTD}/shots/{h}.png', full_page=False)
         m = b.new_page(viewport={'width': 390, 'height': 844}, device_scale_factor=2)
         m.goto('file://' + local + '#home'); m.wait_for_timeout(600)
-        m.screenshot(path=f'{SP}/shots/mobile.png')
+        m.screenshot(path=f'{OUTD}/shots/mobile.png')
         print('hscroll mobile:', m.evaluate('document.documentElement.scrollWidth'))
     elif mode == 'sheets':
-        os.makedirs(SP + '/sheets', exist_ok=True)
+        os.makedirs(OUTD + '/sheets', exist_ok=True)
         for sid in sys.argv[2].split(','):
             sub, n = sid.rsplit('-', 1)
             pg.set_viewport_size({'width': 800, 'height': 1130})
             pg.evaluate(f'''()=>{{let x=document.getElementById('x');if(!x){{x=document.createElement('div');x.id='x';x.style.cssText='position:fixed;top:0;left:0;z-index:99999';document.body.appendChild(x)}}x.innerHTML=sheetHTML('{sub}',{int(n)-1},{str(len(sys.argv)>3).lower()})}}''')
             pg.wait_for_timeout(300)
-            pg.screenshot(path=f'{SP}/sheets/{sid}.png', clip={'x': 0, 'y': 0, 'width': 794, 'height': 1123})
+            pg.screenshot(path=f'{OUTD}/sheets/{sid}.png', clip={'x': 0, 'y': 0, 'width': 794, 'height': 1123})
     elif mode == 'pdf':
         os.makedirs(SITE + '/pdf', exist_ok=True)
         for rid in ids:
@@ -64,6 +67,7 @@ with sync_playwright() as p:
             pg.pdf(path=f'{SITE}/pdf/little-takhti-{rid}.pdf', format='A4', print_background=True, prefer_css_page_size=True, margin={'top': '0', 'bottom': '0', 'left': '0', 'right': '0'})
         print('pdfs:', len(ids), 'errors:', errs)
     b.close()
+    if mode == 'check' and bad: sys.exit(1)
 
 if mode == 'zoom':
     with sync_playwright() as p:
@@ -79,3 +83,4 @@ if mode == 'zoom':
     h = re.sub(r'const ZOOM=\{[^}]*\};', 'const ZOOM=' + json.dumps(z, separators=(',', ':')) + ';', h)
     open(SITE + '/src/render.js', 'w').write(h)
     import subprocess; subprocess.run(['python3', SITE + '/src/build.py'])
+    print('ZOOM table refitted in src/render.js')

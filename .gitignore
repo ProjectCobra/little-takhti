@@ -1,0 +1,8 @@
+source/pdf/
+source/thumbs/
+source/index.html
+source/tools/fonts/
+source/tools/local.html
+source/tools/out/
+__pycache__/
+little-takhti-netlify/

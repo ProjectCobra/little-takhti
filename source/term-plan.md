@@ -55,7 +55,7 @@ Content files: put each grade's topics in `source/src/term2_<grade>.js` (nursery
 Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social Studies and Urdu now come from the class's Google Classroom (the Saturday task builds each week's 10-page topics from that week's class work); skip them here unless the Classroom log says a subject had no class work that week, then build the planned topic below as a fallback. Group B = Grade 2. Group C = Grade 3. Skip Islamiat.
 "Week N" means: every subject in the group gets the topic that falls in Week N (topic N-1 for subjects that had 10 topics; Grade 1 Maths and Science already reach Week 13, so they start at Week 14 with topic 13).
 - [x] 1. Group A, Week 12
-- [ ] 2. Group B, Week 12
+- [x] 2. Group B, Week 12
 - [ ] 3. Group C, Week 12
 - [ ] 4. AI Grade 1, topics 4 to 11
 - [ ] 5. AI Grade 2, topics 4 to 11
@@ -78,3 +78,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 ## Progress
 (add a line per batch: date, what was built, commit)
 - 19 Nov 2026: batch 1 (Group A, Week 12). Nursery: Sounds o, g, u, l; Numbers to 15; My family; نقطے والے حروف. KG: Long vowel sounds with e; Numbers to 50; Our solar system; چار حرفی الفاظ. Grade 1: Our neighbourhood; سردی کے الفاظ (Motia lessons 11+ not in references, used fallback); Typing my name. Grade 1 Maths and Science already reach Week 13. Files: term2_nursery.js, term2_kg.js, term2_g1.js.
+- 19 Nov 2026: batch 2 (Group B, Week 12). Grade 2: Adverbs (English); Place value to 1000; Our senses; The Harappan city; Weather maps; Our local government; فعل (Urdu); Typing practice (ICT). File: term2_g2.js. New pictures: eye, nose, tongue, thermometer, weather symbols, ballot box and more.

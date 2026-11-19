@@ -58,3 +58,11 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 - Captions: short, casual, an emoji or two, the link littletakhti.netlify.app (link in bio), 6 to 8 hashtags including #LittleTakhti #PakistaniParents.
 - Design canvas with posts 1 to 4: https://claude.ai/artifact/JBvUkNZTQNYRM8sfEJLZnZ
 - No tool here can post image carousels to Instagram. Send PNGs and the caption to Sumbul to post through Meta Business Suite.
+
+## Weekly Classroom practice (Grade 1)
+
+Every Saturday a scheduled run reads the class's Google Classroom (Grade I (2026 - 2027) Green, signed in as sumbulaftab@gmail.com in the Claude app's built-in browser) and adds Grade 1 practice on the concepts taught that week.
+- Read the Stream and Classwork for posts since the last entry in `source/classroom-log.md`. Attachments are mostly scanned PDFs or photos in Drive: read them by screenshot.
+- Write original exercises on the same concepts (never copy school sheets, names or photos). Put them in `source/src/classroom_g1.js` (or extend `plus_g.js` / `references/lgs-grade1.md`). English uses `addPlus("english",{g2:[...]})`, which lands in Grade 1 English.
+- Skip Islamiat and anything religious unless it comes from an authenticated course book. Skip announcements (stationery, dress-up days).
+- Test, push to `dev`, add a line to `source/classroom-log.md`. Monday's deploy check asks Sumbul before anything goes live.

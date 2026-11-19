@@ -99,3 +99,123 @@ addPlus("urdu",{nursery:[
   "Children often put dots on the wrong side. Ask: does this dot go above or below?",
   ["نقطوں کی بارش","ایک دن آسمان سے نقطے گرے۔ ایک نقطہ ب کے نیچے بیٹھ گیا اور دو نقطے ت کے اوپر۔ سوال: ت کے اوپر کتنے نقطے بیٹھے؟"])
 ]});
+
+/* ---------- Week 13: Nursery topic 12 ---------- */
+addPlus("english",{nursery:[
+ TP("Sounds f, b, e, h","",[
+  pg("The Sound f","Listen to the big idea. Then write f to finish each word.","Hear and write the f sound.",
+   CN(["fish","frog"],"The letter f says /f/ as in fish and frog. Put your top teeth on your bottom lip and blow.","Letter f"),
+   FP("",[["fish","{{f}}ish"],["frog","{{f}}rog"],["fox","{{f}}ox"],["feather","{{f}}eather"]],2)),
+  pg("Write f and F","Trace the letters. Say /f/ each time.","Trace small f and capital F.",TR("",["f","F"],6),{t:"circ",h:"Circle every f.",items:["f","t","f","l","f","k","f","t","f","h"],correct:["f"]}),
+  pg("The Sound b","Listen to the big idea. Then write b to finish each word.","Hear and write the b sound.",
+   CN(["banana","bus"],"The letter b says /b/ as in banana and bus. Press your lips together, then pop them open.","Letter b"),
+   FP("",[["banana","{{b}}anana"],["bus","{{b}}us"],["bed","{{b}}ed"],["bird","{{b}}ird"]],2)),
+  pg("Write b and B","Trace the letters. Say /b/ each time.","Trace small b and capital B.",TR("",["b","B"],6),{t:"circ",h:"Circle every b.",items:["b","d","b","p","b","d","b","q","b","d"],correct:["b"]}),
+  pg("The Sound e","Listen to the big idea. Then circle yes if the word starts with e.","Hear the short e sound at the start of words.",
+   CN(["egg","elephant"],"The letter e says /e/ as in egg and elephant. Smile a little and say e, e, e.","Letter e"),
+   CP("",[["egg","egg",0],["elephant","elephant",0],["fish","fish",1],["bed","bed",1]],YN)),
+  pg("Write e and E","Trace the letters. Say /e/ each time.","Trace small e and capital E.",TR("",["e","E"],6),{t:"circ",h:"Circle every e.",items:["e","c","e","o","e","a","e","c","e","o"],correct:["e"]}),
+  pg("The Sound h","Listen to the big idea. Then write h to finish each word.","Hear and write the h sound.",
+   CN(["horse","house"],"The letter h says /h/ as in horse and house. It sounds like a little puff of air, like when you breathe on a cold window.","Letter h"),
+   FP("",[["horse","{{h}}orse"],["house","{{h}}ouse"],["top-hat","{{h}}at"],["hut","{{h}}ut"]],2)),
+  pg("Write h and H","Trace the letters. Say /h/ each time.","Trace small h and capital H.",TR("",["h","H"],6),{t:"circ",h:"Circle every h.",items:["h","n","h","b","h","k","h","n","h","r"],correct:["h"]}),
+  pg("Which Sound?","Say the picture name. Circle its first sound.","Tell apart the sounds f, b, e and h.",
+   CP("",[["fish","fish",0],["banana","banana",1],["egg","egg",2],["horse","horse",3],["bird","bird",1],["frog","frog",0]],["f","b","e","h"])),
+  pg("My b Picture","Draw something that starts with b. Then trace its first letter.","Think of words that start with b.",DR("This starts with b: ________",260),TR("",["b"],8))],
+  "Four new letter sounds: f as in fish, b as in banana, e as in egg and h as in horse. Children hear the sound, trace the letter and find words that start with it.",
+  ["Say the sound, not the letter name: /b/ not 'bee'.","Feel the puff of air for /h/ by holding a hand in front of your mouth.","Play I spy with the four sounds."],
+  ["Hunt for things at home that start with b or h.","Make the letters with sticks, string or play dough."],
+  "Small b and d are easy to mix up. Show that b has its big tummy on the right, like a bat and then a ball.",
+  ["Fox and the Big Egg","Fox found a big egg by a hut. 'Is it a hen's egg?' he asked. Out came a baby bird! 'Hello!' said the bird. Fox gave it a feather for a bed. Ask: What came out of the egg?"])
+]});
+
+addPlus("maths",{nursery:[
+ TP("Big and small, tall and short","",[
+  pg("Big and Small","Listen to the big idea. Then circle big or small.","Use the words big and small.",
+   CN(["elephant","mouse"],"An elephant is big. A mouse is small. We look at things and say which one is big and which one is small.","Big and small"),
+   CP("",[["elephant","an elephant",0],["ant","an ant",1],["spouting-whale","a whale",0],["lady-beetle","a ladybird",1]],["big","small"])),
+  pg("Small, Bigger, Biggest","Look at the apples and balloons. Write small or big under the first and last.","Put things in order of size.",BK(["small","big"]),
+   CY("",[["red-apple","{{small}}",34],["red-apple","middle",54],["red-apple","{{big}}",80]]),
+   NO("Now the balloons go from big to small."),
+   CY("",[["balloon","{{big}}",80],["balloon","middle",54],["balloon","{{small}}",34]])),
+  pg("Tall and Short","Listen to the big idea. Then circle tall or short.","Use the words tall and short.",
+   CN(["giraffe","rabbit"],"A giraffe is tall. Its head is high up. A rabbit is short. Its head is close to the ground.","Tall and short"),
+   CP("",[["giraffe","a giraffe",0],["rabbit","a rabbit",1],["office-building","a tall building",0],["hut","a hut",1]],["tall","short"])),
+  pg("Short to Tall","Look at the trees and flowers. Write short or tall under the first and last.","Put things in order of height.",BK(["short","tall"]),
+   CY("",[["evergreen-tree","{{short}}",34],["evergreen-tree","middle",54],["evergreen-tree","{{tall}}",80]]),
+   NO("Now the flowers go from tall to short."),
+   CY("",[["tulip","{{tall}}",80],["tulip","middle",54],["tulip","{{short}}",34]])),
+  pg("Which Is Bigger?","Listen. Circle the bigger one.","Compare two things by size.",
+   CH("",[["a bus or a bicycle?",["bus","bicycle"],0],["a cat or a cow?",["cat","cow"],1],["a house or a ball?",["house","ball"],0],["a grape or a melon?",["grape","melon"],1],["a duck or a horse?",["duck","horse"],1]])),
+  pg("Taller or Shorter?","Listen. Write taller or shorter.","Use taller and shorter to compare.",BK(["taller","shorter"]),
+   F("",["Abbu is {{taller}} than baby.","A flower is {{shorter}} than a tree.","A giraffe is {{taller}} than a goat.","A cup is {{shorter}} than a bottle."])),
+  pg("Big or Small?","Listen to each word. Write it under big or small.","Sort things by size.",
+   SO("",["big","small"],["house","ant","bus","bee","whale","pea"],[0,1,0,1,0,1])),
+  pg("Size Pictures","Look at each picture. Circle the right word.","Choose the right size word for a picture.",
+   {t:"choice",h:"",img:["giraffe","mouse","office-building","tulip"],items:[["A giraffe is ...",["tall","short"],0],["A mouse is ...",["big","small"],1],["This building is ...",["tall","short"],0],["A tulip is ...",["tall","short"],1]]}),
+  pg("Size Stories","Listen to each story. Write the answer.","Count and compare in number stories.",
+   WP("",["Ali has 2 big balls and 1 small ball. He has {{3}} balls in all.","There are 3 tall trees and 2 short trees. There are {{5}} trees.","Sara has 4 small cars. She gives 1 away. Now she has {{3}} small cars.","Mama Bear has 1 big bowl. Baby Bear has 1 small bowl. There are {{2}} bowls."])),
+  pg("Draw Big and Small","Draw a big ball and a small ball. Then draw a tall tree and a short flower.","Draw things of different sizes.",DR("A big ball and a small ball",220),DR("A tall tree and a short flower",220))],
+  "Comparing size: big and small, tall and short, bigger and taller. Children look, compare and put things in order from small to big.",
+  ["Use size words often: 'Pass me the big spoon.'","Line up family members from short to tall.","Compare two toys and ask which is bigger."],
+  ["Sort shoes at home into big and small.","Stand next to a door and mark your child's height."],
+  "Tall is about height and big is about size. A long snake lying down is long, not tall.",
+  ["Three Bears' Bowls","Papa Bear had a big bowl. Mama Bear had a middle bowl. Baby Bear had a small bowl. Baby Bear said, 'My small bowl is just right for me!' Ask: Whose bowl was the biggest?"])
+]});
+
+addPlus("gk",{nursery:[
+ TP("Our helpers at home","",[
+  pg("Who Helps at Home?","Listen to the big idea. Then circle yes or no.","Know that many people help at home.",
+   CN(["woman","man","cook","broom"],"Many people help at home. Ammi and Abbu look after us. Some homes have a cook, a driver or a gardener. Children can help too!","Helpers at home"),
+   CH("",[["Ammi and Abbu look after us.",0],["Only grown-ups can help at home.",1],["A cook makes food.",0],["We can help at home too.",0]],YN)),
+  pg("Who Does It?","Match each helper to the job.","Know what helpers at home do.",
+   MA("Draw a line.",["cook","driver","gardener","guard"],["makes food","drives the car","waters the plants","looks after the gate"])),
+  pg("Name the Helper","Look at each picture. Write the helper word.","Name helpers at home.",BK(["cook","driver","gardener","guard"]),
+   FP("",[["cook","The {{cook}} makes roti."],["automobile","The {{driver}} drives the car."],["potted-plant","The {{gardener}} waters the plants."],["door","The {{guard}} opens the gate."]],2)),
+  pg("Tools Helpers Use","Look at each picture. Circle what it is for.","Match tools to jobs at home.",
+   {t:"choice",h:"",img:["broom","spoon","soap","basket"],items:[["A broom is for ...",["sweeping","cooking"],0],["A spoon is for ...",["stirring food","washing"],0],["Soap is for ...",["washing","sleeping"],0],["A basket is for ...",["carrying clothes","driving"],0]]}),
+  pg("I Can Help Too","Circle helping or not helping.","Find ways to help at home.",
+   CH("",[["putting my shoes away",0],["leaving toys on the floor",1],["watering the plants",0],["folding my clothes",0],["spilling juice and walking away",1]],["helping","not helping"])),
+  pg("Say Thank You","Write the magic word.","Thank the people who help us.",BK(["thank you","please"]),
+   F("",["The cook gives me lunch. I say {{thank you}}.","I want the driver to wait. I say {{please}}.","Dadi fixes my button. I say {{thank you}}."])),
+  pg("A Day at Home","Fill in the missing words.","Put the jobs of a day in order.",BK(["breakfast","clean","story"]),
+   CY("",[["sunrise","We eat {{breakfast}}."],["broom","We {{clean}} up."],["cooked-rice","We eat lunch."],["open-book","Ammi reads a {{story}}."]])),
+  pg("Safe at Home","Circle safe or not safe.","Know how to stay safe when grown-ups are working.",
+   CP("",[["fire","Touching the hot stove",1],["person","Staying away when the cook is frying",0],["broom","Asking a grown-up to cut fruit",0],["automobile","Playing behind a car",1]],["safe","not safe"])),
+  pg("Helper Sums","Listen and count. Write the answer.","Count in simple stories about home.",
+   WP("",["Ammi waters 2 plants. I water 1 plant. We water {{3}} plants.","There are 4 shoes on the floor. I put 2 away. {{2}} shoes are left.","The cook makes 3 roti for Abbu and 2 for me. That is {{5}} roti.","I fold 1 shirt and 1 pair of trousers. I fold {{2}} things."])),
+  pg("How I Help","Draw yourself helping at home.","Show how you help at home.",DR("I help at home by ...",420))],
+  "The people who help at home, such as Ammi, Abbu, a cook, a driver or a gardener, the tools they use, and the ways children can help too.",
+  ["Give your child one small job each day.","Say thank you to helpers in front of your child.","Talk about what each person at home does."],
+  ["Make a simple helper chart with stickers.","Let your child help water plants or fold socks."],
+  "Every home is different. Some families do all the jobs themselves. Talk about everyone who helps, including the children.",
+  ["Little Helper Bilal","Bilal saw Ammi carrying a big basket of clothes. 'I can help!' he said. He carried the socks. Then he helped the gardener water the roses. 'Thank you, Bilal!' said everyone. Ask: What did Bilal carry?"])
+]});
+
+addPlus("urdu",{nursery:[
+ TP("دو حروف جوڑنا","Joining two letters",[
+  pg("حروف ملائیں|Join letters","پڑھیں۔ پھر حروف جوڑ کر لکھیں۔","Join a letter with ا.",
+   CN(["handshake"],"جب دو حروف ملتے ہیں تو پہلا حرف چھوٹا ہو جاتا ہے: ب + ا = با","حروف جوڑنا"),
+   F("",["ب + ا = {{با}}","ت + ا = {{تا}}","ج + ا = {{جا}}","م + ا = {{ما}}"],2,1)),
+  pg("لکھیں|Trace","جڑے ہوئے حروف پر لکھیں۔","Trace joined letters.",TR("",["با","تا","جا","ما"],4)),
+  pg("اور جوڑیں|Join more","حروف جوڑ کر لفظ لکھیں۔","Join two letters to make short words.",
+   F("",["ب + س = {{بس}}","ک + ب = {{کب}}","ج + ب = {{جب}}","د + ل = {{دل}}"],2,1)),
+  pg("لفظ توڑیں|Break apart","خالی جگہ میں حرف لکھیں۔","Find the two letters in a short word.",
+   F("",["بس = {{ب}} + س","تب = ت + {{ب}}","گل = {{گ}} + ل","سب = س + {{ب}}"],2,1)),
+  pg("کون نہیں ملتا؟|Which does not join?","کچھ حروف آگے والے حرف سے نہیں ملتے۔ ایسے حرف پر دائرہ لگائیں۔","Know letters that do not join forward.",
+   NO("ا، د، ر، ز اور و آگے والے حرف سے نہیں ملتے۔"),
+   CH("",[["",["د","ب"],0],["",["ت","ر"],1],["",["ا","م"],0],["",["ک","و"],1],["",["ز","س"],0]])),
+  pg("لکھیں|Trace words","لفظوں پر لکھیں۔","Trace two letter words.",TR("",["اب","سب","تب","کب"],4)),
+  pg("تصویر والے لفظ|Picture words","تصویر دیکھیں۔ پہلا حرف لکھیں۔","Read two letter words with pictures.",BK(["د","گ","ب"]),
+   FP("",[["red-heart","{{د}}ل"],["rose","{{گ}}ل"],["bus","{{ب}}س"]],3)),
+  pg("جوڑی ملائیں|Match","حروف کو جڑے ہوئے لفظ سے ملائیں۔","Match letters to the joined word.",
+   MA("خانے میں حرف لکھیں۔",["ب + س","د + ل","ک + ب","ت + م"],["بس","دل","کب","تم"])),
+  pg("کتنے حروف؟|How many letters?","لفظ میں کتنے حروف ہیں؟ دائرہ لگائیں۔","Count letters in short words.",
+   CH("",[["بس",0],["دل",0],["مور",1],["سب",0],["کتا",1],["گل",0]],["دو","تین"])),
+  pg("میرا لفظ|My word","لفظ پر لکھیں۔ پھر اس کی تصویر بنائیں۔","Write and draw a two letter word.",TR("",["دل","گل"],4),DR("میری تصویر",220))],
+  "Joining two Urdu letters: the first letter gets shorter when it joins (ب + ا = با), short words like بس، دل and گل, and the letters that do not join forward (ا، د، ر، ز، و).",
+  ["Write the two letters apart, then show them joined.","Say each letter, then say the joined sound.","Point out letters that never hold hands with the next letter."],
+  ["Find بس and دل on signs, packets or in books.","Join letters with a finger on a misty window."],
+  "Children often write the full shape of the first letter. Show that ب becomes a small hook before it joins.",
+  ["حروف کی دوستی","ب اور س دوست تھے۔ ایک دن انہوں نے ہاتھ ملایا تو بس بن گئی! د اور ل نے ہاتھ ملایا تو دل بن گیا۔ سوال: ب اور س نے مل کر کیا بنایا؟"])
+]});

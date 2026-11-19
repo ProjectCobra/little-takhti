@@ -93,3 +93,35 @@ G1_URDU.push(
   "Some plurals change the ending (دستانہ، دستانے) and some stay the same (کمبل، کمبل). Point this out gently.",
   ["سردی کی شام","شام کو بہت ٹھنڈ تھی۔ دادی نے سب کو رضائی میں بٹھایا اور گرم گرم مونگ پھلی دی۔ پھر انہوں نے ایک کہانی سنائی۔ سوال: دادی نے سب کو کیا دیا؟"])
 );
+
+/* ---------- Week 13: Grade 1 ICT topic 12 ---------- */
+addPlus("computer",{g1:[
+ TP("Simple apps on a tablet","",[
+  pg("What Is a Tablet?","Read the big idea. Then circle true or false.","Know what a tablet, an icon and an app are.",
+   CN(["mobile-phone","laptop"],"A tablet is a flat computer with a touch screen. The small pictures on the screen are called icons. Tapping an icon opens an app. An app is a program that does one job, like taking photos or playing music.","Tablet and apps"),
+   CH("",[["A tablet has a touch screen.",0],["Icons are small pictures on the screen.",0],["We need a mouse to use a tablet.",1],["An app does a job, like playing music.",0]],TF)),
+  pg("Touch Moves","Match each move to what you do with your finger.","Know the touch moves for a tablet.",
+   MA("Write the letter in the box.",["tap","double tap","swipe","pinch","press and hold"],["touch once quickly","touch twice quickly","slide your finger across","move two fingers together","keep your finger down"])),
+  pg("Which App?","Look at each icon. Write the app name.","Know what some apps are for.",BK(["camera","music","drawing","calendar","books","clock"]),
+   FP("",[["camera","I tap the {{camera}} app to take a photo."],["musical-note","I tap the {{music}} app to hear a song."],["artist-palette","I tap the {{drawing}} app to paint."],["spiral-calendar","I tap the {{calendar}} app to see the date."],["open-book","I tap the {{books}} app to read a story."],["alarm-clock","I tap the {{clock}} app to set an alarm."]],2)),
+  pg("Which Move?","Circle the move you need.","Choose the right touch move for a job.",
+   CH("",[["I want to open an app.",["tap","swipe"],0],["I want to see the next photo.",["swipe","press and hold"],0],["I want to make a picture smaller.",["pinch","tap"],0],["I want to move an icon.",["press and hold","double tap"],0]])),
+  pg("Open a Drawing App","Fill in the missing words.","Follow the steps to open and close an app.",BK(["Tap","Home"]),
+   CY("",[["mobile-phone","Turn on the tablet"],["hand-with-fingers-splayed","{{Tap}} the app icon"],["artist-palette","Draw your picture"],["house","Press {{Home}} to close it"]])),
+  pg("The Battery","Read the big idea. Then circle yes or no.","Know how to look after a tablet's battery.",
+   CN(["battery","low-battery"],"A tablet runs on a battery. A small battery icon shows how full it is. When it is low, ask a grown-up to plug in the charger.","Battery"),
+   CH("",[["A low battery icon means the tablet needs charging.",0],["I can plug in the charger by myself near water.",1],["I ask a grown-up to help me charge it.",0]],YN)),
+  pg("Care for the Tablet","Look at each picture. Circle good or not good.","Know how to use a tablet carefully.",
+   CP("",[["raised-hand","Hold the tablet with two hands",0],["cup-with-straw","Use the tablet next to a drink",1],["soap","Wash and dry hands first",0],["stopwatch","Take a break after a short time",0],["warning","Download apps without asking",1]],["good","not good"])),
+  pg("App or Not?","Write each word under app or not an app.","Tell apps apart from real objects.",
+   SO("",["app","not an app"],["Camera","chair","Calculator","spoon","Photos","shoe"],[0,1,0,1,0,1])),
+  pg("Tablet Sums","Read and solve.","Use maths in tablet stories.",
+   WP("",["The top row has 3 apps. The next row has 4 apps. There are {{7}} apps.","The battery had 10 bars. Sara used 4. {{6}} bars are left.","Ali plays a game for 10 minutes and reads for 10 minutes. He uses the tablet for {{20}} minutes.","Zara takes 5 photos. She deletes 2. She has {{3}} photos."])),
+  pg("My Tablet Screen","Draw a tablet screen with your favourite app icons. Then finish the sentence.","Plan and draw your own home screen.",
+   DR("My tablet screen",280),WR("",["My favourite app is ______________ because ______________."]))],
+  "Using a tablet: icons and apps, touch moves like tap, swipe and pinch, opening and closing an app, the battery icon and looking after the tablet.",
+  ["Show your child how to tap, swipe and pinch on a photo.","Name each app icon together and say what it does.","Agree a time limit before using the tablet."],
+  ["Take three photos together and swipe through them.","Draw a picture in a drawing app, then close it with the Home button."],
+  "Children may tap too hard or too long and move icons by mistake. Show a light, quick tap.",
+  ["Daniyal's Photo","Daniyal tapped the camera icon on Ammi's tablet. He took a photo of his cat. He pinched the photo to make the cat's nose bigger and laughed. Then he pressed Home to close the app. Ask: What did Daniyal take a photo of?"])
+]});

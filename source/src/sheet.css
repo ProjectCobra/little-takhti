@@ -128,3 +128,10 @@ ol.fl.nw li>span:last-child{white-space:nowrap}
 .sh-fq{display:flex;align-items:center;gap:8px;text-align:right;white-space:nowrap;font-size:11px}
 .sh-qr{width:40px;height:40px;flex:none;order:2}
 .flw,.ulw,.grdw{display:block;width:100%;height:auto;margin:0}.flsp{height:16px}.grdw{margin-bottom:10px}
+
+.twmap{margin:4px auto 14px;border-collapse:collapse}
+.twmap>tbody>tr>td{padding:4px;text-align:center;vertical-align:middle}
+.twd{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--pc);font-size:18px}
+.twgrid{border-collapse:separate;border-spacing:8px;border:2px solid #1b1f2e;border-radius:14px;background:#f7f8fb}
+.twgrid td{width:120px;height:58px;border:2px solid #9aa3b8;border-radius:10px;background:#fff;text-align:center;font-weight:600;font-size:17px;line-height:1.2}
+.twgrid td.twme{background:var(--pt);border-color:var(--pc)}

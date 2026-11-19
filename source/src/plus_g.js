@@ -394,3 +394,45 @@ addPlus("computer",{
    "Remind children that smart machines can make mistakes. People should always check.",
    ["The Helper Robot","Zainab drew a robot that waters plants and feeds the cat. \"But who will hug the cat?\" asked her brother. Ask: What can people do that robots cannot?"])
  ]});
+
+/* Grade 1 week 12, matched to LGS Grade 1 classwork (see source/references/lgs-grade1.md) */
+addPlus("science",{
+ g1:[
+  TP("How animals grow","",[
+   pg("Stages in Order","Write 1, 2, 3 and so on to put the stages in order.","Order the stages in the life cycles of a person, a sea turtle and a grasshopper.",
+    F("A person",["adult {{4}}","baby {{1}}","elderly {{5}}","child {{2}}","adolescent {{3}}"],2),
+    F("A sea turtle",["juvenile {{3}}","egg {{1}}","adult {{4}}","hatchling {{2}}"],2),
+    F("A grasshopper",["adult {{3}}","egg {{1}}","nymph {{2}}"],2)),
+   pg("Frog and Butterfly","Write each fact in the right box. The middle box is for facts that are true for both.","Compare the life cycles of a frog and a butterfly.",
+    SO("",["Frog only","Both","Butterfly only"],["is an amphibian","is an insect","lays eggs","lays eggs in water","lays eggs on leaves","goes through big changes","breathes through tiny holes called spiracles","has gills when it is young"],[0,2,1,0,2,1,2,0])),
+   pg("Name the Stage","Use the word box to fill in the blanks. Then draw a butterfly life cycle.","Name the stages of different life cycles.",
+    BK(["egg","nymph","larva","pupa","hatchling","juvenile"]),
+    F("",["A baby grasshopper is called a {{nymph}}.","A caterpillar is also called a {{larva}}.","A caterpillar changes into a butterfly inside a {{pupa}}.","A baby turtle that has just come out of its egg is a {{hatchling}}.","A young turtle that is still growing is a {{juvenile}}.","Many animals start life as an {{egg}}."]),
+    DR("Draw the butterfly life cycle with arrows",190))],
+   "Animals grow and change in stages called a life cycle. Some young look like their parents, and some change a lot.",
+   ["Look at photos of your child as a baby and now, and name the stages.","Draw a circle with arrows and add each stage of a sea turtle.","Talk about which animals change a lot (butterfly, frog) and which change a little (grasshopper, turtle)."],
+   ["Look for a caterpillar on a plant in the garden.","Watch a short video of sea turtles hatching on a beach in Karachi."],
+   "Children often mix up nymph and larva. A nymph looks like a small adult with no wings. A larva looks very different from the adult.",
+   ["The Turtle Babies","One night on Hawke's Bay beach, Ali and his Abbu watched tiny turtles climb out of the sand. They were hatchlings! They ran to the sea. Abbu said, \"Some of them will come back to this beach as adults.\" Ask: What comes before a hatchling in a turtle's life cycle?"])
+ ]});
+
+addPlus("social",{
+ g1:[
+  TP("Maps and directions","",[
+   pg("The Four Directions","Use the word box to fill in the blanks.","Name the four cardinal directions and where they are on a map.",
+    NO("A compass rose shows the four main directions. On most maps, North is at the top."),
+    BK(["North","South","East","West"]),
+    F("",["On a map, {{North}} is at the top.","{{South}} is at the bottom.","{{East}} is on the right.","{{West}} is on the left."]),
+    F("",["The Sun rises in the {{East}}.","The Sun sets in the {{West}}."])),
+   pg("Town Map","Look at the map. North is at the top. Answer the questions.","Use North, South, East and West to find places on a map.",
+    {t:"map",rows:["Bakery|Mosque|Park","School|My house|Hospital","Shop|Fire station|Zoo"]},
+    {...F("",["What is north of my house? The {{Mosque}}.","What is south of my house? The {{Fire station}}.","What is east of my house? The {{Hospital}}.","What is west of my house? The {{School}}.","What is north of the school? The {{Bakery}}.","What is east of the fire station? The {{Zoo}}."]),nq:1}),
+   pg("Map Key","Match each symbol to what it means. Then make your own map key.","Read and make a simple map key.",
+    MA("Write the letter.",["a red cross","a blue patch","a tree","a slide","a book"],["hospital","lake","park","playground","library"]),
+    DR("My map key: draw 3 symbols and write what each one means",200))],
+   "Maps show places from above. A compass rose shows North, South, East and West, and a map key tells us what each symbol means.",
+   ["Stand in your home and point to where the Sun rises. That is East.","Draw a simple map of one room with North at the top.","Ask questions like \"What is west of the sofa?\""],
+   ["Make a treasure map with a map key and hide a small treat.","Look at a map of your city on a phone and find North."],
+   "Children often think North means \"up the stairs\". Explain that North is a direction on the ground, and maps just put it at the top.",
+   ["Zainab's Treasure Map","Zainab drew a map of the garden. She put a star on the treasure. \"Walk North to the tree, then East to the swing,\" she told her brother. He found a chocolate under the swing! Ask: Which direction did he walk first?"])
+ ]});

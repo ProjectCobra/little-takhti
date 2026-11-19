@@ -1,6 +1,6 @@
 # LGS Grade 1 reference (Lahore Grammar School Defence, 2026-27)
 
-Notes from scans of real LGS Grade 1 classwork Sumbul shared in November 2026. Use these to match topic, level and exercise style when writing Grade 1 Science and Geography material. The scans themselves stay out of this repo (it is public and they show a child's name and school-owned worksheets). Write original exercises; never copy LGS pages.
+Notes from scans of real LGS Grade 1 classwork Sumbul shared in November 2026. Two subjects: Science (life cycles) and Social Studies (maps, directions, calendar). Use these to match topic, level and exercise style when writing Grade 1 Science and Social Studies material. The scans themselves stay out of this repo (it is public and they show a child's name and school-owned worksheets). Write original exercises; never copy LGS pages.
 
 ## Science: Chapter 2, Plants and Animals (taught mid November)
 
@@ -21,18 +21,18 @@ Exercise styles used:
 
 Level note: vocabulary is higher than our current Grade 1 Science (nymph, juvenile, hatchling, larva, pupa, amphibian, spiracles). Our existing Life cycles topic (`plus_a.js`) covers butterfly, frog and plant only.
 
-## Geography / Social Studies: Maps (taught mid November)
+## Social Studies: Maps (taught mid November)
 
 - Cardinal directions: North, South, East, West on a simple town map with a compass rose. Questions like "What is north of the supermarket?" answered by circling a picture or writing the place.
 - Map key: match picture symbols (school, hospital, bakery, playground, lake, park) to their names.
 - Places used: school, hospital, supermarket, bakery, airport, house, park, fire station, zoo, restaurant, police station, pet shop.
 
-## Calendar (November)
+## Social Studies: Calendar (November)
 
 - Monthly calendar sheet: circle all Saturdays, mark every Monday, count Tuesdays, day after Friday, date of the first Sunday, 7 days in a week, colour weekends and weekdays differently, mark today's date.
 
-## Ideas for Little Takhti
+## Done on Little Takhti
 
-- Grade 1 Science topic: Animal life cycles (human, grasshopper, sea turtle, butterfly) with order, Venn and draw-and-label pages.
-- Grade 1 Geography topic: Maps, map keys and the four directions using a small town grid.
-- Grade 1 calendar page: a fill-in month calendar with days of the week questions.
+- Grade 1 Science "How animals grow" (science-t9): stages in order, frog and butterfly sort, name the stage.
+- Grade 1 Social Studies "Maps and directions" (social-t8): four directions, town map, map key.
+- Still to do: a Grade 1 calendar page (days of the week questions).

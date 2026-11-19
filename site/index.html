@@ -1676,6 +1676,36 @@ header.top .gsel::after{content:"";position:absolute;right:15px;top:50%;width:7p
 .dk2{background:#F2F7F3!important;border:1px solid #DFEAE1}
 .dk2 .dimg{opacity:1}
 
+/* ================= Containers (Nov 2026), after Duolingo and Khan Academy =================
+   White page, white cards with a 2px line and a slightly deeper bottom edge, 20px corners,
+   chunky 3D buttons, clear section headings, one accent colour per action. */
+:root{--line:#E1EAE2;--line-2:#CFDCD1;--card-r:20px}
+.card,.subj,.rec,.trow,.txc,.ktile,.door,.dlinks a,.gm-b,.qband,.khero,.phead,.gd,.tip,.feat,.qtile,.kid,.acct-card,.sgrp .trow{
+ border:2px solid var(--line)!important;border-bottom-width:4px!important;border-radius:var(--card-r)!important;box-shadow:none!important}
+a.card:hover,.subj:hover,.rec:hover,.trow:hover,.txc:hover,.ktile:hover,.dlinks a:hover,.gm-b:hover:not(:disabled),.qtile:hover{border-color:var(--line-2)!important;transform:translateY(-2px)}
+.trow,.txc,.dlinks a,.ktile,.subj,.rec,.qtile{transition:transform .12s,border-color .12s}
+.dlinks a{background:#fff!important}
+/* buttons: Duolingo-style chunky edge */
+.btn{border:2px solid var(--line)!important;border-bottom-width:4px!important;border-radius:14px!important;background:#fff;color:var(--ink)!important}
+.btn:active{transform:translateY(2px);border-bottom-width:2px!important}
+.btn.fill,.btn.green{background:var(--green)!important;border-color:var(--g-d)!important;color:#fff!important}
+.btn.sun{background:var(--sun)!important;border-color:#E0B800!important;color:var(--ink)!important}
+.txc.sun{border-color:#E0B800!important}
+/* section headings like Khan Academy: small green label, bold title, link on the right */
+.sec-h{align-items:flex-end;margin-bottom:14px}.sec-h h2{font-size:clamp(22px,2.6vw,28px)}
+section{margin-top:40px}
+/* home kids door: kite never covers the words */
+.dk2{padding-right:150px!important;min-height:220px}
+.dk2 .dimg{width:120px!important;right:16px!important;bottom:16px!important;top:auto!important;transform:rotate(-8deg)}
+@media (max-width:760px){.dk2{padding-right:22px!important;min-height:0}.dk2 .dimg{width:64px!important;top:16px!important;right:16px!important;bottom:auto!important}.dk2 h2,.dk2 .kick{padding-right:70px}}
+/* art panels never sit on top of text */
+.phead .ph-art,.qband .qb-art{flex:none}
+@media (max-width:620px){.phead .ph-art{display:none}}
+.fz-grid{margin-top:18px}
+.fz-card{border:2px solid var(--line)!important;border-bottom-width:4px!important;border-radius:var(--card-r)!important;box-shadow:none!important}
+/* PowerUps and other page heads: same white card as everywhere else */
+.pu-hero,.fz-hero,.st-hero{background:#fff!important;border:2px solid var(--line)!important;border-bottom-width:4px!important;border-radius:var(--card-r)!important;box-shadow:none!important}
+
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
 .sheet.s-english{--pc:#2A74DD;--pt:#E2EDFD}.sheet.s-maths{--pc:#E2711A;--pt:#FDEAD9}.sheet.s-science{--pc:#20915A;--pt:#DCF2E6}.sheet.s-social{--pc:#CC3672;--pt:#FBE1EB}.sheet.s-urdu{--pc:#6447CC;--pt:#EBE6FB}
@@ -7409,12 +7439,7 @@ function regFun(){
 /* ---------- Play zone hub ---------- */
 const GAMES=[['ws','Word search','Find the hidden words in the grid.','🔤'],['mem','Memory match','Flip cards and find the pairs.','🃏'],['race','Times table race','How many can you answer in 60 seconds?','⏱️'],['bee','Spelling bee','Listen and choose the right spelling.','🐝'],['pop','Urdu letter pop','Pop the bubbles with the right letter.','🫧']];
 function funHub(){const st=totalStars(),un=stickersUnlocked(),nx=Math.min(STK.length,un+1),need=nx*STK_EVERY-st,streak=dailyStreak(),done=dailyDays().includes(todayStr());
- app.innerHTML=`<div class="fz-hero"><div><span class="kick">${ic.game}Play zone</span><h1>Play, collect and learn</h1><p>Do the daily challenge, play games, read stories and fill your sticker book.</p>
-  <div class="fz-stats"><span>${starSVG(true)}<b>${st}</b> stars</span><span>${ic.flame}<b>${streak}</b> day streak</span><span><span class="emo">🗂️</span><b>${un}/${STK.length}</b> stickers</span></div></div>
-  <div class="fz-art" aria-hidden="true">${art('quiz')}</div></div>
- <a class="fz-daily${done?' done':''}" href="#play-qx-daily-${grade}"><span class="emo big">${done?'✅':'🎯'}</span><div><b>${done?'Daily challenge done! Play again?':'Today\'s daily challenge'}</b><small>${GR[grade].name} · mixed questions from every subject${done?'':' · keep your streak going'}</small></div><span class="btn sun">${ic.play}${done?'Again':'Play'}</span></a>
- <a class="fz-stk" href="#stickers"><div class="fz-stk-row">${STK.slice(0,8).map((s,i)=>`<span class="sk${i<un?' on':''}">${i<un?s[0]:'?'}</span>`).join('')}</div><div><b>Sticker book</b><small>${un>=STK.length?'You collected every sticker!':`${need} more star${need===1?'':'s'} to unlock the next sticker`}</small></div>${ic.arrow}</a>
- <div class="sec-h"><h2>Mini games</h2></div>
+ app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Play zone · ${GR[grade].name}</span><h1>Games</h1><p>Short word and number games. Every game gives stars for your sticker book.</p></div></div>
  <div class="fz-grid">${GAMES.map(([k,t,d,e])=>`<a class="fz-card g-${k}" href="#game-${k}"><span class="emo big">${e}</span><b>${t}</b><small>${d}</small>${store.get('gbest-'+k+'-'+grade,0)?`<span class="fz-best">Best: ${store.get('gbest-'+k+'-'+grade,0)}</span>`:''}</a>`).join('')}
   <a class="fz-card g-story" href="#stories"><span class="emo big">📖</span><b>Story corner</b><small>Read along stories with questions.</small></a></div>`}
 

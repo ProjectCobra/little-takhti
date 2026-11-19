@@ -40,12 +40,7 @@ function regFun(){
 /* ---------- Play zone hub ---------- */
 const GAMES=[['ws','Word search','Find the hidden words in the grid.','🔤'],['mem','Memory match','Flip cards and find the pairs.','🃏'],['race','Times table race','How many can you answer in 60 seconds?','⏱️'],['bee','Spelling bee','Listen and choose the right spelling.','🐝'],['pop','Urdu letter pop','Pop the bubbles with the right letter.','🫧']];
 function funHub(){const st=totalStars(),un=stickersUnlocked(),nx=Math.min(STK.length,un+1),need=nx*STK_EVERY-st,streak=dailyStreak(),done=dailyDays().includes(todayStr());
- app.innerHTML=`<div class="fz-hero"><div><span class="kick">${ic.game}Play zone</span><h1>Play, collect and learn</h1><p>Do the daily challenge, play games, read stories and fill your sticker book.</p>
-  <div class="fz-stats"><span>${starSVG(true)}<b>${st}</b> stars</span><span>${ic.flame}<b>${streak}</b> day streak</span><span><span class="emo">🗂️</span><b>${un}/${STK.length}</b> stickers</span></div></div>
-  <div class="fz-art" aria-hidden="true">${art('quiz')}</div></div>
- <a class="fz-daily${done?' done':''}" href="#play-qx-daily-${grade}"><span class="emo big">${done?'✅':'🎯'}</span><div><b>${done?'Daily challenge done! Play again?':'Today\'s daily challenge'}</b><small>${GR[grade].name} · mixed questions from every subject${done?'':' · keep your streak going'}</small></div><span class="btn sun">${ic.play}${done?'Again':'Play'}</span></a>
- <a class="fz-stk" href="#stickers"><div class="fz-stk-row">${STK.slice(0,8).map((s,i)=>`<span class="sk${i<un?' on':''}">${i<un?s[0]:'?'}</span>`).join('')}</div><div><b>Sticker book</b><small>${un>=STK.length?'You collected every sticker!':`${need} more star${need===1?'':'s'} to unlock the next sticker`}</small></div>${ic.arrow}</a>
- <div class="sec-h"><h2>Mini games</h2></div>
+ app.innerHTML=`<div class="phead"><div style="flex:1;min-width:0"><span class="kick">Play zone · ${GR[grade].name}</span><h1>Games</h1><p>Short word and number games. Every game gives stars for your sticker book.</p></div></div>
  <div class="fz-grid">${GAMES.map(([k,t,d,e])=>`<a class="fz-card g-${k}" href="#game-${k}"><span class="emo big">${e}</span><b>${t}</b><small>${d}</small>${store.get('gbest-'+k+'-'+grade,0)?`<span class="fz-best">Best: ${store.get('gbest-'+k+'-'+grade,0)}</span>`:''}</a>`).join('')}
   <a class="fz-card g-story" href="#stories"><span class="emo big">📖</span><b>Story corner</b><small>Read along stories with questions.</small></a></div>`}
 

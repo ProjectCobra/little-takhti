@@ -7870,6 +7870,13 @@ function topicRow(r,k,s){const wi=topicWeek(s,k),q=hasQuiz(r),isNow=wi===WEEK_NO
   <span class="tr-a">${q?`<a class="btn sm sun" href="#play-${r.id}" aria-label="Play the quiz">${ic.play}<span>Quiz</span></a>`:''}<button class="btn sm" type="button" data-print="${r.id}" aria-label="Print">${ic.print}<span>Print</span></button></span></li>`}
 function writeCard(r){return card(r)}
 
+/* revision and full sets are named by the topics they cover, not "Revision Set" */
+function setTopics(r){return uniq(r.pages.map(i=>(PAGES[r.sub][i]||{}).topic).filter(Boolean))}
+function setLabel(r){if(!r.set||r.write)return null;const s=SUB[r.sub],t=setTopics(r).map(x=>s.rtl?x:(PACK_T[s.id]&&PACK_T[s.id][s.topics.indexOf(x)])||x);if(!t.length)return null;
+ const ur=!!s.rtl,and=ur?' اور ':' and ',more=n=>ur?` اور ${n} مزید`:` and ${n} more`;
+ const list=t.length<=2?t.join(and):t.slice(0,2).join(ur?'، ':', ')+more(t.length-2);
+ return (ur?'دہرائی: ':'Revision: ')+list}
+
 /* ---------------- site ---------------- */
 const app=document.getElementById('app');
 const store={get(k,d){try{const v=localStorage.getItem('lt-'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('lt-'+k,JSON.stringify(v))}catch(e){}}};
@@ -7970,7 +7977,7 @@ function optHTML(o){if(o[0]==='@')return `<svg viewBox="0 0 24 24"><g fill="${SH
 function acts(r,extra=''){return `<div class="acts"><button class="btn${r.community?' fill':''}" data-print="${r.id}" type="button">${ic.print}Print</button>${r.community?'':`<a class="btn fill" href="${pdf(r)}" target="_blank" rel="noopener">${ic.dl}Download PDF</a>`}${extra}</div>`}
 function card(r){const s=SUB[r.sub],n=r.pages.length,q=hasQuiz(r);
  return `<article class="card s-${r.sub}"><a class="thumb" href="#res-${r.id}" aria-label="${esc(r.en||r.title)}">${r.set?'<span class="badge">Full set</span>':r.community?'<span class="badge">Community</span>':''}${frame(r.sub,r.pages[0],false)}</a>${q?`<a class="qbadge" href="#play-${r.id}" aria-label="Play the quiz">${ic.play}Quiz</a>`:''}
- <div class="cb">${isUr(r.title)?`<h3 class="ur-t" dir="rtl" lang="ur"><a href="#res-${r.id}">${r.title}</a></h3>${r.en?`<div class="gloss">${r.en}</div>`:''}`:`<h3><a href="#res-${r.id}">${r.title}</a></h3>`}
+ <div class="cb">${(()=>{const sl=setLabel(r),tt=sl||r.title;return isUr(tt)?`<h3 class="ur-t" dir="rtl" lang="ur"><a href="#res-${r.id}">${tt}</a></h3>${r.en?`<div class="gloss">${sl?r.en.replace(/revision set/i,'revision'):r.en}</div>`:''}`:`<h3><a href="#res-${r.id}">${tt}</a></h3>`})()}
  <div class="meta"><span class="dot"></span>${GR[s.grade].name} · ${s.name} · ${T(r.topic)}</div>
  <div class="cfoot"><div class="tags"><span class="tag">${n} page${n>1?'s':''}</span>${r.write?'<span class="tag">Copy and practise</span>':`<span class="tag key">${ic.ok}Answer key included</span>`}</div>${acts(r)}</div></div></article>`}
 const gradePick=(attr)=>`<div class="gpick" role="group" aria-label="Choose a grade">${GRADES.filter(g=>!g.hidden).map(g=>`<button type="button" ${g.soon?'disabled':`data-grade="${g.id}"`} aria-pressed="${g.id===grade}">${g.name}${g.soon?' · soon':''}</button>`).join('')}</div>`;
@@ -8050,7 +8057,7 @@ function detail(id){
   <div class="viewer"><div id="vf"></div>
    <div class="vbar"><div class="nav2"><button class="ibtn" id="vp" aria-label="Previous page">${ic.l}</button><span class="pg" id="vn"></span><button class="ibtn" id="vx" aria-label="Next page">${ic.r}</button></div>
    <label class="toggle"><input type="checkbox" id="vk"> Show answer key</label></div></div>
-  <div class="info">${ur?`<h1 class="ur-t" dir="rtl" lang="ur">${r.title}</h1><div class="gloss">${r.en}</div>`:`<h1>${r.title}</h1>`}
+  <div class="info">${ur?`<h1 class="ur-t" dir="rtl" lang="ur">${setLabel(r)||r.title}</h1><div class="gloss">${r.en}</div>`:`<h1>${setLabel(r)||r.title}</h1>`}
    <div class="tags"><span class="tag">${GR[s.grade].name}</span><span class="tag">${s.name}</span><span class="tag">${T(r.topic)}</span>${r.write?`<span class="tag">${r.pages.length} pages to copy</span>`:`<span class="tag">${r.pages.length} pages + answer keys</span><span class="tag key">${ic.ok}Answer key included</span>`}</div>
    ${acts(r,q?`<a class="btn sun" href="#play-${r.id}">${ic.play}Play the quiz</a>`:'')}
    <p class="rep"><a href="#help-${r.id}">${I('<path d="M4 21V4h11l-1.5 4L15 12H4"/>',2)}Found a mistake? Report it</a></p>
@@ -8307,7 +8314,7 @@ function search(q){
  const scoped=P.grade||searchAll?pool.filter(r=>!P.grade||SUB[r.sub].grade===P.grade):pool.filter(r=>SUB[r.sub].grade===grade);
  const other=(P.grade?0:pool.length)-scoped.length;
  const groups={};scoped.forEach(r=>{const k=r.sub;(groups[k]=groups[k]||[]).push(r)});
- const row=r=>{const s=SUB[r.sub],k=topicIndex(r);return `<li class="trow s-${s.id}"><a class="tr-main" href="#res-${r.id}"><span class="tr-n">${r.write?ic.sheet:r.set?ic.layers:k+1}</span><span class="tr-t"><b>${T(s.rtl&&!r.set?r.topic:r.title.replace(/ Practice$/,''))}</b><small>${GR[s.grade].name} · ${s.name} · ${r.pages.length} page${r.pages.length>1?'s':''}${r.write?' · handwriting':''}</small></span></a><span class="tr-a">${hasQuiz(r)?`<a class="btn sm sun" href="#play-${r.id}">${ic.play}<span>Quiz</span></a>`:''}<button class="btn sm" type="button" data-print="${r.id}">${ic.print}<span>Print</span></button></span></li>`};
+ const row=r=>{const s=SUB[r.sub],k=topicIndex(r);return `<li class="trow s-${s.id}"><a class="tr-main" href="#res-${r.id}"><span class="tr-n">${r.write?ic.sheet:r.set?ic.layers:k+1}</span><span class="tr-t"><b>${T(setLabel(r)||(s.rtl&&!r.set?r.topic:r.title.replace(/ Practice$/,'')))}</b><small>${GR[s.grade].name} · ${s.name} · ${r.pages.length} page${r.pages.length>1?'s':''}${r.write?' · handwriting':''}</small></span></a><span class="tr-a">${hasQuiz(r)?`<a class="btn sm sun" href="#play-${r.id}">${ic.play}<span>Quiz</span></a>`:''}<button class="btn sm" type="button" data-print="${r.id}">${ic.print}<span>Print</span></button></span></li>`};
  app.innerHTML=`<div class="crumbs"><a href="#home">Home</a>/<span>Search</span></div>
  <form class="search" id="sf" role="search">${ic.search}<input id="q" type="search" value="${esc(q)}" placeholder="Search in English, Urdu or Roman Urdu" aria-label="Search worksheets"><button type="submit">Search</button></form>
  ${chips.length?`<p class="understood">Searching for ${chips.map(c=>`<span class="tag">${T(esc(c))}</span>`).join(' ')}</p>`:''}

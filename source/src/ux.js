@@ -70,3 +70,10 @@ function topicRow(r,k,s){const wi=topicWeek(s,k),q=hasQuiz(r),isNow=wi===WEEK_NO
   <small>${WEEKS[wi]?WEEKS[wi][0]:''} · ${r.pages.length} page${r.pages.length>1?'s':''}${isNow?' · <span class="tnow">This week</span>':''}${r.isNew&&!isNow?' · <span class="tnew">New</span>':''}</small></span></a>
   <span class="tr-a">${q?`<a class="btn sm sun" href="#play-${r.id}" aria-label="Play the quiz">${ic.play}<span>Quiz</span></a>`:''}<button class="btn sm" type="button" data-print="${r.id}" aria-label="Print">${ic.print}<span>Print</span></button></span></li>`}
 function writeCard(r){return card(r)}
+
+/* revision and full sets are named by the topics they cover, not "Revision Set" */
+function setTopics(r){return uniq(r.pages.map(i=>(PAGES[r.sub][i]||{}).topic).filter(Boolean))}
+function setLabel(r){if(!r.set||r.write)return null;const s=SUB[r.sub],t=setTopics(r).map(x=>s.rtl?x:(PACK_T[s.id]&&PACK_T[s.id][s.topics.indexOf(x)])||x);if(!t.length)return null;
+ const ur=!!s.rtl,and=ur?' اور ':' and ',more=n=>ur?` اور ${n} مزید`:` and ${n} more`;
+ const list=t.length<=2?t.join(and):t.slice(0,2).join(ur?'، ':', ')+more(t.length-2);
+ return (ur?'دہرائی: ':'Revision: ')+list}

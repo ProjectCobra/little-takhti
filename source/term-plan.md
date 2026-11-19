@@ -19,6 +19,7 @@ Content files: put each grade's topics in `source/src/term2_<grade>.js` (nursery
 - Urdu: 11 Four-letter words · 12 Simple sentences · 13 Colours and shapes in Urdu · 14 Poem: Winter · 15 Short story with questions
 
 ## Grade 1
+(English, Maths, Science, Social Studies and Urdu: from Google Classroom each week; the topics below are fallbacks only.)
 - Maths: 13 Place value: tens and ones · 14 Ordering numbers to 100 · 15 Shapes: sides and corners
 - Science: 13 What plants need to grow · 14 Healthy habits and germs · 15 Weather and seasons
 - Social Studies: 11 Our neighbourhood · 12 Transport then and now · 13 Festivals and celebrations · 14 Saving water and electricity · 15 Good citizens
@@ -51,7 +52,7 @@ Content files: put each grade's topics in `source/src/term2_<grade>.js` (nursery
 - Grade 3: 4 How chatbots work · 5 Data and bias · 6 Image recognition · 7 AI and creativity · 8 Deepfakes and fake news · 9 AI and jobs · 10 Machine learning steps · 11 Translation and languages · 12 AI in games · 13 Ethics: who decides? · 14 AI and the environment · 15 Build a prompt plan
 
 ## Build order (one batch per scheduled run)
-Group A = Nursery, KG, Grade 1 (Maths, Science, Social Studies, Urdu, ICT). Group B = Grade 2. Group C = Grade 3. Skip Islamiat.
+Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social Studies and Urdu now come from the class's Google Classroom (the Saturday task builds each week's 10-page topics from that week's class work); skip them here unless the Classroom log says a subject had no class work that week, then build the planned topic below as a fallback. Group B = Grade 2. Group C = Grade 3. Skip Islamiat.
 "Week N" means: every subject in the group gets the topic that falls in Week N (topic N-1 for subjects that had 10 topics; Grade 1 Maths and Science already reach Week 13, so they start at Week 14 with topic 13).
 - [x] 1. Group A, Week 12
 - [ ] 2. Group B, Week 12

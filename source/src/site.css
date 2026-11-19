@@ -1521,3 +1521,43 @@ footer .nlfy{font-size:13px;opacity:.85;text-decoration:underline}
 .tx-g{margin-top:12px}.tx-g .gd-n svg{width:20px;height:20px}
 .tx-nav{display:flex;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
 .tx-nav .btn{white-space:normal;text-align:left}
+
+/* ================= BRAND PALETTE (Nov 2026) =================
+   Base: brand deep green #123B28 + warm yellow #FFD93B (logo, Instagram).
+   Every text colour reaches at least 4.5:1 on white; white text on any fill reaches at least 4.5:1.
+   Subject colours are spread around the wheel and kept apart from the brand/action green. */
+:root{
+ --ink:#123B28;--muted:#4F6B5B;--line:#DCE8DD;--chip:#EEF5EE;--bg:#FFFFFF;--surface:#FFFFFF;--surface-2:#F6FAF5;
+ --green:#1F7A4C;--good:#1F7A4C;--bad:#C62828;
+ --deep:#123B28;--deep-2:#1A4D34;--on-deep:#F2FBF2;--on-deep-muted:#C4DDCB;
+ --sun:#FFD93B;--sun-soft:#FFF3B8;--on-sun:#123B28;
+ --g:#1F7A4C;--g-d:#155E3A;--b:#1D5FD1;--b-d:#174BA6;--y:#FFD93B;--y-d:#D9B300;--r-d:#A61F1F;--p:#8B3FD9;--p-d:#6C2BB0;--o:#B23A0B;--o-d:#8F2E08;
+ --k-english:#1D5FD1;--k-maths:#B23A0B;--k-science:#3A7220;--k-social:#BE185D;--k-urdu:#8B3FD9;--k-gk:#0F766E;
+ --k-history:#8A5A2B;--k-geography:#0E7490;--k-islamiat:#047857;--k-computer:#475569;--k-ai:#4338CA;
+ --k-english-t:#E4ECF9;--k-maths-t:#F7E7E1;--k-science-t:#E7EEE4;--k-social-t:#F7E3EC;--k-urdu-t:#F1E8FA;--k-gk-t:#E2EFEE;
+ --k-history-t:#F1EBE6;--k-geography-t:#E2EEF2;--k-islamiat-t:#E1EFEB;--k-computer-t:#E9EBED;--k-ai-t:#E8E7F9}
+h1,h2,h3,h4{color:var(--ink)}
+.kick{color:var(--green)}
+a{color:inherit}
+.lnk,.lnkb{color:var(--green)}
+/* banners on deep green: yellow accents, light text */
+.hero,.qband,.khero,.dk2{background:var(--deep);color:var(--on-deep)}
+.qband h2,.khero h1,.dk2 h2,.hero h1{color:#fff}
+.qband .kick,.khero .kick,.dk2 .kick{color:var(--sun)!important}
+/* the kids' Play area stays bright and playful */
+.ktile.k1{background:#FFF3B8}.ktile.k2{background:#DCEBFF}.ktile.k3{background:#EDE3FF}.ktile.k4{background:#FFE0E6}.ktile.k5{background:#DDF3E1}
+.kbig{background:var(--sun);color:var(--on-sun)}
+.hero .lede{color:var(--on-deep-muted)}
+.hero h1 .w1{color:#FFD93B}.hero h1 .w2{color:#8EC5FF}.hero h1 .w3{color:#FFA48A}.hero h1 .w4{color:#D8B8FF}
+.hero .quick span{color:var(--on-deep-muted)}
+.nav a.on{background:var(--sun-soft);color:var(--ink);border-color:var(--sun)}
+.tabbar a.on{color:var(--ink)}
+.tabbar a.on svg{background:var(--sun-soft);outline:2px solid var(--sun);border-radius:12px}
+.qp .ur-t,.qp{color:var(--ink)}
+/* UI accent: brand green replaces the old sky blue; selected states use soft yellow */
+:root{--b:#1F7A4C;--b-d:#155E3A}
+.gcard.on,.gcard[aria-pressed="true"],.tab[aria-selected="true"],.wchip.on{background:var(--sun-soft)!important;border-color:var(--sun)!important;color:var(--ink)!important}
+.search:focus-within{border-color:var(--sun)}
+.qsub{background:var(--chip);color:var(--ink)}.qsub.ur-t{border-right-color:var(--green)}
+.lvpick button[aria-checked="true"].lv-medium{background:var(--sun-soft);border-color:var(--sun);color:var(--ink)}
+.stat i{background:var(--chip);color:var(--green)}

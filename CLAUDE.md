@@ -51,6 +51,7 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 - **Benchmark**: Little Takhti Grade N ≈ Cambridge Primary Stage N+1 ≈ UK Year N+1 (Grade 1 = age 6 to 7 = Aitchison K2).
 - **Handwriting practice** (`writing.js`): English on red, blue, blue, red four lines with a gap between sets; Urdu on plain ruled lines with a margin on the right; Maths on a square grid. English sets include words, sentences and stories.
 - **Site structure** (Nov 2026 UX pass, `ux.js`): menu is Home, This week, Play, Parents. Grade is asked once on the first visit, then shown as "Grade 1 · Change grade". The resource page is the topic page (worksheets, quiz, parent guide, PowerUps, handwriting, week). Subject pages list topics in teaching order. Warm-ups are a level switch inside English and Urdu. Kids' Play area (`#kids`) links quizzes, games, PowerUps, stickers and stories. The host's floating Netlify badge is hidden; the footer keeps the credit.
+- **Colours** (Nov 2026): brand palette layer at the end of `site.css`. Deep green #123B28 for text and banners, yellow #FFD93B for main buttons and selected states, green #1F7A4C for links and secondary buttons. Subject colours have 4.5:1 contrast with white. Check contrast before adding colours.
 - **Read aloud**: British or American English voice for every subject except Urdu.
 
 ## Instagram

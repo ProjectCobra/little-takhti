@@ -3,3 +3,4 @@
 New content added to Little Takhti, newest last.
 
 - 19 Nov 2026: Grade 2 Week 12 topics (10 pages each): Adverbs, Place value to 1000, Our senses, The Harappan city, Weather maps, Our local government, فعل, Typing practice.
+- 19 Nov 2026: Grade 3 Week 12 topics (10 pages each): Adverbs and adverbials, Multiplying 2-digit numbers, Food chains, The Mughal empire, Climate zones of the world, Provinces and their capitals, زمانہ, Spreadsheets: totals.

@@ -100,9 +100,9 @@ function card(r){const s=SUB[r.sub],n=r.pages.length,q=hasQuiz(r);
  return `<article class="card s-${r.sub}"><a class="thumb" href="#res-${r.id}" aria-label="${esc(r.en||r.title)}">${r.set?'<span class="badge">Full set</span>':r.community?'<span class="badge">Community</span>':''}${frame(r.sub,r.pages[0],false)}</a>${q?`<a class="qbadge" href="#play-${r.id}" aria-label="Play the quiz">${ic.play}Quiz</a>`:''}
  <div class="cb">${isUr(r.title)?`<h3 class="ur-t" dir="rtl" lang="ur"><a href="#res-${r.id}">${r.title}</a></h3>${r.en?`<div class="gloss">${r.en}</div>`:''}`:`<h3><a href="#res-${r.id}">${r.title}</a></h3>`}
  <div class="meta"><span class="dot"></span>${GR[s.grade].name} · ${s.name} · ${T(r.topic)}</div>
- <div class="cfoot"><div class="tags"><span class="tag">${n} page${n>1?'s':''}</span><span class="tag key">${ic.ok}Answer key included</span></div>${acts(r)}</div></div></article>`}
+ <div class="cfoot"><div class="tags"><span class="tag">${n} page${n>1?'s':''}</span>${r.write?'<span class="tag">Copy and practise</span>':`<span class="tag key">${ic.ok}Answer key included</span>`}</div>${acts(r)}</div></div></article>`}
 const gradePick=(attr)=>`<div class="gpick" role="group" aria-label="Choose a grade">${GRADES.filter(g=>!g.hidden).map(g=>`<button type="button" ${g.soon?'disabled':`data-grade="${g.id}"`} aria-pressed="${g.id===grade}">${g.name}${g.soon?' · soon':''}</button>`).join('')}</div>`;
-const subTabs=(cur,attr)=>`<div class="tabs" role="tablist">${(attr==='cs'?planSubjectsOf(grade):subjectsOf(grade)).map(x=>`<button role="tab" class="tab s-${x.id}" data-${attr}="${x.id}" aria-selected="${x.id===cur}"><span class="sw"></span>${x.name}</button>`).join('')}</div>`;
+const subTabs=(cur,attr)=>`<div class="tabs" role="tablist">${planSubjectsOf(grade).map(x=>`<button role="tab" class="tab s-${x.id}" data-${attr}="${x.id}" aria-selected="${x.id===cur||(SUB[cur]&&SUB[cur].warm&&warmPair(SUB[cur])===x)}"><span class="sw"></span>${x.name}</button>`).join('')}</div>`;
 const totalPages=()=>Object.values(PAGES).reduce((a,p)=>a+p.length,0);
 
 /* ---------- home ---------- */
@@ -133,38 +133,23 @@ function home(){
    <div class="tk"><div class="tk-h"></div><div class="tk-b"><span class="ur-t">ا ب پ ت</span><b>123</b></div></div>
    <img class="hx x1" src="img/pencil.svg" alt=""><img class="hx x2" src="img/glowing-star.svg" alt=""><span class="float f1"><i>${ic.ok}</i>A4 with answer keys</span><span class="float f2"><i>${ic.game}</i>Quiz games</span>
  </div></div></div>
- <div class="stats">
-  <div class="stat"><i>${ic.layers}</i><div><b>${LIVE.length}</b><small>Grades, Nursery to 3</small></div></div>
-  <div class="stat"><i>${ic.book}</i><div><b>${Object.keys(KIND).length}</b><small>Subjects</small></div></div>
-  <div class="stat"><i>${ic.sheet}</i><div><b>${totalPages()}</b><small>Printable pages</small></div></div>
-  <div class="stat"><i>${ic.game}</i><div><b>${quizN}</b><small>Quiz games</small></div></div>
- </div>
-
- <section id="grades"><div class="sec-h"><div><span class="kick">Start here</span><h2>Choose a grade</h2></div><span class="lnk">Grade 4 and 5 coming soon</span></div>
- <div class="grades">${GRADES.filter(g=>!g.hidden).map(g=>`<button type="button" class="gcard" ${g.soon?'disabled':`data-grade="${g.id}"`} aria-pressed="${g.id===grade}"><span class="gn">${g.short}</span><b>${g.name}</b><small>${g.age}</small>${g.soon?'<span class="soon">Coming soon</span>':`<span class="gcount">${RES.filter(r=>SUB[r.sub].grade===g.id).length} resources</span>`}</button>`).join('')}</div></section>
-
+ <section class="doors">
+  <div class="door dp"><span class="kick">For parents and teachers</span><h2>Plan, print and teach</h2>
+   <div class="dlinks"><a href="#class">${ic.cal}<span><b>This week</b><small>${G.name} · ${WEEKS[wkI][0]}</small></span></a><a href="#subjects" data-jump="subjects">${ic.sheet}<span><b>Find worksheets</b><small>by subject and topic</small></span></a><a href="#parents">${ic.heart}<span><b>Guides and tools</b><small>how to teach each topic</small></span></a></div></div>
+  <a class="door dk2" href="#kids"><span class="kick">For kids</span><h2>Let's play!</h2><p>Quiz games, word games, stickers and stories for ${G.name}.</p><span class="btn sun lg">${ic.play}Play</span><img src="img/kite.svg" alt="" class="dimg"></a>
+ </section>
  ${(()=>{const a=activeChild(),ch=a&&FAM.children[a];if(!ch)return '';const recs=recommend(a);if(!recs.length)return '';
-  return `<section><div class="sec-h"><div><span class="kick">${avSVG(ch.avatar)} For ${esc(ch.name)} · ${GR[ch.grade].name}</span><h2>Recommended next</h2></div><a class="lnk" href="#account">See progress →</a></div>
+  return `<section><div class="sec-h"><div><span class="kick">${avSVG(ch.avatar)} For ${esc(ch.name)} · ${GR[ch.grade].name}</span><h2>Continue where you left off</h2></div><a class="lnk" href="#account">See progress →</a></div>
   <div class="recs wide">${recs.map(x=>`<a class="rec s-${x.r.sub}" href="${x.q?'#play-'+x.r.id:'#res-'+x.r.id}"><span class="sic">${subIcon(SUB[x.r.sub])}</span><span class="t">${T(SUB[x.r.sub].rtl?x.r.topic:x.r.title.replace(/ Practice$/,''))}<small>${SUB[x.r.sub].name} · ${x.why}</small></span><span class="pq">${x.q?ic.play+'Play':ic.sheet+'Open'}</span></a>`).join('')}</div></section>`})()}
- <section id="subjects"><div class="sec-h"><div><span class="kick">${G.name} · ${G.age}</span><h2>Browse by subject</h2></div><a class="lnk" href="#quiz">Play ${G.name} quizzes →</a></div>
- <div class="subs n${subs.length}">${subs.map(s=>`<a class="subj s-${s.id}" href="#subject-${s.id}"><div class="sart">${art(s.kind)}</div><span class="sic">${subIcon(s)}</span><h3>${s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h3><p class="meta2">${RES.filter(r=>r.sub===s.id).length} resources · ${s.topics.length} topics</p>
-  <div class="chips">${s.topics.slice(0,5).map(t=>`<span class="tchip${isUr(t)?' ur-t':''}"${isUr(t)?' dir="rtl"':''}>${t}</span>`).join('')}${s.topics.length>5?`<span class="tchip more">+${s.topics.length-5} more</span>`:''}</div><span class="go">Explore ${ic.arrow}</span></a>`).join('')}</div></section>
-
- <section><div class="sec-h"><div><span class="kick">This week</span><h2>This week's packs</h2></div><a class="lnk" href="#class">${G.name} · ${WEEKS[wkI][0]}, ${WEEKS[wkI][1]}</a></div>
+ <section><div class="sec-h"><div><span class="kick">${G.name} · ${WEEKS[wkI][0]}, ${WEEKS[wkI][1]}</span><h2>This week's packs</h2></div><a class="lnk" href="#class">Full weekly plan →</a></div>
  <div class="strip">${newRes.map(card).join('')}</div></section>
-
- ${funBand()}${adSlot('home')}<section class="pu-band"><div class="pu-band-t"><span class="kick pu-kick">${ic.spark}New · PowerUps</span><h2>Learning tools that power up every topic</h2><p>Flashcards, a doodleboard for tracing, mindmaps, listen-and-read, a study timer${puAvail('ask')?' and Takhti, an AI study buddy':''}. Open any worksheet to use them.</p><a class="btn sun lg" href="#powerups">${ic.spark}Explore PowerUps</a></div>
- <div class="pu-band-g">${puList().map(k=>`<a class="pu-mini" href="#powerups">${puIcon(k)}<span>${PU[k].name}</span></a>`).join('')}</div></section>
- <section><div class="qband"><div><span class="kick" style="color:var(--sun)">Play and learn</span><h2>Quiz games for every topic</h2><p>Short, colourful rounds built from the same worksheets. Earn stars, keep a streak going and beat your best score.</p><a class="btn sun lg" href="#quiz">${ic.play}Start playing</a></div>
-  <div class="qb-art">${art('quiz')}<div class="demo" aria-hidden="true"><b>4 + 6 = ?</b><div class="dop"><span>8</span><span class="ok">10</span><span>12</span><span>9</span></div></div></div></div></section>
-
+ <section id="subjects"><div class="sec-h"><div><span class="kick">${G.name} · ${G.age}</span><h2>Browse by subject</h2></div><button type="button" class="lnk lnkb" data-gchange>Not ${G.name}? Change grade</button></div>
+ <div class="subs n${subs.length}">${subs.map(s=>`<a class="subj s-${s.id}" href="#subject-${s.id}"><div class="sart">${art(s.kind)}</div><span class="sic">${subIcon(s)}</span><h3>${s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h3><p class="meta2">${s.topics.length} topics${warmPair(s)?' · 2 levels':''}</p>
+  <div class="chips">${s.topics.slice(0,4).map(t=>`<span class="tchip${isUr(t)?' ur-t':''}"${isUr(t)?' dir="rtl"':''}>${t}</span>`).join('')}${s.topics.length>4?`<span class="tchip more">+${s.topics.length-4} more</span>`:''}</div><span class="go">Open ${ic.arrow}</span></a>`).join('')}</div></section>
+ ${adSlot('home')}
  ${window.LT_STATIC?'':`<section><div class="upband"><div class="ub-art">${art('english')}</div><div><span class="kick">For schools and teachers</span><h2>Turn your syllabus into practice</h2><p>Upload a curriculum, syllabus or pattern paper for Nursery to Grade 10. We draft worksheets and a quiz from it, and our admins review every draft before it goes live.</p>
   <div class="acts"><a class="btn sun lg" href="#contribute">${ic.dl}Upload material</a><a class="btn lg" href="#library">Community library${communityRes().length?` (${communityRes().length})`:''}</a></div></div></div></section>`}
- <section class="more"><div class="sec-h"><div><span class="kick">Keep going</span><h2>More ways to learn at home</h2></div></div><div class="feats">
-  <a class="feat dk" href="#class"><span class="fart">${art('class')}</span><span class="fi">${ic.cal}</span><h3>Weekly resource guide</h3><p>Worksheets, activities and a short story for each week, for every grade and subject.</p><div class="wkrow">${WEEKS.slice(Math.max(0,WEEK_NOW-5),WEEK_NOW+1).map((w,i,arr)=>`<span class="${i===arr.length-1?'cur':''}">W${WEEKS.indexOf(w)+1}</span>`).join('')}</div><span class="go">Open class material ${ic.arrow}</span></a>
-  <a class="feat yl" href="#parents"><span class="fart">${art('parents')}</span><span class="fi">${ic.heart}</span><h3>Parents' corner</h3><p>Topic guides that show you how to explain each idea at home, step by step.</p><span class="go">Read the guides ${ic.arrow}</span></a>
-  <a class="feat" href="#quiz"><span class="fart">${art('quiz')}</span><span class="fi">${ic.game}</span><h3>Quiz games</h3><p>${quizN} games across all grades. Questions match the worksheets your child practises.</p><span class="go">Play now ${ic.arrow}</span></a>
- </div></section>`;
+ `;
 }
 
 /* ---------- subject ---------- */
@@ -172,14 +157,13 @@ let topicSel={};
 function subject(id){
  const s=SUB[id];if(!s)return home();
  if(s.grade!==grade)setGrade(s.grade,true);
- const sel=topicSel[id]||'All',hasSet=!!RID[id+'-set'];
- const list=RES.filter(r=>r.sub===id&&(sel==='All'||r.topic===sel||(sel==='Revision'&&r.set)));
+ const packs=s.topics.map((t,k)=>RID[id+'-t'+(k+1)]).filter(Boolean);
+ const extra=RES.filter(r=>r.sub===id&&(r.set||r.write));
  app.innerHTML=`<div class="crumbs"><a href="#home">Home</a>/<span>${GR[s.grade].name}</span>/<span>${s.name}</span></div>
- <div class="phead s-${id}"><span class="sic">${subIcon(s)}</span><div style="min-width:0;flex:1"><span class="kick">${GR[s.grade].name} · ${GR[s.grade].age}</span><h1>${s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h1>
-  <p>${s.topics.length} topics, each with a practice pack, answer keys and a quiz game.</p><p class="refs">Topic scope follows the sequence of <b>${REFS[s.kind]}</b>.</p></div><div class="ph-art">${art(s.kind)}</div></div>
- <div class="filters s-${id}" role="group" aria-label="Filter by topic">${['All',...s.topics,...(hasSet?['Revision']:[])].map(t=>`<button class="fchip" data-topic="${t}" aria-pressed="${t===sel}">${T(t)}</button>`).join('')}</div>
- <p class="count">${list.length} resource${list.length===1?'':'s'}${sel!=='All'?' in '+T(sel):''}</p>
- <div class="cards">${list.map(card).join('')}</div>
+ <div class="phead s-${id}"><span class="sic">${subIcon(s)}</span><div style="min-width:0;flex:1"><span class="kick">${GR[s.grade].name} · ${GR[s.grade].age}</span><h1>${s.warm?s.name:s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h1>
+  <p>${s.topics.length} topics in teaching order. Open a topic for its worksheets, quiz game, parent guide and PowerUps.</p>${levelSwitch(s)}<p class="refs">Topic scope follows the sequence of <b>${REFS[s.kind]}</b>.</p></div><div class="ph-art">${art(s.kind)}</div></div>
+ <ol class="tlist">${packs.map((r,k)=>topicRow(r,k,s)).join('')}</ol>
+ ${extra.length?`<section><div class="sec-h"><div><span class="kick">Also in ${s.name}</span><h2>Revision and handwriting</h2></div></div><div class="cards">${extra.map(card).join('')}</div></section>`:''}
  ${(()=>{const cm=communityRes().filter(r=>SUB[r.sub].grade===s.grade&&SUB[r.sub].kind===s.kind);return cm.length?`<section><div class="sec-h"><div><span class="kick">Community</span><h2>From uploaded material</h2></div><a class="lnk" href="#library">Library →</a></div><div class="cards">${cm.map(card).join('')}</div></section>`:''})()}`;
 }
 
@@ -195,13 +179,14 @@ function detail(id){
    <div class="vbar"><div class="nav2"><button class="ibtn" id="vp" aria-label="Previous page">${ic.l}</button><span class="pg" id="vn"></span><button class="ibtn" id="vx" aria-label="Next page">${ic.r}</button></div>
    <label class="toggle"><input type="checkbox" id="vk"> Show answer key</label></div></div>
   <div class="info">${ur?`<h1 class="ur-t" dir="rtl" lang="ur">${r.title}</h1><div class="gloss">${r.en}</div>`:`<h1>${r.title}</h1>`}
-   <div class="tags"><span class="tag">${GR[s.grade].name}</span><span class="tag">${s.name}</span><span class="tag">${T(r.topic)}</span><span class="tag">${r.pages.length} pages + answer keys</span><span class="tag key">${ic.ok}Answer key included</span></div>
+   <div class="tags"><span class="tag">${GR[s.grade].name}</span><span class="tag">${s.name}</span><span class="tag">${T(r.topic)}</span>${r.write?`<span class="tag">${r.pages.length} pages to copy</span>`:`<span class="tag">${r.pages.length} pages + answer keys</span><span class="tag key">${ic.ok}Answer key included</span>`}</div>
    ${acts(r,q?`<a class="btn sun" href="#play-${r.id}">${ic.play}Play the quiz</a>`:'')}
    <p class="rep"><a href="#help-${r.id}">${I('<path d="M4 21V4h11l-1.5 4L15 12H4"/>',2)}Found a mistake? Report it</a></p>
    <h2>About this resource</h2><p>${r.desc}</p>
    <h2>Learning objectives</h2><ul class="obj">${r.obj.map(o=>`<li>${T(o)}</li>`).join('')}</ul>
    <h2>What's inside</h2><ul class="inside">${r.pages.map((i,j)=>{const p=PAGES[s.id][i];const pk=r.set?RES.find(x=>x.sub===s.id&&!x.set&&x.pages.includes(i)):null;return `<li><a href="${pk?'#res-'+pk.id:'#'}" data-pg="${j}"><span class="no">${j+1}</span>${T(p.title)}<small>${r.set?T(p.topic):(RID[s.id+'-set']&&i<10?'Also in revision set':'Practice page')}</small></a></li>`}).join('')}</ul>
   </div></div>
+ ${topicExtras(r)}
  ${r.community?'':puRow(r)}
  ${adSlot('resource')}
  <section><div class="sec-h"><h2>More ${GR[s.grade].name} ${s.name}</h2><a class="lnk" href="#subject-${s.id}">See all →</a></div><div class="strip">${RES.filter(x=>x.sub===s.id&&x.id!==r.id).slice(0,4).map(card).join('')}</div></section>`;
@@ -224,7 +209,7 @@ function classPage(){
  const wr=RID[s.id+'-write'];
  const wrHTML=n=>{if(!wr)return '';const k=n%wr.pages.length,pg=PAGES[wr.sub][wr.pages[k]];return `<div class="att" style="margin-top:8px"><a class="row" href="#res-${wr.id}"><span class="mini">${frame(wr.sub,wr.pages[k],false)}</span><span class="t">Handwriting: ${T(pg.title)}<small>Page ${k+1} of ${s.rtl?'خوش خطی کی مشق':wr.title} · print and practise</small></span></a></div>`};
  const split=(sx,ask)=>{const c=sx.lastIndexOf(ask);return c>0?[sx.slice(0,c).trim(),sx.slice(c+ask.length).trim()]:[sx,'']};
- app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward. <a href="#map">See the whole term on one page</a>.</p>${gradePick()}</div><div class="ph-art">${art('class')}</div></div>
+ app.innerHTML=`<div class="phead s-${s.id}"><div style="flex:1;min-width:0"><span class="kick">Weekly resource guide</span><h1>Class material</h1><p>Each week's goal with worksheets, a quiz, activities and a short story to use at home or in class. Start at Week 1 and work forward. <a href="#map">See the whole term on one page</a>.</p>${gradeNote()}</div><div class="ph-art">${art('class')}</div></div>
  ${subTabs(cur,'cs')}
  <div class="weeks">${wk.map(i=>`<button class="wk" data-wk="${i}">${WEEKS[i][0]}</button>`).join('')}</div>
  <div class="feed s-${s.id}">${wk.map((i,n)=>{const p=plan[i],att=attOf(p);const now=i===WEEK_NOW;
@@ -277,11 +262,11 @@ function parentsBase(){
   ['Use any language','Explain in Urdu, English, Punjabi or a mix. The idea matters more than the language.'],
   ['Print on A4','Choose A4 paper and 100% scale. Black and white printing works for every sheet.']];
  const a=activeChild(),ch=a&&FAM.children[a];
- app.innerHTML=`<div class="phead s-${s.id}"><div class="pc-hero" style="width:100%"><div><span class="kick">Parents' corner</span><h1>Help your child understand each topic</h1><p>Detailed guides for every topic: what it means, how to explain it, words to use, questions to ask, how to make it easier or harder, and when your child is ready to move on.</p>${gradePick()}</div>
+ app.innerHTML=`<div class="phead s-${s.id}"><div class="pc-hero" style="width:100%"><div><span class="kick">Parents' corner</span><h1>Help your child understand each topic</h1><p>Detailed guides for every topic: what it means, how to explain it, words to use, questions to ask, how to make it easier or harder, and when your child is ready to move on.</p>${gradeNote()}</div>
  <div class="pc-side"><div class="ph-art sm">${art('parents')}</div><div class="routine"><h3>How to use a guide</h3><ol><li>Read the guide yourself first. It takes five minutes.</li><li>Explain the topic with the three steps.</li><li>Do the home activity together.</li><li>Try the practice pack, then the quiz game.</li></ol></div></div></div></div>
  ${ch&&ch.grade===grade?`<p class="kweak" style="margin-top:16px">${avSVG(ch.avatar)}<span>Showing guides for ${esc(ch.name)}'s grade. Topics ${esc(ch.name)} finds harder are marked.</span></p>`:''}
  <section style="margin-top:28px"><div class="sec-h"><div><span class="kick">${GR[grade].name}</span><h2>Topic guides</h2></div></div>
- ${subTabs(cur,'ps')}
+ ${subTabs(cur,'ps')}${levelSwitch(s,'ps')}
  <div class="guides s-${s.id}">${s.topics.map((t,k)=>{const g=GUIDE[s.id][k],pk=RID[s.id+'-t'+(k+1)];const kw=keyWords(pk),qs=askQs(pk);
   const p=a&&progOf(a,pk.id),weak=p&&p.total&&p.right/p.total<.6;
   return `<details class="gd"${k===0?' open':''}><summary><span class="gd-n">${k+1}</span><span class="gd-t"><b>${s.rtl?`<span class="ur-t">${t}</span> <span class="gd-en">${UR_EN[t]||""}</span>`:(PACK_T[s.id]?PACK_T[s.id][k]:t)}${weak?` <span class="tag" style="background:var(--sun-soft)">Needs practice</span>`:''}</b><small>${mixUr(g[0])}</small></span><span class="gd-c" aria-hidden="true"></span></summary>
@@ -314,21 +299,21 @@ function pathHTML(list,s){const OFF=[0,56,84,56,0,-56,-84,-56];const cur=list.fi
    <span class="plab">${t}</span><span class="pst">${[1,2,3].map(k=>starSVG(k<=b)).join('')}</span></a>`}).join('')}
   <div class="lp-art" aria-hidden="true">${art(s.kind)}</div></div>`}
 function quizHub(){
- const subs=subjectsOf(grade);if(quizSub!=='all'&&(!SUB[quizSub]||SUB[quizSub].grade!==grade))quizSub='all';
+ const subs=planSubjectsOf(grade);if(quizSub!=='all'&&(!SUB[quizSub]||SUB[quizSub].grade!==grade))quizSub='all';
  const a=activeChild(),ch=a&&FAM.children[a];const recs=ch&&ch.grade===grade?recommend(a).filter(x=>x.q):[];
- const shown=subs.filter(s=>quizSub==='all'||s.id===quizSub);
+ const shown=quizSub==='all'?subs:[SUB[quizSub]];
  const comm=communityRes().filter(r=>SUB[r.sub].grade===grade&&hasQuiz(r)&&(quizSub==='all'||SUB[r.sub].kind===SUB[quizSub].kind));
  const total=RES.filter(r=>!r.set&&SUB[r.sub].grade===grade&&hasQuiz(r)),earned=total.reduce((x,r)=>x+bestFor(r.id),0);
  app.innerHTML=`<div class="qband"><div><span class="kick" style="color:var(--sun)">Play and learn</span><h2>${GR[grade].name} quiz games</h2><p>Pick a subject and a topic. Every game is built from the practice packs, reads questions aloud, and saves stars to ${ch?esc(ch.name)+"'s profile":'this device'}.</p>
-  <div class="gpick">${GRADES.filter(g=>!g.hidden).map(g=>`<button type="button" ${g.soon?'disabled':`data-grade="${g.id}"`} aria-pressed="${g.id===grade}" class="dk">${g.name}${g.soon?' · soon':''}</button>`).join('')}</div>
+  <p class="gnote dk">${GR[grade].name} · ${GR[grade].age} <button type="button" class="lnkb" data-gchange>Change grade</button></p>
   <div class="qmeter"><span>${starSVG(true)}<b>${earned}</b> of ${total.length*3} stars</span><span>${ch?`${avSVG(ch.avatar)}Playing as <b>${esc(ch.name)}</b> <a href="#account">Change</a>`:`<a href="#account">Add your child</a> to save progress`}</span></div></div>
   <div class="qb-art">${art('quiz')}</div></div>
  ${recs.length?`<section style="margin-top:28px"><div class="sec-h"><div><span class="kick">For ${esc(ch.name)}</span><h2>Play next</h2></div></div><div class="recs wide">${recs.map(x=>`<a class="rec s-${x.r.sub}" href="#play-${x.r.id}"><span class="sic">${subIcon(SUB[x.r.sub])}</span><span class="t">${T(SUB[x.r.sub].rtl?x.r.topic:x.r.title.replace(/ Practice$/,''))}<small>${SUB[x.r.sub].name} · ${x.why}</small></span><span class="pq">${ic.play}Play</span></a>`).join('')}</div></section>`:''}
- <div class="tabs" role="tablist" style="margin-top:26px"><button role="tab" class="tab" data-qs="all" aria-selected="${quizSub==='all'}" style="${quizSub==='all'?'background:var(--ink);color:var(--surface);border-color:var(--ink)':''}">All subjects</button>${subs.map(x=>`<button role="tab" class="tab s-${x.id}" data-qs="${x.id}" aria-selected="${x.id===quizSub}"><span class="sw"></span>${x.name}</button>`).join('')}</div>
+ <div class="tabs" role="tablist" style="margin-top:26px"><button role="tab" class="tab" data-qs="all" aria-selected="${quizSub==='all'}" style="${quizSub==='all'?'background:var(--ink);color:var(--surface);border-color:var(--ink)':''}">All subjects</button>${subs.map(x=>`<button role="tab" class="tab s-${x.id}" data-qs="${x.id}" aria-selected="${x.id===quizSub||(SUB[quizSub]&&SUB[quizSub].warm&&warmPair(SUB[quizSub])===x)}"><span class="sw"></span>${x.name}</button>`).join('')}</div>
  ${shown.map(s=>{const list=RES.filter(r=>r.sub===s.id&&!r.set&&hasQuiz(r));if(!list.length)return '';const st=list.reduce((x,r)=>x+bestFor(r.id),0);
   return `<section class="qsec s-${s.id}"><div class="qs-head"><div class="qs-t"><span class="qs-k">Unit ${shown.indexOf(s)+1} · ${list.length} games</span><h2>${s.name}${s.rtl?` <span class="ur-t">${s.ur}</span>`:''}</h2>
    <div class="qs-prog"><div class="qs-bar"><i style="width:${list.length?st/(list.length*3)*100:0}%"></i></div><small>${st}/${list.length*3} ${starSVG(true)}</small></div></div>
-   <a class="qs-gb" href="#parents" data-pg-sub="${s.id}">${ic.heart}<span>Guide</span></a></div>${pathHTML(list,s)}</section>`}).join('')}
+   <a class="qs-gb" href="#parents" data-pg-sub="${s.id}">${ic.heart}<span>Guide</span></a></div>${levelSwitch(s,'qs')}${pathHTML(list,s)}</section>`}).join('')}
  ${(()=>{const bl=QONLY.filter(r=>SUB[r.sub].grade===grade);if(!bl.length||quizSub!=='all')return '';const st=bl.reduce((x,r)=>x+bestFor(r.id),0);
   return `<section class="qsec bonus"><div class="qs-head"><div class="qs-t"><span class="qs-k">Bonus · ${bl.length} games · new questions every time</span><h2>Quiz games</h2><div class="qs-prog"><div class="qs-bar"><i style="width:${st/(bl.length*3)*100}%"></i></div><small>${st}/${bl.length*3} ${starSVG(true)}</small></div></div></div>${pathHTML(bl,{rtl:false,kind:'quiz'})}</section>`})()}
  ${comm.length?`<section class="qsec"><div class="sec-h"><div><span class="kick">Community</span><h2>Games from uploaded material</h2></div></div><div class="qtiles">${comm.map(qTile).join('')}</div></section>`:''}`;
@@ -442,14 +427,20 @@ function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)re
 
 /* ---------- search ---------- */
 let lastQ='';
+let searchAll=false;
 function search(q){
  lastQ=q;const {hits,P}=smartSearch(q);
  const chips=[...(P.grade&&GR[P.grade]?[GR[P.grade].name]:[]),...P.notes];
+ let pool=hits;if(/hand ?writ|khush ?kha?t|خوش خط|copy ?writ|tracing/i.test(q)){pool=RES.filter(r=>r.write)}
+ const scoped=P.grade||searchAll?pool.filter(r=>!P.grade||SUB[r.sub].grade===P.grade):pool.filter(r=>SUB[r.sub].grade===grade);
+ const other=(P.grade?0:pool.length)-scoped.length;
+ const groups={};scoped.forEach(r=>{const k=r.sub;(groups[k]=groups[k]||[]).push(r)});
+ const row=r=>{const s=SUB[r.sub],k=topicIndex(r);return `<li class="trow s-${s.id}"><a class="tr-main" href="#res-${r.id}"><span class="tr-n">${r.write?ic.sheet:r.set?ic.layers:k+1}</span><span class="tr-t"><b>${T(s.rtl&&!r.set?r.topic:r.title.replace(/ Practice$/,''))}</b><small>${GR[s.grade].name} · ${s.name} · ${r.pages.length} page${r.pages.length>1?'s':''}${r.write?' · handwriting':''}</small></span></a><span class="tr-a">${hasQuiz(r)?`<a class="btn sm sun" href="#play-${r.id}">${ic.play}<span>Quiz</span></a>`:''}<button class="btn sm" type="button" data-print="${r.id}">${ic.print}<span>Print</span></button></span></li>`};
  app.innerHTML=`<div class="crumbs"><a href="#home">Home</a>/<span>Search</span></div>
  <form class="search" id="sf" role="search">${ic.search}<input id="q" type="search" value="${esc(q)}" placeholder="Search in English, Urdu or Roman Urdu" aria-label="Search worksheets"><button type="submit">Search</button></form>
  ${chips.length?`<p class="understood">Searching for ${chips.map(c=>`<span class="tag">${T(esc(c))}</span>`).join(' ')}</p>`:''}
- <p class="count" style="margin-top:12px">${hits.length} result${hits.length===1?'':'s'}${P.grade?'':' across all grades'} for “${T(esc(q))}”</p>
- ${hits.length?`<div class="cards">${hits.map(card).join('')}</div>`:`<div class="empty">No worksheets match that yet. Try English, Urdu or Roman Urdu, for example <b>fractions</b>, <b>jama ke sawal</b>, <b>huroof</b> or <span class="ur-t">مصوّتے</span>.</div>`}`;
+ <div class="sbar"><p class="count">${scoped.length} result${scoped.length===1?'':'s'} for “${T(esc(q))}” ${P.grade?'':searchAll?'in all grades':'in '+GR[grade].name}</p>${P.grade?'':`<div class="lvsw"><button type="button" data-sall="0" aria-pressed="${!searchAll}">${GR[grade].name}</button><button type="button" data-sall="1" aria-pressed="${searchAll}">All grades${!searchAll&&other?` (+${other})`:''}</button></div>`}</div>
+ ${scoped.length?Object.entries(groups).map(([k,list])=>`<section class="sgrp"><h2>${SUB[k].name}${searchAll||P.grade?` <small>${GR[SUB[k].grade].name}</small>`:''}</h2><ol class="tlist">${list.map(row).join('')}</ol></section>`).join(''):`<div class="empty">No worksheets match that${!searchAll&&other?` in ${GR[grade].name}. <button type="button" class="lnkb" data-sall="1">See ${other} in other grades</button>`:' yet. Try English, Urdu or Roman Urdu, for example <b>fractions</b>, <b>jama ke sawal</b>, <b>huroof</b> or <span class="ur-t">مصوّتے</span>.'}</div>`}`;
 }
 
 /* ---------- print view ---------- */
@@ -487,7 +478,7 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='quiz'||h.startsWith('play-'))?'quiz':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'powerups':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'fun':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'||h.startsWith('map-')?'class':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='kids'||h==='quiz'||h.startsWith('play-'))?'kids':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'kids':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'kids':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'||h.startsWith('map-')?'class':'home';
  try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
@@ -497,6 +488,7 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='class')classPage();
  else if(h==='parents')parents();
  else if(h==='quiz')quizHub();
+ else if(h==='kids')kidsPage();
  else if(h==='account')account();
  else if(h==='contribute')contribute();
  else if(h==='admin'){admin();if(CMS.isAdmin&&!keepScroll)loadQueue().then(()=>{if(location.hash==='#admin'){admin();fit()}})}
@@ -511,17 +503,23 @@ function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/
  else if(h==='search')search(lastQ);
  else if(funRoute(h)){}
  else home();
+ if(['quiz','fun','powerups','stickers','stories'].includes(h))app.insertAdjacentHTML('afterbegin',kidsSub(h));
  fit();if(!keepScroll)window.scrollTo(0,0);if(window.LT_STATIC)setTimeout(fillAds,50);
 }
 document.getElementById('gs').innerHTML=GRADES.filter(g=>!g.hidden).map(g=>`<option value="${g.id}" ${g.soon?'disabled':''}>${g.name}${g.soon?' (coming soon)':''}</option>`).join('');
 document.getElementById('gs').value=grade;
-document.getElementById('gs').addEventListener('change',e=>{const h=location.hash;setGrade(e.target.value,true);if(/^#(subject|res|print|play)-/.test(h))location.hash='home';else route(true)});
+document.getElementById('gs').addEventListener('change',e=>{store.set('gradeAsked',1);const h=location.hash;setGrade(e.target.value,true);if(/^#(subject|res|print|play)-/.test(h))location.hash='home';else route(true)});
 document.addEventListener('click',e=>{
  const rl=e.target.closest('[data-reload]');if(rl&&rl.getAttribute('href')===location.hash){e.preventDefault();route();return}
  const gin=e.target.closest('[data-gsignin]');if(gin){gin.disabled=true;window.LTFB.signIn().catch(err=>{gin.disabled=false;FAM.note=err&&err.code==='auth/unauthorized-domain'?'Sign-in is not enabled for this web address yet.':err&&err.code==='auth/popup-closed-by-user'?'':'Could not sign in. Please try again.';account()});return}
  const gout=e.target.closest('[data-gsignout]');if(gout){window.LTFB.signOut();return}
  const dl=e.target.closest('a[href^="pdf/"]');if(dl)track('file_download',{file_name:dl.getAttribute('href').split('/').pop()});
  const p=e.target.closest('[data-print]');if(p){track('print_worksheet',{resource:p.dataset.print});pendingPrint=p.dataset.print;if(location.hash==='#print-'+p.dataset.print)route();else location.hash='print-'+p.dataset.print;return}
+ if(e.target.closest('[data-gchange]')){gradeModal(false);return}
+ const jp=e.target.closest('[data-jump]');if(jp){e.preventDefault();const el=document.getElementById(jp.dataset.jump);el&&el.scrollIntoView({behavior:'smooth',block:'start'});return}
+ const gp=e.target.closest('[data-gpick]');if(gp){store.set('gradeAsked',1);setGrade(gp.dataset.gpick,true);const m=document.getElementById('gmod');m&&m.remove();if(/^#(subject|res|print|play)-/.test(location.hash))location.hash='home';else route(true);return}
+ const sa=e.target.closest('[data-sall]');if(sa){searchAll=sa.dataset.sall==='1';search(lastQ);fit();return}
+ const csg=e.target.closest('[data-cs-go]');if(csg){classSub[grade]=csg.dataset.csGo}
  const gb=e.target.closest('[data-grade]');if(gb){setGrade(gb.dataset.grade,true);route(true);if(gb.classList.contains('gcard'))document.getElementById('subjects').scrollIntoView({behavior:'smooth'});return}
  const q=e.target.closest('[data-q]');if(q){lastQ=q.dataset.q;location.hash==='#search'?(search(lastQ),fit()):location.hash='search';return}
  const t=e.target.closest('[data-topic]');if(t){const id=location.hash.slice(9);topicSel[id]=t.dataset.topic;subject(id);fit();return}
@@ -584,7 +582,9 @@ window.addEventListener('resize',fit);
 /* keep host-injected floating badges (e.g. hosting banners) above the mobile tab bar */
 (function(){const mine=e=>e.matches('.tabbar,.top,header,footer,main,#app,script,style,link,ins')||e.closest('#app,.tabbar,.top,footer,main');
  const lift=()=>{document.querySelectorAll('body > *:not(script):not(style)').forEach(e=>{if(mine(e))return;const cs=getComputedStyle(e);
+  if(/netlify/i.test(e.textContent||'')&&cs.position==='fixed'){e.style.setProperty('display','none','important');return}
   if(cs.position==='fixed'&&parseFloat(cs.bottom)<80)e.classList.add('lt-lift');e.querySelectorAll('*').forEach(c=>{const s=getComputedStyle(c);if(s.position==='fixed'&&parseFloat(s.bottom)<80)c.classList.add('lt-lift')})})};
  new MutationObserver(lift).observe(document.body,{childList:true});setTimeout(lift,1500);setTimeout(lift,5000)})();
 regQuizOnly();regFun();renderAcct();try{ltVisit()}catch(e){}route();famInit().then(cmInit);
+if(!navigator.webdriver&&!store.get('gradeAsked',0)&&!store.get('grade',null)&&!/^#(res|play|print|subject|game|story|pu)-/.test(location.hash))setTimeout(()=>gradeModal(true),400);else store.set('gradeAsked',1);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);

@@ -11,7 +11,7 @@ addPlus("islamiat",{
    ["Say Alhamdulillah together after meals.","Talk about one blessing each day.","Learn one name and its meaning a week."],
    ["Make a blessings jar.","Draw a thank-you picture."],
    ISL_NOTE,
-   ["Alhamdulillah for Rain","After many hot days, it finally rained. Ayesha ran to the window and said \"Alhamdulillah!\" The plants looked happy too. Ask: What did Ayesha say when it rained?"]),
+   ["Alhamdulillah for Rain","After many hot days, it finally rained. Mahrukh ran to the window and said \"Alhamdulillah!\" The plants looked happy too. Ask: What did Mahrukh say when it rained?"]),
   TP("Cleanliness","",[
    pg("Clean Habits","Circle clean or not clean.","Know habits that keep us clean.",CH("",[["washing hands before eating",0],["brushing teeth",0],["wearing dirty clothes",1],["cutting nails",0],["throwing litter",1]],["clean","not clean"])),
    pg("Keep It Clean","Match the place to how we keep it clean.","Keep places clean.",MA("Write the letter.",["my body","my room","my school","my street"],["bath every day","tidy my toys","use the dustbin","no littering"])),
@@ -65,7 +65,7 @@ addPlus("islamiat",{
    ["Put water out for birds on hot days.","Talk about being gentle with pets.","Plant a tree together."],
    ["Make a bird feeder.","Water the plants every day."],
    ISL_NOTE,
-   ["The Thirsty Sparrow","On a hot summer day, Usman saw a thirsty sparrow. He put a bowl of water on the roof. Soon many birds came to drink. Ask: How did Usman help the birds?"])
+   ["The Thirsty Sparrow","On a hot summer day, Daniyal saw a thirsty sparrow. He put a bowl of water on the roof. Soon many birds came to drink. Ask: How did Daniyal help the birds?"])
  ],
  g2:[
   TP("Angels","",[
@@ -121,7 +121,7 @@ addPlus("islamiat",{
    ["Share food with neighbours on special days.","Let your child greet guests politely.","Visit an elderly neighbour together."],
    ["Bake something for a neighbour.","Practise welcoming guests with toys."],
    ISL_NOTE,
-   ["The Sick Neighbour","Aunty Razia next door was ill. Ammi and Ayesha took her soup and medicine. Aunty smiled and made dua for them. Ask: How did Ayesha help her neighbour?"]),
+   ["The Sick Neighbour","Aunty Razia next door was ill. Ammi and Mahrukh took her soup and medicine. Aunty smiled and made dua for them. Ask: How did Mahrukh help her neighbour?"]),
   TP("Hazrat Ibrahim (AS)","",[
    pg("His Story","Fill in.","Know the story of Hazrat Ibrahim (AS).",BK(["Kaaba","Ismail","Eid-ul-Adha","obeyed"]),F("",["Hazrat Ibrahim (AS) always {{obeyed}} Allah.","His son was Hazrat {{Ismail}} (AS).","Together they built the {{Kaaba}}.","We remember his sacrifice on {{Eid-ul-Adha}}."])),
    pg("Lessons","True or false?","Learn from the story.",CH("",[["Hazrat Ibrahim (AS) trusted Allah.",0],["He gave up easily.",1],["We can learn obedience from him.",0]],TF)),
@@ -134,8 +134,8 @@ addPlus("islamiat",{
  ],
  g3:[
   TP("Khulafa-e-Rashideen","",[
-   pg("The Four Caliphs","Write the caliphs in order: 1 to 4.","Know the four rightly guided caliphs in order.",F("",["Hazrat Usman (RA) {{3}}","Hazrat Abu Bakr (RA) {{1}}","Hazrat Ali (RA) {{4}}","Hazrat Umar (RA) {{2}}"])),
-   pg("Famous For","Match the caliph to something he is known for.","Know facts about the caliphs.",MA("Write the letter.",["Hazrat Abu Bakr (RA)","Hazrat Umar (RA)","Hazrat Usman (RA)","Hazrat Ali (RA)"],["the first caliph and closest friend of the Holy Prophet (PBUH)","known for justice","had copies of the Quran made and sent to cities","known for bravery and knowledge"])),
+   pg("The Four Caliphs","Write the caliphs in order: 1 to 4.","Know the four rightly guided caliphs in order.",F("",["Hazrat Daniyal (RA) {{3}}","Hazrat Abu Bakr (RA) {{1}}","Hazrat Ali (RA) {{4}}","Hazrat Umar (RA) {{2}}"])),
+   pg("Famous For","Match the caliph to something he is known for.","Know facts about the caliphs.",MA("Write the letter.",["Hazrat Abu Bakr (RA)","Hazrat Umar (RA)","Hazrat Daniyal (RA)","Hazrat Ali (RA)"],["the first caliph and closest friend of the Holy Prophet (PBUH)","known for justice","had copies of the Quran made and sent to cities","known for bravery and knowledge"])),
    pg("Good Leaders","Write two qualities of a good leader.","Learn from good leaders.",WR("",["1. ______________________","2. ______________________"]))],
    "The four rightly guided caliphs who led the Muslims after the Holy Prophet (PBUH).",
    ["Read about one caliph each day from your child's Islamiat book.","Talk about fairness and honesty in leaders.","Make a timeline of the four caliphs."],
@@ -168,7 +168,7 @@ addPlus("islamiat",{
    ["Prepare for Jumu'ah together: bath and clean clothes.","Talk about listening quietly to the khutbah.","Go to the mosque together if you can."],
    ["Make Friday a special family day.","Learn the names of the five prayers again."],
    ISL_NOTE,
-   ["Early to the Mosque","On Friday, Usman bathed, wore his white kurta and walked early to the mosque with Dada. They sat in the front row. Ask: How did Usman get ready?"]),
+   ["Early to the Mosque","On Friday, Daniyal bathed, wore his white kurta and walked early to the mosque with Dada. They sat in the front row. Ask: How did Daniyal get ready?"]),
   TP("Rights of others","",[
    pg("Whose Right?","Match the person to a right they have.","Know the rights of others.",MA("Write the letter.",["parents","neighbours","orphans","friends"],["respect and obedience","kindness and help","care and protection","loyalty and honesty"])),
    pg("Fair or Unfair?","Circle fair or unfair.","Respect others' rights.",CH("",[["waiting for your turn",0],["taking someone's things without asking",1],["sharing fairly",0],["making fun of someone",1]],["fair","unfair"])),
@@ -318,7 +318,7 @@ addPlus("computer",{
    ["Agree on screen time rules together.","Have screen-free meals.","Set a timer for screen time."],
    ["Plan a screen-free afternoon.","Read together instead of screens at bedtime."],
    "Children copy adults. Keep your own phone away at meals.",
-   ["The Screen-Free Sunday","On Sunday, Usman's family put away all screens. They flew kites, played ludo and cooked together. \"Best Sunday ever!\" said Usman. Ask: What did the family do?"]),
+   ["The Screen-Free Sunday","On Sunday, Daniyal's family put away all screens. They flew kites, played ludo and cooked together. \"Best Sunday ever!\" said Daniyal. Ask: What did the family do?"]),
   TP("Taking care of devices","",[
    pg("Device Care","Circle good care.","Care for devices.",CH("",[["using a cover",0],["dropping it",1],["charging properly",0],["cleaning gently",0]],["good care","bad care"])),
    pg("Battery Tips","True or false?","Know battery safety.",CH("",[["Do not charge near water.",0],["Use the right charger.",0],["Leave it charging on the bed all night.",1]],TF)),
@@ -383,7 +383,7 @@ addPlus("computer",{
    ["Talk about what is OK to share online.","Ask: Would I be happy for everyone to see this?","Check privacy settings together."],
    ["Make a \"think before you post\" poster.","Look at what is online about your family together."],
    "Even deleted posts can be saved by others. Teach caution early.",
-   ["The Footprints in the Sand","Usman walked on the beach and left footprints. \"Online, our footprints stay much longer,\" said Abbu. Ask: What is a digital footprint?"]),
+   ["The Footprints in the Sand","Daniyal walked on the beach and left footprints. \"Online, our footprints stay much longer,\" said Abbu. Ask: What is a digital footprint?"]),
   TP("Robots and AI","",[
    pg("Robots Around Us","Match the robot to its job.","Know robots in daily life.",MA("Write the letter.",["robot vacuum","factory robot arm","Mars rover","voice assistant"],["cleans floors","builds cars","explores space","answers questions"])),
    pg("Smart Machines","True or false?","Understand AI simply.",CH("",[["AI helps computers learn from examples.",0],["Robots always make the right choice.",1],["People design and program robots.",0]],TF)),

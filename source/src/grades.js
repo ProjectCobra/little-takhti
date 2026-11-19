@@ -406,7 +406,7 @@ g2:{
    ["Look at a map of Pakistan and trace each province.","Say each capital and find it.","Mark your own city and the cities where relatives live."],
    ["Plan a pretend trip from Karachi to Gilgit.","Cook or taste a dish from another province."],
    "Children may think the capital is Karachi or Lahore. Remind them it is Islamabad.",
-   ["Letters from Cousins","Ayesha got letters from her cousins in Quetta, Peshawar and Karachi. Each one wrote about the food and weather in their city. Ask: Which provinces are these cities in?"])],
+   ["Letters from Cousins","Mahrukh got letters from her cousins in Quetta, Peshawar and Karachi. Each one wrote about the food and weather in their city. Ask: Which provinces are these cities in?"])],
  urdu:[
   TP("واحد جمع","Singular and plural",[
    pg("جمع بنائیں|Make it plural","ہر لفظ کی جمع لکھیں۔","Write the plural of Urdu nouns.",F("",["کتاب ← {{کتابیں}}","لڑکا ← {{لڑکے}}","پھول ← {{پھول}}","گھر ← {{گھر}}","کمرہ ← {{کمرے}}","بکری ← {{بکریاں}}","چڑیا ← {{چڑیاں}}","میز ← {{میزیں}}"],2,1)),

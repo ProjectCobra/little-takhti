@@ -9,7 +9,7 @@ addPlus("social",{
    ["Talk about your child's school day: who did you meet?","Ask why each school rule matters.","Say thank you to school staff together."],
    ["Make a card for a teacher or the school guard.","Pack the school bag together the night before."],
    "Some children feel shy at school. Ask about one happy moment each day.",
-   ["Uncle Rahim the Guard","Every morning, Uncle Rahim opened the school gate and smiled at each child. One day Ayesha brought him a cup of chai and a thank-you card. Ask: Why do you think Ayesha thanked him?"]),
+   ["Uncle Rahim the Guard","Every morning, Uncle Rahim opened the school gate and smiled at each child. One day Mahrukh brought him a cup of chai and a thank-you card. Ask: Why do you think Mahrukh thanked him?"]),
   TP("Community helpers","",[
    pg("Who Helps Us?","Match the helper to their job.","Name community helpers.",MA("Write the letter in the box.",["doctor","police officer","firefighter","postman","farmer"],["treats sick people","keeps us safe","puts out fires","brings letters","grows our food"])),
    pg("Where Do They Work?","Circle the place.","Match helpers to their workplaces.",CH("",[["doctor",["hospital","bakery"],0],["baker",["bakery","farm"],0],["pilot",["aeroplane","school"],0],["shopkeeper",["shop","river"],0],["teacher",["school","airport"],0]])),
@@ -56,7 +56,7 @@ addPlus("social",{
    ["Talk about how your family celebrates Eid.","Learn how friends of other faiths celebrate their festivals.","Make Eid cards together."],
    ["Help prepare a festival dish.","Wish neighbours on their festivals."],
    "Pakistan has people of many faiths. Learning about all festivals builds respect.",
-   ["Two Festivals, One Street","On Eid, Ayesha shared sheer khurma with her neighbour Sarah. At Christmas, Sarah brought Ayesha a slice of cake. \"Festivals are better when we share,\" said Ammi. Ask: What did the girls share?"])
+   ["Two Festivals, One Street","On Eid, Mahrukh shared sheer khurma with her neighbour Sarah. At Christmas, Sarah brought Mahrukh a slice of cake. \"Festivals are better when we share,\" said Ammi. Ask: What did the girls share?"])
  ],
  g3:[
   TP("Our government","",[
@@ -85,7 +85,7 @@ addPlus("social",{
    ["Listen to songs in different Pakistani languages.","Cook a dish from another province.","Find each province on a map."],
    ["Learn to say hello in a new Pakistani language.","Make a scrapbook of cultures."],
    "Many languages are spoken in each province. These are examples, not the only languages.",
-   ["The Cultural Day","At school Cultural Day, Ayesha wore an ajrak, Gul wore a Balochi dress, Omar brought chapli kebabs and Hira sang a Punjabi song. Everyone sang the national anthem together. Ask: What did all the children do together?"])
+   ["The Cultural Day","At school Cultural Day, Mahrukh wore an ajrak, Gul wore a Balochi dress, Omar brought chapli kebabs and Hira sang a Punjabi song. Everyone sang the national anthem together. Ask: What did all the children do together?"])
  ]});
 
 addPlus("history",{
@@ -323,7 +323,7 @@ addPlus("urdu",{
 /* bilingual weekly guide entries for the new Urdu topics */
 (function(){const add=(id,list)=>{(URW[id]=URW[id]||[]).push(...list)};
  add('nursery-urdu',[
-  W('Letters and pictures',['Hear the first letter of Urdu words and match letters to pictures.','لفظوں کا پہلا حرف سننا اور حروف کو تصویروں سے ملانا۔'],[['Play I Spy with Urdu letters.','اردو حروف کے ساتھ \"میں دیکھ رہا ہوں\" کھیلیں۔'],['Make a letter book with drawings.','تصویروں کے ساتھ حروف کی کتاب بنائیں۔']],['The Pomegranate Seller','A pomegranate seller came down the street. Ayesha ran out and bought a red pomegranate. Ask: What did Ayesha buy?']),
+  W('Letters and pictures',['Hear the first letter of Urdu words and match letters to pictures.','لفظوں کا پہلا حرف سننا اور حروف کو تصویروں سے ملانا۔'],[['Play I Spy with Urdu letters.','اردو حروف کے ساتھ \"میں دیکھ رہا ہوں\" کھیلیں۔'],['Make a letter book with drawings.','تصویروں کے ساتھ حروف کی کتاب بنائیں۔']],['The Pomegranate Seller','A pomegranate seller came down the street. Mahrukh ran out and bought a red pomegranate. Ask: What did Mahrukh buy?']),
   W('Colours and counting',['Name colours and count to five in Urdu.','اردو میں رنگوں کے نام اور پانچ تک گنتی۔'],[['Sort clothes by colour and name them in Urdu.','کپڑوں کو رنگ کے حساب سے الگ کریں اور اردو میں نام لیں۔'],['Count rotis at dinner in Urdu.','کھانے پر روٹیاں اردو میں گنیں۔']],['Colourful Butterflies','There were three butterflies in the garden: yellow, blue and red. Ask: How many butterflies were there?']),
   W('Little rhymes',['Say a traditional Urdu rhyme and hear rhyming words.','روایتی اردو نظم پڑھنا اور ہم آواز الفاظ سننا۔'],[['Sing the fish rhyme at bath time.','نہاتے وقت مچھلی والی نظم گائیں۔'],['Make up a rhyme about a pet.','کسی پالتو جانور پر نظم بنائیں۔']],['The Little Fish','A little fish met a frog in the pond and they became friends. Ask: Who did the fish meet?'])]);
  add('kg-urdu',[
@@ -332,7 +332,7 @@ addPlus("urdu",{
   W('Reading sentences',['Read and copy short Urdu sentences.','چھوٹے اردو جملے پڑھنا اور لکھنا۔'],[['Write a short Urdu note for your child.','بچے کے لیے روز ایک چھوٹا اردو پیغام لکھیں۔'],['Read Urdu signs in the market.','بازار میں اردو بورڈ پڑھیں۔']],["Ali's Ball",'Ali\'s red ball rolled under a tree, and his sister found it. Ask: Where did the ball go?'])]);
  add('urdu',[
   W('One and many',['Write singular and plural Urdu words.','اردو کے واحد اور جمع الفاظ لکھنا۔'],[['Count fruit at the market in Urdu.','بازار میں پھل اردو میں گنیں۔'],['Make singular and plural word cards.','واحد جمع کے کارڈ بنائیں۔']],['Many Sparrows','One sparrow came in the morning, then two more, and by evening there were many. Ask: How many sparrows came in the morning?']),
-  W("Poem: A Child's Prayer",["Read and recite Allama Iqbal's poem.",'علامہ اقبال کی نظم پڑھنا اور یاد کرنا۔'],[['Recite the poem together each morning.','روز صبح مل کر نظم پڑھیں۔'],['Light a candle and talk about its meaning.','شمع جلا کر اس کا مطلب سمجھائیں۔']],['The Candle','The lights went out. Ayesha lit a candle and the whole room glowed. Ask: What happened when she lit the candle?']),
+  W("Poem: A Child's Prayer",["Read and recite Allama Iqbal's poem.",'علامہ اقبال کی نظم پڑھنا اور یاد کرنا۔'],[['Recite the poem together each morning.','روز صبح مل کر نظم پڑھیں۔'],['Light a candle and talk about its meaning.','شمع جلا کر اس کا مطلب سمجھائیں۔']],['The Candle','The lights went out. Mahrukh lit a candle and the whole room glowed. Ask: What happened when she lit the candle?']),
   W('Reading a story',['Read a short story and answer questions.','چھوٹی کہانی پڑھ کر سوالوں کے جواب دینا۔'],[['Read an Urdu storybook at bedtime.','سونے سے پہلے اردو کہانی پڑھیں۔'],['Act out the thirsty crow with stones and water.','کنکر اور پانی سے پیاسے کوے کی کہانی کر کے دکھائیں۔']],['The Clever Crow','On a hot day a crow dropped pebbles into a pot until the water rose. Ask: What lesson does this story teach?'])]);
  add('g2-urdu',[
   W('Reading for meaning',['Answer questions about a passage in full sentences.','عبارت کے سوالوں کے جواب مکمل جملوں میں دینا۔'],[['Read an Urdu children\'s magazine.','بچوں کا اردو رسالہ پڑھیں۔'],['Talk about your day in Urdu.','اپنے دن کے بارے میں اردو میں بات کریں۔']],['Chand Raat','On Chand Raat, Zainab bought bangles with Ammi and had mehndi put on her hands. Ask: What did Zainab buy?']),

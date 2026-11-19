@@ -3,6 +3,7 @@
 # Usage: source/tools/build.sh            rebuild pages (keeps existing PDFs and thumbnails)
 #        source/tools/build.sh --pdf      also regenerate every worksheet PDF
 #        ONLY=g2-maths source/tools/build.sh --pdf   regenerate only PDFs whose id contains this text
+#        ONLY_RE="^(science|maths)-" source/tools/build.sh --pdf   regenerate PDFs whose id matches this regex
 set -e
 T="$(cd "$(dirname "$0")" && pwd)"; S="$T/.."; R="$S/.."
 # PDFs and thumbnails live only in site/ to keep the repo small: bring them into source/ for the build

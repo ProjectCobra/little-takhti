@@ -223,7 +223,7 @@ g3:[
   ["Read the poem aloud twice, slowly.","Ask: What picture does this poem make in your mind?","Underline the describing words."],
   ["Learn one poem by heart and say it to the family.","Write an acrostic for your name."],
   "Poetry is meant to be felt. Ask \"How does this poem make you feel?\" as well as \"What does it mean?\"",
-  ["The Wind and the Kite","Usman's kite would not fly. Then the leaves began to tremble and the trees bent their heads. \"The wind is here!\" he shouted, and his kite rose high. Ask: How did Usman know the wind had come?"]),
+  ["The Wind and the Kite","Daniyal's kite would not fly. Then the leaves began to tremble and the trees bent their heads. \"The wind is here!\" he shouted, and his kite rose high. Ask: How did Daniyal know the wind had come?"]),
  TP("Main idea and inference","",[
   pg("The Markhor","Read the passage. Circle the best answer.","Find the main idea of a passage.",PA("The markhor is the national animal of Pakistan. It is a wild goat that lives high in the mountains of the north. Its long horns twist like corkscrews. Markhors are very good climbers and can stand on narrow, rocky ledges. In winter they move down the mountains to find food. Not many markhors are left, so people now protect them."),CH("",[["What is the passage mostly about?",["the markhor","the mountains","winter food"],0],["Why do markhors move down in winter?",["to find food","to see people","to swim"],0],["Why do people protect markhors?",["not many are left","they are pets","they live in cities"],0]])),
   pg("Inference","Read. Use clues to work out the answer.","Infer feelings and reasons from clues in a text.",CH("",[["Hina hugged her trophy and could not stop smiling. How did Hina feel?",["proud","bored","scared"],0],["Omar put on his coat, scarf and gloves. What was the weather like?",["cold","hot","rainy"],0],["The road was wet and there were puddles everywhere. What happened?",["it rained","it snowed","it was windy"],0],["Saad's tummy rumbled loudly in class. What did Saad need?",["food","sleep","a book"],0]])),
@@ -241,5 +241,5 @@ g3:[
   ["Look at a real invitation card and find who, what, when and where.","Follow a recipe together and number the steps.","Talk about the day before writing the diary."],
   ["Make an invitation for a family dinner.","Keep a diary for one week, writing three sentences each night."],
   "A diary uses I and the past tense. Remind your child to say how they felt, not only what they did.",
-  ["Ayesha's Diary","Dear Diary, today was Sports Day. First, I ran the sack race and fell over! Then, I won the spoon race. I felt so proud when Abbu cheered. Ask: How did Ayesha feel when she won?"])
+  ["Mahrukh's Diary","Dear Diary, today was Sports Day. First, I ran the sack race and fell over! Then, I won the spoon race. I felt so proud when Abbu cheered. Ask: How did Mahrukh feel when she won?"])
 ]});

@@ -144,7 +144,7 @@ function sharePage(){const me=FAM.me&&FAM.me.id?FAM.me:null;
   <div class="kf-row"><label for="stype">Type</label><select id="stype">${SHARE_TYPES.map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></div>
   <div class="kf-row"><label for="sgrade">Grade</label><select id="sgrade">${GRADES.filter(g=>!g.hidden).map(g=>`<option value="${g.id}" ${g.id===grade?'selected':''}>${g.name}</option>`).join('')}</select></div>
   <div class="kf-row"><label for="ssub">Subject</label><select id="ssub">${Object.entries(KIND).map(([k,v])=>`<option value="${k}">${v.name}</option>`).join('')}</select></div>
-  <div class="kf-row"><label for="scredit">Credit as <span class="opt">(optional)</span></label><input id="scredit" maxlength="60" placeholder="e.g. Ms Ayesha, Lahore"></div>
+  <div class="kf-row"><label for="scredit">Credit as <span class="opt">(optional)</span></label><input id="scredit" maxlength="60" placeholder="e.g. Ms Mahrukh, Lahore"></div>
   <div class="kf-row full"><label for="sdesc">Short description</label><textarea id="sdesc" rows="3" maxlength="1200" placeholder="What does it cover? Which book or chapter is it from?"></textarea></div>
   <div class="kf-row full"><span class="lbl">Files <span class="opt">(PDF, Word, PowerPoint or pictures, up to 5 files, ${SHARE_MAX_MB} MB each)</span></span>
    <div class="hatt"><label class="btn"><input type="file" id="sfile" multiple accept=".pdf,.doc,.docx,.pptx,image/png,image/jpeg,image/webp" hidden>${I('<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>',2)}Choose files</label></div>

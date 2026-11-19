@@ -19,7 +19,8 @@ const KIND={
  gk:{name:'General Knowledge',sheet:['#0D9488','#D7F3EF']},
  urdu:{name:'Urdu',ur:'اردو',sheet:['#6447CC','#EBE6FB']},
  islamiat:{name:'Islamiat',sheet:['#0F7A5A','#DDF2EA']},
- computer:{name:'Computer',sheet:['#475569','#E5E9F0']}};
+ computer:{name:'ICT',sheet:['#475569','#E5E9F0']},
+ ai:{name:'AI',sheet:['#7C3AED','#EEE7FD']}};
 const REFS={
  english:'Logic of English, Beowulf Grammar, IEW Structure and Style, Oxford',
  maths:'Singapore Maths, Dimensions Math, Beast Academy',
@@ -30,7 +31,8 @@ const REFS={
  social:'Pakistan Single National Curriculum',
  urdu:'Nardban Urdu, Kashf Urdu',
  islamiat:'National Curriculum of Pakistan Islamiat, Grades 1 to 3',
- computer:'National Curriculum of Pakistan Computing'};
+ computer:'National Curriculum of Pakistan Computing',
+ ai:'AI4K12 Five Big Ideas, MIT Day of AI, UNICEF Guidance on AI and Children'};
 const ICON={
  english:'<path d="M3 5.5c3-1.3 6-1.3 9 .8 3-2.1 6-2.1 9-.8v13.5c-3-1.3-6-1.3-9 .8-3-2.1-6-2.1-9-.8z"/><path d="M12 6.3v13.4"/>',
  maths:'<path d="M7 4v6M4 7h6M14 7h6M5 15l4 4M9 15l-4 4M14 15.5h6M14 18.5h6"/>',
@@ -40,7 +42,8 @@ const ICON={
  geography:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
  gk:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.9.7 1.5 1.6 1.5 2.6V17h4v-.5c0-1 .6-1.9 1.5-2.6A6 6 0 0 0 12 3z"/>',
  islamiat:'<path d="M15.5 3.5a8.5 8.5 0 1 0 5 13.6A7 7 0 1 1 15.5 3.5z"/><path d="M17.5 8l.9 1.9 2.1.3-1.5 1.5.4 2.1-1.9-1-1.9 1 .4-2.1-1.5-1.5 2.1-.3z"/>',
- computer:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>'};
+ computer:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+ ai:'<rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9.5 16h5M3 12v3M21 12v3"/>'};
 const subIcon=(s)=>s.kind==='urdu'?'<span class="ur-t">ب</span>':`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${ICON[s.kind]}</svg>`;
 
 const SUBJECTS=[
@@ -49,7 +52,7 @@ const SUBJECTS=[
  {id:'science',kind:'science',grade:'g1',topics:['Energy','Heat','Light','Sound']},
  {id:'social',kind:'social',grade:'g1',topics:['Family','Feelings','House rules']},
  {id:'urdu',kind:'urdu',grade:'g1',rtl:true,topics:['چھوٹی اشکال','شرارتی نو','مصوّتے','بصری الفاظ']}];
-const ORDER=['english','maths','science','history','geography','social','gk','urdu','islamiat','computer'];
+const ORDER=['english','maths','science','history','geography','social','gk','urdu','islamiat','computer','ai'];
 /* English levels moved up one grade: Grade 1 English uses the former Grade 2 topics, Grade 2 the former Grade 3,
    and Grade 3 has new topics at Grade 4 level. The original Grade 1 English stays in Grade 1 as an English Warm-up. */
 {const take=g=>{const a=[...((GRADE_DATA[g]||{}).english||[]),...((PLUS[g]||{}).english||[])];if(PLUS[g])delete PLUS[g].english;return a};
@@ -98,19 +101,21 @@ SUBJECTS.forEach(s=>{
 ['A giraffe is {{taller}}','The {{tiny}} ant','{{First}}, boil the water','Turn {{left}} at the shop','آسمان {{نیلا}}','{{یہ}} میرا قلم','The cat is {{sleeping}}','Belief in {{Allah}}'].forEach(m=>SUBJECTS.forEach(s=>PAGES[s.id].forEach(p=>p.blocks.forEach(b=>{if(b.t==='fill'&&b.items.some(it=>it.includes(m)))b.nq=1}))));
 const RID=Object.fromEntries(RES.map(r=>[r.id,r]));
 /* every subject gets a final revision week so all subjects run to the same number of weeks */
-const WEEKS_TARGET=Math.max(...SUBJECTS.filter(s=>!s.community).map(s=>(PLAN[s.id]||[]).length));
+const WEEKS_TARGET=Math.max(...SUBJECTS.filter(s=>!s.community).map(s=>(PLAN[s.id]||[]).length))+1;
 const REV_STORY={
  english:["The Word Detective","Sara looked back at her English book and found her favourite words from every week: nouns, rhymes and new spellings. She made a word wall for the fridge. Ask: Which word from this term is your favourite?"],
  maths:["The Maths Fair","At the maths fair, each stall showed something the class had learnt: counting, shapes, money and time. Bilal won a prize for the fastest answers! Ask: What maths did you learn this term?"],
  science:["The Science Show","Hira's class held a science show. They showed plants, magnets, light and water. Parents asked lots of questions. Ask: Which experiment would you show?"],
  social:["The Class Scrapbook","Grade students made a scrapbook of everything they learnt about family, community and Pakistan. Ask: What would you add to the scrapbook?"],
- history:["The Time Machine","Usman pretended to travel in a time machine to every place he studied this term. He waved to ancient builders and great leaders. Ask: Where would you travel in a time machine?"],
+ history:["The Time Machine","Daniyal pretended to travel in a time machine to every place he studied this term. He waved to ancient builders and great leaders. Ask: Where would you travel in a time machine?"],
  geography:["Around Pakistan","Zara drew a big map and marked every place she learnt about: mountains, rivers, cities and deserts. Ask: Which place would you like to visit?"],
  gk:["The Quiz Show","The class held a quiz show with questions from every topic. Everyone got stars for trying. Ask: What is one new fact you learnt?"],
  islamiat:["The Good Deeds Tree","The class made a paper tree. Each leaf had a good deed or lesson from Islamiat this term. Ask: Which lesson will you remember most?"],
  computer:["The Computer Showcase","Each child showed their best computer work: drawings, slides and safe internet posters. Ask: What computer skill are you proud of?"],
+ ai:["The Robot Fair","The class held a robot fair. Each child showed a poster about AI: patterns, data, safe questions and fair robots. Ask: What is one AI rule you will always follow?"],
  urdu:["دہرائی کا دن","آج سب بچوں نے اپنی اردو کی کاپیاں دیکھیں اور اپنے پسندیدہ اسباق دوبارہ پڑھے۔ استانی نے سب کو شاباش دی۔ سوال: آپ کا پسندیدہ اردو سبق کون سا ہے؟"]};
-SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||plan.length!==WEEKS_TARGET-1)return;
+/* every subject ends with a revision week (subjects can now have different numbers of topics) */
+SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||plan.length<2)return;
  const pages=[];s.topics.forEach(t=>{const i=PAGES[s.id].findIndex(p=>p.topic===t);if(i>=0)pages.push(i)});
  const ur=!!s.rtl,G=GR[s.grade].name;
  const r={id:s.id+'-rev',sub:s.id,set:true,rev:true,title:ur?'دہرائی سیٹ':s.name+' Revision Set',en:ur?'Urdu revision set':'',topic:'Revision',pages:pages.slice(0,10),

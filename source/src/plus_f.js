@@ -18,7 +18,7 @@ addPlus("english",{
    ["Retell a favourite story in three parts.","Plan characters, setting and a problem together.","Use time words: one day, suddenly, in the end."],
    ["Tell a story together, taking turns with each sentence.","Write a story for a younger sibling."],
    "Good stories have a problem. Ask: What goes wrong, and how is it fixed?",
-   ["The Lost Kite","One windy day, Usman's kite got stuck in a tall tree. Suddenly a monkey climbed up and pulled it free! In the end, Usman shared his banana with the monkey. Ask: What was the problem in the story?"])
+   ["The Lost Kite","One windy day, Daniyal's kite got stuck in a tall tree. Suddenly a monkey climbed up and pulled it free! In the end, Daniyal shared his banana with the monkey. Ask: What was the problem in the story?"])
  ]});
 
 addPlus("maths",{
@@ -218,7 +218,7 @@ addPlus("social",{
    ["Talk about rights and responsibilities together.","Make sure your child knows trusted adults to talk to.","Discuss why all children should go to school."],
    ["Make a poster of children's rights.","Donate books to a school in need."],
    "Make clear your child can always tell you anything without getting in trouble.",
-   ["Every Child in School","Usman saw a boy his age selling flowers at the signal instead of going to school. He asked Abbu how they could help, and they donated books to a free school. Ask: What right should every child have?"]),
+   ["Every Child in School","Daniyal saw a boy his age selling flowers at the signal instead of going to school. He asked Abbu how they could help, and they donated books to a free school. Ask: What right should every child have?"]),
   TP("Trade","",[
    pg("Imports and Exports","Fill in.","Understand imports and exports.",BK(["export","import","cotton","oil"]),F("",["When we sell goods to other countries, we {{export}}.","When we buy goods from other countries, we {{import}}.","Pakistan exports {{cotton}} cloth.","Pakistan imports {{oil}}."])),
    pg("Made Where?","Look at things at home. Write where they were made.","Find where goods come from.",WR("",["______________ was made in ______________.","______________ was made in ______________."])),
@@ -245,7 +245,7 @@ addPlus("social",{
    ["Talk about hotter summers and heatwaves.","Switch off lights and fans when not needed.","Plant a tree together."],
    ["Make a family green pledge.","Walk or cycle for short trips."],
    "Keep it hopeful. Focus on what children can do.",
-   ["The Tree Planting Day","On Tree Planting Day, Ayesha's school planted 100 saplings. \"They will give shade and clean air,\" said the teacher. Ask: Why do we plant trees?"]),
+   ["The Tree Planting Day","On Tree Planting Day, Mahrukh's school planted 100 saplings. \"They will give shade and clean air,\" said the teacher. Ask: Why do we plant trees?"]),
   TP("Respect and tolerance","",[
    pg("Respect","Circle respectful actions.","Show respect for others.",CH("",[["listening when others speak",0],["laughing at someone's accent",1],["learning about other faiths",0],["including a new student",0],["name-calling",1]],["respectful","not respectful"])),
    pg("Many Faiths","Match the place of worship to the faith.","Know places of worship in Pakistan.",MA("Write the letter.",["mosque","church","temple","gurdwara"],["Muslims","Christians","Hindus","Sikhs"])),

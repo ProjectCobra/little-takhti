@@ -111,7 +111,7 @@ addPlus("social",{
    ["Practise stop, look, listen on every walk.","Point out traffic lights and zebra crossings.","Always wear seatbelts in the car."],
    ["Make paper traffic lights and play \"red light, green light\".","Talk about safe places to play."],
    "Children can't judge speed well. They must always cross with a grown-up.",
-   ["The Zebra Crossing","Ayesha and Abbu waited at the zebra crossing. When the cars stopped, they crossed safely together. Ask: Where did they cross the road?"])
+   ["The Zebra Crossing","Mahrukh and Abbu waited at the zebra crossing. When the cars stopped, they crossed safely together. Ask: Where did they cross the road?"])
  ],
  g2:[
   TP("Needs and wants","",[
@@ -225,7 +225,7 @@ addPlus("history",{
    ["Visit a museum or historic place.","Look at old coins or photos at home.","Talk about why we must not write on old walls."],
    ["Make a family time capsule.","Take a virtual museum tour online."],
    "Teach respect for old buildings: no writing or scratching on them.",
-   ["The Fort on the Hill","Usman's family visited Rohtas Fort. Its huge walls were built almost 500 years ago. Usman imagined soldiers on top. Ask: What did Usman imagine?"])
+   ["The Fort on the Hill","Daniyal's family visited Rohtas Fort. Its huge walls were built almost 500 years ago. Daniyal imagined soldiers on top. Ask: What did Daniyal imagine?"])
  ]});
 
 addPlus("geography",{

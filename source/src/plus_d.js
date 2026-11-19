@@ -60,7 +60,7 @@ addPlus("maths",{
    ["Clap a pattern: clap, stamp, clap, stamp.","Make patterns with buttons or pasta.","Say the pattern out loud before adding the next piece."],
    ["Thread beads in a two-colour pattern.","Find patterns on clothes and tiles."],
    "Start with two items (AB). Move to ABC only when AB is easy.",
-   ["Ammi's Bangles","Ammi wore bangles in a pattern: red, gold, red, gold. Ayesha copied it with her paper bangles. Ask: What colour comes after gold?"]),
+   ["Ammi's Bangles","Ammi wore bangles in a pattern: red, gold, red, gold. Mahrukh copied it with her paper bangles. Ask: What colour comes after gold?"]),
   TP("First, next, last","",[
    pg("Who Is First?","Listen to the race. Circle the answer.","Use first, second and last.",PA("Ali came first. Sara came second. Bilal came last."),CH("",[["Who came first?",["Ali","Bilal"],0],["Who came last?",["Bilal","Sara"],0],["Who came second?",["Sara","Ali"],0]])),
    pg("In Order","What happens first? Circle.","Put events in order.",CH("",[["Wash hands or eat lunch?",["wash hands","eat lunch"],0],["Wake up or brush teeth?",["wake up","brush teeth"],0],["Put on socks or shoes?",["socks","shoes"],0]])),
@@ -176,7 +176,7 @@ addPlus("gk",{
    ["Count the ways your family uses water today.","Turn off the tap while brushing teeth.","Water plants together."],
    ["Collect rainwater for plants.","Make a \"save water\" sticker."],
    "Pakistan needs to save water. Small habits at home make a big difference.",
-   ["The Dripping Tap","Drip, drip, drip went the tap all night. Ayesha told Abbu, and he fixed it. \"Now we save water!\" said Ayesha. Ask: What did Ayesha notice?"]),
+   ["The Dripping Tap","Drip, drip, drip went the tap all night. Mahrukh told Abbu, and he fixed it. \"Now we save water!\" said Mahrukh. Ask: What did Mahrukh notice?"]),
   TP("Festivals","",[
    pg("Which Festival?","Match the festival to what we do.","Know festivals in Pakistan.",MA("Write the letter.",["Eid-ul-Fitr","Eid-ul-Adha","Independence Day","Basant"],["new clothes and Eidi","sacrifice of animals","flags on 14 August","flying kites in spring"])),
    pg("Eid Day","Circle what we do on Eid.","Talk about Eid.",CH("",[["wear new clothes",0],["go to school",1],["visit family",0],["eat sweet dishes",0]],["yes","no"])),

@@ -14,6 +14,7 @@ const ART={
  class:['#E6F7DC',[['spiral-calendar',24,10,50,0],['backpack',2,42,28,-8],['crayon',70,40,28,14]]],
  islamiat:['#DDF2EA',[['open-book',24,14,52,0],['star',4,10,24,-10],['house',70,42,26,6]]],
  computer:['#E5E9F0',[['light-bulb',28,8,42,0],['input-latin-letters',2,40,30,-8],['rocket',70,10,26,12]]],
+ ai:['#EEE7FD',[['light-bulb',28,8,42,0],['rocket',2,40,30,-8],['glowing-star',70,10,26,12]]],
  quiz:['#FFF1C2',[['trophy',28,10,44,0],['kite',2,20,28,-14],['glowing-star',70,40,26,10]]]
 };
 const art=(k,label='')=>{const a=ART[k]||ART.quiz;

@@ -32,8 +32,9 @@ with sync_playwright() as p:
     pg.on('pageerror', lambda e: errs.append(str(e)))
     pg.goto('file://' + local)
     pg.wait_for_timeout(800)
-    ids = pg.evaluate('RES.map(r=>r.id)')
+    ids = pg.evaluate('[...new Set([...RES.map(r=>r.id),...Object.keys(RID).filter(k=>RID[k].pages&&RID[k].pages.length&&!RID[k].quizOnly)])]')  # revision sets live only in RID
     if os.environ.get('ONLY'): ids = [i for i in ids if os.environ['ONLY'] in i]
+    if os.environ.get('ONLY_RE'): ids = [i for i in ids if re.match(os.environ['ONLY_RE'], i)]
     if mode == 'check':
         # overflow check: render every sheet (worksheet + key) at full size
         over = pg.evaluate('''()=>{const out=[];const box=document.createElement('div');document.body.appendChild(box);

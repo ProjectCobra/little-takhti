@@ -203,7 +203,7 @@ addPlus("science",{
    ["Shine a torch on a ball in a dark room and turn the ball slowly.","Go out at night and look at the Moon together.","Never look straight at the Sun."],
    ["Keep a Moon diary for a week.","Watch the sunrise or sunset together."],
    "The Moon does not make its own light. It shines because sunlight falls on it.",
-   ["Waiting for the Eid Moon","On the 29th of Ramadan, the whole family went to the roof. Everyone looked west. \"There it is!\" shouted Ayesha, pointing at a thin silver crescent. Ask: What shape was the Moon?"])
+   ["Waiting for the Eid Moon","On the 29th of Ramadan, the whole family went to the roof. Everyone looked west. \"There it is!\" shouted Mahrukh, pointing at a thin silver crescent. Ask: What shape was the Moon?"])
  ],
  g3:[
   TP("Life cycles","",[
@@ -232,7 +232,7 @@ addPlus("science",{
    ["Mark your shadow with chalk in the morning and at noon.","Use a torch and a toy to make shadows.","Find east by watching the sunrise."],
    ["Make a model of the solar system with fruits of different sizes.","Use a compass app to find north."],
    "The Sun does not really move across the sky; the Earth spins. Explain with a torch and a ball.",
-   ["The Shadow Clock","Usman pushed a stick into the ground and marked its shadow every hour. In the morning the shadow was long, at noon it was short, and in the evening it was long again. Ask: When was the shadow shortest?"])
+   ["The Shadow Clock","Daniyal pushed a stick into the ground and marked its shadow every hour. In the morning the shadow was long, at noon it was short, and in the evening it was long again. Ask: When was the shadow shortest?"])
  ]});
 
 addPlus("gk",{

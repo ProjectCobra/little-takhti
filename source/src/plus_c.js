@@ -60,7 +60,7 @@ addPlus("islamiat",{
    ["Look at an Islamic calendar together.","Find this month's name in the Islamic calendar.","Look for the new moon at the start of a month."],
    ["Mark Ramadan and the two Eids on a calendar.","Learn three month names a week."],
    "Islamic months follow the moon, so Ramadan and Eid come about 10 or 11 days earlier each year.",
-   ["Looking for the Moon","On the 29th of Shaban, Ayesha and her family went to the roof to look for the new moon. \"There it is!\" she said. \"Ramadan starts tomorrow!\" Ask: Which month comes after Shaban?"])
+   ["Looking for the Moon","On the 29th of Shaban, Mahrukh and her family went to the roof to look for the new moon. \"There it is!\" she said. \"Ramadan starts tomorrow!\" Ask: Which month comes after Shaban?"])
  ],
  g3:[
   TP("The Holy Quran","",[
@@ -120,7 +120,7 @@ addPlus("computer",{
    ["Show your child two things you use a computer for at work or home.","Agree on simple screen time rules.","Praise your child for asking before using a device."],
    ["Use a paint program together.","Make a screen time chart."],
    "Screens are useful, but play, books and sleep come first at this age.",
-   ["Video Call with Nani","Nani lives in another city. On Sunday, Ayesha and Ammi made a video call on the laptop. Ayesha showed Nani her new drawing. Ask: How did Ayesha talk to Nani?"])
+   ["Video Call with Nani","Nani lives in another city. On Sunday, Mahrukh and Ammi made a video call on the laptop. Mahrukh showed Nani her new drawing. Ask: How did Mahrukh talk to Nani?"])
  ],
  g2:[
   TP("Input and output","",[

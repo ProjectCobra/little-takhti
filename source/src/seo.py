@@ -11,11 +11,11 @@ e = lambda s: html.escape(str(s or ''), quote=True)
 GSLUG = {'nursery': 'nursery', 'kg': 'kg', 'g1': 'class-1', 'g2': 'class-2', 'g3': 'class-3'}
 GNAME = {'nursery': 'Nursery', 'kg': 'KG', 'g1': 'Class 1', 'g2': 'Class 2', 'g3': 'Class 3'}
 KNAME = {'english': 'English', 'maths': 'Maths', 'science': 'Science', 'social': 'Social Studies', 'history': 'History',
-         'geography': 'Geography', 'gk': 'General Knowledge', 'urdu': 'Urdu', 'islamiat': 'Islamiat', 'computer': 'Computer'}
+         'geography': 'Geography', 'gk': 'General Knowledge', 'urdu': 'Urdu', 'islamiat': 'Islamiat', 'computer': 'ICT', 'ai': 'AI'}
 KSLUG = {'english': 'english', 'maths': 'maths', 'science': 'science', 'social': 'social-studies', 'history': 'history',
-         'geography': 'geography', 'gk': 'general-knowledge', 'urdu': 'urdu', 'islamiat': 'islamiat', 'computer': 'computer'}
+         'geography': 'geography', 'gk': 'general-knowledge', 'urdu': 'urdu', 'islamiat': 'islamiat', 'computer': 'computer', 'ai': 'ai'}
 COL = {'english': '#1CB0F6', 'maths': '#FF9600', 'science': '#58CC02', 'social': '#FF4B4B', 'history': '#E5873A',
-       'geography': '#2B70C9', 'gk': '#00CD9C', 'urdu': '#CE82FF', 'islamiat': '#0F9D6E', 'computer': '#64748B'}
+       'geography': '#2B70C9', 'gk': '#00CD9C', 'urdu': '#CE82FF', 'islamiat': '#0F9D6E', 'computer': '#64748B', 'ai': '#7C3AED'}
 slug = lambda s: re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', s.lower())).strip('-')
 def topic_en(r):
     if r['id']=='english-write' or r['id'].endswith('-write-warmup'): return 'Warm-up Handwriting Practice'

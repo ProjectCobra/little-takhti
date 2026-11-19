@@ -2,7 +2,7 @@
 const LV={easy:{n:8,opts:3,hints:3,speed:20,label:'Easy',ur:'آسان',desc:'3 choices, extra time'},
  medium:{n:10,opts:4,hints:2,speed:12,label:'Medium',ur:'درمیانہ',desc:'4 choices, some new question types'},
  hard:{n:12,opts:4,hints:1,speed:9,label:'Hard',ur:'مشکل',desc:'Tricky choices, word problems, odd one out'}};
-const NAMES=['Ali','Ayesha','Hamza','Fatima','Bilal','Zainab','Usman','Hira','Ahmed','Maryam'];
+const NAMES=['Ali','Mahrukh','Hamza','Fatima','Bilal','Zainab','Daniyal','Hira','Ahmed','Maryam'];
 const THINGS=['mangoes','kites','marbles','samosas','crayons','balloons','stickers','oranges','pencils','biscuits'];
 const pickOne=a=>a[Math.floor(Math.random()*a.length)];
 const isNum=x=>/^\d+$/.test(String(x));
@@ -26,7 +26,7 @@ function variants(r,base,ur,lv){const out=[],add=x=>{if(x&&x.opts&&x.opts.length
   const m=!ur&&q.kind==='fill'&&ARITH.exec(String(q.raw).replace(/<[^>]+>/g,'').trim());
   if(m){const a=+m[1],op=m[2],b=+m[3],c=+m[4],plus=op==='+',minus=op==='-'||op==='−',times=op==='×'||op==='x';
    add({q:`${a} ${op} <span class="qbl"></span> = ${c}`,opts:[String(b),...closeNums(b)],ans:String(b),sub:'Find the missing number.',exp:`${a} ${op} <b class="exa">${b}</b> = ${c}`,kind:'missing'});
-   if(lv==='hard'&&a>=2&&b>=1){const nm=pickOne(NAMES),th=pickOne(THINGS),he=['Ayesha','Fatima','Zainab','Hira','Maryam'].includes(nm)?'She':'He';
+   if(lv==='hard'&&a>=2&&b>=1){const nm=pickOne(NAMES),th=pickOne(THINGS),he=['Mahrukh','Fatima','Zainab','Hira','Maryam'].includes(nm)?'She':'He';
     if(plus)add({q:`${nm} has ${a} ${th}. ${he} gets ${b} more. How many ${th} does ${he.toLowerCase()} have now?`,opts:[String(c),...closeNums(c)],ans:String(c),sub:'Word problem: read carefully.',exp:`${a} + ${b} = <b class="exa">${c}</b> ${th}`,kind:'word'});
     if(minus)add({q:`${nm} had ${a} ${th} and gave ${b} to a friend. How many ${th} are left?`,opts:[String(c),...closeNums(c)],ans:String(c),sub:'Word problem: read carefully.',exp:`${a} − ${b} = <b class="exa">${c}</b> ${th}`,kind:'word'});
     if(times)add({q:`There are ${a} plates with ${b} ${th} on each plate. How many ${th} are there in all?`,opts:[String(c),...closeNums(c)],ans:String(c),sub:'Word problem: read carefully.',exp:`${a} × ${b} = <b class="exa">${c}</b> ${th}`,kind:'word'});

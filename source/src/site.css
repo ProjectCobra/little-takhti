@@ -1236,7 +1236,7 @@ footer a{color:#fff!important;opacity:.95;font-weight:700}
 }
 @media (max-width:350px){.logo svg{display:none}.gsel select{max-width:96px}}
 .qstory{white-space:pre-line}
-:root{--k-islamiat:#0F9D6E;--k-islamiat-t:#DDF2EA;--k-computer:#64748B;--k-computer-t:#E5E9F0}
+:root{--k-islamiat:#0F9D6E;--k-islamiat-t:#DDF2EA;--k-computer:#64748B;--k-computer-t:#E5E9F0;--k-ai:#7C3AED;--k-ai-t:#EEE7FD}
 /* ---------- play zone, games, stories, parent tools ---------- */
 .emo{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;line-height:1;display:inline-block}.emo.big{font-size:44px}.emo.huge{font-size:72px}
 .fz-hero{display:flex;gap:24px;align-items:center;background:linear-gradient(135deg,#FFF6D6,#E9F8FF);border:2px solid var(--line);border-radius:28px;padding:28px;margin:8px 0 18px}.fz-hero>div:first-child{flex:1}.fz-hero h1{margin:6px 0}

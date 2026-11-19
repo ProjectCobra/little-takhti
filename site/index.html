@@ -1595,6 +1595,40 @@ a{color:inherit}
 .lvpick button[aria-checked="true"].lv-medium{background:var(--sun-soft);border-color:var(--sun);color:var(--ink)}
 .stat i{background:var(--chip);color:var(--green)}
 
+/* ================= HEADER (Nov 2026): clean, professional ================= */
+header.top{background:rgba(255,255,255,.96)!important;backdrop-filter:saturate(1.2) blur(10px)!important;-webkit-backdrop-filter:saturate(1.2) blur(10px)!important;border-bottom:1px solid #E3ECE4!important;box-shadow:0 1px 0 rgba(18,59,40,.02),0 6px 18px -14px rgba(18,59,40,.25)}
+header.top .wrap{display:flex;align-items:center;gap:20px!important;min-height:68px;padding-block:0!important;flex-wrap:nowrap!important}
+header.top .logo{gap:10px;font-size:22px!important;font-weight:800;color:var(--ink);letter-spacing:-.01em;flex:none}
+header.top .logo svg{width:36px!important;height:36px!important;filter:none;display:block!important}
+header.top .nav{display:flex;align-items:stretch;gap:4px;margin:0 auto 0 28px;align-self:stretch}
+header.top .nav a{position:relative;display:flex;align-items:center;padding:0 14px!important;border:0!important;border-radius:0!important;background:none!important;text-transform:none!important;letter-spacing:0!important;font-size:15px!important;font-weight:700!important;color:#4F6B5B!important}
+header.top .nav a:hover{color:var(--ink)!important}
+header.top .nav a.on{color:var(--ink)!important}
+header.top .nav a.on::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:3px;border-radius:3px 3px 0 0;background:var(--sun)}
+header.top .gsel{position:relative;display:flex;align-items:center;gap:0;background:#fff!important;border:1px solid #D6E3D8!important;border-bottom-width:1px!important;border-radius:999px!important;padding:0!important;height:40px;flex:none;margin-left:0!important;transition:border-color .15s}
+header.top .gsel:hover{border-color:var(--ink)!important}
+header.top .gsel>span{display:inline-flex!important;align-items:center;height:100%;padding:0 4px 0 14px!important;font-size:12px!important;font-weight:700!important;letter-spacing:.04em;text-transform:uppercase;color:#6B8576!important}
+header.top .gsel select{height:38px;min-height:0!important;border:0!important;background-color:transparent!important;padding:0 32px 0 4px!important;font-size:15px!important;font-weight:800!important;color:var(--ink);width:auto!important;max-width:none!important;border-radius:999px;background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%!important}
+header.top #acct{flex:none}
+header.top .acct{height:40px;border:1px solid #D6E3D8!important;border-bottom-width:1px!important;border-radius:999px;padding:3px 14px 3px 3px;font-weight:700!important;font-size:14px;background:#fff;color:var(--ink)}
+header.top .acct:hover{border-color:var(--ink)!important}
+header.top .acct img,header.top .acct .av2,header.top .acct .av0{width:32px;height:32px}
+@media (max-width:1100px){header.top .nav{margin-left:12px}header.top .nav a{padding:0 10px!important;font-size:14px!important}header.top .nav a.on::after{left:10px;right:10px}header.top .gsel>span{display:none!important}header.top .gsel select{padding-left:14px!important}}
+@media (max-width:760px){
+ header.top .nav{display:none!important}
+ header.top .wrap{gap:8px!important;min-height:58px}
+ header.top .logo{font-size:20px!important;margin-right:auto}
+ header.top .logo svg{width:32px!important;height:32px!important}
+ header.top .gsel{height:38px}
+ header.top .gsel select{height:36px;font-size:14px!important;max-width:130px!important}
+ header.top .acct{height:38px;padding:2px!important}
+ header.top .acct span:last-child{display:none}}
+@media (max-width:360px){header.top .logo span{font-size:18px}header.top .gsel select{max-width:104px!important}}
+header.top .gsel select{width:118px!important;background-image:none!important;padding-right:30px!important}
+header.top .gsel::after{content:"";position:absolute;right:15px;top:50%;width:7px;height:7px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+@media (max-width:1100px){header.top .gsel select{width:112px!important}}
+@media (max-width:760px){header.top .logo{margin-right:auto!important}header.top .gsel select{width:104px!important;padding-left:14px!important}}
+
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
 .sheet.s-english{--pc:#2A74DD;--pt:#E2EDFD}.sheet.s-maths{--pc:#E2711A;--pt:#FDEAD9}.sheet.s-science{--pc:#20915A;--pt:#DCF2E6}.sheet.s-social{--pc:#CC3672;--pt:#FBE1EB}.sheet.s-urdu{--pc:#6447CC;--pt:#EBE6FB}

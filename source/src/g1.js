@@ -254,8 +254,9 @@ Object.keys(EXTRA).forEach(k=>PAGES[k].push(...EXTRA[k]));
 const PACK_T={maths:['Numbers to 20','Number Bonds','Addition','Subtraction','The 2 Times Table'],english:['The Alphabet','Vocabulary','-ing Verbs'],science:['Energy','Heat','Light','Sound'],social:['My Family','Feelings','House Rules']};
 const UR_EN={'چھوٹی اشکال':'Short forms of letters','شرارتی نو':'The naughty nine','مصوّتے':'Vowel sounds','بصری الفاظ':'Sight words'};
 
-const WEEKS=(()=>{const out=[],s=new Date(2026,8,7),M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];for(let i=0;i<40;i++){const a=new Date(s.getTime()+i*7*864e5),b=new Date(a.getTime()+4*864e5);out.push(['Week '+(i+1),a.getMonth()===b.getMonth()?`${a.getDate()}–${b.getDate()} ${M[a.getMonth()]}`:`${a.getDate()} ${M[a.getMonth()]}–${b.getDate()} ${M[b.getMonth()]}`])}return out})();
-const WEEK_NOW=Math.max(0,Math.floor((Date.now()-new Date(2026,8,5).getTime())/(7*864e5)));
+const WEEKS=(()=>{const out=[],s=new Date(2026,7,31),M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];for(let i=0;i<40;i++){const a=new Date(s.getTime()+i*7*864e5),b=new Date(a.getTime()+4*864e5);out.push(['Week '+(i+1),a.getMonth()===b.getMonth()?`${a.getDate()}–${b.getDate()} ${M[a.getMonth()]}`:`${a.getDate()} ${M[a.getMonth()]}–${b.getDate()} ${M[b.getMonth()]}`])}return out})();
+/* weeks follow the school year: Week 1 is 31 Aug 2026 (LGS numbering) */
+const WEEK_NOW=Math.max(0,Math.floor((Date.now()-new Date(2026,7,29).getTime())/(7*864e5)));
 /* weekly guide: [focus, page numbers used, goal, activities, [story title, story text]] */
 const PLAN={
  maths:[

@@ -118,7 +118,7 @@ function privacy(){app.innerHTML=`<article class="legal"><span class="kick">Priv
 <h2>Contact</h2><p>For any privacy question, write to the email address listed on this site.</p></article>`}
 function home(){
  const subs=planSubjectsOf(grade),G=GR[grade];
- const wkI=Math.min(WEEK_NOW,10);const newRes=uniq(subs.map(s=>{const p=(PLAN[s.id]||[])[wkI];if(!p)return null;const x=p[1].find(v=>typeof v==='string');return x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1))}).filter(Boolean));
+ const wkI=WEEK_NOW;const newRes=uniq(subs.map(s=>{const p=(PLAN[s.id]||[])[wkI];if(!p)return null;const x=p[1].find(v=>typeof v==='string');return x==='set'?RID[s.id+'-set']:x?RID[s.id+'-'+x]:RES.find(r=>r.sub===s.id&&!r.set&&r.pages.includes(p[1][0]-1))}).filter(Boolean));
  const quizN=RES.filter(r=>!r.set&&hasQuiz(r)).length;
  app.innerHTML=`
  <div class="hero"><div class="hdeco" aria-hidden="true"><i class="sunb"></i><i class="cl c1"></i><i class="cl c2"></i><i class="cl c3"></i><span class="hk k1">${kiteSVG}</span><span class="hk k2">${kiteSVG}</span><i class="hills"></i></div><div class="hero-in"><div>

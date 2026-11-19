@@ -119,11 +119,12 @@ SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||pla
  const pages=[];s.topics.forEach(t=>{const i=PAGES[s.id].findIndex(p=>p.topic===t);if(i>=0)pages.push(i)});
  const ur=!!s.rtl,G=GR[s.grade].name;
  const r={id:s.id+'-rev',sub:s.id,set:true,rev:true,title:ur?'دہرائی سیٹ':s.name+' Revision Set',en:ur?'Urdu revision set':'',topic:'Revision',pages:pages.slice(0,10),
-  desc:`${Math.min(10,pages.length)} pages of ${G} ${s.name} revision, one from each topic this term, with an answer key for every page.`,obj:['Revise every topic from the term before a test.'],isNew:true};
+  desc:`${Math.min(10,pages.length)} pages of ${G} ${s.name} revision, one from each of the first ten topics, with an answer key for every page.`,obj:['Revise every topic from the term before a test.'],isNew:true};
  RES.push(r);RID[r.id]=r;
- plan.push([ur?'دہرائی':'Revision',['rev'],'Revise every topic from this term before the test.',['Do two pages of the revision set each day.','Check with the answer key together and redo mistakes the next day.'],REV_STORY[s.kind]||REV_STORY.gk]);
+ const at=Math.min(10,plan.length);/* term 1 revision sits in week 11, after the first ten topics; later topics carry on from week 12 */
+ plan.splice(at,0,[ur?'دہرائی':'Revision',['rev'],'Revise every topic from this term before the test.',['Do two pages of the revision set each day.','Check with the answer key together and redo mistakes the next day.'],REV_STORY[s.kind]||REV_STORY.gk]);
  (GUIDE[s.id]=GUIDE[s.id]||[]);
- if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].push(W('Revision',['Revise every Urdu topic from this term.','اس ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Revision Day','Today everyone looked back at their Urdu notebooks and read their favourite lessons again. Ask: Which Urdu lesson is your favourite?']))});
+ if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].splice(at,0,W('Revision',['Revise every Urdu topic from this term.','اس ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Revision Day','Today everyone looked back at their Urdu notebooks and read their favourite lessons again. Ask: Which Urdu lesson is your favourite?']))});
 
 /* handwriting practice sets: English on four lines, Urdu copy lines, Maths square grid. Kept out of the weekly plan and quizzes */
 if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';

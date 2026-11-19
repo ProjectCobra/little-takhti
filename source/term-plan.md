@@ -58,7 +58,7 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 2. Group B, Week 12
 - [x] 3. Group C, Week 12
 - [x] 4. AI Grade 1, topics 4 to 11
-- [ ] 5. AI Grade 2, topics 4 to 11
+- [x] 5. AI Grade 2, topics 4 to 11
 - [ ] 6. AI Grade 3, topics 4 to 11
 - [ ] 7. Group A, Week 13
 - [ ] 8. Group B, Week 13
@@ -81,3 +81,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 19 Nov 2026: batch 2 (Group B, Week 12). Grade 2: Adverbs (English); Place value to 1000; Our senses; The Harappan city; Weather maps; Our local government; فعل (Urdu); Typing practice (ICT). File: term2_g2.js. New pictures: eye, nose, tongue, thermometer, weather symbols, ballot box and more.
 - 19 Nov 2026: batch 3 (Group C, Week 12). Grade 3: Adverbs and adverbials (English, Grade 4 level); Multiplying 2-digit numbers; Food chains; The Mughal empire; Climate zones of the world; Provinces and their capitals; زمانہ (Urdu tenses); Spreadsheets: totals (ICT). File: term2_g3.js. New pictures: fox, eagle, crown, castle, palm tree, camel, bar chart, mushroom, ship and more.
 - 19 Nov 2026: batch 4 (AI Grade 1, topics 4 to 11). Smart helpers at home; Robots around us; Sorting like a computer; Good questions; Real or pretend?; Voices and speakers; Kind and fair; Pictures and patterns. File: ai.js. New pictures: unicorn, dragon, alien, handshake, red heart, balance scale, gear, mechanical arm, headphone and more. New Grade 1 words: robot, helper, speaker, pattern, pretend, sorting.
+- 19 Nov 2026: batch 5 (AI Grade 2, topics 4 to 11). Sorting and labelling; Predictions; Robots and sensors; Asking clear questions; Checking answers; Pictures made by AI; Privacy and safety; AI in the doctor's clinic. File: ai.js. New pictures: label, crystal ball, stethoscope, X-ray, bandage, syringe, key, shield, stop sign, artist palette and more. New Grade 2 words: sensor, predict, label, private, password, doctor.

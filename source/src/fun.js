@@ -6,7 +6,7 @@ const WORDS={
  nursery:['cat','sun','dog','hat','pen','bus','cup','egg','box','red'],
  kg:['fish','frog','milk','duck','ship','tree','book','star','cake','moon','rain','king'],
  g1:['garden','yellow','basket','summer','friend','teacher','kitchen','rainbow','bottle','animal','monkey','pencil','robot','helper','speaker','pattern','pretend','sorting'],
- g2:['beautiful','elephant','mountain','question','language','birthday','computer','festival','vegetable','tomorrow','different','important','quietly','weather','thunder','senses','village','keyboard','council'],
+ g2:['beautiful','elephant','mountain','question','language','birthday','computer','festival','vegetable','tomorrow','different','important','quietly','weather','thunder','senses','village','keyboard','council','sensor','predict','label','private','password','doctor'],
  g3:['adventure','knowledge','scientist','neighbour','favourite','dangerous','paragraph','celebrate','exercise','character','continent','discovery','adverbial','producer','consumer','predator','climate','equator','province','emperor','formula','multiply']};
 /* English word games run one level above the grade (October 2026): Grade 1 uses the old Grade 2 words, and so on */
 const UR_LETTERS='ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ی ے'.split(' ');

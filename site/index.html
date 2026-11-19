@@ -1629,6 +1629,39 @@ header.top .gsel::after{content:"";position:absolute;right:15px;top:50%;width:7p
 @media (max-width:1100px){header.top .gsel select{width:112px!important}}
 @media (max-width:760px){header.top .logo{margin-right:auto!important}header.top .gsel select{width:104px!important;padding-left:14px!important}}
 
+/* ================= HERO and banners on light brand cream (Nov 2026) ================= */
+.hero{background:linear-gradient(135deg,#FFFBEA 0%,#FFF6D2 55%,#F3F9EE 100%)!important;color:var(--ink)!important;border:1px solid #F1E7BF!important;border-radius:32px!important;overflow:hidden!important;margin-top:18px}
+.hero::before{display:block!important;content:"";position:absolute;inset:auto -80px -120px auto;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,217,59,.35),transparent 65%);z-index:-1}
+.hero::after{display:none!important}
+.hero-in{padding:52px 48px 56px 56px!important}
+.hero h1{color:var(--ink)!important;font-size:clamp(36px,4.8vw,58px)!important;line-height:1.05;letter-spacing:-.02em}
+.hero h1 em{color:var(--ink)}
+.hero h1 .w1{color:#1D5FD1!important}.hero h1 .w2{color:#B23A0B!important}.hero h1 .w3{color:#3A7220!important}.hero h1 .w4{color:#8B3FD9!important}
+.hero .lede{color:#3E5C4B!important;font-size:18px!important;font-weight:600!important;max-width:44ch}
+.hero .motto{background:#fff;border:1px solid #EBDFAE;color:var(--ink)}
+.hero .quick span{color:#5B7565!important}
+.hero .search{background:#fff;border:1px solid #E3D9AE!important;box-shadow:0 10px 30px -18px rgba(18,59,40,.35)!important}
+.hero .search button{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.hero .qp{background:rgba(255,255,255,.85)!important;border:1px solid #E7DDB4!important}
+.hero-art .sheetf{border:1px solid #E6E1C8!important;box-shadow:0 22px 40px -22px rgba(18,59,40,.45)!important}
+.hero-art .tk-b,.hero-art .tk-h{border-color:var(--ink)!important}
+.hero .float{background:#fff;border:1px solid #E7DDB4;color:var(--ink)}
+@media (max-width:900px){.hero-in{padding:34px 26px 38px!important}}
+@media (max-width:620px){.hero{border-radius:24px!important}.hero-in{padding:26px 20px 28px!important}.hero h1{font-size:32px!important}}
+/* other banners: light, calm */
+.qband,.khero{background:linear-gradient(135deg,#FFFBEA,#FFF3C4)!important;color:var(--ink)!important;border:1px solid #F1E7BF!important}
+.qband h2,.khero h1{color:var(--ink)!important}
+.qband p,.khero p,.kstat{color:#3E5C4B!important}
+.qband .kick,.khero .kick{color:var(--green)!important}
+.qband .gnote,.gnote.dk{color:var(--ink)!important}.qband .gnote .lnkb{color:var(--green)!important}
+.qmeter span,.qmeter a{color:var(--ink)}
+.kstat a{color:var(--green)!important}
+.kbig{background:var(--ink)!important;color:#fff!important;box-shadow:0 6px 0 rgba(0,0,0,.15)!important}
+.dk2{background:linear-gradient(135deg,#FFE680,#FFD93B)!important;color:var(--ink)!important}
+.dk2 h2{color:var(--ink)!important}.dk2 .kick{color:var(--ink)!important;opacity:.8}.dk2 p{color:#3E5C4B!important}
+.dk2 .btn.sun{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.hero .qp,.hero .qp *{color:var(--ink)!important}
+
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
 .sheet.s-english{--pc:#2A74DD;--pt:#E2EDFD}.sheet.s-maths{--pc:#E2711A;--pt:#FDEAD9}.sheet.s-science{--pc:#20915A;--pt:#DCF2E6}.sheet.s-social{--pc:#CC3672;--pt:#FBE1EB}.sheet.s-urdu{--pc:#6447CC;--pt:#EBE6FB}

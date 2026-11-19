@@ -50,5 +50,29 @@ Content files: put each grade's topics in `source/src/term2_<grade>.js` (nursery
 - Grade 2: 4 Sorting and labelling · 5 Predictions · 6 Robots and sensors · 7 Asking clear questions · 8 Checking answers · 9 Pictures made by AI · 10 Privacy and safety · 11 AI in the doctor's clinic · 12 AI on the farm · 13 Training a model (unplugged) · 14 Fair or unfair? · 15 Designing an AI helper
 - Grade 3: 4 How chatbots work · 5 Data and bias · 6 Image recognition · 7 AI and creativity · 8 Deepfakes and fake news · 9 AI and jobs · 10 Machine learning steps · 11 Translation and languages · 12 AI in games · 13 Ethics: who decides? · 14 AI and the environment · 15 Build a prompt plan
 
+## Build order (one batch per scheduled run)
+Group A = Nursery, KG, Grade 1 (Maths, Science, Social Studies, Urdu, ICT). Group B = Grade 2. Group C = Grade 3. Skip Islamiat.
+"Week N" means: every subject in the group gets the topic that falls in Week N (topic N-1 for subjects that had 10 topics; Grade 1 Maths and Science already reach Week 13, so they start at Week 14 with topic 13).
+- [ ] 1. Group A, Week 12
+- [ ] 2. Group B, Week 12
+- [ ] 3. Group C, Week 12
+- [ ] 4. AI Grade 1, topics 4 to 11
+- [ ] 5. AI Grade 2, topics 4 to 11
+- [ ] 6. AI Grade 3, topics 4 to 11
+- [ ] 7. Group A, Week 13
+- [ ] 8. Group B, Week 13
+- [ ] 9. Group C, Week 13
+- [ ] 10. Group A, Week 14
+- [ ] 11. Group B, Week 14
+- [ ] 12. Group C, Week 14
+- [ ] 13. AI Grades 1 to 3, topics 12 and 13
+- [ ] 14. Group A, Week 15
+- [ ] 15. Group B, Week 15
+- [ ] 16. Group C, Week 15
+- [ ] 17. Group A, Week 16
+- [ ] 18. Group B, Week 16
+- [ ] 19. Group C, Week 16
+- [ ] 20. AI Grades 1 to 3, topics 14 and 15
+
 ## Progress
 (add a line per batch: date, what was built, commit)

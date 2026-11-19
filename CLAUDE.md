@@ -45,6 +45,7 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 - **English is one level up**: Grade 1 English uses former Grade 2 work, Grade 2 former Grade 3, Grade 3 is written at Grade 4 level. The old Grade 1 English is "English Warm-up" (kept out of the weekly plan).
 - **Grade 1 Urdu follows Urdu ka Guldasta: Motia (OUP, Class 1)**, in its lesson order, with original exercises (not copied). Old Grade 1 Urdu is "Urdu Warm-up".
 - **Grade 1 Maths should follow Shapes Mathematics Book 1.** Waiting for Sumbul to share its contents page.
+- **School references**: `source/references/` holds notes on real classwork Sumbul shares (e.g. `lgs-grade1.md`). Read the matching file before writing material for that grade and subject, and match its topics and level.
 - **Benchmark**: Little Takhti Grade N ≈ Cambridge Primary Stage N+1 ≈ UK Year N+1 (Grade 1 = age 6 to 7 = Aitchison K2).
 - **Handwriting practice** (`writing.js`): English on red, blue, blue, red four lines with a gap between sets; Urdu on plain ruled lines with a margin on the right; Maths on a square grid. English sets include words, sentences and stories.
 - **Read aloud**: British or American English voice for every subject except Urdu.

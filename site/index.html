@@ -1662,6 +1662,20 @@ header.top .gsel::after{content:"";position:absolute;right:15px;top:50%;width:7p
 .dk2 .btn.sun{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
 .hero .qp,.hero .qp *{color:var(--ink)!important}
 
+/* ================= Banner style C (Sumbul's pick): plain white page, art on a sage card ================= */
+.hero{background:#fff!important;border:0!important;border-radius:0!important;overflow:visible!important;margin-top:6px}
+.hero::before{display:none!important}
+.hero-in{padding:40px 0 30px!important}
+.hero-art{background:#F2F7F3;border-radius:36px;isolation:isolate}
+.hero-art::before{content:"";position:absolute;right:-20px;top:-20px;width:140px;height:140px;border-radius:50%;background:#FFD93B;z-index:-1}
+.hero .search{border-color:#D6E3D8!important}.hero .qp{border-color:#DCE8DD!important;background:#fff!important}.hero .motto{border-color:#DCE8DD}
+@media (max-width:620px){.hero-in{padding:22px 0 18px!important}}
+/* other banners: white cards with a thin line, no tinted fills */
+.qband,.khero{background:#fff!important;border:1px solid #E3ECE4!important;box-shadow:0 18px 40px -30px rgba(18,59,40,.35)}
+.qb-art{background:#F2F7F3;border-radius:28px}
+.dk2{background:#F2F7F3!important;border:1px solid #DFEAE1}
+.dk2 .dimg{opacity:1}
+
 /* ============ WORKSHEET (always paper white) ============ */
 .sheet{width:210mm;height:297mm;background:#fff;color:#1b1f2e;font-family:var(--body);font-size:19px;line-height:1.45;padding:40px 46px 22px;display:flex;flex-direction:column;--pc:#E2711A;--pt:#FDEAD9;overflow:hidden;text-align:left}
 .sheet.s-english{--pc:#2A74DD;--pt:#E2EDFD}.sheet.s-maths{--pc:#E2711A;--pt:#FDEAD9}.sheet.s-science{--pc:#20915A;--pt:#DCF2E6}.sheet.s-social{--pc:#CC3672;--pt:#FBE1EB}.sheet.s-urdu{--pc:#6447CC;--pt:#EBE6FB}

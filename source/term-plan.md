@@ -57,7 +57,7 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 1. Group A, Week 12
 - [x] 2. Group B, Week 12
 - [x] 3. Group C, Week 12
-- [ ] 4. AI Grade 1, topics 4 to 11
+- [x] 4. AI Grade 1, topics 4 to 11
 - [ ] 5. AI Grade 2, topics 4 to 11
 - [ ] 6. AI Grade 3, topics 4 to 11
 - [ ] 7. Group A, Week 13
@@ -80,3 +80,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 19 Nov 2026: batch 1 (Group A, Week 12). Nursery: Sounds o, g, u, l; Numbers to 15; My family; نقطے والے حروف. KG: Long vowel sounds with e; Numbers to 50; Our solar system; چار حرفی الفاظ. Grade 1: Our neighbourhood; سردی کے الفاظ (Motia lessons 11+ not in references, used fallback); Typing my name. Grade 1 Maths and Science already reach Week 13. Files: term2_nursery.js, term2_kg.js, term2_g1.js.
 - 19 Nov 2026: batch 2 (Group B, Week 12). Grade 2: Adverbs (English); Place value to 1000; Our senses; The Harappan city; Weather maps; Our local government; فعل (Urdu); Typing practice (ICT). File: term2_g2.js. New pictures: eye, nose, tongue, thermometer, weather symbols, ballot box and more.
 - 19 Nov 2026: batch 3 (Group C, Week 12). Grade 3: Adverbs and adverbials (English, Grade 4 level); Multiplying 2-digit numbers; Food chains; The Mughal empire; Climate zones of the world; Provinces and their capitals; زمانہ (Urdu tenses); Spreadsheets: totals (ICT). File: term2_g3.js. New pictures: fox, eagle, crown, castle, palm tree, camel, bar chart, mushroom, ship and more.
+- 19 Nov 2026: batch 4 (AI Grade 1, topics 4 to 11). Smart helpers at home; Robots around us; Sorting like a computer; Good questions; Real or pretend?; Voices and speakers; Kind and fair; Pictures and patterns. File: ai.js. New pictures: unicorn, dragon, alien, handshake, red heart, balance scale, gear, mechanical arm, headphone and more. New Grade 1 words: robot, helper, speaker, pattern, pretend, sorting.

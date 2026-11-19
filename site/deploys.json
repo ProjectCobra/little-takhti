@@ -43,5 +43,10 @@
   "date": "2026-11-19T14:24:10+05:00",
   "commit": "07c1e9345af90a64cc4cf534e3caf2dca5afd059",
   "note": "New site structure (4-tab menu, kids Play area, topic pages, grade asked once), brand colours, new header and hero, card and button styles"
+ },
+ {
+  "date": "2026-11-19T14:34:35+05:00",
+  "commit": "16f00901c745ed0fd1cfdec32a752975cb64e698",
+  "note": "Headline underline style; sign out returns to guest"
  }
 ]

@@ -33,6 +33,6 @@ Level note: vocabulary is higher than our current Grade 1 Science (nymph, juveni
 
 ## Done on Little Takhti
 
-- Grade 1 Science "How animals grow" (science-t9): stages in order, frog and butterfly sort, name the stage.
-- Grade 1 Social Studies "Maps and directions" (social-t8): four directions, town map, map key.
+- Grade 1 Science "How animals grow" (science-t9): 10 pages with pictures, life cycle strips, sorting and word problems.
+- Grade 1 Social Studies "Maps and directions" (social-t8): 10 pages with picture maps, map key, route problems and a classroom map.
 - Still to do: a Grade 1 calendar page (days of the week questions).

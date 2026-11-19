@@ -26,6 +26,11 @@ const DR=(label,h)=>({t:"draw",boxes:[[label,h]]});
 const CL=(h,items)=>({t:"clock",h,items});
 const PA=text=>({t:"passage",text});
 const NO=text=>({t:"note",text});
+const FP=(h,pairs,cols)=>({t:"fill",h,items:pairs.map(p=>p[1]),img:pairs.map(p=>p[0]),cols:cols||2});
+const CP=(h,triples,opts)=>({t:"choice",h,items:triples.map(p=>[p[1],p[2]]),img:triples.map(p=>p[0]),opts});
+const WP=(h,items)=>({t:"fill",h,items,wp:1});
+const CN=(img,text,title)=>({t:"concept",img,text,title});
+const CY=(h,items,loop)=>({t:"cycle",h,items,loop});
 const TF=["True","False"], YN=["Yes","No"];
 const TP=(t,en,pages,what,steps,home,watch,story)=>({t,en,pages,g:[what,steps,home,watch],story});
 

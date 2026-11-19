@@ -20,7 +20,7 @@ for w in (400, 700):
     face('Noto Nastaliq Urdu', f'{F}/noto-nastaliq-urdu/files/noto-nastaliq-urdu-arabic-{w}-normal.woff2', w)
 html = open(SITE + '/index.html').read()
 html = re.sub(r'<link id="gfonts"[^>]*>', '<style>' + ''.join(faces) + '</style>', html)
-doc = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0">' + html + '</body></html>'
+doc = '<!doctype html><html><head><meta charset="utf-8"><base href="file://' + SITE + '/"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0">' + html + '</body></html>'
 local = SP + '/local.html'
 open(local, 'w').write(doc)
 

@@ -512,7 +512,7 @@ document.getElementById('gs').addEventListener('change',e=>{store.set('gradeAske
 document.addEventListener('click',e=>{
  const rl=e.target.closest('[data-reload]');if(rl&&rl.getAttribute('href')===location.hash){e.preventDefault();route();return}
  const gin=e.target.closest('[data-gsignin]');if(gin){gin.disabled=true;window.LTFB.signIn().catch(err=>{gin.disabled=false;FAM.note=err&&err.code==='auth/unauthorized-domain'?'Sign-in is not enabled for this web address yet.':err&&err.code==='auth/popup-closed-by-user'?'':'Could not sign in. Please try again.';account()});return}
- const gout=e.target.closest('[data-gsignout]');if(gout){window.LTFB.signOut();return}
+ const gout=e.target.closest('[data-gsignout]');if(gout){store.set('signedOut',1);store.set('active',null);window.LTFB.signOut();return}
  const dl=e.target.closest('a[href^="pdf/"]');if(dl)track('file_download',{file_name:dl.getAttribute('href').split('/').pop()});
  const p=e.target.closest('[data-print]');if(p){track('print_worksheet',{resource:p.dataset.print});pendingPrint=p.dataset.print;if(location.hash==='#print-'+p.dataset.print)route();else location.hash='print-'+p.dataset.print;return}
  if(e.target.closest('[data-gchange]')){gradeModal(false);return}

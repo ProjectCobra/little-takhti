@@ -14,6 +14,7 @@ function famLocalLoad(){const f=store.get(LSK,null);if(f){FAM.profile=f.profile|
 function famLocalSave(){store.set(LSK,{profile:FAM.profile,children:FAM.children,progress:FAM.progress})}
 const pRef=()=>FAM.db.doc('data/users/'+FAM.uid+'/profile');
 async function famInit(){
+ FAM.profile={name:'',lang:'both'};FAM.children={};FAM.progress={};FAM.note='';
  famLocalLoad();FAM.mode='device';FAM.me=null;FAM.db=null;FAM.uid=null;
  try{let db=null,uid=null;
   if(window.LT_STATIC){if(window.LTFB_READY)await Promise.race([window.LTFB_READY,new Promise(r=>setTimeout(r,6000))]);
@@ -21,7 +22,7 @@ async function famInit(){
   else{if(!window.claude||!claude.use){famReady();return}
    const user=await claude.use('user');if(user)FAM.me=await user.me();
    db=await claude.use('db');uid=user?await user.id():null}
-  if(!db||!uid){famReady();return}
+  if(!db||!uid){if(store.get('signedOut',0)){store.set('signedOut',0);store.set(LSK,null);store.set('active',null);FAM.children={};FAM.progress={};FAM.profile={name:'',lang:'both'}}famReady();return}
   FAM.db=db;FAM.uid=uid;
   const [ps,cs,gs]=await Promise.all([pRef().get(),pRef().collection('children').get(),pRef().collection('progress').get()]);
   const hadCloud=ps.exists||cs.size||gs.size;
@@ -33,7 +34,7 @@ async function famInit(){
  famReady();if(FAM.mode==='cloud')syncMember();
 }
 if(window.LT_STATIC)window.addEventListener('ltfb-auth',()=>famInit());
-function famReady(){if(FAM.mode==='loading')FAM.mode='device';renderAcct();const h=(location.hash||'').slice(1);if(['account','home','','quiz','parents','class'].includes(h)||h.startsWith('play-'))route(true)}
+function famReady(){if(FAM.mode==='loading')FAM.mode='device';renderAcct();const h=(location.hash||'').slice(1);if(['account','home','','quiz','kids','fun','parents','class'].includes(h)||h.startsWith('play-'))route(true)}
 async function famWrite(ref,data){if(FAM.mode!=='cloud'){famLocalSave();return true}
  try{await ref.set(data);return true}catch(e){if(e&&(e.code==='invalid_argument'||e.code==='not_granted'||e.code==='revoked'||e.code==='permission-denied')){FAM.mode='device';FAM.note='Your access to this page is view-only, so profiles are saved on this device instead.';famLocalSave();renderAcct();return true}
   if(e&&e.code==='quota_exceeded'){FAM.note='Storage is full. Remove a child profile to free space.';return false}

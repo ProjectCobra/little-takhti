@@ -38,5 +38,10 @@
   "date": "2026-11-19T13:09:41+05:00",
   "commit": "672e518ca75fe6ace8531012fb70c4b39404957a",
   "note": "Grade 1 back-fill from Classroom (13 ten-page topics), AI subject for Grades 1 to 3, ICT rename, revision sets restored"
+ },
+ {
+  "date": "2026-11-19T14:24:10+05:00",
+  "commit": "07c1e9345af90a64cc4cf534e3caf2dca5afd059",
+  "note": "New site structure (4-tab menu, kids Play area, topic pages, grade asked once), brand colours, new header and hero, card and button styles"
  }
 ]

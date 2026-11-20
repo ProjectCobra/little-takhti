@@ -1,0 +1,37 @@
+name: Animated pilot video
+on:
+  push:
+    branches: [dev]
+    paths: ['source/tools/video2/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: videos, cancel-in-progress: false }
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q playwright edge-tts numpy scipy pillow
+          python -m playwright install --with-deps chromium
+          cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend
+      - name: Render
+        run: python3 source/tools/video2/pilot.py
+      - name: Save to videos branch
+        run: |
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          mkdir -p /tmp/p && cp source/tools/video2/out/pilot-kg-maths-t4/{lesson.mp4,thumb.jpg,meta.json} /tmp/p/
+          for i in 1 2 3; do
+            git fetch -q origin videos && git checkout -q -B videos origin/videos
+            mkdir -p pilot2/kg-maths-t4 && cp /tmp/p/* pilot2/kg-maths-t4/
+            git add pilot2 && git commit -qm "Animated pilot: kg-maths-t4" && git push -q origin videos && break
+            git checkout -q -- . ; sleep 5
+          done

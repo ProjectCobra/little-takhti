@@ -57,7 +57,7 @@ with sync_playwright() as p:
         for sid in sys.argv[2].split(','):
             sub, n = sid.rsplit('-', 1)
             pg.set_viewport_size({'width': 800, 'height': 1130})
-            pg.evaluate(f'''()=>{{let x=document.getElementById('x');if(!x){{x=document.createElement('div');x.id='x';x.style.cssText='position:fixed;top:0;left:0;z-index:99999';document.body.appendChild(x)}}x.innerHTML=sheetHTML('{sub}',{int(n)-1},{str(len(sys.argv)>3).lower()})}}''')
+            pg.evaluate(f'''()=>{{let x=document.getElementById('x');if(!x){{x=document.createElement('div');x.id='x';x.style.cssText='position:fixed;top:0;left:0;z-index:99999';document.body.appendChild(x)}}x.style.setProperty('display','block','important');x.innerHTML=sheetHTML('{sub}',{int(n)-1},{str(len(sys.argv)>3).lower()})}}''')
             pg.wait_for_timeout(300)
             pg.screenshot(path=f'{OUTD}/sheets/{sid}.png', clip={'x': 0, 'y': 0, 'width': 794, 'height': 1123})
     elif mode == 'pdf':

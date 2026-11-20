@@ -125,3 +125,36 @@ addPlus("computer",{g1:[
   "Children may tap too hard or too long and move icons by mistake. Show a light, quick tap.",
   ["Daniyal's Photo","Daniyal tapped the camera icon on Ammi's tablet. He took a photo of his cat. He pinched the photo to make the cat's nose bigger and laughed. Then he pressed Home to close the app. Ask: What did Daniyal take a photo of?"])
 ]});
+
+/* ---------- Week 14: Grade 1 ICT topic 13 ---------- */
+addPlus("computer",{g1:[
+ TP("Pictures and sounds on a computer","",[
+  pg("Seeing and Hearing","Read the big idea. Then circle true or false.","Know that computers can show pictures and play sounds.",
+   CN(["desktop-computer","speaker-high-volume","headphone"],"A computer can show pictures on its screen and play sounds through speakers or headphones. It can also record our voice with a microphone and take photos with a camera.","Pictures and sounds"),
+   CH("",[["A computer can play music.",0],["We hear sounds through the screen.",1],["A microphone records our voice.",0],["A camera can take photos.",0]],TF)),
+  pg("Name the Device","Look at each picture. Write the word from the box.","Name devices for pictures and sounds.",BK(["speakers","headphones","microphone","camera","printer","screen"]),
+   FP("",[["speaker-high-volume","We hear music from the {{speakers}}."],["headphone","I wear {{headphones}} to listen quietly."],["microphone","I talk into a {{microphone}}."],["camera","A {{camera}} takes photos."],["printer","A {{printer}} puts my picture on paper."],["desktop-computer","I see pictures on the {{screen}}."]],2)),
+  pg("In or Out?","Read the big idea. Then sort the devices.","Tell input devices from output devices.",
+   CN(["microphone","speaker-high-volume"],"Some devices put things INTO the computer, like a microphone, a camera or a keyboard. Some devices give things OUT to us, like speakers, a screen or a printer.","In and out"),
+   SO("",["puts in","gives out"],["microphone","speakers","camera","printer","keyboard","screen"],[0,1,0,1,0,1])),
+  pg("Loud and Quiet","Read the big idea. Then circle the right button.","Change the volume of sounds.",
+   CN(["speaker-low-volume","speaker-high-volume","muted-speaker"],"Volume means how loud a sound is. Turn it up to make it louder. Turn it down to make it quieter. Mute turns the sound off.","Volume"),
+   CH("",[["The song is too loud.",["turn down","turn up"],0],["I cannot hear the story.",["turn up","mute"],0],["Baby is sleeping. Turn the sound off.",["mute","turn up"],0],["The video is too quiet.",["turn up","turn down"],0]])),
+  pg("Take a Photo","Fill in the missing words.","Follow the steps to take a photo on a tablet.",BK(["camera","button"]),
+   CY("",[["mobile-phone","Open the {{camera}} app"],["eye","Point at what you want"],["hand-with-fingers-splayed","Tap the round {{button}}"],["framed-picture","Look at your photo"]])),
+  pg("Which Device?","Look at each picture. Circle what it is used for.","Match a device to its job.",
+   {t:"choice",h:"",img:["microphone","video-camera","printer","headphone"],items:[["A microphone is for ...",["recording my voice","printing"],0],["A video camera is for ...",["making a film","typing"],0],["A printer is for ...",["putting pictures on paper","listening"],0],["Headphones are for ...",["listening quietly","taking photos"],0]]}),
+  pg("Look After Your Ears","Circle safe or not safe.","Use headphones and sounds safely.",
+   CP("",[["headphone","Keep the volume low in headphones",0],["speaker-high-volume","Play music very loud for a long time",1],["raised-hand","Take a break from headphones",0],["warning","Share your earphones at school",1]],["safe","not safe"])),
+  pg("Drawing App Tools","Match each tool to what it does.","Know the tools in a drawing app.",
+   MA("Write the letter in the box.",["pencil","brush","eraser","fill","undo"],["draws thin lines","paints thick lines","rubs out a mistake","colours a whole shape","takes back the last step"])),
+  pg("Picture and Sound Sums","Read and solve.","Use maths in computer stories.",
+   WP("",["Ali takes 4 photos of his cat and 3 of his dog. He takes {{7}} photos.","The volume is at 8. Sara turns it down by 3. Now it is at {{5}}.","Zara records 2 songs on Monday and 2 on Tuesday. She records {{4}} songs.","The printer has 10 sheets of paper. It prints 6 pictures. {{4}} sheets are left."])),
+  pg("My Computer Picture","Plan a picture you would draw on a computer. Draw it. Then finish the sentences.","Plan a picture and a sound for a computer project.",
+   DR("My computer picture",260),WR("",["I would use the ______________ tool.","I would add the sound of ______________."]))],
+  "How computers show pictures and play sounds: screens, speakers, headphones, microphones, cameras and printers, input and output, changing the volume, taking a photo and drawing app tools.",
+  ["Find the speakers, microphone and camera on your phone or laptop.","Record your child saying a sentence and play it back.","Show the volume buttons and the mute button."],
+  ["Take three photos together and choose the best one.","Draw a picture in a drawing app using the fill tool."],
+  "Children often turn the volume right up. Teach them to start low and turn it up a little at a time.",
+  ["Mahnoor's Talking Picture","Mahnoor drew a lion in a drawing app. Then she pressed the microphone and roared, 'Raaar!' When she tapped her lion, it roared back! Abbu laughed and turned the volume down. Ask: What sound did Mahnoor record?"])
+]});

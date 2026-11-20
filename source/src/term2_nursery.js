@@ -219,3 +219,118 @@ addPlus("urdu",{nursery:[
   "Children often write the full shape of the first letter. Show that ب becomes a small hook before it joins.",
   ["حروف کی دوستی","ب اور س دوست تھے۔ ایک دن انہوں نے ہاتھ ملایا تو بس بن گئی! د اور ل نے ہاتھ ملایا تو دل بن گیا۔ سوال: ب اور س نے مل کر کیا بنایا؟"])
 ]});
+
+/* ---------- Week 14: Nursery topic 13 ---------- */
+addPlus("english",{nursery:[
+ TP("Big and small letters","",[
+  pg("Two Ways to Write","Listen to the big idea. Then match each big letter to its small letter.","Know that each letter has a big and a small shape.",
+   CN(["input-latin-letters"],"Every letter has two shapes. A big letter is called a capital letter, like A. A small letter is like a. They make the same sound.","Big and small"),
+   MA("Draw a line.",["A","B","C","D"],["a","b","c","d"])),
+  pg("Trace Aa, Bb, Cc","Trace the big and small letters. Say the sound each time.","Trace big and small letters side by side.",TR("",["Aa","Bb","Cc"],5)),
+  pg("Find the Partner","Circle the small letter that goes with the big letter.","Match big letters to small letters.",
+   CH("",[["E",["e","a"],0],["F",["t","f"],1],["G",["g","q"],0],["H",["n","h"],1],["L",["l","i"],0],["O",["c","o"],1]])),
+  pg("Same Shape, Bigger","Some big and small letters look the same. Only the size changes. Match them.","Spot letters where big and small look alike.",
+   NO("C c, O o, S s, U u and W w look the same. The big one is just taller."),
+   MA("Draw a line.",["O","S","U","W","C"],["o","s","u","w","c"])),
+  pg("First Letter","Say the picture name. Write its big letter.","Write the capital letter for a first sound.",BK(["A","B","F","H"]),
+   FP("",[["red-apple","{{A}} a  apple"],["banana","{{B}} b  banana"],["fish","{{F}} f  fish"],["horse","{{H}} h  horse"]],2)),
+  pg("Names Start Big","Listen to the big idea. Circle the name that is written the right way.","Know that names start with a big letter.",
+   CN(["boy","girl"],"Our names start with a big letter. We write Ali, not ali. We write Sara, not sara.","Names"),
+   CH("",[["",["ali","Ali"],1],["",["Sara","sara"],0],["",["bilal","Bilal"],1],["",["Zoya","zoya"],0]])),
+  pg("Spot the Big Letters","Circle every big letter.","Tell big letters from small letters.",{t:"circ",h:"",items:["A","b","C","d","E","f","G","h","I","j","K","l"],correct:["A","C","E","G","I","K"]}),
+  pg("Big or Small?","Write each letter under big or small.","Sort big and small letters.",
+   SO("",["big","small"],["M","n","P","r","T","s"],[0,1,0,1,0,1])),
+  pg("Count Them","Look at each word. Count the big letters.","Count the capital letters in names.",
+   WP("",["Ali has {{1}} big letter.","Ali and Sara have {{2}} big letters.","Mama Bear has {{2}} big letters.","Sara has {{1}} big letter."])),
+  pg("My Name","Ask a grown-up to write your name. Trace it. Then draw yourself.","Write your own name with a big first letter.",DR("My name: ______________",180),DR("This is me",240))],
+  "Every letter has a big (capital) shape and a small shape that make the same sound. Children match pairs like A and a, and learn that names start with a big letter.",
+  ["Point to big and small letters in a story book.","Say 'big A, small a' as you trace.","Write your child's name with a big first letter for them to copy."],
+  ["Make letter pairs on cards and play snap.","Find big letters on shop signs and packets."],
+  "Some pairs look very different, like G and g or H and h. Practise these more.",
+  ["Big A and Little a","Big A went for a walk. 'Where is my little friend?' she asked. Little a was hiding behind an apple! 'Here I am!' said little a. Now they walk together. Ask: Where was little a hiding?"])
+]});
+
+addPlus("maths",{nursery:[
+ TP("Circles, squares and triangles around us","",[
+  pg("Three Shapes","Listen to the big idea. Then circle the shape of each thing.","Name circles, squares and triangles.",
+   CN(["blue-circle","yellow-square","triangular-flag"],"A circle is round, like a coin. A square has 4 straight sides that are the same, like a window. A triangle has 3 sides, like a flag.","Shapes"),
+   CP("",[["coin","a coin",0],["window","a window",1],["triangular-flag","a flag",2]],["circle","square","triangle"])),
+  pg("Trace the Shapes","Trace around each shape. Start at the dot.","Trace circles, squares and triangles.",TS("",["circle","square","tri","circle","square","tri"])),
+  pg("Shapes at Home","Look at each picture. Circle its shape.","Find shapes in things around us.",
+   CP("",[["wheel","a wheel",0],["game-die","a dice",1],["pizza","a slice of pizza",2],["doughnut","a doughnut",0],["cheese-wedge","a piece of cheese",2],["framed-picture","a photo frame",1]],["circle","square","triangle"])),
+  pg("Sides and Corners","Listen to the big idea. Then write the number.","Count the sides of a square and a triangle.",
+   CN(["yellow-square","triangular-flag"],"A triangle has 3 sides and 3 corners. A square has 4 sides and 4 corners. A circle has no corners at all. It is round.","Sides"),
+   F("",["A triangle has {{3}} sides.","A square has {{4}} sides.","A square has {{4}} corners.","A circle has {{0}} corners."])),
+  pg("Colour the Shapes","Colour each shape with the colour written under it.","Name and colour circles, squares and triangles.",CO("",[["circle","red"],["square","blue"],["tri","yellow"],["tri","green"],["circle","orange"],["square","purple"]])),
+  pg("Sort the Things","Write each word under its shape.","Sort things by shape.",
+   SO("",["circle","square","triangle"],["coin","window","flag","roti","tile","pizza slice"],[0,1,2,0,1,2])),
+  pg("Count the Shapes","Count the shapes. Write how many.","Count groups of shapes.",CT("",[[4,"tri"],[5,"circle"],[3,"square"],[6,"tri"]])),
+  pg("Which Shape?","Listen. Circle the right shape.","Use shape words in sentences.",
+   CH("",[["A ball is a ...",["circle","square"],0],["A dice face is a ...",["square","triangle"],0],["A roof can be a ...",["triangle","circle"],0],["A clock is often a ...",["circle","triangle"],0]])),
+  pg("Shape Stories","Listen to each story. Write the answer.","Count shapes in number stories.",
+   WP("",["Ali has 2 circle biscuits and 1 square biscuit. He has {{3}} biscuits.","A house has 1 triangle roof and 2 square windows. That is {{3}} shapes.","Sara cuts a roti into 4 triangles. She eats 1. {{3}} triangles are left.","There are 3 round plates and 2 more. Now there are {{5}} plates."])),
+  pg("Shape House","Draw a house with a square for the walls, a triangle for the roof and a circle for the sun.","Use shapes to make a picture.",DR("My shape house",420))],
+  "Circles, squares and triangles in the world around us: a coin is a circle, a window is a square and a flag can be a triangle. Children count sides and corners and find shapes at home.",
+  ["Go on a shape walk at home and name each shape.","Run a finger round the edge of a plate and along a book.","Count the sides out loud: one, two, three."],
+  ["Cut a roti or sandwich into triangles and squares.","Make shapes with sticks, straws or ice lolly sticks."],
+  "A square turned on its corner is still a square. Turn shapes around so children see this.",
+  ["The Shape Hunt","Hira went on a shape hunt. She found a round clock, a square window and a triangle slice of pizza. 'Shapes are everywhere!' she said, and ate the pizza. Ask: What triangle did Hira find?"])
+]});
+
+addPlus("gk",{nursery:[
+ TP("Winter in Pakistan","",[
+  pg("Winter Is Here","Listen to the big idea. Then circle yes or no.","Know what winter feels like.",
+   CN(["snowflake","coat","hot-beverage"],"In winter the weather is cold. The days are short and the nights are long. We wear warm clothes and drink hot drinks.","Winter"),
+   CH("",[["Winter is cold.",0],["We wear a coat in winter.",0],["We swim in the sea in winter.",1],["Winter nights are long.",0]],YN)),
+  pg("Warm Clothes","Look at each picture. Write the word.","Name warm winter clothes.",BK(["coat","scarf","gloves","socks"]),
+   FP("",[["coat","a warm {{coat}}"],["scarf","a soft {{scarf}}"],["gloves","a pair of {{gloves}}"],["socks","a pair of {{socks}}"]],2)),
+  pg("Winter or Summer?","Look at each picture. Circle winter or summer.","Tell winter things from summer things.",
+   CP("",[["scarf","a scarf",0],["soft-ice-cream","ice cream",1],["gloves","gloves",0],["watermelon","watermelon",1],["hot-beverage","hot tea",0],["sunglasses","sunglasses",1]],["winter","summer"])),
+  pg("Snow on the Mountains","Listen to the big idea. Then circle yes or no.","Know that it snows in the north of Pakistan.",
+   CN(["snow-capped-mountain","snowman"],"In winter it snows in the mountains of Pakistan, in places like Murree and Swat. Snow is cold and white. Children make snowmen.","Snow"),
+   CH("",[["Snow is cold.",0],["Snow is red.",1],["Children can make a snowman.",0],["It snows in the mountains.",0]],YN)),
+  pg("Winter Food","Look at each picture. Write the food.","Name foods we eat in winter.",BK(["peanuts","oranges","carrots","sweet potato"]),
+   FP("",[["peanuts","We eat {{peanuts}}."],["tangerine","We eat juicy {{oranges}}."],["carrot","Ammi makes halwa with {{carrots}}."],["roasted-sweet-potato","We eat a hot {{sweet potato}}."]],2)),
+  pg("Foggy Mornings","Listen to the big idea. Then circle safe or not safe.","Stay safe on foggy winter days.",
+   CN(["fog"],"Some winter mornings are foggy. Fog is like a cloud near the ground. It is hard to see far, so cars must go slowly.","Fog"),
+   CH("",[["Holding a grown-up's hand in the fog",0],["Running across the road in the fog",1],["Sitting near the heater with a grown-up",0],["Touching the heater",1]],["safe","not safe"])),
+  pg("What Do We Do?","Match the start to the end.","Know how we keep warm in winter.",
+   MA("Draw a line.",["We wear","We drink","We sleep under","We sit in"],["a warm coat","hot soup","a thick quilt","the sunshine"])),
+  pg("A Cold Morning","Fill in the missing words.","Put getting ready on a cold day in order.",BK(["socks","coat","scarf"]),
+   CY("",[["sunrise","Wake up"],["socks","Put on {{socks}}"],["coat","Put on a {{coat}}"],["scarf","Wrap a {{scarf}}"]])),
+  pg("Winter Sums","Listen and count. Write the answer.","Count in winter stories.",
+   WP("",["Ali has 2 gloves. He loses 1. He has {{1}} glove left.","Sara eats 3 peanuts and then 2 more. She eats {{5}} peanuts.","There are 4 oranges. Abbu eats 1. {{3}} oranges are left.","Dada wears 1 hat and 1 scarf. That is {{2}} warm things."])),
+  pg("Me in Winter","Draw yourself in your warmest winter clothes.","Show how you dress in winter.",DR("Me in winter",420))],
+  "Winter in Pakistan: cold days, warm clothes, snow in the mountains, foggy mornings and winter foods like peanuts, oranges and carrot halwa.",
+  ["Talk about the weather each morning: is it cold today?","Name each warm thing as your child puts it on.","Look at pictures of snow in Murree or Swat."],
+  ["Eat peanuts or an orange together and count them.","Feel an ice cube and talk about cold."],
+  "Children may want to stand close to heaters. Show a safe distance and keep them out of reach.",
+  ["The Lost Glove","On a cold morning Hamza lost one glove. He looked under the bed and behind the door. Then he found it in his coat pocket! 'Now my hands are warm,' he said. Ask: Where did Hamza find his glove?"])
+]});
+
+addPlus("urdu",{nursery:[
+ TP("تصویر والے دو حرفی الفاظ","Two letter words with pictures",[
+  pg("تصویر اور لفظ|Picture words","تصویر دیکھیں اور لفظ پڑھیں۔ پھر لکھیں۔","Read two letter words with pictures.",
+   CN(["mango","fire"],"دو حروف مل کر ایک لفظ بناتے ہیں۔ آ اور م سے آم بنتا ہے۔ آ اور گ سے آگ بنتی ہے۔","دو حرفی الفاظ"),
+   TR("",["آم","آگ"],4)),
+  pg("لکھیں|Trace","تصویر والے لفظوں پر لکھیں۔","Trace two letter picture words.",TR("",["پر","کپ","ٹب","دو"],4)),
+  pg("پہلا حرف|First letter","تصویر کا نام بولیں۔ پہلا حرف لکھیں۔","Hear the first letter of a picture word.",BK(["آ","پ","ک","ٹ"]),
+   FP("",[["mango","{{آ}}م"],["feather","{{پ}}ر"],["cup-with-straw","{{ک}}پ"],["bathtub","{{ٹ}}ب"]],2)),
+  pg("آخری حرف|Last letter","تصویر کا نام بولیں۔ آخری حرف لکھیں۔","Hear the last letter of a picture word.",BK(["گ","م","ب","ر"]),
+   FP("",[["fire","آ{{گ}}"],["mango","آ{{م}}"],["bathtub","ٹ{{ب}}"],["feather","پ{{ر}}"]],2)),
+  pg("صحیح لفظ|Which word?","تصویر دیکھیں۔ صحیح لفظ پر دائرہ لگائیں۔","Choose the word for a picture.",
+   {t:"choice",h:"",img:["mango","fire","feather","cup-with-straw"],items:[["",["آم","آگ"],0],["",["کپ","آگ"],1],["",["پر","ٹب"],0],["",["دو","کپ"],1]]}),
+  pg("حروف جوڑیں|Join letters","دو حروف جوڑ کر لفظ لکھیں۔","Join two letters to make a picture word.",
+   F("",["آ + م = {{آم}}","پ + ر = {{پر}}","ک + پ = {{کپ}}","ٹ + ب = {{ٹب}}"],2,1)),
+  pg("لفظ توڑیں|Break apart","خالی جگہ میں حرف لکھیں۔","Find the two letters in a picture word.",
+   F("",["آگ = {{آ}} + گ","پر = پ + {{ر}}","کپ = {{ک}} + پ","دو = د + {{و}}"],2,1)),
+  pg("آم ڈھونڈیں|Find آم","ہر جگہ جہاں آم لکھا ہے، دائرہ لگائیں۔","Spot a word among other words.",{t:"circ",h:"",items:["آم","آگ","آم","پر","کپ","آم","ٹب","آم","دو","آگ"],correct:["آم"]}),
+  pg("یہ کیا ہے؟|What is this?","تصویر دیکھیں۔ جملہ پورا کریں۔","Read a tiny sentence with a picture word.",BK(["آم","آگ","کپ","پر"]),
+   FP("",[["mango","یہ {{آم}} ہے۔"],["fire","یہ {{آگ}} ہے۔"],["cup-with-straw","یہ {{کپ}} ہے۔"],["feather","یہ {{پر}} ہے۔"]],2)),
+  pg("میرا لفظ|My word","اپنا پسندیدہ لفظ لکھیں اور اس کی تصویر بنائیں۔","Write and draw a two letter word.",TR("",["آم","کپ"],4),DR("میری تصویر",220))],
+  "Two letter Urdu words with pictures: آم، آگ، پر، کپ، ٹب and دو. Children hear the first and last letter, join two letters and read a tiny sentence like یہ آم ہے۔",
+  ["Point to the picture, say the word, then say each letter.","Ask: what is the first sound? What is the last sound?","Read یہ ... ہے with real things at home."],
+  ["Show a real mango or cup and read its word card.","Make picture word cards and match them."],
+  "آ has a little hat (مد) on top. Children may forget it and write ا. Point to the hat each time.",
+  ["آم کی دعوت","گرمی آنے پر دادا جان آم لائے۔ سب نے کپ میں آم کا رس پیا۔ ننھی چڑیا کا ایک پر بھی کھڑکی سے اندر آ گیا! سوال: دادا جان کیا لائے؟"])
+]});

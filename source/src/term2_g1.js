@@ -158,3 +158,34 @@ addPlus("computer",{g1:[
   "Children often turn the volume right up. Teach them to start low and turn it up a little at a time.",
   ["Mahnoor's Talking Picture","Mahnoor drew a lion in a drawing app. Then she pressed the microphone and roared, 'Raaar!' When she tapped her lion, it roared back! Abbu laughed and turned the volume down. Ask: What sound did Mahnoor record?"])
 ]});
+
+addPlus("computer",{g1:[
+ TP("Asking a grown-up online","",[
+  pg("Ask First","Read the big idea. Then circle true or false.","Know that we ask a grown-up before we do new things online.",
+   CN(["laptop","woman","raised-hand"],"The internet is full of fun games and videos. But some things online are not for children. Before we click, download or chat, we stop and ask a grown-up we trust.","Ask a grown-up"),
+   CH("",[["We ask a grown-up before we download a game.",0],["We can click on any button we see.",1],["A trusted grown-up can be Ammi, Abbu or a teacher.",0],["We tell a grown-up if something online makes us sad.",0]],TF)),
+  pg("Stop, Think, Ask","Fill in the missing words.","Follow three steps when unsure online.",BK(["stop","think","ask"]),
+   CY("",[["stop-sign","{{stop}}: take your hand off"],["thinking-face","{{think}}: is this OK?"],["raised-hand","{{ask}} a grown-up"],["thumbs-up","Then carry on safely"]])),
+  pg("Ask or Carry On?","Read each one. Circle ask first or carry on.","Decide when to ask a grown-up.",
+   CH("",[["A box pops up: 'You won a prize! Click here!'",["ask first","carry on"],0],["You are drawing in your usual drawing app.",["ask first","carry on"],1],["A game asks you to pay money.",["ask first","carry on"],0],["Someone you do not know sends you a message.",["ask first","carry on"],0],["You are watching the video Ammi put on.",["ask first","carry on"],1]])),
+  pg("Who Can Help?","Look at each picture. Write who you can ask.","Name trusted grown-ups.",BK(["Ammi","Abbu","teacher","Dadi"]),
+   FP("",[["woman","I can ask {{Ammi}}."],["man","I can ask {{Abbu}}."],["woman-teacher","At school I ask my {{teacher}}."],["old-woman","At Dadi's house I ask {{Dadi}}."]],2)),
+  pg("Private Things","Read the big idea. Then sort the words.","Know what we keep private online.",
+   CN(["locked","key"],"Some things are private. We do not share them online: our full name, home address, school name, phone number and passwords. We can share a favourite colour or a drawing with a grown-up's help.","Keep it private"),
+   SO("",["keep private","OK to share"],["my address","my favourite colour","my password","my drawing of a cat","my phone number","my favourite fruit"],[0,1,0,1,0,1])),
+  pg("Pop-ups and Prizes","Look at each picture. Circle safe or ask first.","Spot tricky pop-ups and buttons.",
+   CP("",[["wrapped-gift","'Free gift! Click now!'",1],["video-game","the game you always play",0],["credit-card","'Buy 100 coins'",1],["warning","'Your tablet has a problem!'",1]],["safe","ask first"])),
+  pg("What Should I Do?","Match each problem to what to do.","Choose the right action online.",
+   MA("Write the letter in the box.",["A scary video starts.","I clicked by mistake.","A stranger says hello.","I forgot the password."],["Tell a grown-up. It is OK to make mistakes.","Close it and tell a grown-up.","Do not reply. Show a grown-up.","Ask a grown-up to help, do not guess."])),
+  pg("Good Words to Say","Fill in the gaps with words from the box.","Use polite words to ask for help.",BK(["please","help","show","Thank"]),
+   F("",["Ammi, can you {{help}} me?","Can I {{please}} play this game?","Abbu, I need to {{show}} you something.","{{Thank}} you for helping me."],1)),
+  pg("Screen Time Sums","Read and solve.","Use maths in online stories.",
+   WP("",["Ali plays for 10 minutes and reads for 10 minutes. That is {{20}} minutes.","3 pop-ups appear. Sara asks Ammi about all of them. She asks {{3}} times.","Zara watches 2 videos in the morning and 2 at night. She watches {{4}} videos.","Bilal has 15 minutes of screen time. He uses 10. He has {{5}} minutes left."])),
+  pg("My Ask Card","Draw your trusted grown-up. Write their name. Keep this card near the computer.","Make a reminder to ask a grown-up online.",
+   DR("My trusted grown-up",260),WR("",["When I am not sure online, I ask ______________.","I stop, I think and I ______________."]))],
+  "Asking a grown-up online: stop, think and ask before clicking, downloading, paying or chatting; keeping private things private; and telling a trusted grown-up about pop-ups, strangers or anything upsetting.",
+  ["Sit with your child the first time they use a new app or game.","Agree a family rule: we ask before we download or pay.","Praise your child every time they come and ask."],
+  ["Make an Ask Card together and stick it near the screen.","Look at a pop-up together and talk about why it is tricky."],
+  "Children may hide a mistake for fear of trouble. Stay calm and thank them for telling you, so they keep coming back.",
+  ["The Shiny Button","Omar was playing a game when a shiny button popped up: 'Free gold coins!' His finger nearly tapped it. Then he stopped, thought and called, 'Abbu, is this OK?' Abbu looked. 'Good thinking! That button wants money,' he said, and closed it. Ask: What did Omar do before tapping the button?"])
+]});

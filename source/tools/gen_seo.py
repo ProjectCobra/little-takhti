@@ -22,6 +22,7 @@ for r in data:
     t = os.path.join(td, r['id'] + '.jpg')
     if os.path.exists(t): continue
     pdf = os.path.join(ROOT, 'pdf', f"little-takhti-{r['id']}.pdf")
+    if not os.path.exists(pdf): continue
     tmp = os.path.join(td, '_tmp')
     subprocess.run(['pdftoppm', '-f', '1', '-l', '1', '-scale-to-x', '480', '-scale-to-y', '-1', '-jpeg', '-jpegopt', 'quality=82', pdf, tmp], check=True)
     os.rename(tmp + '-1.jpg' if os.path.exists(tmp + '-1.jpg') else [os.path.join(td, f) for f in os.listdir(td) if f.startswith('_tmp')][0], t)

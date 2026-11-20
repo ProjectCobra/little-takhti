@@ -68,7 +68,7 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 12. Group C, Week 14
 - [x] 13. AI Grades 1 to 3, topics 12 and 13
 - [x] 14. Group A, Week 15
-- [ ] 15. Group B, Week 15
+- [x] 15. Group B, Week 15
 - [ ] 16. Group C, Week 15
 - [ ] 17. Group A, Week 16
 - [ ] 18. Group B, Week 16
@@ -91,3 +91,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 20 Nov 2026: batch 12 (Group C, Week 14). Grade 3: Persuasive writing (English, Grade 4 level); Equivalent fractions; Light and reflection; Fatima Jinnah; Population and cities; Taxes and public services; کہانی نویسی (Urdu story writing); Coding with loops and conditions (ICT). File: term2_g3.js. New pictures: flashlight, mirror, chocolate bar, pie, cityscape, motorway, megaphone, candle, busts in silhouette, money with wings, railway car. New Grade 3 words: persuade, fraction, reflection, mirror, population, loop. Also rebuilt 93 topic PDFs that went missing from site/pdf in the mobile app commit, and gen_seo.py now skips packs without a PDF instead of stopping before the thumbnails.
 - 20 Nov 2026: batch 13 (AI Grades 1 to 3, topics 12 and 13). Grade 1: Instructions for robots; Learning from mistakes. Grade 2: AI on the farm; Training a model (unplugged). Grade 3: AI in games; Ethics: who decides?. File: ai.js. New pictures: tractor, ear of corn, sports medal. New words: arrow, forward, mistake, follow (Grade 1); harvest, farmer, tractor, model, drought (Grade 2); ethics, opponent, strategy, privacy, consent, responsible (Grade 3).
 - 20 Nov 2026: batch 14 (Group A, Week 15). Nursery: Picture words and labels; Adding with pictures; Water and keeping clean; سردی کے الفاظ (winter words). KG: Opposites; Measuring with hands and feet; Places in our town; نظم: سردی (an original winter poem). Grade 1: Asking a grown-up online (ICT). Grade 1 English, Maths, Science, Social Studies and Urdu left to the Saturday Classroom task. Files: term2_nursery.js, term2_kg.js, term2_g1.js. New pictures: sponge, bubbles, bucket, stadium. New words: bed, mat, tap (Nursery); fast, slow, park, hand, town (KG); private, online, trusted (Grade 1).
+- 20 Nov 2026: batch 15 (Group B, Week 15). Grade 2: Book review (English); Fractions of shapes and amounts; Sound around us; Allama Iqbal's dream; Farming in Pakistan; Caring for animals; سردی کی نظم (Urdu, an original poem about a winter morning, different from the KG one); Passwords and privacy (ICT). File: term2_g2.js. New pictures: guitar, trumpet, violin, bat, ewe, parrot, hamster, paw prints, locked with key, unlocked, identification card. New Grade 2 words: review, fraction, echo, vibrate, poet, wheat, shelter.

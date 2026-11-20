@@ -1,0 +1,9 @@
+{
+  "appId": "app.littletakhti",
+  "appName": "Little Takhti",
+  "webDir": "www",
+  "backgroundColor": "#FFFFFF",
+  "android": { "allowMixedContent": false },
+  "ios": { "contentInset": "always" },
+  "plugins": { "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#FFFFFF", "showSpinner": false } }
+}

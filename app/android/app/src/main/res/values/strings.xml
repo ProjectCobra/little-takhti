@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Little Takhti</string>
+    <string name="title_activity_main">Little Takhti</string>
+    <string name="package_name">app.littletakhti</string>
+    <string name="custom_url_scheme">app.littletakhti</string>
+</resources>

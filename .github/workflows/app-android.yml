@@ -1,0 +1,37 @@
+name: Android app (test build)
+on:
+  push:
+    branches: [dev]
+    paths: ['app/**', '.github/workflows/app-android.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: app-android, cancel-in-progress: true }
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21' }
+      - name: Web bundle and sync
+        working-directory: app
+        run: |
+          npm ci
+          python3 build_www.py
+          npx cap sync android
+      - name: Build debug APK
+        working-directory: app/android
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon -q
+      - name: Save APK to apps branch
+        run: |
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          cp app/android/app/build/outputs/apk/debug/app-debug.apk /tmp/little-takhti.apk
+          git fetch origin apps || true
+          if git show-ref --verify --quiet refs/remotes/origin/apps; then git checkout -B apps origin/apps; else git checkout --orphan apps && git rm -rf -q . ; fi
+          mkdir -p android && cp /tmp/little-takhti.apk android/little-takhti-test.apk
+          echo "Built $(date -u +%F' '%H:%M) UTC from ${GITHUB_SHA::7}" > android/BUILD.txt
+          git add android && git commit -qm "Android test build ${GITHUB_SHA::7}" && git push -f origin apps

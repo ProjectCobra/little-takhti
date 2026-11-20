@@ -22,7 +22,7 @@ const starSVG=on=>`<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isUr=t=>/[؀-ۿ]/.test(t);
 const T=(t,cls='')=>isUr(t)?`<span class="ur-t ${cls}" dir="rtl" lang="ur">${t}</span>`:t;
-const pdf=r=>`pdf/little-takhti-${r.id}.pdf`;
+const pdf=r=>`${window.LT_REMOTE||''}pdf/little-takhti-${r.id}.pdf`;
 const mixUr=t=>String(t).replace(/[\u0600-\u06FF][\u0600-\u06FF\s،؛]*[\u0600-\u06FF]|[\u0600-\u06FF]/g,m=>`<span class="ur-t ur-in" dir="rtl">${m}</span>`);
 const subLabel=s=>s.rtl?`Urdu <span class="ur-t">${s.ur}</span>`:s.name;
 
@@ -513,8 +513,9 @@ document.addEventListener('click',e=>{
  const rl=e.target.closest('[data-reload]');if(rl&&rl.getAttribute('href')===location.hash){e.preventDefault();route();return}
  const gin=e.target.closest('[data-gsignin]');if(gin){gin.disabled=true;window.LTFB.signIn().catch(err=>{gin.disabled=false;FAM.note=err&&err.code==='auth/unauthorized-domain'?'Sign-in is not enabled for this web address yet.':err&&err.code==='auth/popup-closed-by-user'?'':'Could not sign in. Please try again.';account()});return}
  const gout=e.target.closest('[data-gsignout]');if(gout){store.set('signedOut',1);store.set('active',null);window.LTFB.signOut();return}
- const dl=e.target.closest('a[href^="pdf/"]');if(dl)track('file_download',{file_name:dl.getAttribute('href').split('/').pop()});
- const p=e.target.closest('[data-print]');if(p){track('print_worksheet',{resource:p.dataset.print});pendingPrint=p.dataset.print;if(location.hash==='#print-'+p.dataset.print)route();else location.hash='print-'+p.dataset.print;return}
+ const dl=e.target.closest('a[href*="pdf/little-takhti"]');if(dl)track('file_download',{file_name:dl.getAttribute('href').split('/').pop()});
+ const p=e.target.closest('[data-print]');if(p&&window.LT_APP){e.preventDefault();const r=RID[p.dataset.print];if(r)window.open(pdf(r),'_blank');return}
+ if(p){track('print_worksheet',{resource:p.dataset.print});pendingPrint=p.dataset.print;if(location.hash==='#print-'+p.dataset.print)route();else location.hash='print-'+p.dataset.print;return}
  if(e.target.closest('[data-gchange]')){gradeModal(false);return}
  const jp=e.target.closest('[data-jump]');if(jp){e.preventDefault();const el=document.getElementById(jp.dataset.jump);el&&el.scrollIntoView({behavior:'smooth',block:'start'});return}
  const gp=e.target.closest('[data-gpick]');if(gp){store.set('gradeAsked',1);setGrade(gp.dataset.gpick,true);const m=document.getElementById('gmod');m&&m.remove();if(/^#(subject|res|print|play)-/.test(location.hash))location.hash='home';else route(true);return}

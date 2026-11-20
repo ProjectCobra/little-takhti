@@ -1,11 +1,11 @@
 {
  "id": "kg-maths-t4",
  "title": "Adding to 10 | KG Maths | Little Takhti",
- "description": "KG Maths: Adding to 10.\nPutting two groups together and counting all of them to add.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-kg-maths-t4\n\n0:00 Introduction\n0:05 Big idea\n0:10 Examples\n0:29 Pause and try\n1:20 Story time\n1:39 Recap\n1:44 Print the worksheets\n\nFor parents: Children may count everything from 1 each time. Show them to start from the bigger number and count on.\n\n#LittleTakhti #Maths #KG",
+ "description": "KG Maths: Adding to 10.\nPutting two groups together and counting all of them to add.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-kg-maths-t4\n\n0:00 Introduction\n0:06 Big idea\n0:11 Examples\n0:30 Pause and try\n1:22 Story time\n1:40 Recap\n1:45 Print the worksheets\n\nFor parents: Children may count everything from 1 each time. Show them to start from the bigger number and count on.\n\n#LittleTakhti #Maths #KG",
  "grade": "kg",
  "subject": "kg-maths",
  "topic": "Adding to 10",
- "duration": 114.8,
+ "duration": 115.7,
  "madeForKids": true,
  "language": "en",
  "chapters": [
@@ -14,32 +14,30 @@
    "Introduction"
   ],
   [
-   5.64,
+   6.17,
    "Big idea"
   ],
   [
-   10.28,
+   11.07,
    "Examples"
   ],
   [
-   29.620000000000005,
+   30.759999999999998,
    "Pause and try"
   ],
   [
-   80.98000000000002,
+   82.24,
    "Story time"
   ],
   [
-   99.9,
+   100.41,
    "Recap"
   ],
   [
-   104.54,
+   105.31,
    "Print the worksheets"
   ]
  ],
  "voice": true,
- "voice_errors": [
-  "edge: RuntimeError('asyncio.run() cannot be called from a running event loop')"
- ]
+ "voice_errors": []
 }

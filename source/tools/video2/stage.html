@@ -24,6 +24,7 @@ body{width:1920px;height:1080px;overflow:hidden;font-family:'lexend',sans-serif;
 <div id="cap"></div><div id="wipe2"></div><div id="wipe"></div>
 <script>
 const TL = __TL__;
+const AS = __ASSETS__;
 const W_ = 1920, H_ = 1080;
 // ---------- helpers ----------
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
@@ -43,31 +44,19 @@ const SFX=[];const sfx=(t,n,g=1,p=1)=>SFX.push([+t.toFixed(3),n,g,p]);
 function el(parent,html,cls='a',style=''){const d=document.createElement('div');d.className=cls;if(style)d.style.cssText=style;d.innerHTML=html;parent.appendChild(d);return d}
 function P(e,x,y,s=1,r=0,o=1,sx=1,sy=1){e.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%) rotate(${r}deg) scale(${s*sx},${s*sy})`;e.style.opacity=o;e.style.visibility=o<=0.001||s<=0.001?'hidden':'visible'}
 // ---------- art ----------
-const MANGO=(g='mg')=>`<svg width="130" height="130" viewBox="0 0 120 120"><path d="M60 22C96 20 112 52 104 80C96 106 64 114 42 104C16 92 12 60 26 40C34 28 46 22 60 22Z" fill="url(#${g})" stroke="#123B28" stroke-width="5"/><path d="M60 22c2-8 6-12 12-14" stroke="#123B28" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M66 14c14-10 30-6 34 2c-12 8-26 8-34-2z" fill="#3FA34D" stroke="#123B28" stroke-width="4"/><ellipse cx="78" cy="44" rx="10" ry="6" fill="#fff" opacity=".55" transform="rotate(-30 78 44)"/><circle cx="48" cy="66" r="5" fill="#123B28"/><circle cx="74" cy="66" r="5" fill="#123B28"/><path d="M52 80q9 9 18 0" stroke="#123B28" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="40" cy="78" r="6" fill="#FF7A8A" opacity=".6"/><circle cx="84" cy="78" r="6" fill="#FF7A8A" opacity=".6"/></svg>`;
-const KITE=(c1,c2)=>`<svg width="120" height="170" viewBox="0 0 120 170"><path d="M60 6L112 60L60 120L8 60Z" fill="${c1}" stroke="#123B28" stroke-width="5" stroke-linejoin="round"/><path d="M60 6L60 120M8 60L112 60" stroke="#123B28" stroke-width="3"/><path d="M60 6L112 60L60 60Z" fill="${c2}"/><path d="M60 120q-14 14 0 24q14 10 0 22" stroke="#123B28" stroke-width="4" fill="none"/><path d="M50 136l10 6l10-6z" fill="${c2}" stroke="#123B28" stroke-width="3"/></svg>`;
-const DUCK=`<svg width="150" height="120" viewBox="0 0 150 120"><path d="M20 70q0 36 56 36q52 0 60-34q-22 8-36-6q4-30-24-36q-26-2-28 24q-16-6-28 16z" fill="#FFD93B" stroke="#123B28" stroke-width="5" stroke-linejoin="round"/><path d="M44 54l-24 4l20 8z" fill="#FF9F1C" stroke="#123B28" stroke-width="4" stroke-linejoin="round"/><circle cx="62" cy="44" r="5" fill="#123B28"/><path d="M84 70q14 12 30 0" stroke="#123B28" stroke-width="4" fill="none"/><path d="M6 108q20-8 40 0t40 0t40 0" stroke="#3B9BD6" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`;
-function MASCOT(){return `<svg width="260" height="300" viewBox="0 0 260 300" style="overflow:visible">
-<g class="armL"><rect x="14" y="140" width="62" height="30" rx="15" fill="#FFD93B" stroke="#123B28" stroke-width="6"/></g>
-<g class="armR"><rect x="184" y="140" width="62" height="30" rx="15" fill="#FFD93B" stroke="#123B28" stroke-width="6"/></g>
-<ellipse cx="96" cy="262" rx="30" ry="16" fill="#123B28"/><ellipse cx="164" cy="262" rx="30" ry="16" fill="#123B28"/>
-<rect x="104" y="30" width="52" height="46" rx="15" fill="#FFD93B" stroke="#123B28" stroke-width="6"/>
-<rect x="50" y="64" width="160" height="186" rx="40" fill="#FFD93B" stroke="#123B28" stroke-width="6"/>
-<rect x="66" y="80" width="40" height="18" rx="9" fill="#fff" opacity=".5"/>
-<g class="eyes"><ellipse cx="104" cy="138" rx="12" ry="17" fill="#123B28"/><ellipse cx="156" cy="138" rx="12" ry="17" fill="#123B28"/><circle cx="108" cy="131" r="5" fill="#fff"/><circle cx="160" cy="131" r="5" fill="#fff"/></g>
-<circle cx="82" cy="176" r="11" fill="#FF8A8A" opacity=".55"/><circle cx="178" cy="176" r="11" fill="#FF8A8A" opacity=".55"/>
-<path class="mc" d="M100 172q30 30 60 0" fill="none" stroke="#123B28" stroke-width="9" stroke-linecap="round"/>
-<path class="mo" d="M100 168q30 0 60 0q-4 38-30 38q-26 0-30-38z" fill="#123B28" stroke="#123B28" stroke-width="5" stroke-linejoin="round" style="display:none"/>
-</svg>`}
+const MANGO=(g='mg')=>`<img src="${AS.mango}" style="width:150px;display:block;filter:${g==='mg2'?'hue-rotate(-18deg) saturate(1.25) ':''}drop-shadow(0 8px 6px rgba(0,0,0,.18))">`;
+const KITE=(c1,c2)=>`<img src="${AS.kite}" style="width:150px;display:block;filter:${c1==='#3B9BD6'?'hue-rotate(170deg) ':''}drop-shadow(0 10px 8px rgba(0,0,0,.15))">`;
+const DUCK=`<img src="${AS.duck}" style="width:170px;display:block;filter:drop-shadow(0 8px 6px rgba(0,0,0,.15))">`;
+const COUNTER=(green)=>`<img src="${AS.counter}" style="width:118px;display:block;filter:${green?'hue-rotate(75deg) saturate(1.3) brightness(.9) ':''}drop-shadow(0 6px 5px rgba(0,0,0,.2))">`;
+function MASCOT(){return `<div style="position:relative;width:380px;height:420px"><img class="tki" src="${AS.tk_idle}" style="position:absolute;left:0;bottom:0;width:380px;filter:drop-shadow(0 14px 10px rgba(0,0,0,.22))"></div>`}
 function mascot(parent){const e=el(parent,MASCOT());e.q=s=>e.querySelector(s);return e}
-// set mascot pose: talking key list, wave, etc
-function talkingAt(t){for(const k in TL.lines){const l=TL.lines[k];if(l.speaker!=='T'||t<l.start||t>l.end)continue;for(const w of l.words){if(t>=w.t&&t<=w.t+Math.max(.12,Math.min(w.d,.5)))return Math.sin((t-w.t)*28)>-.2}}return false}
+function talkingAt(t){for(const k in TL.lines){const l=TL.lines[k];if(l.speaker!=='T'||t<l.start||t>l.end)continue;for(const w of l.words){if(t>=w.t&&t<=w.t+Math.max(.12,Math.min(w.d,.5)))return Math.sin((t-w.t)*26)>-.1}}return false}
 function poseMascot(e,t,o={}){
- const blink=((t+ (o.ph||0))%3.4)<.12;
- e.q('.eyes').style.transform=blink?'translateY(138px) scaleY(.12) translateY(-138px)':'';
- const talk=talkingAt(t);e.q('.mc').style.display=talk?'none':'';e.q('.mo').style.display=talk?'':'none';
- const wave=o.wave?Math.sin(t*10)*28:0;const cheer=o.cheer?-70+Math.sin(t*12)*10:0;
- e.q('.armR').style.transform=`rotate(${(o.wave?-60+wave:cheer)}deg)`;e.q('.armR').style.transformOrigin='190px 155px';
- e.q('.armL').style.transform=`rotate(${o.cheer?70-Math.sin(t*12)*10:(o.point?40:0)}deg)`;e.q('.armL').style.transformOrigin='70px 155px';
+ const talk=talkingAt(t);const img=e.q('.tki');
+ const src=(o.cheer||o.wave)&&!talk?AS.tk_happy:(talk?AS.tk_talk:AS.tk_idle);
+ if(img.getAttribute('src')!==src)img.setAttribute('src',src);
+ const r=o.wave?Math.sin(t*7)*5:(o.cheer?Math.sin(t*10)*4:(talk?Math.sin(t*9)*1.5:0));
+ img.style.transform=`rotate(${r}deg)`;img.style.transformOrigin='50% 100%';
 }
 function idleBob(t,ph=0){return Math.sin((t+ph)*3.2)*6}
 // confetti
@@ -76,48 +65,38 @@ function confetti(parent,n,seed){const r=rng(seed);const ps=[];for(let i=0;i<n;i
 function confettiU(ps,t,t0,cx,cy){const dt=t-t0;for(const p of ps){if(dt<0||dt>2.6){p.d.style.visibility='hidden';continue}p.d.style.visibility='visible';const x=cx+Math.cos(p.a)*p.v*dt*.8+Math.sin(dt*4+p.ph)*20;const y=cy-p.up*dt+Math.sin(p.a)*p.v*.3*dt+700*dt*dt;p.d.style.transform=`translate(${x}px,${y}px) rotate(${p.vr*dt}deg) scaleX(${Math.cos(dt*8+p.ph)})`;p.d.style.opacity=dt>2?1-(dt-2)/.6:1}}
 // ---------- background ----------
 const bg=document.getElementById('bg');
-bg.innerHTML=`<div class="a" style="width:1920px;height:1080px;background:linear-gradient(#9FD8FF,#E6F7FF 70%)"></div>`;
-const sun=el(bg,`<svg width="260" height="260" viewBox="0 0 260 260"><g stroke="#FFC21A" stroke-width="14" stroke-linecap="round">${[...Array(12)].map((_,i)=>`<line x1="130" y1="14" x2="130" y2="44" transform="rotate(${i*30} 130 130)"/>`).join('')}</g><circle cx="130" cy="130" r="70" fill="#FFD93B" stroke="#FFC21A" stroke-width="8"/></svg>`);
-const CLOUD=`<svg width="300" height="130" viewBox="0 0 300 130"><path d="M50 110q-44 0-40-34q4-30 40-26q8-40 54-36q34 2 46 30q14-22 44-14q34 10 26 40q40 0 40 24q0 16-24 16z" fill="#fff"/></svg>`;
-const clouds=[[200,170,1],[900,110,.8],[1500,200,1.1],[2300,140,.9]].map(c=>({e:el(bg,CLOUD),c}));
-el(bg,`<svg width="1920" height="380" viewBox="0 0 1920 380"><path d="M0 170Q300 40 620 150T1240 130T1920 150V380H0Z" fill="#7CC27A"/><path d="M0 250Q420 140 900 240T1920 210V380H0Z" fill="#3FA34D"/><path d="M0 320Q500 260 1000 320T1920 300V380H0Z" fill="#1F7A4C"/></svg>`,'a','top:700px');
-function bgU(t){P(sun,1700,170,1,t*8);for(const {e,c} of clouds){let x=((c[0]+t*18*c[2])%2400)-240;P(e,x,c[1],c[2])}}
+bg.innerHTML=`<div class="a" style="width:1920px;height:1080px;background:#9FD8FF"></div>`;
+const meadow=el(bg,`<img src="${AS.meadow}" style="width:1920px;height:1080px;display:block">`,'a','transform-origin:50% 60%');
+function bgU(t){const z=1.04+0.03*Math.sin(t*0.07);meadow.style.transform=`translate(${Math.sin(t*0.05)*12}px,0) scale(${z})`}
 // ---------- scenes ----------
 const S=[];
 function scene(mark,build){const root=document.createElement('div');root.className='scene';document.body.insertBefore(root,document.getElementById('cap'));const u=build(root,M(mark));S.push({t0:M(mark),root,u});}
 
-// INTRO
+// INTRO (3D clip from Canva)
 scene('intro',(r,t0)=>{
- const logo=el(r,`<div style="display:flex;align-items:center;gap:26px"><img src="__LOGO__" width="150" height="150"><span class="big" style="font-size:130px;color:#123B28">Little Takhti</span></div>`);
- const m=mascot(r);
- const kick=el(r,`<div class="chip">KG Maths</div>`);
- const title=el(r,`<div class="big" style="font-size:200px;line-height:1;color:#123B28;white-space:nowrap">${'Adding to 10'.split('').map(c=>`<span style="display:inline-block">${c===' '?'&nbsp;':c}</span>`).join('')}</div>`);
- const letters=[...title.querySelectorAll('span')];
- const nums=[...Array(10)].map((_,i)=>el(r,`<div class="card big" style="width:110px;height:110px;font-size:70px;padding-top:10px;border-radius:28px;background:${CFC[i%6]};color:#fff;border-color:#123B28">${i+1}</div>`));
- const tHi=L('hi'),tToday=L('today'),tTen=W('today','ten');
- sfx(t0+.15,'swoosh');sfx(t0+.45,'sparkle');sfx(tHi-.55,'boing');sfx(tToday+.05,'whoosh');
- letters.forEach((_,i)=>sfx(tToday+.25+i*.06,'pop',.25,1+i*.04));
- nums.forEach((_,i)=>sfx(tTen-.6+i*.09,'pop',.22,1.2+i*.06));
+ const C=TL.clips&&TL.clips.intro;
+ const clipW=el(r,`<img class="clip" style="width:1920px;height:1080px;display:block">`,'a');const clip=clipW.firstElementChild;
+ const logo=el(r,`<div style="display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.92);padding:10px 26px 10px 12px;border-radius:999px;box-shadow:0 6px 0 rgba(18,59,40,.15)"><img src="__LOGO__" width="64" height="64"><span class="big" style="font-size:52px;color:#123B28">Little Takhti</span></div>`);
+ const card=el(r,`<div class="card" style="flex-direction:column;padding:26px 60px 18px;gap:6px"><div class="chip" style="font-size:44px">KG Maths</div><div class="big" style="font-size:150px;line-height:1;white-space:nowrap">Adding to <span style="color:#1F7A4C">10</span></div></div>`);
+ const nums=[...Array(10)].map((_,i)=>el(r,`<div class="card big" style="width:96px;height:96px;font-size:60px;padding-top:8px;border-radius:26px;background:${CFC[i%6]};color:#fff;border-color:#123B28">${i+1}</div>`));
+ const tToday=L('today'),tTen=W('today','ten');
+ sfx(t0+.15,'swoosh');sfx(t0+.45,'sparkle');sfx(tToday+.6,'whoosh');
+ nums.forEach((_,i)=>sfx(tTen-.5+i*.08,'pop',.22,1.2+i*.06));
+ r.__clip=clip;
  return t=>{
-  const out=lin(t,tHi-.9,.4);
-  P(logo,960,mix(460,-200,eio(out)),pop(t,t0+.1,.6),0,1);
-  // mascot jumps in
-  const j=lin(t,tHi-.75,.5);let my=mix(1300,620,eo(j));if(j>=1)my=620+Math.abs(Math.sin((t-tHi+.25)*9))*-30*Math.exp(-(t-tHi+.25)*4);
-  const mvx=mix(960,330,eio(lin(t,tToday,.6)));
-  const sq=j>=1&&t-tHi+.25<.2?1-.12*Math.sin((t-tHi+.25)/.2*Math.PI):1;
-  P(m,mvx,my+idleBob(t),j>0?1.25:0,0,1,1/sq,sq);poseMascot(m,t,{wave:t<tToday});
-  P(kick,1180,300,pop(t,tToday+.15));
-  letters.forEach((s,i)=>{const k=pop(t,tToday+.25+i*.06,.5);s.style.transform=`translateY(${(1-k)*120}px) scale(${k})`;s.style.color=i>=10?'#1F7A4C':'#123B28'});
-  P(title,1180,470,1);
-  nums.forEach((n,i)=>{const a=Math.PI*(1.05+i*0.1)/1;const x=1180+Math.cos(Math.PI+ i*Math.PI/9)*-560;const y=760+Math.sin(i*Math.PI/9)*-0+ Math.sin(t*3+i)*10;P(n,mix(700,1720,i/9),y,pop(t,tTen-.6+i*.09,.4),Math.sin(t*2+i)*8)});
+  if(C){const k=Math.max(0,Math.min(C.n-1,Math.floor((t-t0)*30)));const src=C.dir+String(k+1).padStart(4,'0')+'.jpg';if(clip.getAttribute('src')!==src)clip.setAttribute('src',src)}
+  P(clipW,960,540,C?1:0);
+  P(logo,250,80,pop(t,t0+.2,.5));
+  P(card,1180,330,pop(t,tToday+.6,.55));
+  nums.forEach((n,i)=>P(n,mix(760,1600,i/9),560+Math.sin(t*3+i)*8,pop(t,tTen-.5+i*.08,.4),Math.sin(t*2+i)*6));
  }});
 
 // STORY
 scene('story',(r,t0)=>{
- const basketBack=el(r,`<svg width="520" height="120" viewBox="0 0 520 120"><ellipse cx="260" cy="60" rx="250" ry="50" fill="#8A5A2B" stroke="#123B28" stroke-width="6"/></svg>`);
+ 
  const slots=[[-390,0],[-260,0],[-130,0],[0,0],[130,0],[260,0],[390,0]];
  const mangoes=slots.map((_,i)=>el(r,MANGO(i<4?'mg':'mg2')));
- const basketFront=el(r,`<svg width="560" height="260" viewBox="0 0 560 260"><path d="M14 30H546L486 240Q480 252 466 252H94Q80 252 74 240Z" fill="#B97A3F" stroke="#123B28" stroke-width="7" stroke-linejoin="round"/>${[0,1,2,3].map(i=>`<path d="M${40+i*6} ${80+i*45}H${520-i*6}" stroke="#8A5A2B" stroke-width="8"/>`).join('')}${[...Array(9)].map((_,i)=>`<path d="M${80+i*50} 34V248" stroke="#8A5A2B" stroke-width="6" opacity=".7"/>`).join('')}<rect x="6" y="18" width="548" height="34" rx="17" fill="#D79A56" stroke="#123B28" stroke-width="7"/></svg>`);
+ const basketFront=el(r,`<img src="${AS.basket}" style="width:900px;height:380px;display:block;object-fit:fill;filter:drop-shadow(0 18px 14px rgba(0,0,0,.18))">`);
  const badges=[...Array(7)].map((_,i)=>el(r,`<div class="card big" style="width:92px;height:92px;font-size:60px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B">${i+1}</div>`));
  const brace4=el(r,`<div class="chip" style="font-size:44px">Nana: 4</div>`);
  const brace3=el(r,`<div class="chip" style="font-size:44px;background:#1F7A4C;color:#fff">Zara: 3</div>`);
@@ -130,13 +109,13 @@ scene('story',(r,t0)=>{
  eqT.forEach((c,i)=>sfx(c,'pop',.4,1+i*.1));sfx(eqT[4]+.05,'tada',.6);sfx(L('basket'),'whoosh',.5);
  return t=>{
   const bx=1010,by=600;const bin=eo(lin(t,L('basket')-.2,.6));
-  P(basketBack,bx,mix(1300,by-6,bin),1,0,1,1.75,1);P(basketFront,bx,mix(1400,by+110,bin),1,0,1,1.7,1);
-  mangoes.forEach((e,i)=>{const d=drop[i];const k=lin(t,d,.42);const tx=bx+slots[i][0],ty=by-62+slots[i][1];
+  P(basketFront,bx,mix(1450,by+70,bin));
+  mangoes.forEach((e,i)=>{const d=drop[i];const k=lin(t,d,.42);const tx=bx+slots[i][0]*0.95,ty=by-150+slots[i][1];
    let y=mix(-160,ty,k*k);let s=1;if(k>=1){const b=t-d-.42;y=ty-Math.abs(Math.sin(b*12))*24*Math.exp(-b*7);s=1}
    let glow=1;cnt.forEach((c,j)=>{if(i===j+3){glow+=.28*Math.exp(-Math.pow((t-c-.1)*6,2))}});
    if(i<4){glow+=.18*Math.exp(-Math.pow((t-cnt[0]+.25)*5,2))}
    P(e,tx,y+(k>=1?Math.sin(t*3+i)*3:0),(t<d?0:1.1)*glow,Math.sin(t*2.5+i*1.3)*5)});
-  badges.forEach((b,i)=>{let tt=i<3?cnt[0]-.25:cnt[i-3];if(i===3)tt=cnt[0];const k=pop(t,tt,.4);P(b,bx+slots[i][0],by-62+slots[i][1]-125,k*(t>eqT[0]-.1?mix(1,.75,lin(t,eqT[0]-.1,.3)):1),0,1-lin(t,eqT[0]+.1,.3)*.0)});
+  badges.forEach((b,i)=>{let tt=i<3?cnt[0]-.25:cnt[i-3];if(i===3)tt=cnt[0];const k=pop(t,tt,.4);P(b,bx+slots[i][0]*0.95,by-150+slots[i][1]-118,k*(t>eqT[0]-.1?mix(1,.75,lin(t,eqT[0]-.1,.3)):1),0,1-lin(t,eqT[0]+.1,.3)*.0)});
   P(brace4,bx-195,by+290,pop(t,drop[3]+.5)*(1-lin(t,L('howmany'),.3)));P(brace3,bx+260,by+290,pop(t,drop[6]+.5)*(1-lin(t,L('howmany'),.3)));
   const ex=[740,890,1010,1130,1290];toks.forEach((e,i)=>P(e,ex[i]+20,190,pop(t,eqT[i],.45),0));
   confettiU(cf,t,eqT[4]+.05,1300,260);
@@ -172,7 +151,7 @@ scene('hop',(r,t0)=>{
 scene('ten',(r,t0)=>{
  const fx=960,fy=560,cs=150;
  const frame=el(r,`<div style="width:${cs*5+40}px;height:${cs*2+40}px;background:#fff;border:6px solid #123B28;border-bottom-width:14px;border-radius:34px;display:grid;grid-template-columns:repeat(5,${cs}px);padding:14px;gap:0">${[...Array(10)].map(()=>`<div style="border:3px dashed #BFD3C6;border-radius:24px;margin:6px"></div>`).join('')}</div>`);
- const ctr=[...Array(10)].map(()=>el(r,`<div style="width:110px;height:110px;border-radius:50%;border:6px solid #123B28;border-bottom-width:12px"></div>`));
+ const ctr=[...Array(10)].map(()=>el(r,`<div>${COUNTER(false)}</div>`));const ctrG=[...Array(10)].map(()=>COUNTER(true)),ctrY=COUNTER(false);
  const title=el(r,`<div class="chip">Make 10</div>`);
  const lab=el(r,`<div class="card big" style="font-size:100px;padding:18px 50px 0;white-space:nowrap"></div>`);
  const m=mascot(r);
@@ -183,7 +162,7 @@ scene('ten',(r,t0)=>{
   P(title,960,170,pop(t,t0+.2));P(frame,fx,fy,pop(t,t0+.15,.5));
   let cur=null;for(const p of pairs)if(t>=p.s-.2)cur=p;
   ctr.forEach((c,i)=>{if(!cur){P(c,0,0,0);return}
-   const col=i<cur.a?'#FFD93B':'#1F7A4C';c.firstElementChild.style.background=col;
+   const want=i<cur.a?'y':'g';if(c.dataset.k!==want){c.innerHTML=want==='y'?ctrY:ctrG[i];c.dataset.k=want}
    const ts=i<cur.a?cur.ta+i*.07:cur.tb+(i-cur.a)*.08;const k=pop(t,ts,.35);
    const cx=fx-2*cs+(i%5)*cs,cy=fy-cs/2+Math.floor(i/5)*cs+6;
    const glow=t>cur.tt?1+.1*Math.exp(-Math.pow((t-cur.tt-.1-i*.03)*6,2)):1;
@@ -196,7 +175,7 @@ scene('ten',(r,t0)=>{
 scene('quiz',(r,t0)=>{
  const big=el(r,`<div class="big" style="font-size:230px;color:#123B28;white-space:nowrap">Your turn!</div>`);
  const m=mascot(r);sfx(t0+.2,'tada',.5);const cf=confetti(r,80,3);
- return t=>{P(big,960,380,pop(t,t0+.15,.6),Math.sin(t*3)*3);P(m,960,800+idleBob(t)-Math.abs(Math.sin(t*6))*30,1.1,0,1);poseMascot(m,t,{cheer:true});confettiU(cf,t,t0+.2,960,300)}});
+ return t=>{P(big,960,380,pop(t,t0+.15,.6),Math.sin(t*3)*3);P(m,960,700+idleBob(t)-Math.abs(Math.sin(t*6))*30,1.0,0,1);poseMascot(m,t,{cheer:true});confettiU(cf,t,t0+.2,960,300)}});
 
 // QUESTIONS
 function question(id,objs,opts,ans,cd){
@@ -226,7 +205,7 @@ function question(id,objs,opts,ans,cd){
 const grid=(n,cx,cy,cols,gap,html,t0f,step)=>[...Array(n)].map((_,i)=>({html,x:cx+((i%cols)-(Math.min(n,cols)-1)/2)*gap,y:cy+Math.floor(i/cols)*gap*.95-(Math.ceil(n/cols)-1)*gap*.45,t:()=>t0f()+i*step,wob:6}));
 question('q1',{items:[...grid(5,620,450,3,170,KITE('#FF5C8A','#FFD93B'),()=>W('q1','five'),.12),...grid(3,1300,450,3,170,KITE('#3B9BD6','#B45BD6'),()=>W('q1','three'),.12)],plus:[960,450,()=>W('q1','gets')]},[7,8,9],8,'cd1');
 question('q2',{items:[...grid(2,600,450,2,200,DUCK,()=>W('q2','two'),.15),...grid(4,1290,450,2,200,DUCK,()=>W('q2','four'),.15)],plus:[930,450,()=>W('q2','more')]},[5,6,7],6,'cd2');
-question('q3',{items:[...[...Array(10)].map((_,i)=>({html:i<9?`<div style="width:120px;height:120px;border-radius:50%;background:#FFD93B;border:6px solid #123B28;border-bottom-width:12px"></div>`:`<div class="big" style="width:120px;height:120px;border-radius:50%;border:6px dashed #FF7A45;color:#FF7A45;font-size:80px;text-align:center;line-height:130px">?</div>`,x:960+((i%5)-2)*160,y:370+Math.floor(i/5)*160,t:()=>W('q3','nine')+i*.06}))]},[1,2,3],1,'cd3');
+question('q3',{items:[...[...Array(10)].map((_,i)=>({html:i<9?COUNTER(false):`<div class="big" style="width:120px;height:120px;border-radius:50%;border:6px dashed #FF7A45;color:#FF7A45;font-size:80px;text-align:center;line-height:130px">?</div>`,x:960+((i%5)-2)*160,y:370+Math.floor(i/5)*160,t:()=>W('q3','nine')+i*.06}))]},[1,2,3],1,'cd3');
 
 // RECAP
 scene('recap',(r,t0)=>{
@@ -263,7 +242,7 @@ function wipeU(t){let b=null;for(const x of bounds)if(Math.abs(t-x)<.45)b=x;
  if(b===null){wipe.style.display=wipe2.style.display='none';return}
  const k=(t-b+.45)/.9;wipe.style.display=wipe2.style.display='block';
  wipe.style.left=mix(-1000,2100,eio(k))+'px';wipe2.style.left=mix(-1100,2000,eio(lin(k,0.06,1)))+'px'}
-window.render=function(t){bgU(t);let a=null;for(const s of S)if(t>=s.t0)a=s;for(const s of S){s.root.style.display=s===a?'block':'none'}a&&a.u(t);capU(t);wipeU(t);};
+window.render=async function(t){bgU(t);let a=null;for(const s of S)if(t>=s.t0)a=s;for(const s of S){s.root.style.display=s===a?'block':'none'}a&&a.u(t);capU(t);wipeU(t);const c=a&&a.root.__clip;if(c&&c.getAttribute('src')){try{await c.decode()}catch(e){}}return 1};
 window.getSfx=()=>SFX;
 window.render(0);
 </script></body></html>

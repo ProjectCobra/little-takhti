@@ -379,10 +379,32 @@ def font_css():
     return ff('baloo-2', 'baloo-2-latin-800-normal.woff2', 800) + ff('lexend', 'lexend-latin-500-normal.woff2', 500) + ff('lexend', 'lexend-latin-600-normal.woff2', 600) + ff('lexend', 'lexend-latin-700-normal.woff2', 700)
 
 
+def assets():
+    out = {}
+    for f in sorted((HERE / 'assets').glob('*.webp')):
+        out[f.stem.replace('-', '_')] = 'data:image/webp;base64,' + base64.b64encode(f.read_bytes()).decode()
+    return out
+
+
+def clip_frames(tl):
+    """stretch the Canva intro clip over the intro scene and write frames for the page"""
+    src = Path(os.environ.get('CLIP_INTRO', HERE / 'clips' / 'c1-meadow.mp4'))
+    if not src.exists(): print('no intro clip', src); return
+    dur = tl['marks']['story'] - tl['marks']['intro']
+    d = TMP / 'c1'; d.mkdir(parents=True, exist_ok=True)
+    cd = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(src)], capture_output=True, text=True).stdout.strip())
+    k = dur / cd
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(src), '-vf', f'setpts={k:.4f}*PTS,minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:vsbmc=1,scale=1920:1080:flags=lanczos',
+                    '-q:v', '3', str(d / '%04d.jpg')], check=True)
+    n = len(list(d.glob('*.jpg')))
+    tl['clips'] = {'intro': {'dir': d.as_uri() + '/', 'n': n}}
+    print('intro clip frames', n, 'stretch', round(k, 2))
+
+
 def page_html(tl):
     logo = 'data:image/svg+xml;base64,' + base64.b64encode((SRC.parent / 'site' / 'favicon.svg').read_bytes()).decode()
     h = (HERE / 'stage.html').read_text()
-    return h.replace('__FONTS__', font_css()).replace('__TL__', json.dumps(tl)).replace('__LOGO__', logo)
+    return h.replace('__FONTS__', font_css()).replace('__ASSETS__', json.dumps(assets())).replace('__TL__', json.dumps(tl)).replace('__LOGO__', logo)
 
 
 def main():
@@ -390,6 +412,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True); TMP.mkdir(parents=True, exist_ok=True)
     tl, voice = build_timeline()
     (TMP / 'timeline.json').write_text(json.dumps(tl, indent=1))
+    clip_frames(tl)
     html = TMP / 'stage.html'; html.write_text(page_html(tl))
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:

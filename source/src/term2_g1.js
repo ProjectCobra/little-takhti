@@ -189,3 +189,36 @@ addPlus("computer",{g1:[
   "Children may hide a mistake for fear of trouble. Stay calm and thank them for telling you, so they keep coming back.",
   ["The Shiny Button","Omar was playing a game when a shiny button popped up: 'Free gold coins!' His finger nearly tapped it. Then he stopped, thought and called, 'Abbu, is this OK?' Abbu looked. 'Good thinking! That button wants money,' he said, and closed it. Ask: What did Omar do before tapping the button?"])
 ]});
+
+addPlus("computer",{g1:[
+ TP("Coding with arrows","",[
+  pg("What Is Code?","Read the big idea. Then circle true or false.","Know that code is a set of instructions a computer or robot follows.",
+   CN(["robot","up-arrow","right-arrow"],"Code is a list of instructions. A robot cannot think for itself. It does exactly what the code says. We can use arrows to tell a robot which way to move, one step at a time.","Code"),
+   CH("",[["Code is a list of instructions.",0],["A robot does exactly what the code says.",0],["A robot can guess what we mean.",1],["Each arrow moves the robot one step.",0]],TF)),
+  pg("Arrow Words","Look at each arrow. Write its word from the box.","Name the four direction arrows.",BK(["up","down","left","right"]),
+   FP("",[["up-arrow","This arrow means {{up}}."],["down-arrow","This arrow means {{down}}."],["left-arrow","This arrow means {{left}}."],["right-arrow","This arrow means {{right}}."]],2)),
+  pg("Robot on the Grid","Each arrow moves the robot one square. Start at the robot. Circle where it stops.","Follow arrow instructions on a grid.",
+   {t:"map",rows:["house:Home|deciduous-tree:Tree|star:Star","red-apple:Apple|rock:Rock|cat:Cat","robot:Start|blossom:Flower|soccer-ball:Ball"]},
+   CH("",[["right",["Flower","Apple"],0],["up, up",["Home","Tree"],0],["right, right, up",["Cat","Rock"],0],["up, right",["Rock","Tree"],0]])),
+  pg("Write the Code","Use the grid on the last page. Write the missing arrow word.","Write code to reach a place on a grid.",BK(["up","right"]),
+   F("",["Start to Flower: {{right}}","Start to Apple: {{up}}","Start to Ball: right, {{right}}","Start to Home: up, {{up}}","Start to Star: up, up, right, {{right}}"],1)),
+  pg("Step by Step","Fill in the missing words.","Read a short program in order.",BK(["right","up","star"]),
+   CY("",[["robot","Start"],["right-arrow","Move {{right}}"],["up-arrow","Move {{up}}"],["star","Reach the {{star}}"]])),
+  pg("Find the Bug","Read the big idea. Then circle yes or no.","Know that a bug is a mistake in code.",
+   CN(["bug","magnifying-glass-tilted-left"],"A bug is a mistake in code. If the robot goes to the wrong place, there is a bug. Finding and fixing it is called debugging. Good coders check their code and fix bugs.","Bugs"),
+   CH("",[["The robot must go to Cat: right, right, up. Ali writes: right, up. Is there a bug?",0],["The robot must go to Home: up, up. Sara writes: up, up. Is there a bug?",1],["The robot must go to Ball: right, right. Zoya writes: right, left. Is there a bug?",0],["Fixing a bug is called debugging.",0]],YN)),
+  pg("Say It Shorter","Read the big idea. Then write how many times.","Use repeat to make code shorter.",
+   CN(["repeat-button","right-arrow"],"When the same arrow comes again and again, we can use repeat. Instead of right, right, right, we say repeat right 3 times. It is shorter and easier to read.","Repeat"),
+   F("",["right, right, right = repeat right {{3}} times","up, up = repeat up {{2}} times","left, left, left, left = repeat left {{4}} times","down, down, down, down, down = repeat down {{5}} times"],1)),
+  pg("Code Words","Match each code word to what it means.","Know the words we use when coding.",
+   MA("Write the letter in the box.",["code","arrow","bug","debug","repeat"],["do the same step again","a mistake in code","fix a mistake","a list of instructions","shows which way to move"])),
+  pg("Robot Sums","Read and solve.","Use maths with robot code.",
+   WP("",["The robot moves right 3 steps and then up 2 steps. It moves {{5}} steps.","Ali's code has 4 arrows. He adds 2 more. Now it has {{6}} arrows.","The robot must move 7 steps. It has moved 4. It has {{3}} steps to go.","Repeat right 5 times moves the robot {{5}} steps right."])),
+  pg("My Robot Game","Draw a grid with 3 rows and 3 squares in each row. Draw a robot and a prize. Write the code to reach the prize.","Plan a robot path and write its code.",
+   DR("My grid",260),WR("",["My code: ______________________________","I used ______ arrows."]))],
+  "Coding with arrows: code is a list of instructions that a robot follows exactly. Children name up, down, left and right arrows, follow and write arrow code on a grid, find and fix bugs, and use repeat to make code shorter.",
+  ["Play robot: your child gives you arrow instructions to walk across the room.","Draw a 3 by 3 grid on paper and move a coin with arrow cards.","When the coin ends up in the wrong place, look for the bug together."],
+  ["Make arrow cards and build a path to a toy on the floor.","Try a free children's coding app with a grown-up."],
+  "Left and right are often mixed up. Put a small sticker on your child's right hand while playing.",
+  ["Robo and the Cookie","Hira's toy robot, Robo, wanted a cookie on the other side of the mat. Hira wrote: right, right, up. Robo bumped into a cushion! 'A bug!' laughed Hira. She changed it to up, right, right, and Robo rolled straight to the cookie. Ask: What did Robo bump into?"])
+]});

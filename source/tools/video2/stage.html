@@ -95,9 +95,11 @@ scene('intro',(r,t0)=>{
 scene('story',(r,t0)=>{
  
  const slots=[[-390,0],[-260,0],[-130,0],[0,0],[130,0],[260,0],[390,0]];
+ const BIMG=(cp)=>`<img src="${AS.basket}" style="width:900px;height:380px;display:block;object-fit:fill;clip-path:${cp};filter:drop-shadow(0 18px 14px rgba(0,0,0,.18))">`;
+ const basketBack=el(r,BIMG('polygon(0px 0px,900px 0px,900px 127px,855px 152px,810px 162px,765px 168px,720px 173px,675px 177px,630px 180px,585px 182px,540px 183px,495px 184px,450px 184px,405px 184px,360px 183px,315px 182px,270px 180px,225px 177px,180px 173px,135px 168px,90px 162px,45px 152px,0px 127px)'));
  const mangoes=slots.map((_,i)=>el(r,MANGO(i<4?'mg':'mg2')));
- const basketFront=el(r,`<img src="${AS.basket}" style="width:900px;height:380px;display:block;object-fit:fill;filter:drop-shadow(0 18px 14px rgba(0,0,0,.18))">`);
- const badges=[...Array(7)].map((_,i)=>el(r,`<div class="card big" style="width:92px;height:92px;font-size:60px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B">${i+1}</div>`));
+ const basketFront=el(r,BIMG('polygon(0px 125px,45px 150px,90px 160px,135px 166px,180px 171px,225px 175px,270px 178px,315px 180px,360px 181px,405px 182px,450px 182px,495px 182px,540px 181px,585px 180px,630px 178px,675px 175px,720px 171px,765px 166px,810px 160px,855px 150px,900px 125px,900px 380px,0px 380px)'));
+  const badges=[...Array(7)].map((_,i)=>el(r,`<div class="card big" style="width:92px;height:92px;font-size:60px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B">${i+1}</div>`));
  const brace4=el(r,`<div class="chip" style="font-size:44px">Nana: 4</div>`);
  const brace3=el(r,`<div class="chip" style="font-size:44px;background:#1F7A4C;color:#fff">Zara: 3</div>`);
  const toks=['4','+','3','=','7'].map((c,i)=>el(r,`<div class="card tok" style="${i===4?'background:#FFD93B':''}${i%2?';border:none;background:none;width:120px':''}">${c}</div>`));
@@ -109,13 +111,13 @@ scene('story',(r,t0)=>{
  eqT.forEach((c,i)=>sfx(c,'pop',.4,1+i*.1));sfx(eqT[4]+.05,'tada',.6);sfx(L('basket'),'whoosh',.5);
  return t=>{
   const bx=1010,by=600;const bin=eo(lin(t,L('basket')-.2,.6));
-  P(basketFront,bx,mix(1450,by+70,bin));
-  mangoes.forEach((e,i)=>{const d=drop[i];const k=lin(t,d,.42);const tx=bx+slots[i][0]*0.95,ty=by-150+slots[i][1];
+  P(basketBack,bx,mix(1450,by+70,bin));P(basketFront,bx,mix(1450,by+70,bin));
+  mangoes.forEach((e,i)=>{const d=drop[i];const k=lin(t,d,.42);const tx=bx+slots[i][0]*0.86,ty=by+25-Math.abs(slots[i][0])*0.06+slots[i][1];
    let y=mix(-160,ty,k*k);let s=1;if(k>=1){const b=t-d-.42;y=ty-Math.abs(Math.sin(b*12))*24*Math.exp(-b*7);s=1}
    let glow=1;cnt.forEach((c,j)=>{if(i===j+3){glow+=.28*Math.exp(-Math.pow((t-c-.1)*6,2))}});
    if(i<4){glow+=.18*Math.exp(-Math.pow((t-cnt[0]+.25)*5,2))}
    P(e,tx,y+(k>=1?Math.sin(t*3+i)*3:0),(t<d?0:1.1)*glow,Math.sin(t*2.5+i*1.3)*5)});
-  badges.forEach((b,i)=>{let tt=i<3?cnt[0]-.25:cnt[i-3];if(i===3)tt=cnt[0];const k=pop(t,tt,.4);P(b,bx+slots[i][0]*0.95,by-150+slots[i][1]-118,k*(t>eqT[0]-.1?mix(1,.75,lin(t,eqT[0]-.1,.3)):1),0,1-lin(t,eqT[0]+.1,.3)*.0)});
+  badges.forEach((b,i)=>{let tt=i<3?cnt[0]-.25:cnt[i-3];if(i===3)tt=cnt[0];const k=pop(t,tt,.4);P(b,bx+slots[i][0]*0.86,by-140+slots[i][1],k*(t>eqT[0]-.1?mix(1,.75,lin(t,eqT[0]-.1,.3)):1),0,1-lin(t,eqT[0]+.1,.3)*.0)});
   P(brace4,bx-195,by+290,pop(t,drop[3]+.5)*(1-lin(t,L('howmany'),.3)));P(brace3,bx+260,by+290,pop(t,drop[6]+.5)*(1-lin(t,L('howmany'),.3)));
   const ex=[740,890,1010,1130,1290];toks.forEach((e,i)=>P(e,ex[i]+20,190,pop(t,eqT[i],.45),0));
   confettiU(cf,t,eqT[4]+.05,1300,260);

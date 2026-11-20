@@ -5,7 +5,7 @@
  "grade": "g1",
  "subject": "science",
  "topic": "Animal groups",
- "duration": 126.8,
+ "duration": 126.6,
  "madeForKids": true,
  "language": "en",
  "chapters": [
@@ -26,15 +26,15 @@
    "Pause and try"
   ],
   [
-   88.45000000000002,
+   88.2,
    "Story time"
   ],
   [
-   106.96000000000002,
+   106.71000000000001,
    "Recap"
   ],
   [
-   116.40000000000002,
+   116.15,
    "Print the worksheets"
   ]
  ],

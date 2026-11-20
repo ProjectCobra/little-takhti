@@ -5,7 +5,7 @@
  "grade": "g2",
  "subject": "g2-geography",
  "topic": "Continents and oceans",
- "duration": 119.1,
+ "duration": 119.0,
  "madeForKids": true,
  "language": "en",
  "chapters": [
@@ -26,15 +26,15 @@
    "Pause and try"
   ],
   [
-   82.39999999999999,
+   82.36,
    "Story time"
   ],
   [
-   102.64,
+   102.60000000000001,
    "Recap"
   ],
   [
-   108.65,
+   108.61000000000001,
    "Print the worksheets"
   ]
  ],

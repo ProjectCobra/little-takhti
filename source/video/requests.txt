@@ -1,0 +1,7 @@
+# One topic id per line. Pushing a change to this file on dev makes GitHub render these lessons with voice
+# and save them to the "videos" branch (videos/<id>/lesson.mp4, thumb.jpg, meta.json).
+nursery-gk-t3
+kg-maths-t4
+science-t11
+g2-geography-t2
+g3-urdu-t3

@@ -1,0 +1,39 @@
+name: Lesson videos
+on:
+  push:
+    branches: [dev]
+    paths: ['source/video/requests.txt', 'source/tools/video/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: videos, cancel-in-progress: false }
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q playwright edge-tts pillow
+          python -m playwright install --with-deps chromium
+          cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend @fontsource/noto-nastaliq-urdu
+      - name: Build site data
+        run: python3 source/src/build.py
+      - name: Render lessons
+        run: |
+          ids=$(grep -v '^#' source/video/requests.txt | tr -s ' \n' ' ')
+          python3 source/tools/video/make_video.py $ids
+      - name: Save to videos branch
+        run: |
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          mkdir -p /tmp/vids && cp -r source/tools/video/out/* /tmp/vids/
+          git fetch origin videos || true
+          if git show-ref --verify --quiet refs/remotes/origin/videos; then git checkout -B videos origin/videos; else git checkout --orphan videos && git rm -rf -q . ; fi
+          mkdir -p videos && cp -r /tmp/vids/* videos/
+          git add videos && git commit -qm "Lesson videos: $(ls /tmp/vids | tr '\n' ' ')" && git push origin videos

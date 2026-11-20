@@ -78,10 +78,16 @@ p.big{{font-size:46px;line-height:1.45;font-weight:500}}
 .opt{{max-width:1380px;display:flex;align-items:center;gap:24px;font-size:48px;font-weight:700;padding:22px 34px;border-radius:26px;border:3px solid #DCE8DD;border-bottom-width:8px;background:#fff;margin-top:20px}}
 .opt b{{display:grid;place-items:center;width:70px;height:70px;border-radius:18px;background:#FFD93B;font-family:'baloo-2';font-size:44px;flex:none}}
 .opt.ok{{border-color:#1F7A4C;background:#E6F4EA}}.opt.ok b{{background:#1F7A4C;color:#fff}}
-.timer{{position:absolute;right:0;top:-10px;width:170px;height:170px;border-radius:50%;background:#FFD93B;display:grid;place-items:center;font-family:'baloo-2';font-weight:800;font-size:110px}}
+.timer{{position:absolute;inset-inline-end:0;top:-10px;width:170px;height:170px;border-radius:50%;background:#FFD93B;display:grid;place-items:center;font-family:'baloo-2';font-weight:800;font-size:110px}}
 .yel{{position:absolute;width:520px;height:520px;border-radius:50%;background:#FFD93B;right:-120px;bottom:-160px;z-index:-1}}
 </style></head><body><div class="top">{LOGO}<span class="brand">Little Takhti</span><span class="pill">{html.escape(d['grade'])} · {html.escape(d['subject'])}</span></div>
-<div class="stage">{body}</div>{cap}</body></html>'''
+<div class="stage" dir="{'rtl' if ur else 'ltr'}">{body}</div>{cap}</body></html>'''
+
+
+def is_ur(s):
+    """mostly Urdu script? (mixed English sentences with one Urdu word stay left to right)"""
+    a = len(re.findall('[\u0600-\u06FF]', s or '')); l = len(re.findall('[A-Za-z]', s or ''))
+    return a > l
 
 
 def T(d, s):
@@ -102,11 +108,11 @@ def scenes(d):
     if idea['text']:
         pics = ''.join(img(i, 190) for i in idea['img'][:4])
         S.append(('idea', page(d, f'''<div class="card"><div class="kick">{'بڑا خیال' if ur else 'Big idea'}{(' · ' + html.escape(idea['title'])) if idea.get('title') else ''}</div>
-          {f'<div style="display:flex;gap:30px;margin:10px 0 30px">{pics}</div>' if pics else ''}<p class="big {'ur' if ur else ''}">{html.escape(idea['text'])}</p></div>'''), idea['text'], 0.8))
+          {f'<div style="display:flex;gap:30px;margin:10px 0 30px">{pics}</div>' if pics else ''}<p class="big {'ur' if is_ur(idea['text']) else ''}" dir="{'rtl' if is_ur(idea['text']) else 'ltr'}">{html.escape(idea['text'])}</p></div>'''), idea['text'], 0.8))
     for i, e in enumerate(d['ex'][:4]):
         pic = img(e['img'], 380) if e['img'] else ''
         S.append((f'ex{i+1}', page(d, f'''<div style="display:flex;align-items:center;gap:80px">{f'<div class="card" style="padding:50px">{pic}</div>' if pic else ''}
-          <div style="flex:1"><div class="kick">{'مثال' if ur else 'Example'} {i+1}</div><h2 class="{'ur' if ur else ''}">{html.escape(e['text'])}</h2></div></div>'''), e['text'], 0.6))
+          <div style="flex:1"><div class="kick">{'مثال' if ur else 'Example'} {i+1}</div><h2 class="{'ur' if is_ur(e['text']) else ''}" dir="{'rtl' if is_ur(e['text']) else 'ltr'}">{html.escape(e['text'])}</h2></div></div>'''), e['text'], 0.6))
     for i, q in enumerate(d['qs'][:3]):
         opts = q['opts']
         letters = 'ABC'
@@ -115,7 +121,7 @@ def scenes(d):
         def qhtml(ok=None, t=None):
             o = ''.join(f'<div class="opt{" ok" if ok is not None and opts[j] == q["ans"] else ""}"><b>{letters[j]}</b><span class="{"ur" if ur and re.search("[؀-ۿ]", oo) else ""}">{html.escape(oo)}</span></div>' for j, oo in enumerate(opts))
             tm = f'<div class="timer">{t}</div>' if t else ''
-            return f'''{tm}<div class="kick">{'سوال' if ur else 'Pause and try'} {i+1}</div><h2 class="{'ur' if ur else ''}" style="max-width:1450px">{html.escape(q['q'])}</h2><div style="margin-top:16px">{o}</div>'''
+            return f'''{tm}<div class="kick">{'سوال' if ur else 'Pause and try'} {i+1}</div><h2 class="{'ur' if is_ur(q['q']) else ''}" dir="{'rtl' if is_ur(q['q']) else 'ltr'}" style="max-width:1450px">{html.escape(q['q'])}</h2><div style="margin-top:16px">{o}</div>'''
         S.append((f'q{i+1}', page(d, qhtml()), say, 0.4))
         for t in (5, 4, 3, 2, 1):
             S.append((f'q{i+1}t{t}', page(d, qhtml(t=t), 'سوچیں...' if ur else 'Think...'), None, 1.0))

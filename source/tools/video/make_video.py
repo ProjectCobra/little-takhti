@@ -149,10 +149,11 @@ async def _edge(text, voice, path):
 
 def tts(text, voice, path):
     """Microsoft neural voice first; Google voice as a backup (also has Urdu)."""
-    try:
-        asyncio.run(_edge(text, voice, path))
+    try:  # separate process: Playwright's sync API already runs an event loop here
+        r = subprocess.run([sys.executable, '-m', 'edge_tts', '--voice', voice, '--rate=-8%', '--text', text, '--write-media', str(path)], capture_output=True, text=True, timeout=120)
         if path.exists() and path.stat().st_size > 1000:
             return 'edge'
+        VOICE_LOG.append('edge: ' + (r.stderr or '')[-160:])
     except Exception as e:
         VOICE_LOG.append('edge: ' + repr(e)[:160])
     from gtts import gTTS

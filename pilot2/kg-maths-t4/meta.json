@@ -4,8 +4,13 @@
  "description": "Learn to add up to 10 with mangoes, a number line hop and a ten frame, then try a quick quiz. Free worksheets: https://littletakhti.netlify.app",
  "madeForKids": true,
  "language": "en",
- "duration": 129.037,
+ "duration": 129.038,
  "gemini_log": [
+  "models/gemini-3.8-flash-lite-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "models/gemini-3.1-flash-tts-preview:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "tts fallback p55: tts failed: HTTP Error 403: Forbidden",
+  "models/gemini-3.8-flash-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "models/gemini-3.8-flash-lite-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
   "models/gemini-3.1-flash-tts-preview:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
   "tts fallback turn: tts failed: HTTP Error 403: Forbidden",
   "models/gemini-3.8-flash-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
@@ -40,11 +45,6 @@
   "models/gemini-3.8-flash-lite-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
   "models/gemini-3.1-flash-tts-preview:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
   "tts fallback bye: tts failed: HTTP Error 403: Forbidden",
-  "interactions: HTTP Error 403: Forbidden {\"error\":{\"message\":\"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting#project-unavailable.\",\"cod",
-  "lyria lyria-3.5 failed HTTP Error 403: Forbidden",
-  "interactions: HTTP Error 403: Forbidden {\"error\":{\"message\":\"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting#project-unavailable.\",\"cod",
-  "lyria lyria-3-clip-preview failed HTTP Error 403: Forbidden",
-  "interactions: HTTP Error 403: Forbidden {\"error\":{\"message\":\"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting#project-unavailable.\",\"cod",
-  "lyria lyria-3-pro-preview failed HTTP Error 403: Forbidden"
+  "flow music ok 176.6s"
  ]
 }

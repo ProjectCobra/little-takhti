@@ -1,0 +1,30 @@
+name: Fetch clips
+on:
+  push:
+    branches: [dev]
+    paths: ['source/video/clips.txt']
+permissions:
+  contents: write
+concurrency: { group: videos, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p /tmp/clips
+          grep -v '^#' source/video/clips.txt | while read -r name url; do
+            [ -z "$name" ] && continue
+            curl -sSL --fail -o "/tmp/clips/$name.mp4" "$url" || echo "failed $name"
+          done
+          ls -la /tmp/clips
+      - name: Save
+        run: |
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          for i in 1 2 3; do
+            git fetch -q origin videos && git checkout -q -B videos origin/videos
+            mkdir -p clips && cp /tmp/clips/*.mp4 clips/ 2>/dev/null || true
+            git add clips && git commit -qm "Clips: $(ls /tmp/clips | tr '\n' ' ')" && git push -q origin videos && break
+            git checkout -q -- . ; sleep 5
+          done

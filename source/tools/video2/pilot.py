@@ -14,6 +14,11 @@ TMP = OUT / 'tmp'
 SR = 44100
 FPS = 30
 VOICE = os.environ.get('VOICE', '1') != '0'
+GKEY = os.environ.get('GEMINI_API_KEY', '').strip()
+GBASE = 'https://generativelanguage.googleapis.com/v1beta'
+G_VOICES = {'N': ('Sulafat', 'Read warmly and clearly, like a kind teacher telling a story to young children, at a gentle pace'),
+            'T': ('Leda', 'Say it in a bright, bouncy, playful cartoon character voice, excited and friendly, for little children')}
+G_LOG = []
 VOICES = {'N': ('en-GB-SoniaNeural', '-6%', '+0Hz'), 'T': ('en-GB-MaisieNeural', '-4%', '+0Hz')}
 VOICE_FALLBACK = {'T': ('en-GB-SoniaNeural', '-4%', '+30Hz')}
 
@@ -88,7 +93,112 @@ def trim_silence(a, thr=0.012):
     return a[s:e], s / SR
 
 
+def g_req(path, body=None, tries=6):
+    import urllib.request, time
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(f'{GBASE}/{path}', data=json.dumps(body).encode() if body is not None else None,
+                                         headers={'x-goog-api-key': GKEY, 'Content-Type': 'application/json'})
+            with urllib.request.urlopen(req, timeout=300) as r: return json.loads(r.read())
+        except Exception as e:
+            msg = getattr(e, 'read', lambda: b'')().decode('utf-8', 'ignore')[:300] if hasattr(e, 'read') else ''
+            G_LOG.append(f'{path}: {e} {msg}')
+            code = getattr(e, 'code', 0)
+            if code in (400, 401, 403, 404): raise
+            time.sleep(min(60, 6 * (i + 1)))
+    raise RuntimeError('gemini failed ' + path)
+
+
+_GM = {}
+def g_models():
+    if not _GM:
+        out, tok = [], ''
+        for _ in range(10):
+            r = g_req('models?pageSize=200' + (f'&pageToken={tok}' if tok else ''))
+            out += [m['name'].split('/', 1)[1] for m in r.get('models', [])]
+            tok = r.get('nextPageToken')
+            if not tok: break
+        _GM['all'] = out
+        G_LOG.append('models: ' + ', '.join(m for m in out if 'tts' in m or 'lyria' in m))
+    return _GM['all']
+
+
+def g_pick(kind):
+    ms = g_models()
+    c = [m for m in ms if kind in m]
+    def ver(m):
+        n = re.findall(r'(\d+(?:\.\d+)?)', m); return float(n[0]) if n else 0
+    c.sort(key=lambda m: (ver(m), 'pro' not in m, 'preview' not in m), reverse=True)
+    return c
+
+
+def gemini_tts(text, spk):
+    import wave, io, time
+    voice, style = G_VOICES[spk]
+    body = {'contents': [{'parts': [{'text': f'{style}: {text}'}]}],
+            'generationConfig': {'responseModalities': ['AUDIO'], 'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': voice}}}}}
+    last = None
+    for m in g_pick('tts')[:3]:
+        try:
+            r = g_req(f'models/{m}:generateContent', body)
+            part = r['candidates'][0]['content']['parts'][0]['inlineData']
+            pcm = base64.b64decode(part['data'])
+            rate = int(re.findall(r'rate=(\d+)', part.get('mimeType', ''))[0]) if 'rate=' in part.get('mimeType', '') else 24000
+            a = np.frombuffer(pcm, dtype='<i2').astype(np.float32) / 32768
+            if rate != SR:
+                a = np.interp(np.arange(int(len(a) * SR / rate)) * rate / SR, np.arange(len(a)), a).astype(np.float32)
+            G_LOG.append(f'tts ok {m} {voice}')
+            time.sleep(2)
+            return a
+        except Exception as e:
+            last = e
+    raise RuntimeError(f'tts failed: {last}')
+
+
+def gemini_music(total):
+    """instrumental bed from Lyria; returns mono float array at SR or None"""
+    prompt = ("Cheerful, gentle instrumental music for a preschool learning cartoon. Ukulele, glockenspiel, soft hand claps, "
+              "light pizzicato strings and a warm bass, major key, about 105 BPM, playful and bouncy but calm enough to sit under a voice. "
+              "Simple loopable structure, no big drops. Instrumental only, no vocals, no singing.")
+    for m in [x for x in g_pick('lyria') if 'realtime' not in x][:3]:
+        try:
+            body = {'model': m, 'input': prompt + (f' Length about {int(total)+5} seconds.' if 'clip' not in m else '')}
+            r = g_req('interactions', body)
+            data = None
+            for st in r.get('steps', []):
+                for c in st.get('content', []) or []:
+                    if c.get('type') == 'audio' and c.get('data'): data = c['data']
+            if not data: G_LOG.append(f'lyria {m}: no audio {str(r)[:200]}'); continue
+            mp3 = TMP / 'music.mp3'; mp3.write_bytes(base64.b64decode(data))
+            a = decode(mp3); G_LOG.append(f'lyria ok {m} {len(a)/SR:.1f}s')
+            return a
+        except Exception as e:
+            G_LOG.append(f'lyria {m} failed {e}')
+    return None
+
+
+def loop_to(a, n, xf=2.0):
+    if len(a) >= n: return a[:n]
+    x = int(xf * SR); out = a.copy()
+    while len(out) < n:
+        fade = np.linspace(0, 1, x)
+        out[-x:] = out[-x:] * (1 - fade) + a[:x] * fade
+        out = np.concatenate([out, a[x:]])
+    return out[:n]
+
+
 def speak(key, spk, text):
+    if VOICE and GKEY:
+        try:
+            a, _ = trim_silence(gemini_tts(text, spk))
+            dur = len(a) / SR
+            return a, even(text.split(), dur), dur
+        except Exception as e:
+            G_LOG.append(f'tts fallback {key}: {e}')
+    return speak_edge(key, spk, text)
+
+
+def speak_edge(key, spk, text):
     """returns (audio np array or None, words[{w,t,d}] relative to line start, duration)"""
     toks = text.split()
     if VOICE:
@@ -229,7 +339,14 @@ def mix_audio(tl, voice, sfxs):
     for st, a in voice:
         i = int(st * SR); j = min(n, i + len(a)); vt[i:j] += a[:j - i]
     if vt.max() > 0: vt *= 0.9 / np.abs(vt).max()
-    mu = music(total)[:n]
+    mu = None
+    if GKEY:
+        g = gemini_music(total)
+        if g is not None:
+            g = g / max(1e-6, np.abs(g).max()) * 0.5
+            mu = loop_to(g, n)
+            mu[-int(2.5 * SR):] *= np.linspace(1, 0, int(2.5 * SR))
+    if mu is None: mu = music(total)[:n]
     # ducking from voice activity
     act = np.convolve(np.abs(vt) > 0.02, np.ones(int(0.25 * SR)) / int(0.25 * SR), mode='same')
     act = np.convolve(np.minimum(1, act * 4), np.ones(int(0.3 * SR)) / int(0.3 * SR), mode='same')
@@ -306,7 +423,7 @@ def main():
         b.close()
     meta = {'id': 'kg-maths-t4', 'title': 'Adding to 10 | KG Maths for Kids | Little Takhti',
             'description': 'Learn to add up to 10 with mangoes, a number line hop and a ten frame, then try a quick quiz. Free worksheets: https://littletakhti.netlify.app',
-            'madeForKids': True, 'language': 'en', 'duration': tl['total']}
+            'madeForKids': True, 'language': 'en', 'duration': tl['total'], 'gemini_log': G_LOG[-40:]}
     (OUT / 'meta.json').write_text(json.dumps(meta, indent=1))
     if not os.environ.get('KEEP_TMP'): shutil.rmtree(TMP, ignore_errors=True)
     print('done', OUT / 'lesson.mp4', tl['total'])

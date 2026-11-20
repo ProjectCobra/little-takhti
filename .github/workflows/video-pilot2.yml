@@ -24,6 +24,8 @@ jobs:
           python -m playwright install --with-deps chromium
           cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend
       - name: Render
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 source/tools/video2/pilot.py
       - name: Save to videos branch
         run: |

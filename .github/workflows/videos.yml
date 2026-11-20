@@ -20,7 +20,7 @@ jobs:
       - name: Tools
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install -q playwright edge-tts pillow
+          pip install -q playwright edge-tts gTTS pillow
           python -m playwright install --with-deps chromium
           cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend @fontsource/noto-nastaliq-urdu
       - name: Build site data

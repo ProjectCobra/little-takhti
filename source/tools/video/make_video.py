@@ -139,9 +139,26 @@ def scenes(d):
     return S
 
 
-async def tts(text, voice, path):
+VOICE_LOG = []
+
+
+async def _edge(text, voice, path):
     import edge_tts
     await edge_tts.Communicate(text, voice, rate='-8%').save(str(path))
+
+
+def tts(text, voice, path):
+    """Microsoft neural voice first; Google voice as a backup (also has Urdu)."""
+    try:
+        asyncio.run(_edge(text, voice, path))
+        if path.exists() and path.stat().st_size > 1000:
+            return 'edge'
+    except Exception as e:
+        VOICE_LOG.append('edge: ' + repr(e)[:160])
+    from gtts import gTTS
+    lang = 'ur' if voice.startswith('ur') else 'en'
+    gTTS(text, lang=lang, tld='co.uk' if lang == 'en' else 'com', slow=False).save(str(path))
+    return 'gtts'
 
 
 def dur(path):
@@ -173,9 +190,9 @@ def build(ids):
                 if say and VOICE_ON:
                     a = tmp / f'{n:02d}.mp3'
                     try:
-                        asyncio.run(tts(say, voice, a)); seconds = dur(a) + extra
+                        used = tts(say, voice, a); seconds = dur(a) + extra
                     except Exception as e:
-                        print('voice failed:', e); a = None
+                        VOICE_LOG.append('gtts: ' + repr(e)[:160]); print('voice failed:', e); a = None; used = None
                 if say and not a:
                     seconds = max(2.0, len(say.split()) / 2.4) + extra
                 seconds = round(max(seconds, 1.0), 2)
@@ -206,7 +223,7 @@ def build(ids):
             desc = (f"{d['grade']} {d['subject']}: {d['topic']}.\n{d['what']}\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://{SITE}/#res-{rid}\n\n"
                     + '\n'.join(f'{mmss(c[0])} {c[1]}' for c in chapters) + f"\n\nFor parents: {d['watch']}\n\n#LittleTakhti #{d['subject'].replace(' ', '')} #{d['grade'].replace(' ', '')}")
             meta = {'id': rid, 'title': title[:100], 'description': desc, 'grade': d['gradeId'], 'subject': d['sub'], 'topic': d['topic'],
-                    'duration': round(t, 1), 'madeForKids': True, 'language': 'ur' if d['ur'] else 'en', 'chapters': chapters, 'voice': VOICE_ON}
+                    'duration': round(t, 1), 'madeForKids': True, 'language': 'ur' if d['ur'] else 'en', 'chapters': chapters, 'voice': VOICE_ON, 'voice_errors': sorted(set(VOICE_LOG))[:5]}
             (od / 'meta.json').write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding='utf-8')
             if os.environ.get('KEEP_TMP') != '1':
                 shutil.rmtree(tmp)

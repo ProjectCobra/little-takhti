@@ -1,11 +1,11 @@
 {
  "id": "g3-urdu-t3",
  "title": "صفت (Adjectives) | Grade 3 Urdu | Little Takhti",
- "description": "Grade 3 Urdu: صفت.\nA صفت describes a noun: its colour, size, taste or quality.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-g3-urdu-t3\n\n0:00 Introduction\n0:03 Big idea\n0:08 Examples\n0:14 Pause and try\n0:48 Story time\n1:01 Recap\n1:07 Print the worksheets\n\nFor parents: Adjectives ending in ا change with the noun (بڑا لڑکا، بڑی لڑکی). Point this out gently.\n\n#LittleTakhti #Urdu #Grade3",
+ "description": "Grade 3 Urdu: صفت.\nA صفت describes a noun: its colour, size, taste or quality.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-g3-urdu-t3\n\n0:00 Introduction\n0:04 Big idea\n0:12 Examples\n0:17 Pause and try\n0:54 Story time\n1:10 Recap\n1:18 Print the worksheets\n\nFor parents: Adjectives ending in ا change with the noun (بڑا لڑکا، بڑی لڑکی). Point this out gently.\n\n#LittleTakhti #Urdu #Grade3",
  "grade": "g3",
  "subject": "g3-urdu",
  "topic": "صفت",
- "duration": 73.8,
+ "duration": 86.9,
  "madeForKids": true,
  "language": "ur",
  "chapters": [
@@ -14,29 +14,32 @@
    "Introduction"
   ],
   [
-   3.52,
+   4.39,
    "Big idea"
   ],
   [
-   8.9,
+   12.25,
    "Examples"
   ],
   [
-   14.18,
+   17.7,
    "Pause and try"
   ],
   [
-   48.17,
+   54.85,
    "Story time"
   ],
   [
-   61.89,
+   70.27,
    "Recap"
   ],
   [
-   67.27,
+   78.13,
    "Print the worksheets"
   ]
  ],
- "voice": true
+ "voice": true,
+ "voice_errors": [
+  "edge: RuntimeError('asyncio.run() cannot be called from a running event loop')"
+ ]
 }

@@ -1,11 +1,11 @@
 {
  "id": "science-t11",
  "title": "Animal groups | Grade 1 Science | Little Takhti",
- "description": "Grade 1 Science: Animal groups.\nAnimals are sorted into groups. Mammals have fur and feed babies milk. Birds have feathers and lay eggs. Fish live in water and breathe with gills. Reptiles have dry scaly skin. Amphibians live in water and on land. Insects have six legs and no backbone.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-science-t11\n\n0:00 Introduction\n0:05 Big idea\n0:16 Examples\n0:31 Pause and try\n1:14 Story time\n1:33 Recap\n1:41 Print the worksheets\n\nFor parents: A whale lives in water but is a mammal, not a fish. A bat flies but is a mammal, not a bird.\n\n#LittleTakhti #Science #Grade1",
+ "description": "Grade 1 Science: Animal groups.\nAnimals are sorted into groups. Mammals have fur and feed babies milk. Birds have feathers and lay eggs. Fish live in water and breathe with gills. Reptiles have dry scaly skin. Amphibians live in water and on land. Insects have six legs and no backbone.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-science-t11\n\n0:00 Introduction\n0:06 Big idea\n0:20 Examples\n0:35 Pause and try\n1:29 Story time\n1:49 Recap\n1:59 Print the worksheets\n\nFor parents: A whale lives in water but is a mammal, not a fish. A bat flies but is a mammal, not a bird.\n\n#LittleTakhti #Science #Grade1",
  "grade": "g1",
  "subject": "science",
  "topic": "Animal groups",
- "duration": 112.1,
+ "duration": 129.6,
  "madeForKids": true,
  "language": "en",
  "chapters": [
@@ -14,29 +14,32 @@
    "Introduction"
   ],
   [
-   5.6,
+   6.05,
    "Big idea"
   ],
   [
-   16.4,
+   20.15,
    "Examples"
   ],
   [
-   31.299999999999997,
+   35.58,
    "Pause and try"
   ],
   [
-   74.72,
+   89.11999999999999,
    "Story time"
   ],
   [
-   93.11,
+   109.38,
    "Recap"
   ],
   [
-   101.41,
+   119.32,
    "Print the worksheets"
   ]
  ],
- "voice": true
+ "voice": true,
+ "voice_errors": [
+  "edge: RuntimeError('asyncio.run() cannot be called from a running event loop')"
+ ]
 }

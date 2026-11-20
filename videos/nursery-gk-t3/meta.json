@@ -1,11 +1,11 @@
 {
  "id": "nursery-gk-t3",
  "title": "Animals | Nursery General Knowledge | Little Takhti",
- "description": "Nursery General Knowledge: Animals.\nNaming animals, their sounds and homes, and sorting farm and wild animals.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-nursery-gk-t3\n\n0:00 Introduction\n0:05 Big idea\n0:10 Pause and try\n0:50 Story time\n1:08 Recap\n1:14 Print the worksheets\n\nFor parents: Use real names along with baby words: \"cow\", not only \"moo-moo\".\n\n#LittleTakhti #GeneralKnowledge #Nursery",
+ "description": "Nursery General Knowledge: Animals.\nNaming animals, their sounds and homes, and sorting farm and wild animals.\n\nFree printable worksheets with answer keys and a quiz game for this topic: https://littletakhti.netlify.app/#res-nursery-gk-t3\n\n0:00 Introduction\n0:06 Big idea\n0:12 Pause and try\n1:02 Story time\n1:20 Recap\n1:27 Print the worksheets\n\nFor parents: Use real names along with baby words: \"cow\", not only \"moo-moo\".\n\n#LittleTakhti #GeneralKnowledge #Nursery",
  "grade": "nursery",
  "subject": "nursery-gk",
  "topic": "Animals",
- "duration": 85.1,
+ "duration": 97.6,
  "madeForKids": true,
  "language": "en",
  "chapters": [
@@ -14,25 +14,28 @@
    "Introduction"
   ],
   [
-   5.18,
+   6.12,
    "Big idea"
   ],
   [
-   10.98,
+   12.8,
    "Pause and try"
   ],
   [
-   50.220000000000006,
+   62.790000000000006,
    "Story time"
   ],
   [
-   68.60000000000001,
+   80.65,
    "Recap"
   ],
   [
-   74.4,
+   87.33000000000001,
    "Print the worksheets"
   ]
  ],
- "voice": true
+ "voice": true,
+ "voice_errors": [
+  "edge: RuntimeError('asyncio.run() cannot be called from a running event loop')"
+ ]
 }

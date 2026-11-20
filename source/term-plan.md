@@ -61,7 +61,7 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 5. AI Grade 2, topics 4 to 11
 - [x] 6. AI Grade 3, topics 4 to 11
 - [x] 7. Group A, Week 13
-- [ ] 8. Group B, Week 13
+- [x] 8. Group B, Week 13
 - [ ] 9. Group C, Week 13
 - [ ] 10. Group A, Week 14
 - [ ] 11. Group B, Week 14
@@ -84,3 +84,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 19 Nov 2026: batch 5 (AI Grade 2, topics 4 to 11). Sorting and labelling; Predictions; Robots and sensors; Asking clear questions; Checking answers; Pictures made by AI; Privacy and safety; AI in the doctor's clinic. File: ai.js. New pictures: label, crystal ball, stethoscope, X-ray, bandage, syringe, key, shield, stop sign, artist palette and more. New Grade 2 words: sensor, predict, label, private, password, doctor.
 - 19 Nov 2026: batch 6 (AI Grade 3, topics 4 to 11). How chatbots work; Data and bias; Image recognition; AI and creativity; Deepfakes and fake news; AI and jobs; Machine learning steps; Translation and languages. File: ai.js. New pictures: detective, video game, puzzle piece, factory, technologist, scientist, pilot, artist, globe with meridians, memo and more. New Grade 3 words: chatbot, translate, language, creative, training, accuracy.
 - 19 Nov 2026: batch 7 (Group A, Week 13). Nursery: Sounds f, b, e, h; Big and small, tall and short; Our helpers at home; دو حروف جوڑنا (joining two letters). KG: Blends bl, cl, fl; Number bonds to 10; Food we eat; آسان جملے (simple sentences). Grade 1: Simple apps on a tablet (ICT). Grade 1 English, Maths, Science, Social Studies and Urdu left to the Saturday Classroom task. Files: term2_nursery.js, term2_kg.js, term2_g1.js. New pictures: fly, blossom, flag, flamingo, clown, top hat, giraffe, broccoli, potato, rice, flatbread, salad, candy, low battery, feather, mango and more. New words: fox, big, hen, hut (Nursery); flag, clap, blue, rice, clock, bread (KG); tablet, camera (Grade 1).
+- 20 Nov 2026: batch 8 (Group B, Week 13). Grade 2: Similes (English); Adding and subtracting with regrouping; Hot and cold; Ancient India and Gandhara art; Mountains of Pakistan; Money and saving; صفت کے الفاظ (Urdu describing words); Simple slides (ICT). File: term2_g2.js. New pictures: money bag, credit card, shopping bags, film projector, leopard, snowman, rock, cooking. New Grade 2 words: glacier, valley, museum, saving, melting, simile.

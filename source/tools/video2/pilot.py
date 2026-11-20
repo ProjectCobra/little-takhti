@@ -340,7 +340,18 @@ def mix_audio(tl, voice, sfxs):
         i = int(st * SR); j = min(n, i + len(a)); vt[i:j] += a[:j - i]
     if vt.max() > 0: vt *= 0.9 / np.abs(vt).max()
     mu = None
-    if GKEY:
+    mt = HERE / 'music.txt'
+    if mt.exists():
+        try:
+            import urllib.request
+            url = mt.read_text().strip().split()[0]
+            f = TMP / 'flow_music.m4a'; urllib.request.urlretrieve(url, f)
+            g = decode(f); g = g / max(1e-6, np.abs(g).max()) * 0.5
+            mu = loop_to(g, n); mu[-int(3 * SR):] *= np.linspace(1, 0, int(3 * SR))
+            G_LOG.append(f'flow music ok {len(g)/SR:.1f}s')
+        except Exception as e:
+            G_LOG.append(f'flow music failed {e}')
+    if mu is None and GKEY:
         g = gemini_music(total)
         if g is not None:
             g = g / max(1e-6, np.abs(g).max()) * 0.5

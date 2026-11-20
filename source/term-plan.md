@@ -71,7 +71,7 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 15. Group B, Week 15
 - [x] 16. Group C, Week 15
 - [x] 17. Group A, Week 16
-- [ ] 18. Group B, Week 16
+- [x] 18. Group B, Week 16
 - [ ] 19. Group C, Week 16
 - [ ] 20. AI Grades 1 to 3, topics 14 and 15
 
@@ -94,3 +94,4 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 20 Nov 2026: batch 15 (Group B, Week 15). Grade 2: Book review (English); Fractions of shapes and amounts; Sound around us; Allama Iqbal's dream; Farming in Pakistan; Caring for animals; سردی کی نظم (Urdu, an original poem about a winter morning, different from the KG one); Passwords and privacy (ICT). File: term2_g2.js. New pictures: guitar, trumpet, violin, bat, ewe, parrot, hamster, paw prints, locked with key, unlocked, identification card. New Grade 2 words: review, fraction, echo, vibrate, poet, wheat, shelter.
 - 20 Nov 2026: batch 16 (Group C, Week 15). Grade 3: Poetry: rhyme and rhythm (English, Grade 4 level); Area and perimeter; Sound and vibration; Ancient Persia; Pollution and the environment; Volunteering; نظم کا مطالعہ (Urdu poem study, with an original poem صبح کا منظر); Online research and checking sources (ICT). File: term2_g3.js. New pictures: airplane, brain, firecracker, litter in bin sign, face with medical mask, link, nest with eggs, bouquet. New Grade 3 words: rhythm, perimeter, vibration, empire, pollution, volunteer, research.
 - 20 Nov 2026: batch 17 (Group A, Week 16). Nursery: Rhymes and songs about winter (original rhymes); Counting to 20 with objects; Sounds around us; ننھی نظمیں: بارش اور دھوپ (two original little poems about rain and sun). KG: Reading short stories; Halves; Winter animals and birds; مختصر کہانی اور سوالات (an original story about Ali and his parrot Mithu). Grade 1: Coding with arrows (ICT). Grade 1 English, Maths, Science, Social Studies and Urdu left to the Saturday Classroom task. Files: term2_nursery.js, term2_kg.js, term2_g1.js. New pictures: bear, polar bear, hedgehog, chipmunk, swan, dove. New words: bell, drum, snow (Nursery); half, bear, nest, story, share (KG); code, debug, repeat (Grade 1).
+- 20 Nov 2026: batch 18 (Group B, Week 16). Grade 2: Poems about winter (English, with an original poem Winter Morning and an acrostic); Telling time to 5 minutes; Weather and seasons; How we learn about the past; Winter around the world; Being a good neighbour; کہانی اور سوالات (Urdu, an original story گم شدہ بستہ); Using a tablet camera safely (ICT). File: term2_g2.js. New pictures: kangaroo, sled, ice skate, beach with umbrella, camera with flash, pot of food, teacup without handle. New Grade 2 words: season, poem, camera, neighbour, artefact, minute, equator, gallery.

@@ -75,6 +75,15 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - [x] 19. Group C, Week 16
 - [x] 20. AI Grades 1 to 3, topics 14 and 15
 
+## Term plan: weekly mode from Week 13 (added 21 Nov 2026)
+Current school week on 21 Nov 2026: Week 12 just finished (Week 13 starts 23 Nov). Target: every subject has topics up to Week 14.
+Nursery, KG, Grades 2 and 3, Grade 1 English and ICT, and AI already reach Week 16. The Saturday Classroom task is paused, so Grade 1 Maths, Science, Social Studies and Urdu got their fallback topics:
+- [x] Grade 1 Maths, Week 14: Place value: tens and ones (maths-t13)
+- [x] Grade 1 Science, Week 14: What plants need to grow (science-t13)
+- [x] Grade 1 Social Studies, Week 13: Transport then and now (social-t12); Week 14: Festivals and celebrations (social-t13)
+- [x] Grade 1 Urdu, Week 13: ہفتے کے دن (days of the week, g1-urdu-t12); Week 14: الٹ الفاظ (opposites, g1-urdu-t13)
+Next in sequence if the Classroom task stays paused: Maths Week 15 Ordering numbers to 100, Week 16 Shapes: sides and corners; Science Week 15 Healthy habits and germs, Week 16 Weather and seasons; Social Studies Week 15 Saving water and electricity, Week 16 Good citizens; Urdu Week 15 واحد جمع (singular and plural), Week 16 کہانی اور سوالات (story with questions).
+
 ## Progress
 (add a line per batch: date, what was built, commit)
 - 19 Nov 2026: batch 1 (Group A, Week 12). Nursery: Sounds o, g, u, l; Numbers to 15; My family; نقطے والے حروف. KG: Long vowel sounds with e; Numbers to 50; Our solar system; چار حرفی الفاظ. Grade 1: Our neighbourhood; سردی کے الفاظ (Motia lessons 11+ not in references, used fallback); Typing my name. Grade 1 Maths and Science already reach Week 13. Files: term2_nursery.js, term2_kg.js, term2_g1.js.
@@ -97,6 +106,8 @@ Group A = Nursery, KG, Grade 1 ICT only. Grade 1 English, Maths, Science, Social
 - 20 Nov 2026: batch 18 (Group B, Week 16). Grade 2: Poems about winter (English, with an original poem Winter Morning and an acrostic); Telling time to 5 minutes; Weather and seasons; How we learn about the past; Winter around the world; Being a good neighbour; کہانی اور سوالات (Urdu, an original story گم شدہ بستہ); Using a tablet camera safely (ICT). File: term2_g2.js. New pictures: kangaroo, sled, ice skate, beach with umbrella, camera with flash, pot of food, teacup without handle. New Grade 2 words: season, poem, camera, neighbour, artefact, minute, equator, gallery.
 - 20 Nov 2026: batch 19 (Group C, Week 16). Grade 3: Reading comprehension: non-fiction (English, Grade 4 level, with texts on the Indus river dolphin and the Khewra Salt Mine); Roman numerals; Earth and the Moon; Explorers and maps (Ibn Battuta, Al-Idrisi and others); Reading atlases; Global citizens; فہمِ عبارت (Urdu comprehension, with original passages دادا جان کا باغ and سکول کی لائبریری); Cyberbullying and kindness (ICT). File: term2_g3.js. New pictures: moon phases, globes showing the Americas and Europe-Africa, anchor, hugging face, pensive face, pouting face, prohibited. New Grade 3 words: explorer, atlas, numeral, orbit, crater, gravity, citizen, glossary. Week 16 is now ready for every grade.
 - 21 Nov 2026: batch 20 (AI Grades 1 to 3, topics 14 and 15). Grade 1: AI and animals; My AI rules. Grade 2: Fair or unfair?; Designing an AI helper. Grade 3: AI and the environment; Build a prompt plan. File: ai.js. New picture: bullseye. New words: turtle, whale, polite, rules (Grade 1); fair, equal, designer, include (Grade 2); environment, satellite, prompt, energy, recycle (Grade 3). All AI topics 4 to 15 are now built, and the term plan is finished.
+- 21 Nov 2026: weekly mode, Grade 1 catch-up to Week 14. Maths: Place value: tens and ones. Science: What plants need to grow. Social Studies: Transport then and now; Festivals and celebrations. Urdu: ہفتے کے دن (days of the week); الٹ الفاظ (opposites). File: term2_g1.js. New pictures: auto rickshaw, locomotive, motorcycle, fireworks, birthday cake, wilted flower, sparkler, calendar. New Grade 1 words: seed, soil, sunlight, festival, balloon, transport, train, bundle.
 
 ## Status
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).
+- 21 Nov 2026 (later run): the Saturday Classroom task is paused, so weekly mode now also keeps Grade 1 Maths, Science, Social Studies and Urdu two weeks ahead with the fallback topics. Switching this task to weekly still needs Sumbul.

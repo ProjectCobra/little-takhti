@@ -82,7 +82,13 @@ Nursery, KG, Grades 2 and 3, Grade 1 English and ICT, and AI already reach Week 
 - [x] Grade 1 Science, Week 14: What plants need to grow (science-t13)
 - [x] Grade 1 Social Studies, Week 13: Transport then and now (social-t12); Week 14: Festivals and celebrations (social-t13)
 - [x] Grade 1 Urdu, Week 13: ہفتے کے دن (days of the week, g1-urdu-t12); Week 14: الٹ الفاظ (opposites, g1-urdu-t13)
-Next in sequence if the Classroom task stays paused: Maths Week 15 Ordering numbers to 100, Week 16 Shapes: sides and corners; Science Week 15 Healthy habits and germs, Week 16 Weather and seasons; Social Studies Week 15 Saving water and electricity, Week 16 Good citizens; Urdu Week 15 واحد جمع (singular and plural), Week 16 کہانی اور سوالات (story with questions).
+22 Nov 2026 (weekend before Week 13, counted as Week 13 so the new topics reach Monday's deploy check): target Week 15.
+- [x] Grade 1 Maths, Week 15: Ordering numbers to 100 (maths-t14)
+- [x] Grade 1 Science, Week 15: Healthy habits and germs (science-t14)
+- [x] Grade 1 Social Studies, Week 15: Saving water and electricity (social-t14)
+- [x] Grade 1 Urdu, Week 15: واحد اور جمع (singular and plural, g1-urdu-t14)
+Still to come for Week 16 if the Classroom task stays paused: Maths Shapes: sides and corners; Science Weather and seasons; Social Studies Good citizens; Urdu کہانی اور سوالات (story with questions). Everything else already reaches Week 16.
+Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15 Ordering numbers to 100, Week 16 Shapes: sides and corners; Science Week 15 Healthy habits and germs, Week 16 Weather and seasons; Social Studies Week 15 Saving water and electricity, Week 16 Good citizens; Urdu Week 15 واحد جمع (singular and plural), Week 16 کہانی اور سوالات (story with questions).
 
 ## Progress
 (add a line per batch: date, what was built, commit)
@@ -107,6 +113,7 @@ Next in sequence if the Classroom task stays paused: Maths Week 15 Ordering numb
 - 20 Nov 2026: batch 19 (Group C, Week 16). Grade 3: Reading comprehension: non-fiction (English, Grade 4 level, with texts on the Indus river dolphin and the Khewra Salt Mine); Roman numerals; Earth and the Moon; Explorers and maps (Ibn Battuta, Al-Idrisi and others); Reading atlases; Global citizens; فہمِ عبارت (Urdu comprehension, with original passages دادا جان کا باغ and سکول کی لائبریری); Cyberbullying and kindness (ICT). File: term2_g3.js. New pictures: moon phases, globes showing the Americas and Europe-Africa, anchor, hugging face, pensive face, pouting face, prohibited. New Grade 3 words: explorer, atlas, numeral, orbit, crater, gravity, citizen, glossary. Week 16 is now ready for every grade.
 - 21 Nov 2026: batch 20 (AI Grades 1 to 3, topics 14 and 15). Grade 1: AI and animals; My AI rules. Grade 2: Fair or unfair?; Designing an AI helper. Grade 3: AI and the environment; Build a prompt plan. File: ai.js. New picture: bullseye. New words: turtle, whale, polite, rules (Grade 1); fair, equal, designer, include (Grade 2); environment, satellite, prompt, energy, recycle (Grade 3). All AI topics 4 to 15 are now built, and the term plan is finished.
 - 21 Nov 2026: weekly mode, Grade 1 catch-up to Week 14. Maths: Place value: tens and ones. Science: What plants need to grow. Social Studies: Transport then and now; Festivals and celebrations. Urdu: ہفتے کے دن (days of the week); الٹ الفاظ (opposites). File: term2_g1.js. New pictures: auto rickshaw, locomotive, motorcycle, fireworks, birthday cake, wilted flower, sparkler, calendar. New Grade 1 words: seed, soil, sunlight, festival, balloon, transport, train, bundle.
+- 22 Nov 2026: weekly mode, Grade 1 Week 15. Maths: Ordering numbers to 100. Science: Healthy habits and germs. Social Studies: Saving water and electricity. Urdu: واحد اور جمع (singular and plural). File: term2_g1.js. New pictures: microbe, sneezing face, electric plug, roll of paper, toilet. New Grade 1 words: germs, soap, healthy, between, order, save, switch.
 
 ## Status
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).

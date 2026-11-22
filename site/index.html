@@ -7683,6 +7683,138 @@ G1_URDU.push(
   ["الٹا دن","آج حمزہ نے الٹے کام کیے! اس نے موزے ہاتھوں پر اور دستانے پاؤں پر پہن لیے۔ امی ہنس پڑیں۔ پھر حمزہ نے سب سیدھا کیا۔ سوال: حمزہ نے موزے کہاں پہنے؟"])
 );
 
+/* Weekly mode, Week 15 (added 22 Nov 2026): Grade 1 fallback topics while the Classroom task is paused. */
+addPlus("maths",{g1:[
+ TP("Ordering numbers to 100","",[
+  pg("Numbers in Order","Read the big idea. Then fill in the missing numbers.","Know that numbers to 100 come in order, each one 1 more than the last.",
+   CN(["input-numbers","straight-ruler"],"Numbers go in order, like steps on a ladder. Each number is 1 more than the one before it. On a number line, small numbers are on the left and big numbers are on the right.","In order"),
+   F("",["21, 22, {{23}}, 24, {{25}}","56, {{57}}, 58, {{59}}, 60","87, 88, {{89}}, {{90}}, 91","95, {{96}}, 97, 98, {{99}}"],1)),
+  pg("Before, After, Between","Write the missing number.","Find the number just before, just after or between.",
+   NO("Just before means 1 less. Just after means 1 more. Between means the number in the middle."),
+   F("",["Just before 40 is {{39}}.","Just after 67 is {{68}}.","Between 52 and 54 is {{53}}.","Just before 81 is {{80}}.","Just after 99 is {{100}}.","Between 29 and 31 is {{30}}."],2)),
+  pg("Number Line Jumps","Fill in the missing numbers on each line.","Count forwards and backwards on a number line.",
+   F("",["70, 71, 72, {{73}}, {{74}}, 75","48, 47, 46, {{45}}, {{44}}, 43","33, {{34}}, 35, {{36}}, 37, 38","64, 63, {{62}}, 61, {{60}}, 59"],1)),
+  pg("Smallest to Biggest","Write the numbers in order, smallest first.","Order three numbers to 100 from smallest to biggest.",
+   NO("Look at the tens first. The number with the fewest tens is the smallest. If the tens are the same, look at the ones."),
+   F("",["45, 12, 31 → {{12}}, {{31}}, {{45}}","70, 7, 17 → {{7}}, {{17}}, {{70}}","58, 85, 50 → {{50}}, {{58}}, {{85}}","93, 39, 63 → {{39}}, {{63}}, {{93}}"],1)),
+  pg("Biggest to Smallest","Write the numbers in order, biggest first.","Order three numbers to 100 from biggest to smallest.",
+   F("",["26, 62, 46 → {{62}}, {{46}}, {{26}}","14, 41, 40 → {{41}}, {{40}}, {{14}}","99, 9, 90 → {{99}}, {{90}}, {{9}}","75, 57, 77 → {{77}}, {{75}}, {{57}}"],1)),
+  pg("Circle the Number","Circle the right number.","Find the biggest or smallest number in a group.",
+   CH("",[["The biggest number",["38","83","48"],1],["The smallest number",["61","16","66"],1],["The biggest number",["90","59","95"],2],["The smallest number",["24","42","20"],2],["The number between 70 and 80",["68","75","81"],1]])),
+  pg("Count in Tens and Twos","Fill in the missing numbers.","Count in steps of 10 and 2 up to 100.",
+   F("",["10, 20, 30, {{40}}, {{50}}, 60","35, 45, 55, {{65}}, {{75}}","2, 4, 6, {{8}}, {{10}}, 12","80, 82, 84, {{86}}, {{88}}","100, 90, 80, {{70}}, {{60}}"],1)),
+  pg("Numbers Around Us","Look at each picture. Fill in the number.","Use before and after with numbers we see every day.",
+   FP("",[["bus","Bus 47 has gone. The next bus is number {{48}}."],["house","Our house is number 36. Next door is number {{37}}."],["stadium","I sit in seat 59. My friend sits in seat {{60}}, just after me."],["calendar","Today is day 20. Yesterday was day {{19}}."]],2)),
+  pg("Order Stories","Read and solve.","Use ordering to answer word problems.",
+   WP("",["Ali has 45 marbles. Sara has 54 marbles. {{Sara}} has more.","Three children scored 62, 26 and 66 in a game. The top score is {{66}}.","Zain is on page 79 of his book. The next page is {{80}}.","Hira counts 91, 92, 93. The next number she says is {{94}}."])),
+  pg("Exit Ticket","Show what you can do.","Check ordering numbers to 100.",
+   F("",["Just after 49 is {{50}}.","Between 76 and 78 is {{77}}.","Smallest first: 54, 45, 50 → {{45}}, {{50}}, {{54}}","Count in tens: 30, 40, {{50}}, {{60}}"],1),
+   WR("",["Write three numbers bigger than 80: ______  ______  ______","Write the numbers from 61 to 70: ______________________________"]))],
+  "Numbers to 100 come in order. Each number is 1 more than the one before. To order numbers, look at the tens first, then the ones. Children also find the number before, after and between, and count in tens and twos.",
+  ["Write 20 to 40 on cards, mix them up and put them back in order.","Say a number and ask for the number just before and just after.","Count in tens on your fingers up to 100."],
+  ["Spot house numbers on your street and say which comes next.","Read page numbers in a book and find the page between two others."],
+  "Children may put 9 after 70 because 9 looks big. Remind them: count the tens first, and 9 has no tens.",
+  ["The Lift Game","Nani's building has floors numbered 1 to 20. Hamza pressed 12, then 7, then 15. 'Which floor do we reach first going up?' asked Nani. 'Seven!' said Hamza. Ask: Which floor did they reach last?"])
+]});
+
+addPlus("science",{g1:[
+ TP("Healthy habits and germs","",[
+  pg("What Are Germs?","Read the big idea. Then circle true or false.","Know that germs are tiny living things that can make us ill.",
+   CN(["microbe","soap","hand-with-fingers-splayed"],"Germs are tiny living things. They are too small to see. Some germs can make us ill. Washing our hands with soap and water helps get rid of germs.","Germs"),
+   CH("",[["Germs are too small to see.",0],["Some germs can make us ill.",0],["Soap and water help wash germs away.",0],["Germs are as big as a cat.",1]],TF)),
+  pg("Good Habits","Look at each picture. Write the word.","Name habits that keep us healthy.",BK(["soap","teeth","sleep","water","sneeze","play"]),
+   FP("",[["soap","Wash your hands with {{soap}}."],["toothbrush","Brush your {{teeth}} two times a day."],["bed","Get plenty of {{sleep}}."],["potable-water","Drink clean {{water}}."],["roll-of-paper","Cover your {{sneeze}} with a tissue."],["person-running","Run and {{play}} outside."]],2)),
+  pg("Washing My Hands","Fill in the missing words.","Know the steps for washing hands well.",BK(["wet","soap","rub","rinse","dry"]),
+   CY("",[["droplet","{{wet}} your hands"],["soap","Put on {{soap}}"],["bubbles","{{rub}} for 20 seconds"],["shower","{{rinse}} with water"],["roll-of-paper","{{dry}} with a clean towel"]])),
+  pg("Healthy or Not?","Look at each picture. Circle healthy or not healthy.","Tell healthy habits from unhealthy ones.",
+   CP("",[["toothbrush","Brushing teeth before bed",0],["candy","Eating sweets all day",1],["soap","Washing hands before eating",0],["sneezing-face","Sneezing on a friend",1],["bed","Going to sleep early",0]],["healthy","not healthy"])),
+  pg("When Do We Wash?","Circle yes or no.","Know when to wash our hands.",
+   CH("",[["Before we eat",0],["After using the toilet",0],["After playing outside",0],["After stroking a pet",0],["Only once a week",1]],YN)),
+  pg("The Glitter Test","Read about the test. Circle the right answer.","Read a simple experiment that shows how germs spread.",
+   PA("Miss Sadia put a little glitter on Ali's hand. She said, 'This glitter is like germs.' Ali shook hands with Zain. Then Zain touched a pencil. Soon there was glitter on Zain's hand and on the pencil too! Ali washed with water only, and some glitter stayed. Then he used soap, and the glitter came off."),
+   CH("",[["What was the glitter like?",["germs","sweets"],0],["How did glitter get on Zain's hand?",["a handshake","the rain"],0],["What took the glitter off best?",["water only","soap and water"],1]])),
+  pg("Why Do We Do It?","Match each habit to why it helps.","Know why healthy habits matter.",
+   MA("Write the letter in the box.",["washing hands","brushing teeth","sleeping well","covering a sneeze","drinking water"],["takes germs off our hands","keeps teeth strong and clean","gives our body rest","stops germs flying to others","helps our body work well"])),
+  pg("Healthy Sums","Read and solve.","Use maths with healthy habits.",
+   WP("",["Zain brushes his teeth 2 times a day. In 5 days he brushes {{10}} times.","Ali drinks 2 glasses of water in the morning, 3 in the afternoon and 2 at night. That is {{7}} glasses.","Ammi has 12 bars of soap. She puts 4 in the bathrooms. {{8}} are left.","Hira sleeps from 8 at night to 6 in the morning. She sleeps {{10}} hours."])),
+  pg("Spread or Stop?","Write each one under the right heading.","Sort what spreads germs from what stops them.",
+   SO("",["spreads germs","stops germs"],["sneezing into the air","washing with soap","sharing a used spoon","using a tissue","dirty nails","clean nails"],[0,1,0,1,0,1])),
+  pg("My Healthy Week","Finish the sentences. Then draw.","Plan your own healthy habits.",
+   WR("",["I wash my hands before ______________________.","I brush my teeth ______ times a day.","My healthy habit this week is ______________________."]),DR("Me washing my hands",220))],
+  "Germs are tiny living things, too small to see, and some can make us ill. Good habits keep germs away: washing hands with soap, brushing teeth, covering sneezes, drinking clean water, sleeping well and playing outside.",
+  ["Wash hands together and sing a short song that lasts about 20 seconds.","Put a tissue box where your child can reach it.","Make a simple chart of morning and night habits."],
+  ["Try the glitter test at home with a little flour or glitter.","Tick a habit chart for brushing teeth every day for a week."],
+  "Children may think water alone is enough. Show that soap is what lifts dirt and germs off the skin.",
+  ["Bunty the Bubble","Bunty was a soap bubble who lived by the sink. Every day before lunch, Rayan came to wash his hands. Bunty helped scrub away the germs, and Rayan dried his hands clean. Ask: When did Rayan wash his hands?"])
+]});
+
+addPlus("social",{g1:[
+ TP("Saving water and electricity","",[
+  pg("Precious Things","Read the big idea. Then circle true or false.","Know that water and electricity are precious and should not be wasted.",
+   CN(["potable-water","light-bulb","high-voltage"],"Water and electricity are precious. We need clean water to drink, cook and wash. We need electricity for lights, fans and machines. If we waste them, there may not be enough for everyone.","Save them"),
+   CH("",[["We need water to drink and cook.",0],["Electricity runs lights and fans.",0],["It is fine to leave a tap running.",1],["We should switch off lights we do not need.",0]],TF)),
+  pg("Uses of Water","Look at each picture. Write the word.","Name the ways we use water at home.",BK(["drink","cook","bath","plants","wash","clean"]),
+   FP("",[["potable-water","We {{drink}} water."],["pot-of-food","Ammi uses water to {{cook}}."],["bathtub","I have a {{bath}}."],["potted-plant","We water the {{plants}}."],["t-shirt","We {{wash}} our clothes."],["bucket","We {{clean}} the floor."]],2)),
+  pg("Uses of Electricity","Look at each picture. Write the word.","Name things at home that use electricity.",BK(["light","television","phone","computer"]),
+   FP("",[["light-bulb","A {{light}} helps us see at night."],["television","We watch the {{television}}."],["mobile-phone","Abbu charges his {{phone}}."],["laptop","Baji works on her {{computer}}."]],2)),
+  pg("Save or Waste?","Look at each picture. Circle save or waste.","Tell saving from wasting.",
+   CP("",[["light-bulb","Switching off the light when you leave a room",0],["shower","Leaving the shower on while you play",1],["toothbrush","Turning off the tap while you brush",0],["television","Leaving the TV on in an empty room",1],["bucket","Washing the car with a bucket, not a pipe",0]],["save","waste"])),
+  pg("Water or Electricity?","Write each one under what it uses.","Sort things that use water and things that use electricity.",
+   SO("",["uses water","uses electricity"],["shower","fan","tap","fridge","watering can","light"],[0,1,0,1,0,1])),
+  pg("Hira's Saving Family","Read. Then circle the right answer.","Learn simple ways a family saves water and electricity.",
+   PA("Hira's family has a saving plan. Hira turns off the tap while she brushes. Abbu fixed the dripping tap in the kitchen. Ammi waters the plants in the evening, when the sun is not hot. Everyone switches off the fan when they leave the room."),
+   CH("",[["What does Hira do when she brushes?",["turns off the tap","leaves it running"],0],["What did Abbu fix?",["a dripping tap","a bicycle"],0],["When does Ammi water the plants?",["in the evening","at noon"],0],["What do they switch off when they leave?",["the fan","the fridge"],0]])),
+  pg("The Better Way","Circle the better way.","Choose the way that saves more.",
+   CH("",[["Rinsing your mouth",["with a cup of water","with the tap running"],0],["A sunny day",["open the curtains","turn on all the lights"],0],["Washing the car",["with a bucket","with a running pipe"],0],["A dripping tap",["tell a grown-up","leave it"],0]])),
+  pg("Saving Sums","Read and solve.","Use maths with saving water and electricity.",
+   WP("",["A dripping tap wastes 1 bucket of water a day. In 7 days it wastes {{7}} buckets.","There are 6 lights on. Hamza switches off 4. {{2}} lights are still on.","Brushing with the tap running uses 12 glasses of water. With a cup it uses 2. You save {{10}} glasses.","A fan is on for 5 hours in the morning and 3 hours at night. It is on for {{8}} hours."])),
+  pg("Brushing the Saving Way","Fill in the missing words.","Put the steps for brushing without wasting water in order.",BK(["wet","off","brush","cup"]),
+   CY("",[["toothbrush","{{wet}} your toothbrush"],["potable-water","Turn the tap {{off}}"],["tooth","{{brush}} all your teeth"],["droplet","Rinse with a {{cup}} of water"]])),
+  pg("My Saving Promise","Finish the sentences. Then draw.","Make your own plan to save water and electricity.",
+   WR("",["I will save water by ______________________.","I will save electricity by ______________________.","I will tell a grown-up if ______________________."]),DR("Me saving water or electricity",220))],
+  "Water and electricity are precious. We use water to drink, cook, wash and grow plants, and electricity for lights, fans, fridges and phones. Small habits save a lot: turning off taps and lights, fixing drips and using a bucket or cup instead of running water.",
+  ["Make your child the family 'light monitor' for a week.","Use a cup when brushing teeth and count the glasses saved.","Look together for any dripping taps at home."],
+  ["Stick a 'Switch me off!' sign by the light switches.","Water plants in the evening and talk about why."],
+  "Children may think water never runs out because it comes from the tap. Explain that it comes from rivers, rain and the ground, and there is only so much.",
+  ["The Tap That Cried","Drip, drip, drip went the kitchen tap all night. 'I am crying away my water!' it said. In the morning Dada heard it and tightened it. The tap smiled and stayed quiet. Ask: Who fixed the dripping tap?"])
+]});
+
+/* Grade 1 Urdu fallback topic 14 (Motia lesson 14 is not in references yet). */
+G1_URDU.push(
+ TP("واحد اور جمع","Singular and plural",[
+  pg("ایک یا بہت سے؟|One or many?","پڑھیں۔ صحیح یا غلط پر دائرہ لگائیں۔","Know what واحد and جمع mean.",
+   CN(["banana","books"],"جس لفظ میں ایک چیز ہو اسے واحد کہتے ہیں، جیسے ایک کیلا۔ جس لفظ میں ایک سے زیادہ چیزیں ہوں اسے جمع کہتے ہیں، جیسے کیلے۔","واحد اور جمع"),
+   CH("",[["کتاب واحد ہے۔",0],["کتابیں جمع ہے۔",0],["لڑکے واحد ہے۔",1],["کرسیاں جمع ہے۔",0]],["صحیح","غلط"])),
+  pg("تصویر دیکھیں|Look at the pictures","تصویر دیکھیں اور جمع لکھیں۔","Write the plural of words with pictures.",BK(["کیلے","انڈے","کتابیں","بلیاں","مچھلیاں","پنسلیں"]),
+   FP("",[["banana","ایک کیلا، دو {{کیلے}}"],["egg","ایک انڈا، تین {{انڈے}}"],["books","ایک کتاب، چار {{کتابیں}}"],["cat","ایک بلی، دو {{بلیاں}}"],["fish","ایک مچھلی، پانچ {{مچھلیاں}}"],["pencil","ایک پنسل، تین {{پنسلیں}}"]],2,1)),
+  pg("ا اور ہ والے الفاظ|Words ending in alif and hay","جمع لکھیں۔","Make plurals of words ending in ا or ہ.",
+   NO("جو لفظ ا یا ہ پر ختم ہوں، ان کی جمع اکثر ے سے بنتی ہے: لڑکا سے لڑکے، کمرہ سے کمرے۔"),
+   F("",["لڑکا: {{لڑکے}}","کمرہ: {{کمرے}}","گھوڑا: {{گھوڑے}}","بستہ: {{بستے}}","پتا: {{پتے}}","انڈا: {{انڈے}}"],2,1)),
+  pg("ی والے الفاظ|Words ending in yay","جمع لکھیں۔","Make plurals of words ending in ی.",
+   NO("جو لفظ ی پر ختم ہوں، ان کی جمع اکثر یاں سے بنتی ہے: لڑکی سے لڑکیاں۔"),
+   F("",["لڑکی: {{لڑکیاں}}","کرسی: {{کرسیاں}}","بکری: {{بکریاں}}","گاڑی: {{گاڑیاں}}","چابی: {{چابیاں}}","مچھلی: {{مچھلیاں}}"],2,1)),
+  pg("یں والی جمع|Plurals with yein","جمع لکھیں۔","Make plurals that end in یں.",
+   NO("کچھ لفظوں کی جمع یں لگا کر بنتی ہے: کتاب سے کتابیں، میز سے میزیں۔"),
+   F("",["کتاب: {{کتابیں}}","میز: {{میزیں}}","آنکھ: {{آنکھیں}}","پنسل: {{پنسلیں}}","بات: {{باتیں}}","بطخ: {{بطخیں}}"],2,1)),
+  pg("ایک جیسے الفاظ|Words that stay the same","خالی جگہ پُر کریں۔","Know that some words stay the same in the plural.",
+   NO("کچھ لفظ واحد اور جمع میں ایک جیسے رہتے ہیں: ایک پھول، دو پھول۔ ایک گھر، تین گھر۔"),
+   F("",["ایک پھول، دو {{پھول}}","ایک گھر، تین {{گھر}}","ایک درخت، چار {{درخت}}","ایک سیب، پانچ {{سیب}}"],1,1)),
+  pg("واحد یا جمع؟|Singular or plural?","لفظوں کو صحیح خانے میں لکھیں۔","Sort singular and plural words.",
+   SO("",["واحد","جمع"],["کتاب","لڑکے","کرسی","بلیاں","گھوڑا","آنکھیں"],[0,1,0,1,0,1])),
+  pg("صحیح لفظ چنیں|Choose the right word","جملے کے لیے صحیح لفظ پر دائرہ لگائیں۔","Use singular and plural words in sentences.",
+   CH("",[["میرے پاس ایک ___ ہے۔",["کتاب","کتابیں"],0],["کمرے میں تین ___ ہیں۔",["کرسی","کرسیاں"],1],["درخت پر دو ___ بیٹھی ہیں۔",["چڑیا","چڑیاں"],1],["امی نے ایک ___ خریدا۔",["کیلا","کیلے"],0],["میری دو ___ ہیں۔",["آنکھ","آنکھیں"],1]])),
+  pg("باغ کی سیر|A walk in the garden","کہانی پڑھیں اور صحیح جواب چنیں۔","Read a short story and find plural words.",
+   PA("سارہ اور حمزہ باغ گئے۔ وہاں بہت سے درخت تھے۔ درختوں پر چڑیاں بیٹھی تھیں۔ تالاب میں تین بطخیں تیر رہی تھیں۔ حمزہ نے دو پیلے پھول دیکھے اور سارہ نے ایک تتلی دیکھی۔"),
+   CH("",[["درختوں پر کون بیٹھی تھیں؟",["چڑیاں","بلیاں"],0],["تالاب میں کتنی بطخیں تھیں؟",["تین","ایک"],0],["سارہ نے کیا دیکھا؟",["ایک تتلی","دو گھوڑے"],0]])),
+  pg("میری چیزیں|My things","جملے مکمل کریں اور تصویر بنائیں۔","Write about your own things using singular and plural.",
+   WR("",["میرے بستے میں ایک ____________ ہے۔","میرے بستے میں بہت سی ____________ ہیں۔","میرے گھر میں دو ____________ ہیں۔"]),DR("میرے بستے کی چیزیں",200))],
+  "Singular and plural (واحد اور جمع) in Urdu. Words ending in ا or ہ often change to ے (لڑکا، لڑکے). Words ending in ی often add اں (لڑکی، لڑکیاں). Some words add یں (کتاب، کتابیں), and some stay the same (پھول، پھول).",
+  ["Count things at home in Urdu: ایک انڈا، دو انڈے.","Say a word and ask your child for its جمع.","Read the story aloud and find the plural words."],
+  ["Make picture cards with one thing on one side and many on the other.","Play a game: hold up one spoon, then three, and say the words."],
+  "Not every plural follows a rule. پھول and گھر stay the same. Let your child hear lots of everyday examples rather than learn rules by heart.",
+  ["بہت سی چیزیں","زینب کی امی بازار گئیں۔ انہوں نے ایک تربوز، چھ کیلے اور دو کتابیں خریدیں۔ گھر آ کر زینب نے سب گنا۔ سوال: امی نے کتنے کیلے خریدے؟"])
+);
+
 /* ---------- Term 2 (Weeks 12 to 16): Grade 2 topics. Original exercises. ---------- */
 /* English is one level up: Grade 2 English is built from the g3 list (see data.js). */
 addPlus("english",{g3:[
@@ -12958,7 +13090,7 @@ function regQuizOnly(){const add=(id,grade,kind,title,desc,gen)=>{const s=subjec
 const WORDS={
  nursery:['cat','sun','dog','hat','pen','bus','cup','egg','box','red','fox','big','hen','hut','cap','fog','bed','mat','tap','bell','drum','snow'],
  kg:['fish','frog','milk','duck','ship','tree','book','star','cake','moon','rain','king','flag','clap','blue','rice','clock','bread','coat','jump','wool','fast','slow','park','hand','town','half','bear','nest','story','share'],
- g1:['garden','yellow','basket','summer','friend','teacher','kitchen','rainbow','bottle','animal','monkey','pencil','robot','helper','speaker','pattern','pretend','sorting','tablet','camera','picture','printer','volume','arrow','forward','mistake','follow','private','online','trusted','code','debug','repeat','turtle','whale','polite','rules','seed','soil','sunlight','festival','balloon','transport','train','bundle'],
+ g1:['garden','yellow','basket','summer','friend','teacher','kitchen','rainbow','bottle','animal','monkey','pencil','robot','helper','speaker','pattern','pretend','sorting','tablet','camera','picture','printer','volume','arrow','forward','mistake','follow','private','online','trusted','code','debug','repeat','turtle','whale','polite','rules','seed','soil','sunlight','festival','balloon','transport','train','bundle','germs','soap','healthy','between','order','save','switch'],
  g2:['beautiful','elephant','mountain','question','language','birthday','computer','festival','vegetable','tomorrow','different','important','quietly','weather','thunder','senses','village','keyboard','council','sensor','predict','label','private','password','doctor','glacier','valley','museum','saving','melting','simile','magnet','opinion','delta','market','sequence','scholar','harvest','farmer','tractor','model','drought','review','fraction','echo','vibrate','poet','wheat','shelter','season','poem','camera','neighbour','artefact','minute','equator','gallery','fair','equal','designer','include'],
  g3:['adventure','knowledge','scientist','neighbour','favourite','dangerous','paragraph','celebrate','exercise','character','continent','discovery','adverbial','producer','consumer','predator','climate','equator','province','emperor','formula','multiply','chatbot','translate','language','creative','training','accuracy','metaphor','simile','remainder','digestion','resource','constitution','persuade','fraction','reflection','mirror','population','loop','ethics','opponent','strategy','privacy','consent','responsible','rhythm','perimeter','vibration','empire','pollution','volunteer','research','explorer','atlas','numeral','orbit','crater','gravity','citizen','glossary','environment','satellite','prompt','energy','recycle']};
 /* English word games run one level above the grade (October 2026): Grade 1 uses the old Grade 2 words, and so on */

@@ -5,31 +5,18 @@ Go to https://play.google.com/console/signup, sign in with the Google account yo
 choose **Personal** (or Organisation if you have a registered business), pay the $25 fee and verify your identity.
 New personal accounts must run a **closed test with at least 12 testers for 14 days** before the app can go public.
 
-## 2. Make the upload key (once, on your Windows PC)
-Install Java if you don't have it (https://adoptium.net, Temurin 21). Then open Command Prompt and run:
-
-    keytool -genkeypair -v -keystore little-takhti-upload.jks -alias littletakhti -keyalg RSA -keysize 2048 -validity 10000
-
-It asks for a password (use a strong one and write it down) and your name and city. Keep
-`little-takhti-upload.jks` and the password somewhere safe, like a password manager and a USB stick.
-Never put it in GitHub. If it is lost, Google can reset the upload key, but it takes a few days.
-
-Turn the file into text for GitHub (PowerShell, in the same folder):
-
-    [Convert]::ToBase64String([IO.File]::ReadAllBytes("little-takhti-upload.jks")) | Set-Content keystore-base64.txt
-
-## 3. Add four secrets in GitHub
+## 2. Signing key (one secret, no Java needed)
 github.com/ProjectCobra/little-takhti > Settings > Secrets and variables > Actions > New repository secret:
 
-| Name | Value |
-|---|---|
-| ANDROID_KEYSTORE_BASE64 | everything inside keystore-base64.txt |
-| ANDROID_KEYSTORE_PASSWORD | the password you chose |
-| ANDROID_KEY_ALIAS | littletakhti |
-| ANDROID_KEY_PASSWORD | the same password (keytool uses one password for both unless you chose two) |
+- Name: `ANDROID_UPLOAD_PASSWORD`
+- Value: a long password you make up (20 or more characters). Save it in a password manager too.
 
-Then delete keystore-base64.txt. The workflow **Android app (Play Store release)** now builds a signed
-`.aab` on every app change (Actions tab > the run > Artifacts > little-takhti-release-N). You can also start it by hand with "Run workflow".
+The next app build creates the upload key on GitHub, locks it with that password and keeps only the locked
+file (app/keys/upload.jks.enc). The signed Play Store file then appears on the `apps` branch as
+android/little-takhti-release.aab and under Actions > the run > Artifacts.
+If the password is ever lost, Google Play can reset the upload key (Play Console > Setup > App signing).
+
+(Advanced, optional: the older four-secret setup with your own keystore still works.)
 
 ## 4. Create the app in Play Console
 - Create app: name Little Takhti, App, Free, language English (United Kingdom).

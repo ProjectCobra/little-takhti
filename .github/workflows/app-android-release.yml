@@ -1,61 +1,102 @@
 name: Android app (Play Store release)
 # Builds a signed Android App Bundle (.aab) for Google Play.
-# Needs four repository secrets: ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD, ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD.
-# Without them the workflow says so and finishes without building. The keystore is never stored in the repo.
+# Easy mode: add ONE repository secret, ANDROID_UPLOAD_PASSWORD (a long password you choose, 20+ characters).
+#   The first run creates the upload key here on GitHub, encrypts it with that password and saves only the
+#   encrypted file (app/keys/upload.jks.enc). The plain key and the password never enter the repo.
+# Manual mode (still supported): ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD, ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD.
+# Without secrets the workflow says so and finishes without building.
 on:
   workflow_dispatch:
   push:
     branches: [dev, main]
     paths: ['app/**', '.github/workflows/app-android-release.yml']
 permissions:
-  contents: read
+  contents: write
 concurrency: { group: app-android-release, cancel-in-progress: true }
 jobs:
   release:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      HAS_KEY: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' && secrets.ANDROID_KEYSTORE_PASSWORD != '' && secrets.ANDROID_KEY_ALIAS != '' && secrets.ANDROID_KEY_PASSWORD != '' }}
+      HAS_MANUAL: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' && secrets.ANDROID_KEYSTORE_PASSWORD != '' && secrets.ANDROID_KEY_ALIAS != '' && secrets.ANDROID_KEY_PASSWORD != '' }}
+      HAS_EASY: ${{ secrets.ANDROID_UPLOAD_PASSWORD != '' }}
     steps:
       - name: Check signing secrets
         run: |
-          if [ "$HAS_KEY" != "true" ]; then
-            echo "::notice title=No signing key yet::Add the four ANDROID_* secrets (see app/store/PLAY_STORE.md) to build a signed release. Skipping."
+          if [ "$HAS_MANUAL" != "true" ] && [ "$HAS_EASY" != "true" ]; then
+            echo "::notice title=No signing key yet::Add the ANDROID_UPLOAD_PASSWORD secret (see app/store/PLAY_STORE.md) to build a signed release. Skipping."
           fi
       - uses: actions/checkout@v4
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
       - uses: actions/setup-node@v4
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
         with: { node-version: '22' }
       - uses: actions/setup-java@v4
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
         with: { distribution: temurin, java-version: '21' }
+      - name: Prepare upload key
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
+        env:
+          PW: ${{ secrets.ANDROID_UPLOAD_PASSWORD }}
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          M_STOREPW: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          M_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          M_KEYPW: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          K="$RUNNER_TEMP/upload.jks"
+          if [ "$HAS_MANUAL" = "true" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$K"
+            { echo "LT_KEYSTORE_PASSWORD=$M_STOREPW"; echo "LT_KEY_ALIAS=$M_ALIAS"; echo "LT_KEY_PASSWORD=$M_KEYPW"; } >> "$GITHUB_ENV"
+          else
+            if [ "${#PW}" -lt 16 ]; then echo "::error::ANDROID_UPLOAD_PASSWORD must be at least 16 characters"; exit 1; fi
+            ENC=app/keys/upload.jks.enc
+            if [ -f "$ENC" ]; then
+              openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -pass env:PW -in "$ENC" -out "$K"
+            else
+              keytool -genkeypair -keystore "$K" -storetype PKCS12 -alias littletakhti -keyalg RSA -keysize 2048 -validity 10000 \
+                -storepass:env PW -keypass:env PW -dname "CN=Little Takhti, O=Little Takhti, C=PK"
+              mkdir -p app/keys
+              openssl enc -aes-256-cbc -pbkdf2 -iter 600000 -salt -pass env:PW -in "$K" -out "$ENC"
+              git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+              git add "$ENC"
+              git commit -qm "App: encrypted upload key (created by the release workflow) [skip ci]"
+              for i in 1 2 3; do git pull -q --rebase origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && break; sleep 5; done
+            fi
+            { echo "LT_KEYSTORE_PASSWORD=$PW"; echo "LT_KEY_ALIAS=littletakhti"; echo "LT_KEY_PASSWORD=$PW"; } >> "$GITHUB_ENV"
+          fi
+          echo "LT_KEYSTORE_FILE=$K" >> "$GITHUB_ENV"
       - name: Web bundle and sync
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
         working-directory: app
         run: |
           npm ci
           python3 build_www.py
           npx cap sync android
       - name: Build signed App Bundle
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
         working-directory: app/android
         env:
           LT_VERSION_CODE: ${{ github.run_number }}
-          LT_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          LT_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          LT_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
         run: |
-          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
-          export LT_KEYSTORE_FILE="$RUNNER_TEMP/upload.jks"
           chmod +x gradlew && ./gradlew bundleRelease --no-daemon -q
-          rm -f "$RUNNER_TEMP/upload.jks"
+          rm -f "$LT_KEYSTORE_FILE"
           ls -la app/build/outputs/bundle/release/
       - name: Upload App Bundle
-        if: env.HAS_KEY == 'true'
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: little-takhti-release-${{ github.run_number }}
           path: app/android/app/build/outputs/bundle/release/app-release.aab
           retention-days: 30
+      - name: Save App Bundle to the apps branch
+        if: env.HAS_MANUAL == 'true' || env.HAS_EASY == 'true'
+        run: |
+          cp app/android/app/build/outputs/bundle/release/app-release.aab /tmp/lt.aab
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          for i in 1 2 3; do
+            git fetch -q origin apps && git checkout -q -B apps origin/apps
+            mkdir -p android && cp /tmp/lt.aab android/little-takhti-release.aab
+            echo "run ${{ github.run_number }} $(date -u +%F)" > android/RELEASE.txt
+            git add android && git commit -qm "Android release bundle ${{ github.run_number }}" && git push -q origin apps && break
+            git checkout -q -- . ; sleep 5
+          done

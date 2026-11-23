@@ -397,10 +397,10 @@ SCN.question=(r,t0,s)=>{
    if(crosses[i])P(crosses[i],x,y,pop(t,o.cross,.35)*(o.cs||1))});
   extra.forEach(x=>x.u(t));
   if(plus)P(plus,s.plus.x,s.plus.y,pop(t,plusT,.4));
-  ob.forEach((b,i)=>{const isA=i===ai;const rev=t>tr;b.firstElementChild.style.background=rev&&isA?'#1F7A4C':'#fff';b.firstElementChild.style.color=rev&&isA?'#fff':'#123B28';P(b,ox+(i-1)*gapx,850,pop(t,tq+.05+i*.12,.4)*(rev&&isA?1.15+.05*Math.sin(t*8):1),0,rev&&!isA?.35:1)});
-  const ck=lin(t,c0,CDN);const on=t>c0-.2&&t<tr+.2;ring.querySelector('.arc').setAttribute('stroke-dashoffset',528*ck);ring.querySelector('.num').textContent=Math.min(CDK,Math.max(1,CDK-Math.floor((t-c0)*CDK/CDN)));
-  P(ring,1640,850,on?pop(t,c0-.2,.35)*(1+.06*Math.exp(-Math.pow(((t-c0)%(CDN/CDK))*8,2))):0);
-  confettiU(cf,t,tr,ox+(ai-1)*gapx,800);
+  ob.forEach((b,i)=>{const isA=i===ai;const rev=t>tr;b.firstElementChild.style.background=rev&&isA?'#1F7A4C':'#fff';b.firstElementChild.style.color=rev&&isA?'#fff':'#123B28';P(b,ox+(i-1)*gapx,s.opty||850,pop(t,tq+.05+i*.12,.4)*(rev&&isA?1.15+.05*Math.sin(t*8):1),0,rev&&!isA?.35:1)});
+  const ck=lin(t,c0,CDN);const on=s.ring!==false&&t>c0-.2&&t<tr+.2;ring.querySelector('.arc').setAttribute('stroke-dashoffset',528*ck);ring.querySelector('.num').textContent=Math.min(CDK,Math.max(1,CDK-Math.floor((t-c0)*CDK/CDN)));
+  P(ring,1640,s.opty||850,on?pop(t,c0-.2,.35)*(1+.06*Math.exp(-Math.pow(((t-c0)%(CDN/CDK))*8,2))):0);
+  confettiU(cf,t,tr,ox+(ai-1)*gapx,(s.opty||850)-50);
   P(m,250,860+idleBob(t),.75,0,1);poseMascot(m,t,{cheer:t>tr});
  }};
 

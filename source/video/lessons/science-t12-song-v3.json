@@ -1,0 +1,2693 @@
+{
+ "id": "science-t12-song-v3",
+ "grade": "Grade 1",
+ "subject": "Science",
+ "topic": "Parts of a plant",
+ "page": "class-1-science-parts-of-a-plant-worksheets",
+ "meta": {
+  "title": "Parts of a Plant Song and Quiz | Grade 1 Science | Little Takhti",
+  "description": "Sing along with Takhti! A song about the parts of a plant: roots, stem, leaves and flowers, and the parts we eat, with a quiz inside the song. Shout the answer before the clock runs out! For Grade 1 children (ages 6 to 7). Little Takhti is also on Android.",
+  "tags": [
+   "parts of a plant song",
+   "plant song for kids",
+   "science songs for kids",
+   "grade 1 science",
+   "roots stem leaves flower",
+   "sing along",
+   "kids quiz song"
+  ]
+ },
+ "thumb_at": [
+  "parts",
+  3.0
+ ],
+ "song": {
+  "url": "https://storage.googleapis.com/producer-app-public/clips/dd2e2718-4e48-4d27-af38-a50d4004e851.m4a",
+  "duration": 160.832,
+  "beats": [
+   1.045,
+   1.533,
+   2.02,
+   2.531,
+   3.042,
+   3.529,
+   4.04,
+   4.551,
+   5.039,
+   5.526,
+   6.037,
+   6.525,
+   7.036,
+   7.523,
+   8.034,
+   8.522,
+   9.033,
+   9.543,
+   10.031,
+   10.542,
+   11.029,
+   11.54,
+   12.028,
+   12.539,
+   13.003,
+   13.514,
+   14.048,
+   14.536,
+   15.023,
+   15.534,
+   16.045,
+   16.533,
+   17.02,
+   17.531,
+   18.042,
+   18.53,
+   19.04,
+   19.528,
+   20.039,
+   20.55,
+   21.037,
+   21.525,
+   22.036,
+   22.547,
+   23.034,
+   23.545,
+   24.033,
+   24.543,
+   25.031,
+   25.542,
+   26.053,
+   26.54,
+   27.051,
+   27.539,
+   28.05,
+   28.537,
+   29.048,
+   29.536,
+   30.047,
+   30.534,
+   31.045,
+   31.533,
+   32.044,
+   32.531,
+   33.042,
+   33.53,
+   34.04,
+   34.551,
+   35.039,
+   35.527,
+   36.037,
+   36.525,
+   37.036,
+   37.547,
+   38.034,
+   38.545,
+   39.033,
+   39.544,
+   40.031,
+   40.542,
+   41.03,
+   41.54,
+   42.051,
+   42.539,
+   43.05,
+   43.537,
+   44.048,
+   44.536,
+   45.023,
+   45.534,
+   46.045,
+   46.533,
+   47.044,
+   47.531,
+   48.042,
+   48.53,
+   49.041,
+   49.528,
+   50.039,
+   50.55,
+   51.037,
+   51.525,
+   52.036,
+   52.547,
+   53.034,
+   53.522,
+   54.033,
+   54.544,
+   55.031,
+   55.519,
+   56.03,
+   56.517,
+   57.028,
+   57.516,
+   58.027,
+   58.538,
+   59.025,
+   59.536,
+   60.024,
+   60.534,
+   61.045,
+   61.533,
+   62.044,
+   62.531,
+   63.042,
+   63.53,
+   64.041,
+   64.528,
+   65.039,
+   65.55,
+   66.038,
+   66.548,
+   67.059,
+   67.547,
+   68.058,
+   68.545,
+   69.056,
+   69.544,
+   70.055,
+   70.565,
+   71.053,
+   71.564,
+   72.052,
+   72.562,
+   73.05,
+   73.561,
+   74.048,
+   74.559,
+   75.047,
+   75.535,
+   76.045,
+   76.556,
+   77.044,
+   77.555,
+   78.042,
+   78.553,
+   79.041,
+   79.528,
+   80.039,
+   80.527,
+   81.038,
+   81.525,
+   82.036,
+   82.524,
+   83.035,
+   83.522,
+   84.033,
+   84.544,
+   85.031,
+   85.542,
+   86.03,
+   86.541,
+   87.028,
+   87.539,
+   88.027,
+   88.538,
+   89.025,
+   89.536,
+   90.047,
+   90.535,
+   91.045,
+   91.533,
+   92.021,
+   92.532,
+   93.019,
+   93.53,
+   94.041,
+   94.552,
+   95.062,
+   95.55,
+   96.061,
+   96.549,
+   97.059,
+   97.547,
+   98.058,
+   98.545,
+   99.033,
+   99.544,
+   100.032,
+   100.542,
+   101.053,
+   101.541,
+   102.028,
+   102.539,
+   103.05,
+   103.538,
+   104.049,
+   104.536,
+   105.047,
+   105.535,
+   106.046,
+   106.533,
+   107.044,
+   107.532,
+   108.042,
+   108.53,
+   109.041,
+   109.552,
+   110.039,
+   110.55,
+   111.038,
+   111.549,
+   112.036,
+   112.524,
+   112.988,
+   113.476,
+   113.964,
+   114.544,
+   115.032,
+   115.519,
+   116.03,
+   116.541,
+   117.029,
+   117.539,
+   118.027,
+   118.538,
+   119.025,
+   119.536,
+   120.047,
+   120.535,
+   121.046,
+   121.533,
+   122.044,
+   122.532,
+   123.043,
+   123.53,
+   124.041,
+   124.529,
+   125.039,
+   125.527,
+   126.038,
+   126.549,
+   127.036,
+   127.547,
+   128.035,
+   128.546,
+   129.033,
+   129.544,
+   130.032,
+   130.543,
+   131.053,
+   131.541,
+   132.029,
+   132.54,
+   133.05,
+   133.538,
+   134.049,
+   134.536,
+   135.047,
+   135.535,
+   136.046,
+   136.533,
+   137.044,
+   137.532,
+   138.043,
+   138.553,
+   139.041,
+   139.552,
+   140.04,
+   140.55,
+   141.038,
+   141.526,
+   142.036,
+   142.524,
+   143.035,
+   143.523,
+   144.033,
+   144.544,
+   145.032,
+   145.519,
+   146.03,
+   146.541,
+   147.029,
+   147.516,
+   148.027,
+   148.538,
+   149.049,
+   149.537,
+   150.047,
+   150.535,
+   151.046,
+   151.533,
+   152.044,
+   152.532,
+   153.043,
+   153.53,
+   154.041,
+   154.529,
+   155.04
+  ],
+  "chorus": [
+   [
+    23.2,
+    39.5
+   ],
+   [
+    55.6,
+    63.6
+   ],
+   [
+    116.26,
+    121.2
+   ],
+   [
+    138.6,
+    142.8
+   ]
+  ],
+  "marks": {
+   "intro": 0.0,
+   "parts": 6.6,
+   "roots": 15.4,
+   "chorus1": 23.2,
+   "stem": 39.4,
+   "leaves": 47.4,
+   "dance": 55.6,
+   "quiz": 63.8,
+   "q1": 73.5,
+   "q2": 91.46000000000001,
+   "q3": 106.66000000000001,
+   "dance3": 116.26,
+   "recap": 121.2,
+   "dance2": 138.6,
+   "end": 142.8,
+   "cd1": 79.9,
+   "cd2": 99.1,
+   "cd3": 111.4
+  },
+  "lines": [
+   {
+    "key": "p1",
+    "words": [
+     {
+      "w": "A",
+      "t": 7.02,
+      "d": 0.84
+     },
+     {
+      "w": "plant",
+      "t": 7.86,
+      "d": 0.44
+     },
+     {
+      "w": "has",
+      "t": 8.3,
+      "d": 0.56
+     },
+     {
+      "w": "roots,",
+      "t": 8.86,
+      "d": 0.38
+     },
+     {
+      "w": "a",
+      "t": 9.4,
+      "d": 0.15
+     },
+     {
+      "w": "stem,",
+      "t": 9.5,
+      "d": 0.26
+     },
+     {
+      "w": "leaves",
+      "t": 10.02,
+      "d": 0.32
+     },
+     {
+      "w": "and",
+      "t": 10.62,
+      "d": 0.15
+     },
+     {
+      "w": "a",
+      "t": 10.76,
+      "d": 0.18
+     },
+     {
+      "w": "flower.",
+      "t": 10.94,
+      "d": 0.56
+     }
+    ]
+   },
+   {
+    "key": "p2",
+    "words": [
+     {
+      "w": "Each",
+      "t": 12.06,
+      "d": 0.3
+     },
+     {
+      "w": "little",
+      "t": 12.36,
+      "d": 0.52
+     },
+     {
+      "w": "part",
+      "t": 12.88,
+      "d": 0.4
+     },
+     {
+      "w": "has",
+      "t": 13.28,
+      "d": 0.46
+     },
+     {
+      "w": "its",
+      "t": 13.74,
+      "d": 0.2
+     },
+     {
+      "w": "own",
+      "t": 13.94,
+      "d": 0.42
+     },
+     {
+      "w": "special",
+      "t": 14.36,
+      "d": 0.48
+     },
+     {
+      "w": "power.",
+      "t": 14.84,
+      "d": 0.64
+     }
+    ]
+   },
+   {
+    "key": "r1",
+    "words": [
+     {
+      "w": "The",
+      "t": 15.84,
+      "d": 0.15
+     },
+     {
+      "w": "roots",
+      "t": 15.92,
+      "d": 0.42
+     },
+     {
+      "w": "grow",
+      "t": 16.34,
+      "d": 0.44
+     },
+     {
+      "w": "deep",
+      "t": 16.78,
+      "d": 0.5
+     },
+     {
+      "w": "down",
+      "t": 17.28,
+      "d": 0.62
+     },
+     {
+      "w": "into",
+      "t": 17.9,
+      "d": 0.56
+     },
+     {
+      "w": "the",
+      "t": 18.46,
+      "d": 0.54
+     },
+     {
+      "w": "soil,",
+      "t": 19.0,
+      "d": 0.54
+     }
+    ]
+   },
+   {
+    "key": "r2",
+    "words": [
+     {
+      "w": "holding",
+      "t": 19.94,
+      "d": 0.54
+     },
+     {
+      "w": "it",
+      "t": 20.48,
+      "d": 0.44
+     },
+     {
+      "w": "tight,",
+      "t": 20.92,
+      "d": 0.34
+     },
+     {
+      "w": "drinking",
+      "t": 21.48,
+      "d": 0.34
+     },
+     {
+      "w": "water",
+      "t": 21.82,
+      "d": 0.52
+     },
+     {
+      "w": "for",
+      "t": 22.34,
+      "d": 0.4
+     },
+     {
+      "w": "their",
+      "t": 22.74,
+      "d": 0.22
+     },
+     {
+      "w": "toil.",
+      "t": 22.96,
+      "d": 0.58
+     }
+    ]
+   },
+   {
+    "key": "c1a",
+    "words": [
+     {
+      "w": "Roots",
+      "t": 23.54,
+      "d": 0.76
+     },
+     {
+      "w": "drink",
+      "t": 24.3,
+      "d": 0.52
+     },
+     {
+      "w": "up,",
+      "t": 24.82,
+      "d": 0.64
+     },
+     {
+      "w": "the",
+      "t": 25.7,
+      "d": 0.22
+     },
+     {
+      "w": "stem",
+      "t": 25.92,
+      "d": 0.38
+     },
+     {
+      "w": "holds",
+      "t": 26.3,
+      "d": 0.52
+     },
+     {
+      "w": "strong.",
+      "t": 26.82,
+      "d": 0.7
+     }
+    ]
+   },
+   {
+    "key": "c1b",
+    "words": [
+     {
+      "w": "Leaves",
+      "t": 27.7,
+      "d": 0.6
+     },
+     {
+      "w": "catch",
+      "t": 28.3,
+      "d": 0.36
+     },
+     {
+      "w": "the",
+      "t": 28.66,
+      "d": 0.26
+     },
+     {
+      "w": "sun",
+      "t": 28.92,
+      "d": 0.4
+     },
+     {
+      "w": "all",
+      "t": 29.32,
+      "d": 0.44
+     },
+     {
+      "w": "day",
+      "t": 29.76,
+      "d": 0.24
+     },
+     {
+      "w": "long.",
+      "t": 30.0,
+      "d": 1.52
+     }
+    ]
+   },
+   {
+    "key": "c1c",
+    "words": [
+     {
+      "w": "Flowers",
+      "t": 31.78,
+      "d": 0.64
+     },
+     {
+      "w": "make",
+      "t": 32.42,
+      "d": 0.34
+     },
+     {
+      "w": "seeds,",
+      "t": 32.76,
+      "d": 0.7
+     },
+     {
+      "w": "bright",
+      "t": 33.76,
+      "d": 0.15
+     },
+     {
+      "w": "colours",
+      "t": 33.9,
+      "d": 0.5
+     },
+     {
+      "w": "in",
+      "t": 34.4,
+      "d": 0.34
+     },
+     {
+      "w": "the",
+      "t": 34.74,
+      "d": 0.2
+     },
+     {
+      "w": "breeze.",
+      "t": 34.94,
+      "d": 0.46
+     }
+    ]
+   },
+   {
+    "key": "c1d",
+    "words": [
+     {
+      "w": "A",
+      "t": 35.76,
+      "d": 0.22
+     },
+     {
+      "w": "plant",
+      "t": 35.98,
+      "d": 0.26
+     },
+     {
+      "w": "is",
+      "t": 36.24,
+      "d": 0.15
+     },
+     {
+      "w": "a",
+      "t": 36.38,
+      "d": 0.18
+     },
+     {
+      "w": "little",
+      "t": 36.56,
+      "d": 0.34
+     },
+     {
+      "w": "factory,",
+      "t": 36.9,
+      "d": 0.76
+     },
+     {
+      "w": "buzzing",
+      "t": 37.86,
+      "d": 0.5
+     },
+     {
+      "w": "with",
+      "t": 38.36,
+      "d": 0.36
+     },
+     {
+      "w": "the",
+      "t": 38.72,
+      "d": 0.3
+     },
+     {
+      "w": "bees!",
+      "t": 39.02,
+      "d": 0.42
+     }
+    ]
+   },
+   {
+    "key": "s1",
+    "words": [
+     {
+      "w": "The",
+      "t": 39.74,
+      "d": 0.16
+     },
+     {
+      "w": "stem",
+      "t": 39.9,
+      "d": 0.36
+     },
+     {
+      "w": "stands",
+      "t": 40.26,
+      "d": 0.66
+     },
+     {
+      "w": "tall,",
+      "t": 40.92,
+      "d": 0.36
+     },
+     {
+      "w": "carrying",
+      "t": 41.48,
+      "d": 0.32
+     },
+     {
+      "w": "water",
+      "t": 41.8,
+      "d": 0.68
+     },
+     {
+      "w": "up",
+      "t": 42.48,
+      "d": 0.5
+     },
+     {
+      "w": "high",
+      "t": 42.98,
+      "d": 0.3
+     }
+    ]
+   },
+   {
+    "key": "s2",
+    "words": [
+     {
+      "w": "to",
+      "t": 43.28,
+      "d": 0.4
+     },
+     {
+      "w": "the",
+      "t": 43.68,
+      "d": 0.38
+     },
+     {
+      "w": "leaves",
+      "t": 44.06,
+      "d": 0.36
+     },
+     {
+      "w": "and",
+      "t": 44.42,
+      "d": 0.3
+     },
+     {
+      "w": "the",
+      "t": 44.72,
+      "d": 0.26
+     },
+     {
+      "w": "flower,",
+      "t": 44.98,
+      "d": 0.64
+     },
+     {
+      "w": "reaching",
+      "t": 45.88,
+      "d": 0.42
+     },
+     {
+      "w": "for",
+      "t": 46.3,
+      "d": 0.42
+     },
+     {
+      "w": "the",
+      "t": 46.72,
+      "d": 0.22
+     },
+     {
+      "w": "sky.",
+      "t": 46.94,
+      "d": 0.48
+     }
+    ]
+   },
+   {
+    "key": "l1",
+    "words": [
+     {
+      "w": "Leaves",
+      "t": 47.86,
+      "d": 0.42
+     },
+     {
+      "w": "use",
+      "t": 48.28,
+      "d": 0.36
+     },
+     {
+      "w": "the",
+      "t": 48.64,
+      "d": 0.28
+     },
+     {
+      "w": "sunlight",
+      "t": 48.92,
+      "d": 0.58
+     },
+     {
+      "w": "to",
+      "t": 49.5,
+      "d": 0.44
+     },
+     {
+      "w": "make",
+      "t": 49.94,
+      "d": 0.28
+     },
+     {
+      "w": "a",
+      "t": 50.22,
+      "d": 0.24
+     },
+     {
+      "w": "tasty",
+      "t": 50.46,
+      "d": 0.34
+     },
+     {
+      "w": "treat,",
+      "t": 50.8,
+      "d": 0.44
+     }
+    ]
+   },
+   {
+    "key": "l2",
+    "words": [
+     {
+      "w": "and",
+      "t": 51.24,
+      "d": 0.44
+     },
+     {
+      "w": "we",
+      "t": 51.68,
+      "d": 0.26
+     },
+     {
+      "w": "get",
+      "t": 51.94,
+      "d": 0.32
+     },
+     {
+      "w": "healthy",
+      "t": 52.26,
+      "d": 0.62
+     },
+     {
+      "w": "veggies",
+      "t": 52.88,
+      "d": 0.7
+     },
+     {
+      "w": "and",
+      "t": 53.58,
+      "d": 0.34
+     },
+     {
+      "w": "fresh",
+      "t": 53.92,
+      "d": 0.34
+     },
+     {
+      "w": "fruit",
+      "t": 54.26,
+      "d": 0.34
+     },
+     {
+      "w": "to",
+      "t": 54.6,
+      "d": 0.38
+     },
+     {
+      "w": "eat!",
+      "t": 54.98,
+      "d": 0.58
+     }
+    ]
+   },
+   {
+    "key": "turn",
+    "words": [
+     {
+      "w": "Your",
+      "t": 64.18,
+      "d": 0.58
+     },
+     {
+      "w": "turn!",
+      "t": 64.76,
+      "d": 0.82
+     }
+    ]
+   },
+   {
+    "key": "shout",
+    "words": [
+     {
+      "w": "Shout",
+      "t": 66.16,
+      "d": 0.15
+     },
+     {
+      "w": "the",
+      "t": 66.28,
+      "d": 0.52
+     },
+     {
+      "w": "answer",
+      "t": 66.8,
+      "d": 0.82
+     },
+     {
+      "w": "before",
+      "t": 67.62,
+      "d": 0.98
+     },
+     {
+      "w": "the",
+      "t": 68.6,
+      "d": 0.44
+     },
+     {
+      "w": "time",
+      "t": 69.04,
+      "d": 0.38
+     },
+     {
+      "w": "runs",
+      "t": 69.42,
+      "d": 0.58
+     },
+     {
+      "w": "out!",
+      "t": 70.0,
+      "d": 2.7
+     }
+    ]
+   },
+   {
+    "key": "q1",
+    "words": [
+     {
+      "w": "Which",
+      "t": 74.1,
+      "d": 0.72
+     },
+     {
+      "w": "part",
+      "t": 74.82,
+      "d": 0.56
+     },
+     {
+      "w": "grows",
+      "t": 75.38,
+      "d": 0.52
+     },
+     {
+      "w": "under",
+      "t": 75.9,
+      "d": 1.26
+     },
+     {
+      "w": "the",
+      "t": 77.16,
+      "d": 0.82
+     },
+     {
+      "w": "soil?",
+      "t": 77.98,
+      "d": 0.52
+     }
+    ]
+   },
+   {
+    "key": "a1",
+    "words": [
+     {
+      "w": "Roots!",
+      "t": 85.64,
+      "d": 0.7
+     },
+     {
+      "w": "The",
+      "t": 86.82,
+      "d": 0.15
+     },
+     {
+      "w": "roots",
+      "t": 86.92,
+      "d": 0.42
+     },
+     {
+      "w": "grow",
+      "t": 87.34,
+      "d": 0.56
+     },
+     {
+      "w": "under",
+      "t": 87.9,
+      "d": 1.18
+     },
+     {
+      "w": "the",
+      "t": 89.08,
+      "d": 0.94
+     },
+     {
+      "w": "soil.",
+      "t": 90.02,
+      "d": 0.84
+     }
+    ]
+   },
+   {
+    "key": "q2",
+    "words": [
+     {
+      "w": "Which",
+      "t": 92.06,
+      "d": 0.74
+     },
+     {
+      "w": "part",
+      "t": 92.8,
+      "d": 0.56
+     },
+     {
+      "w": "makes",
+      "t": 93.36,
+      "d": 0.54
+     },
+     {
+      "w": "food",
+      "t": 93.9,
+      "d": 0.8
+     },
+     {
+      "w": "using",
+      "t": 94.7,
+      "d": 1.04
+     },
+     {
+      "w": "sunlight?",
+      "t": 95.74,
+      "d": 2.36
+     }
+    ]
+   },
+   {
+    "key": "a2",
+    "words": [
+     {
+      "w": "Leaves!",
+      "t": 100.2,
+      "d": 0.52
+     },
+     {
+      "w": "Leaves",
+      "t": 101.38,
+      "d": 0.3
+     },
+     {
+      "w": "make",
+      "t": 101.68,
+      "d": 0.26
+     },
+     {
+      "w": "food",
+      "t": 101.94,
+      "d": 0.9
+     },
+     {
+      "w": "using",
+      "t": 102.84,
+      "d": 0.94
+     },
+     {
+      "w": "sunlight.",
+      "t": 103.78,
+      "d": 1.9
+     }
+    ]
+   },
+   {
+    "key": "q3",
+    "words": [
+     {
+      "w": "Which",
+      "t": 107.26,
+      "d": 1.04
+     },
+     {
+      "w": "part",
+      "t": 108.3,
+      "d": 0.6
+     },
+     {
+      "w": "holds",
+      "t": 108.9,
+      "d": 0.54
+     },
+     {
+      "w": "the",
+      "t": 109.44,
+      "d": 0.5
+     },
+     {
+      "w": "plant",
+      "t": 109.94,
+      "d": 1.04
+     },
+     {
+      "w": "up?",
+      "t": 110.98,
+      "d": 0.42
+     }
+    ]
+   },
+   {
+    "key": "a3",
+    "words": [
+     {
+      "w": "The",
+      "t": 111.88,
+      "d": 0.15
+     },
+     {
+      "w": "stem!",
+      "t": 111.88,
+      "d": 0.54
+     },
+     {
+      "w": "It",
+      "t": 113.28,
+      "d": 0.15
+     },
+     {
+      "w": "holds",
+      "t": 113.4,
+      "d": 0.28
+     },
+     {
+      "w": "the",
+      "t": 113.68,
+      "d": 0.28
+     },
+     {
+      "w": "plant",
+      "t": 113.96,
+      "d": 1.0
+     },
+     {
+      "w": "up!",
+      "t": 114.96,
+      "d": 0.9
+     }
+    ]
+   },
+   {
+    "key": "rem",
+    "words": [
+     {
+      "w": "Remember!",
+      "t": 122.04,
+      "d": 1.04
+     }
+    ]
+   },
+   {
+    "key": "rc1",
+    "words": [
+     {
+      "w": "Roots",
+      "t": 124.56,
+      "d": 0.3
+     },
+     {
+      "w": "drink,",
+      "t": 124.86,
+      "d": 0.46
+     },
+     {
+      "w": "the",
+      "t": 125.74,
+      "d": 0.16
+     },
+     {
+      "w": "stem",
+      "t": 125.9,
+      "d": 0.42
+     },
+     {
+      "w": "carries.",
+      "t": 126.32,
+      "d": 1.18
+     }
+    ]
+   },
+   {
+    "key": "rc2",
+    "words": [
+     {
+      "w": "Leaves",
+      "t": 127.9,
+      "d": 0.42
+     },
+     {
+      "w": "make",
+      "t": 128.32,
+      "d": 0.52
+     },
+     {
+      "w": "food",
+      "t": 128.84,
+      "d": 0.54
+     },
+     {
+      "w": "and",
+      "t": 129.38,
+      "d": 0.48
+     },
+     {
+      "w": "flowers",
+      "t": 129.86,
+      "d": 0.52
+     },
+     {
+      "w": "make",
+      "t": 130.38,
+      "d": 0.48
+     },
+     {
+      "w": "seeds.",
+      "t": 130.86,
+      "d": 0.64
+     }
+    ]
+   },
+   {
+    "key": "rc3",
+    "words": [
+     {
+      "w": "Carrots",
+      "t": 131.5,
+      "d": 1.02
+     },
+     {
+      "w": "are",
+      "t": 132.52,
+      "d": 0.44
+     },
+     {
+      "w": "roots,",
+      "t": 132.96,
+      "d": 0.5
+     },
+     {
+      "w": "spinach",
+      "t": 134.1,
+      "d": 0.24
+     },
+     {
+      "w": "is",
+      "t": 134.34,
+      "d": 0.42
+     },
+     {
+      "w": "a",
+      "t": 134.76,
+      "d": 0.36
+     },
+     {
+      "w": "leaf,",
+      "t": 135.12,
+      "d": 0.32
+     }
+    ]
+   },
+   {
+    "key": "rc4",
+    "words": [
+     {
+      "w": "mangoes",
+      "t": 136.16,
+      "d": 0.6
+     },
+     {
+      "w": "have",
+      "t": 136.76,
+      "d": 0.15
+     },
+     {
+      "w": "seeds",
+      "t": 136.9,
+      "d": 0.46
+     },
+     {
+      "w": "underneath.",
+      "t": 137.36,
+      "d": 0.78
+     }
+    ]
+   },
+   {
+    "key": "o1",
+    "words": [
+     {
+      "w": "Find",
+      "t": 143.4,
+      "d": 0.5
+     },
+     {
+      "w": "more",
+      "t": 143.9,
+      "d": 0.4
+     },
+     {
+      "w": "fun",
+      "t": 144.3,
+      "d": 0.5
+     },
+     {
+      "w": "worksheets",
+      "t": 144.8,
+      "d": 0.66
+     },
+     {
+      "w": "on",
+      "t": 145.46,
+      "d": 0.32
+     },
+     {
+      "w": "our",
+      "t": 145.78,
+      "d": 0.24
+     },
+     {
+      "w": "website",
+      "t": 146.02,
+      "d": 0.52
+     },
+     {
+      "w": "or",
+      "t": 146.54,
+      "d": 0.38
+     },
+     {
+      "w": "app.",
+      "t": 146.92,
+      "d": 0.4
+     }
+    ]
+   },
+   {
+    "key": "o2",
+    "words": [
+     {
+      "w": "Bye",
+      "t": 147.32,
+      "d": 0.64
+     },
+     {
+      "w": "bye!",
+      "t": 147.96,
+      "d": 0.86
+     }
+    ]
+   }
+  ]
+ },
+ "script": [
+  [
+   "song"
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "The song",
+   "clip": "c1-meadow",
+   "shrink": {
+    "at": "@intro+1.2",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "Grade 1 Science",
+   "title": "Parts of a <span style=\"color:#3A7220\">plant</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "@intro+1.8",
+   "row": {
+    "props": [
+     "seedling",
+     "sunflower",
+     "potted-plant",
+     "tulip"
+    ],
+    "w": 110,
+    "at": "@intro+2.6",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "parts",
+   "chapter": "Parts of a plant",
+   "title": "Parts of a plant",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 620,
+     "x": 700,
+     "y": 455,
+     "at": "@parts+0.1",
+     "snd": {
+      "n": "whoosh",
+      "g": 0.2
+     },
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 1500,
+     "y": 860,
+     "at": "@parts",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "tag",
+     "text": "roots",
+     "x": 1220,
+     "y": 800,
+     "to": [
+      773,
+      781
+     ],
+     "at": "p1.roots",
+     "glow": [
+      "p1.roots",
+      "p2.power"
+     ],
+     "size": 60,
+     "snd": null
+    },
+    {
+     "k": "tag",
+     "text": "stem",
+     "x": 1220,
+     "y": 640,
+     "to": [
+      707,
+      586
+     ],
+     "at": "p1.stem",
+     "glow": [
+      "p1.stem",
+      "p2.power"
+     ],
+     "size": 60,
+     "snd": null
+    },
+    {
+     "k": "tag",
+     "text": "leaves",
+     "x": 1220,
+     "y": 470,
+     "to": [
+      847,
+      447
+     ],
+     "at": "p1.leaves",
+     "glow": [
+      "p1.leaves",
+      "p2.power"
+     ],
+     "size": 60,
+     "snd": null
+    },
+    {
+     "k": "tag",
+     "text": "flower",
+     "x": 1220,
+     "y": 220,
+     "to": [
+      773,
+      186
+     ],
+     "at": "p1.flower",
+     "glow": [
+      "p1.flower",
+      "p2.power"
+     ],
+     "size": 60,
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 820,
+    "s": 0.85
+   }
+  },
+  {
+   "type": "free",
+   "mark": "roots",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 600,
+     "x": 560,
+     "y": 480,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 300,
+     "c": "#FFD93B",
+     "x": 560,
+     "y": 780,
+     "at": "r1.roots",
+     "out": "@chorus1",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "r1.roots",
+     "out": "@chorus1",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Roots",
+     "x": 1380,
+     "y": 220,
+     "at": "r1.roots+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "@chorus1",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "r1.roots+0.3",
+     "out": "@chorus1",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">drink water</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "r1.roots+0.45",
+     "out": "@chorus1",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 521,
+     "y": 903,
+     "at": "r2.water+0.00",
+     "out": "@chorus1",
+     "still": true,
+     "moves": [
+      {
+       "at": "r2.water+0.00",
+       "d": 1.0,
+       "y": 823,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 560,
+     "y": 903,
+     "at": "r2.water+0.15",
+     "out": "@chorus1",
+     "still": true,
+     "moves": [
+      {
+       "at": "r2.water+0.15",
+       "d": 1.0,
+       "y": 823,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 599,
+     "y": 903,
+     "at": "r2.water+0.30",
+     "out": "@chorus1",
+     "still": true,
+     "moves": [
+      {
+       "at": "r2.water+0.30",
+       "d": 1.0,
+       "y": 823,
+       "ease": "eo"
+      }
+     ]
+    }
+   ],
+   "mascot": {
+    "x": 1720,
+    "y": 830,
+    "s": 0.7
+   }
+  },
+  {
+   "type": "free",
+   "mark": "chorus1",
+   "chapter": "Sing along",
+   "title": "♪ Sing along!",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 620,
+     "x": 760,
+     "y": 455,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 300,
+     "c": "#FFD93B",
+     "x": 760,
+     "y": 765,
+     "at": "c1a.roots",
+     "out": "c1a.stem",
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 170,
+     "c": "#FFD93B",
+     "x": 762,
+     "y": 504,
+     "at": "c1a.stem",
+     "out": "c1b",
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 230,
+     "c": "#FFD93B",
+     "x": 858,
+     "y": 455,
+     "at": "c1b.leaves",
+     "out": "c1c",
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 330,
+     "c": "#FFD93B",
+     "x": 767,
+     "y": 231,
+     "at": "c1c.flowers",
+     "out": "c1d",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Roots drink",
+     "x": 1380,
+     "y": 300,
+     "at": "c1a.roots",
+     "bg": "#8D5A2B",
+     "fg": "#fff",
+     "size": 56,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Stem holds",
+     "x": 1380,
+     "y": 410,
+     "at": "c1a.stem",
+     "bg": "#2F7F2C",
+     "fg": "#fff",
+     "size": 56,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Leaves catch the sun",
+     "x": 1380,
+     "y": 520,
+     "at": "c1b.leaves",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 56,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Flowers make seeds",
+     "x": 1380,
+     "y": 630,
+     "at": "c1c.flowers",
+     "bg": "#E08A00",
+     "fg": "#fff",
+     "size": 56,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 150,
+     "x": 1060,
+     "y": 190,
+     "at": "c1b.sun"
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 827,
+     "y": 191,
+     "at": "c1d.buzzing-0.4",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "card",
+     "html": "a little <span style=\"color:#1F7A4C\">factory!</span>",
+     "x": 1380,
+     "y": 780,
+     "at": "c1d.factory",
+     "size": 66,
+     "pad": "12px 40px 2px",
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 820,
+    "s": 0.9
+   },
+   "confetti": [
+    {
+     "at": "c1d.bees",
+     "x": 1380,
+     "y": 600,
+     "n": 60
+    }
+   ]
+  },
+  {
+   "type": "free",
+   "mark": "stem",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 600,
+     "x": 560,
+     "y": 480,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 170,
+     "c": "#FFD93B",
+     "x": 562,
+     "y": 527,
+     "at": "s1.stem",
+     "out": "s2.leaves",
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 230,
+     "c": "#FFD93B",
+     "x": 655,
+     "y": 480,
+     "at": "s2.leaves",
+     "out": "s2.flower",
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 330,
+     "c": "#FFD93B",
+     "x": 566,
+     "y": 263,
+     "at": "s2.flower",
+     "out": "@leaves",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 1200,
+     "y": 760,
+     "at": "@stem",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "s1.stem",
+     "out": "@leaves",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Stem",
+     "x": 1380,
+     "y": 220,
+     "at": "s1.stem+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "@leaves",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "potted-plant",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "s1.stem+0.3",
+     "out": "@leaves",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">carries water up</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "s1.stem+0.45",
+     "out": "@leaves",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 528,
+     "y": 796,
+     "at": "s1.carrying+0.0",
+     "out": "@leaves",
+     "still": true,
+     "moves": [
+      {
+       "at": "s1.carrying+0.00",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "s1.carrying+0.70",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 560,
+     "y": 796,
+     "at": "s1.carrying+0.2",
+     "out": "@leaves",
+     "still": true,
+     "moves": [
+      {
+       "at": "s1.carrying+0.35",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "s1.carrying+1.05",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 592,
+     "y": 796,
+     "at": "s1.carrying+0.4",
+     "out": "@leaves",
+     "still": true,
+     "moves": [
+      {
+       "at": "s1.carrying+0.70",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "s1.carrying+1.40",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    }
+   ],
+   "mascot": {
+    "x": 1720,
+    "y": 830,
+    "s": 0.7
+   }
+  },
+  {
+   "type": "free",
+   "mark": "leaves",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 600,
+     "x": 560,
+     "y": 480,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 230,
+     "c": "#FFD93B",
+     "x": 655,
+     "y": 480,
+     "at": "l1.leaves",
+     "out": "l2",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "l1.leaves",
+     "out": "l2",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Leaves",
+     "x": 1380,
+     "y": 220,
+     "at": "l1.leaves+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "l2",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "l1.leaves+0.3",
+     "out": "l2",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">make food</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "l1.leaves+0.45",
+     "out": "l2",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 170,
+     "x": 1028,
+     "y": -67,
+     "at": "l1.sunlight",
+     "moves": [
+      {
+       "at": "l1.sunlight",
+       "d": 0.8,
+       "x": 828,
+       "y": 173,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:820px;height:300px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 470,
+     "at": "l2.veggies-0.2",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "leafy-green",
+     "x": 1110,
+     "y": 470,
+     "at": "l2.veggies",
+     "bob": 8,
+     "fix": true,
+     "snd": null,
+     "w": 170
+    },
+    {
+     "k": "prop",
+     "p": "carrot",
+     "x": 1290,
+     "y": 470,
+     "at": "l2.veggies+0.2",
+     "bob": 8,
+     "fix": true,
+     "snd": null,
+     "w": 170
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 1470,
+     "y": 470,
+     "at": "l2.fruit",
+     "bob": 8,
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "red-apple",
+     "x": 1650,
+     "y": 470,
+     "at": "l2.fruit+0.2",
+     "bob": 8,
+     "fix": true,
+     "snd": null,
+     "w": 160
+    }
+   ],
+   "mascot": {
+    "x": 1720,
+    "y": 830,
+    "s": 0.7
+   }
+  },
+  {
+   "type": "free",
+   "mark": "dance",
+   "title": "♪ Dance with Takhti!",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 330,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 1590,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 960,
+     "y": 260,
+     "at": "@dance+0.3",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 170,
+     "x": 1640,
+     "y": 150,
+     "at": "@dance+0.2"
+    },
+    {
+     "k": "prop",
+     "p": "carrot",
+     "w": 130,
+     "x": 640,
+     "y": 880,
+     "at": "@dance+0.50",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "leafy-green",
+     "w": 130,
+     "x": 850,
+     "y": 880,
+     "at": "@dance+0.75",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "w": 130,
+     "x": 1060,
+     "y": 880,
+     "at": "@dance+1.00",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "red-apple",
+     "w": 130,
+     "x": 1270,
+     "y": 880,
+     "at": "@dance+1.25",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 960,
+    "y": 560,
+    "s": 1.15
+   },
+   "cam0": {
+    "x": 960,
+    "y": 540,
+    "s": 1
+   },
+   "cam": [
+    {
+     "at": "@dance+0.5",
+     "s": 1.06,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "cdlen": 5.5,
+   "opts": [
+    "flower",
+    "roots",
+    "fruit"
+   ],
+   "ans": "roots",
+   "ticks": false,
+   "tada": 0.3,
+   "ring": true,
+   "opty": 775,
+   "reveal_at": "a1.roots#0",
+   "opts_at": "q1$-0.2",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 400,
+     "at": "@q1+0.2",
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 170,
+     "c": "#FF7A45",
+     "x": 960,
+     "y": 565,
+     "at": "q1.under",
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1065.4,
+     "y": 505.5,
+     "at": "q1.under",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "cdlen": 0.8,
+   "opts": [
+    "stem",
+    "leaves",
+    "roots"
+   ],
+   "ans": "leaves",
+   "ticks": false,
+   "tada": 0.3,
+   "ring": false,
+   "opty": 775,
+   "reveal_at": "a2.leaves#0",
+   "opts_at": "q2$-0.2",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 400,
+     "at": "@q2+0.2",
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 140,
+     "c": "#FF7A45",
+     "x": 1012,
+     "y": 400,
+     "at": "q2.food",
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1098.8,
+     "y": 351.0,
+     "at": "q2.food",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "cdlen": 0.3,
+   "opts": [
+    "fruit",
+    "roots",
+    "stem"
+   ],
+   "ans": "stem",
+   "ticks": false,
+   "tada": 0.3,
+   "ring": false,
+   "opty": 775,
+   "reveal_at": "a3.stem",
+   "opts_at": "q3$-0.2",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 400,
+     "at": "@q3+0.2",
+     "still": true
+    },
+    {
+     "k": "ring",
+     "d": 110,
+     "c": "#FF7A45",
+     "x": 962,
+     "y": 426,
+     "at": "q3.holds",
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1030.2,
+     "y": 387.5,
+     "at": "q3.holds",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "type": "free",
+   "mark": "dance3",
+   "title": "Great job!",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 330,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 1590,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 960,
+     "y": 260,
+     "at": "@dance3+0.3",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 170,
+     "x": 1640,
+     "y": 150,
+     "at": "@dance3+0.2"
+    },
+    {
+     "k": "prop",
+     "p": "seedling",
+     "w": 130,
+     "x": 640,
+     "y": 880,
+     "at": "@dance3+0.50",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "sunflower",
+     "w": 130,
+     "x": 850,
+     "y": 880,
+     "at": "@dance3+0.75",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "tulip",
+     "w": 130,
+     "x": 1060,
+     "y": 880,
+     "at": "@dance3+1.00",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 960,
+    "y": 560,
+    "s": 1.15
+   },
+   "cam0": {
+    "x": 960,
+    "y": 540,
+    "s": 1
+   },
+   "cam": [
+    {
+     "at": "@dance3+0.5",
+     "s": 1.06,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "x": 1130,
+   "pops": {
+    "sel": ".n",
+    "ats": [
+     "rc1.roots",
+     "rc1.stem",
+     "rc2.leaves",
+     "rc2.flowers"
+    ]
+   },
+   "html": "<div class=\"big\" style=\"font-size:78px;line-height:1.25;text-align:left;white-space:nowrap\"><span class=\"n\"><span style=\"color:#8D5A2B\">Roots</span> drink.</span><br><span class=\"n\"><span style=\"color:#2F7F2C\">Stems</span> carry.</span><br><span class=\"n\"><span style=\"color:#1F7A4C\">Leaves</span> make food.</span><br><span class=\"n\"><span style=\"color:#E08A00\">Flowers</span> make seeds.</span></div>"
+  },
+  {
+   "type": "free",
+   "mark": "dance2",
+   "title": "Carrots, spinach, mangoes!",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 330,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 420,
+     "x": 1590,
+     "y": 560,
+     "snd": null,
+     "still": true
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 100,
+     "x": 960,
+     "y": 260,
+     "at": "@dance2+0.3",
+     "snd": null,
+     "still": true,
+     "loop": {
+      "rx": 170,
+      "ry": 70,
+      "period": 3.2,
+      "fig": true,
+      "tilt": 12
+     }
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 170,
+     "x": 1640,
+     "y": 150,
+     "at": "@dance2+0.2"
+    },
+    {
+     "k": "prop",
+     "p": "carrot",
+     "w": 130,
+     "x": 640,
+     "y": 880,
+     "at": "@dance2+0.50",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "leafy-green",
+     "w": 130,
+     "x": 850,
+     "y": 880,
+     "at": "@dance2+0.75",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "w": 130,
+     "x": 1060,
+     "y": 880,
+     "at": "@dance2+1.00",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 960,
+    "y": 560,
+    "s": 1.15
+   },
+   "cam0": {
+    "x": 960,
+    "y": 540,
+    "s": 1
+   },
+   "cam": [
+    {
+     "at": "@dance2+0.5",
+     "s": 1.06,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "mark": "end",
+   "app": true,
+   "app_at": "o1.app"
+  }
+ ]
+}

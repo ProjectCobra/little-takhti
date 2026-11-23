@@ -152,15 +152,21 @@ ${[0,1,2,3].map(i=>`<path d="M${3040+i*130} ${830+i%2*70} q30 -14 60 0" fill="no
 // ---------- mascot ----------
 function MASCOT(){return `<div style="position:relative;width:380px;height:420px"><img class="tki" src="${AS.tk_idle}" style="position:absolute;left:0;bottom:0;width:380px;filter:drop-shadow(0 14px 10px rgba(0,0,0,.22))"></div>`}
 function mascot(parent){const e=el(parent,MASCOT());e.q=s=>e.querySelector(s);return e}
-function talkingAt(t){for(const k in TL.lines){const l=TL.lines[k];if(l.speaker!=='T'||t<l.start||t>l.end)continue;for(const w of l.words){if(t>=w.t&&t<=w.t+Math.max(.12,Math.min(w.d,.5)))return Math.sin((t-w.t)*26)>-.1}}return false}
+function talkingAt(t){for(const k in TL.lines){const l=TL.lines[k];if((l.speaker!=='T'&&l.speaker!=='S')||t<l.start||t>l.end)continue;for(const w of l.words){if(t>=w.t&&t<=w.t+Math.max(.12,Math.min(w.d,.5)))return Math.sin((t-w.t)*26)>-.1}}return false}
 function poseMascot(e,t,o={}){
+ if(inChorus(t))o={...o,cheer:true};
  const talk=talkingAt(t);const img=e.q('.tki');
  const src=(o.cheer||o.wave)&&!talk?AS.tk_happy:(talk?AS.tk_talk:AS.tk_idle);
  if(img.getAttribute('src')!==src)img.setAttribute('src',src);
  const r=o.wave?Math.sin(t*7)*5:(o.cheer?Math.sin(t*10)*4:(talk?Math.sin(t*9)*1.5:0));
  img.style.transform=`rotate(${r}deg)`;img.style.transformOrigin='50% 100%';
 }
-function idleBob(t,ph=0){return Math.sin((t+ph)*3.2)*6}
+// in a song lesson Takhti bounces on the beat while the song plays, and cheers in the chorus
+const SONG=TL.song||null;
+function inChorus(t){return !!SONG&&SONG.chorus.some(c=>t>=c[0]&&t<c[1])}
+function beatBounce(t){if(!SONG||t<SONG.start||t>SONG.end||SONG.beats.length<2)return null;const b=SONG.beats;let i=0;while(i<b.length-2&&b[i+1]<=t)i++;
+ const ph=cl((t-b[i])/Math.max(.2,b[i+1]-b[i]));return -Math.pow(Math.sin(Math.PI*ph),2)*(inChorus(t)?22:12)}
+function idleBob(t,ph=0){const d=beatBounce(t);return d!==null?d:Math.sin((t+ph)*3.2)*6}
 // confetti
 const CFC=['#FFD93B','#1F7A4C','#FF7A45','#3B9BD6','#B45BD6','#FF5C8A'];
 function confetti(parent,n,seed){const r=rng(seed);const ps=[];for(let i=0;i<n;i++){const d=el(parent,'','cf');d.style.background=CFC[i%CFC.length];ps.push({d,a:r()*Math.PI*2,v:500+r()*900,vr:(r()-.5)*900,up:600+r()*700,ph:r()*6});}return ps}
@@ -431,7 +437,7 @@ bounds.forEach(b=>sfx(b-.3,'whoosh',.35));
 let lastKey=null;
 function capU(t){let cur=null;for(const k in TL.lines){const l=TL.lines[k];if(t>=l.start-.05&&t<=l.end+.35)cur=k}
  if(!cur){cap.style.display='none';lastKey=null;return}
- const l=TL.lines[cur];if(lastKey!==cur){cap.innerHTML=(l.speaker==='T'?`<img src="${LOGO}">`:'')+l.words.map(w=>`<span class="w">${w.w}</span>`).join(' ');lastKey=cur}
+ const l=TL.lines[cur];if(lastKey!==cur){cap.innerHTML=(l.speaker==='T'?`<img src="${LOGO}">`:l.speaker==='S'?'<span style="color:#FF7A45;margin-right:12px">♪</span>':'')+l.words.map(w=>`<span class="w">${w.w}</span>`).join(' ');lastKey=cur}
  const sp=cap.querySelectorAll('.w');l.words.forEach((w,i)=>{sp[i].className='w'+(t>=w.t?(t<w.t+Math.max(w.d,.25)?' on':' s'):'')});
  cap.style.display='block';const k=pop(t,l.start-.05,.3);cap.style.transform=`translateX(-50%) scale(${k})`}
 function wipeU(t){let b=null;for(const x of bounds)if(Math.abs(t-x)<.45)b=x;

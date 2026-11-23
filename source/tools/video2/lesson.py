@@ -39,7 +39,7 @@ G_VOICES = {'N': ('Sulafat', 'Read warmly and clearly, like a kind teacher telli
 G_LOG = []
 VOICES = {'N': ('en-GB-SoniaNeural', '-6%', '+0Hz'), 'T': ('en-GB-MaisieNeural', '-4%', '+0Hz')}
 VOICE_FALLBACK = {'T': ('en-GB-SoniaNeural', '-4%', '+30Hz')}
-OUT = TMP = None
+OUT = TMP = SPEC = None
 
 
 # ---------------- speech ----------------
@@ -200,10 +200,22 @@ def even(toks, dur):
     return out
 
 
-def build_timeline(script):
-    clock = 0.0; lines = {}; marks = {}; voice = []
+def build_timeline(script, song=None):
+    clock = 0.0; lines = {}; marks = {}; voice = []; extra = {}
     for ev in script:
         if ev[0] == 'mark': marks[ev[1]] = round(clock, 3)
+        elif ev[0] == 'song':
+            # a sung track: its lyric lines (speaker S) and marks come from the spec, timed to the recording
+            c = clock
+            for k, t in song.get('marks', {}).items(): marks[k] = round(c + t, 3)
+            for ln in song['lines']:
+                ws = [{'w': w['w'], 't': round(c + w['t'], 3), 'd': round(w['d'], 3)} for w in ln['words']]
+                lines[ln['key']] = {'speaker': 'S', 'text': ' '.join(w['w'] for w in ws), 'start': ws[0]['t'],
+                                    'end': round(ws[-1]['t'] + ws[-1]['d'], 3), 'words': ws}
+            extra['song'] = {'start': round(c, 3), 'end': round(c + song['duration'], 3),
+                             'beats': [round(c + b, 3) for b in song.get('beats', [])],
+                             'chorus': [[round(c + a, 3), round(c + b, 3)] for a, b in song.get('chorus', [])]}
+            clock += song['duration']
         elif ev[0] == 'wait': clock += ev[1]
         elif ev[0] == 'say':
             _, spk, key, text = ev
@@ -213,7 +225,7 @@ def build_timeline(script):
                           'words': [{'w': w['w'], 't': round(clock + w['t'], 3), 'd': round(w['d'], 3)} for w in words]}
             if a is not None: voice.append((clock, a))
             clock += dur + 0.3
-    return {'lines': lines, 'marks': marks, 'total': round(clock, 3)}, voice
+    return {'lines': lines, 'marks': marks, 'total': round(clock, 3), **extra}, voice
 
 
 # ---------------- sound ----------------
@@ -306,6 +318,14 @@ def mix_audio(tl, voice, sfxs, countdowns):
     for st, a in voice:
         i = int(st * SR); j = min(n, i + len(a)); vt[i:j] += a[:j - i]
     if vt.max() > 0: vt *= 0.9 / np.abs(vt).max()
+    song = None
+    if tl.get('song'):
+        import urllib.request
+        f = TMP / 'song.m4a'
+        if not f.exists(): urllib.request.urlretrieve(SPEC['song']['url'], f)
+        g = decode(f); g = g / max(1e-6, np.abs(g).max()) * 0.9
+        song = np.zeros(n); i = int(tl['song']['start'] * SR); j = min(n, i + len(g)); song[i:j] = g[:j - i]
+        G_LOG.append(f'song ok {len(g)/SR:.1f}s')
     mu = None
     mt = HERE / 'music.txt'
     if mt.exists():
@@ -328,9 +348,16 @@ def mix_audio(tl, voice, sfxs, countdowns):
     if 'end' in tl['marks']:
         e = int(tl['marks']['end'] * SR); gain[e:] *= 1.15
     fo = int(1.5 * SR); gain[-fo:] *= np.linspace(1, 0, fo)
+    if song is not None:
+        # no music bed while the song plays; a soft bed fades in after it (quiz and end card)
+        e = int(tl['song']['end'] * SR); fi = int(2.0 * SR)
+        gain[:e] = 0; gain[e:e + fi] *= np.linspace(0, 1, len(gain[e:e + fi]))
+        gain *= 0.6
     out = vt + mu * gain * 0.55
+    if song is not None: out = out + song
     st = np.zeros(n)
     for t0, name, g, p in sfxs:
+        if tl.get('song') and tl['song']['start'] <= t0 < tl['song']['end']: g *= 0.3
         s = sfx_sound(name, p); i = int(t0 * SR)
         if i < 0 or i >= n: continue
         j = min(n, i + len(s)); st[i:j] += s[:j - i] * g
@@ -379,7 +406,7 @@ def clip_frames(tl, spec):
     marks = sorted(tl['marks'].values())
     t0 = tl['marks'][intro['mark']]
     dur = min([m for m in marks if m > t0] + [tl['total']]) - t0
-    d = TMP / 'c1'; d.mkdir(parents=True, exist_ok=True)
+    d = TMP / f"clip-{intro['clip']}"; d.mkdir(parents=True, exist_ok=True)
     cd = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(src)], capture_output=True, text=True).stdout.strip())
     k = dur / cd
     if not list(d.glob('*.jpg')):
@@ -453,7 +480,9 @@ def main():
     OUT = Path(args[args.index('--out') + 1]) if '--out' in args else HERE / 'out' / lid
     TMP = OUT / 'tmp'
     OUT.mkdir(parents=True, exist_ok=True); TMP.mkdir(parents=True, exist_ok=True)
-    tl, voice = build_timeline(spec['script'])
+    global SPEC
+    SPEC = spec
+    tl, voice = build_timeline(spec['script'], spec.get('song'))
     (TMP / 'timeline.json').write_text(json.dumps(tl, indent=1))
     clip_frames(tl, spec)
     html = TMP / 'stage.html'; html.write_text(page_html(tl, spec))

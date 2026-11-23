@@ -43,7 +43,7 @@ jobs:
           git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
           for i in 1 2 3 4 5; do
             git fetch -q origin videos && git checkout -q -B videos origin/videos
-            mkdir -p "lessons/$ID" && if [ -n "$(grep -l '^segments:' source/video/songs/$ID.txt 2>/dev/null)" ]; then cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/transcript-segments.json"; else cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/"; fi
+            mkdir -p "lessons/$ID" && if grep -q '"segments"' "/tmp/prep/$ID/transcript.json"; then cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/transcript-segments.json"; else cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/"; fi
             git add lessons && git commit -qm "Song transcript: $ID" && git push -q origin videos && break
             git reset -q --hard origin/videos; sleep 7
           done

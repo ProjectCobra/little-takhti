@@ -39,7 +39,7 @@
    "say",
    "T",
    "today",
-   "Today we are taking away. Some go away, and we count what is left!"
+   "Today we are taking away, and counting what is left!"
   ],
   [
    "wait",
@@ -119,7 +119,7 @@
   ],
   [
    "wait",
-   0.6
+   0.4
   ],
   [
    "say",
@@ -162,18 +162,8 @@
   [
    "say",
    "N",
-   "cross1",
-   "On a worksheet, we cross out the ones that go."
-  ],
-  [
-   "wait",
-   0.3
-  ],
-  [
-   "say",
-   "N",
    "seven",
-   "Here are seven mangoes. Cross out three."
+   "Seven mangoes. Three go, so we cross out three."
   ],
   [
    "wait",
@@ -797,7 +787,7 @@
      "html": "<div style=\"width:1100px;height:300px;background:#fff;border:6px solid #123B28;border-bottom-width:16px;border-radius:40px\"></div>",
      "x": 960,
      "y": 430,
-     "at": "cross1+0.2"
+     "at": "@cross+0.3"
     },
     {
      "k": "prop",
@@ -850,7 +840,7 @@
      "y": 430,
      "at": "seven.seven+0.40",
      "wob": 4,
-     "cross": "seven.three+0.00",
+     "cross": "seven.three#-1+0.00",
      "crossS": 0.9
     },
     {
@@ -860,7 +850,7 @@
      "y": 430,
      "at": "seven.seven+0.50",
      "wob": 4,
-     "cross": "seven.three+0.30",
+     "cross": "seven.three#-1+0.30",
      "crossS": 0.9
     },
     {
@@ -870,7 +860,7 @@
      "y": 430,
      "at": "seven.seven+0.60",
      "wob": 4,
-     "cross": "seven.three+0.60",
+     "cross": "seven.three#-1+0.60",
      "crossS": 0.9
     },
     {

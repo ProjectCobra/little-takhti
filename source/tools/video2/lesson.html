@@ -23,15 +23,15 @@ body{width:1920px;height:1080px;overflow:hidden;font-family:'lexend',sans-serif;
 .vb{color:#1D5FD1}.av{color:#1F7A4C}
 /* ---------- glow theme (Little GlowBerry look) ---------- */
 body.glow{background:#2a1a3a}
-body.glow .card{background:rgba(255,255,255,.80);border:3px solid rgba(255,255,255,.95);border-bottom-width:3px;box-shadow:0 0 0 6px rgba(255,236,170,.28),0 0 44px rgba(255,214,120,.55),0 18px 36px rgba(60,20,80,.28);backdrop-filter:blur(10px)}
+body.glow .card{background:rgba(255,255,255,.93);border:3px solid rgba(255,255,255,.95);border-bottom-width:3px;box-shadow:0 0 0 6px rgba(255,236,170,.28),0 0 44px rgba(255,214,120,.55),0 18px 36px rgba(60,20,80,.28);backdrop-filter:blur(10px)}
 body.glow .chip{background:linear-gradient(180deg,#FFE680,#FFC93B);color:#123B28;box-shadow:0 0 26px rgba(255,210,90,.75),0 8px 16px rgba(60,20,80,.25),inset 0 3px 0 rgba(255,255,255,.6)}
 body.glow .tag{background:rgba(255,255,255,.86);border:3px solid rgba(255,255,255,.95);box-shadow:0 0 30px rgba(255,214,120,.6),0 10px 20px rgba(60,20,80,.25)}
-body.glow #cap{background:rgba(255,255,255,.84);border:3px solid rgba(255,255,255,.95);box-shadow:0 0 40px rgba(255,214,120,.55),0 14px 30px rgba(60,20,80,.3);backdrop-filter:blur(10px)}
+body.glow #cap{background:rgba(255,255,255,.92);border:3px solid rgba(255,255,255,.95);box-shadow:0 0 40px rgba(255,214,120,.55),0 14px 30px rgba(60,20,80,.3);backdrop-filter:blur(10px)}
 body.glow #cap .w{color:#7d8f86}
 body.glow #wipe{background:linear-gradient(90deg,#FFD93B,#FFB4D8)}
 body.glow #wipe2{background:linear-gradient(90deg,#B98CFF,#FF8FC7)}
 body.glow .qi{text-shadow:0 0 30px rgba(255,255,255,.95),0 0 60px rgba(255,214,120,.8)}
-body.glow .glass{background:rgba(255,255,255,.78)!important;border:3px solid rgba(255,255,255,.95)!important;box-shadow:0 0 0 8px rgba(255,236,170,.22),0 0 60px rgba(255,214,120,.5),0 24px 44px rgba(60,20,80,.28);backdrop-filter:blur(12px)}
+body.glow .glass{background:rgba(255,253,246,.94)!important;border:3px solid rgba(255,255,255,.95)!important;box-shadow:0 0 0 8px rgba(255,236,170,.22),0 0 60px rgba(255,214,120,.5),0 24px 44px rgba(60,20,80,.28);backdrop-filter:blur(12px)}
 .glowprop{filter:drop-shadow(0 10px 10px rgba(60,20,80,.28)) drop-shadow(0 0 18px rgba(255,226,140,.55))}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -81,8 +81,8 @@ const PILOT={
  qmark:()=>`<div class="big" style="width:120px;height:120px;border-radius:50%;border:6px dashed #FF7A45;color:#FF7A45;font-size:80px;text-align:center;line-height:130px">?</div>`,
 };
 const TINT={mango2:'hue-rotate(-18deg) saturate(1.25) ',kite2:'hue-rotate(170deg) ',counter_g:'hue-rotate(75deg) saturate(1.3) brightness(.9) '};
-const GSCALE={carrot:.55,droplet:.8};
-const GMAP={sun:'g_sun',droplet:'g_water',honeybee:'g_bee',carrot:'g_carrot','leafy-green':'g_spinach',mango:'g_mango',kite:null};
+const GSCALE={carrot:.55,droplet:.8,'potted-plant':.8,sunflower:.9,seedling:.7};
+const GMAP={'potted-plant':'g_plant',sunflower:'g_plant',seedling:'g_plant',sun:'g_sun',droplet:'g_water',honeybee:'g_bee',carrot:'g_carrot','leafy-green':'g_spinach',mango:'g_mango',kite:null};
 function PROP(name,w){
  if(GLOW){
   if(name==='art:plant'){w=w||760;return `<img class="gplant glowprop" src="${AS.g_plant}" style="width:${w}px;height:${Math.round(w*1000/760)}px;display:block;transform-origin:50% 62%">`}
@@ -484,7 +484,7 @@ SCN.recap=(r,t0,s)=>{
  const ns=[...card.querySelectorAll(s.pops?s.pops.sel:'.n')];const m=mascot(r);const pt=s.pops&&s.pops.at!=null?T(s.pops.at):0,ps=s.pops?s.pops.step:.35;
  const pts=s.pops&&s.pops.ats?s.pops.ats.map(T):ns.map((_,i)=>pt+i*ps);
  ns.forEach((_,i)=>sfx(pts[i],'ding',.35,1.12+i*.12));sfx(t0+.1,'whoosh',.4);
- return t=>{P(card,s.x||1080,s.y||470,pop(t,t0+.15,.5));ns.forEach((n,i)=>{const k=pop(t,pts[i],.35);n.style.transform=`scale(${k})`;n.style.display='inline-block'});P(m,s.mx||220,800+idleBob(t),.95,0,1);poseMascot(m,t,{point:true})}};
+ return t=>{P(card,s.x||1080,s.y||470,pop(t,t0+.15,.5));ns.forEach((n,i)=>{const k=pop(t,pts[i],.35);if(GLOW){n.style.transform=`scale(${.92+.08*k})`;n.style.opacity=t<pts[i]?.25:1}else n.style.transform=`scale(${k})`;n.style.display='inline-block'});P(m,s.mx||220,800+idleBob(t),.95,0,1);poseMascot(m,t,{point:true})}};
 
 // END CARD
 SCN.end=(r,t0,s)=>{

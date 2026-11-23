@@ -1628,7 +1628,7 @@
      "text": "Roots",
      "x": 1380,
      "y": 220,
-     "at": "r1.roots+0.15",
+     "at": "r1.roots+0.03",
      "bg": "#123B28",
      "fg": "#FFD93B",
      "size": 64,
@@ -1641,7 +1641,7 @@
      "w": 220,
      "x": 1380,
      "y": 430,
-     "at": "r1.roots+0.3",
+     "at": "r1.roots+0.06",
      "out": "@chorus1",
      "bob": 8,
      "fix": true
@@ -1651,7 +1651,7 @@
      "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">drink water</div>",
      "x": 1380,
      "y": 610,
-     "at": "r1.roots+0.45",
+     "at": "r1.roots+0.09",
      "out": "@chorus1",
      "fix": true,
      "snd": null
@@ -1942,7 +1942,7 @@
      "text": "Stem",
      "x": 1380,
      "y": 220,
-     "at": "s1.stem+0.15",
+     "at": "s1.stem+0.03",
      "bg": "#123B28",
      "fg": "#FFD93B",
      "size": 64,
@@ -1955,7 +1955,7 @@
      "w": 220,
      "x": 1380,
      "y": 430,
-     "at": "s1.stem+0.3",
+     "at": "s1.stem+0.06",
      "out": "@leaves",
      "bob": 8,
      "fix": true
@@ -1965,7 +1965,7 @@
      "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">carries water up</div>",
      "x": 1380,
      "y": 610,
-     "at": "s1.stem+0.45",
+     "at": "s1.stem+0.09",
      "out": "@leaves",
      "fix": true,
      "snd": null
@@ -2093,7 +2093,7 @@
      "text": "Leaves",
      "x": 1380,
      "y": 220,
-     "at": "l1.leaves+0.15",
+     "at": "l1.leaves+0.03",
      "bg": "#123B28",
      "fg": "#FFD93B",
      "size": 64,
@@ -2106,7 +2106,7 @@
      "w": 220,
      "x": 1380,
      "y": 430,
-     "at": "l1.leaves+0.3",
+     "at": "l1.leaves+0.06",
      "out": "l2",
      "bob": 8,
      "fix": true
@@ -2116,7 +2116,7 @@
      "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">make food</div>",
      "x": 1380,
      "y": 610,
-     "at": "l1.leaves+0.45",
+     "at": "l1.leaves+0.09",
      "out": "l2",
      "fix": true,
      "snd": null
@@ -2150,45 +2150,35 @@
     {
      "k": "prop",
      "p": "leafy-green",
-     "x": 1110,
+     "x": 1150,
      "y": 470,
      "at": "l2.veggies",
      "bob": 8,
      "fix": true,
      "snd": null,
-     "w": 170
+     "w": 200
     },
     {
      "k": "prop",
      "p": "carrot",
-     "x": 1290,
+     "x": 1380,
      "y": 470,
      "at": "l2.veggies+0.2",
      "bob": 8,
      "fix": true,
      "snd": null,
-     "w": 170
+     "w": 220
     },
     {
      "k": "prop",
      "p": "mango",
-     "x": 1470,
+     "x": 1610,
      "y": 470,
      "at": "l2.fruit",
      "bob": 8,
      "fix": true,
-     "snd": null
-    },
-    {
-     "k": "prop",
-     "p": "red-apple",
-     "x": 1650,
-     "y": 470,
-     "at": "l2.fruit+0.2",
-     "bob": 8,
-     "fix": true,
      "snd": null,
-     "w": 160
+     "w": 190
     }
    ],
    "mascot": {
@@ -2281,7 +2271,7 @@
     },
     {
      "k": "prop",
-     "p": "red-apple",
+     "p": "droplet",
      "w": 130,
      "x": 1270,
      "y": 880,
@@ -2509,7 +2499,7 @@
     },
     {
      "k": "prop",
-     "p": "seedling",
+     "p": "honeybee",
      "w": 130,
      "x": 640,
      "y": 880,
@@ -2520,7 +2510,7 @@
     },
     {
      "k": "prop",
-     "p": "sunflower",
+     "p": "sun",
      "w": 130,
      "x": 850,
      "y": 880,
@@ -2531,11 +2521,22 @@
     },
     {
      "k": "prop",
-     "p": "tulip",
+     "p": "sunflower",
      "w": 130,
      "x": 1060,
      "y": 880,
      "at": "@dance3+1.00",
+     "bob": 14,
+     "wob": 8,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 130,
+     "x": 1270,
+     "y": 880,
+     "at": "@dance3+1.25",
      "bob": 14,
      "wob": 8,
      "snd": null

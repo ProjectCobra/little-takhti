@@ -39,9 +39,10 @@ if(NATIVE){
    const h=curHash();
    if(h==='home'){A.exitApp();return}
    if(e&&e.canGoBack)history.back();else location.hash='home'});
-  A.addListener('appStateChange',s=>{if(s&&!s.isActive)lockNow()});
+  // lock again if the app was in the background for more than 2 minutes (printing or sharing is shorter)
+  let away=0;A.addListener('appStateChange',s=>{if(!s)return;if(!s.isActive)away=Date.now();else if(away&&Date.now()-away>120000)lockNow()});
  }
-}else document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')lockNow()});
+}else{let away=0;document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')away=Date.now();else if(away&&Date.now()-away>120000)lockNow()})}
 document.documentElement.classList.add(NATIVE?'app-native':'app-web');
 
 /* close the top-most overlay; true if something was closed */

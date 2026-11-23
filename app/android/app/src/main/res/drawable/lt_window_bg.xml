@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shows behind the system bars when Android draws the app edge to edge (Android 15+): brand green. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><color android:color="@color/ltGreen" /></item>
+</layer-list>

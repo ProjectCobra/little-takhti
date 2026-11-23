@@ -25,6 +25,7 @@ jobs:
           npx cap sync android
       - name: Build debug APK
         working-directory: app/android
+        env: { LT_VERSION_CODE: '${{ github.run_number }}' }
         run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon -q
       - name: Save APK to apps branch
         run: |
@@ -33,5 +34,5 @@ jobs:
           git fetch origin apps || true
           if git show-ref --verify --quiet refs/remotes/origin/apps; then git checkout -B apps origin/apps; else git checkout --orphan apps && git rm -rf -q . ; fi
           mkdir -p android && cp /tmp/little-takhti.apk android/little-takhti-test.apk
-          echo "Built $(date -u +%F' '%H:%M) UTC from ${GITHUB_SHA::7}" > android/BUILD.txt
+          echo "Little Takhti $(node -p "require('./app/package.json').version" 2>/dev/null || echo app) test build ${{ github.run_number }}, built $(date -u +%F' '%H:%M) UTC from ${GITHUB_SHA::7}" > android/BUILD.txt
           git add android && git commit -qm "Android test build ${GITHUB_SHA::7}" && git push -f origin apps

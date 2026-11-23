@@ -7,8 +7,9 @@ android {
         applicationId "app.littletakhti"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // versionCode comes from the GitHub Actions run number (LT_VERSION_CODE); 1 for local builds
+        versionCode Integer.parseInt(System.getenv("LT_VERSION_CODE") ?: "1")
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +17,22 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // Release signing: the upload keystore is never in the repo. The release workflow decodes it
+    // from the ANDROID_KEYSTORE_BASE64 secret and passes the path and passwords as environment variables.
+    signingConfigs {
+        release {
+            def ks = System.getenv("LT_KEYSTORE_FILE")
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv("LT_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("LT_KEY_ALIAS")
+                keyPassword System.getenv("LT_KEY_PASSWORD")
+            }
+        }
+    }
     buildTypes {
         release {
+            if (System.getenv("LT_KEYSTORE_FILE")) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

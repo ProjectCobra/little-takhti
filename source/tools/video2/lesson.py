@@ -383,6 +383,17 @@ def assets(spec):
     out = {}
     for f in sorted((HERE / 'assets').glob('*.webp')):
         out[f.stem.replace('-', '_')] = 'data:image/webp;base64,' + base64.b64encode(f.read_bytes()).decode()
+    if spec.get('theme') == 'glow':
+        # Little GlowBerry look: Canva AI cutouts, trimmed to their visible pixels (faint alpha noise ignored)
+        from PIL import Image
+        import io
+        for f in sorted((HERE / 'assets' / 'glow').glob('*.webp')):
+            im = Image.open(f)
+            if im.mode == 'RGBA':
+                a = np.asarray(im)[:, :, 3]; ys, xs = np.where(a > 40)
+                im = im.crop((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1))
+            b = io.BytesIO(); im.save(b, 'WEBP', quality=90)
+            out['g_' + f.stem.replace('-', '_')] = 'data:image/webp;base64,' + base64.b64encode(b.getvalue()).decode()
     # Fluent Emoji pictures from the site (source/img), only the ones the spec names
     used = set()
     def walk(x):

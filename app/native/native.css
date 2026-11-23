@@ -106,3 +106,6 @@ body.ltn-noscroll{overflow:hidden}
 #ltn-toast.on{opacity:1;transform:translate(-50%,0)}
 #ltn-toast.lt-lift{bottom:calc(96px + env(safe-area-inset-bottom,0px))!important}
 @media (min-width:768px){#ltn-toast,#ltn-toast.lt-lift{bottom:calc(120px + env(safe-area-inset-bottom,0px))!important}}
+/* quizzes: no tab bar or footer on any size, so little fingers stay in the game */
+html.app body.inquiz .tabbar,html.app body.inquiz footer{display:none!important}
+@media (min-width:768px){html.app body.inquiz{padding-bottom:20px}}

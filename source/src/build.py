@@ -53,6 +53,8 @@ if '--static' in sys.argv:
   open(os.path.join(out,'index.html'),'w').write(doc)
   shutil.copytree(os.path.join(D,'..','pdf'),os.path.join(out,'pdf'))
   shutil.copytree(os.path.join(D,'..','img'),os.path.join(out,'img'))
+  apv=os.path.join(D,'..','..','app','store','privacy-policy.html')   # Play Store privacy policy URL for the app
+  os.path.exists(apv) and shutil.copy(apv,os.path.join(out,'app-privacy.html'))
   open(os.path.join(out,'ads.txt'),'w').write('google.com, pub-7392407974381857, DIRECT, f08c47fec0942fa0\n')
   open(os.path.join(out,'_headers'),'w').write('/pdf/*\n  Content-Disposition: attachment\n  Cache-Control: public, max-age=604800\n')
   print('static build ->',os.path.abspath(out))

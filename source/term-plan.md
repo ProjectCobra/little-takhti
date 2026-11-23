@@ -118,3 +118,4 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 ## Status
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).
 - 21 Nov 2026 (later run): the Saturday Classroom task is paused, so weekly mode now also keeps Grade 1 Maths, Science, Social Studies and Urdu two weeks ahead with the fallback topics. Switching this task to weekly still needs Sumbul.
+- 23 Nov 2026: Sumbul moved the content builder to weekly, Fridays at 14:49 Pakistan time.

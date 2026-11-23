@@ -1,7 +1,11 @@
 name: Video song prep
 # Downloads a sung track, transcribes it with word times (faster-whisper, demucs vocals) and finds the beat.
 # Saves lessons/<id>/transcript.json to the videos branch for writing the song lesson spec.
+# Push a file source/video/songs/<id>.txt holding the song URL, or run by hand.
 on:
+  push:
+    branches: [dev]
+    paths: ['source/video/songs/*.txt']
   workflow_dispatch:
     inputs:
       id: { description: 'Lesson id, e.g. science-t12-song', required: true }
@@ -13,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
       - name: Tools
@@ -23,11 +26,18 @@ jobs:
           pip install -q faster-whisper librosa soundfile numpy
           pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
           pip install -q demucs
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
       - name: Transcribe
         env: { URL: '${{ github.event.inputs.url }}', ID: '${{ github.event.inputs.id }}' }
-        run: python3 source/tools/video2/song_prep.py "$URL" "/tmp/prep/$ID"
+        run: |
+          if [ -z "$ID" ]; then
+            f=$(git diff --name-only HEAD~1 HEAD | grep -E '^source/video/songs/[^/]+\.txt$' | head -1)
+            ID=$(basename "$f" .txt); URL=$(grep -v '^#' "$f" | head -1 | tr -d '[:space:]')
+          fi
+          echo "ID=$ID" >> "$GITHUB_ENV"
+          python3 source/tools/video2/song_prep.py "$URL" "/tmp/prep/$ID"
       - name: Save to videos branch
-        env: { ID: '${{ github.event.inputs.id }}' }
         run: |
           git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
           for i in 1 2 3 4 5; do

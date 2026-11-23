@@ -1,0 +1,53 @@
+{
+ "id": "science-t12-song",
+ "title": "Parts of a Plant Song | Grade 1 Science for Kids | Little Takhti",
+ "description": "Sing along with Takhti! A song about the parts of a plant: roots, stem, leaves and flowers, the parts we eat, and what plants need to grow. Then try a quick quiz. For Grade 1 children (ages 6 to 7).\n\nFree printable worksheets, quizzes and games for this topic: https://littletakhti.netlify.app/class-1-science-parts-of-a-plant-worksheets/\n\nChapters\n0:00 The song\n2:02 Quiz\n2:47 Remember\n\nLittle Takhti makes free learning for children in Pakistan, Nursery to Grade 3. https://littletakhti.netlify.app",
+ "tags": [
+  "parts of a plant song",
+  "plant song for kids",
+  "science songs for kids",
+  "grade 1 science",
+  "roots stem leaves flower",
+  "sing along",
+  "Little Takhti",
+  "kids learning",
+  "Grade 1 Science",
+  "Parts of a plant",
+  "Pakistan",
+  "learning video for kids"
+ ],
+ "madeForKids": true,
+ "language": "en",
+ "categoryId": "27",
+ "duration": 183.872,
+ "chapters": [
+  [
+   "0:00",
+   "The song"
+  ],
+  [
+   "2:02",
+   "Quiz"
+  ],
+  [
+   "2:47",
+   "Remember"
+  ]
+ ],
+ "gemini_log": [
+  "models/gemini-3.8-flash-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "models/gemini-3.8-flash-lite-tts:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "models/gemini-3.1-flash-tts-preview:generateContent: HTTP Error 403: Forbidden {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting",
+  "tts fallback turn: tts failed: HTTP Error 403: Forbidden",
+  "tts fallback q1: gemini tts off",
+  "tts fallback a1: gemini tts off",
+  "tts fallback q2: gemini tts off",
+  "tts fallback a2: gemini tts off",
+  "tts fallback q3: gemini tts off",
+  "tts fallback a3: gemini tts off",
+  "tts fallback tip: gemini tts off",
+  "tts fallback bye: gemini tts off",
+  "song ok 122.5s",
+  "flow music ok 176.6s"
+ ]
+}

@@ -7,6 +7,14 @@ import json, subprocess, sys, urllib.request
 from pathlib import Path
 
 url, out = sys.argv[1], Path(sys.argv[2])
+# optional lines in the song file (SONGFILE): "segments: 12-31, 123-130" re-transcribes only those windows,
+# guided by "prompt: <known lyrics>" (for verses whisper skipped on the full pass)
+import os
+SEGS, PROMPT = [], ''
+if os.environ.get('SONGFILE'):
+    for ln in Path(os.environ['SONGFILE']).read_text().splitlines():
+        if ln.startswith('segments:'): SEGS = [tuple(float(x) for x in p.split('-')) for p in ln[9:].split(',') if p.strip()]
+        if ln.startswith('prompt:'): PROMPT = ln[7:].strip()
 out.mkdir(parents=True, exist_ok=True)
 src = out / 'song.m4a'
 urllib.request.urlretrieve(url, src)
@@ -24,6 +32,22 @@ res['onsets'] = [round(float(t), 3) for t in on]
 S = np.abs(librosa.stft(y, n_fft=2048, hop_length=2205)); f = librosa.fft_frequencies(sr=sr, n_fft=2048)
 res['hi_db_per_100ms'] = [round(float(20 * np.log10(v + 1e-9)), 1) for v in S[f > 3000].mean(0)]
 res['rms_db_per_100ms'] = [round(float(20 * np.log10(v + 1e-9)), 1) for v in rms]
+
+if SEGS:
+    from faster_whisper import WhisperModel
+    model = WhisperModel('medium.en', device='cpu', compute_type='int8')
+    res['segments'] = []
+    for a, b in SEGS:
+        seg = out / f'seg_{a}.wav'
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(a), '-t', str(b - a), '-i', str(wav), str(seg)], check=True)
+        for vad in (False, True):
+            segs, _ = model.transcribe(str(seg), language='en', word_timestamps=True, vad_filter=vad, beam_size=5,
+                                       initial_prompt=PROMPT or None, condition_on_previous_text=False)
+            ws = [{'w': w.word.strip(), 's': round(a + w.start, 2), 'e': round(a + w.end, 2), 'p': round(w.probability, 2)} for sg in segs for w in (sg.words or [])]
+            res['segments'].append({'from': a, 'to': b, 'vad': vad, 'words': ws})
+            print(a, b, vad, ' '.join(w['w'] for w in ws))
+    (out / 'transcript.json').write_text(json.dumps(res, indent=1))
+    sys.exit(0)
 
 vocals = None
 try:

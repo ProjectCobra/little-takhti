@@ -1,2 +1,4 @@
 # It's Learning Time! (Extended Quiz Edition), Google Flow Music (3:01), three quiz breaks
 https://storage.googleapis.com/producer-app-public/clips/070538b6-5579-4bb2-bc73-fca361457caa.m4a
+segments: 12-31, 122-130, 150-158
+prompt: Down, down, down under the ground, the roots drink water all around. They hold on tight so the plant won't fall. The stem grows tall, it holds the plant, it carries water to every leaf. Roots drink, stem holds, leaves catch the sun, the flowers glow! Roots! The roots grow under the ground! The stem! The stem holds the plant up tall!

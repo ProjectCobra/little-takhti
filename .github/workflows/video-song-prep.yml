@@ -36,13 +36,14 @@ jobs:
             ID=$(basename "$f" .txt); URL=$(grep -v '^#' "$f" | head -1 | tr -d '[:space:]')
           fi
           echo "ID=$ID" >> "$GITHUB_ENV"
+          [ -n "$f" ] && export SONGFILE="$f"
           python3 source/tools/video2/song_prep.py "$URL" "/tmp/prep/$ID"
       - name: Save to videos branch
         run: |
           git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
           for i in 1 2 3 4 5; do
             git fetch -q origin videos && git checkout -q -B videos origin/videos
-            mkdir -p "lessons/$ID" && cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/"
+            mkdir -p "lessons/$ID" && if [ -n "$(grep -l '^segments:' source/video/songs/$ID.txt 2>/dev/null)" ]; then cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/transcript-segments.json"; else cp "/tmp/prep/$ID/transcript.json" "lessons/$ID/"; fi
             git add lessons && git commit -qm "Song transcript: $ID" && git push -q origin videos && break
             git reset -q --hard origin/videos; sleep 7
           done

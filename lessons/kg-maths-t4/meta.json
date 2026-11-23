@@ -1,0 +1,67 @@
+{
+ "id": "kg-maths-t4",
+ "title": "Adding to 10 | KG Maths for Kids | Little Takhti",
+ "description": "Learn to add up to 10 with mangoes, a number line hop and a ten frame, then try a quick quiz with Takhti.\n\nFree printable worksheets, quizzes and games for this topic: https://littletakhti.netlify.app/kg-maths-adding-to-10-worksheets/\n\nChapters\n0:00 Mangoes in a basket\n0:32 Number line\n0:47 Make 10\n1:02 Quiz\n1:53 Remember\n\nLittle Takhti makes free learning for children in Pakistan, Nursery to Grade 3. https://littletakhti.netlify.app",
+ "tags": [
+  "adding to 10",
+  "addition for kids",
+  "KG maths",
+  "ten frame",
+  "number line",
+  "counting on",
+  "Little Takhti",
+  "kids learning",
+  "KG Maths",
+  "Adding to 10",
+  "Pakistan",
+  "learning video for kids"
+ ],
+ "madeForKids": true,
+ "language": "en",
+ "categoryId": "27",
+ "duration": 129.041,
+ "chapters": [
+  [
+   "0:00",
+   "Mangoes in a basket"
+  ],
+  [
+   "0:32",
+   "Number line"
+  ],
+  [
+   "0:47",
+   "Make 10"
+  ],
+  [
+   "1:02",
+   "Quiz"
+  ],
+  [
+   "1:53",
+   "Remember"
+  ]
+ ],
+ "gemini_log": [
+  "tts fallback howmany: gemini tts off",
+  "tts fallback count: gemini tts off",
+  "tts fallback eq: gemini tts off",
+  "tts fallback trick: gemini tts off",
+  "tts fallback hop: gemini tts off",
+  "tts fallback land: gemini tts off",
+  "tts fallback ten1: gemini tts off",
+  "tts fallback p73: gemini tts off",
+  "tts fallback p64: gemini tts off",
+  "tts fallback p55: gemini tts off",
+  "tts fallback turn: gemini tts off",
+  "tts fallback q1: gemini tts off",
+  "tts fallback a1: gemini tts off",
+  "tts fallback q2: gemini tts off",
+  "tts fallback a2: gemini tts off",
+  "tts fallback q3: gemini tts off",
+  "tts fallback a3: gemini tts off",
+  "tts fallback tip: gemini tts off",
+  "tts fallback bye: gemini tts off",
+  "flow music ok 176.6s"
+ ]
+}

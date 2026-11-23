@@ -1,0 +1,67 @@
+{
+ "id": "science-t12",
+ "title": "Parts of a Plant | Grade 1 Science for Kids | Little Takhti",
+ "description": "Learn the parts of a plant with Takhti: roots, stem, leaves and flower, and the job each part does. Find out which plant parts we eat and what plants need to grow, then try a quick quiz. For Grade 1 children (ages 6 to 7).\n\nFree printable worksheets, quizzes and games for this topic: https://littletakhti.netlify.app/class-1-science-parts-of-a-plant-worksheets/\n\nChapters\n0:00 Parts of a plant\n0:16 What each part does\n0:40 Parts we eat\n0:59 Quiz\n1:44 Remember\n\nLittle Takhti makes free learning for children in Pakistan, Nursery to Grade 3. https://littletakhti.netlify.app",
+ "tags": [
+  "parts of a plant",
+  "plants for kids",
+  "grade 1 science",
+  "roots stem leaves flower",
+  "what plants need",
+  "science for kids",
+  "Little Takhti",
+  "kids learning",
+  "Grade 1 Science",
+  "Parts of a plant",
+  "Pakistan",
+  "learning video for kids"
+ ],
+ "madeForKids": true,
+ "language": "en",
+ "categoryId": "27",
+ "duration": 120.449,
+ "chapters": [
+  [
+   "0:00",
+   "Parts of a plant"
+  ],
+  [
+   "0:16",
+   "What each part does"
+  ],
+  [
+   "0:40",
+   "Parts we eat"
+  ],
+  [
+   "0:59",
+   "Quiz"
+  ],
+  [
+   "1:44",
+   "Remember"
+  ]
+ ],
+ "gemini_log": [
+  "tts fallback roots: gemini tts off",
+  "tts fallback stem: gemini tts off",
+  "tts fallback leaves: gemini tts off",
+  "tts fallback flower: gemini tts off",
+  "tts fallback factory: gemini tts off",
+  "tts fallback eat: gemini tts off",
+  "tts fallback carrot: gemini tts off",
+  "tts fallback spinach: gemini tts off",
+  "tts fallback mango: gemini tts off",
+  "tts fallback need: gemini tts off",
+  "tts fallback turn: gemini tts off",
+  "tts fallback q1: gemini tts off",
+  "tts fallback a1: gemini tts off",
+  "tts fallback q2: gemini tts off",
+  "tts fallback a2: gemini tts off",
+  "tts fallback q3: gemini tts off",
+  "tts fallback a3: gemini tts off",
+  "tts fallback tip: gemini tts off",
+  "tts fallback bye: gemini tts off",
+  "flow music ok 176.6s"
+ ]
+}

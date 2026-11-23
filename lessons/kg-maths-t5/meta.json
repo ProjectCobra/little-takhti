@@ -1,0 +1,71 @@
+{
+ "id": "kg-maths-t5",
+ "title": "Taking Away | KG Maths for Kids | Little Takhti",
+ "description": "Learn to take away with balloons, ducks and mangoes. Count what is left, meet the take away sign, then try a quick quiz with Takhti. For KG children (ages 4 to 5).\n\nFree printable worksheets, quizzes and games for this topic: https://littletakhti.netlify.app/kg-maths-taking-away-worksheets/\n\nChapters\n0:00 Hello\n0:11 Balloons\n0:32 Ducks swim away\n0:49 Cross out\n1:06 Quiz\n1:58 Remember\n\nLittle Takhti makes free learning for children in Pakistan, Nursery to Grade 3. https://littletakhti.netlify.app",
+ "tags": [
+  "taking away",
+  "subtraction for kids",
+  "KG maths",
+  "take away sign",
+  "how many are left",
+  "kindergarten maths",
+  "Little Takhti",
+  "kids learning",
+  "KG Maths",
+  "Taking away",
+  "Pakistan",
+  "learning video for kids"
+ ],
+ "madeForKids": true,
+ "language": "en",
+ "categoryId": "27",
+ "duration": 133.441,
+ "chapters": [
+  [
+   "0:00",
+   "Hello"
+  ],
+  [
+   "0:11",
+   "Balloons"
+  ],
+  [
+   "0:32",
+   "Ducks swim away"
+  ],
+  [
+   "0:49",
+   "Cross out"
+  ],
+  [
+   "1:06",
+   "Quiz"
+  ],
+  [
+   "1:58",
+   "Remember"
+  ]
+ ],
+ "gemini_log": [
+  "tts fallback eq1: gemini tts off",
+  "tts fallback ducks: gemini tts off",
+  "tts fallback away: gemini tts off",
+  "tts fallback count2: gemini tts off",
+  "tts fallback eq2: gemini tts off",
+  "tts fallback sign: gemini tts off",
+  "tts fallback cross1: gemini tts off",
+  "tts fallback seven: gemini tts off",
+  "tts fallback four: gemini tts off",
+  "tts fallback eq3: gemini tts off",
+  "tts fallback turn: gemini tts off",
+  "tts fallback q1: gemini tts off",
+  "tts fallback a1: gemini tts off",
+  "tts fallback q2: gemini tts off",
+  "tts fallback a2: gemini tts off",
+  "tts fallback q3: gemini tts off",
+  "tts fallback a3: gemini tts off",
+  "tts fallback tip: gemini tts off",
+  "tts fallback bye: gemini tts off",
+  "flow music ok 176.6s"
+ ]
+}

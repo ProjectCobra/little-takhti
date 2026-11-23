@@ -1,0 +1,68 @@
+{
+ "id": "g3-geography-t1",
+ "title": "Landforms and Water | Grade 3 Geography for Kids | Little Takhti",
+ "description": "Travel across Pakistan with Takhti to learn landforms: mountains, valleys, plateaus, plains, deserts and islands. Then follow a drop of water from a glacier down the Indus River to the Arabian Sea, and try a quick quiz. For Grade 3 children (ages 8 to 9).\n\nFree printable worksheets, quizzes and games for this topic: https://littletakhti.netlify.app/class-3-geography-landforms-and-water-worksheets/\n\nChapters\n0:00 Hello\n0:12 Landforms\n0:39 Water bodies\n1:02 Quiz\n1:45 Remember\n\nLittle Takhti makes free learning for children in Pakistan, Nursery to Grade 3. https://littletakhti.netlify.app",
+ "tags": [
+  "landforms for kids",
+  "landforms and water bodies",
+  "grade 3 geography",
+  "geography of Pakistan",
+  "mountains plains deserts",
+  "Indus River",
+  "glacier",
+  "Little Takhti",
+  "kids learning",
+  "Grade 3 Geography",
+  "Landforms and water",
+  "Pakistan",
+  "learning video for kids"
+ ],
+ "madeForKids": true,
+ "language": "en",
+ "categoryId": "27",
+ "duration": 121.219,
+ "chapters": [
+  [
+   "0:00",
+   "Hello"
+  ],
+  [
+   "0:12",
+   "Landforms"
+  ],
+  [
+   "0:39",
+   "Water bodies"
+  ],
+  [
+   "1:02",
+   "Quiz"
+  ],
+  [
+   "1:45",
+   "Remember"
+  ]
+ ],
+ "gemini_log": [
+  "tts fallback plateau: gemini tts off",
+  "tts fallback plain: gemini tts off",
+  "tts fallback desert: gemini tts off",
+  "tts fallback island: gemini tts off",
+  "tts fallback drop: gemini tts off",
+  "tts fallback glacier: gemini tts off",
+  "tts fallback river: gemini tts off",
+  "tts fallback lake: gemini tts off",
+  "tts fallback canal: gemini tts off",
+  "tts fallback sea: gemini tts off",
+  "tts fallback turn: gemini tts off",
+  "tts fallback q1: gemini tts off",
+  "tts fallback a1: gemini tts off",
+  "tts fallback q2: gemini tts off",
+  "tts fallback a2: gemini tts off",
+  "tts fallback q3: gemini tts off",
+  "tts fallback a3: gemini tts off",
+  "tts fallback tip: gemini tts off",
+  "tts fallback bye: gemini tts off",
+  "flow music ok 176.6s"
+ ]
+}

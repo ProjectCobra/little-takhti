@@ -32,6 +32,16 @@ try:
 except Exception as e:
     res['demucs_error'] = str(e)[:300]
 
+if vocals:
+    yv, _ = librosa.load(str(vocals), sr=22050, mono=True)
+    rv = librosa.feature.rms(y=yv, hop_length=2205)[0]
+    res['vocals_rms_db_per_100ms'] = [round(float(20 * np.log10(v + 1e-9)), 1) for v in rv]
+    # what is left without the voice: music, claps and the tick-tock in the quiz breaks
+    acc = next((out / 'sep').rglob('no_vocals.wav'), None)
+    if acc:
+        ya, _ = librosa.load(str(acc), sr=22050, mono=True)
+        res['accomp_onsets'] = [round(float(t), 3) for t in librosa.onset.onset_detect(y=ya, sr=22050, units='time')]
+
 from faster_whisper import WhisperModel
 model = WhisperModel('medium.en', device='cpu', compute_type='int8')
 prompt = 'A cheerful children\'s song about the parts of a plant: roots, stem, leaves, flower, seeds, sunlight, water, air, soil.'

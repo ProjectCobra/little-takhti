@@ -18,6 +18,11 @@ y, sr = librosa.load(str(wav), sr=22050, mono=True)
 tempo, beats = librosa.beat.beat_track(y=y, sr=sr, units='time')
 res = {'duration': round(len(y) / sr, 3), 'tempo': float(np.atleast_1d(tempo)[0]), 'beats': [round(float(b), 3) for b in beats]}
 rms = librosa.feature.rms(y=y, hop_length=2205)[0]
+on = librosa.onset.onset_detect(y=y, sr=sr, units='time', backtrack=False)
+res['onsets'] = [round(float(t), 3) for t in on]
+# high band energy per 100 ms (tick-tock percussion shows up here when vocals stop)
+S = np.abs(librosa.stft(y, n_fft=2048, hop_length=2205)); f = librosa.fft_frequencies(sr=sr, n_fft=2048)
+res['hi_db_per_100ms'] = [round(float(20 * np.log10(v + 1e-9)), 1) for v in S[f > 3000].mean(0)]
 res['rms_db_per_100ms'] = [round(float(20 * np.log10(v + 1e-9)), 1) for v in rms]
 
 vocals = None

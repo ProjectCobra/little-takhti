@@ -1,0 +1,576 @@
+{
+ "id": "kg-maths-t4",
+ "grade": "KG",
+ "subject": "Maths",
+ "topic": "Adding to 10",
+ "page": "kg-maths-adding-to-10-worksheets",
+ "meta": {
+  "description": "Learn to add up to 10 with mangoes, a number line hop and a ten frame, then try a quick quiz with Takhti.",
+  "tags": [
+   "adding to 10",
+   "addition for kids",
+   "KG maths",
+   "ten frame",
+   "number line",
+   "counting on"
+  ],
+  "title": "Adding to 10 | KG Maths for Kids | Little Takhti"
+ },
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are adding numbers, all the way to ten!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "story"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "N",
+   "basket",
+   "Nana has a big basket."
+  ],
+  [
+   "say",
+   "N",
+   "m4",
+   "She puts in one, two, three, four mangoes."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "z3",
+   "Then Zara adds three more."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "say",
+   "T",
+   "howmany",
+   "How many mangoes now? Let's count!"
+  ],
+  [
+   "say",
+   "T",
+   "count",
+   "Start at four. Then five, six, seven!"
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "eq",
+   "Four plus three makes seven."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "hop"
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "say",
+   "T",
+   "trick",
+   "Here is another trick. Hop on the number line!"
+  ],
+  [
+   "say",
+   "T",
+   "hop",
+   "Start at four, and hop three times. One! Two! Three!"
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "land",
+   "We land on seven!"
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "ten"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "N",
+   "ten1",
+   "Now let's make ten. Ten spots fill the frame."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "p73",
+   "Seven and three make ten."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "say",
+   "N",
+   "p64",
+   "Six and four make ten."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "say",
+   "N",
+   "p55",
+   "Five and five make ten!"
+  ],
+  [
+   "wait",
+   1.3
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "Ali has five kites. He gets three more. How many kites?"
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "Eight! Five plus three makes eight."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "Two ducks swim. Four more ducks come. How many ducks?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "Six! Two plus four makes six."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "Here are nine dots. Nine and how many more make ten?"
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "One! Nine and one make ten."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Great job! Remember, start with the bigger number, then count on."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c1-meadow",
+   "chip": "KG Maths",
+   "title": "Adding to <span style=\"color:#1F7A4C\">10</span>",
+   "card_at": "today+0.6",
+   "row": {
+    "nums": 10,
+    "at": "today.ten-0.5",
+    "step": 0.08
+   }
+  },
+  {
+   "type": "basket",
+   "mark": "story",
+   "chapter": "Mangoes in a basket",
+   "prop": "mango",
+   "prop2": "mango2",
+   "n": 7,
+   "first": 4,
+   "drop": [
+    "m4.one",
+    "m4.two",
+    "m4.three",
+    "m4.four",
+    "z3.adds+0.15",
+    "z3.adds+0.5",
+    "z3.adds+0.85"
+   ],
+   "count": [
+    "count.four",
+    "count.five",
+    "count.six",
+    "count.seven"
+   ],
+   "eq": {
+    "tokens": [
+     "4",
+     "+",
+     "3",
+     "=",
+     "7"
+    ],
+    "at": [
+     "eq.four",
+     "eq.plus",
+     "eq.three",
+     "eq.makes",
+     "eq.seven"
+    ]
+   },
+   "tags": [
+    {
+     "text": "Nana: 4",
+     "dx": -195,
+     "after": 3
+    },
+    {
+     "text": "Zara: 3",
+     "style": "background:#1F7A4C;color:#fff",
+     "dx": 260,
+     "after": 6
+    }
+   ],
+   "basket_at": "basket",
+   "tags_out": "howmany"
+  },
+  {
+   "type": "hop",
+   "mark": "hop",
+   "chapter": "Number line",
+   "title": "Hop on the number line",
+   "start": 4,
+   "hops": [
+    "hop.one-0.05",
+    "hop.two-0.05",
+    "hop.three#-1-0.05"
+   ],
+   "start_at": "hop.four",
+   "land_at": "land.seven",
+   "eq": "4 + 3 = <span style=\"color:#1F7A4C\">7</span>"
+  },
+  {
+   "type": "tenframe",
+   "mark": "ten",
+   "chapter": "Make 10",
+   "title": "Make 10",
+   "pairs": [
+    [
+     "p73",
+     7,
+     3,
+     "seven",
+     "three"
+    ],
+    [
+     "p64",
+     6,
+     4,
+     "six",
+     "four"
+    ],
+    [
+     "p55",
+     5,
+     5,
+     "five",
+     "five"
+    ]
+   ]
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "groups": [
+    {
+     "p": "kite",
+     "n": 5,
+     "x": 620,
+     "y": 450,
+     "cols": 3,
+     "gap": 170,
+     "at": "q1.five"
+    },
+    {
+     "p": "kite2",
+     "n": 3,
+     "x": 1300,
+     "y": 450,
+     "cols": 3,
+     "gap": 170,
+     "at": "q1.three"
+    }
+   ],
+   "opts": [
+    7,
+    8,
+    9
+   ],
+   "ans": 8,
+   "plus": {
+    "x": 960,
+    "y": 450,
+    "at": "q1.gets"
+   }
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "groups": [
+    {
+     "p": "duck",
+     "n": 2,
+     "x": 600,
+     "y": 450,
+     "cols": 2,
+     "gap": 200,
+     "at": "q2.two",
+     "step": 0.15
+    },
+    {
+     "p": "duck",
+     "n": 4,
+     "x": 1290,
+     "y": 450,
+     "cols": 2,
+     "gap": 200,
+     "at": "q2.four",
+     "step": 0.15
+    }
+   ],
+   "opts": [
+    5,
+    6,
+    7
+   ],
+   "ans": 6,
+   "plus": {
+    "x": 930,
+    "y": 450,
+    "at": "q2.more"
+   }
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "groups": [
+    {
+     "p": "counter",
+     "last": "qmark",
+     "n": 10,
+     "x": 960,
+     "y": 370,
+     "cols": 5,
+     "gap": 160,
+     "gapy": 160,
+     "yoff": 0,
+     "at": "q3.nine",
+     "step": 0.06,
+     "wob": 0
+    }
+   ],
+   "opts": [
+    1,
+    2,
+    3
+   ],
+   "ans": 1
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "at": "tip.count+0.3",
+    "step": 0.35
+   },
+   "html": "<div class=\"big\" style=\"font-size:80px;line-height:1.05;text-align:center;white-space:nowrap\">Start with the <span style=\"color:#1F7A4C\">bigger</span> number,<br>then count on!</div><div class=\"big tr\" style=\"font-size:110px;display:flex;gap:34px;align-items:center\"><span class=\"card\" style=\"width:150px;height:150px;background:#FFD93B;padding-top:12px\">7</span><span style=\"color:#FF7A45\">→</span><span class=\"n\">8</span><span class=\"n\">9</span><span class=\"n\">10</span></div>"
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

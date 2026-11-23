@@ -1,0 +1,103 @@
+name: Video lessons
+on:
+  push:
+    branches: [dev]
+    paths: ['source/video/lessons/*.json', 'source/video/render.txt']
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'Lesson ids separated by spaces, or "all"'
+        required: true
+        default: 'all'
+permissions:
+  contents: write
+concurrency: { group: video-lessons, cancel-in-progress: false }
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.ids.outputs.ids }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - id: ids
+        env:
+          INPUT_IDS: ${{ github.event.inputs.ids }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          all() { ls source/video/lessons/*.json | xargs -n1 basename | sed 's/\.json$//'; }
+          if [ -n "$INPUT_IDS" ]; then
+            if [ "$INPUT_IDS" = all ]; then ids=$(all); else ids=$INPUT_IDS; fi
+          else
+            if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then BEFORE=HEAD~1; fi
+            changed=$(git diff --name-only "$BEFORE" HEAD)
+            ids=$(echo "$changed" | grep -E '^source/video/lessons/[^/]+\.json$' | xargs -r -n1 basename | sed 's/\.json$//')
+            if echo "$changed" | grep -qx 'source/video/render.txt'; then
+              listed=$(grep -v '^#' source/video/render.txt | tr -s ' \n' '\n' | sed '/^$/d')
+              if echo "$listed" | grep -qx all; then listed=$(all); fi
+              ids="$ids $listed"
+            fi
+          fi
+          ids=$(for i in $ids; do [ -f "source/video/lessons/$i.json" ] && echo "$i"; done | sort -u)
+          echo "lessons: $ids"
+          echo "ids=$(echo $ids | jq -R -c 'split(" ") | map(select(length>0))')" >> "$GITHUB_OUTPUT"
+  render:
+    needs: plan
+    if: needs.plan.outputs.ids != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        id: ${{ fromJson(needs.plan.outputs.ids) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Tools
+        timeout-minutes: 15
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q playwright edge-tts numpy scipy pillow
+          python -m playwright install --with-deps chromium
+          cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend
+      - name: Render
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 source/tools/video2/lesson.py ${{ matrix.id }}
+      - name: Check sound
+        run: |
+          f=source/tools/video2/out/${{ matrix.id }}/lesson.mp4
+          ffprobe -v error -show_entries format=duration -of csv=p=0 "$f"
+          ffmpeg -hide_banner -i "$f" -af volumedetect -vn -f null - 2>&1 | grep -E 'mean_volume|max_volume'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lesson-${{ matrix.id }}
+          path: |
+            source/tools/video2/out/${{ matrix.id }}/lesson.mp4
+            source/tools/video2/out/${{ matrix.id }}/thumb.jpg
+            source/tools/video2/out/${{ matrix.id }}/meta.json
+          retention-days: 7
+  save:
+    needs: [plan, render]
+    if: always() && needs.plan.outputs.ids != '[]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: /tmp/art, pattern: 'lesson-*' }
+      - name: Save to videos branch
+        run: |
+          ls -R /tmp/art
+          git config user.name "little-takhti-bot"; git config user.email "bot@littletakhti.invalid"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin videos && git checkout -q -B videos origin/videos
+            for d in /tmp/art/lesson-*; do id=${d#/tmp/art/lesson-}; mkdir -p "lessons/$id" && cp "$d"/* "lessons/$id/"; done
+            git add lessons
+            git diff --cached --quiet && break
+            git commit -qm "Video lessons: $(ls /tmp/art | sed 's/^lesson-//' | tr '\n' ' ')" && git push -q origin videos && break
+            git reset -q --hard origin/videos; sleep 7
+          done

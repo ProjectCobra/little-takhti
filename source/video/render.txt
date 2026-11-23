@@ -1,0 +1,9 @@
+# Lessons for the "Video lessons" workflow to render (one id per line, or "all" for every file in lessons/).
+# Pushing a change to this file on dev renders the ids listed here. Pushing a changed lessons/<id>.json renders that lesson.
+# Results go to the "videos" branch: lessons/<id>/lesson.mp4, thumb.jpg, meta.json
+nursery-gk-t2
+kg-maths-t5
+science-t12
+g2-english-t11
+g3-geography-t1
+kg-maths-t4

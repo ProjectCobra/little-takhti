@@ -1,0 +1,1116 @@
+{
+ "id": "kg-maths-t5",
+ "grade": "KG",
+ "subject": "Maths",
+ "topic": "Taking away",
+ "page": "kg-maths-taking-away-worksheets",
+ "meta": {
+  "description": "Learn to take away with balloons, ducks and mangoes. Count what is left, meet the take away sign, then try a quick quiz with Takhti. For KG children (ages 4 to 5).",
+  "tags": [
+   "taking away",
+   "subtraction for kids",
+   "KG maths",
+   "take away sign",
+   "how many are left",
+   "kindergarten maths"
+  ],
+  "title": "Taking Away | KG Maths for Kids | Little Takhti"
+ },
+ "thumb_at": [
+  "balloons",
+  -0.6
+ ],
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are taking away. Some go away, and we count what is left!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "balloons"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "five",
+   "Here are five balloons. One, two, three, four, five."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "popped",
+   "Oh no! One balloon goes pop!"
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "left",
+   "How many are left? One, two, three, four. Four are left!"
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "eq1",
+   "Five take away one leaves four."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "ducks"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "ducks",
+   "Five ducks are in the pond."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "away",
+   "Then two ducks swim away."
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "count2",
+   "Let's count the ducks left. One, two, three!"
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "eq2",
+   "Five take away two leaves three."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "sign",
+   "This little line is the take away sign."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "cross"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "cross1",
+   "On a worksheet, we cross out the ones that go."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "seven",
+   "Here are seven mangoes. Cross out three."
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "four",
+   "One, two, three, four. Four are left!"
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "eq3",
+   "Seven take away three leaves four."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "There are five kites. Two fly away. How many are left?"
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "Three! Five take away two leaves three."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "Six ducks swim. Two swim away. How many are left?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "Four! Six take away two leaves four."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "Here are six counters. Take away four. How many are left?"
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "Two! Six take away four leaves two."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Great job! When some go away, count what is left."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c4-bye",
+   "shrink": {
+    "at": "today",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "KG Maths",
+   "title": "Taking <span style=\"color:#1F7A4C\">away</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "today+0.6",
+   "row": {
+    "props": [
+     "art:balloon:#E53935",
+     "art:balloon:#FDD835",
+     "art:balloon:#43A047",
+     "art:balloon:#1E88E5"
+    ],
+    "w": 80,
+    "at": "today.away",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "balloons",
+   "chapter": "Balloons",
+   "title": "Take away",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:balloon:#E53935",
+     "w": 150,
+     "x": 600,
+     "y": 360,
+     "at": "five.one",
+     "bob": 10,
+     "wob": 4,
+     "glow": [
+      "left.one"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:balloon:#FB8C00",
+     "w": 150,
+     "x": 780,
+     "y": 360,
+     "at": "five.two",
+     "bob": 10,
+     "wob": 4,
+     "glow": [
+      "left.two"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:balloon:#FDD835",
+     "w": 150,
+     "x": 960,
+     "y": 360,
+     "at": "five.three",
+     "bob": 10,
+     "wob": 4,
+     "glow": [
+      "left.three"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:balloon:#43A047",
+     "w": 150,
+     "x": 1140,
+     "y": 360,
+     "at": "five.four",
+     "bob": 10,
+     "wob": 4,
+     "glow": [
+      "left.four"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:balloon:#1E88E5",
+     "w": 150,
+     "x": 1320,
+     "y": 360,
+     "at": "five.five#-1",
+     "bob": 10,
+     "wob": 4,
+     "burst": "popped.pop"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">1</div>",
+     "x": 600,
+     "y": 590,
+     "at": "left.one",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.1
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">2</div>",
+     "x": 780,
+     "y": 590,
+     "at": "left.two",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.2
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">3</div>",
+     "x": 960,
+     "y": 590,
+     "at": "left.three",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.3
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">4</div>",
+     "x": 1140,
+     "y": 590,
+     "at": "left.four",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.4
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#fff\">5</div>",
+     "x": 784,
+     "y": 780,
+     "at": "eq1.five",
+     "snd": {
+      "p": 1.0,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:116px;color:#FF7A45;line-height:1\">−</div>",
+     "x": 922,
+     "y": 780,
+     "at": "eq1.take",
+     "snd": {
+      "p": 1.1,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#fff\">1</div>",
+     "x": 1060,
+     "y": 780,
+     "at": "eq1.one",
+     "snd": {
+      "p": 1.2,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:116px;color:#FF7A45;line-height:1\">=</div>",
+     "x": 1198,
+     "y": 780,
+     "at": "eq1.leaves",
+     "snd": {
+      "p": 1.3,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#FFD93B\">4</div>",
+     "x": 1336,
+     "y": 780,
+     "at": "eq1.four",
+     "snd": {
+      "p": 1.4,
+      "g": 0.35
+     }
+    }
+   ],
+   "mascot": {
+    "x": 190,
+    "y": 820,
+    "s": 0.9,
+    "cheer": [
+     [
+      "left.left",
+      "left$+0.8"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "ducks",
+   "chapter": "Ducks swim away",
+   "title": "How many are left?",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:pond",
+     "w": 1300,
+     "x": 960,
+     "y": 500,
+     "at": "ducks-0.3",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "duck",
+     "w": 230,
+     "x": 620,
+     "y": 450,
+     "at": "ducks.five+0.00",
+     "bob": 6,
+     "wob": 3,
+     "glow": [
+      "count2.one"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "duck",
+     "w": 230,
+     "x": 790,
+     "y": 520,
+     "at": "ducks.five+0.15",
+     "bob": 6,
+     "wob": 3,
+     "glow": [
+      "count2.two"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "duck",
+     "w": 230,
+     "x": 960,
+     "y": 450,
+     "at": "ducks.five+0.30",
+     "bob": 6,
+     "wob": 3,
+     "glow": [
+      "count2.three"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "duck",
+     "w": 230,
+     "x": 1130,
+     "y": 520,
+     "at": "ducks.five+0.45",
+     "bob": 6,
+     "wob": 3,
+     "moves": [
+      {
+       "at": "away.swim+0.00",
+       "d": 1.8,
+       "x": 2150,
+       "ease": "eio",
+       "snd": "splash",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "duck",
+     "w": 230,
+     "x": 1300,
+     "y": 450,
+     "at": "ducks.five+0.60",
+     "bob": 6,
+     "wob": 3,
+     "moves": [
+      {
+       "at": "away.swim+0.25",
+       "d": 1.8,
+       "x": 2150,
+       "ease": "eio",
+       "snd": "splash",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">1</div>",
+     "x": 620,
+     "y": 290,
+     "at": "count2.one",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.1
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">2</div>",
+     "x": 790,
+     "y": 360,
+     "at": "count2.two",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.2
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">3</div>",
+     "x": 960,
+     "y": 290,
+     "at": "count2.three",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.3
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#fff\">5</div>",
+     "x": 784,
+     "y": 800,
+     "at": "eq2.five",
+     "snd": {
+      "p": 1.0,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:116px;color:#FF7A45;line-height:1\">−</div>",
+     "x": 922,
+     "y": 800,
+     "at": "eq2.take",
+     "snd": {
+      "p": 1.1,
+      "g": 0.35
+     },
+     "glow": [
+      "sign.line",
+      "sign.sign"
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#fff\">2</div>",
+     "x": 1060,
+     "y": 800,
+     "at": "eq2.two",
+     "snd": {
+      "p": 1.2,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:116px;color:#FF7A45;line-height:1\">=</div>",
+     "x": 1198,
+     "y": 800,
+     "at": "eq2.leaves",
+     "snd": {
+      "p": 1.3,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:150px;height:160px;font-size:116px;padding-top:16px;background:#FFD93B\">3</div>",
+     "x": 1336,
+     "y": 800,
+     "at": "eq2.three",
+     "snd": {
+      "p": 1.4,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "ring",
+     "d": 120,
+     "c": "#FF7A45",
+     "x": 922,
+     "y": 796,
+     "at": "sign.line",
+     "out": "sign$+0.6",
+     "snd": null
+    }
+   ],
+   "mascot": {
+    "x": 190,
+    "y": 820,
+    "s": 0.9,
+    "cheer": [
+     [
+      "count2.three",
+      "count2$+0.8"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "cross",
+   "chapter": "Cross out",
+   "title": "Cross out and count",
+   "els": [
+    {
+     "k": "html",
+     "html": "<div style=\"width:1100px;height:300px;background:#fff;border:6px solid #123B28;border-bottom-width:16px;border-radius:40px\"></div>",
+     "x": 960,
+     "y": 430,
+     "at": "cross1+0.2"
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 560,
+     "y": 430,
+     "at": "seven.seven+0.00",
+     "wob": 4,
+     "glow": [
+      "four.one"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 695,
+     "y": 430,
+     "at": "seven.seven+0.10",
+     "wob": 4,
+     "glow": [
+      "four.two"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 830,
+     "y": 430,
+     "at": "seven.seven+0.20",
+     "wob": 4,
+     "glow": [
+      "four.three"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 965,
+     "y": 430,
+     "at": "seven.seven+0.30",
+     "wob": 4,
+     "glow": [
+      "four.four"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 1100,
+     "y": 430,
+     "at": "seven.seven+0.40",
+     "wob": 4,
+     "cross": "seven.three+0.00",
+     "crossS": 0.9
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 1235,
+     "y": 430,
+     "at": "seven.seven+0.50",
+     "wob": 4,
+     "cross": "seven.three+0.30",
+     "crossS": 0.9
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 1370,
+     "y": 430,
+     "at": "seven.seven+0.60",
+     "wob": 4,
+     "cross": "seven.three+0.60",
+     "crossS": 0.9
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">1</div>",
+     "x": 560,
+     "y": 640,
+     "at": "four.one",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.1
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">2</div>",
+     "x": 695,
+     "y": 640,
+     "at": "four.two",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.2
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">3</div>",
+     "x": 830,
+     "y": 640,
+     "at": "four.three",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.3
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:88px;height:88px;font-size:56px;padding-top:8px;border-radius:50%;border-bottom-width:8px;background:#FFD93B\">4</div>",
+     "x": 965,
+     "y": 640,
+     "at": "four.four",
+     "snd": {
+      "n": "ding",
+      "g": 0.35,
+      "p": 1.4
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:130px;height:140px;font-size:100px;padding-top:14px;background:#fff\">7</div>",
+     "x": 804,
+     "y": 820,
+     "at": "eq3.seven",
+     "snd": {
+      "p": 1.0,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:100px;color:#FF7A45;line-height:1\">−</div>",
+     "x": 932,
+     "y": 820,
+     "at": "eq3.take",
+     "snd": {
+      "p": 1.1,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:130px;height:140px;font-size:100px;padding-top:14px;background:#fff\">3</div>",
+     "x": 1060,
+     "y": 820,
+     "at": "eq3.three",
+     "snd": {
+      "p": 1.2,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:100px;color:#FF7A45;line-height:1\">=</div>",
+     "x": 1188,
+     "y": 820,
+     "at": "eq3.leaves",
+     "snd": {
+      "p": 1.3,
+      "g": 0.35
+     }
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"card big\" style=\"width:130px;height:140px;font-size:100px;padding-top:14px;background:#FFD93B\">4</div>",
+     "x": 1316,
+     "y": 820,
+     "at": "eq3.four",
+     "snd": {
+      "p": 1.4,
+      "g": 0.35
+     }
+    }
+   ],
+   "mascot": {
+    "x": 190,
+    "y": 820,
+    "s": 0.9,
+    "cheer": [
+     [
+      "four.left",
+      "four$+0.8"
+     ]
+    ]
+   },
+   "confetti": [
+    {
+     "at": "eq3.four+0.1",
+     "x": 1300,
+     "y": 700
+    }
+   ]
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "opts": [
+    2,
+    3,
+    4
+   ],
+   "ans": 3,
+   "groups": [
+    {
+     "p": "kite",
+     "n": 5,
+     "x": 960,
+     "y": 450,
+     "cols": 5,
+     "gap": 190,
+     "at": "q1.five",
+     "go": {
+      "n": 2,
+      "at": "q1.fly",
+      "dy": -650,
+      "dx": 150,
+      "d": 1.2,
+      "step": 0.25
+     }
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "opts": [
+    3,
+    4,
+    5
+   ],
+   "ans": 4,
+   "groups": [
+    {
+     "p": "duck",
+     "n": 6,
+     "x": 960,
+     "y": 450,
+     "cols": 3,
+     "gap": 210,
+     "at": "q2.six",
+     "step": 0.12,
+     "go": {
+      "n": 2,
+      "at": "q2.away",
+      "dx": 1300,
+      "d": 1.5,
+      "step": 0.3,
+      "snd": "splash"
+     }
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "opts": [
+    1,
+    2,
+    3
+   ],
+   "ans": 2,
+   "groups": [
+    {
+     "p": "counter",
+     "n": 6,
+     "x": 960,
+     "y": 440,
+     "cols": 6,
+     "gap": 170,
+     "at": "q3.six",
+     "step": 0.08,
+     "wob": 0,
+     "cross": {
+      "n": 4,
+      "at": "q3.four",
+      "step": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "ats": [
+     "tip.go",
+     "tip.count",
+     "tip.left"
+    ]
+   },
+   "html": "<div class=\"big\" style=\"font-size:84px;line-height:1.1;text-align:center;white-space:nowrap\"><span class=\"n\">Some go away.</span><br><span class=\"n\">Count what is</span> <span class=\"n\" style=\"color:#1F7A4C\">left!</span></div><div class=\"big\" style=\"font-size:110px;display:flex;gap:30px;align-items:center\"><span>5</span><span style=\"color:#FF7A45\">−</span><span>2</span><span style=\"color:#FF7A45\">=</span><span class=\"card\" style=\"width:150px;height:150px;background:#FFD93B;padding-top:12px\">3</span></div>"
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

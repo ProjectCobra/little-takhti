@@ -1,0 +1,1142 @@
+{
+ "id": "nursery-gk-t2",
+ "grade": "Nursery",
+ "subject": "GK",
+ "topic": "Colours",
+ "page": "nursery-general-knowledge-colours-worksheets",
+ "meta": {
+  "title": "Colours | Nursery General Knowledge for Kids | Little Takhti",
+  "description": "Learn the colours red, yellow, green, blue, orange and purple with Takhti. Sort things by colour, make a rainbow and try a quick colour quiz. For Nursery children (ages 3 to 4).",
+  "tags": [
+   "colours for kids",
+   "learn colours",
+   "colour names",
+   "nursery GK",
+   "rainbow colours",
+   "preschool learning",
+   "general knowledge for kids"
+  ]
+ },
+ "thumb_at": [
+  "things",
+  -0.6
+ ],
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are learning colours. So many colours!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "things"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "red",
+   "This apple is red. Red!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "N",
+   "yellow",
+   "This banana is yellow. Yellow!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "N",
+   "green",
+   "This leaf is green. Green!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "N",
+   "blue",
+   "This balloon is blue. Blue!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "N",
+   "orange",
+   "This orange is orange!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "N",
+   "purple",
+   "These grapes are purple. Purple!"
+  ],
+  [
+   "wait",
+   0.5
+  ],
+  [
+   "say",
+   "T",
+   "wow",
+   "Wow! Red, yellow, green, blue, orange and purple!"
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "sort"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "sort",
+   "Let's sort by colour. Red things go in the red basket."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "tomato",
+   "A tomato is red."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "lemon",
+   "A lemon is yellow."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "cucumber",
+   "A cucumber is green."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "more",
+   "A chilli is red. The sun is yellow. And broccoli is green!"
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "rainbow"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "rain",
+   "After the rain, we can see a rainbow."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "bow",
+   "Red, orange, yellow, green, blue and purple!"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "fav",
+   "Which colour do you like best?"
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "What colour is a banana?"
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "Yellow! A banana is yellow."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "What colour is the grass?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "Green! The grass is green."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "What colour is the sky on a sunny day?"
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "Blue! The sky is blue."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Great job! Look around you and name the colours you see."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c4-bye",
+   "shrink": {
+    "at": "today",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "Nursery GK",
+   "title": "<span style=\"color:#E53935\">Co</span><span style=\"color:#FB8C00\">lo</span><span style=\"color:#43A047\">urs</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "today+0.6",
+   "row": {
+    "props": [
+     "art:balloon:#E53935",
+     "art:balloon:#FDD835",
+     "art:balloon:#43A047",
+     "art:balloon:#1E88E5"
+    ],
+    "w": 80,
+    "at": "today.colours",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "things",
+   "chapter": "Colours around us",
+   "title": "Colours all around",
+   "title_y": 100,
+   "els": [
+    {
+     "k": "prop",
+     "p": "red-apple",
+     "w": 300,
+     "x": 960,
+     "y": 520,
+     "at": "red",
+     "bob": 8,
+     "glow": [
+      "red.red#-1"
+     ],
+     "moves": [
+      {
+       "at": "yellow-0.1",
+       "d": 0.7,
+       "x": 360,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Red",
+     "x": 960,
+     "y": 790,
+     "at": "red.red#-1",
+     "bg": "#E53935",
+     "fg": "#fff",
+     "size": 70,
+     "moves": [
+      {
+       "at": "yellow-0.1",
+       "d": 0.7,
+       "x": 360,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.red"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "banana",
+     "w": 300,
+     "x": 960,
+     "y": 520,
+     "at": "yellow",
+     "bob": 8,
+     "glow": [
+      "yellow.yellow#-1"
+     ],
+     "moves": [
+      {
+       "at": "green-0.1",
+       "d": 0.7,
+       "x": 600,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Yellow",
+     "x": 960,
+     "y": 790,
+     "at": "yellow.yellow#-1",
+     "bg": "#FDD835",
+     "fg": "#123B28",
+     "size": 70,
+     "moves": [
+      {
+       "at": "green-0.1",
+       "d": 0.7,
+       "x": 600,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.yellow"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "leafy-green",
+     "w": 290,
+     "x": 960,
+     "y": 520,
+     "at": "green",
+     "bob": 8,
+     "glow": [
+      "green.green#-1"
+     ],
+     "moves": [
+      {
+       "at": "blue-0.1",
+       "d": 0.7,
+       "x": 840,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Green",
+     "x": 960,
+     "y": 790,
+     "at": "green.green#-1",
+     "bg": "#43A047",
+     "fg": "#fff",
+     "size": 70,
+     "moves": [
+      {
+       "at": "blue-0.1",
+       "d": 0.7,
+       "x": 840,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.green"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:balloon:#1E88E5",
+     "w": 190,
+     "x": 960,
+     "y": 520,
+     "at": "blue",
+     "bob": 8,
+     "glow": [
+      "blue.blue#-1"
+     ],
+     "moves": [
+      {
+       "at": "orange-0.1",
+       "d": 0.7,
+       "x": 1080,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Blue",
+     "x": 960,
+     "y": 790,
+     "at": "blue.blue#-1",
+     "bg": "#1E88E5",
+     "fg": "#fff",
+     "size": 70,
+     "moves": [
+      {
+       "at": "orange-0.1",
+       "d": 0.7,
+       "x": 1080,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.blue"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "tangerine",
+     "w": 290,
+     "x": 960,
+     "y": 520,
+     "at": "orange",
+     "bob": 8,
+     "glow": [
+      "orange.orange#-1"
+     ],
+     "moves": [
+      {
+       "at": "purple-0.1",
+       "d": 0.7,
+       "x": 1320,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Orange",
+     "x": 960,
+     "y": 790,
+     "at": "orange.orange#-1",
+     "bg": "#FB8C00",
+     "fg": "#fff",
+     "size": 70,
+     "moves": [
+      {
+       "at": "purple-0.1",
+       "d": 0.7,
+       "x": 1320,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.orange"
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "grapes",
+     "w": 290,
+     "x": 960,
+     "y": 520,
+     "at": "purple",
+     "bob": 8,
+     "glow": [
+      "purple.purple#-1"
+     ],
+     "moves": [
+      {
+       "at": "wow-0.1",
+       "d": 0.7,
+       "x": 1560,
+       "y": 260,
+       "s": 0.5,
+       "arc": 120
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "Purple",
+     "x": 960,
+     "y": 790,
+     "at": "purple.purple#-1",
+     "bg": "#8E24AA",
+     "fg": "#fff",
+     "size": 70,
+     "moves": [
+      {
+       "at": "wow-0.1",
+       "d": 0.7,
+       "x": 1560,
+       "y": 385,
+       "s": 0.62
+      }
+     ],
+     "glow": [
+      "wow.purple"
+     ]
+    }
+   ],
+   "mascot": {
+    "x": 190,
+    "y": 820,
+    "s": 0.9,
+    "cheer": [
+     [
+      "wow",
+      "wow$"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "sort",
+   "chapter": "Colour sort",
+   "title": "Colour sort",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:bin:#E53935",
+     "w": 340,
+     "x": 520,
+     "y": 770,
+     "at": "sort+0.20",
+     "snd": {
+      "n": "pop",
+      "g": 0.3
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:bin:#FDD835",
+     "w": 340,
+     "x": 960,
+     "y": 770,
+     "at": "sort+0.35",
+     "snd": {
+      "n": "pop",
+      "g": 0.3
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:bin:#43A047",
+     "w": 340,
+     "x": 1400,
+     "y": 770,
+     "at": "sort+0.50",
+     "snd": {
+      "n": "pop",
+      "g": 0.3
+     }
+    },
+    {
+     "k": "chip",
+     "text": "Red",
+     "x": 520,
+     "y": 800,
+     "at": "sort+0.35",
+     "bg": "#E53935",
+     "fg": "#fff",
+     "size": 48
+    },
+    {
+     "k": "chip",
+     "text": "Yellow",
+     "x": 960,
+     "y": 800,
+     "at": "sort+0.50",
+     "bg": "#FDD835",
+     "fg": "#123B28",
+     "size": 48
+    },
+    {
+     "k": "chip",
+     "text": "Green",
+     "x": 1400,
+     "y": 800,
+     "at": "sort+0.65",
+     "bg": "#43A047",
+     "fg": "#fff",
+     "size": 48
+    },
+    {
+     "k": "prop",
+     "p": "tomato",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "tomato",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "tomato.red+0.15",
+       "d": 0.7,
+       "x": 465,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "lemon",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "lemon",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "lemon.yellow+0.15",
+       "d": 0.7,
+       "x": 905,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "cucumber",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "cucumber",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "cucumber.green+0.15",
+       "d": 0.7,
+       "x": 1345,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "hot-pepper",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "more.chilli",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "more.red+0.15",
+       "d": 0.7,
+       "x": 575,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "more.sun",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "more.yellow+0.15",
+       "d": 0.7,
+       "x": 1015,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "broccoli",
+     "w": 200,
+     "x": 960,
+     "y": 380,
+     "at": "more.broccoli",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "more.green+0.15",
+       "d": 0.7,
+       "x": 1455,
+       "y": 690,
+       "s": 0.75,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    }
+   ],
+   "mascot": {
+    "x": 1730,
+    "y": 560,
+    "s": 0.8,
+    "cheer": [
+     [
+      "more.green+0.6",
+      "more$+1.6"
+     ]
+    ]
+   },
+   "confetti": [
+    {
+     "at": "more.green+0.9",
+     "x": 960,
+     "y": 600
+    }
+   ]
+  },
+  {
+   "type": "free",
+   "mark": "rainbow",
+   "chapter": "Rainbow",
+   "title": "Rainbow",
+   "els": [
+    {
+     "k": "prop",
+     "p": "cloud-with-rain",
+     "w": 280,
+     "x": 960,
+     "y": 380,
+     "at": "rain",
+     "bob": 8,
+     "moves": [
+      {
+       "at": "bow",
+       "d": 0.6,
+       "y": 200,
+       "o": 0,
+       "s": 0.7
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#E53935:0",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.red",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#FB8C00:1",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.orange",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#FDD835:2",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.yellow",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#43A047:3",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.green",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#1E88E5:4",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.blue",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "art:arc:#8E24AA:5",
+     "w": 1200,
+     "x": 960,
+     "y": 520,
+     "reveal": {
+      "at": "bow.purple",
+      "d": 0.55
+     }
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 200,
+     "x": 1560,
+     "y": 260,
+     "at": "fav",
+     "wob": 6
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 820,
+    "s": 0.9,
+    "cheer": [
+     [
+      "fav",
+      "fav$+1.4"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "opts": [
+    {
+     "t": "red",
+     "c": "#E53935"
+    },
+    {
+     "t": "yellow",
+     "c": "#FDD835"
+    },
+    {
+     "t": "blue",
+     "c": "#1E88E5"
+    }
+   ],
+   "ans": "yellow",
+   "els": [
+    {
+     "k": "prop",
+     "p": "banana",
+     "w": 330,
+     "x": 960,
+     "y": 440,
+     "at": "q1+0.3",
+     "bob": 8
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "opts": [
+    {
+     "t": "green",
+     "c": "#43A047"
+    },
+    {
+     "t": "black",
+     "c": "#263238"
+    },
+    {
+     "t": "yellow",
+     "c": "#FDD835"
+    }
+   ],
+   "ans": "green",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:grass",
+     "w": 460,
+     "x": 960,
+     "y": 450,
+     "at": "q2+0.3"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "opts": [
+    {
+     "t": "white",
+     "c": "#FFFFFF"
+    },
+    {
+     "t": "yellow",
+     "c": "#FDD835"
+    },
+    {
+     "t": "blue",
+     "c": "#1E88E5"
+    }
+   ],
+   "ans": "blue",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:sky",
+     "w": 400,
+     "x": 960,
+     "y": 440,
+     "at": "q3+0.3"
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "at": "tip.colours",
+    "step": 0.15
+   },
+   "html": "<div class=\"big\" style=\"font-size:96px;line-height:1.05;text-align:center;white-space:nowrap\">Name the <span style=\"color:#1F7A4C\">colours</span><br>you can see!</div><div style=\"display:flex;gap:28px\"><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#E53935 40%,#E53935 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#FB8C00 40%,#FB8C00 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#FDD835 40%,#FDD835 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#43A047 40%,#43A047 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#1E88E5 40%,#1E88E5 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span><span class=\"n\" style=\"width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8 0 12%,#8E24AA 40%,#8E24AA 70%,#0003);box-shadow:0 8px 6px rgba(0,0,0,.18)\"></span></div>"
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

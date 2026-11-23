@@ -1,8 +1,6 @@
 name: Animated pilot video
+# Manual only now: lessons (the pilot included) render with video-lessons.yml
 on:
-  push:
-    branches: [dev]
-    paths: ['source/tools/video2/**']
   workflow_dispatch:
 permissions:
   contents: write

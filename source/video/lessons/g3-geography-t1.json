@@ -1,0 +1,875 @@
+{
+ "id": "g3-geography-t1",
+ "grade": "Grade 3",
+ "subject": "Geography",
+ "topic": "Landforms and water",
+ "page": "class-3-geography-landforms-and-water-worksheets",
+ "meta": {
+  "title": "Landforms and Water | Grade 3 Geography for Kids | Little Takhti",
+  "description": "Travel across Pakistan with Takhti to learn landforms: mountains, valleys, plateaus, plains, deserts and islands. Then follow a drop of water from a glacier down the Indus River to the Arabian Sea, and try a quick quiz. For Grade 3 children (ages 8 to 9).",
+  "tags": [
+   "landforms for kids",
+   "landforms and water bodies",
+   "grade 3 geography",
+   "geography of Pakistan",
+   "mountains plains deserts",
+   "Indus River",
+   "glacier"
+  ]
+ },
+ "thumb_at": [
+  "land",
+  -0.6
+ ],
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are exploring landforms and water. Let's travel across Pakistan!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "land"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "shapes",
+   "Landforms are the shapes of the land."
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "N",
+   "mountain",
+   "A mountain is very high land, like K2."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "valley",
+   "A valley is low land between mountains."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "plateau",
+   "A plateau is high, flat land, like Potohar."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "plain",
+   "A plain is wide, flat land, like most of Punjab."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "desert",
+   "A desert is dry land with little rain, like Thar."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "island",
+   "An island is land with water all around."
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "water"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "drop",
+   "Now let's follow a drop of water."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "glacier",
+   "It starts in a glacier, a river of ice."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "river",
+   "The ice melts and flows into the Indus River."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "lake",
+   "A lake has land all around, like Saiful Muluk."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "canal",
+   "Canals carry river water to farms."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "sea",
+   "At last, the river reaches the Arabian Sea!"
+  ],
+  [
+   "wait",
+   1.2
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "Which landform is dry land with little rain?"
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "A desert! Like the Thar Desert."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "What do we call a river of ice?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "A glacier! It melts into rivers."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "Which landform has water all around it?"
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "An island!"
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Remember: mountains are high, plains are flat, and rivers flow to the sea."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c4-bye",
+   "shrink": {
+    "at": "today",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "Grade 3 Geography",
+   "title": "Landforms <span style=\"color:#0E7490\">and water</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "today+0.6",
+   "row": {
+    "props": [
+     "snow-capped-mountain",
+     "desert",
+     "water-wave",
+     "art:island"
+    ],
+    "w": 120,
+    "at": "today.landforms",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "land",
+   "chapter": "Landforms",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:land",
+     "w": 3600,
+     "x": 1800,
+     "y": 540,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "cactus",
+     "w": 110,
+     "x": 2840,
+     "y": 770,
+     "snd": null
+    },
+    {
+     "k": "tag",
+     "text": "mountain",
+     "x": 1240,
+     "y": 200,
+     "to": [
+      1015,
+      280
+     ],
+     "at": "mountain.mountain",
+     "size": 58
+    },
+    {
+     "k": "chip",
+     "text": "K2",
+     "x": 960,
+     "y": 90,
+     "at": "mountain.k2",
+     "size": 50
+    },
+    {
+     "k": "tag",
+     "text": "valley",
+     "x": 470,
+     "y": 430,
+     "to": [
+      650,
+      712
+     ],
+     "at": "valley.valley",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "plateau",
+     "x": 1470,
+     "y": 400,
+     "to": [
+      1470,
+      565
+     ],
+     "at": "plateau.plateau",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "plain",
+     "x": 1980,
+     "y": 600,
+     "to": [
+      1980,
+      800
+     ],
+     "at": "plain.plain",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "desert",
+     "x": 2640,
+     "y": 600,
+     "to": [
+      2640,
+      800
+     ],
+     "at": "desert.desert",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "island",
+     "x": 3200,
+     "y": 640,
+     "to": [
+      3380,
+      820
+     ],
+     "at": "island.island",
+     "size": 58
+    }
+   ],
+   "bg": "#7CC6F2",
+   "cam0": {
+    "x": 2640,
+    "y": 540,
+    "s": 1
+   },
+   "cam": [
+    {
+     "at": "@land+0.3",
+     "x": 960,
+     "d": 4.6
+    },
+    {
+     "at": "plateau",
+     "x": 1450,
+     "d": 1.2
+    },
+    {
+     "at": "plain",
+     "x": 1900,
+     "d": 1.2
+    },
+    {
+     "at": "desert",
+     "x": 2400,
+     "d": 1.2
+    },
+    {
+     "at": "island",
+     "x": 2640,
+     "d": 1.0
+    }
+   ],
+   "title": "Landforms",
+   "title_out": "mountain",
+   "mascot": {
+    "x": 200,
+    "y": 840,
+    "s": 0.75
+   }
+  },
+  {
+   "type": "free",
+   "mark": "water",
+   "chapter": "Water bodies",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:land",
+     "w": 3600,
+     "x": 1800,
+     "y": 540,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "cactus",
+     "w": 110,
+     "x": 2840,
+     "y": 770,
+     "snd": null
+    },
+    {
+     "k": "tag",
+     "text": "glacier",
+     "x": 1200,
+     "y": 340,
+     "to": [
+      860,
+      450
+     ],
+     "at": "glacier.glacier",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "river",
+     "x": 1250,
+     "y": 700,
+     "to": [
+      1250,
+      860
+     ],
+     "at": "river.river",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "lake",
+     "x": 1040,
+     "y": 640,
+     "to": [
+      1040,
+      800
+     ],
+     "at": "lake.lake",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "canal",
+     "x": 2080,
+     "y": 640,
+     "to": [
+      2020,
+      825
+     ],
+     "at": "canal.canals",
+     "size": 58
+    },
+    {
+     "k": "tag",
+     "text": "sea",
+     "x": 3150,
+     "y": 650,
+     "to": [
+      3150,
+      820
+     ],
+     "at": "sea.sea",
+     "size": 58
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 80,
+     "x": 930,
+     "y": 285,
+     "at": "drop+0.6",
+     "bob": 4,
+     "z": 5,
+     "moves": [
+      {
+       "at": "glacier.ice",
+       "d": 1.6,
+       "x": 750,
+       "y": 575,
+       "ease": "eio"
+      },
+      {
+       "at": "river.flows",
+       "d": 0.9,
+       "x": 655,
+       "y": 715,
+       "ease": "lin"
+      },
+      {
+       "at": "river.flows+0.9",
+       "d": 0.9,
+       "x": 700,
+       "y": 850,
+       "ease": "lin"
+      },
+      {
+       "at": "river.flows+1.8",
+       "d": 1.6,
+       "x": 1250,
+       "y": 860,
+       "ease": "eo"
+      },
+      {
+       "at": "canal-0.6",
+       "d": 1.8,
+       "x": 1900,
+       "y": 880,
+       "ease": "eio"
+      },
+      {
+       "at": "sea-0.4",
+       "d": 2.2,
+       "x": 3050,
+       "y": 860,
+       "ease": "eio"
+      }
+     ]
+    }
+   ],
+   "bg": "#7CC6F2",
+   "cam0": {
+    "x": 960,
+    "y": 540,
+    "s": 1
+   },
+   "cam": [
+    {
+     "at": "canal-0.6",
+     "x": 1700,
+     "d": 1.8
+    },
+    {
+     "at": "sea-0.4",
+     "x": 2640,
+     "d": 2.2
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 840,
+    "s": 0.75,
+    "cheer": [
+     [
+      "sea.sea",
+      "sea$+1.2"
+     ]
+    ]
+   },
+   "confetti": [
+    {
+     "at": "sea.sea",
+     "x": 1400,
+     "y": 700,
+     "n": 70
+    }
+   ],
+   "sfx": [
+    {
+     "at": "sea.sea",
+     "n": "splash",
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "opts": [
+    "valley",
+    "desert",
+    "island"
+   ],
+   "ans": "desert",
+   "els": [
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 200,
+     "x": 760,
+     "y": 360,
+     "at": "q1.dry",
+     "wob": 6
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 140,
+     "x": 1160,
+     "y": 360,
+     "at": "q1.rain",
+     "cross": "q1.little",
+     "crossS": 1.2,
+     "bob": 5
+    },
+    {
+     "k": "card",
+     "html": "dry land, little rain",
+     "x": 960,
+     "y": 580,
+     "at": "q1.dry",
+     "size": 64,
+     "pad": "14px 40px 2px"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "opts": [
+    "canal",
+    "glacier",
+    "lake"
+   ],
+   "ans": "glacier",
+   "els": [
+    {
+     "k": "prop",
+     "p": "snow-capped-mountain",
+     "w": 240,
+     "x": 760,
+     "y": 380,
+     "at": "q2.river",
+     "bob": 4
+    },
+    {
+     "k": "prop",
+     "p": "ice",
+     "w": 180,
+     "x": 1160,
+     "y": 380,
+     "at": "q2.ice",
+     "wob": 5
+    },
+    {
+     "k": "card",
+     "html": "a river of ice",
+     "x": 960,
+     "y": 590,
+     "at": "q2.ice",
+     "size": 64,
+     "pad": "14px 40px 2px"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "opts": [
+    "island",
+    "plateau",
+    "plain"
+   ],
+   "ans": "island",
+   "els": [
+    {
+     "k": "prop",
+     "p": "water-wave",
+     "w": 130,
+     "x": 720,
+     "y": 460,
+     "at": "q3.water+0.00",
+     "wob": 5
+    },
+    {
+     "k": "prop",
+     "p": "water-wave",
+     "w": 130,
+     "x": 1200,
+     "y": 460,
+     "at": "q3.water+0.12",
+     "wob": 5
+    },
+    {
+     "k": "prop",
+     "p": "water-wave",
+     "w": 130,
+     "x": 960,
+     "y": 320,
+     "at": "q3.water+0.24",
+     "wob": 5
+    },
+    {
+     "k": "prop",
+     "p": "water-wave",
+     "w": 130,
+     "x": 960,
+     "y": 600,
+     "at": "q3.water+0.36",
+     "wob": 5
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"width:140px;height:140px;border-radius:50%;border:7px dashed #FF7A45;color:#FF7A45;font-size:90px;text-align:center;line-height:150px;background:#FFF3C4\">?</div>",
+     "x": 960,
+     "y": 460,
+     "at": "q3.landform"
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "ats": [
+     "tip.mountains",
+     "tip.plains",
+     "tip.rivers"
+    ]
+   },
+   "html": "<div class=\"big\" style=\"font-size:80px;line-height:1.25;text-align:left;white-space:nowrap\"><span class=\"n\"><span style=\"color:#7A6656\">Mountains</span> are high.</span><br><span class=\"n\"><span style=\"color:#3E9A3A\">Plains</span> are flat.</span><br><span class=\"n\"><span style=\"color:#1E88E5\">Rivers</span> flow to the sea.</span></div>",
+   "x": 1130
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

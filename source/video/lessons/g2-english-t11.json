@@ -1,0 +1,1071 @@
+{
+ "id": "g2-english-t11",
+ "grade": "Grade 2",
+ "subject": "English",
+ "topic": "Adverbs",
+ "page": "class-2-english-adverbs-worksheets",
+ "meta": {
+  "description": "What is an adverb? Watch the turtle walk slowly and the rabbit hop quickly, learn how to add -ly (and the y to i rule), and find adverbs that tell when, where and how often. Then try a quick quiz with Takhti. For Grade 2 children (ages 7 to 8).",
+  "tags": [
+   "adverbs for kids",
+   "what is an adverb",
+   "grade 2 english",
+   "ly adverbs",
+   "english grammar for kids",
+   "parts of speech"
+  ],
+  "title": "Adverbs | Grade 2 English for Kids | Little Takhti"
+ },
+ "thumb_at": [
+  "race",
+  -0.6
+ ],
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are learning about adverbs. Adverbs tell us more about verbs!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "race"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "turtle",
+   "The turtle walks slowly."
+  ],
+  [
+   "wait",
+   1.2
+  ],
+  [
+   "say",
+   "N",
+   "rabbit",
+   "The rabbit hops quickly."
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "verbs",
+   "Walks and hops are verbs. They are doing words."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "how",
+   "Slowly and quickly tell us how. They are adverbs!"
+  ],
+  [
+   "wait",
+   1.2
+  ],
+  [
+   "mark",
+   "ly"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "ly",
+   "Many adverbs end with the letters L and Y."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "slow",
+   "Slow becomes slowly."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "quick",
+   "Quick becomes quickly."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "N",
+   "loud",
+   "Loud becomes loudly."
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "N",
+   "happy",
+   "If a word ends in Y, change the Y to I. Happy becomes happily!"
+  ],
+  [
+   "wait",
+   1.2
+  ],
+  [
+   "mark",
+   "kinds"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "kinds",
+   "Adverbs can also tell us when, where and how often."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "when",
+   "We went to the zoo yesterday."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "where",
+   "The children played outside."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "often",
+   "I always brush my teeth."
+  ],
+  [
+   "wait",
+   1.2
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "Find the adverb. The dog barked loudly."
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "Loudly! It tells us how the dog barked."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "Which is the right adverb for happy?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "Happily! Change the Y to I, then add L Y."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "Which adverb tells us when? We will visit Nani soon."
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "Soon! It tells us when."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Find the verb, then ask how, when, where or how often. That word is the adverb!"
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c4-bye",
+   "shrink": {
+    "at": "today",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "Grade 2 English",
+   "title": "<span style=\"color:#1D5FD1\">Adverbs</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "today+0.6",
+   "row": {
+    "props": [
+     "turtle",
+     "rabbit",
+     "snail",
+     "speaker-high-volume"
+    ],
+    "w": 110,
+    "at": "today.adverbs",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "race",
+   "chapter": "What is an adverb?",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:track",
+     "w": 1800,
+     "x": 960,
+     "y": 560,
+     "at": "@race",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "art:track",
+     "w": 1800,
+     "x": 960,
+     "y": 790,
+     "at": "@race+0.15",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "turtle",
+     "w": 190,
+     "x": 200,
+     "y": 520,
+     "at": "turtle",
+     "moves": [
+      {
+       "at": "turtle.walks",
+       "d": 5.5,
+       "x": 760,
+       "ease": "lin"
+      }
+     ],
+     "hop": {
+      "at": "turtle.walks",
+      "d": 5.5,
+      "n": 9,
+      "h": 6
+     }
+    },
+    {
+     "k": "prop",
+     "p": "rabbit",
+     "w": 200,
+     "x": 200,
+     "y": 740,
+     "at": "rabbit",
+     "moves": [
+      {
+       "at": "rabbit.hops",
+       "d": 1.3,
+       "x": 1640,
+       "ease": "eio"
+      }
+     ],
+     "hop": {
+      "at": "rabbit.hops",
+      "d": 1.3,
+      "n": 5,
+      "h": 90
+     }
+    },
+    {
+     "k": "card",
+     "html": "The turtle <span class=\"vb\">walks</span> <span class=\"av\">slowly</span>.",
+     "x": 960,
+     "y": 150,
+     "at": "turtle",
+     "size": 72,
+     "pad": "16px 44px 4px",
+     "on": [
+      {
+       "at": "turtle.slowly",
+       "sel": ".av",
+       "css": "background:#FFE680;border-radius:14px;padding:0 8px"
+      },
+      {
+       "at": "verbs.walks",
+       "until": "how",
+       "sel": ".vb",
+       "css": "background:#CFE3FF;border-radius:14px;padding:0 8px"
+      },
+      {
+       "at": "how.slowly",
+       "sel": ".av",
+       "css": "background:#FFE680;border-radius:14px;padding:0 8px;outline:6px solid #1F7A4C"
+      }
+     ]
+    },
+    {
+     "k": "card",
+     "html": "The rabbit <span class=\"vb\">hops</span> <span class=\"av\">quickly</span>.",
+     "x": 960,
+     "y": 300,
+     "at": "rabbit",
+     "size": 72,
+     "pad": "16px 44px 4px",
+     "on": [
+      {
+       "at": "rabbit.quickly",
+       "sel": ".av",
+       "css": "background:#FFE680;border-radius:14px;padding:0 8px"
+      },
+      {
+       "at": "verbs.hops",
+       "until": "how",
+       "sel": ".vb",
+       "css": "background:#CFE3FF;border-radius:14px;padding:0 8px"
+      },
+      {
+       "at": "how.quickly",
+       "sel": ".av",
+       "css": "background:#FFE680;border-radius:14px;padding:0 8px;outline:6px solid #1F7A4C"
+      }
+     ]
+    },
+    {
+     "k": "chip",
+     "text": "verbs",
+     "x": 1560,
+     "y": 150,
+     "at": "verbs.verbs",
+     "bg": "#1D5FD1",
+     "fg": "#fff",
+     "size": 50,
+     "out": "how"
+    },
+    {
+     "k": "chip",
+     "text": "adverbs",
+     "x": 1560,
+     "y": 300,
+     "at": "how.adverbs",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 50
+    }
+   ],
+   "mascot": false,
+   "confetti": [
+    {
+     "at": "how.adverbs",
+     "x": 1560,
+     "y": 300
+    }
+   ]
+  },
+  {
+   "type": "free",
+   "mark": "ly",
+   "chapter": "Adding -ly",
+   "els": [
+    {
+     "k": "chip",
+     "text": "-ly",
+     "x": 960,
+     "y": 150,
+     "at": "ly.l",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 60,
+     "out": "happy"
+    },
+    {
+     "k": "card",
+     "html": "slow",
+     "x": 640,
+     "y": 330,
+     "at": "slow",
+     "size": 84,
+     "pad": "10px 36px 0",
+     "out": "happy"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">+</div>",
+     "x": 830,
+     "y": 330,
+     "at": "slow.becomes",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "ly",
+     "x": 1750,
+     "y": 330,
+     "at": "slow.becomes",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 70,
+     "out": "happy",
+     "moves": [
+      {
+       "at": "slow.becomes+0.2",
+       "d": 0.5,
+       "x": 940,
+       "ease": "eo",
+       "snd": "ding",
+       "g": 0.3,
+       "p": 1.2
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">→</div>",
+     "x": 1100,
+     "y": 330,
+     "at": "slow.becomes+0.6",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:96px;color:#123B28\">slow<span style=\"color:#1F7A4C\">ly</span></div>",
+     "x": 1380,
+     "y": 330,
+     "at": "slow$-0.4",
+     "out": "happy"
+    },
+    {
+     "k": "card",
+     "html": "quick",
+     "x": 640,
+     "y": 480,
+     "at": "quick",
+     "size": 84,
+     "pad": "10px 36px 0",
+     "out": "happy"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">+</div>",
+     "x": 830,
+     "y": 480,
+     "at": "quick.becomes",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "ly",
+     "x": 1750,
+     "y": 480,
+     "at": "quick.becomes",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 70,
+     "out": "happy",
+     "moves": [
+      {
+       "at": "quick.becomes+0.2",
+       "d": 0.5,
+       "x": 940,
+       "ease": "eo",
+       "snd": "ding",
+       "g": 0.3,
+       "p": 1.2
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">→</div>",
+     "x": 1100,
+     "y": 480,
+     "at": "quick.becomes+0.6",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:96px;color:#123B28\">quick<span style=\"color:#1F7A4C\">ly</span></div>",
+     "x": 1380,
+     "y": 480,
+     "at": "quick$-0.4",
+     "out": "happy"
+    },
+    {
+     "k": "card",
+     "html": "loud",
+     "x": 640,
+     "y": 630,
+     "at": "loud",
+     "size": 84,
+     "pad": "10px 36px 0",
+     "out": "happy"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">+</div>",
+     "x": 830,
+     "y": 630,
+     "at": "loud.becomes",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "ly",
+     "x": 1750,
+     "y": 630,
+     "at": "loud.becomes",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 70,
+     "out": "happy",
+     "moves": [
+      {
+       "at": "loud.becomes+0.2",
+       "d": 0.5,
+       "x": 940,
+       "ease": "eo",
+       "snd": "ding",
+       "g": 0.3,
+       "p": 1.2
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:90px;color:#FF7A45\">→</div>",
+     "x": 1100,
+     "y": 630,
+     "at": "loud.becomes+0.6",
+     "out": "happy",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:96px;color:#123B28\">loud<span style=\"color:#1F7A4C\">ly</span></div>",
+     "x": 1380,
+     "y": 630,
+     "at": "loud$-0.4",
+     "out": "happy"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:150px;color:#123B28\">happ</div>",
+     "x": 840,
+     "y": 420,
+     "at": "happy+0.2"
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:150px;color:#E53935\">y</div>",
+     "x": 1030,
+     "y": 420,
+     "at": "happy+0.2",
+     "cross": "happy.change",
+     "crossS": 0.8,
+     "moves": [
+      {
+       "at": "happy.i",
+       "d": 0.4,
+       "y": 300,
+       "o": 0
+      }
+     ]
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"word\" style=\"font-size:150px;color:#1D5FD1\">i</div>",
+     "x": 1015,
+     "y": 420,
+     "at": "happy.i+0.1"
+    },
+    {
+     "k": "chip",
+     "text": "ly",
+     "x": 1500,
+     "y": 420,
+     "at": "happy.becomes",
+     "bg": "#1F7A4C",
+     "fg": "#fff",
+     "size": 110,
+     "moves": [
+      {
+       "at": "happy.becomes+0.3",
+       "d": 0.5,
+       "x": 1150,
+       "ease": "eo",
+       "snd": "ding",
+       "g": 0.35,
+       "p": 1.3
+      }
+     ]
+    },
+    {
+     "k": "card",
+     "html": "happy <span style=\"color:#FF7A45\">→</span> happ<span style=\"color:#1D5FD1\">i</span><span style=\"color:#1F7A4C\">ly</span>",
+     "x": 960,
+     "y": 680,
+     "at": "happy.happily",
+     "size": 90,
+     "pad": "14px 46px 2px"
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 820,
+    "s": 0.85,
+    "cheer": [
+     [
+      "happy.happily",
+      "happy$+1"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "kinds",
+   "chapter": "When, where and how often",
+   "els": [
+    {
+     "k": "html",
+     "html": "<div style=\"width:420px;height:560px;background:#fff;border:5px solid #FB8C00;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 480,
+     "y": 470,
+     "at": "kinds.when",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "When?",
+     "x": 480,
+     "y": 230,
+     "at": "kinds.when",
+     "bg": "#FB8C00",
+     "fg": "#fff",
+     "size": 56
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:420px;height:560px;background:#fff;border:5px solid #1E88E5;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 960,
+     "y": 470,
+     "at": "kinds.where",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Where?",
+     "x": 960,
+     "y": 230,
+     "at": "kinds.where",
+     "bg": "#1E88E5",
+     "fg": "#fff",
+     "size": 56
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:420px;height:560px;background:#fff;border:5px solid #8E24AA;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1440,
+     "y": 470,
+     "at": "kinds.often",
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "How often?",
+     "x": 1440,
+     "y": 230,
+     "at": "kinds.often",
+     "bg": "#8E24AA",
+     "fg": "#fff",
+     "size": 56
+    },
+    {
+     "k": "prop",
+     "p": "calendar",
+     "w": 170,
+     "x": 480,
+     "y": 420,
+     "at": "when",
+     "bob": 6
+    },
+    {
+     "k": "card",
+     "html": "yesterday",
+     "x": 480,
+     "y": 620,
+     "at": "when.yesterday",
+     "size": 72,
+     "pad": "10px 30px 0",
+     "glow": [
+      "when.yesterday"
+     ],
+     "style": "background:#FFE680"
+    },
+    {
+     "k": "prop",
+     "p": "deciduous-tree",
+     "w": 170,
+     "x": 960,
+     "y": 420,
+     "at": "where",
+     "bob": 6
+    },
+    {
+     "k": "card",
+     "html": "outside",
+     "x": 960,
+     "y": 620,
+     "at": "where.outside",
+     "size": 72,
+     "pad": "10px 30px 0",
+     "glow": [
+      "where.outside"
+     ],
+     "style": "background:#FFE680"
+    },
+    {
+     "k": "prop",
+     "p": "toothbrush",
+     "w": 170,
+     "x": 1440,
+     "y": 420,
+     "at": "often",
+     "bob": 6
+    },
+    {
+     "k": "card",
+     "html": "always",
+     "x": 1440,
+     "y": 620,
+     "at": "often.always",
+     "size": 72,
+     "pad": "10px 30px 0",
+     "glow": [
+      "often.always"
+     ],
+     "style": "background:#FFE680"
+    }
+   ],
+   "mascot": {
+    "x": 1780,
+    "y": 880,
+    "s": 0.55
+   }
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "opts": [
+    "dog",
+    "barked",
+    "loudly"
+   ],
+   "ans": "loudly",
+   "els": [
+    {
+     "k": "prop",
+     "p": "dog",
+     "w": 230,
+     "x": 700,
+     "y": 330,
+     "at": "q1.dog",
+     "bob": 6
+    },
+    {
+     "k": "prop",
+     "p": "speaker-high-volume",
+     "w": 150,
+     "x": 1200,
+     "y": 330,
+     "at": "q1.barked",
+     "wob": 6
+    },
+    {
+     "k": "card",
+     "html": "The dog barked loudly.",
+     "x": 960,
+     "y": 560,
+     "at": "q1.the",
+     "size": 72,
+     "pad": "16px 44px 4px"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "opts": [
+    "happyly",
+    "happily",
+    "happly"
+   ],
+   "ans": "happily",
+   "els": [
+    {
+     "k": "prop",
+     "p": "smiling-face",
+     "w": 200,
+     "x": 960,
+     "y": 370,
+     "at": "q2",
+     "bob": 6
+    },
+    {
+     "k": "card",
+     "html": "happy <span style=\"color:#FF7A45\">→</span> ?",
+     "x": 960,
+     "y": 590,
+     "at": "q2.happy",
+     "size": 72,
+     "pad": "16px 44px 4px"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "opts": [
+    "outside",
+    "soon",
+    "slowly"
+   ],
+   "ans": "soon",
+   "els": [
+    {
+     "k": "prop",
+     "p": "calendar",
+     "w": 200,
+     "x": 960,
+     "y": 340,
+     "at": "q3",
+     "bob": 6
+    },
+    {
+     "k": "card",
+     "html": "We will visit Nani soon.",
+     "x": 960,
+     "y": 560,
+     "at": "q3.we",
+     "size": 72,
+     "pad": "16px 44px 4px"
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "ats": [
+     "tip.verb",
+     "tip.how",
+     "tip.when",
+     "tip.where",
+     "tip.often"
+    ]
+   },
+   "html": "<div class=\"big\" style=\"font-size:84px;line-height:1.1;text-align:center;white-space:nowrap\">Find the <span class=\"vb\">verb</span>, then ask:</div><div class=\"big\" style=\"font-size:72px;display:flex;gap:22px;white-space:nowrap\"><span class=\"n chip\" style=\"background:#1F7A4C;color:#fff;font-size:64px\">how?</span><span class=\"n chip\" style=\"background:#FB8C00;color:#fff;font-size:64px\">when?</span><span class=\"n chip\" style=\"background:#1E88E5;color:#fff;font-size:64px\">where?</span><span class=\"n chip\" style=\"background:#8E24AA;color:#fff;font-size:64px\">how often?</span></div>"
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

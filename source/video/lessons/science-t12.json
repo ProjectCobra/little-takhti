@@ -1,0 +1,1264 @@
+{
+ "id": "science-t12",
+ "grade": "Grade 1",
+ "subject": "Science",
+ "topic": "Parts of a plant",
+ "page": "class-1-science-parts-of-a-plant-worksheets",
+ "meta": {
+  "description": "Learn the parts of a plant with Takhti: roots, stem, leaves and flower, and the job each part does. Find out which plant parts we eat and what plants need to grow, then try a quick quiz. For Grade 1 children (ages 6 to 7).",
+  "tags": [
+   "parts of a plant",
+   "plants for kids",
+   "grade 1 science",
+   "roots stem leaves flower",
+   "what plants need",
+   "science for kids"
+  ],
+  "title": "Parts of a Plant | Grade 1 Science for Kids | Little Takhti"
+ },
+ "thumb_at": [
+  "parts",
+  -0.6
+ ],
+ "script": [
+  [
+   "mark",
+   "intro"
+  ],
+  [
+   "wait",
+   1.7
+  ],
+  [
+   "say",
+   "T",
+   "hi",
+   "Hi friends! I'm Takhti."
+  ],
+  [
+   "say",
+   "T",
+   "today",
+   "Today we are finding out about the parts of a plant!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "parts"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "whole",
+   "A plant has roots, a stem, leaves and a flower."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "job",
+   "Each part has a job!"
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "jobs"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "roots",
+   "The roots grow into the soil. They take in water and hold the plant in place."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "stem",
+   "The stem holds the plant up. It carries water to the leaves and flower."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "leaves",
+   "The leaves use sunlight to make food for the plant."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "N",
+   "flower",
+   "The flower makes seeds. Bright flowers bring bees!"
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "say",
+   "T",
+   "factory",
+   "A plant is like a little factory!"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "mark",
+   "eat"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "eat",
+   "We eat different parts of plants."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "carrot",
+   "A carrot is a root."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "spinach",
+   "Spinach is a leaf."
+  ],
+  [
+   "wait",
+   0.3
+  ],
+  [
+   "say",
+   "T",
+   "mango",
+   "A mango is a fruit, with a seed inside!"
+  ],
+  [
+   "wait",
+   1.0
+  ],
+  [
+   "mark",
+   "need"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "need",
+   "To grow well, plants need sunlight, water, air and soil."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "quiz"
+  ],
+  [
+   "wait",
+   0.6
+  ],
+  [
+   "say",
+   "T",
+   "turn",
+   "Your turn! Shout the answer before the time runs out."
+  ],
+  [
+   "wait",
+   0.4
+  ],
+  [
+   "mark",
+   "q1"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q1",
+   "Which part grows under the soil?"
+  ],
+  [
+   "mark",
+   "cd1"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a1",
+   "Roots! The roots grow under the soil."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q2"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q2",
+   "Which part makes food using sunlight?"
+  ],
+  [
+   "mark",
+   "cd2"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a2",
+   "Leaves! Leaves make food using sunlight."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "q3"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "N",
+   "q3",
+   "Which part holds the plant up?"
+  ],
+  [
+   "mark",
+   "cd3"
+  ],
+  [
+   "wait",
+   5.2
+  ],
+  [
+   "say",
+   "N",
+   "a3",
+   "The stem! It holds the plant up."
+  ],
+  [
+   "wait",
+   1.4
+  ],
+  [
+   "mark",
+   "recap"
+  ],
+  [
+   "wait",
+   0.8
+  ],
+  [
+   "say",
+   "T",
+   "tip",
+   "Remember: roots drink, the stem carries, leaves make food, and flowers make seeds."
+  ],
+  [
+   "wait",
+   1.6
+  ],
+  [
+   "mark",
+   "end"
+  ],
+  [
+   "wait",
+   0.9
+  ],
+  [
+   "say",
+   "T",
+   "bye",
+   "Find more fun worksheets at Little Takhti. Bye bye!"
+  ],
+  [
+   "wait",
+   2.6
+  ]
+ ],
+ "scenes": [
+  {
+   "type": "intro",
+   "mark": "intro",
+   "chapter": "Hello",
+   "clip": "c4-bye",
+   "shrink": {
+    "at": "today",
+    "x": 500,
+    "y": 560,
+    "s": 0.45,
+    "r": -2
+   },
+   "chip": "Grade 1 Science",
+   "title": "Parts of a <span style=\"color:#3A7220\">plant</span>",
+   "card_xy": [
+    1430,
+    380
+   ],
+   "maxw": 800,
+   "size": 140,
+   "card_at": "today+0.6",
+   "row": {
+    "props": [
+     "seedling",
+     "sunflower",
+     "potted-plant",
+     "tulip"
+    ],
+    "w": 110,
+    "at": "today.parts",
+    "step": 0.15,
+    "x": [
+     1170,
+     1630
+    ],
+    "y": 700
+   }
+  },
+  {
+   "type": "free",
+   "mark": "parts",
+   "chapter": "Parts of a plant",
+   "title": "Parts of a plant",
+   "title_y": 90,
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 620,
+     "x": 700,
+     "y": 455,
+     "at": "@parts+0.1",
+     "snd": {
+      "n": "whoosh",
+      "g": 0.3
+     }
+    },
+    {
+     "k": "tag",
+     "text": "roots",
+     "x": 1220,
+     "y": 800,
+     "to": [
+      773,
+      781
+     ],
+     "at": "whole.roots",
+     "glow": [
+      "whole.roots"
+     ],
+     "size": 60
+    },
+    {
+     "k": "tag",
+     "text": "stem",
+     "x": 1220,
+     "y": 640,
+     "to": [
+      707,
+      586
+     ],
+     "at": "whole.stem",
+     "glow": [
+      "whole.stem"
+     ],
+     "size": 60
+    },
+    {
+     "k": "tag",
+     "text": "leaves",
+     "x": 1220,
+     "y": 470,
+     "to": [
+      847,
+      447
+     ],
+     "at": "whole.leaves",
+     "glow": [
+      "whole.leaves"
+     ],
+     "size": 60
+    },
+    {
+     "k": "tag",
+     "text": "flower",
+     "x": 1220,
+     "y": 220,
+     "to": [
+      773,
+      186
+     ],
+     "at": "whole.flower",
+     "glow": [
+      "whole.flower"
+     ],
+     "size": 60
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 820,
+    "s": 0.85,
+    "cheer": [
+     [
+      "job",
+      "job$+0.6"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "jobs",
+   "chapter": "What each part does",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 600,
+     "x": 560,
+     "y": 480,
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 300,
+     "c": "#FFD93B",
+     "x": 560,
+     "y": 780,
+     "at": "roots+0.1",
+     "out": "stem",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "roots",
+     "out": "stem",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Roots",
+     "x": 1380,
+     "y": 220,
+     "at": "roots+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "stem",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "roots+0.3",
+     "out": "stem",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;white-space:nowrap\">take in water</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "roots+0.45",
+     "out": "stem",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 170,
+     "c": "#FFD93B",
+     "x": 562,
+     "y": 527,
+     "at": "stem+0.1",
+     "out": "leaves",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "stem",
+     "out": "leaves",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Stem",
+     "x": 1380,
+     "y": 220,
+     "at": "stem+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "leaves",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "potted-plant",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "stem+0.3",
+     "out": "leaves",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;white-space:nowrap\">holds the plant up</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "stem+0.45",
+     "out": "leaves",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 230,
+     "c": "#FFD93B",
+     "x": 655,
+     "y": 480,
+     "at": "leaves+0.1",
+     "out": "flower",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "leaves",
+     "out": "flower",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Leaves",
+     "x": 1380,
+     "y": 220,
+     "at": "leaves+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "flower",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "leaves+0.3",
+     "out": "flower",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;white-space:nowrap\">make food</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "leaves+0.45",
+     "out": "flower",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "ring",
+     "d": 330,
+     "c": "#FFD93B",
+     "x": 566,
+     "y": 263,
+     "at": "flower+0.1",
+     "out": "factory",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:760px;height:560px;background:#fff;border:5px solid #123B28;border-bottom-width:14px;border-radius:40px\"></div>",
+     "x": 1380,
+     "y": 420,
+     "at": "flower",
+     "out": "factory",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "chip",
+     "text": "Flower",
+     "x": 1380,
+     "y": 220,
+     "at": "flower+0.15",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 64,
+     "out": "factory",
+     "fix": true
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 220,
+     "x": 1380,
+     "y": 430,
+     "at": "flower+0.3",
+     "out": "factory",
+     "bob": 8,
+     "fix": true
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;white-space:nowrap\">makes seeds</div>",
+     "x": 1380,
+     "y": 610,
+     "at": "flower+0.45",
+     "out": "factory",
+     "fix": true,
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 528,
+     "y": 796,
+     "at": "roots.water+0.0",
+     "out": "leaves",
+     "moves": [
+      {
+       "at": "stem.carries+0.00",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "stem.carries+0.70",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 560,
+     "y": 796,
+     "at": "roots.water+0.2",
+     "out": "leaves",
+     "moves": [
+      {
+       "at": "stem.carries+0.35",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "stem.carries+1.05",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 56,
+     "x": 592,
+     "y": 796,
+     "at": "roots.water+0.4",
+     "out": "leaves",
+     "moves": [
+      {
+       "at": "stem.carries+0.70",
+       "d": 0.7,
+       "x": 562,
+       "y": 638,
+       "ease": "lin"
+      },
+      {
+       "at": "stem.carries+1.40",
+       "d": 1.2,
+       "x": 566,
+       "y": 346,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 170,
+     "x": 1028,
+     "y": -67,
+     "at": "leaves.sunlight",
+     "wob": 6,
+     "out": "flower",
+     "moves": [
+      {
+       "at": "leaves.sunlight",
+       "d": 0.8,
+       "x": 828,
+       "y": 173,
+       "ease": "eo"
+      }
+     ]
+    },
+    {
+     "k": "prop",
+     "p": "honeybee",
+     "w": 120,
+     "x": -100,
+     "y": 200,
+     "at": "flower.bees-0.6",
+     "wob": 8,
+     "snd": null,
+     "moves": [
+      {
+       "at": "flower.bees-0.6",
+       "d": 1.4,
+       "x": 476,
+       "y": 223,
+       "arc": 120,
+       "ease": "eio"
+      }
+     ],
+     "hop": {
+      "at": "factory",
+      "d": 1.4,
+      "n": 3,
+      "h": 30
+     }
+    }
+   ],
+   "mascot": {
+    "x": 1720,
+    "y": 830,
+    "s": 0.7,
+    "cheer": [
+     [
+      "factory",
+      "factory$+1"
+     ]
+    ]
+   },
+   "confetti": [
+    {
+     "at": "factory+0.3",
+     "x": 1380,
+     "y": 500
+    }
+   ]
+  },
+  {
+   "type": "free",
+   "mark": "eat",
+   "chapter": "Parts we eat",
+   "title": "Parts we eat",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:bin:#FB8C00",
+     "w": 340,
+     "x": 520,
+     "y": 770,
+     "at": "eat+0.20"
+    },
+    {
+     "k": "prop",
+     "p": "art:bin:#43A047",
+     "w": 340,
+     "x": 960,
+     "y": 770,
+     "at": "eat+0.35"
+    },
+    {
+     "k": "prop",
+     "p": "art:bin:#E53935",
+     "w": 340,
+     "x": 1400,
+     "y": 770,
+     "at": "eat+0.50"
+    },
+    {
+     "k": "chip",
+     "text": "Root",
+     "x": 520,
+     "y": 800,
+     "at": "eat+0.35",
+     "bg": "#FB8C00",
+     "fg": "#fff",
+     "size": 50
+    },
+    {
+     "k": "chip",
+     "text": "Leaf",
+     "x": 960,
+     "y": 800,
+     "at": "eat+0.50",
+     "bg": "#43A047",
+     "fg": "#fff",
+     "size": 50
+    },
+    {
+     "k": "chip",
+     "text": "Fruit",
+     "x": 1400,
+     "y": 800,
+     "at": "eat+0.65",
+     "bg": "#E53935",
+     "fg": "#fff",
+     "size": 50
+    },
+    {
+     "k": "prop",
+     "p": "carrot",
+     "x": 960,
+     "y": 380,
+     "at": "carrot",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "carrot.root+0.1",
+       "d": 0.7,
+       "x": 520,
+       "y": 690,
+       "s": 0.85,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ],
+     "w": 200
+    },
+    {
+     "k": "prop",
+     "p": "leafy-green",
+     "x": 960,
+     "y": 380,
+     "at": "spinach",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "spinach.leaf+0.1",
+       "d": 0.7,
+       "x": 960,
+       "y": 690,
+       "s": 0.85,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ],
+     "w": 200
+    },
+    {
+     "k": "prop",
+     "p": "mango",
+     "x": 960,
+     "y": 380,
+     "at": "mango",
+     "bob": 6,
+     "moves": [
+      {
+       "at": "mango.fruit+0.1",
+       "d": 0.7,
+       "x": 1400,
+       "y": 690,
+       "s": 0.85,
+       "arc": 160,
+       "snd": "ding",
+       "g": 0.3
+      }
+     ]
+    }
+   ],
+   "mascot": {
+    "x": 1730,
+    "y": 560,
+    "s": 0.8,
+    "cheer": [
+     [
+      "mango.seed",
+      "mango$+1"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "free",
+   "mark": "need",
+   "title": "Plants need",
+   "els": [
+    {
+     "k": "html",
+     "html": "<div style=\"width:270px;height:300px;background:#fff;border:5px solid #123B28;border-bottom-width:12px;border-radius:36px\"></div>",
+     "x": 480,
+     "y": 470,
+     "at": "need.sunlight-0.1",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 190,
+     "x": 480,
+     "y": 440,
+     "at": "need.sunlight",
+     "bob": 6
+    },
+    {
+     "k": "chip",
+     "text": "sunlight",
+     "x": 480,
+     "y": 680,
+     "at": "need.sunlight+0.1",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 48
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:270px;height:300px;background:#fff;border:5px solid #123B28;border-bottom-width:12px;border-radius:36px\"></div>",
+     "x": 800,
+     "y": 470,
+     "at": "need.water-0.1",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "droplet",
+     "w": 190,
+     "x": 800,
+     "y": 440,
+     "at": "need.water",
+     "bob": 6
+    },
+    {
+     "k": "chip",
+     "text": "water",
+     "x": 800,
+     "y": 680,
+     "at": "need.water+0.1",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 48
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:270px;height:300px;background:#fff;border:5px solid #123B28;border-bottom-width:12px;border-radius:36px\"></div>",
+     "x": 1120,
+     "y": 470,
+     "at": "need.air-0.1",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "wind-face",
+     "w": 190,
+     "x": 1120,
+     "y": 440,
+     "at": "need.air",
+     "bob": 6
+    },
+    {
+     "k": "chip",
+     "text": "air",
+     "x": 1120,
+     "y": 680,
+     "at": "need.air+0.1",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 48
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"width:270px;height:300px;background:#fff;border:5px solid #123B28;border-bottom-width:12px;border-radius:36px\"></div>",
+     "x": 1440,
+     "y": 470,
+     "at": "need.soil-0.1",
+     "snd": null
+    },
+    {
+     "k": "prop",
+     "p": "art:soil",
+     "w": 230,
+     "x": 1440,
+     "y": 440,
+     "at": "need.soil",
+     "bob": 6
+    },
+    {
+     "k": "chip",
+     "text": "soil",
+     "x": 1440,
+     "y": 680,
+     "at": "need.soil+0.1",
+     "bg": "#123B28",
+     "fg": "#FFD93B",
+     "size": 48
+    },
+    {
+     "k": "prop",
+     "p": "seedling",
+     "w": 120,
+     "x": 1440,
+     "y": 368,
+     "at": "need.soil+0.4",
+     "hop": {
+      "at": "need$+0.3",
+      "d": 0.6,
+      "h": 30
+     }
+    }
+   ],
+   "mascot": {
+    "x": 200,
+    "y": 830,
+    "s": 0.8
+   }
+  },
+  {
+   "type": "quizintro",
+   "mark": "quiz",
+   "chapter": "Quiz"
+  },
+  {
+   "type": "question",
+   "mark": "q1",
+   "n": 1,
+   "cd": "cd1",
+   "opts": [
+    "flower",
+    "roots",
+    "fruit"
+   ],
+   "ans": "roots",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 450,
+     "at": "q1+0.2"
+    },
+    {
+     "k": "ring",
+     "d": 170,
+     "c": "#FF7A45",
+     "x": 960,
+     "y": 615,
+     "at": "q1.under",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1065.4,
+     "y": 555.5,
+     "at": "q1.under"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q2",
+   "n": 2,
+   "cd": "cd2",
+   "opts": [
+    "stem",
+    "leaves",
+    "roots"
+   ],
+   "ans": "leaves",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 450,
+     "at": "q2+0.2"
+    },
+    {
+     "k": "ring",
+     "d": 140,
+     "c": "#FF7A45",
+     "x": 1012,
+     "y": 450,
+     "at": "q2.food",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1098.8,
+     "y": 401.0,
+     "at": "q2.food"
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 150,
+     "x": 1350,
+     "y": 300,
+     "at": "q2.sunlight",
+     "wob": 6
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "mark": "q3",
+   "n": 3,
+   "cd": "cd3",
+   "opts": [
+    "fruit",
+    "roots",
+    "stem"
+   ],
+   "ans": "stem",
+   "els": [
+    {
+     "k": "prop",
+     "p": "art:plant",
+     "w": 330,
+     "x": 960,
+     "y": 450,
+     "at": "q3+0.2"
+    },
+    {
+     "k": "ring",
+     "d": 110,
+     "c": "#FF7A45",
+     "x": 962,
+     "y": 476,
+     "at": "q3.holds",
+     "snd": null
+    },
+    {
+     "k": "html",
+     "html": "<div class=\"big\" style=\"font-size:70px;color:#FF7A45\">?</div>",
+     "x": 1030.2,
+     "y": 437.5,
+     "at": "q3.holds"
+    }
+   ]
+  },
+  {
+   "type": "recap",
+   "mark": "recap",
+   "chapter": "Remember",
+   "pops": {
+    "sel": ".n",
+    "ats": [
+     "tip.roots",
+     "tip.stem",
+     "tip.leaves",
+     "tip.flowers"
+    ]
+   },
+   "html": "<div class=\"big\" style=\"font-size:78px;line-height:1.25;text-align:left;white-space:nowrap\"><span class=\"n\"><span style=\"color:#8D5A2B\">Roots</span> drink.</span><br><span class=\"n\"><span style=\"color:#2F7F2C\">Stems</span> carry.</span><br><span class=\"n\"><span style=\"color:#1F7A4C\">Leaves</span> make food.</span><br><span class=\"n\"><span style=\"color:#E08A00\">Flowers</span> make seeds.</span></div>",
+   "x": 1130
+  },
+  {
+   "type": "end",
+   "mark": "end"
+  }
+ ]
+}

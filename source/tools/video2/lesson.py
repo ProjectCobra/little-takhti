@@ -515,6 +515,17 @@ def load_spec(lid):
     return spec
 
 
+def fit_size(mp4, dur, limit=92e6):
+    """GitHub refuses files over 100 MB: re-encode busy videos (scenery clips) to fit"""
+    if mp4.stat().st_size <= limit: return
+    kbps = int(limit * 8 / dur / 1000 * 0.93) - 160
+    tmp = mp4.with_name('fit.part.mp4')
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(mp4), '-c:v', 'libx264', '-preset', 'medium', '-b:v', f'{kbps}k', '-maxrate', f'{int(kbps * 1.4)}k',
+                    '-bufsize', f'{kbps * 2}k', '-pix_fmt', 'yuv420p', '-c:a', 'copy', '-movflags', '+faststart', str(tmp)], check=True)
+    tmp.rename(mp4)
+    G_LOG.append(f'refit to {mp4.stat().st_size / 1e6:.0f} MB at {kbps} kbps')
+
+
 def main():
     global OUT, TMP
     args = sys.argv[1:]
@@ -561,6 +572,7 @@ def main():
         ff.stdin.close(); assert ff.wait() == 0
         if errs: print('JS errors:', errs); sys.exit(1)
         tmp_mp4.rename(OUT / 'lesson.mp4')
+        fit_size(OUT / 'lesson.mp4', tl['total'])
         tt = spec.get('thumb_at', [spec['scenes'][0]['mark'], 3.6])
         pg.evaluate(f"render({tl['marks'][tt[0]] + tt[1]})"); pg.screenshot(path=str(OUT / 'thumb.jpg'), type='jpeg', quality=90)
         b.close()

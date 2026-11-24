@@ -2803,7 +2803,7 @@
     },
     {
      "k": "chip",
-     "text": "Flowers glow",
+     "text": "Flowers make seeds",
      "x": 540,
      "y": 1390,
      "at": "c1a.flowers",
@@ -2912,10 +2912,10 @@
     },
     {
      "k": "prop",
-     "p": "sun",
-     "w": 220,
-     "x": 540,
-     "y": 1250,
+     "p": "herb",
+     "w": 240,
+     "x": 490,
+     "y": 1260,
      "at": "l1.leaves+0.06",
      "out": "@flowers",
      "bob": 8,
@@ -2923,7 +2923,7 @@
     },
     {
      "k": "html",
-     "html": "<div class=\"big\" style=\"font-size:66px;white-space:nowrap\">make food</div>",
+     "html": "<div class=\"big\" style=\"font-size:56px;white-space:nowrap\">make food from sunlight</div>",
      "x": 540,
      "y": 1430,
      "at": "l1.leaves+0.09",
@@ -2947,6 +2947,18 @@
        "ease": "eo"
       }
      ]
+    },
+    {
+     "k": "prop",
+     "p": "sun",
+     "w": 140,
+     "x": 650,
+     "y": 1190,
+     "bob": 6,
+     "at": "l1.leaves+0.12",
+     "out": "@flowers",
+     "fix": true,
+     "snd": null
     }
    ],
    "mascot": {
@@ -3003,9 +3015,9 @@
     },
     {
      "k": "prop",
-     "p": "honeybee",
+     "p": "blossom",
      "w": 220,
-     "x": 540,
+     "x": 410,
      "y": 1250,
      "at": "f1.flowers+0.06",
      "out": "@chorus2",
@@ -3056,6 +3068,16 @@
       "tilt": 10,
       "ph": 2
      }
+    },
+    {
+     "k": "html",
+     "html": "<div style=\"display:flex;gap:12px;align-items:center\"><span style=\"font:800 80px baloo-2,sans-serif;color:#123B28\">&#8594;</span><i style=\"display:block;width:42px;height:60px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#7A4A22;transform:rotate(-20deg);box-shadow:inset -5px -6px 0 rgba(0,0,0,.18)\"></i><i style=\"display:block;width:42px;height:60px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#7A4A22;transform:rotate(10deg);box-shadow:inset -5px -6px 0 rgba(0,0,0,.18)\"></i><i style=\"display:block;width:42px;height:60px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#7A4A22;transform:rotate(-5deg);box-shadow:inset -5px -6px 0 rgba(0,0,0,.18)\"></i><i style=\"display:block;width:42px;height:60px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#7A4A22;transform:rotate(15deg);box-shadow:inset -5px -6px 0 rgba(0,0,0,.18)\"></i></div>",
+     "x": 650,
+     "y": 1250,
+     "at": "f1.flowers+0.12",
+     "out": "@chorus2",
+     "fix": true,
+     "snd": null
     }
    ],
    "mascot": {
@@ -3158,7 +3180,7 @@
     },
     {
      "k": "chip",
-     "text": "Flowers glow",
+     "text": "Flowers make seeds",
      "x": 540,
      "y": 1390,
      "at": "c2a.flowers",
@@ -3760,7 +3782,7 @@
     },
     {
      "k": "chip",
-     "text": "Flowers glow",
+     "text": "Flowers make seeds",
      "x": 1380,
      "y": 630,
      "at": "c3a.flowers",

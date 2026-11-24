@@ -197,11 +197,11 @@ function poseGlow(e,t,o){
  const ws={};const N=5;for(let j=0;j<N;j++){const p=glowPose(t-j*.04,o);ws[p]=(ws[p]||0)+1/N}
  const imgs=e.__tk||(e.__tk=[...e.querySelectorAll('.tkp')]);imgs.forEach(im=>im.style.opacity=ws[im.dataset.p]||0);
  const mixing=Object.values(ws).every(v=>v<.99);
- const talk=talkingAt(t)||singingAt(t);let dx=0,flip=1,rr=talk?Math.sin(t*4.3)*1.2:0,sq=1+.008*Math.sin(t*2.1);
+ const talk=talkingAt(t)||singingAt(t);let dx=0,flip=1,rr=talk?Math.sin(t*4.3)*.8:0,sq=1+.008*Math.sin(t*2.1);
  const B=beatAt(t);
- if(B.song||o.dance){const bp=((B.i%8)+B.ph)/8;dx=Math.sin(bp*Math.PI*2)*14+nz(t*.7,2)*5;if(B.i%32===31&&!talk)flip=Math.cos(B.ph*Math.PI*2);rr+=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*2.5+nz(t*.8,3)*1.5}
- else rr+=nz(t*.9,5)*1.8;
- if(o.cheer)rr+=Math.sin(t*6)*3;if(mixing)sq*=1.015;
+ if(B.song||o.dance){const bp=((B.i%8)+B.ph)/8;dx=Math.sin(bp*Math.PI*2)*4+nz(t*.5,2)*2;rr+=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*1+nz(t*.6,3)*.6}
+ else rr+=nz(t*.6,5)*.8;
+ if(o.cheer)rr+=Math.sin(t*3)*1.5;if(mixing)sq*=1.015;
  const fx=Math.abs(flip)<.08?.08*(flip<0?-1:1):flip;
  e.q('.tkw').style.transform=`translateX(${dx}px) rotate(${rr}deg) scale(${fx*(2-sq)},${sq})`}
 function poseMascot(e,t,o={}){
@@ -211,15 +211,15 @@ function poseMascot(e,t,o={}){
  let accent=false,dx=0,flip=1,rr=0;
  if(AMB){const B=beatAt(t);
   if(B.song||o.dance){const bar=Math.floor(B.i/4),inBar=B.i%4;
-   dx=Math.sin((((B.i%8)+B.ph)/8)*Math.PI*2)*14+nz(t*.7,2)*5; // slow side sway
-   accent=inBar===0&&B.ph<.35;                                    // happy pose on downbeats
-   if(B.i%16===15)flip=Math.cos(B.ph*Math.PI*2);                  // a little spin every 4 bars
-   rr=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*2.5+nz(t*.8,3)*1.5;}
-  else rr=Math.sin(t*1.7)*1.5;                                    // gentle sway when there is no song
+   dx=Math.sin((((B.i%8)+B.ph)/8)*Math.PI*2)*4+nz(t*.5,2)*2; // slow side sway
+   accent=false;
+   
+   rr=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*1+nz(t*.6,3)*.6;}
+  else rr=nz(t*.6,5)*.8;                                    // gentle sway when there is no song
  }
  const src=(o.cheer||o.wave||accent)&&!talk?AS.tk_happy:(talk?AS.tk_talk:AS.tk_idle);
  if(img.getAttribute('src')!==src)img.setAttribute('src',src);
- const r=(o.wave?Math.sin(t*7)*5:(o.cheer?Math.sin(t*10)*4:(talk?Math.sin(t*9)*1.5:0)))+rr;
+ const r=(o.wave?Math.sin(t*4)*3:(o.cheer?Math.sin(t*3)*1.5:(talk?Math.sin(t*5)*.8:0)))+rr;
  const fx=Math.abs(flip)<.08?.08*(flip<0?-1:1):flip;
  img.style.transform=AMB?`translateX(${dx}px) rotate(${r}deg) scaleX(${fx})`:`rotate(${r}deg)`;img.style.transformOrigin='50% 100%';
 }
@@ -238,8 +238,8 @@ function inChorus(t){return !!SONG&&SONG.chorus.some(c=>t>=c[0]&&t<c[1])}
 function nz(t,s=0){return (Math.sin(t*1.13+s)+Math.sin(t*.71+s*2.3)*.6+Math.sin(t*1.87+s*.7)*.35)/1.95}
 // a relaxed groove: one easy dip every two beats, depth drifting like a real dancer, never a hard thump
 function beatBounce(t){if(!SONG||t<SONG.start||t>SONG.end||SONG.beats.length<2)return null;const B=beatAt(t);
- const ph2=((B.i%2)+B.ph)/2;const amp=(inChorus(t)?12:6)*(.65+.35*nz(t*.5,1));return -(1-Math.cos(ph2*Math.PI*2))/2*amp+nz(t*.6,4)*4}
-function idleBob(t,ph=0){const d=beatBounce(t);if(d!==null)return d;if(!AMB)return Math.sin((t+ph)*3.2)*6;return nz((t+ph)*1.4,ph)*7}
+ const ph2=((B.i%2)+B.ph)/2;const amp=(inChorus(t)?6:3)*(.7+.3*nz(t*.5,1));return -(1-Math.cos(ph2*Math.PI*2))/2*amp+nz(t*.4,4)*2}
+function idleBob(t,ph=0){const d=beatBounce(t);if(d!==null)return d;if(!AMB)return Math.sin((t+ph)*3.2)*6;return nz((t+ph)*.9,ph)*3}
 // confetti
 const CFC=['#FFD93B','#1F7A4C','#FF7A45','#3B9BD6','#B45BD6','#FF5C8A'];
 function confetti(parent,n,seed){const r=rng(seed);const ps=[];for(let i=0;i<n;i++){const d=el(parent,'','cf');d.style.background=CFC[i%CFC.length];ps.push({d,a:r()*Math.PI*2,v:500+r()*900,vr:(r()-.5)*900,up:600+r()*700,ph:r()*6});}return ps}

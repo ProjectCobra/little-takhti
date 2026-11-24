@@ -7,6 +7,8 @@ OUT = os.path.join(ROOT, '..', 'little-takhti-netlify')
 SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://littletakhti.netlify.app').rstrip('/')
 TODAY = datetime.date.today().isoformat()
 data = json.load(open(os.path.join(ROOT, 'seo', 'data.json')))
+VP = os.path.join(ROOT, 'videos', 'videos.json')
+VIDS = {v['res']: v for v in (json.load(open(VP)) if os.path.exists(VP) else [])}
 e = lambda s: html.escape(str(s or ''), quote=True)
 GSLUG = {'nursery': 'nursery', 'kg': 'kg', 'g1': 'class-1', 'g2': 'class-2', 'g3': 'class-3'}
 GNAME = {'nursery': 'Nursery', 'kg': 'KG', 'g1': 'Class 1', 'g2': 'Class 2', 'g3': 'Class 3'}
@@ -57,6 +59,7 @@ ul.c{padding-left:20px}ul.c li{margin:4px 0}ol.s li{margin:6px 0}
 .card img{width:100%;height:auto;display:block;border-bottom:2px solid #E5E5E5;aspect-ratio:480/679;object-fit:cover;object-position:top}
 .card b{display:block;padding:10px 12px 2px;color:#3C3C3C;font-weight:900;line-height:1.3}.card small{display:block;padding:0 12px 12px;color:#777}
 .hubs{display:flex;flex-wrap:wrap;gap:8px}.hubs a{border:2px solid #E5E5E5;border-bottom-width:4px;border-radius:14px;padding:8px 12px;text-decoration:none;font-weight:800;color:#4B4B4B}
+.vid{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;margin:10px 0 6px}.vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
 .ad{margin:34px 0;text-align:center}.ad small{display:block;color:#AFAFAF;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 footer{margin-top:56px;background:#58CC02;color:#fff;padding:26px 0}footer a{color:#fff}
 @media(max-width:720px){.grid{grid-template-columns:minmax(0,1fr)}.thumb{max-width:320px;margin:0 auto}}'''
@@ -68,7 +71,7 @@ def page(path, title, desc, body, crumbs, image=None, jsonld=None):
     cr = ''.join(f'<a href="{h}">{e(t)}</a><span>/</span>' for t, h in crumbs[:-1]) + f'<b>{e(crumbs[-1][0])}</b>'
     bl = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "name": t, "item": SITE + h if h.startswith('/') else url} for i, (t, h) in enumerate(crumbs)]}
-    ld = [bl] + ([jsonld] if jsonld else [])
+    ld = [bl] + (jsonld if isinstance(jsonld, list) else [jsonld] if jsonld else [])
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}">{f'<meta property="og:image" content="{SITE}{image}">' if image else ''}
@@ -83,6 +86,22 @@ def page(path, title, desc, body, crumbs, image=None, jsonld=None):
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w').write(doc)
     return url
+def vplayer(v):
+    if v.get('yt'):
+        return f'<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["yt"])}?rel=0" title="{e(v["title"])}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>'
+    return f'<div class="vid"><video controls playsinline preload="none" poster="/{e(v["poster"])}"><source src="/{e(v["mp4"])}" type="video/mp4"></video></div>'
+def vblock(r):
+    v = VIDS.get(r['id'])
+    if not v: return ''
+    return f'<h2>Learning song: {e(v["title"])}</h2>{vplayer(v)}<p>{e(v["desc"])} <a href="/learning-songs/">More learning songs</a></p>'
+def vld(v, r):
+    iso = f"PT{v.get('secs', 0) // 60}M{v.get('secs', 0) % 60}S"
+    d = {"@context": "https://schema.org", "@type": "VideoObject", "name": v['title'], "description": v['desc'],
+         "thumbnailUrl": f"{SITE}/{v['poster']}", "uploadDate": v.get('added'), "duration": iso, "isFamilyFriendly": True,
+         "educationalLevel": GNAME[r['grade']], "about": r['tEn'], "inLanguage": "en"}
+    if v.get('yt'): d["embedUrl"] = f"https://www.youtube.com/embed/{v['yt']}"
+    else: d["contentUrl"] = f"{SITE}/{v['mp4']}"
+    return d
 def card(r):
     t = f"{GNAME[r['grade']]} {KNAME[r['kind']]}: {r['tEn']}"
     return f'<a class="card" href="/{r["slug"]}/"><img src="/thumbs/{r["id"]}.jpg" alt="{e(t)} worksheet preview" loading="lazy" width="480" height="679"><b>{e(r["tEn"])}{" " + "<span class=ur>" + e(r["topic"]) + "</span>" if r["rtl"] and not r["set"] else ""}</b><small>{GNAME[r["grade"]]} · {KNAME[r["kind"]]} · {len(r["pages"])} pages</small></a>'
@@ -110,6 +129,7 @@ for r in data:
 {f'<div class="tip"><b>Try at home:</b> {e(" ".join(h if h.rstrip().endswith((".","!","?")) else h+"." for h in (gd.get("home") or [])))}</div>' if gd and gd.get('home') else ''}
 {f'<h2>Key words</h2><p>{", ".join(("<span class=ur>"+e(w)+"</span>") if re.search("[؀-ۿ]", w) else e(w) for w in r["words"][:10])}</p>' if r['words'] else ''}
 </div></div>
+{vblock(r)}
 {ad('2232109685')}
 <h2>More {e(g)} {e(k)} worksheets</h2><div class="cards">{''.join(card(x) for x in rel)}</div>
 <p style="margin-top:18px"><a href="/{r['hub']}/">See all {e(g)} {e(k)} worksheets</a> · <a href="/{GSLUG[r['grade']]}-worksheets/">All {e(g)} worksheets</a></p>'''
@@ -117,6 +137,7 @@ for r in data:
           "educationalLevel": g, "about": r['tEn'], "inLanguage": "ur" if r['rtl'] else "en", "isAccessibleForFree": True,
           "learningResourceType": "Worksheet", "image": f"{SITE}/thumbs/{r['id']}.jpg", "url": f"{SITE}/{r['slug']}/",
           "provider": {"@type": "Organization", "name": "Little Takhti", "url": SITE}}
+    if r['id'] in VIDS: ld = [ld, vld(VIDS[r['id']], r)]
     urls.append(page(r['slug'], title, desc, body,
         [('Home', '/'), ('Worksheets', '/worksheets/'), (g, f"/{GSLUG[r['grade']]}-worksheets/"), (k, f"/{r['hub']}/"), (r['tEn'], f"/{r['slug']}/")],
         image=f"/thumbs/{r['id']}.jpg", jsonld=ld))
@@ -146,6 +167,15 @@ body = '<h1>Free Printable Worksheets for Nursery to Class 3</h1><p>Every Little
 urls.append(page('worksheets', 'Free Printable Worksheets for Nursery to Class 3 (Pakistan) | Little Takhti',
     'Free printable worksheets for Nursery, KG, Class 1, Class 2 and Class 3: English, Maths, Urdu, Science, Social Studies, History, Geography and General Knowledge, with answer keys and quiz games.', body,
     [('Home', '/'), ('Worksheets', '/worksheets/')]))
+# --- learning songs page ---
+if VIDS:
+    byid = {r['id']: r for r in data}
+    items = [(v, byid[v['res']]) for v in VIDS.values() if v['res'] in byid]
+    body = '<h1>Learning Songs for Kids</h1><p>Sing along with Takhti! Each song teaches one topic, with free worksheets and a quiz game for the same topic. <a href="https://www.youtube.com/@LittleTakhti?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a>.</p>' + ''.join(
+        f'<h2>{e(v["title"])} <small style="font-weight:700;color:#777">({e(GNAME[r["grade"]])} {e(KNAME[r["kind"]])})</small></h2>{vplayer(v)}<p>{e(v["desc"])} <a href="/{r["slug"]}/">Free {e(r["tEn"])} worksheets</a> · <a href="/#play-{r["id"]}">Play the quiz</a></p>' for v, r in items)
+    urls.append(page('learning-songs', 'Learning Songs for Kids: Science, Maths, English and More | Little Takhti',
+        'Free learning songs for kids of all ages: sing along, then practise with free printable worksheets and quiz games on the same topic.', body,
+        [('Home', '/'), ('Learning songs', '/learning-songs/')], jsonld=[vld(v, r) for v, r in items]))
 # --- sitemap + robots ---
 allu = [SITE + '/'] + sorted(set(urls))
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +

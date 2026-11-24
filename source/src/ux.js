@@ -37,6 +37,7 @@ function kidsPage(){const a=activeChild(),ch=a&&FAM.children[a];const G=GR[grade
    ${T2('#powerups','sparkles','PowerUps','Flashcards, doodle, listen and read','k3')}
    ${T2('#stickers','star','Sticker book','Win a sticker every 3 stars','k4')}
    ${T2('#stories','open-book','Story corner','Short stories to read together','k5')}
+   ${VID.length?T2('#learn','musical-notes','Learning songs','Sing along with Takhti','k1'):''}
   </div>
   <p class="kpar">Grown-ups: worksheets and guides are on <a href="#home">Home</a> and <a href="#parents">Parents</a>.</p>`}
 

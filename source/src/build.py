@@ -10,13 +10,13 @@ head='''<title>Little Takhti</title>
 </style>
 <header class="top"><div class="wrap">
  <a class="logo" href="#home" aria-label="Little Takhti home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a>
- <nav class="nav" aria-label="Main"><a href="#home" data-nav="home">Home</a><a href="#class" data-nav="class">This week</a><a href="#kids" data-nav="kids">Play</a><a href="#parents" data-nav="parents">Parents</a></nav>
+ <nav class="nav" aria-label="Main"><a href="#home" data-nav="home">Home</a><a href="#class" data-nav="class">This week</a><a href="#learn" data-nav="learn">Learn</a><a href="#kids" data-nav="kids">Play</a><a href="#parents" data-nav="parents">Parents</a></nav>
  <label class="gsel"><span>Grade</span><select id="gs" aria-label="Choose a grade"></select></label><span id="acct"></span>
 </div></header>
 <main id="app" class="wrap"></main>
 <footer><div class="wrap">
  <div><a class="logo" href="#home"><svg viewBox="0 0 220 220" aria-hidden="true"><rect width="220" height="220" rx="50" fill="#123B28"/><rect x="88" y="34" width="44" height="34" rx="13" fill="#FFD93B"/><circle cx="110" cy="50" r="6" fill="#123B28"/><rect x="46" y="58" width="128" height="128" rx="32" fill="#FFD93B"/><path d="M80 112c12 20 48 20 60 0" fill="none" stroke="#123B28" stroke-width="13" stroke-linecap="round"/><circle cx="110" cy="156" r="10" fill="#123B28"/></svg><span>Little Takhti</span></a><p>Printable worksheets, weekly guides, parent guides and quiz games for Nursery to Grade 3. Made for homes and schools in Pakistan.</p></div>
- <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
+ <div><h4>Learn</h4><ul><li><a href="#home">Worksheets</a></li><li><a href="#learn">Learning songs</a></li><li><a href="#quiz">Quiz games</a></li><li class="cloud-only"><a href="#library">Community library</a></li><li><a href="#powerups">PowerUps</a></li><li><a href="#search">Search</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#policy">Content policy</a></li><li class="static-only"><a href="/worksheets/">Worksheet directory</a></li></ul></div>
  <div><h4>Plan</h4><ul><li><a href="#class">Weekly guide</a></li><li><a href="#map">Curriculum map</a></li><li><a href="#parents">Parents' corner</a></li><li><a href="#account">Family profiles</a></li><li><a href="#share">Share material</a></li><li><a href="#help">Help and feedback</a></li></ul></div>
  <div class="cloud-only"><h4>Schools</h4><ul><li><a href="#contribute">Upload material</a></li></ul></div>
  <div class="fm"><span>Every worksheet prints on A4 with an answer key.</span><span>Little steps, high flights · <span class="ur-t">ننھے قدم، اونچی اڑان</span></span><a class="nlfy" href="https://www.netlify.com" target="_blank" rel="noopener">This site is powered by Netlify</a></div>
@@ -24,11 +24,12 @@ head='''<title>Little Takhti</title>
 <nav class="tabbar" aria-label="Main">
  <a href="#home" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
  <a href="#class" data-nav="class"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg><span>This week</span></a>
+ <a href="#learn" data-nav="learn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg><span>Learn</span></a>
  <a href="#kids" data-nav="kids" class="tb-q"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Play</span></a>
  <a href="#parents" data-nav="parents"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span>Parents</span></a>
 </nav>
 <script>
-'''+r('g1.js')+'\n'+r('grades.js')+'\n'+r('english_plus.js')+'\n'+r('english_g3.js')+'\n'+r('urdu_g1.js')+'\n'+r('writing.js')+'\n'+r('urdu_weeks.js')+'\n'+r('plus_a.js')+'\n'+r('plus_b.js')+'\n'+r('plus_c.js')+'\n'+r('plus_d.js')+'\n'+r('plus_e.js')+'\n'+r('plus_f.js')+'\n'+r('plus_g.js')+'\n'+r('classroom_g1.js')+'\n'+r('term2_nursery.js')+'\n'+r('term2_kg.js')+'\n'+r('term2_g1.js')+'\n'+r('term2_g2.js')+'\n'+r('term2_g3.js')+'\n'+r('ai.js')+'\n'+r('data.js')+'\n'+r('render.js')+'\n'+r('art.js')+'\n'+r('family.js')+'\n'+r('contrib.js')+'\n'+r('powerups.js')+'\n'+r('search.js')+'\n'+r('levels.js')+'\n'+r('quizbank.js')+'\n'+r('xq_more.js')+'\n'+r('fun.js')+'\n'+r('help.js')+'\n'+r('ux.js')+'\n'+r('app.js')+'''
+'''+r('g1.js')+'\n'+r('grades.js')+'\n'+r('english_plus.js')+'\n'+r('english_g3.js')+'\n'+r('urdu_g1.js')+'\n'+r('writing.js')+'\n'+r('urdu_weeks.js')+'\n'+r('plus_a.js')+'\n'+r('plus_b.js')+'\n'+r('plus_c.js')+'\n'+r('plus_d.js')+'\n'+r('plus_e.js')+'\n'+r('plus_f.js')+'\n'+r('plus_g.js')+'\n'+r('classroom_g1.js')+'\n'+r('term2_nursery.js')+'\n'+r('term2_kg.js')+'\n'+r('term2_g1.js')+'\n'+r('term2_g2.js')+'\n'+r('term2_g3.js')+'\n'+r('ai.js')+'\n'+r('data.js')+'\n'+r('render.js')+'\n'+r('art.js')+'\n'+r('family.js')+'\n'+r('contrib.js')+'\n'+r('powerups.js')+'\n'+r('search.js')+'\n'+r('levels.js')+'\n'+r('quizbank.js')+'\n'+r('xq_more.js')+'\n'+r('fun.js')+'\n'+r('help.js')+'\n'+r('ux.js')+'\nconst VIDEOS='+open(os.path.join(D,'..','videos','videos.json')).read()+';\n'+r('learn.js')+'\n'+r('app.js')+'''
 </script>
 '''
 open(os.path.join(D,'..','index.html'),'w').write(head)
@@ -53,6 +54,8 @@ if '--static' in sys.argv:
   open(os.path.join(out,'index.html'),'w').write(doc)
   shutil.copytree(os.path.join(D,'..','pdf'),os.path.join(out,'pdf'))
   shutil.copytree(os.path.join(D,'..','img'),os.path.join(out,'img'))
+  vd=os.path.join(D,'..','videos')   # learning-song videos (Learn section)
+  os.path.isdir(vd) and shutil.copytree(vd,os.path.join(out,'videos'))
   apv=os.path.join(D,'..','..','app','store','privacy-policy.html')   # Play Store privacy policy URL for the app
   os.path.exists(apv) and shutil.copy(apv,os.path.join(out,'app-privacy.html'))
   open(os.path.join(out,'ads.txt'),'w').write('google.com, pub-7392407974381857, DIRECT, f08c47fec0942fa0\n')

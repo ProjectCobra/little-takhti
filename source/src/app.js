@@ -141,6 +141,7 @@ function home(){
  ${(()=>{const a=activeChild(),ch=a&&FAM.children[a];if(!ch)return '';const recs=recommend(a);if(!recs.length)return '';
   return `<section><div class="sec-h"><div><span class="kick">${avSVG(ch.avatar)} For ${esc(ch.name)} · ${GR[ch.grade].name}</span><h2>Continue where you left off</h2></div><a class="lnk" href="#account">See progress →</a></div>
   <div class="recs wide">${recs.map(x=>`<a class="rec s-${x.r.sub}" href="${x.q?'#play-'+x.r.id:'#res-'+x.r.id}"><span class="sic">${subIcon(SUB[x.r.sub])}</span><span class="t">${T(SUB[x.r.sub].rtl?x.r.topic:x.r.title.replace(/ Practice$/,''))}<small>${SUB[x.r.sub].name} · ${x.why}</small></span><span class="pq">${x.q?ic.play+'Play':ic.sheet+'Open'}</span></a>`).join('')}</div></section>`})()}
+ ${vidHome()}
  <section><div class="sec-h"><div><span class="kick">${G.name} · ${WEEKS[wkI][0]}, ${WEEKS[wkI][1]}</span><h2>This week's packs</h2></div><a class="lnk" href="#class">Full weekly plan →</a></div>
  <div class="strip">${newRes.map(card).join('')}</div></section>
  <section id="subjects"><div class="sec-h"><div><span class="kick">${G.name} · ${G.age}</span><h2>Browse by subject</h2></div><button type="button" class="lnk lnkb" data-gchange>Not ${G.name}? Change grade</button></div>
@@ -186,6 +187,7 @@ function detail(id){
    <h2>Learning objectives</h2><ul class="obj">${r.obj.map(o=>`<li>${T(o)}</li>`).join('')}</ul>
    <h2>What's inside</h2><ul class="inside">${r.pages.map((i,j)=>{const p=PAGES[s.id][i];const pk=r.set?RES.find(x=>x.sub===s.id&&!x.set&&x.pages.includes(i)):null;return `<li><a href="${pk?'#res-'+pk.id:'#'}" data-pg="${j}"><span class="no">${j+1}</span>${T(p.title)}<small>${r.set?T(p.topic):(RID[s.id+'-set']&&i<10?'Also in revision set':'Practice page')}</small></a></li>`}).join('')}</ul>
   </div></div>
+ ${vidTopic(r)}
  ${topicExtras(r)}
  ${r.community?'':puRow(r)}
  ${adSlot('resource')}
@@ -478,13 +480,14 @@ let pendingPrint=null;
 let lastTracked='';
 function route(keepScroll){{const hh=(location.hash||'#home').slice(1).replace(/^(res|subject|play|print)-.*/,'$1');if(hh!==lastTracked){lastTracked=hh;track('page_view',{page_title:hh,page_location:location.href})}}
  let h=(location.hash||'#home').slice(1);if(window.LT_STATIC&&['contribute','admin','library'].includes(h)){history.replaceState(null,'','#home');h='home'}
- stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=h==='class'?'class':h==='parents'?'parents':(h==='kids'||h==='quiz'||h.startsWith('play-'))?'kids':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'kids':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'kids':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'||h.startsWith('map-')?'class':'home';
+ stopSpeak();if(typeof puTmr!=='undefined'&&!h.startsWith('pu-timer'))clearInterval(puTmr);const nav=(h==='learn'||h.startsWith('learn-'))?'learn':h==='class'?'class':h==='parents'?'parents':(h==='kids'||h==='quiz'||h.startsWith('play-'))?'kids':h==='account'?'account':(h==='powerups'||h.startsWith('pu-'))?'kids':['fun','stickers','stories'].includes(h)||/^(game|story)-/.test(h)?'kids':['tools','spell-maker','spell-print','prep','prep-print','report','rewards','rewards-print'].includes(h)?'parents':['contribute','admin','library'].includes(h)?'x':['help','share','policy'].includes(h)||h.startsWith('help-')?'x':h==='map'||h.startsWith('map-')?'class':'home';
  try{ltRoute(h)}catch(e){}
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===nav));
  if(h.startsWith('subject-'))subject(h.slice(8));
  else if(h.startsWith('res-'))detail(h.slice(4));
  else if(h.startsWith('print-')){printView(h.slice(6),pendingPrint===h.slice(6));pendingPrint=null}
  else if(h.startsWith('play-'))play(h.slice(5));
+ else if(h==='learn'||h.startsWith('learn-'))learnPage(h.slice(6));
  else if(h==='class')classPage();
  else if(h==='parents')parents();
  else if(h==='quiz')quizHub();

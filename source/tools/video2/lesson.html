@@ -197,11 +197,11 @@ function poseGlow(e,t,o){
  const ws={};const N=5;for(let j=0;j<N;j++){const p=glowPose(t-j*.04,o);ws[p]=(ws[p]||0)+1/N}
  const imgs=e.__tk||(e.__tk=[...e.querySelectorAll('.tkp')]);imgs.forEach(im=>im.style.opacity=ws[im.dataset.p]||0);
  const mixing=Object.values(ws).every(v=>v<.99);
- const talk=talkingAt(t)||singingAt(t);let dx=0,flip=1,rr=talk?Math.sin(t*9)*2:0,sq=1;
+ const talk=talkingAt(t)||singingAt(t);let dx=0,flip=1,rr=talk?Math.sin(t*4.3)*1.2:0,sq=1+.008*Math.sin(t*2.1);
  const B=beatAt(t);
- if(B.song||o.dance){const bar=Math.floor(B.i/4);dx=Math.sin((B.i%2+B.ph)*Math.PI)*16*(bar%2?1:-1);if(B.i%16===15&&!talk)flip=Math.cos(B.ph*Math.PI*2);rr+=Math.sin((B.i+B.ph)*Math.PI)*3;sq=1+.04*Math.pow(1-B.ph,4)}
- else rr+=Math.sin(t*1.7)*1.5;
- if(o.cheer)rr+=Math.sin(t*10)*4;if(mixing)sq*=1.06;
+ if(B.song||o.dance){const bp=((B.i%8)+B.ph)/8;dx=Math.sin(bp*Math.PI*2)*14+nz(t*.7,2)*5;if(B.i%32===31&&!talk)flip=Math.cos(B.ph*Math.PI*2);rr+=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*2.5+nz(t*.8,3)*1.5}
+ else rr+=nz(t*.9,5)*1.8;
+ if(o.cheer)rr+=Math.sin(t*6)*3;if(mixing)sq*=1.015;
  const fx=Math.abs(flip)<.08?.08*(flip<0?-1:1):flip;
  e.q('.tkw').style.transform=`translateX(${dx}px) rotate(${rr}deg) scale(${fx*(2-sq)},${sq})`}
 function poseMascot(e,t,o={}){
@@ -211,10 +211,10 @@ function poseMascot(e,t,o={}){
  let accent=false,dx=0,flip=1,rr=0;
  if(AMB){const B=beatAt(t);
   if(B.song||o.dance){const bar=Math.floor(B.i/4),inBar=B.i%4;
-   dx=Math.sin((B.i%2+B.ph)*Math.PI)*16*(bar%2?1:-1);          // side steps
+   dx=Math.sin((((B.i%8)+B.ph)/8)*Math.PI*2)*14+nz(t*.7,2)*5; // slow side sway
    accent=inBar===0&&B.ph<.35;                                    // happy pose on downbeats
    if(B.i%16===15)flip=Math.cos(B.ph*Math.PI*2);                  // a little spin every 4 bars
-   rr=Math.sin((B.i+B.ph)*Math.PI)*3;}
+   rr=Math.sin((((B.i%4)+B.ph)/4)*Math.PI*2)*2.5+nz(t*.8,3)*1.5;}
   else rr=Math.sin(t*1.7)*1.5;                                    // gentle sway when there is no song
  }
  const src=(o.cheer||o.wave||accent)&&!talk?AS.tk_happy:(talk?AS.tk_talk:AS.tk_idle);
@@ -234,9 +234,12 @@ function beatAt(t){if(SONG&&t>=SONG.start&&t<=SONG.end&&SONG.beats.length>2){con
   const len=Math.max(.2,b[lo+1]-b[lo]);return {i:lo,ph:cl((t-b[lo])/len),len,song:true}}
  const len=60/112;return {i:Math.floor(t/len),ph:(t/len)%1,len,song:false}}
 function inChorus(t){return !!SONG&&SONG.chorus.some(c=>t>=c[0]&&t<c[1])}
-function beatBounce(t){if(!SONG||t<SONG.start||t>SONG.end||SONG.beats.length<2)return null;const b=SONG.beats;let i=0;while(i<b.length-2&&b[i+1]<=t)i++;
- const ph=cl((t-b[i])/Math.max(.2,b[i+1]-b[i]));return -Math.pow(Math.sin(Math.PI*ph),2)*(inChorus(t)?22:12)}
-function idleBob(t,ph=0){const d=beatBounce(t);if(d!==null)return d;const base=Math.sin((t+ph)*3.2)*6;if(!AMB)return base;const k=((t+ph)%4.5)/4.5;return base-(k>.88?Math.sin((k-.88)/.12*Math.PI)*26:0)}
+// smooth organic noise in about -1..1 (three slow sines that never line up)
+function nz(t,s=0){return (Math.sin(t*1.13+s)+Math.sin(t*.71+s*2.3)*.6+Math.sin(t*1.87+s*.7)*.35)/1.95}
+// a relaxed groove: one easy dip every two beats, depth drifting like a real dancer, never a hard thump
+function beatBounce(t){if(!SONG||t<SONG.start||t>SONG.end||SONG.beats.length<2)return null;const B=beatAt(t);
+ const ph2=((B.i%2)+B.ph)/2;const amp=(inChorus(t)?12:6)*(.65+.35*nz(t*.5,1));return -(1-Math.cos(ph2*Math.PI*2))/2*amp+nz(t*.6,4)*4}
+function idleBob(t,ph=0){const d=beatBounce(t);if(d!==null)return d;if(!AMB)return Math.sin((t+ph)*3.2)*6;return nz((t+ph)*1.4,ph)*7}
 // confetti
 const CFC=['#FFD93B','#1F7A4C','#FF7A45','#3B9BD6','#B45BD6','#FF5C8A'];
 function confetti(parent,n,seed){const r=rng(seed);const ps=[];for(let i=0;i<n;i++){const d=el(parent,'','cf');d.style.background=CFC[i%CFC.length];ps.push({d,a:r()*Math.PI*2,v:500+r()*900,vr:(r()-.5)*900,up:600+r()*700,ph:r()*6});}return ps}
@@ -390,7 +393,7 @@ SCN.tenframe=(r,t0,s)=>{
 SCN.quizintro=(r,t0,s)=>{
  const big=el(r,`<div class="big qi" style="font-size:230px;color:#123B28;white-space:nowrap">${s.text||'Your turn!'}</div>`);
  const m=mascot(r);sfx(t0+.2,'tada',.5);const cf=confetti(r,80,3);
- return t=>{P(big,960,380,pop(t,t0+.15,.6),Math.sin(t*3)*3);P(m,960,700+idleBob(t)-Math.abs(Math.sin(t*6))*30,1.0,0,1);poseMascot(m,t,{cheer:true});confettiU(cf,t,t0+.2,960,300)}};
+ return t=>{P(big,960,380,pop(t,t0+.15,.6),Math.sin(t*3)*3);P(m,960,700+idleBob(t)-Math.max(0,nz(t*2.2,8))*30,1.0,0,1);poseMascot(m,t,{cheer:true});confettiU(cf,t,t0+.2,960,300)}};
 
 // ---------- generic elements (used by "free" scenes and quiz questions) ----------
 // e: {k:'prop'|'card'|'chip'|'html'|'label'|'ring', p, w, html, text, x, y, s, r, at, pd, out, bob, wob, moves, hop, path, glow, on, cross, burst, snd, reveal, z, o}
@@ -426,7 +429,7 @@ function mkEl(parent,e,i,t0){
   if(path){const k=path.f(lin(t,path.t,path.d));let dist=k*path.tot,j=0;while(j<path.seg.length-1&&dist>path.seg[j]){dist-=path.seg[j];j++}const q=path.seg[j]?dist/path.seg[j]:0;x=mix(path.pts[j][0],path.pts[j+1][0],q);y=mix(path.pts[j][1],path.pts[j+1][1],q)}
   for(const h of hops){const k=lin(t,h.t,h.d);if(k>0&&k<1)y-=Math.abs(Math.sin(k*h.n*Math.PI))*h.h}
   if(e.loop){const Lp=e.loop,a=(t/(Lp.period||4))*Math.PI*2+(Lp.ph||0);x+=Math.cos(a)*Lp.rx;y+=Math.sin(a*(Lp.fig?2:1))*Lp.ry;r+=Math.cos(a)*(Lp.tilt??10)}
-  const bob=e.bob??(AMB&&e.k==='prop'&&!e.still?4:0);if(bob)y+=Math.sin(t*2.4+i)*bob;if(e.wob)r+=Math.sin(t*2+i)*e.wob;
+  const bob=e.bob??(AMB&&e.k==='prop'&&!e.still?4:0);if(bob)y+=nz(t*(1.3+(i%5)*.12),i*1.9)*bob;if(e.wob)r+=Math.sin(t*2+i)*e.wob;
   if(AMB&&(e.spin||e.p==='sun'))r+=t*(e.spin||14);
   let g=1;for(const gt of glows)g+=.18*Math.exp(-Math.pow((t-gt-.15)*4,2));
   let k=rv?(t<rv.t?0:1):(e.fade?eo(lin(t,at,pd)):pop(t,at,pd));
@@ -556,7 +559,7 @@ function wipeU(t){if(SING){wipe.style.display=wipe2.style.display='none';return}
  wipe.style.left=mix(-1000,2100,eio(k))+'px';wipe2.style.left=mix(-1100,2000,eio(lin(k,0.06,1)))+'px'}
 // clouds drifting over the sky, sparkles on the beat, living plants, a slow camera push in every scene
 const AMBL=AMB?el(document.body,'','a','width:1920px;height:1080px;pointer-events:none;z-index:40'):null;
-const CLOUDS=AMB&&!GL?[0,1,2].map(i=>el(bg,`<div style="position:relative;width:${220+i*60}px;height:${90+i*20}px"><div style="position:absolute;left:10%;top:30%;width:60%;height:70%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:35%;top:0;width:45%;height:90%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:0;top:50%;width:100%;height:50%;background:#F3FAFF;border-radius:999px"></div></div>`)):[];
+const CLOUDS=AMB&&!GL&&SPEC.clouds!==false?[0,1,2].map(i=>el(bg,`<div style="position:relative;width:${220+i*60}px;height:${90+i*20}px"><div style="position:absolute;left:10%;top:30%;width:60%;height:70%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:35%;top:0;width:45%;height:90%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:0;top:50%;width:100%;height:50%;background:#F3FAFF;border-radius:999px"></div></div>`)):[];
 const SPK=AMB?[...Array(6)].map(()=>el(AMBL,`<svg width="44" height="44" viewBox="0 0 40 40" style="display:block"><path d="M20 0Q23 17 40 20Q23 23 20 40Q17 23 0 20Q17 17 20 0Z" fill="#FFE680"/><circle cx="20" cy="20" r="4" fill="#fff"/></svg>`)):[];
 function ambU(t,a){if(!AMB)return;
  CLOUDS.forEach((c,i)=>{const sp=14+i*6,w=2400;P(c,((t*sp+i*800)%w)-240,90+i*70+Math.sin(t*.4+i)*6,1,0,.85)});
@@ -564,10 +567,10 @@ function ambU(t,a){if(!AMB)return;
  SPK.forEach((sp,j)=>{const r=rng(bar*7919+j*131+13);const side=r()<.5;const x=side?60+r()*300:1560+r()*300,y=90+r()*330;
   const q=((B.i%4)+B.ph)*(B.len)/1.1-(j%3)*.15;P(sp,x,y,q>0&&q<1?Math.sin(q*Math.PI)*(.6+r()*.6):0,q*90,1)});
  if(a){const root=a.root;const live=root.__live||(root.__live={fl:[...root.querySelectorAll('g.flower')],lv:[...root.querySelectorAll('g.leaves')]});
-  const pulse=1+.035*Math.pow(1-B.ph,3);
-  live.fl.forEach(g=>g.setAttribute('transform',`rotate(${Math.sin(t*1.6)*4} 388 700) translate(388 225) scale(${pulse}) translate(-388 -225)`));
-  live.lv.forEach(g=>g.setAttribute('transform',`rotate(${Math.sin(t*2.3)*2.5} 380 600)`));
-  const gp=root.__gp||(root.__gp=[...root.querySelectorAll('img.gplant')]);gp.forEach((g,j)=>g.style.transform=`rotate(${Math.sin(t*1.5+j)*2}deg) scale(${1+.012*Math.pow(1-B.ph,3)})`);
+  const pulse=1+.012*Math.sin(t*1.1);
+  live.fl.forEach(g=>g.setAttribute('transform',`rotate(${nz(t*1.2,6)*4} 388 700) translate(388 225) scale(${pulse}) translate(-388 -225)`));
+  live.lv.forEach(g=>g.setAttribute('transform',`rotate(${nz(t*1.6,7)*2.5} 380 600)`));
+  const gp=root.__gp||(root.__gp=[...root.querySelectorAll('img.gplant')]);gp.forEach((g,j)=>g.style.transform=`rotate(${nz(t*1.1,j*1.7)*2}deg) scale(${1+.006*Math.sin(t*1.3+j)})`);
   const nxt=S[S.indexOf(a)+1];const dur=(nxt?nxt.t0:TL.total)-a.t0;const k=eio(lin(t,a.t0,Math.max(1,dur)));
   root.style.transformOrigin='50% 45%';root.style.transform=root.__clip?'':`scale(${1+.03*k})`}}
 window.render=async function(t){bgU(t);let a=null;for(const s of S)if(t>=s.t0)a=s;for(const s of S){s.root.style.display=s===a?'block':'none'}a&&a.u(t);ambU(t,a);capU(t);wipeU(t);const c=a&&a.root.__clip;if(c&&c.getAttribute('src')){try{await c.decode()}catch(e){}}

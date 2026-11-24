@@ -54,6 +54,13 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 - **Colours** (Nov 2026): brand palette layer at the end of `site.css`. Deep green #123B28 for text and banners, yellow #FFD93B for main buttons and selected states, green #1F7A4C for links and secondary buttons. Subject colours have 4.5:1 contrast with white. Check contrast before adding colours.
 - **Read aloud**: British or American English voice for every subject except Urdu.
 
+## Brand (Sumbul, Nov 2026: keep the same everywhere)
+
+- **Logo**: exactly the header logo in `source/src/build.py` (also `source/src/favicon.svg` and `logo_mark.svg`): deep green #123B28 rounded square, yellow #FFD93B takhti with a hanger tab, a green hole dot in the tab, a green smile and a green dot below the smile. Never draw it without the two dots. Use these files; do not redraw it.
+- **Colours**: #123B28 deep green, #FFD93B yellow, #1F7A4C green, cream #FFFBEA / #FFF3D1.
+- **Takhti character**: the 3D cream-face Takhti from `source/tools/video2/assets/glow/tk-*.webp`. Same character in videos, banners, thumbnails and posts.
+- Applies to the site, app icons and splash (`app/assets`), YouTube (profile, banner, watermark), video end cards and social posts.
+
 ## Instagram
 
 - Brand colours: green #123B28, yellow #FFD93B, mid green #2F8F55, cream #FFFBEA. Fonts: Baloo 2 (headings), Lexend (body), Noto Nastaliq Urdu. Tagline: ننھے قدم، اونچی اڑان.

@@ -52,7 +52,7 @@
   ]
  ],
  "gemini_log": [
-  "clips: scene-garden-glide, scene-sunflower-blooms, scene-roots-underground, scene-stem-grows, scene-garden-golden, scene-leaves-sunlight, scene-bees-flowers->scene-sunflower-blooms, scene-rain-garden->scene-leaves-sunlight, scene-breeze-garden->scene-garden-glide, scene-veg-garden->scene-garden-golden",
+  "clips: scene-garden-glide, scene-sunflower-blooms, scene-roots-underground, scene-stem-grows, scene-garden-golden, scene-leaves-sunlight, scene-bees-flowers, scene-rain-garden, scene-breeze-garden, scene-veg-garden",
   "song ok 181.2s",
   "flow music ok 176.6s",
   "refit to 85 MB at 3617 kbps"

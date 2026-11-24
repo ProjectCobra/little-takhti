@@ -544,7 +544,7 @@ def main():
     countdowns = [s['cd'] for s in spec['scenes'] if s['type'] == 'question']
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
-        b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1920, 'height': 1080})
+        b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1080, 'height': 1920} if spec.get('portrait') else {'width': 1920, 'height': 1080})
         errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
         pg.goto(html.as_uri()); pg.wait_for_timeout(600)
         if errs: print('JS errors:', errs); sys.exit(1)
@@ -556,13 +556,15 @@ def main():
             print('frames', ts, 'total', tl['total'], 'marks', tl['marks']); return
         sfxs = pg.evaluate('getSfx()')
         wav = mix_audio(tl, voice, sfxs, countdowns)
-        start = float(args[args.index('--start') + 1]) if '--start' in args else 0
-        end = float(args[args.index('--end') + 1]) if '--end' in args else tl['total']
+        win = spec.get('window')   # [mark, offset, seconds]: render only part (reels)
+        w0 = tl['marks'][win[0]] + win[1] if win else 0
+        start = float(args[args.index('--start') + 1]) if '--start' in args else w0
+        end = float(args[args.index('--end') + 1]) if '--end' in args else (w0 + win[2] if win else tl['total'])
         nf = int((end - start) * FPS)
         tmp_mp4 = OUT / 'lesson.part.mp4'
         ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'image2pipe', '-framerate', str(FPS), '-c:v', 'mjpeg', '-i', '-',
                                '-ss', str(start), '-t', str(end - start), '-i', str(wav),
-                               '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-pix_fmt', 'yuv420p',
+                               '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11' + (f',afade=t=in:d=0.4,afade=t=out:st={end - start - 1.5:.2f}:d=1.5' if win else ''), '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-pix_fmt', 'yuv420p',
                                '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-shortest', '-movflags', '+faststart', '-f', 'mp4', str(tmp_mp4)], stdin=subprocess.PIPE)
         for i in range(nf):
             t = start + i / FPS

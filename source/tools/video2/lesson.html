@@ -34,7 +34,7 @@ body.glow .qi{text-shadow:0 0 30px rgba(255,255,255,.95),0 0 60px rgba(255,214,1
 body.glow .glass{background:rgba(255,253,246,.94)!important;border:3px solid rgba(255,255,255,.95)!important;box-shadow:0 0 0 8px rgba(255,236,170,.22),0 0 60px rgba(255,214,120,.5),0 24px 44px rgba(60,20,80,.28);backdrop-filter:blur(12px)}
 .glowprop{filter:drop-shadow(0 10px 10px rgba(60,20,80,.28)) drop-shadow(0 0 18px rgba(255,226,140,.55))}
 /* ---------- singalong theme: real scenery clips, big karaoke words ---------- */
-body.sing #cap{background:none;border:none;box-shadow:none;padding:0;bottom:30px;max-width:1340px;font-family:'baloo-2';font-weight:800;font-size:72px;line-height:1.12}
+body.sing #cap{background:none;border:none;box-shadow:none;padding:0;bottom:30px;max-width:1640px;width:max-content;font-family:'baloo-2';font-weight:800;font-size:72px;line-height:1.12}
 body.sing #cap .w{display:inline-block;color:#fff;-webkit-text-stroke:14px var(--oc,#7B3FE4);paint-order:stroke fill;filter:drop-shadow(0 6px 4px rgba(40,10,70,.35));margin:0 .1em;transform-origin:50% 80%}
 body.sing #cap .w.on,body.sing #cap .w.s{color:#FFE14D;background:none;border-radius:0}
 body.sing #cap .w.s{color:#fff}
@@ -528,7 +528,7 @@ SCN.end=(r,t0,s)=>{
  const rr=rng(5);const dp=dots.map(()=>[rr()*1920,rr()*1080,rr()*6]);
  return t=>{dots.forEach((d,i)=>P(d,dp[i][0],dp[i][1]+Math.sin(t+dp[i][2])*20,pop(t,t0+.1+i*.04)));
   P(logo,1100,370,pop(t,t0+.2,.6));P(url,1100,560,pop(t,t0+.5,.5));P(sub,1100,670,pop(t,t0+.7,.5));
-  if(badge)P(badge,1100,800,pop(t,T(s.app_at??('@'+s.mark+'+1.2')),.5)*(1+.04*Math.sin(t*3)));
+  if(badge)P(badge,1100,SING?785:800,pop(t,T(s.app_at??('@'+s.mark+'+1.2')),.5)*(1+.04*Math.sin(t*3)));
   P(m,420,640+idleBob(t),1.2,0,1);poseMascot(m,t,{wave:true})}};
 
 SPEC.scenes.forEach(s=>{if(!SCN[s.type])throw new Error('no scene type '+s.type);scene(s.mark,(r,t0)=>SCN[s.type](r,t0,s))});

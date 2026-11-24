@@ -33,6 +33,17 @@ body.glow #wipe2{background:linear-gradient(90deg,#B98CFF,#FF8FC7)}
 body.glow .qi{text-shadow:0 0 30px rgba(255,255,255,.95),0 0 60px rgba(255,214,120,.8)}
 body.glow .glass{background:rgba(255,253,246,.94)!important;border:3px solid rgba(255,255,255,.95)!important;box-shadow:0 0 0 8px rgba(255,236,170,.22),0 0 60px rgba(255,214,120,.5),0 24px 44px rgba(60,20,80,.28);backdrop-filter:blur(12px)}
 .glowprop{filter:drop-shadow(0 10px 10px rgba(60,20,80,.28)) drop-shadow(0 0 18px rgba(255,226,140,.55))}
+/* ---------- singalong theme: real scenery clips, big karaoke words ---------- */
+body.sing #cap{background:none;border:none;box-shadow:none;padding:0;bottom:30px;max-width:1340px;font-family:'baloo-2';font-weight:800;font-size:72px;line-height:1.12}
+body.sing #cap .w{display:inline-block;color:#fff;-webkit-text-stroke:14px var(--oc,#7B3FE4);paint-order:stroke fill;filter:drop-shadow(0 6px 4px rgba(40,10,70,.35));margin:0 .1em;transform-origin:50% 80%}
+body.sing #cap .w.on,body.sing #cap .w.s{color:#FFE14D;background:none;border-radius:0}
+body.sing #cap .w.s{color:#fff}
+body.sing #cap img{display:none}
+body.sing .chip{border:5px solid #fff;box-shadow:0 8px 0 rgba(0,0,0,.16),0 12px 26px rgba(40,10,70,.3)}
+body.sing .card{box-shadow:0 10px 0 rgba(0,0,0,.12),0 16px 30px rgba(40,10,70,.3)}
+body.sing .qi{color:#FFE14D!important;-webkit-text-stroke:20px #7B3FE4;paint-order:stroke fill;filter:drop-shadow(0 10px 6px rgba(40,10,70,.35))}
+body.sing .sg{color:#fff!important;-webkit-text-stroke:12px #1F7A4C;paint-order:stroke fill}
+body.sing .sgs{color:#fff!important;-webkit-text-stroke:8px #7B3FE4;paint-order:stroke fill;font-family:'baloo-2';font-weight:800;font-size:50px!important}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD93B"/><stop offset="1" stop-color="#FF9F1C"/></linearGradient>
@@ -45,6 +56,8 @@ const TL = __TL__;
 const AS = __ASSETS__;
 const SPEC = __SPEC__;
 const GLOW=SPEC.theme==='glow';if(GLOW)document.body.classList.add('glow');
+const SING=SPEC.theme==='singalong';if(SING)document.body.classList.add('sing');
+const GL=GLOW||SING; // the cream-face Takhti and the glow cutout props
 const LOGO='__LOGO__';
 const W_ = 1920, H_ = 1080;
 // ---------- helpers ----------
@@ -84,7 +97,7 @@ const TINT={mango2:'hue-rotate(-18deg) saturate(1.25) ',kite2:'hue-rotate(170deg
 const GSCALE={carrot:.55,droplet:.8,'potted-plant':.8,sunflower:.9,seedling:.7};
 const GMAP={'potted-plant':'g_plant',sunflower:'g_plant',seedling:'g_plant',sun:'g_sun',droplet:'g_water',honeybee:'g_bee',carrot:'g_carrot','leafy-green':'g_spinach',mango:'g_mango',kite:null};
 function PROP(name,w){
- if(GLOW){
+ if(GL){
   if(name==='art:plant'){w=w||760;return `<img class="gplant glowprop" src="${AS.g_plant}" style="width:${w}px;height:${Math.round(w*1000/760)}px;display:block;transform-origin:50% 62%">`}
   const g=GMAP[name];if(g&&AS[g])return `<img class="glowprop" src="${AS[g]}" style="width:${Math.round((w||150)*(GSCALE[name]||1))}px;display:block">`;
  }
@@ -170,7 +183,7 @@ ${[0,1,2,3].map(i=>`<path d="M${3040+i*130} ${830+i%2*70} q30 -14 60 0" fill="no
 </svg>`}
 // ---------- mascot ----------
 const GPOSE={wave:400,cheer:390,point:372,dance:380};
-function MASCOT(){if(GLOW)return `<div style="position:relative;width:380px;height:420px"><div class="tkw" style="position:absolute;left:0;bottom:0;width:380px;height:420px;transform-origin:50% 100%">${Object.keys(GPOSE).map(k=>`<img class="tkp" data-p="${k}" src="${AS['g_tk_'+k]}" style="position:absolute;left:50%;bottom:0;height:${GPOSE[k]}px;transform:translateX(-50%);filter:drop-shadow(0 16px 12px rgba(60,20,80,.3)) drop-shadow(0 0 22px rgba(255,226,140,.45))">`).join('')}</div></div>`;return `<div style="position:relative;width:380px;height:420px"><img class="tki" src="${AS.tk_idle}" style="position:absolute;left:0;bottom:0;width:380px;filter:drop-shadow(0 14px 10px rgba(0,0,0,.22))"></div>`}
+function MASCOT(){if(GL)return `<div style="position:relative;width:380px;height:420px"><div class="tkw" style="position:absolute;left:0;bottom:0;width:380px;height:420px;transform-origin:50% 100%">${Object.keys(GPOSE).map(k=>`<img class="tkp" data-p="${k}" src="${AS['g_tk_'+k]}" style="position:absolute;left:50%;bottom:0;height:${GPOSE[k]}px;transform:translateX(-50%);filter:drop-shadow(0 16px 12px rgba(60,20,80,.3)) drop-shadow(0 0 22px rgba(255,226,140,.45))">`).join('')}</div></div>`;return `<div style="position:relative;width:380px;height:420px"><img class="tki" src="${AS.tk_idle}" style="position:absolute;left:0;bottom:0;width:380px;filter:drop-shadow(0 14px 10px rgba(0,0,0,.22))"></div>`}
 function mascot(parent){const e=el(parent,MASCOT());e.q=s=>e.querySelector(s);return e}
 function talkingAt(t){for(const k in TL.lines){const l=TL.lines[k];if((l.speaker!=='T'&&l.speaker!=='S')||t<l.start||t>l.end)continue;for(const w of l.words){if(t>=w.t&&t<=w.t+Math.max(.12,Math.min(w.d,.5)))return Math.sin((t-w.t)*26)>-.1}}return false}
 function singingAt(t){if(!SONG)return false;for(const k in TL.lines){const l=TL.lines[k];if(l.speaker==='S'&&t>=l.start-.25&&t<=l.end+.25)return true}return false}
@@ -192,7 +205,7 @@ function poseGlow(e,t,o){
  const fx=Math.abs(flip)<.08?.08*(flip<0?-1:1):flip;
  e.q('.tkw').style.transform=`translateX(${dx}px) rotate(${rr}deg) scale(${fx*(2-sq)},${sq})`}
 function poseMascot(e,t,o={}){
- if(GLOW)return poseGlow(e,t,o);
+ if(GL)return poseGlow(e,t,o);
  if(inChorus(t))o={...o,cheer:true};
  const talk=talkingAt(t);const img=e.q('.tki');
  let accent=false,dx=0,flip=1,rr=0;
@@ -237,7 +250,24 @@ if(GLOW){meadow.firstElementChild.src=AS.g_bg_garden;
  RAYS=el(bg,`<div style="width:1920px;height:1080px;mix-blend-mode:screen;background:${[[-28,.30,180],[-18,.22,120],[-8,.28,160],[4,.18,110],[14,.24,140]].map(([a,o,w])=>`linear-gradient(${180+a}deg,transparent 0,transparent calc(50% - ${w}px),rgba(255,230,160,${o}) 50%,transparent calc(50% + ${w}px))`).join(',')};transform-origin:45% -10%"></div>`);
  FF=[...Array(38)].map((_,i)=>el(bg,`<div style="width:${8+i%4*5}px;height:${8+i%4*5}px;border-radius:50%;background:radial-gradient(circle,#fffbe0 0,#ffe27a 35%,rgba(255,200,120,0) 70%);box-shadow:0 0 14px 4px rgba(255,220,130,.55)"></div>`));
  VIG=el(document.body,'','a','width:1920px;height:1080px;pointer-events:none;z-index:39;background:radial-gradient(ellipse 75% 70% at 50% 45%,rgba(255,236,190,.08) 0,rgba(0,0,0,0) 55%,rgba(40,10,50,.38) 100%)');}
+const SHOTS=TL.shots||null;let BGA=null,BGB=null;
+if(SHOTS){meadow.style.display='none';
+ BGA=el(bg,`<img style="width:1920px;height:1080px;display:block">`,'a','transform-origin:50% 50%');BGB=el(bg,`<img style="width:1920px;height:1080px;display:block">`,'a','transform-origin:50% 50%')}
+function shotSrc(sh,t){const k=((Math.floor((t-sh.t0+(sh.off||0))*30)%sh.n)+sh.n)%sh.n;return sh.dir+String(k+1).padStart(4,'0')+'.jpg'}
+function shotKB(sh,i,t){const k=lin(t,sh.t0,Math.max(.5,sh.t1-sh.t0)),zin=i%2===0;const z=zin?mix(1.03,1.1,k):mix(1.1,1.03,k);const px=(i%4<2?1:-1)*mix(-22,22,k);return `translate(${px}px,0) scale(${z})`}
+function setImg(e,src){const im=e.firstElementChild;if(im.getAttribute('src')!==src)im.setAttribute('src',src)}
+function bgShots(t){let i=0;while(i<SHOTS.length-1&&t>=SHOTS[i].t1)i++;
+ let a=i,b=null,q=0,kind='fade';
+ const near=(j)=>{const sh=SHOTS[j];if(!sh||j>=SHOTS.length-1)return null;const tr=SHOTS[j+1].tr||.5;return Math.abs(t-sh.t1)<tr/2?{q:(t-(sh.t1-tr/2))/tr,kind:SHOTS[j+1].kind||'fade'}:null};
+ let x=near(i)||near(i-1);if(x){a=near(i)?i:i-1;b=a+1;q=eio(cl(x.q));kind=x.kind}
+ const A=SHOTS[a];setImg(BGA,shotSrc(A,t));let ta=shotKB(A,a,t);
+ if(b===null){P(BGA,960,540,1,0,1);BGA.style.transform=`translate(0,0) ${ta}`;BGA.style.filter='';BGB.style.visibility='hidden';return}
+ const B=SHOTS[b];setImg(BGB,shotSrc(B,Math.max(t,B.t0-.6)));const tb=shotKB(B,b,Math.max(t,B.t0));BGB.style.visibility='visible';
+ if(kind==='whip'){const bl=Math.sin(q*Math.PI)*18;BGA.style.transform=`translateX(${-q*1920}px) ${ta}`;BGB.style.transform=`translateX(${(1-q)*1920}px) ${tb}`;
+  BGA.style.filter=BGB.style.filter=`blur(${bl}px)`;BGA.style.opacity=BGB.style.opacity=1}
+ else{BGA.style.transform=ta;BGB.style.transform=tb;BGA.style.filter=BGB.style.filter='';BGA.style.opacity=1;BGB.style.opacity=q}}
 function bgU(t){
+ if(SHOTS){bgShots(t);return}
  if(GLOW){const z=1.07+0.035*Math.sin(t*0.045);meadow.style.transform=`translate(${Math.sin(t*0.03)*26}px,${Math.cos(t*0.025)*10}px) scale(${z})`;
   RAYS.style.opacity=.55+.25*Math.sin(t*.6)+.1*Math.sin(t*1.7);RAYS.style.transform=`rotate(${Math.sin(t*.12)*4}deg) translateX(${Math.sin(t*.08)*40}px)`;
   const r=rng(77);FF.forEach((f,i)=>{const x0=r()*1920,y0=200+r()*860,sp=.15+r()*.25,ph=r()*6;const x=(x0+Math.sin(t*sp+ph)*120+t*(8+r()*10))%1980-30,y=y0+Math.sin(t*sp*1.3+ph*2)*70-((t*12*(.5+r()))%300);
@@ -440,7 +470,7 @@ SCN.question=(r,t0,s)=>{
  items.forEach(o=>{if(o.go)sfx(T(o.go.at)+o.go.k*(o.go.step??.25),o.go.snd||'whoosh',.3,1.2);if(o.cross!=null)sfx(o.cross,'pop',.35,.8)});
  opts.forEach((_,i)=>sfx(tq+.05+i*.12,'pop',.3,1.3));
  return t=>{
-  P(panel,960,440,pop(t,t0+.05,.5));P(qn,960,190,pop(t,t0+.25,.4));if(qtext)P(qtext,960,s.qy||620,pop(t,qtT,.45));
+  P(panel,960,440,s.panel===false?0:pop(t,t0+.05,.5));P(qn,960,190,pop(t,t0+.25,.4));if(qtext)P(qtext,960,s.qy||620,pop(t,qtT,.45));
   items.forEach((o,i)=>{let x=o.x,y=o.y+Math.sin(t*2.4+i)*6,op=1;
    if(o.go){const k=eio(lin(t,T(o.go.at)+o.go.k*(o.go.step??.25),o.go.d||.8));x+=k*(o.go.dx||0);y+=k*(o.go.dy||0);op=1-lin(k,.6,.4)}
    P(iels[i],x,y,pop(t,o.t,.4),Math.sin(t*2+i)*(o.wob||0),op);
@@ -488,11 +518,11 @@ SCN.recap=(r,t0,s)=>{
 
 // END CARD
 SCN.end=(r,t0,s)=>{
- el(r,'','a',GLOW?'width:1920px;height:1080px;background:radial-gradient(ellipse at 60% 45%,rgba(18,59,40,.62),rgba(18,40,30,.86))':'width:1920px;height:1080px;background:#123B28');
+ el(r,'','a',SING?'width:1920px;height:1080px;background:radial-gradient(ellipse at 58% 45%,rgba(255,240,170,.62),rgba(255,200,90,.22) 70%,rgba(255,170,60,.1))':GLOW?'width:1920px;height:1080px;background:radial-gradient(ellipse at 60% 45%,rgba(18,59,40,.62),rgba(18,40,30,.86))':'width:1920px;height:1080px;background:#123B28');
  const dots=[...Array(18)].map((_,i)=>el(r,`<div style="width:${30+i%4*14}px;height:${30+i%4*14}px;border-radius:50%;background:${CFC[i%6]};opacity:.5"></div>`));
- const logo=el(r,`<div style="display:flex;align-items:center;gap:26px"><img src="__LOGO__" width="140" height="140"><span class="big" style="font-size:120px;color:#fff">Little Takhti</span></div>`);
+ const logo=el(r,`<div style="display:flex;align-items:center;gap:26px"><img src="__LOGO__" width="140" height="140"><span class="big sg" style="font-size:120px;color:#fff">Little Takhti</span></div>`);
  const url=el(r,`<div class="chip" style="background:#FFD93B;color:#123B28;font-size:60px;padding:10px 54px 4px">littletakhti.netlify.app</div>`);
- const sub=el(r,`<div style="font-size:44px;color:#C9F0D3;font-weight:600">Free worksheets, games and quizzes</div>`);
+ const sub=el(r,`<div class="sgs" style="font-size:44px;color:#C9F0D3;font-weight:600">Free worksheets, games and quizzes</div>`);
  const m=mascot(r);sfx(t0+.1,'swoosh',.5);sfx(t0+.5,'sparkle',.5);
  const badge=s.app?el(r,`<div style="display:flex;align-items:center;gap:22px;background:#fff;border:4px solid #FFD93B;border-bottom-width:10px;border-radius:30px;padding:14px 40px 14px 24px"><div style="width:74px;height:74px;border-radius:20px;background:linear-gradient(160deg,#3DDC84,#1F7A4C);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.15)"><svg width="44" height="56" viewBox="0 0 44 56"><rect x="2" y="2" width="40" height="52" rx="8" fill="#fff"/><rect x="7" y="9" width="30" height="34" rx="3" fill="#123B28"/><circle cx="22" cy="48" r="3" fill="#123B28"/><path d="M15 26l5 5 9-10" stroke="#FFD93B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div style="text-align:left"><div style="font-size:30px;font-weight:600;color:#1F7A4C;line-height:1.1">Also on</div><div class="big" style="font-size:58px;color:#123B28;line-height:1">Android</div></div></div>`):null;
  const rr=rng(5);const dp=dots.map(()=>[rr()*1920,rr()*1080,rr()*6]);
@@ -508,18 +538,25 @@ const cap=document.getElementById('cap'),wipe=document.getElementById('wipe'),wi
 const bounds=S.map(s=>s.t0).filter(x=>x>0);
 bounds.forEach(b=>sfx(b-.3,'whoosh',.35));
 let lastKey=null;
-function capU(t){let cur=null;for(const k in TL.lines){const l=TL.lines[k];if(t>=l.start-.05&&t<=l.end+.35)cur=k}
+const CAPC=['#7B3FE4','#E8428C','#1E88E5','#2E9B4F','#F07B1A'];let capIdx={};{let n=0;for(const k in TL.lines)capIdx[k]=n++}
+function capU(t){if(SING){let cur=null;for(const k in TL.lines){const l=TL.lines[k];if(t>=l.start-.25&&t<=l.end+.45)cur=k}
+  if(!cur){cap.style.display='none';lastKey=null;return}const l=TL.lines[cur];
+  if(lastKey!==cur){cap.innerHTML=l.words.map(w=>`<span class="w">${w.w}</span>`).join(' ');cap.style.setProperty('--oc',CAPC[capIdx[cur]%CAPC.length]);lastKey=cur}
+  const sp=cap.querySelectorAll('.w');l.words.forEach((w,i)=>{const on=t>=w.t&&t<w.t+Math.max(w.d,.25),dn=t>=w.t;sp[i].className='w'+(on?' on':dn?' s':'');
+   const k=t-w.t;const b=k>=0&&k<.45?Math.sin(k/.45*Math.PI):0;sp[i].style.transform=`translateY(${-b*22}px) scale(${1+b*.16}) rotate(${b*(i%2?3:-3)}deg)`;sp[i].style.opacity=dn?1:.88});
+  cap.style.display='block';const k=pop(t,l.start-.25,.3);cap.style.transform=`translateX(-50%) scale(${k})`;return}
+ let cur=null;for(const k in TL.lines){const l=TL.lines[k];if(t>=l.start-.05&&t<=l.end+.35)cur=k}
  if(!cur){cap.style.display='none';lastKey=null;return}
  const l=TL.lines[cur];if(lastKey!==cur){cap.innerHTML=(l.speaker==='T'?`<img src="${LOGO}">`:l.speaker==='S'?'<span style="color:#FF7A45;margin-right:12px">♪</span>':'')+l.words.map(w=>`<span class="w">${w.w}</span>`).join(' ');lastKey=cur}
  const sp=cap.querySelectorAll('.w');l.words.forEach((w,i)=>{sp[i].className='w'+(t>=w.t?(t<w.t+Math.max(w.d,.25)?' on':' s'):'')});
  cap.style.display='block';const k=pop(t,l.start-.05,.3);cap.style.transform=`translateX(-50%) scale(${k})`}
-function wipeU(t){let b=null;for(const x of bounds)if(Math.abs(t-x)<.45)b=x;
+function wipeU(t){if(SING){wipe.style.display=wipe2.style.display='none';return}let b=null;for(const x of bounds)if(Math.abs(t-x)<.45)b=x;
  if(b===null){wipe.style.display=wipe2.style.display='none';return}
  const k=(t-b+.45)/.9;wipe.style.display=wipe2.style.display='block';
  wipe.style.left=mix(-1000,2100,eio(k))+'px';wipe2.style.left=mix(-1100,2000,eio(lin(k,0.06,1)))+'px'}
 // clouds drifting over the sky, sparkles on the beat, living plants, a slow camera push in every scene
 const AMBL=AMB?el(document.body,'','a','width:1920px;height:1080px;pointer-events:none;z-index:40'):null;
-const CLOUDS=AMB&&!GLOW?[0,1,2].map(i=>el(bg,`<div style="position:relative;width:${220+i*60}px;height:${90+i*20}px"><div style="position:absolute;left:10%;top:30%;width:60%;height:70%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:35%;top:0;width:45%;height:90%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:0;top:50%;width:100%;height:50%;background:#F3FAFF;border-radius:999px"></div></div>`)):[];
+const CLOUDS=AMB&&!GL?[0,1,2].map(i=>el(bg,`<div style="position:relative;width:${220+i*60}px;height:${90+i*20}px"><div style="position:absolute;left:10%;top:30%;width:60%;height:70%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:35%;top:0;width:45%;height:90%;background:#fff;border-radius:999px"></div><div style="position:absolute;left:0;top:50%;width:100%;height:50%;background:#F3FAFF;border-radius:999px"></div></div>`)):[];
 const SPK=AMB?[...Array(6)].map(()=>el(AMBL,`<svg width="44" height="44" viewBox="0 0 40 40" style="display:block"><path d="M20 0Q23 17 40 20Q23 23 20 40Q17 23 0 20Q17 17 20 0Z" fill="#FFE680"/><circle cx="20" cy="20" r="4" fill="#fff"/></svg>`)):[];
 function ambU(t,a){if(!AMB)return;
  CLOUDS.forEach((c,i)=>{const sp=14+i*6,w=2400;P(c,((t*sp+i*800)%w)-240,90+i*70+Math.sin(t*.4+i)*6,1,0,.85)});
@@ -533,7 +570,8 @@ function ambU(t,a){if(!AMB)return;
   const gp=root.__gp||(root.__gp=[...root.querySelectorAll('img.gplant')]);gp.forEach((g,j)=>g.style.transform=`rotate(${Math.sin(t*1.5+j)*2}deg) scale(${1+.012*Math.pow(1-B.ph,3)})`);
   const nxt=S[S.indexOf(a)+1];const dur=(nxt?nxt.t0:TL.total)-a.t0;const k=eio(lin(t,a.t0,Math.max(1,dur)));
   root.style.transformOrigin='50% 45%';root.style.transform=root.__clip?'':`scale(${1+.03*k})`}}
-window.render=async function(t){bgU(t);let a=null;for(const s of S)if(t>=s.t0)a=s;for(const s of S){s.root.style.display=s===a?'block':'none'}a&&a.u(t);ambU(t,a);capU(t);wipeU(t);const c=a&&a.root.__clip;if(c&&c.getAttribute('src')){try{await c.decode()}catch(e){}}return 1};
+window.render=async function(t){bgU(t);let a=null;for(const s of S)if(t>=s.t0)a=s;for(const s of S){s.root.style.display=s===a?'block':'none'}a&&a.u(t);ambU(t,a);capU(t);wipeU(t);const c=a&&a.root.__clip;if(c&&c.getAttribute('src')){try{await c.decode()}catch(e){}}
+ if(SHOTS){for(const e of [BGA,BGB]){const im=e.firstElementChild;if(e.style.visibility!=='hidden'&&im.getAttribute('src')){try{await im.decode()}catch(e){}}}}return 1};
 window.getSfx=()=>SFX;
 window.render(0);
 </script></body></html>

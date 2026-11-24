@@ -64,6 +64,8 @@ jobs:
           pip install -q playwright edge-tts numpy scipy pillow
           python -m playwright install --with-deps chromium
           cd source/tools && mkdir -p fonts && cd fonts && npm init -y >/dev/null && npm i -s @fontsource/baloo-2 @fontsource/lexend
+      - name: Scenery clips
+        run: git fetch -q --depth=1 origin videos:refs/remotes/origin/videos || true
       - name: Render
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

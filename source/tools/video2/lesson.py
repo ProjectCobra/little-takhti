@@ -383,7 +383,7 @@ def assets(spec):
     out = {}
     for f in sorted((HERE / 'assets').glob('*.webp')):
         out[f.stem.replace('-', '_')] = 'data:image/webp;base64,' + base64.b64encode(f.read_bytes()).decode()
-    if spec.get('theme') == 'glow':
+    if spec.get('theme') in ('glow', 'singalong'):
         # Little GlowBerry look: Canva AI cutouts, trimmed to their visible pixels (faint alpha noise ignored)
         from PIL import Image
         import io
@@ -426,6 +426,38 @@ def clip_frames(tl, spec):
     n = len(list(d.glob('*.jpg')))
     tl['clips'] = {'intro': {'dir': d.as_uri() + '/', 'n': n}}
     print('intro clip frames', n, 'stretch', round(k, 2))
+
+
+def clip_file(name, spec):
+    """a scenery clip: source/tools/video2/clips, else the videos branch (clips/), else its fallbacks in spec['clip_fallback']"""
+    for c in [name] + spec.get('clip_fallback', {}).get(name, []):
+        p = HERE / 'clips' / f'{c}.mp4'
+        if p.exists(): return c, p
+        r = subprocess.run(['git', '-C', str(SRC.parent), 'show', f'origin/videos:clips/{c}.mp4'], capture_output=True)
+        if r.returncode == 0 and len(r.stdout) > 10000:
+            p = TMP / f'{c}.mp4'; p.write_bytes(r.stdout); return c, p
+    raise SystemExit(f'no clip for {name}')
+
+
+def shot_frames(tl, spec):
+    """scenery under a sing-along lesson: each clip slowed down (motion-interpolated) and ping-ponged into a loop of frames"""
+    if not spec.get('shots'): return
+    speed = spec.get('clip_speed', 0.7); fast = os.environ.get('CLIP_FAST') == '1'
+    made, used = {}, {}
+    for sh in spec['shots']:
+        real, src = clip_file(sh['clip'], spec)
+        used[sh['clip']] = real
+        if real not in made:
+            d = TMP / f'shot-{real}'; d.mkdir(parents=True, exist_ok=True)
+            if not list(d.glob('*.jpg')):
+                interp = 'framerate=fps=30' if fast else 'minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:vsbmc=1'
+                vf = (f'[0:v]fps=30,setpts=PTS/{speed},{interp},scale=1920:1080:flags=lanczos,split[a][b];'
+                      f'[b]reverse,trim=start_frame=1[r];[a][r]concat=n=2:v=1:a=0')
+                subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(src), '-filter_complex', vf, '-q:v', '4', str(d / '%04d.jpg')], check=True)
+            made[real] = {'dir': d.as_uri() + '/', 'n': len(list(d.glob('*.jpg')))}
+    tl['shots'] = [dict(sh, real=used[sh['clip']], **made[used[sh['clip']]]) for sh in spec['shots']]
+    G_LOG.append('clips: ' + ', '.join(f'{k}->{v}' if k != v else k for k, v in used.items()))
+    print('shots', len(tl['shots']), 'clips', used)
 
 
 def page_html(tl, spec):
@@ -496,6 +528,7 @@ def main():
     tl, voice = build_timeline(spec['script'], spec.get('song'))
     (TMP / 'timeline.json').write_text(json.dumps(tl, indent=1))
     clip_frames(tl, spec)
+    shot_frames(tl, spec)
     html = TMP / 'stage.html'; html.write_text(page_html(tl, spec))
     countdowns = [s['cd'] for s in spec['scenes'] if s['type'] == 'question']
     from playwright.sync_api import sync_playwright

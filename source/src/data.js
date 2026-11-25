@@ -126,6 +126,19 @@ SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||pla
  (GUIDE[s.id]=GUIDE[s.id]||[]);
  if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].splice(at,0,W('Revision',['Revise every Urdu topic from this term.','اس ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Revision Day','Today everyone looked back at their Urdu notebooks and read their favourite lessons again. Ask: Which Urdu lesson is your favourite?']))});
 
+/* term 2 revision (Sumbul, Nov 2026): two pages from each topic taught after the term 1 revision (weeks 12 to 16), placed in the week after them, before the winter break */
+SUBJECTS.filter(s=>!s.community).forEach(s=>{const plan=PLAN[s.id];if(!plan||!RID[s.id+'-rev'])return;
+ const t2=s.topics.slice(10,15);if(t2.length<2)return;
+ const pages=[];t2.forEach(t=>{const idx=PAGES[s.id].map((p,i)=>p.topic===t?i:-1).filter(i=>i>=0);if(!idx.length)return;pages.push(idx[0]);if(idx.length>2)pages.push(idx[Math.floor(idx.length/2)])});
+ if(pages.length<3)return;const ur=!!s.rtl,G=GR[s.grade].name;
+ const r={id:s.id+'-rev2',sub:s.id,set:true,rev:true,title:ur?'دوسری ٹرم کی دہرائی':s.name+' Term 2 Revision Set',en:ur?'Urdu term 2 revision set':'',topic:ur?'دہرائی':'Revision',pages,
+  desc:`${pages.length} pages of ${G} ${s.name} term 2 revision, two from each topic taught since the term 1 revision, with an answer key for every page.`,obj:['Revise every topic from term 2 before the end of term test.'],isNew:true};
+ RES.push(r);RID[r.id]=r;
+ const at=Math.min(plan.length,11+t2.length);
+ plan.splice(at,0,[ur?'دوسری ٹرم کی دہرائی':'Term 2 revision',['rev2'],'Revise every topic from term 2 before the end of term test.',['Do two pages of the revision set each day.','Check with the answer key together and redo mistakes the next day.'],REV_STORY[s.kind]||REV_STORY.gk]);
+ if(ur&&typeof URW!=='undefined'&&URW[s.id])URW[s.id].splice(at,0,W('Term 2 revision',['Revise every Urdu topic from term 2.','دوسری ٹرم کے تمام اردو اسباق کی دہرائی۔'],[['Do two pages of the revision set each day.','روزانہ دہرائی سیٹ کے دو صفحے کریں۔'],['Check with the answer key and redo mistakes.','جوابات کی کنجی سے چیک کریں اور غلطیاں دوبارہ کریں۔']],['Term 2 Revision Day','Everyone looked back at the Urdu lessons from term 2 and read their favourites again. Ask: Which new Urdu word did you learn this term?']));
+});
+
 /* handwriting practice sets: English on four lines, Urdu copy lines, Maths square grid. Kept out of the weekly plan and quizzes */
 if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';
  [[WRITE,false],[WRITE_WARM,true]].forEach(([SET,warm])=>Object.entries(SET).forEach(([kind,byG])=>Object.entries(warm?{g1:byG}:byG).forEach(([g,pages])=>{

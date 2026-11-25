@@ -1,3 +1,5 @@
 # Numbers to 1000 Song (Little Takhti), Google Flow Music, Grade 2 Maths, topic g2-maths-t1
 https://storage.googleapis.com/producer-app-public/clips/8c739dd6-2bf8-46c6-9ccc-eef9d9fd7f62.m4a
 topic: A cheerful children's song about numbers to one thousand: hundreds, tens and ones, place value, three hundred and forty-five, seven hundred and eight, which is bigger, count by hundreds to one thousand, quiz time.
+segments: 55-80, 96-153
+prompt: Which is bigger, which is more? Look at the hundreds first, for sure! Four five two or four two five? Both have four hundreds, so look at the tens, five tens beat two tens, four five two wins, my friends! Hundreds, tens and ones, every number has a place! Quiz time! Can you guess? Shout it out loud! How many hundreds are in three hundred and forty-five? Three hundreds! Three hundreds in three four five! Seven zero eight. How many tens? No tens! Zero tens! The zero holds the place! Which is bigger, three zero nine or three nine zero? Three nine zero! Nine tens beat zero tens!

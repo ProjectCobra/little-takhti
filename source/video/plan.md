@@ -7,7 +7,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 ## Log (newest last)
 
 - 2026-11-24 | Grade 1 | Science | science-t12 Parts of a Plant | posted
-- 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | lyrics again: Sumbul asked for "learning time" instead of "Takhti time" (mispronounced); remake the song, then rerun PART 2 (update LINES timings in source/video/specs/g2-maths-t1-song.py from the new transcript)
+- 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | setting: playroom (toy blocks) | v2 song 8c739dd6 (learning time intro); verse 4 ends at "look at the tens" in this take, so the compare scene shows 5 tens beat 2 tens on screen
 
 ## Nursery
 

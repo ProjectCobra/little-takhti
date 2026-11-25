@@ -7,70 +7,68 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 TR = json.load(open(sys.argv[1]))
-SONG_URL = 'https://storage.googleapis.com/producer-app-public/clips/a5f41ef6-ff77-4082-92cb-6c4dd88cc43f.m4a'
+SONG_URL = 'https://storage.googleapis.com/producer-app-public/clips/8c739dd6-2bf8-46c6-9ccc-eef9d9fd7f62.m4a'
 
 H, T, O = '#2E9B57', '#F5A524', '#EF6A4C'   # hundreds, tens, ones
 DG = '#123B28'
 
 # ---------------- lyric lines, timed to the recording ----------------
 LINES = [
- ('h1', "Hello, friends! It's learning time!", 4.5, 7.1),
- ('h2', "Let's count big, all the way to a thousand!", 7.2, 10.0),
- ('h3', "Ready? Let's go!", 10.8, 12.3),
- ('v1a', "Ten little ones make one ten,", 12.8, 14.6),
- ('v1b', "bundle them up and count again.", 14.6, 16.7),
- ('v1c', "Ten tens together, what do you see?", 16.7, 20.2),
- ('v1d', "One hundred! One, zero, zero!", 20.7, 24.0),
- ('v2a', "Look at three four five, let's take it apart,", 24.0, 26.4),
- ('v2b', "three hundreds first, that's where we start.", 26.6, 28.3),
- ('v2c', "Then four tens, and five ones too,", 28.3, 30.5),
- ('v2d', "three hundred and forty-five, now I know it's true!", 30.5, 34.9),
- ('c1a', "Hundreds, tens and ones,", 36.4, 38.3),
- ('c1b', "every number has a place!", 38.4, 40.2),
- ('c1c', "Hundreds, tens and ones,", 40.4, 42.2),
- ('c1d', "put each digit in its space!", 42.3, 44.1),
- ('c1e', "Count by hundreds, up we climb,", 44.2, 47.8),
- ('c1f', "all the way to one thousand, every time!", 48.1, 51.5),
- ('z1', "Seven zero eight, what's that zero for?", 51.9, 53.9),
- ('z2', "It means no tens, not one more!", 54.0, 55.9),
- ('z3', "Seven hundreds, no tens, eight ones, hooray,", 56.1, 59.7),
- ('z4', "seven hundred and eight, that's how we say!", 59.7, 63.26),
- ('k1', "Which is bigger, which is more?", 63.26, 65.24),
- ('k2', "Look at the hundreds first, for sure!", 65.24, 67.74),
- ('k3', "Four five two or four two five?", 67.74, 69.48),
- ('k4', "Both have four hundreds, so look at the tens,", 69.48, 71.68),
- ('k5', "five tens beat two tens,", 71.68, 73.7),
- ('k6', "four five two wins, my friends!", 73.7, 75.7),
- ('c2a', "Hundreds, tens and ones,", 76.3, 77.56),
- ('c2b', "every number has a place!", 77.56, 79.48),
- ('c2c', "Hundreds, tens and ones,", 79.48, 81.56),
- ('c2d', "put each digit in its space!", 81.56, 83.38),
- ('c2e', "Count by hundreds, up we climb,", 83.38, 87.06),
- ('c2f', "all the way to one thousand, every time!", 87.06, 91.0),
- ('b1', "One hundred, two hundred, three hundred, four,", 91.0, 93.18),
- ('b2', "five hundred, six hundred, seven hundred, more!", 93.18, 95.2),
- ('b3', "Eight hundred, nine hundred,", 95.2, 97.26),
- ('b4', "one more to go,", 97.26, 99.06),
- ('b5', "ten hundreds make one thousand,", 99.06, 102.04),
- ('b6', "whoa!", 102.04, 102.78),
- ('qa', "Quiz time!", 103.3, 104.2),
- ('qb', "Can you guess?", 104.4, 105.2),
- ('qc', "Shout it out loud!", 105.5, 106.4),
- ('q1', "How many hundreds are in three hundred and forty-five?", 107.2, 111.1),
- ('a1', "Three hundreds! Three hundreds in three four five!", 114.9, 118.7),
- ('q2', "Seven zero eight. How many tens?", 119.1, 120.8),
- ('a2', "No tens! Zero tens!", 128.6, 130.8),
- ('a2b', "The zero holds the place!", 131.6, 133.05),
- ('q3', "Which is bigger, three zero nine or three nine zero?", 133.4, 136.3),
- ('a3', "Three nine zero! Nine tens beat zero tens!", 148.7, 152.4),
- ('c3a', "Hundreds, tens and ones,", 152.6, 154.3),
- ('c3b', "every number has a place!", 154.5, 156.2),
- ('c3c', "Hundreds, tens and ones,", 156.5, 158.25),
- ('c3d', "put each digit in its space!", 158.35, 160.1),
- ('c3e', "Count by hundreds, up we climb,", 160.3, 163.85),
- ('c3f', "all the way to one thousand, every time!", 164.1, 167.8),
- ('o1', "Find more fun worksheets and games, on the website and the app!", 171.7, 175.1),
- ('o2', "Bye bye, friends!", 175.3, 176.15),
+ ('h1', "Hello, friends! It's learning time!", 3.4, 5.95),
+ ('h2', "Let's count big, all the way to a thousand!", 6.0, 8.75),
+ ('h3', "Ready? Let's go!", 8.8, 9.95),
+ ('v1a', "Ten little ones make one ten,", 10.0, 11.95),
+ ('v1b', "bundle them up and count again.", 12.0, 14.0),
+ ('v1c', "Ten tens together, what do you see?", 14.1, 17.2),
+ ('v1d', "One hundred! One, zero, zero!", 17.25, 19.5),
+ ('v2a', "Look at three four five, let's take it apart,", 19.5, 23.7),
+ ('v2b', "three hundreds first, that's where we start.", 24.0, 25.95),
+ ('v2c', "Then four tens, and five ones too,", 26.0, 28.0),
+ ('v2d', "three hundred and forty-five, now I know it's true!", 28.05, 31.5),
+ ('c1a', "Hundreds, tens and ones,", 32.2, 33.75),
+ ('c1b', "every number has a place!", 33.78, 35.8),
+ ('c1c', "Hundreds, tens and ones,", 35.84, 37.78),
+ ('c1d', "put each digit in its space!", 37.8, 39.74),
+ ('c1e', "Count by hundreds, up we climb,", 39.76, 41.76),
+ ('c1f', "all the way to one thousand, every time!", 41.78, 46.5),
+ ('z1', "Seven zero eight, what's that zero for?", 47.7, 49.88),
+ ('z2', "It means no tens, not one more!", 49.9, 51.84),
+ ('z3', "Seven hundreds, no tens, eight ones, hooray,", 51.86, 53.78),
+ ('z4', "seven hundred and eight, that's how we say!", 53.79, 55.8),
+ ('k1', "Which is bigger, which is more?", 55.82, 57.8),
+ ('k2', "Look at the hundreds first, for sure!", 57.82, 59.9),
+ ('k3', "Four five two or four two five?", 60.15, 61.9),
+ ('k4', "Both have four hundreds, so look at the tens!", 61.9, 64.0),
+ ('c2a', "Hundreds, tens and ones,", 64.15, 66.0),
+ ('c2b', "every number has a place!", 66.05, 68.1),
+ ('c2c', "Hundreds, tens and ones,", 68.15, 69.98),
+ ('c2d', "put each digit in its space!", 70.0, 72.0),
+ ('c2e', "Count by hundreds, up we climb,", 72.05, 74.0),
+ ('c2f', "all the way to one thousand, every time!", 74.03, 78.5),
+ ('b1', "One hundred, two hundred, three hundred, four,", 80.0, 83.6),
+ ('b2', "five hundred, six hundred, seven hundred, more!", 83.7, 87.4),
+ ('b3', "Eight hundred, nine hundred,", 87.8, 90.0),
+ ('b4', "one more to go,", 90.1, 91.9),
+ ('b5', "ten hundreds make one thousand,", 92.3, 95.0),
+ ('b6', "whoa!", 95.0, 96.5),
+ ('qa', "Quiz time!", 97.55, 98.7),
+ ('qb', "Can you guess?", 98.75, 99.6),
+ ('qc', "Shout it out loud!", 99.62, 101.0),
+ ('q1', "How many hundreds are in three hundred and forty-five?", 105.9, 111.0),
+ ('a1', "Three hundreds! Three hundreds in three four five!", 116.5, 120.6),
+ ('q2', "Seven zero eight. How many tens?", 127.6, 131.6),
+ ('a2', "No tens! Zero tens!", 135.75, 137.3),
+ ('a2b', "The zero holds the place!", 137.33, 139.3),
+ ('q3', "Which is bigger, three zero nine or three nine zero?", 139.35, 143.6),
+ ('a3', "Three nine zero! Nine tens beat zero tens!", 147.4, 151.5),
+ ('c3a', "Hundreds, tens and ones,", 151.55, 153.8),
+ ('c3b', "every number has a place!", 153.82, 155.8),
+ ('c3c', "Hundreds, tens and ones,", 155.84, 157.8),
+ ('c3d', "put each digit in its space!", 157.82, 159.8),
+ ('c3e', "Count by hundreds, up we climb,", 159.82, 161.78),
+ ('c3f', "all the way to one thousand, every time!", 161.79, 166.5),
+ ('o1', "Find more fun worksheets and games, on the website and the app!", 169.5, 173.9),
+ ('o2', "Bye bye, friends!", 174.0, 175.0),
 ]
 
 ONES = 'zero one two three four five six seven eight nine'.split()
@@ -89,6 +87,14 @@ def spoken(tok):
     return ' and '.join(out)
 
 WORDS = [w for s in TR['vocals'] for w in s['words']]
+# fixes checked against the vocal level and a guided re-transcription (transcript-segments.json):
+# "Seven" in question 2 was missed, and two answer starts were heard early (the singing starts at 117.2 and 148.0)
+FIX = {116.54: 117.15, 147.46: 148.0}
+for w in WORDS:
+    if w['s'] in FIX: w['s'] = FIX[w['s']]
+WORDS = [w for w in WORDS if not (w['w'] == '7' and 120 < w['s'] < 122)]
+WORDS.append({'w': 'Seven', 's': 127.65, 'e': 128.3})
+WORDS.sort(key=lambda w: w['s'])
 def time_line(text, a, b):
     ws = [w for w in WORDS if a - 0.05 <= w['s'] < b]
     toks = text.split()
@@ -257,13 +263,13 @@ for cx in (L_, R_):
 els += [ring(L_ - G, NY + 5, 170, 'k4.four', out='k4.look'), ring(R_ - G, NY + 5, 170, 'k4.four', out='k4.look'),
         html(big('=', 150, '#FF7A45'), 960, NY, 'k4.four', out='k4.look'),
         ring(L_, NY + 5, 170, 'k4.tens'), ring(R_, NY + 5, 170, 'k4.tens'),
-        html(big('&gt;', 170, '#FF7A45'), 960, NY, 'k5.beat', snd={'n': 'pop', 'g': 0.4})]
-els.append({'k': 'card', 'html': 'Look at the <span style="color:#2E9B57">hundreds</span> first', 'x': 960, 'y': 760, 'at': 'k2.look', 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': 'k5.five'})
-els.append({'k': 'card', 'html': f'<span style="color:#C77700">5 tens</span> beat <span style="color:#C77700">2 tens</span>', 'x': 960, 'y': 760, 'at': 'k5.five', 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': 'k6.four'})
-els.append({'k': 'card', 'html': f'452 is bigger than 425', 'x': 960, 'y': 760, 'at': 'k6.four', 'size': 58, 'pad': '12px 40px 2px', 'snd': None, 'fix': True})
-els.append(prop('crown', 120, L_, NY - 200, 'k6.wins', snd={'n': 'pop', 'g': 0.4}))
+        html(big('&gt;', 170, '#FF7A45'), 960, NY, 'k4.tens+0.2', snd={'n': 'pop', 'g': 0.4})]
+els.append({'k': 'card', 'html': 'Look at the <span style="color:#2E9B57">hundreds</span> first', 'x': 960, 'y': 760, 'at': 'k2.look', 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': 'k4.tens'})
+els.append({'k': 'card', 'html': f'<span style="color:#C77700">5 tens</span> beat <span style="color:#C77700">2 tens</span>', 'x': 960, 'y': 760, 'at': 'k4.tens', 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': 'k4.tens+0.8'})
+els.append({'k': 'card', 'html': f'452 is bigger than 425', 'x': 960, 'y': 760, 'at': 'k4.tens+0.8', 'size': 58, 'pad': '12px 40px 2px', 'snd': None, 'fix': True})
+els.append(prop('crown', 120, L_, NY - 200, 'k4.tens+0.8', snd={'n': 'pop', 'g': 0.4}))
 scenes.append({'type': 'free', 'mark': 'compare', 'chapter': 'Which is bigger?', 'title': 'Which is bigger?', 'title_y': 90, 'els': els,
-               'mascot': {'x': 1760, 'y': 860, 's': 0.55}, 'confetti': [{'at': 'k6.wins', 'x': L_, 'y': NY, 'n': 50}]})
+               'mascot': {'x': 1760, 'y': 860, 's': 0.55}, 'confetti': [{'at': 'k4.tens+0.8', 'x': L_, 'y': NY, 'n': 50}]})
 
 scenes.append(chorus('c2', 'chorus2'))
 
@@ -287,22 +293,22 @@ def qnum(digits, at, ringi, ring_at):
     e = num_digits(digits, 960, 420, at, size=230, gap=140)
     e.append(ring(960 + (ringi - 1) * 140, 415, 190, ring_at))
     return e
-scenes.append({'type': 'question', 'mark': 'q1', 'n': 1, 'cd': 'cd1', 'cdlen': 3.5, 'opts': ['3', '4', '5'], 'ans': '3', 'ticks': False, 'tada': 0.3,
+scenes.append({'type': 'question', 'mark': 'q1', 'n': 1, 'cd': 'cd1', 'cdlen': 4.6, 'opts': ['3', '4', '5'], 'ans': '3', 'ticks': False, 'tada': 0.3,
                'opty': 775, 'reveal_at': 'a1.three#0', 'opts_at': 'q1$-0.2', 'els': qnum('345', '@q1+0.2', 0, 'q1.hundreds')})
-scenes.append({'type': 'question', 'mark': 'q2', 'n': 2, 'cd': 'cd2', 'cdlen': 7.5, 'opts': ['7', '0', '8'], 'ans': '0', 'ticks': False, 'tada': 0.3,
+scenes.append({'type': 'question', 'mark': 'q2', 'n': 2, 'cd': 'cd2', 'cdlen': 3.9, 'opts': ['7', '0', '8'], 'ans': '0', 'ticks': False, 'tada': 0.3,
                'opty': 775, 'reveal_at': 'a2.no#0', 'opts_at': 'q2$-0.2', 'els': qnum('708', '@q2+0.2', 1, 'q2.tens')})
 q3 = num_digits('309', 640, 420, '@q3+0.2', size=170, gap=105) + num_digits('390', 1280, 420, 'q3.or', size=170, gap=105)
 q3.append(html(big('?', 150, '#FF7A45'), 960, 420, 'q3.or+0.2', out='a3.three#0'))
 q3.append(html(big('&lt;', 150, '#FF7A45'), 960, 420, 'a3.three#0+0.1'))
-scenes.append({'type': 'question', 'mark': 'q3', 'n': 3, 'cd': 'cd3', 'cdlen': 7.0, 'opts': ['309', '390', 'same'], 'ans': '390', 'ticks': False, 'tada': 0.3,
+scenes.append({'type': 'question', 'mark': 'q3', 'n': 3, 'cd': 'cd3', 'cdlen': 4.2, 'opts': ['309', '390', 'same'], 'ans': '390', 'ticks': False, 'tada': 0.3,
                'opty': 775, 'reveal_at': 'a3.three#0', 'opts_at': 'q3$-0.2', 'els': q3})
 
 scenes.append(chorus('c3', 'chorus3', 'Sing along'))
 scenes.append({'type': 'end', 'mark': 'end', 'app': True, 'app_at': 'o1.app', 'app_top': 'Coming soon to', 'app_big': 'Google Play'})
 
-marks = {'intro': 0.0, 'tens': 12.6, 'v2': 23.95, 'chorus1': 36.2, 'zero': 51.75, 'compare': 63.1, 'chorus2': 75.9, 'count': 90.85,
-         'quiz': 103.1, 'q1': 107.0, 'q2': 118.95, 'q3': 133.25, 'chorus3': 152.45, 'end': 170.6,
-         'cd1': 111.3, 'cd2': 121.0, 'cd3': 141.6}
+marks = {'intro': 0.0, 'tens': 9.9, 'v2': 19.35, 'chorus1': 32.0, 'zero': 47.5, 'compare': 55.65, 'chorus2': 65.3, 'count': 79.6,
+         'quiz': 97.2, 'q1': 105.7, 'q2': 126.9, 'q3': 139.2, 'chorus3': 151.35, 'end': 168.3,
+         'cd1': 112.4, 'cd2': 131.7, 'cd3': 143.7}
 
 spec = {
  'id': 'g2-maths-t1-song', 'theme': 'glow', 'grade': 'Grade 2', 'subject': 'Maths', 'topic': 'Numbers to 1000',
@@ -311,8 +317,9 @@ spec = {
           'description': 'Sing along with Takhti and learn numbers to 1000! Ten ones make a ten, ten tens make a hundred, and every digit has its place: hundreds, tens and ones. Find out what the zero in 708 means, compare 452 and 425, count by hundreds to 1000, then shout the answers in the quiz.',
           'tags': ['numbers to 1000 song', 'place value song', 'hundreds tens and ones song', 'grade 2 maths', 'maths songs for kids', 'counting by hundreds', 'compare numbers', 'kids quiz song']},
  'thumb_at': ['chorus1', 9.0],
+ 'scene_bg': 'playroom', 'bg_fx': {'rays': False, 'fireflies': False},
  'song': {'url': SONG_URL, 'duration': TR['duration'], 'beats': TR['beats'],
-          'chorus': [[36.3, 51.6], [76.2, 91.0], [152.5, 167.9]], 'marks': marks, 'lines': lines},
+          'chorus': [[32.2, 46.6], [64.15, 78.6], [151.5, 166.6]], 'marks': marks, 'lines': lines},
  'script': [['song']],
  'scenes': scenes,
 }
@@ -367,14 +374,14 @@ def compare_p():
     els += [ring(L_ - G, NY + 5, 140, 'k4.four', out='k4.look'), ring(R_ - G, NY + 5, 140, 'k4.four', out='k4.look'),
             html(big('=', 120, '#FF7A45'), 540, NY, 'k4.four', out='k4.look'),
             ring(L_, NY + 5, 140, 'k4.tens'), ring(R_, NY + 5, 140, 'k4.tens'),
-            html(big('&gt;', 130, '#FF7A45'), 540, NY, 'k5.beat', snd={'n': 'pop', 'g': 0.4})]
-    for txt, a, o in (('Look at the <span style="color:#2E9B57">hundreds</span> first', 'k2.look', 'k5.five'),
-                      ('<span style="color:#C77700">5 tens</span> beat <span style="color:#C77700">2 tens</span>', 'k5.five', 'k6.four')):
+            html(big('&gt;', 130, '#FF7A45'), 540, NY, 'k4.tens+0.2', snd={'n': 'pop', 'g': 0.4})]
+    for txt, a, o in (('Look at the <span style="color:#2E9B57">hundreds</span> first', 'k2.look', 'k4.tens'),
+                      ('<span style="color:#C77700">5 tens</span> beat <span style="color:#C77700">2 tens</span>', 'k4.tens', 'k4.tens+0.8')):
         els.append({'k': 'card', 'html': txt, 'x': 540, 'y': 1060, 'at': a, 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': o})
-    els.append({'k': 'card', 'html': '452 is bigger than 425', 'x': 540, 'y': 1060, 'at': 'k6.four', 'size': 58, 'pad': '12px 40px 2px', 'snd': None, 'fix': True})
-    els.append(prop('crown', 110, L_, NY - 185, 'k6.wins', snd={'n': 'pop', 'g': 0.4}))
+    els.append({'k': 'card', 'html': '452 is bigger than 425', 'x': 540, 'y': 1060, 'at': 'k4.tens+0.8', 'size': 58, 'pad': '12px 40px 2px', 'snd': None, 'fix': True})
+    els.append(prop('crown', 110, L_, NY - 185, 'k4.tens+0.8', snd={'n': 'pop', 'g': 0.4}))
     return {'type': 'free', 'mark': 'compare', 'chapter': 'Which is bigger?', 'title': 'Which is bigger?', 'title_y': 200, 'els': els,
-            'mascot': {'x': 900, 'y': 1330, 's': 0.5}, 'confetti': [{'at': 'k6.wins', 'x': L_, 'y': NY, 'n': 50}]}
+            'mascot': {'x': 900, 'y': 1330, 's': 0.5}, 'confetti': [{'at': 'k4.tens+0.8', 'x': L_, 'y': NY, 'n': 50}]}
 
 reel = json.loads(json.dumps(spec))
 reel['id'] = 'g2-maths-t1-song-reel'; reel['portrait'] = True; reel['window'] = ['chorus1', -0.3, 47.4]

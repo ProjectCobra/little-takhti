@@ -1,5 +1,5 @@
 """1280x720 song thumbnail: garden, topic art, Takhti waving, grade chip, big title, 'Sing along song + quiz' pill, logo pill.
-Usage: python3 source/video/thumbs/song_thumb.py <grade chip> <title html> <art html file> <out.jpg>"""
+Usage: python3 source/video/thumbs/song_thumb.py <grade chip> <title html> <art html file> <out.jpg> [background name, default garden]"""
 import base64, sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -7,11 +7,12 @@ R = Path(__file__).resolve().parents[3]
 def b64(p, mime): return f'data:{mime};base64,' + base64.b64encode(Path(p).read_bytes()).decode()
 G = R / 'source/tools/video2/assets/glow'; F = R / 'source/tools/fonts/node_modules/@fontsource'
 chip, title, art, out = sys.argv[1:5]
+BG = sys.argv[5] if len(sys.argv) > 5 else 'garden'
 html = f"""<html><head><style>
 @font-face{{font-family:b2;src:url({b64(F/'baloo-2/files/baloo-2-latin-800-normal.woff2','font/woff2')})}}
 @font-face{{font-family:lx;src:url({b64(F/'lexend/files/lexend-latin-600-normal.woff2','font/woff2')})}}
 body{{margin:0;width:1280px;height:720px;overflow:hidden;position:relative;font-family:b2}}
-.bg{{position:absolute;inset:0;background:url({b64(G/'bg-garden.webp','image/webp')}) center/cover}}
+.bg{{position:absolute;inset:0;background:url({b64(G/f'bg-{BG}.webp','image/webp')}) center/cover}}
 .shade{{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,59,40,.0) 30%,rgba(18,59,40,.35))}}
 .logo{{position:absolute;left:26px;top:22px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.94);padding:7px 20px 7px 8px;border-radius:999px;box-shadow:0 5px 0 rgba(18,59,40,.18)}}
 .logo span{{font-size:34px;color:#123B28;line-height:1;padding-top:5px}}

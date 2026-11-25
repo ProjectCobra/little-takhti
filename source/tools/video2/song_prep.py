@@ -10,11 +10,12 @@ url, out = sys.argv[1], Path(sys.argv[2])
 # optional lines in the song file (SONGFILE): "segments: 12-31, 123-130" re-transcribes only those windows,
 # guided by "prompt: <known lyrics>" (for verses whisper skipped on the full pass)
 import os
-SEGS, PROMPT = [], ''
+SEGS, PROMPT, TOPIC = [], '', ''
 if os.environ.get('SONGFILE'):
     for ln in Path(os.environ['SONGFILE']).read_text().splitlines():
         if ln.startswith('segments:'): SEGS = [tuple(float(x) for x in p.split('-')) for p in ln[9:].split(',') if p.strip()]
         if ln.startswith('prompt:'): PROMPT = ln[7:].strip()
+        if ln.startswith('topic:'): TOPIC = ln[6:].strip()
 out.mkdir(parents=True, exist_ok=True)
 src = out / 'song.m4a'
 urllib.request.urlretrieve(url, src)
@@ -68,7 +69,7 @@ if vocals:
 
 from faster_whisper import WhisperModel
 model = WhisperModel('medium.en', device='cpu', compute_type='int8')
-prompt = 'A cheerful children\'s song about the parts of a plant: roots, stem, leaves, flower, seeds, sunlight, water, air, soil.'
+prompt = TOPIC or 'A cheerful children\'s song about the parts of a plant: roots, stem, leaves, flower, seeds, sunlight, water, air, soil.'
 def run(path):
     segs, _ = model.transcribe(str(path), language='en', word_timestamps=True, vad_filter=False, beam_size=5,
                                initial_prompt=prompt, condition_on_previous_text=False)

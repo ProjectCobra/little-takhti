@@ -21,6 +21,7 @@ Content files: put each grade's topics in `source/src/term2_<grade>.js` (nursery
 ## Grade 1
 (English, Maths, Science, Social Studies and Urdu: from Google Classroom each week; the topics below are fallbacks only.)
 - Maths: 13 Place value: tens and ones · 14 Ordering numbers to 100 · 15 Shapes: sides and corners
+- Maths sequence after Week 16 (common international Grade 1 topics from Oxford, Pearson, Heinemann, New Syllabus Mathematics; skip any that already exist): 17 3D shapes around us · 18 Position and direction · 19 Adding within 20 on a number line · 20 Subtracting within 20 and fact families · 21 Halves and quarters · 22 Equal groups (early multiplication) · 23 Sharing equally (early division) · 24 Length and height in cm · 25 Heavier, lighter and capacity · 26 Time: half past, days and months · 27 Tally charts and pictograms · 28 Patterns with shapes and numbers · 29 Counting in 2s, 5s and 10s · 30 One more, one less, ten more, ten less to 100
 - Science: 13 What plants need to grow · 14 Healthy habits and germs · 15 Weather and seasons
 - Social Studies: 11 Our neighbourhood · 12 Transport then and now · 13 Festivals and celebrations · 14 Saving water and electricity · 15 Good citizens
 - Urdu (follow Motia lesson order, original exercises): 11 Lesson 11 · 12 Lesson 12 · 13 Lesson 13 · 14 Lesson 14 · 15 Lesson 15 (if the Motia contents for these lessons are not in `references/`, use: Winter words, Days of the week, Opposites, Singular and plural, Story with questions)

@@ -30,7 +30,7 @@ SRC = HERE.parent.parent
 LESSONS = SRC / 'video' / 'lessons'
 SR = 44100
 FPS = 30
-SITE = 'https://littletakhti.netlify.app'
+SITE = 'https://littletakhti.com'
 VOICE = os.environ.get('VOICE', '1') != '0'
 GKEY = os.environ.get('GEMINI_API_KEY', '').strip()
 GBASE = 'https://generativelanguage.googleapis.com/v1beta'

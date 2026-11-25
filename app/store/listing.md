@@ -34,8 +34,8 @@ Little Takhti means "little slate". Little steps, high flights: ننھے قدم�
 **Category**: Education
 **Tags**: Education, Educational games, Kids
 **Contact email**: sumbulaftab@gmail.com
-**Website**: https://littletakhti.netlify.app
-**Privacy policy**: https://littletakhti.netlify.app/app-privacy.html
+**Website**: https://littletakhti.com
+**Privacy policy**: https://littletakhti.com/app-privacy.html
 
 ## Graphics in this folder
 - `feature-graphic.png` 1024 x 500

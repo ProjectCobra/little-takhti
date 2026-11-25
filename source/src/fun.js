@@ -300,7 +300,7 @@ function rewardsPage(){app.innerHTML=`<div class="crumbs"><a href="#tools">Paren
 function rewardsPrint(){const nm=esc(RW.name||'_______________'),d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
  const sheet=RW.tab==='chart'?`<div class="sheet rw-chart"><div class="rw-h"><span class="emo">⭐</span><div><h2>${nm}'s Star Chart</h2><p>Week of ______________</p></div><span class="emo">🪁</span></div>
   <table class="rw-t"><thead><tr><th>My task</th>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${RW.tasks.map(t=>`<tr><td>${esc(t)}</td>${'<td></td>'.repeat(7)}</tr>`).join('')}</tbody></table>
-  <div class="rw-goal"><div><b>My goal this week:</b> ______ stars</div><div><b>My reward:</b> ______________________</div></div><p class="rw-foot">Little Takhti · littletakhti.netlify.app</p></div>`
+  <div class="rw-goal"><div><b>My goal this week:</b> ______ stars</div><div><b>My reward:</b> ______________________</div></div><p class="rw-foot">Little Takhti · littletakhti.com</p></div>`
  :`<div class="sheet rw-cert"><div class="rc-in"><span class="emo rc-e">🏆</span><p class="rc-k">Little Takhti</p><h2>${esc(RW.award)}</h2><p class="rc-p">This certificate is proudly given to</p><p class="rc-n">${nm}</p><p class="rc-r">${esc(RW.reason)}</p>
   <div class="rc-sig"><div><i></i><span>${esc(RW.by)}</span></div><div><i></i><span>${d}</span></div></div><div class="rc-stars">${'⭐'.repeat(5)}</div></div></div>`;
  tPrint(RW.tab==='chart'?'Reward chart':'Certificate',[`<div class="frame">${sheet}</div>`],'rewards')}

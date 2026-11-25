@@ -1,6 +1,6 @@
 # Little Takhti: brief for Claude agents
 
-Little Takhti (littletakhti.netlify.app) is Sumbul's free website of printable worksheets, quiz games, parent guides and games for children in Pakistan, Nursery to Grade 3. Subjects: English, Urdu, Maths, Science, Geography, Computer, Islamiat and more. Audience: parents and teachers, mostly at British-curriculum schools (LGS, Beaconhouse, City School, Aitchison).
+Little Takhti (littletakhti.com) is Sumbul's free website of printable worksheets, quiz games, parent guides and games for children in Pakistan, Nursery to Grade 3. Subjects: English, Urdu, Maths, Science, Geography, Computer, Islamiat and more. Audience: parents and teachers, mostly at British-curriculum schools (LGS, Beaconhouse, City School, Aitchison).
 
 ## Rules from Sumbul (always follow)
 
@@ -65,7 +65,7 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 
 - Brand colours: green #123B28, yellow #FFD93B, mid green #2F8F55, cream #FFFBEA. Fonts: Baloo 2 (headings), Lexend (body), Noto Nastaliq Urdu. Tagline: ننھے قدم، اونچی اڑان.
 - Carousels are 1080 × 1350, 4 slides. Covers alternate between posts (last post started green, next starts yellow, and so on). Slides inside a post alternate green and yellow.
-- Captions: short, casual, an emoji or two, the link littletakhti.netlify.app (link in bio), 6 to 8 hashtags including #LittleTakhti #PakistaniParents.
+- Captions: short, casual, an emoji or two, the link littletakhti.com (link in bio), 6 to 8 hashtags including #LittleTakhti #PakistaniParents.
 - Design canvas with posts 1 to 4: https://claude.ai/artifact/JBvUkNZTQNYRM8sfEJLZnZ
 - Carousels are posted through the Buffer connector (Instagram channel "littletakhti", type post, alt text on every image). The daily song task posts them right away without asking Sumbul once they pass the fact check, saves the PNGs under `social/<date>-<slug>/` on `videos`, and logs each post in `source/social-log.md`. Reels, YouTube videos and Shorts still wait for her "post".
 

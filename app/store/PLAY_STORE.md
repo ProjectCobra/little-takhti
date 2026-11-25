@@ -20,7 +20,7 @@ If the password is ever lost, Google Play can reset the upload key (Play Console
 
 ## 4. Create the app in Play Console
 - Create app: name Little Takhti, App, Free, language English (United Kingdom).
-- App content: privacy policy URL **https://littletakhti.netlify.app/app-privacy.html** (live after the next deploy),
+- App content: privacy policy URL **https://littletakhti.com/app-privacy.html** (live after the next deploy),
   Ads: No, App access: see `content-rating.md`, Target audience: ages 5 and under and 6 to 8,
   Data safety: answers in `data-safety.md`, Content rating: `content-rating.md`.
 - Store listing: text in `listing.md`, graphics in this folder (`icon-512.png`, `feature-graphic.png`, `screenshots/`).

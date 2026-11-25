@@ -4,7 +4,7 @@ import os, json, re, html, shutil, sys, datetime
 D = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(D, '..')
 OUT = os.path.join(ROOT, '..', 'little-takhti-netlify')
-SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://littletakhti.netlify.app').rstrip('/')
+SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://littletakhti.com').rstrip('/')
 TODAY = datetime.date.today().isoformat()
 data = json.load(open(os.path.join(ROOT, 'seo', 'data.json')))
 VP = os.path.join(ROOT, 'videos', 'videos.json')
@@ -180,6 +180,8 @@ if VIDS:
 allu = [SITE + '/'] + sorted(set(urls))
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     ''.join(f'<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in allu) + '</urlset>\n')
+os.makedirs(os.path.join(OUT, '.well-known'), exist_ok=True)
+open(os.path.join(OUT, '.well-known', 'security.txt'), 'w').write(f'Contact: mailto:littletakhti@gmail.com\nExpires: {(datetime.date.today()+datetime.timedelta(days=365)).isoformat()}T00:00:00.000Z\nPreferred-Languages: en, ur\nCanonical: {SITE}/.well-known/security.txt\n')
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 print('pages', len(urls), 'site', SITE)
 # build summary and deploy history, read by the separate admin site

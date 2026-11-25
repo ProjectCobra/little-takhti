@@ -11,7 +11,7 @@ from pathlib import Path
 APP = Path(__file__).resolve().parent
 ROOT = APP.parent
 SITE, WWW, NM = ROOT / 'site', APP / 'www', APP / 'node_modules'
-REMOTE = 'https://littletakhti.netlify.app/'
+REMOTE = 'https://littletakhti.com/'
 VERSION = json.loads((APP / 'package.json').read_text())['version']
 shutil.rmtree(WWW, ignore_errors=True); WWW.mkdir()
 

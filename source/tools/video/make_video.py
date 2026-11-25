@@ -20,7 +20,7 @@ FONTS = SRC / 'tools' / 'fonts' / 'node_modules' / '@fontsource'
 W, H, FPS = 1920, 1080, 30
 VOICE_ON = os.environ.get('VOICE', '1') != '0'
 VOICES = {'en': 'en-GB-SoniaNeural', 'ur': 'ur-PK-UzmaNeural'}
-SITE = 'littletakhti.netlify.app'
+SITE = 'littletakhti.com'
 
 EXTRACT = r"""(id)=>{
  const r=RID[id];if(!r)return null;const s=SUB[r.sub],k=s.topics.indexOf(r.topic),ur=!!s.rtl;
@@ -139,7 +139,7 @@ def scenes(d):
     if pts:
         li = ''.join(f'<div class="opt" style="font-weight:600;font-size:42px"><b>✓</b><span class="{"ur" if ur else ""}">{html.escape(x)}</span></div>' for x in pts)
         S.append(('recap', page(d, f'<div class="kick">{"یاد رکھیں" if ur else "Let us remember"}</div>{li}', ''), (' '.join(pts)), 0.8))
-    bye = ('شاباش! مفت ورک شیٹس پرنٹ کریں: لٹل تختی ڈاٹ نیٹلیفائی ڈاٹ ایپ۔' if ur else 'Great work! Print the free worksheets and play the quiz game at little takhti dot netlify dot app. See you next time!')
+    bye = ('شاباش! مفت ورک شیٹس پرنٹ کریں: لٹل تختی ڈاٹ کام۔' if ur else 'Great work! Print the free worksheets and play the quiz game at little takhti dot netlify dot app. See you next time!')
     S.append(('end', page(d, f'''<div class="yel"></div><div class="kick">Great work!</div><h1 style="font-size:96px">Print the free worksheets</h1>
       <p class="big" style="margin-top:26px">Worksheets, answer keys and a quiz game for this topic:</p><h2 style="margin-top:12px;color:#1F7A4C">{SITE}</h2>''', ''), bye, 1.5))
     return S

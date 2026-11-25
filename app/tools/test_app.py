@@ -16,7 +16,7 @@ def ctx_for(b, w, h):
     ctx = b.new_context(viewport={'width': w, 'height': h}, is_mobile=w < 900, has_touch=True)
     def rt(r):
         u = r.request.url
-        if u.startswith('https://littletakhti.netlify.app/pdf/'):
+        if u.startswith('https://littletakhti.com/pdf/'):
             f = os.path.join(PDFS, u.split('/pdf/')[1])
             if os.path.exists(f): return r.fulfill(path=f, content_type='application/pdf')
         if u.startswith(BASE) or u.startswith('blob:') or u.startswith('data:'): return r.continue_()

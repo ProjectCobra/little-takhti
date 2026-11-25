@@ -6,7 +6,7 @@ Play Console > App content > Data safety.
 
 Why: the app has no accounts, no ads, no analytics and no crash reporting SDKs. Nothing the child or parent types leaves the device.
 - Child nickname, grade, quiz stars, stickers, parent PIN (stored as a hash) and saved worksheets are kept only on the device (local storage and the app's private files). Google's definition of "collected" covers data sent off the device, so on-device data is not collected.
-- The app downloads worksheet PDFs from https://littletakhti.netlify.app. These are plain file downloads with no identifiers attached. The web host keeps normal server logs (IP address) for security, as every website does; we do not receive or use them for tracking.
+- The app downloads worksheet PDFs from https://littletakhti.com. These are plain file downloads with no identifiers attached. The web host keeps normal server logs (IP address) for security, as every website does; we do not receive or use them for tracking.
 
 **Is all of the user data collected by your app encrypted in transit?** Yes (all downloads use HTTPS). (Only asked if you answer that data is collected.)
 

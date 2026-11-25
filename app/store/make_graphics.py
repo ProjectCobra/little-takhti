@@ -21,7 +21,7 @@ def new_page(b, w, h, s):
     ctx = b.new_context(viewport={'width': w, 'height': h}, device_scale_factor=s, is_mobile=w < 1000, has_touch=True)
     def rt(r):
         u = r.request.url
-        if u.startswith('https://littletakhti.netlify.app/pdf/'):
+        if u.startswith('https://littletakhti.com/pdf/'):
             return r.fulfill(path=os.path.join(PDFS, u.split('/pdf/')[1]), content_type='application/pdf')
         return r.continue_() if u.startswith(BASE) or u.startswith('blob:') or u.startswith('data:') else r.abort()
     ctx.route('**/*', rt)

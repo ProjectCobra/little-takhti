@@ -2,9 +2,10 @@
 # Lyrics draft for Google Flow Music. Facts match the worksheets: place value (345, 708), number words, compare hundreds first, count in hundreds to 1000.
 # SOUND prompt (same as the approved Parts of a Plant song):
 # upbeat cheerful kids educational pop, acoustic guitar, ukulele, handclaps, bouncy bass, warm female lead with a light South Asian accent, small children choir on chorus, clear diction, extended song structure, spacious 7-second instrumental tick-tock clock percussion timer breaks before every answer, 120 bpm
+# Version 2 (Sumbul, 25 Nov): intro says "learning time", never "Takhti time" (Flow mispronounces Takhti). Make a NEW song; do not reuse the first take a5f41ef6-ff77-4082-92cb-6c4dd88cc43f.
 
 [Intro]
-Hello friends, it's Takhti time!
+Hello friends, it's learning time!
 Let's count big, all the way to a thousand!
 Ready? Let's go!
 

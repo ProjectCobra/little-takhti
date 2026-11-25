@@ -7,7 +7,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 ## Log (newest last)
 
 - 2026-11-24 | Grade 1 | Science | science-t12 Parts of a Plant | posted
-- 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | review (rendered; on dev site, waiting for her post)
+- 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | lyrics again: Sumbul asked for "learning time" instead of "Takhti time" (mispronounced); remake the song, then rerun PART 2 (update LINES timings in source/video/specs/g2-maths-t1-song.py from the new transcript)
 
 ## Nursery
 
@@ -349,7 +349,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| Numbers to 1000 | g2-maths-t1 | review (flow a5f41ef6-ff77-4082-92cb-6c4dd88cc43f) |  |  |  |  |
+| Numbers to 1000 | g2-maths-t1 | lyrics (v2: new song needed, first take a5f41ef6 said "Takhti time") |  |  |  |  |
 | Adding and subtracting | g2-maths-t2 | todo |  |  |  |  |
 | Multiplying by 2, 5 and 10 | g2-maths-t3 | todo |  |  |  |  |
 | Money and shopping | g2-maths-t4 | todo |  |  |  |  |

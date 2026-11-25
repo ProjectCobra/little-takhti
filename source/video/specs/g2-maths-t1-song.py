@@ -14,7 +14,7 @@ DG = '#123B28'
 
 # ---------------- lyric lines, timed to the recording ----------------
 LINES = [
- ('h1', "Hello, friends! It's Takhti time!", 4.5, 7.1),
+ ('h1', "Hello, friends! It's learning time!", 4.5, 7.1),
  ('h2', "Let's count big, all the way to a thousand!", 7.2, 10.0),
  ('h3', "Ready? Let's go!", 10.8, 12.3),
  ('v1a', "Ten little ones make one ten,", 12.8, 14.6),

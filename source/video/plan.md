@@ -349,7 +349,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| Numbers to 1000 | g2-maths-t1 | song (v2, flow 8c739dd6-2bf8-46c6-9ccc-eef9d9fd7f62) |  |  |  |  |
+| Numbers to 1000 | g2-maths-t1 | review (v2, flow 8c739dd6-2bf8-46c6-9ccc-eef9d9fd7f62, playroom; rendered 25 Nov) |  |  |  |  |
 | Adding and subtracting | g2-maths-t2 | todo |  |  |  |  |
 | Multiplying by 2, 5 and 10 | g2-maths-t3 | todo |  |  |  |  |
 | Money and shopping | g2-maths-t4 | todo |  |  |  |  |

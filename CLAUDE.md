@@ -61,6 +61,10 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 - **Takhti character**: the 3D cream-face Takhti from `source/tools/video2/assets/glow/tk-*.webp`. Same character in videos, banners, thumbnails and posts.
 - Applies to the site, app icons and splash (`app/assets`), YouTube (profile, banner, watermark), video end cards and social posts.
 
+## Learning songs
+
+- Song intros say "Hello friends, it's learning time!", never "Takhti time": Flow Music mispronounces Takhti (Sumbul, Nov 2026).
+
 ## Instagram
 
 - Brand colours: green #123B28, yellow #FFD93B, mid green #2F8F55, cream #FFFBEA. Fonts: Baloo 2 (headings), Lexend (body), Noto Nastaliq Urdu. Tagline: ننھے قدم، اونچی اڑان.

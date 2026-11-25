@@ -58,5 +58,10 @@
   "date": "2026-11-24T22:28:44+05:00",
   "commit": "0430c45",
   "note": "Learn section with learning songs (Parts of a Plant on YouTube), logo fixes for favicon and app icons, Android app privacy page"
+ },
+ {
+  "date": "2026-11-25T12:56:05+05:00",
+  "commit": "905058a",
+  "note": "Move to littletakhti.com: links, sitemap, QR code, footers; security.txt"
  }
 ]

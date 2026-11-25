@@ -319,3 +319,68 @@ spec = {
 out = ROOT / 'source/video/lessons/g2-maths-t1-song.json'
 out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
 print('wrote', out, len(lines), 'lines')
+
+# ======================= portrait reel (first chorus to the second chorus) =======================
+def chorus_p(p, mark):
+    els = []
+    ch, cells = chart(540, 640, 300, 110, 330, '@' + mark + '+0.1', hsize=48, fix=False,
+                      glows=[[f'{p}a.hundreds', f'{p}c.hundreds'], [f'{p}a.tens', f'{p}c.tens'], [f'{p}a.ones', f'{p}c.ones']])
+    els += ch
+    for (x, y), d, w, c in zip(cells, '345', ['each', 'digit', 'space'], (H, T, O)):
+        els.append(html(big(d, 230, c), x, y + 12, f'@{mark}+0.3', glow=[f'{p}d.{w}']))
+    els += [label('Hundreds', 540, 1010, f'{p}a.hundreds', H, size=58),
+            label('Tens', 540, 1115, f'{p}a.tens', T, DG, size=58),
+            label('Ones', 540, 1220, f'{p}a.ones', O, size=58),
+            {'k': 'card', 'html': 'Every number has a <span style="color:#1F7A4C">place!</span>', 'x': 540, 'y': 1365, 'at': f'{p}b.place', 'size': 56, 'pad': '12px 36px 2px', 'snd': None},
+            {'k': 'card', 'html': f'Count by <span style="color:{H}">100s</span> to <span style="color:{H}">1000!</span>', 'x': 540, 'y': 1500, 'at': f'{p}e.hundreds', 'size': 56, 'pad': '12px 36px 2px', 'snd': None}]
+    return {'type': 'free', 'mark': mark, 'title': '♪ Sing along!', 'title_y': 200, 'els': els, 'mascot': {'x': 930, 'y': 1130, 's': 0.5},
+            'confetti': [{'at': f'{p}f.thousand', 'x': 540, 'y': 900, 'n': 60}], 'chapter': 'Sing along'}
+
+def zero_p():
+    els = [html(box(520, 230, r=36), 480, 330, 'z1.seven')]
+    els += num_digits('708', 480, 340, None, size=170, ats=['z1.seven', 'z1.zero#0', 'z1.eight'])
+    ch, cells = chart(540, 690, 270, 90, 210, 'z1.zero#1', hsize=38)
+    els += ch
+    for (x, y), d, a, c in zip(cells, '708', ['z3.seven', 'z2.no', 'z3.eight'], (H, T, O)):
+        els.append(html(big(d, 160, c), x, y + 10, a, fix=True))
+    els.append(ring(cells[1][0], cells[1][1] + 5, 180, 'z2.no', out='z3.seven'))
+    els.append(ring(480, 335, 150, 'z1.zero#1', out='z2.no'))
+    for i in range(7):
+        els.append(prop('art:flat', 130, 140 + (i % 4) * 142, 1010 + (i // 4) * 145, f'z3.hundreds+{0.08 * i:.2f}', snd=({'n': 'pop', 'g': 0.3} if i == 0 else None)))
+    els.append(html('<div style="width:80px;height:275px;border:6px dashed #FF7A45;border-radius:18px;background:rgba(255,255,255,.55)"></div>', 760, 1080, 'z3.no'))
+    els.append(label('no tens', 760, 1255, 'z3.tens', '#FF7A45', size=38))
+    for i in range(8):
+        els.append(prop('art:cube', 30, 870 + (i // 4) * 40, 990 + (i % 4) * 40, f'z3.eight+{0.06 * i:.2f}', snd=None))
+    els += [label('7 hundreds', 350, 1255, 'z3.hundreds', H, size=38), label('8 ones', 890, 1180, 'z3.ones', O, size=38)]
+    els.append({'k': 'card', 'html': f'<span style="color:{H}">7</span><span style="color:#C77700">0</span><span style="color:{O}">8</span> = seven hundred and eight',
+                'x': 540, 'y': 1420, 'at': 'z4.seven', 'size': 48, 'pad': '12px 34px 2px', 'snd': None, 'fix': True})
+    return {'type': 'free', 'mark': 'zero', 'chapter': 'Zero holds the place', 'els': els, 'mascot': {'x': 935, 'y': 330, 's': 0.42}}
+
+def compare_p():
+    els = []; L_, R_, NY, G = 275, 805, 640, 95
+    for cx, a in ((L_, 'k3.four#0'), (R_, 'k3.four#1')):
+        els.append(html(box(430, 240, r=36), cx, NY, a))
+    els += num_digits('452', L_, NY + 10, None, size=160, gap=G, ats=['k3.four#0', 'k3.five', 'k3.two#0'])
+    els += num_digits('425', R_, NY + 10, None, size=160, gap=G, ats=['k3.four#1', 'k3.two#1', 'k3.five#1'])
+    for cx in (L_, R_):
+        els += [label('H', cx - G, NY + 165, 'k4.both', H, size=38), label('T', cx, NY + 165, 'k4.look', T, DG, size=38), label('O', cx + G, NY + 165, 'k4.look', O, size=38)]
+    els += [ring(L_ - G, NY + 5, 140, 'k4.four', out='k4.look'), ring(R_ - G, NY + 5, 140, 'k4.four', out='k4.look'),
+            html(big('=', 120, '#FF7A45'), 540, NY, 'k4.four', out='k4.look'),
+            ring(L_, NY + 5, 140, 'k4.tens'), ring(R_, NY + 5, 140, 'k4.tens'),
+            html(big('&gt;', 130, '#FF7A45'), 540, NY, 'k5.beat', snd={'n': 'pop', 'g': 0.4})]
+    for txt, a, o in (('Look at the <span style="color:#2E9B57">hundreds</span> first', 'k2.look', 'k5.five'),
+                      ('<span style="color:#C77700">5 tens</span> beat <span style="color:#C77700">2 tens</span>', 'k5.five', 'k6.four')):
+        els.append({'k': 'card', 'html': txt, 'x': 540, 'y': 1060, 'at': a, 'size': 54, 'pad': '12px 36px 2px', 'snd': None, 'fix': True, 'out': o})
+    els.append({'k': 'card', 'html': '452 is bigger than 425', 'x': 540, 'y': 1060, 'at': 'k6.four', 'size': 58, 'pad': '12px 40px 2px', 'snd': None, 'fix': True})
+    els.append(prop('crown', 110, L_, NY - 185, 'k6.wins', snd={'n': 'pop', 'g': 0.4}))
+    return {'type': 'free', 'mark': 'compare', 'chapter': 'Which is bigger?', 'title': 'Which is bigger?', 'title_y': 200, 'els': els,
+            'mascot': {'x': 900, 'y': 1330, 's': 0.5}, 'confetti': [{'at': 'k6.wins', 'x': L_, 'y': NY, 'n': 50}]}
+
+reel = json.loads(json.dumps(spec))
+reel['id'] = 'g2-maths-t1-song-reel'; reel['portrait'] = True; reel['window'] = ['chorus1', -0.3, 47.4]
+reel['meta'] = dict(spec['meta'], title='Numbers to 1000 Song #shorts | Little Takhti')
+reel['thumb_at'] = ['chorus1', 10.0]
+rep = {'chorus1': chorus_p('c1', 'chorus1'), 'zero': zero_p(), 'compare': compare_p(), 'chorus2': chorus_p('c2', 'chorus2')}
+reel['scenes'] = [rep.get(s['mark'], s) for s in reel['scenes']]
+(ROOT / 'source/video/lessons/g2-maths-t1-song-reel.json').write_text(json.dumps(reel, indent=1, ensure_ascii=False))
+print('wrote reel')

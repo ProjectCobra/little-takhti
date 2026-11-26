@@ -8,7 +8,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 - 2026-11-24 | Grade 1 | Science | science-t12 Parts of a Plant | posted
 - 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | setting: playroom (toy blocks) | v2 song 8c739dd6 (learning time intro); verse 4 ends at "look at the tens" in this take, so the compare scene shows 5 tens beat 2 tens on screen
-- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | song 6c0ae148
+- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | setting: mesopotamia (riverside with a ziggurat, palms and mud-brick houses) | song 6c0ae148; Flow sang the Q1 and Q3 answers straight away, so 8 s tick-tock breaks from the Q2 break were spliced in (lessons/g3-history-t1-song/song-timer.m4a)
 
 ## Nursery
 

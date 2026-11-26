@@ -88,7 +88,7 @@ def page(path, title, desc, body, crumbs, image=None, jsonld=None):
     return url
 def vplayer(v):
     if v.get('yt'):
-        return f'<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["yt"])}?rel=0" title="{e(v["title"])}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>'
+        return f'<div class="vid"><iframe src="https://www.youtube.com/embed/{e(v["yt"])}?rel=0&playsinline=1" title="{e(v["title"])}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div><p><a href="https://www.youtube.com/watch?v={e(v["yt"])}" target="_blank" rel="noopener">Watch on YouTube</a></p>'
     return f'<div class="vid"><video controls playsinline preload="none" poster="/{e(v["poster"])}"><source src="/{e(v["mp4"])}" type="video/mp4"></video></div>'
 def vblock(r):
     v = VIDS.get(r['id'])

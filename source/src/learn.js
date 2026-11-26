@@ -5,9 +5,18 @@ const VID=(VIDEOS||[]).filter(v=>RID[v.res]);
 function vidFor(r){return r?VID.find(v=>v.res===r.id):null}
 function vidRes(v){return RID[v.res]}
 function vidSub(v){return SUB[vidRes(v).sub]}
+/* YouTube videos: a light click-to-play facade (poster + play button, no YouTube code until the click), then the
+   standard youtube.com embed with autoplay. A click-started embed play counts as a YouTube view and watch time.
+   "Watch on YouTube" opens the video page (or the YouTube app on phones). Local mp4 only until the YouTube id is set. */
 function vidPlayer(v){
- if(v.yt)return `<div class="vplay"><iframe src="https://www.youtube-nocookie.com/embed/${v.yt}?rel=0&modestbranding=1" title="${esc(v.title)}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+ if(v.yt)return `<div class="vwrap"><div class="vplay vfac" data-yt="${v.yt}"><button type="button" aria-label="Play ${esc(v.title)}"><img src="${v.poster}" alt="" loading="lazy" width="1280" height="720"><i class="vpl" aria-hidden="true">${ic.play}</i></button></div>
+  <a class="vyt" href="https://www.youtube.com/watch?v=${v.yt}" target="_blank" rel="noopener">${ic.play}Watch on YouTube</a></div>`;
  return `<div class="vplay"><video controls playsinline preload="none" poster="${v.poster}" title="${esc(v.title)}"><source src="${v.mp4}" type="video/mp4"></video></div>`}
+let vidWarm=false;
+function vidPreconnect(){if(vidWarm)return;vidWarm=true;['https://www.youtube.com','https://www.google.com','https://i.ytimg.com'].forEach(h=>{const l=document.createElement('link');l.rel='preconnect';l.href=h;document.head.appendChild(l)})}
+document.addEventListener('pointerover',e=>{if(e.target.closest&&e.target.closest('.vfac'))vidPreconnect()},{passive:true});
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.vfac button');if(!b)return;const w=b.parentNode,id=w.dataset.yt;
+ w.innerHTML=`<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="Little Takhti learning song" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>`;w.classList.remove('vfac')});
 function vidLinks(v){const r=vidRes(v);
  return `<div class="vlinks">
   <a class="btn" href="#res-${r.id}">${ic.sheet}Worksheets</a>

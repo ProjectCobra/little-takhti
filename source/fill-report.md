@@ -2766,19 +2766,7 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
 
-## kg-maths (68 pages)
-- p13 0.19 Taking away / Take Away
-- p14 0.19 Taking away / How Many Left?
-- p15 0.25 Taking away / Add or Take Away?
-- p16 0.35 Shapes all around / Name the Shape
-- p17 0.30 Shapes all around / Shapes at Home
-- p18 0.42 Shapes all around / Count the Sides
-- p19 0.30 Ordinal numbers / 1st to 5th
-- p20 0.29 Ordinal numbers / The Race
-- p21 0.14 Ordinal numbers / Days in Order
-- p22 0.13 Counting in 2s, 5s and 10s / Count in 2s
-- p23 0.13 Counting in 2s, 5s and 10s / Count in 10s
-- p24 0.13 Counting in 2s, 5s and 10s / Count in 5s
+## kg-maths (56 pages)
 - p25 0.09 Coins and notes / Know the Coins
 - p26 0.20 Coins and notes / Which Is More?
 - p27 0.09 Coins and notes / Add the Coins

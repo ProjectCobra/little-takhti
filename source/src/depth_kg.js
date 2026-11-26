@@ -413,3 +413,192 @@ DEPTH.push(({addPages})=>{const S='kg-maths';
    PSUM('Count with me.',[[4,3,'star']]),
    DR('Draw your own adding picture.',100))]);
 });
+
+/* D6: KG Maths topics 5 to 8 (Taking away, Shapes all around, Ordinal numbers, Counting in 2s, 5s and 10s).
+   Same method as D5: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='kg-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const SUB=(h,items)=>({t:'picsub',h,items});
+ const PAIRS=(h,items)=>({t:'groups',h,items});
+
+ /* ---- Topic 5: Taking away ---- */
+ mo(13,'Take Away',
+  SUB('B. Cross out. Write how many are left.',[[6,2,'star'],[5,3,'heart'],[8,4,'circle'],[7,1,'square']]),
+  FP('C. Look and take away.',[['red-apple','5 apples. Eat 1. {{4}} are left.'],['balloon','6 balloons. 2 pop. {{4}} are left.'],['cookie','4 biscuits. Eat 3. {{1}} is left.'],['egg','7 eggs. Use 2. {{5}} are left.']]),
+  F('D. Take away.',['9 − 3 = {{6}}','6 − 6 = {{0}}','10 − 2 = {{8}}','5 − 4 = {{1}}'],4));
+ mo(14,'How Many Left?',
+  SUB('B. Cross out. Write how many are left.',[[9,3,'heart'],[6,4,'star'],[10,5,'circle']]),
+  WP('C. A grown-up reads. Write the answer.',['There are 10 mangoes on a tree. 4 fall down. {{6}} are left on the tree.','Hamza has 8 marbles. He loses 2. He has {{6}} marbles left.','There are 5 ducks in a pond. 5 swim away. {{0}} are left.']),
+  DR('D. Draw 7 kites. Cross out 3. How many are left? ____',110));
+ mo(15,'Add or Take Away?',
+  F('B. Add or take away? Write + or − in the box.',['4 {{+}} 2 = 6','7 {{−}} 3 = 4','5 {{+}} 5 = 10','9 {{−}} 1 = 8','3 {{+}} 4 = 7','8 {{−}} 6 = 2'],3),
+  WP('C. A grown-up reads. Write the answer.',['Sara has 3 dolls. She gets 2 more. Now she has {{5}} dolls.','There are 8 rotis. The family eats 5. {{3}} rotis are left.','6 birds sit on a tree. 3 more come. Now there are {{9}} birds.','Ali has 9 sweets. He gives 4 to Bilal. Ali has {{5}} sweets left.']),
+  CH('D. True or false? Circle.',[['6 − 2 = 4',0],['5 + 3 = 9',1],['10 − 5 = 5',0]],TF));
+ addPages(S,'Taking away',[
+  pg('Taking Away Warm-up ★','Start here if taking away is new. Use real toys or beads.','Take away from a small group by crossing out.',
+   SUB('A. Cross out. Write how many are left.',[[3,1,'star'],[4,2,'heart'],[5,1,'circle'],[4,3,'square']]),
+   FP('B. Look and take away.',[['mango','3 mangoes. Eat 1. {{2}} are left.'],['duck','4 ducks. 2 swim away. {{2}} are left.']]),
+   F('C. Take away. Use your fingers.',['3 − 1 = {{2}}','4 − 1 = {{3}}','5 − 2 = {{3}}','2 − 2 = {{0}}'],4),
+   WP('D. A grown-up reads. Write the answer.',['Zara has 5 bangles. 1 breaks. She has {{4}} bangles left.']),
+   DR('E. Draw 4 balls. Cross out 1. How many are left?',90)),
+  pg('Taking Away Challenge ★★★','A grown-up reads each question. Think carefully.','Take away within 10, find missing numbers and spot mistakes.',
+   CH('A. True or false? Circle.',[['8 − 3 = 5',0],['7 − 4 = 2',1],['10 − 10 = 0',0],['9 − 2 = 6',1]],TF),
+   F('B. Find the missing number.',['7 − {{2}} = 5','10 − {{6}} = 4','{{9}} − 3 = 6','{{5}} − 5 = 0'],2),
+   F('C. Spot the mistake. Write the right answer.',['Ali says 9 − 4 = 6. It is {{5}}.','Sara says 6 − 3 = 2. It is {{3}}.'],1),
+   WP('D. Word problems.',['There are 10 children. 3 go home, then 2 more go home. {{5}} children are left.','Hamza had some sweets. He ate 2 and now has 6. He had {{8}} sweets at the start.'])),
+  pg('Topic Test: Taking Away (1)','A grown-up reads each question and marks it out of 22.','Check taking away by crossing out.',
+   SC(26,13,21),
+   SUB('1. Cross out. Write how many are left. (4 marks)',[[5,2,'star'],[7,3,'heart'],[9,4,'circle'],[6,5,'square']]),
+   F('2. Take away. (6 marks)',['4 − 2 = {{2}}','6 − 1 = {{5}}','8 − 5 = {{3}}','10 − 3 = {{7}}','7 − 7 = {{0}}','9 − 6 = {{3}}'],3),
+   F('3. Write the missing number. (4 marks)',['8 − {{3}} = 5','{{6}} − 2 = 4','9 − {{9}} = 0','10 − {{1}} = 9'],4),
+   WP('4. A grown-up reads. Write the answer. (2 marks)',['There are 9 buns. Ali eats 1. {{8}} buns are left.','6 frogs sit on a log. 3 jump off. {{3}} frogs are left.'])),
+  pg('Topic Test: Taking Away (2)','Add up your marks from both pages.','Check take-away stories and add or take away.',
+   WP('5. Word problems. (4 marks)',['There are 8 eggs. Ammi uses 3. {{5}} eggs are left.','6 kites fly. 2 come down. {{4}} kites are still flying.','Bilal has 10 crayons. He gives 4 away. He has {{6}} left.','5 cats sit on a wall. 1 jumps off. {{4}} cats are left.']),
+   CH('6. Add or take away? Circle. (4 marks)',[['3 more friends come.',0],['2 biscuits are eaten.',1],['Abbu buys 5 more apples.',0],['4 birds fly away.',1]],['add','take away']),
+   CH('7. True or false? Circle. (2 marks)',[['9 − 3 = 6',0],['5 − 2 = 4',1]],TF),
+   HOW),
+  pg('Word Mat: Taking Away','Keep this mat on the table. Use the words when you take away.','Know the words take away, minus, left and fewer.',
+   CN(['cookie','cookie','cookie','cookie','cookie'],'5 biscuits. Eat 2. Count what is left: 3. We write 5 − 2 = 3.','Taking away'),
+   SUB('Cross out and count what is left.',[[6,2,'star']]),
+   {t:'numline'},
+   NO('<b>Maths words</b><br><b>take away</b>: some go away · <b>minus</b> (−): take away<br><b>left</b>: how many are still there · <b>fewer</b>: not as many<br><b>count back</b>: start at the big number and count back · <b>zero</b> (0): none left'),
+   NO('<b>Take-away facts</b>: <span style="font-size:19px">5 − 1 = 4 &nbsp; 6 − 2 = 4 &nbsp; 8 − 3 = 5 &nbsp; 10 − 4 = 6 &nbsp; 7 − 7 = 0</span>'),
+   BK(['take away','minus','left','fewer','count back','zero','equals']),
+   DR('Draw your own take-away picture.',90))]);
+
+ /* ---- Topic 6: Shapes all around ---- */
+ mo(16,'Name the Shape',
+  CH('B. Circle the right name.',[['It is round. It has no corners.',['circle','square'],0],['It has 3 sides and 3 corners.',['triangle','square'],0],['It has 4 sides, all the same.',['square','triangle'],0],['It has 4 sides: 2 long and 2 short.',['rectangle','circle'],0]]),
+  DR('C. Draw a circle, a square and a triangle.',110));
+ mo(17,'Shapes at Home',
+  CP('B. What shape is it? Circle.',[['pizza','a pizza',['circle','square'],0],['door','a door',['rectangle','triangle'],0],['window','a window',['square','circle'],0],['coin','a coin',['circle','triangle'],0]]),
+  F('C. Name one thing at home that is …',['a circle: {{a plate}}','a square: {{a tile}}','a triangle: {{a samosa}}','a rectangle: {{a book}}'],2),
+  DR('D. Draw something round you can find in your kitchen.',110));
+ mo(18,'Count the Sides',
+  F('B. How many corners?',['A triangle has {{3}} corners.','A square has {{4}} corners.','A rectangle has {{4}} corners.','A circle has {{0}} corners.'],2),
+  CH('C. True or false? Circle.',[['A circle has 2 sides.',1],['A triangle has 3 corners.',0],['A square has 4 sides.',0]],TF));
+ addPages(S,'Shapes all around',[
+  pg('Shapes Warm-up ★','Start here if shape names are new. Trace each shape with a finger first.','Name and trace a circle, square and triangle.',
+   TS('A. Trace the shapes.',['circle','square','tri','circle']),
+   SP('B. Circle the shape that matches the name.',[['circle',['circle','square'],0],['square',['tri','square'],1],['triangle',['tri','circle'],0]]),
+   CO('C. Colour: circle yellow, square red, triangle green.',[['circle','yellow'],['square','red'],['tri','green']])),
+  pg('Shapes Challenge ★★★','A grown-up reads each question. Think carefully.','Use sides and corners to name shapes and solve shape puzzles.',
+   CH('A. True or false? Circle.',[['A rectangle has 4 corners.',0],['A triangle has 4 sides.',1],['A circle has no corners.',0],['A square has 3 sides.',1]],TF),
+   F('B. Who am I?',['I have 3 sides and 3 corners. I am a {{triangle}}.','I am round. I roll. I am a {{circle}}.','I have 4 sides, 2 long and 2 short. I am a {{rectangle}}.'],1),
+   F('C. Count the sides.',['2 triangles have {{6}} sides in all.','2 squares have {{8}} sides in all.'],1),
+   F('D. Spot the mistake. Write the right word.',['Sara says a samosa is a square. It is a {{triangle}}.','Ali says a roti is a triangle. It is a {{circle}}.'],1),
+   DR('E. Draw a robot using circles, squares and triangles.',100)),
+  pg('Topic Test: Shapes (1)','A grown-up reads each question and marks it out of 20.','Check naming flat shapes.',
+   SC(24,12,19),
+   SP('1. Circle the shape that matches the name. (4 marks)',[['square',['circle','square','tri'],1],['triangle',['tri','star','circle'],0],['circle',['square','heart','circle'],2],['star',['tri','star','square'],1]]),
+   CO('2. Colour: circle blue, square red, triangle yellow. (3 marks)',[['circle','blue'],['square','red'],['tri','yellow']]),
+   CP('3. What shape is it? Circle. (3 marks)',[['pizza','a pizza',['circle','square'],0],['door','a door',['rectangle','triangle'],0],['coin','a coin',['circle','square'],0]])),
+  pg('Topic Test: Shapes (2)','Add up your marks from both pages.','Check sides, corners and shapes around us.',
+   F('4. Sides and corners. (6 marks)',['A triangle has {{3}} sides and {{3}} corners.','A square has {{4}} sides and {{4}} corners.','A circle has {{0}} corners.','A rectangle has {{4}} sides.'],1),
+   CH('5. True or false? Circle. (4 marks)',[['A circle is round.',0],['A triangle has 4 corners.',1],['A door is a rectangle.',0],['A square has 3 sides.',1]],TF),
+   F('6. Name it. (2 marks)',['A roti is a {{circle}}.','A samosa is a {{triangle}}.'],2),
+   DR('7. Draw a house with a square and a triangle. (2 marks)',110),
+   HOW),
+  pg('Word Mat: Shapes','Keep this mat on the table. Point and say each shape.','Know the names, sides and corners of flat shapes.',
+   NO('<b>Shape facts</b><br><span style="font-size:19px"><b>circle</b>: round, 0 corners &nbsp; <b>triangle</b>: 3 sides, 3 corners<br><b>square</b>: 4 sides all the same, 4 corners &nbsp; <b>rectangle</b>: 4 sides (2 long, 2 short), 4 corners</span>'),
+   CN(['pizza','coin','window','door'],'Shapes are all around us: a pizza and a coin are circles, a window is a square, a door is a rectangle and a samosa is a triangle.','Shapes around us'),
+   NO('<b>Maths words</b><br><b>side</b>: a straight edge · <b>corner</b>: where two sides meet<br><b>round</b>: no corners · <b>flat shape</b>: a shape we can draw on paper'),
+   CH('Point and say.',[['a plate',['circle','square'],0],['a samosa',['triangle','square'],0],['a book',['rectangle','circle'],0]]),
+   BK(['circle','square','triangle','rectangle','star','side','corner','round']),
+   DR('Draw a picture using only shapes.',90))]);
+
+ /* ---- Topic 7: Ordinal numbers ---- */
+ mo(19,'1st to 5th',
+  CY('B. The animals are in a line. Read the places.',[['rabbit','1st'],['duck','2nd'],['cat','3rd'],['dog','4th'],['frog','5th']]),
+  CH('C. Look at the line above. Circle.',[['Who is 1st?',['rabbit','dog'],0],['Who is 3rd?',['duck','cat'],1],['Who is 5th?',['frog','rabbit'],0],['What place is the dog?',['4th','2nd'],0],['What place is the duck?',['2nd','5th'],0]]),
+  F('D. Write the place.',['one → {{1st}}','two → {{2nd}}','three → {{3rd}}','four → {{4th}}','five → {{5th}}'],3));
+ mo(20,'The Race',
+  CY('B. A race. Who came in which place?',[['sports-medal','1st Hira'],['person-running','2nd Omar'],['person-running','3rd Sana'],['person-running','4th Bilal']]),
+  CH('C. Circle.',[['Who was 2nd?',['Omar','Hira'],0],['Who was last?',['Bilal','Sana'],0],['Who came just after Hira?',['Omar','Sana'],0]]),
+  F('D. Finish the sentence.',['Sana came {{3rd}}.','Hira won. She came {{1st}}.','Bilal came after Sana. He came {{4th}}.'],1));
+ mo(21,'Days in Order',
+  F('B. Write the next day.',['The 4th day is {{Thursday}}.','The 5th day is {{Friday}}.'],1),
+  BX('C. Fill in the days of the school week.',['Monday|{{Tuesday}}|Wednesday|{{Thursday}}|Friday']),
+  CH('D. Circle the right place.',[['Monday is the … day of the school week.',['1st','3rd'],0],['Wednesday is the … day.',['2nd','3rd'],1],['Friday is the … day.',['5th','4th'],0],['Tuesday is the … day.',['2nd','1st'],0]]),
+  WP('E. A grown-up reads. Write the answer.',['Zara reads a book on the 1st day of the school week. That day is {{Monday}}.']));
+ addPages(S,'Ordinal numbers',[
+  pg('Ordinal Numbers Warm-up ★','Start here if 1st, 2nd and 3rd are new. Line up three toys and say the places.','Use 1st, 2nd and 3rd for position.',
+   CY('A. Point and say: 1st, 2nd, 3rd.',[['duck','1st'],['hatching-chick','2nd'],['chicken','3rd']]),
+   CH('B. Look at the line above. Circle.',[['Who is 1st?',['duck','chicken'],0],['Who is 3rd?',['chicken','hatching chick'],0],['Who is 2nd?',['hatching chick','duck'],0]]),
+   CO('C. Colour the 1st circle red, the 2nd yellow and the 3rd blue.',[['circle','red'],['circle','yellow'],['circle','blue']]),
+   MA('D. Match the word to the place.',['first','second','third'],['1st','2nd','3rd'])),
+  pg('Ordinal Numbers Challenge ★★★','A grown-up reads each question. Think carefully.','Use ordinal numbers to 10th and solve position puzzles.',
+   CY('A. Ten children in a line.',[['person-running','1st'],['person-running','2nd'],['person-running','3rd'],['person-running','4th'],['person-running','5th'],['person-running','6th'],['person-running','7th'],['person-running','8th'],['person-running','9th'],['person-running','10th']]),
+   CH('B. True or false? Circle.',[['2nd comes just after 1st.',0],['The 5th day of the school week is Monday.',1],['10th is the last place in a line of 10.',0],['3rd comes before 2nd.',1]],TF),
+   F('C. Think it through.',['Ali is 3rd. Sara is just behind him. Sara is {{4th}}.','There are 5 cars. The red car is last. It is {{5th}}.','Hamza is 6th. Who is just in front? The {{5th}} child.'],1)),
+  pg('Topic Test: Ordinal Numbers (1)','A grown-up reads each question and marks it out of 20.','Check the words and places 1st to 5th.',
+   SC(20,10,16),
+   MA('1. Match the word to the place. (5 marks)',['first','second','third','fourth','fifth'],['1st','2nd','3rd','4th','5th']),
+   CY('Look at the line.',[['cat','1st'],['dog','2nd'],['rabbit','3rd'],['frog','4th'],['duck','5th']]),
+   CH('2. Look at the line. Circle. (3 marks)',[['Who is 2nd?',['dog','frog'],0],['Who is 5th?',['duck','cat'],0],['What place is the rabbit?',['3rd','1st'],0]])),
+  pg('Topic Test: Ordinal Numbers (2)','Add up your marks from both pages.','Check places in races, lines and days.',
+   CH('3. Look at the letters A B C D E. Circle. (4 marks)',[['Which letter is 1st?',['A','E'],0],['Which letter is 3rd?',['B','C'],1],['Which letter is 5th?',['E','D'],0],['What place is D?',['4th','2nd'],0]]),
+   F('4. Days of the school week. (3 marks)',['The 1st day is {{Monday}}.','The 3rd day is {{Wednesday}}.','The 5th day is {{Friday}}.'],3),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['In a race Sara was 1st, Ali was 2nd and Zara was 3rd. Who won? {{Sara}}','Who came 3rd? {{Zara}}','What place was Ali? {{2nd}}']),
+   CH('6. True or false? Circle. (2 marks)',[['4th comes after 3rd.',0],['1st is the last place.',1]],TF),
+   HOW),
+  pg('Word Mat: Ordinal Numbers','Keep this mat on the table. Say the places in order.','Know the words for places in a line.',
+   CY('Places in a line',[['sports-medal','1st first'],['person-running','2nd second'],['person-running','3rd third'],['person-running','4th fourth'],['person-running','5th fifth']]),
+   NO('<b>Number and place</b><br><span style="font-size:19px">1 → 1st first &nbsp; 2 → 2nd second &nbsp; 3 → 3rd third &nbsp; 4 → 4th fourth &nbsp; 5 → 5th fifth<br>6 → 6th sixth &nbsp; 7 → 7th seventh &nbsp; 8 → 8th eighth &nbsp; 9 → 9th ninth &nbsp; 10 → 10th tenth</span>'),
+   NO('<b>Days of the school week</b><br>1st Monday · 2nd Tuesday · 3rd Wednesday · 4th Thursday · 5th Friday'),
+   NO('<b>Maths words</b><br><b>first</b>: at the front · <b>last</b>: at the end · <b>next</b>: just after<br><b>before</b>: in front of · <b>after</b>: behind · <b>place</b>: where you are in a line'),
+   BK(['first','second','third','fourth','fifth','last','next','place']),
+   DR('Draw 3 cars in a race. Write 1st, 2nd and 3rd.',90))]);
+
+ /* ---- Topic 8: Counting in 2s, 5s and 10s ---- */
+ mo(22,'Count in 2s',
+  PAIRS('B. Count the pairs in 2s.',[2,3,4,5]),
+  FP('C. Count in 2s.',[['socks','3 pairs of socks: 2, 4, {{6}} socks.'],['eye','4 children: 2, 4, 6, {{8}} eyes.'],['running-shoe','5 pairs of shoes: {{10}} shoes.'],['gloves','2 pairs of gloves: {{4}} gloves.']]),
+  BX('D. Count in 2s. Fill in.',['0|2|{{4}}|6|{{8}}|10','10|{{12}}|14|{{16}}|18|{{20}}']),
+  WP('E. A grown-up reads. Write the answer.',['There are 6 children. Each has 2 hands. Count in 2s: {{12}} hands.']));
+ mo(23,'Count in 10s',
+  FP('B. Count in 10s.',[['hand-with-fingers-splayed','2 children hold up both hands: 10, {{20}} fingers.'],['coin','3 coins of 10 rupees: 10, 20, {{30}} rupees.'],['egg','4 boxes of 10 eggs: {{40}} eggs.'],['pencil','5 boxes of 10 pencils: {{50}} pencils.']]),
+  BX('C. Count back in 10s. Fill in.',['100|90|{{80}}|70|{{60}}','50|{{40}}|30|{{20}}|10']),
+  F('D. What comes next?',['10, 20, 30, {{40}}','40, 50, 60, {{70}}','70, 80, 90, {{100}}','30, 40, {{50}}, 60'],2),
+  WP('E. A grown-up reads. Write the answer.',['Ammi has 6 notes of 10 rupees. Count in 10s: she has {{60}} rupees.']));
+ mo(24,'Count in 5s',
+  FP('B. Count in 5s.',[['hand-with-fingers-splayed','2 hands: 5, {{10}} fingers.'],['hand-with-fingers-splayed','3 hands: 5, 10, {{15}} fingers.'],['footprints','4 feet: {{20}} toes.'],['coin','5 coins of 5 rupees: {{25}} rupees.']]),
+  BX('C. Count back in 5s. Fill in.',['50|45|{{40}}|35|{{30}}','25|{{20}}|15|{{10}}|5']),
+  F('D. What comes next?',['5, 10, 15, {{20}}','25, 30, 35, {{40}}','40, 45, {{50}}'],3),
+  CH('E. True or false? Circle.',[['When we count in 5s we say 5, 10, 15.',0],['20 comes after 15 when we count in 5s.',0],['When we count in 5s we say 12.',1]],TF));
+ addPages(S,'Counting in 2s, 5s and 10s',[
+  pg('Counting in 2s, 5s and 10s Warm-up ★','Start here if skip counting is new. Clap on every number you say.','Count in 2s to 10 and in 10s to 50 with support.',
+   PAIRS('A. Count the pairs in 2s.',[1,2,3]),
+   BX('B. Count in 2s. Fill in.',['2|{{4}}|6|{{8}}|10']),
+   FP('C. Count in 2s.',[['socks','2 pairs of socks: 2, {{4}} socks.'],['eye','3 children: 2, 4, {{6}} eyes.']]),
+   BX('D. Count in 10s. Fill in.',['10|{{20}}|30|{{40}}|50']),
+   WP('E. A grown-up reads. Write the answer.',['Ammi has 2 notes of 10 rupees. Count in 10s: she has {{20}} rupees.']),
+   DR('F. Draw 3 pairs of shoes. Count them in 2s.',90)),
+  pg('Counting in 2s, 5s and 10s Challenge ★★★','A grown-up reads each question. Think carefully.','Find the counting rule, spot mistakes and solve skip counting problems.',
+   CH('A. Count in 2s, 5s or 10s? Circle.',[['10, 20, 30, 40',['2s','5s','10s'],2],['2, 4, 6, 8',['2s','5s','10s'],0],['5, 10, 15, 20',['2s','5s','10s'],1]]),
+   F('B. Spot the mistake. Write the right number.',['2, 4, 6, 7, 10: 7 should be {{8}}','10, 20, 30, 50: 50 should be {{40}}','5, 10, 15, 25: 25 should be {{20}}'],1),
+   BX('C. Fill in.',['14|16|{{18}}|{{20}}','35|40|{{45}}|{{50}}','60|70|{{80}}|{{90}}']),
+   WP('D. Word problems.',['There are 7 children. How many hands? Count in 2s: {{14}}','Abbu has 8 notes of 10 rupees. He has {{80}} rupees.','4 children hold up one hand each. Count in 5s: {{20}} fingers.'])),
+  pg('Topic Test: Counting in 2s, 5s and 10s (1)','A grown-up reads each question and marks it out of 24.','Check counting in 2s, 5s and 10s.',
+   SC(26,13,21),
+   BX('1. Count in 2s. (4 marks)',['2|4|{{6}}|8|{{10}}','12|{{14}}|16|{{18}}|20']),
+   BX('2. Count in 5s. (4 marks)',['5|{{10}}|15|{{20}}|25','30|35|{{40}}|45|{{50}}']),
+   BX('3. Count in 10s. (4 marks)',['10|20|{{30}}|40|{{50}}','60|{{70}}|80|{{90}}|100']),
+   PAIRS('4. Count the pairs in 2s. (2 marks)',[3,4])),
+  pg('Topic Test: Counting in 2s, 5s and 10s (2)','Add up your marks from both pages.','Check skip counting in stories.',
+   FP('5. Count. (4 marks)',[['socks','4 pairs of socks: {{8}} socks.'],['hand-with-fingers-splayed','2 hands: {{10}} fingers.'],['coin','3 coins of 10 rupees: {{30}} rupees.'],['eye','5 children: {{10}} eyes.']]),
+   F('6. What comes next? (3 marks)',['20, 30, 40, {{50}}','6, 8, 10, {{12}}','15, 20, 25, {{30}}'],3),
+   CH('7. True or false? Circle. (3 marks)',[['10, 20, 30 is counting in 10s.',0],['2, 4, 5, 6 is counting in 2s.',1],['5, 10, 15 is counting in 5s.',0]],TF),
+   WP('8. Word problems. (2 marks)',['There are 4 children. Count their eyes in 2s: {{8}} eyes.','Abbu has 5 notes of 10 rupees: {{50}} rupees.']),
+   HOW),
+  pg('Word Mat: Counting in 2s, 5s and 10s','Keep this mat on the table. Count out loud and clap.','Know the counting patterns for 2s, 5s and 10s.',
+   NO('<b>Count in 2s</b>: <span style="font-size:20px">2, 4, 6, 8, 10, 12, 14, 16, 18, 20</span>'),
+   NO('<b>Count in 5s</b>: <span style="font-size:20px">5, 10, 15, 20, 25, 30, 35, 40, 45, 50</span>'),
+   NO('<b>Count in 10s</b>: <span style="font-size:20px">10, 20, 30, 40, 50, 60, 70, 80, 90, 100</span>'),
+   CN(['socks','hand-with-fingers-splayed','coin'],'Socks come in 2s. A hand has 5 fingers. A coin can be 10 rupees. Counting in groups is quicker than counting in ones!','Counting in groups'),
+   NO('<b>Maths words</b><br><b>pair</b>: 2 things that go together · <b>skip count</b>: jump to every 2nd, 5th or 10th number<br><b>count on</b>: go up · <b>count back</b>: go down'),
+   BK(['pair','count in 2s','count in 5s','count in 10s','skip count','pattern']),
+   DR('Draw 5 hands. Count the fingers in 5s.',90))]);
+});

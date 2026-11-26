@@ -1,0 +1,89 @@
+# My Body Song (Little Takhti), Nursery General Knowledge, topic nursery-gk-t1
+# Lyrics draft for Google Flow Music. Facts match the worksheets: the five senses (see with eyes, hear with ears, smell with nose, taste with tongue, touch with hands), counting body parts (2 eyes, 1 nose, 2 ears, 2 hands, 5 fingers on one hand, 1 mouth), keeping clean (wash hands before eating, brush teeth at night, take a bath).
+# Nursery level: short lines, lots of repetition, action words so children can point and move.
+# SOUND prompt (same as the approved Parts of a Plant song):
+# upbeat cheerful kids educational pop, acoustic guitar, ukulele, handclaps, bouncy bass, warm female lead with a light South Asian accent, small children choir on chorus, clear diction, extended song structure, spacious 7-second instrumental tick-tock clock percussion timer breaks before every answer, 120 bpm
+# Quiz: after each question there must be a 7-second instrumental tick-tock break with NO singing, then the answer.
+
+[Intro]
+Hello friends, it's learning time!
+Let's sing about our body!
+Ready? Let's go!
+
+[Verse 1]
+Two eyes, look, look, look,
+I see with my eyes, I can see a book!
+Two ears, listen, hear,
+I hear with my ears, the birds sing near!
+
+[Verse 2]
+One nose, sniff, sniff, sniff,
+I smell with my nose, a flower, what a whiff!
+My tongue says yum, yum, yum,
+I taste with my tongue, a sweet mango, yum!
+
+[Verse 3]
+Two hands, clap, clap, clap,
+I touch with my hands, soft grass in my lap!
+Five fingers on one hand,
+Wiggle, wiggle, wiggle, aren't they grand!
+
+[Chorus]
+Eyes to see and ears to hear,
+Nose to smell, so sweet and clear,
+Tongue to taste and hands to touch,
+I love my body very much!
+
+[Verse 4]
+Wash my hands before I eat,
+Count to twenty, nice and neat!
+Brush my teeth at night, then bed,
+Take a bath from toes to head!
+
+[Chorus]
+Eyes to see and ears to hear,
+Nose to smell, so sweet and clear,
+Tongue to taste and hands to touch,
+I love my body very much!
+
+[Bridge]
+Touch your nose, touch your ears,
+Touch your eyes, now clap and cheer!
+Wiggle your fingers, stamp your feet,
+Jump up high, and take a seat!
+
+[Quiz intro]
+Quiz time! Can you guess? Shout it out loud!
+
+[Question 1]
+How many eyes do we have?
+
+[7-second extended instrumental tick-tock timer break, no singing]
+
+[Answer 1]
+Two eyes! We have two eyes!
+
+[Question 2]
+What do we smell with?
+
+[7-second extended instrumental tick-tock timer break, no singing]
+
+[Answer 2]
+Our nose! We smell with our nose!
+
+[Question 3]
+How many fingers on one hand?
+
+[7-second extended instrumental tick-tock timer break, no singing]
+
+[Answer 3]
+Five fingers! Five fingers on one hand!
+
+[Final chorus]
+Eyes to see and ears to hear,
+Nose to smell, so sweet and clear,
+Tongue to taste and hands to touch,
+I love my body very much!
+
+[Outro]
+Find more fun worksheets and games, on the website and the app! Bye bye, friends!

@@ -1471,88 +1471,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p79 0.32 Reading short stories / Story Sums
 - p80 0.45 Reading short stories / My Favourite Story
 
-## kg-maths (80 pages)
-- p1 0.47 Numbers to 20 / Count and Write
-- p2 0.61 Numbers to 20 / Trace 11 to 19
-- p3 0.13 Numbers to 20 / Number Track
-- p4 0.36 More and less / Which Has More?
-- p5 0.29 More and less / One More, One Less
-- p6 0.34 More and less / Biggest and Smallest
-- p7 0.30 Patterns / What Comes Next?
-- p8 0.27 Patterns / Number Patterns
-- p9 0.41 Patterns / Make a Pattern
-- p10 0.19 Adding to 10 / Add the Shapes
-- p11 0.19 Adding to 10 / Story Sums
-- p12 0.14 Adding to 10 / Make 10
-- p13 0.19 Taking away / Take Away
-- p14 0.19 Taking away / How Many Left?
-- p15 0.25 Taking away / Add or Take Away?
-- p16 0.35 Shapes all around / Name the Shape
-- p17 0.30 Shapes all around / Shapes at Home
-- p18 0.42 Shapes all around / Count the Sides
-- p19 0.30 Ordinal numbers / 1st to 5th
-- p20 0.29 Ordinal numbers / The Race
-- p21 0.14 Ordinal numbers / Days in Order
-- p22 0.13 Counting in 2s, 5s and 10s / Count in 2s
-- p23 0.13 Counting in 2s, 5s and 10s / Count in 10s
-- p24 0.13 Counting in 2s, 5s and 10s / Count in 5s
-- p25 0.09 Coins and notes / Know the Coins
-- p26 0.20 Coins and notes / Which Is More?
-- p27 0.09 Coins and notes / Add the Coins
-- p28 0.25 Time words / Morning, Afternoon, Night
-- p29 0.14 Time words / Days of the Week
-- p30 0.26 Time words / O'Clock
-- p31 0.25 Numbers to 50 / Tens and Ones
-- p32 0.13 Numbers to 50 / Count to 30
-- p33 0.27 Numbers to 50 / Count to 50
-- p34 0.30 Numbers to 50 / Counting in Tens
-- p35 0.29 Numbers to 50 / Before, After, Between
-- p36 0.25 Numbers to 50 / Which Is Bigger?
-- p37 0.24 Numbers to 50 / Trays and Bundles
-- p38 0.35 Numbers to 50 / Number Stories
-- p39 0.09 Numbers to 50 / Count On
-- p40 0.25 Numbers to 50 / Write to 50
-- p41 0.28 Number bonds to 10 / What Is a Number Bond?
-- p42 0.34 Number bonds to 10 / Bonds to 5
-- p43 0.40 Number bonds to 10 / Bonds to 10
-- p44 0.25 Number bonds to 10 / Part, Part, Whole
-- p45 0.24 Number bonds to 10 / Picture Bonds
-- p46 0.25 Number bonds to 10 / Make 10
-- p47 0.30 Number bonds to 10 / Bond Partners
-- p48 0.35 Number bonds to 10 / Bond Stories
-- p49 0.14 Number bonds to 10 / Ten Fingers
-- p50 0.37 Number bonds to 10 / Draw a Bond
-- p51 0.28 Adding and taking away stories / Put Together, Take Away
-- p52 0.21 Adding and taking away stories / Adding Pictures
-- p53 0.21 Adding and taking away stories / Taking Away Pictures
-- p54 0.25 Adding and taking away stories / Add or Take Away?
-- p55 0.09 Adding and taking away stories / Adding Sums
-- p56 0.09 Adding and taking away stories / Taking Away Sums
-- p57 0.35 Adding and taking away stories / Adding Stories
-- p58 0.32 Adding and taking away stories / Taking Away Stories
-- p59 0.33 Adding and taking away stories / Story Strip
-- p60 0.40 Adding and taking away stories / My Number Story
-- p61 0.35 Measuring with hands and feet / How Long Is It?
-- p62 0.27 Measuring with hands and feet / Hand Spans
-- p63 0.37 Measuring with hands and feet / Longer or Shorter?
-- p64 0.27 Measuring with hands and feet / Foot Steps
-- p65 0.37 Measuring with hands and feet / Hands or Feet?
-- p66 0.40 Measuring with hands and feet / Measure in Order
-- p67 0.21 Measuring with hands and feet / Which Is Longest?
-- p68 0.40 Measuring with hands and feet / Big Hands, Small Hands
-- p69 0.35 Measuring with hands and feet / Measuring Stories
-- p70 0.20 Measuring with hands and feet / My Measuring
-- p71 0.37 Halves / What Is Half?
-- p72 0.30 Halves / Shaded Halves
-- p73 0.20 Halves / Equal or Not?
-- p74 0.43 Halves / Half of a Group
-- p75 0.21 Halves / Food Halves
-- p76 0.20 Halves / Share Fairly
-- p77 0.40 Halves / Cutting a Roti
-- p78 0.25 Halves / Which Is Half?
-- p79 0.32 Halves / Half Stories
-- p80 0.42 Halves / Draw the Halves
-
 ## kg-gk (80 pages)
 - p1 0.25 Seasons and weather / Four Seasons
 - p2 0.26 Seasons and weather / What to Wear?
@@ -2847,6 +2765,76 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p68 0.37 واحد اور جمع / صحیح لفظ چنیں
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
+
+## kg-maths (68 pages)
+- p13 0.19 Taking away / Take Away
+- p14 0.19 Taking away / How Many Left?
+- p15 0.25 Taking away / Add or Take Away?
+- p16 0.35 Shapes all around / Name the Shape
+- p17 0.30 Shapes all around / Shapes at Home
+- p18 0.42 Shapes all around / Count the Sides
+- p19 0.30 Ordinal numbers / 1st to 5th
+- p20 0.29 Ordinal numbers / The Race
+- p21 0.14 Ordinal numbers / Days in Order
+- p22 0.13 Counting in 2s, 5s and 10s / Count in 2s
+- p23 0.13 Counting in 2s, 5s and 10s / Count in 10s
+- p24 0.13 Counting in 2s, 5s and 10s / Count in 5s
+- p25 0.09 Coins and notes / Know the Coins
+- p26 0.20 Coins and notes / Which Is More?
+- p27 0.09 Coins and notes / Add the Coins
+- p28 0.25 Time words / Morning, Afternoon, Night
+- p29 0.14 Time words / Days of the Week
+- p30 0.26 Time words / O'Clock
+- p31 0.25 Numbers to 50 / Tens and Ones
+- p32 0.13 Numbers to 50 / Count to 30
+- p33 0.27 Numbers to 50 / Count to 50
+- p34 0.30 Numbers to 50 / Counting in Tens
+- p35 0.29 Numbers to 50 / Before, After, Between
+- p36 0.25 Numbers to 50 / Which Is Bigger?
+- p37 0.24 Numbers to 50 / Trays and Bundles
+- p38 0.35 Numbers to 50 / Number Stories
+- p39 0.09 Numbers to 50 / Count On
+- p40 0.25 Numbers to 50 / Write to 50
+- p41 0.28 Number bonds to 10 / What Is a Number Bond?
+- p42 0.34 Number bonds to 10 / Bonds to 5
+- p43 0.40 Number bonds to 10 / Bonds to 10
+- p44 0.25 Number bonds to 10 / Part, Part, Whole
+- p45 0.24 Number bonds to 10 / Picture Bonds
+- p46 0.25 Number bonds to 10 / Make 10
+- p47 0.30 Number bonds to 10 / Bond Partners
+- p48 0.35 Number bonds to 10 / Bond Stories
+- p49 0.14 Number bonds to 10 / Ten Fingers
+- p50 0.37 Number bonds to 10 / Draw a Bond
+- p51 0.28 Adding and taking away stories / Put Together, Take Away
+- p52 0.21 Adding and taking away stories / Adding Pictures
+- p53 0.21 Adding and taking away stories / Taking Away Pictures
+- p54 0.25 Adding and taking away stories / Add or Take Away?
+- p55 0.09 Adding and taking away stories / Adding Sums
+- p56 0.09 Adding and taking away stories / Taking Away Sums
+- p57 0.35 Adding and taking away stories / Adding Stories
+- p58 0.32 Adding and taking away stories / Taking Away Stories
+- p59 0.33 Adding and taking away stories / Story Strip
+- p60 0.40 Adding and taking away stories / My Number Story
+- p61 0.35 Measuring with hands and feet / How Long Is It?
+- p62 0.27 Measuring with hands and feet / Hand Spans
+- p63 0.37 Measuring with hands and feet / Longer or Shorter?
+- p64 0.27 Measuring with hands and feet / Foot Steps
+- p65 0.37 Measuring with hands and feet / Hands or Feet?
+- p66 0.40 Measuring with hands and feet / Measure in Order
+- p67 0.21 Measuring with hands and feet / Which Is Longest?
+- p68 0.40 Measuring with hands and feet / Big Hands, Small Hands
+- p69 0.35 Measuring with hands and feet / Measuring Stories
+- p70 0.20 Measuring with hands and feet / My Measuring
+- p71 0.37 Halves / What Is Half?
+- p72 0.30 Halves / Shaded Halves
+- p73 0.20 Halves / Equal or Not?
+- p74 0.43 Halves / Half of a Group
+- p75 0.21 Halves / Food Halves
+- p76 0.20 Halves / Share Fairly
+- p77 0.40 Halves / Cutting a Roti
+- p78 0.25 Halves / Which Is Half?
+- p79 0.32 Halves / Half Stories
+- p80 0.42 Halves / Draw the Halves
 
 ## g2-islamiat (30 pages)
 - p1 0.31 Allah the Creator / Allah Is One

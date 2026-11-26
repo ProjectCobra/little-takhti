@@ -226,3 +226,190 @@ DEPTH.push(({addPaper})=>{
    WR('36. Write one place in your town you like to visit. (2 marks)',['______________________________________']),
    WR(...HOW))]);
 });
+
+/* D5: KG Maths topics 1 to 4 (Numbers to 20, More and less, Patterns, Adding to 10).
+   Same method as the Nursery D batches: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='kg-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const PSUM=(h,items)=>({t:'picsum',h,items});
+ const BOND=items=>({t:'bond',items});
+
+ /* ---- Topic 1: Numbers to 20 ---- */
+ mo(1,'Count and Write',
+  PI('B. Count. Circle the right number.',[[13,'star',[13,15,12]],[17,'circle',[16,17,18]],[15,'heart',[15,14,19]]]),
+  F('C. Ten and some more.',['10 and 3 make {{13}}','10 and 6 make {{16}}','10 and 9 make {{19}}','10 and 10 make {{20}}'],2));
+ mo(2,'Trace 11 to 19',
+  BX('B. Fill in the missing numbers. Say them aloud.',['10|{{11}}|12|{{13}}|14|{{15}}','15|{{16}}|17|{{18}}|19|{{20}}']),
+  F('C. Write the number.',['1 ten and 2 ones = {{12}}','1 ten and 7 ones = {{17}}','1 ten and 4 ones = {{14}}','1 ten and 9 ones = {{19}}'],2));
+ mo(3,'Number Track',
+  BX('B. Count back. Fill in.',['20|19|{{18}}|17|{{16}}|15','14|{{13}}|12|{{11}}|10|{{9}}']),
+  F('C. Just before and just after.',['Just after 12 comes {{13}}.','Just before 15 comes {{14}}.','Just after 19 comes {{20}}.','Just before 11 comes {{10}}.'],2),
+  BX('D. Write the number in between.',['11|{{12}}|13','14|{{15}}|16','18|{{19}}|20','9|{{10}}|11']),
+  WP('E. A grown-up reads. Write the answer.',['Bilal is number 14 in the line. Who is just after him? Number {{15}}.','There are 19 eggs. Ammi buys 1 more. Now there are {{20}} eggs.']));
+ addPages(S,'Numbers to 20',[
+  pg('Numbers to 20 Warm-up ★','Start here if the teen numbers are new. Count slowly with a grown-up.','Count and write numbers 11 to 15 with support.',
+   CT('A. Count and write.',[[11,'star'],[12,'circle'],[13,'heart'],[14,'square']]),
+   TR('B. Trace the numbers.',['11','12','13'],5),
+   BX('C. Fill in.',['10|{{11}}|12|13|{{14}}|15|16']),
+   F('D. Ten and some more.',['10 and 1 make {{11}}','10 and 5 make {{15}}'],2)),
+  pg('Numbers to 20 Challenge ★★★','A grown-up reads each question. Think carefully.','Order, compare and count back with numbers to 20.',
+   CH('A. True or false? Circle.',[['17 comes just after 16.',0],['12 is bigger than 20.',1],['15 is between 14 and 16.',0],['19 comes just before 18.',1]],TF),
+   BX('B. Count back from 20. Fill in.',['20|{{19}}|18|{{17}}|16|{{15}}','15|14|{{13}}|12|{{11}}|10']),
+   F('C. Think it through.',['I am 1 ten and 8 ones. I am {{18}}.','I am one more than 19. I am {{20}}.','I am one less than 13. I am {{12}}.','I am between 15 and 17. I am {{16}}.'],2),
+   F('D. Put in order, smallest first.',['14, 11, 17 → {{11, 14, 17}}','20, 12, 16 → {{12, 16, 20}}'],2),
+   WP('E. Word problem.',['Sara has 10 stickers and 6 more. Hamza has 15 stickers. Who has more? {{Sara}}'])),
+  pg('Topic Test: Numbers to 20 (1)','A grown-up reads each question and marks it out of 22.','Check counting and writing numbers to 20.',
+   SC(22,11,18),
+   CT('1. Count and write. (4 marks)',[[12,'star'],[15,'heart'],[18,'circle'],[20,'square']]),
+   BX('2. Write the missing numbers. (6 marks)',['10|{{11}}|12|{{13}}|14|{{15}}','16|{{17}}|18|{{19}}|{{20}}']),
+   PI('3. Count. Circle the right number. (3 marks)',[[14,'heart',[13,14,15]],[11,'star',[11,17,12]],[19,'tri',[18,20,19]]])),
+  pg('Topic Test: Numbers to 20 (2)','Add up your marks from both pages.','Check teen numbers, comparing and number stories.',
+   F('4. Ten and some more. (4 marks)',['10 and 2 make {{12}}','10 and 5 make {{15}}','10 and 8 make {{18}}','10 and 7 make {{17}}'],2),
+   CH('5. Circle the bigger number. (3 marks)',[['13 or 16',['13','16'],1],['19 or 11',['19','11'],0],['20 or 18',['20','18'],0]]),
+   WP('6. A grown-up reads. Write the answer. (2 marks)',['Ammi buys 10 eggs and 4 more. How many eggs? {{14}}','Ali has 15 marbles. He gets 1 more. Now he has {{16}} marbles.']),
+   DR('Draw 12 dots: a row of 10 and 2 more.',110),
+   HOW),
+  pg('Word Mat: Numbers to 20','Keep this mat on the table. Point and say each number.','Know the numbers 11 to 20 and that they are ten and some more.',
+   NO('<b>Teen numbers: ten and some more</b><br><span style="font-size:20px">11 eleven = 10 + 1 &nbsp; 12 twelve = 10 + 2 &nbsp; 13 thirteen = 10 + 3<br>14 fourteen = 10 + 4 &nbsp; 15 fifteen = 10 + 5 &nbsp; 16 sixteen = 10 + 6<br>17 seventeen = 10 + 7 &nbsp; 18 eighteen = 10 + 8 &nbsp; 19 nineteen = 10 + 9<br>20 twenty = 10 + 10</span>'),
+   BX('Count to 20.',['1|2|3|4|5|6|7|8|9|10','11|12|13|14|15|16|17|18|19|20']),
+   CN(['hand-with-fingers-splayed','hand-with-fingers-splayed'],'Ten fingers make 10. Show 10 fingers, then a friend shows 4 more: 10 and 4 make 14.','Ten and some more'),
+   NO('<b>Maths words</b><br><b>teen numbers</b>: 13 to 19 · <b>ten</b>: a full row of ten · <b>ones</b>: the extra ones<br><b>before</b>, <b>after</b>, <b>between</b> · <b>count back</b>: 20, 19, 18 …'),
+   BK(['eleven','twelve','fifteen','twenty','ten','ones','before','after']),
+   DR('Draw 15 dots: a row of 10 and 5 more.',90))]);
+
+ /* ---- Topic 2: More and less ---- */
+ mo(4,'Which Has More?',
+  FP('B. Count. Write more or less.',[['red-apple','5 apples is {{more}} than 3 apples.'],['balloon','2 balloons is {{less}} than 6 balloons.'],['duck','7 ducks is {{more}} than 4 ducks.'],['cookie','1 biscuit is {{less}} than 5 biscuits.']]),
+  CH('C. Circle the bigger number.',[['8 or 5',['8','5'],0],['3 or 9',['3','9'],1],['14 or 11',['14','11'],0],['12 or 17',['12','17'],1]]));
+ mo(5,'One More, One Less',
+  BX('B. One less, the number, one more.',['{{6}}|7|{{8}}','{{10}}|11|{{12}}','{{13}}|14|{{15}}','{{18}}|19|{{20}}']),
+  WP('C. A grown-up reads. Write the answer.',['Zara has 6 bangles. Nani gives her one more. Now she has {{7}} bangles.','There are 12 birds on a wall. One flies away. Now there are {{11}} birds.','Bilal is 5. His brother is one year older. His brother is {{6}}.']));
+ mo(6,'Biggest and Smallest',
+  F('C. Put in order, smallest first.',['7, 2, 5 → {{2, 5, 7}}','13, 18, 10 → {{10, 13, 18}}','9, 15, 4 → {{4, 9, 15}}','20, 11, 16 → {{11, 16, 20}}'],2),
+  CH('D. True or false? Circle.',[['9 is more than 6.',0],['12 is less than 8.',1],['20 is the biggest of 20, 2 and 12.',0],['3 is more than 13.',1]],TF),
+  WP('E. Word problem.',['Ali has 8 kites, Sara has 12 and Hamza has 5. Who has the most? {{Sara}} Who has the fewest? {{Hamza}}']));
+ addPages(S,'More and less',[
+  pg('More and Less Warm-up ★','Start here if comparing is new. Line the shapes up to check.','Compare two small groups and find which has more.',
+   CM('A. Circle the group with more.',[[3,1,'star'],[2,5,'heart'],[4,2,'circle']]),
+   FP('B. Count. Write more or less.',[['mango','4 mangoes is {{more}} than 2.'],['egg','1 egg is {{less}} than 3.']]),
+   F('C. One more.',['One more than 2 is {{3}}.','One more than 5 is {{6}}.','One more than 7 is {{8}}.'],3),
+   CH('D. Circle the bigger number.',[['2 or 4',['2','4'],1],['6 or 3',['6','3'],0],['5 or 1',['5','1'],0]])),
+  pg('More and Less Challenge ★★★','A grown-up reads each question. Think carefully.','Compare numbers to 20 and find how many more.',
+   CH('A. True or false? Circle.',[['One less than 10 is 9.',0],['One more than 15 is 14.',1],['17 is less than 19.',0],['11 is more than 18.',1]],TF),
+   F('B. How many more?',['7 is {{2}} more than 5.','10 is {{3}} more than 7.','6 is {{4}} more than 2.'],1),
+   F('C. Think it through.',['I am one less than 20. I am {{19}}.','I am one more than 11. I am {{12}}.','I am two more than 8. I am {{10}}.'],1),
+   F('D. Put in order, biggest first.',['6, 14, 9 → {{14, 9, 6}}','17, 3, 11 → {{17, 11, 3}}'],2),
+   WP('E. Word problem.',['Sara has 9 sweets. Ali has 6 sweets. Sara has {{3}} more sweets than Ali.'])),
+  pg('Topic Test: More and Less (1)','A grown-up reads each question and marks it out of 21.','Check comparing groups, one more and one less.',
+   SC(21,11,17),
+   CM('1. Circle the group with more. (3 marks)',[[7,4,'star'],[5,8,'circle'],[6,3,'heart']]),
+   F('2. One more and one less. (6 marks)',['One more than 6 is {{7}}.','One less than 6 is {{5}}.','One more than 13 is {{14}}.','One less than 13 is {{12}}.','One more than 19 is {{20}}.','One less than 10 is {{9}}.'],2),
+   CH('3. Circle the bigger number. (3 marks)',[['9 or 4',['9','4'],0],['15 or 18',['15','18'],1],['20 or 12',['20','12'],0]])),
+  pg('Topic Test: More and Less (2)','Add up your marks from both pages.','Check biggest, smallest and order.',
+   CH('4. Circle the smallest number. (3 marks)',[['',['7','3','9'],1],['',['14','16','11'],2],['',['2','12','20'],0]]),
+   F('5. Put in order, smallest first. (2 marks)',['8, 3, 6 → {{3, 6, 8}}','17, 10, 14 → {{10, 14, 17}}'],2),
+   WP('6. Word problems. (2 marks)',['Hamza has 4 cars. He gets one more. Now he has {{5}} cars.','There are 9 ducks. One swims away. Now there are {{8}} ducks.']),
+   CH('7. True or false? Circle. (2 marks)',[['5 is less than 8.',0],['16 is more than 19.',1]],TF),
+   DR('Draw 3 balls and 1 more. How many now?',80),
+   HOW),
+  pg('Word Mat: More and Less','Keep this mat on the table. Use the words when you compare.','Know the words more, less, biggest, smallest, one more and one less.',
+   CN(['red-apple','red-apple','red-apple','red-apple','red-apple'],'5 apples and 2 apples: 5 is more, 2 is less. Line them up to check!','More and less'),
+   CM('More: the group with more is circled.',[[6,3,'star']]),
+   {t:'numline'},
+   NO('<b>Maths words</b><br><b>more</b>: the bigger group · <b>less</b> or <b>fewer</b>: the smaller group<br><b>one more</b>: count on 1 (7 → 8) · <b>one less</b>: count back 1 (7 → 6)<br><b>biggest</b>: the most · <b>smallest</b>: the least · <b>same</b>: equal groups'),
+   BK(['more','less','fewer','one more','one less','biggest','smallest','same']),
+   DR('Draw a plate with more biscuits than this mat has words.',90))]);
+
+ /* ---- Topic 3: Patterns ---- */
+ mo(7,'What Comes Next?',
+  CH('B. Which colour comes next? Circle.',[['red, blue, red, blue, red, ...',['blue','red'],0],['green, green, yellow, green, green, ...',['green','yellow'],1],['pink, white, pink, white, ...',['pink','white'],0]]),
+  PT('C. What comes next? Draw it.',[[['square','tri','square','tri','square'],'tri'],[['circle','circle','star','circle','circle'],'star']]),
+  F('D. Finish the pattern.',['clap, stamp, clap, stamp, {{clap}}','up, down, up, down, {{up}}'],2));
+ mo(8,'Number Patterns',
+  BX('B. Count on. Fill in.',['11|12|13|{{14}}|{{15}}','16|17|{{18}}|{{19}}|20']),
+  BX('C. Count back. Fill in.',['10|9|8|{{7}}|{{6}}','20|19|{{18}}|{{17}}|16']),
+  F('D. What comes next?',['1, 2, 1, 2, 1, {{2}}','5, 5, 6, 5, 5, {{6}}','3, 4, 3, 4, {{3}}','2, 4, 6, {{8}}'],2));
+ mo(9,'Make a Pattern',
+  CH('B. Circle what comes next.',[['spoon, fork, spoon, fork, ...',['spoon','fork'],0],['big, small, big, small, ...',['big','small'],0],['sun, moon, sun, moon, sun, ...',['sun','moon'],1]]),
+  F('C. Finish the pattern.',['big, small, big, small, {{big}}','1, 1, 2, 1, 1, {{2}}','hop, hop, jump, hop, hop, {{jump}}','A, B, A, B, {{A}}'],2));
+ addPages(S,'Patterns',[
+  pg('Patterns Warm-up ★','Start here if patterns are new. Say the pattern out loud.','Continue an AB pattern with support.',
+   PT('A. What comes next? Draw it.',[[['star','heart','star','heart','star'],'heart'],[['circle','square','circle','square','circle'],'square'],[['tri','star','tri','star','tri'],'star']]),
+   CH('B. Which colour comes next? Circle.',[['red, blue, red, blue, ...',['red','green'],0],['yellow, green, yellow, ...',['green','blue'],0]]),
+   F('C. Say it and finish it.',['clap, clap, clap, {{clap}}','1, 2, 1, 2, {{1}}'],2),
+   CO('D. Colour: blue, red, blue, red.',[['square','blue'],['square','red'],['square','blue'],['square','red']])),
+  pg('Patterns Challenge ★★★','A grown-up reads each question. Think carefully.','Find the rule in harder patterns and number patterns.',
+   PT('A. What comes next? Draw it.',[[['circle','star','heart','circle','star'],'heart'],[['square','square','tri','tri','square'],'square']]),
+   CH('B. True or false? Circle.',[['In 2, 4, 6, 8 the next number is 10.',0],['In red, blue, red, blue the next colour is blue.',1],['In 10, 20, 30 the next number is 40.',0]],TF),
+   BX('C. Find the rule. Fill in.',['5|10|15|{{20}}|{{25}}','20|19|18|{{17}}|{{16}}','1|3|5|{{7}}|{{9}}']),
+   F('D. Spot the mistake. Circle the wrong one and write the right one.',['circle, star, circle, star, star → the last one should be {{circle}}','2, 4, 6, 7, 10 → 7 should be {{8}}'],1)),
+  pg('Topic Test: Patterns (1)','A grown-up reads each question and marks it out of 20.','Check shape and number patterns.',
+   SC(20,10,16),
+   PT('1. What comes next? Draw it. (4 marks)',[[['heart','circle','heart','circle','heart'],'circle'],[['star','star','square','star','star'],'square'],[['tri','circle','tri','circle','tri'],'circle'],[['square','heart','heart','square','heart'],'heart']]),
+   BX('2. Number patterns. (6 marks)',['2|4|6|{{8}}|{{10}}','10|20|30|{{40}}|{{50}}','5|10|15|{{20}}|{{25}}']),
+   NO('Tip: say each pattern out loud before you write. Listen for the part that repeats.')),
+  pg('Topic Test: Patterns (2)','Add up your marks from both pages.','Check colour, action and number patterns.',
+   CH('3. Which colour comes next? Circle. (3 marks)',[['red, yellow, red, yellow, ...',['red','yellow'],0],['blue, blue, green, blue, blue, ...',['blue','green'],1],['white, black, white, black, ...',['white','black'],0]]),
+   F('4. What comes next? (3 marks)',['1, 2, 1, 2, 1, {{2}}','clap, stamp, clap, stamp, {{clap}}','3, 4, 5, 6, {{7}}'],1),
+   CH('5. True or false? Circle. (2 marks)',[['In 1, 2, 3, 4 the next number is 5.',0],['In star, moon, star, moon the next is moon.',1]],TF),
+   DR('6. Make your own pattern with two shapes. (2 marks)',90),
+   HOW),
+  pg('Word Mat: Patterns','Keep this mat on the table. Say each pattern out loud.','Know what a pattern is and how to find what comes next.',
+   NO('<b>A pattern repeats.</b> Find the part that repeats, then say it again and again.'),
+   PT('Shape pattern: circle, star, circle, star …',[[['circle','star','circle','star','circle'],'star']]),
+   NO('<b>Number patterns</b><br><span style="font-size:20px">count in 2s: 2, 4, 6, 8, 10 &nbsp; count in 5s: 5, 10, 15, 20, 25<br>count in 10s: 10, 20, 30, 40, 50</span>'),
+   NO('<b>Maths words</b><br><b>pattern</b>: things in an order that repeats · <b>repeat</b>: do it again<br><b>next</b>: what comes after · <b>rule</b>: how the pattern works'),
+   BK(['pattern','repeat','next','rule','colour','shape','count in 2s']),
+   CH('Which comes next?',[['clap, stamp, clap, stamp, ...',['clap','stamp'],0],['1, 2, 1, 2, ...',['1','2'],0]]),
+   DR('Draw a pattern on a bead necklace.',100))]);
+
+ /* ---- Topic 4: Adding to 10 ---- */
+ mo(10,'Add the Shapes',
+  PSUM('B. Count the shapes. Add.',[[3,2,'star'],[4,3,'circle'],[5,4,'heart'],[6,2,'square']]),
+  F('C. Add.',['1 + 1 = {{2}}','3 + 3 = {{6}}','5 + 5 = {{10}}','2 + 7 = {{9}}'],4),
+  WP('D. A grown-up reads. Write the answer.',['Ali has 2 red cars and 3 blue cars. How many cars? {{5}}','Zara has 4 bangles and 4 more. How many bangles? {{8}}']));
+ mo(11,'Story Sums',
+  FP('B. Look and add.',[['red-apple','3 apples and 4 apples make {{7}} apples.'],['balloon','5 balloons and 2 more make {{7}} balloons.'],['duck','6 ducks and 3 ducks make {{9}} ducks.'],['kite','4 kites and 4 kites make {{8}} kites.']]),
+  PSUM('C. Count the shapes. Add.',[[2,5,'heart'],[7,1,'star'],[3,6,'circle']]),
+  F('D. Add.',['4 + 2 = {{6}}','5 + 3 = {{8}}','1 + 9 = {{10}}'],3));
+ mo(12,'Make 10',
+  NO('<b>A. Fill in the missing number to make 10.</b>'),
+  BOND([[10,6,4,2],[10,3,7,1],[10,8,2,2],[10,5,5,1]]),
+  CH('B. Circle the pair that makes 10.',[['',['6 and 4','6 and 3'],0],['',['8 and 1','8 and 2'],1],['',['9 and 1','9 and 2'],0]]),
+  WP('C. Word problems.',['There are 10 eggs in a tray. 7 are white. {{3}} are brown.','Sara has 4 pencils. How many more to make 10? {{6}}']));
+ addPages(S,'Adding to 10',[
+  pg('Adding to 10 Warm-up ★','Start here if adding is new. Count all the shapes, one by one.','Add two small groups by counting all.',
+   PSUM('A. Count the shapes. Add.',[[1,2,'star'],[2,2,'heart'],[3,1,'circle'],[2,3,'square']]),
+   FP('B. Look and add.',[['mango','2 mangoes and 1 mango make {{3}}.'],['egg','3 eggs and 2 eggs make {{5}}.']]),
+   F('C. Add. Use your fingers.',['1 + 2 = {{3}}','2 + 2 = {{4}}','4 + 1 = {{5}}','3 + 2 = {{5}}'],4),
+   WP('D. A grown-up reads. Write the answer.',['Ali has 2 kites. He gets 2 more. Now he has {{4}} kites.','There are 3 ducks and 1 more comes. Now there are {{4}} ducks.']),
+   DR('E. Draw 2 apples and 3 apples. How many in all?',90)),
+  pg('Adding to 10 Challenge ★★★','A grown-up reads each question. Think carefully.','Add within 10, find missing numbers and spot mistakes.',
+   CH('A. True or false? Circle.',[['4 + 3 = 7',0],['5 + 4 = 8',1],['6 + 4 = 10',0],['2 + 5 = 9',1]],TF),
+   F('B. Find the missing number.',['3 + {{4}} = 7','{{5}} + 4 = 9','6 + {{2}} = 8','{{1}} + 9 = 10'],2),
+   F('C. Spot the mistake. Write the right answer.',['Ali says 6 + 3 = 8. It is {{9}}.','Sara says 7 + 2 = 10. It is {{9}}.'],1),
+   F('D. Two ways to make 8.',['{{4}} + {{4}} = 8','{{5}} + {{3}} = 8'],2),
+   WP('E. Word problem.',['Hamza has 3 kites. Bilal has 2 more than Hamza. How many kites do they have in all? {{8}}'])),
+  pg('Topic Test: Adding to 10 (1)','A grown-up reads each question and marks it out of 24.','Check adding two groups within 10.',
+   SC(24,12,19),
+   PSUM('1. Count the shapes. Add. (4 marks)',[[3,3,'star'],[4,2,'heart'],[5,3,'circle'],[6,4,'square']]),
+   F('2. Add. (6 marks)',['2 + 3 = {{5}}','4 + 4 = {{8}}','6 + 1 = {{7}}','5 + 4 = {{9}}','3 + 7 = {{10}}','2 + 6 = {{8}}'],3),
+   NO('<b>3. Fill in the missing number. (3 marks)</b>'),
+   BOND([[10,4,6,2],[10,9,1,1],[10,2,8,2]])),
+  pg('Topic Test: Adding to 10 (2)','Add up your marks from both pages.','Check making 10 and adding stories.',
+   F('4. Make 10. (4 marks)',['9 + {{1}} = 10','7 + {{3}} = 10','5 + {{5}} = 10','4 + {{6}} = 10'],4),
+   WP('5. Word problems. (4 marks)',['Ammi has 4 eggs. She buys 3 more. Now she has {{7}} eggs.','There are 5 birds. 5 more come. Now there are {{10}} birds.','Ali has 6 marbles and 2 more. He has {{8}} marbles.','2 ducks and 7 ducks make {{9}} ducks.']),
+   CH('6. Circle the pair that makes 10. (3 marks)',[['',['3 and 7','3 and 6'],0],['',['5 and 4','5 and 5'],1],['',['2 and 8','2 and 7'],0]]),
+   NO('Tip: check each answer by counting on from the bigger number.'),
+   HOW),
+  pg('Word Mat: Adding to 10','Keep this mat on the table. Use it when you add.','Know the words add, plus, equals, make and the pairs that make 10.',
+   CN(['red-apple','red-apple','red-apple','mango','mango'],'3 apples and 2 mangoes make 5 fruits. 3 + 2 = 5.','Adding'),
+   NO('<b>Pairs that make 10</b><br><span style="font-size:20px">0 + 10 &nbsp; 1 + 9 &nbsp; 2 + 8 &nbsp; 3 + 7 &nbsp; 4 + 6 &nbsp; 5 + 5</span>'),
+   {t:'numline'},
+   NO('<b>Maths words</b><br><b>add</b>: put together · <b>plus</b> (+): and · <b>equals</b> (=): makes<br><b>in all</b> or <b>altogether</b>: how many when we put them together<br><b>count on</b>: start at the bigger number and count up'),
+   BK(['add','plus','equals','make','in all','count on','total']),
+   PSUM('Count with me.',[[4,3,'star']]),
+   DR('Draw your own adding picture.',100))]);
+});

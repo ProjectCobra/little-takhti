@@ -577,7 +577,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| Mesopotamia | g3-history-t1 | song (flow 6c0ae148-08bc-40c0-8bd4-41affedfe57e) |  |  |  |  |
+| Mesopotamia | g3-history-t1 | rendered (flow 6c0ae148-08bc-40c0-8bd4-41affedfe57e, mesopotamia setting; rendered 26 Nov) |  |  |  |  |
 | Ancient China | g3-history-t2 | todo |  |  |  |  |
 | Gandhara | g3-history-t3 | todo |  |  |  |  |
 | Allama Iqbal | g3-history-t4 | todo |  |  |  |  |

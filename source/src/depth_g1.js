@@ -640,3 +640,184 @@ DEPTH.push(()=>{
  M(S,T,'گنتی ایک تا پانچ',CH('صحیح گنتی پر دائرہ لگائیں۔',[['۳',['تین','چار'],0],['۵',['دو','پانچ'],1]]));
  M(S,T,'کتنے ہیں؟',CH('کون سا زیادہ ہے؟',[['',['تین','پانچ'],1],['',['چار','دو'],0]]));
 });
+
+/* P3: Grade 1 Term 2 Practice Papers, matched to the LGS December syllabus (references/lgs-grade1-december-2026.md).
+   4 pages each, marks on every question, score and star bands on page 1. Original questions only. */
+DEPTH.push(({addPaper})=>{
+ const SC=n=>NO(`Score: ______ / ${n}<br>★ 0 to ${Math.floor(n/2)-1} keep practising &nbsp; ★★ ${Math.floor(n/2)} to ${Math.round(n*0.78)-1} good work &nbsp; ★★★ ${Math.round(n*0.78)} to ${n} super!`);
+ const UD=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+ const SCU=n=>NO(`نمبر: ______ / ${UD(n)}<br>★ ۰ سے ${UD(Math.floor(n/2)-1)}: اور مشق کریں &nbsp; ★★ ${UD(Math.floor(n/2))} سے ${UD(Math.round(n*0.78)-1)}: اچھا کام &nbsp; ★★★ ${UD(Math.round(n*0.78))} سے ${UD(n)}: شاباش!`);
+ const HOW=['How did I do? Write one thing you can do now.',['I can ______________________________.']];
+ const ASK='Answer every question. A grown-up can read the questions aloud. Mark it out of ';
+
+ addPaper('maths',[
+  pg('Maths Practice Paper (1)',ASK+'77.','Practise counting, comparing and number names for the December test.',
+   SC(77),
+   BX('1. Count on and count back. Fill in the missing numbers. (6 marks)',['13|14|{{15}}|16|{{17}}|18','20|19|{{18}}|17|{{16}}|15','{{9}}|10|11|{{12}}|13|14']),
+   F('2. Write >, < or =. (4 marks)',['14 {{>}} 11','9 {{<}} 16','18 {{=}} 18','12 {{<}} 20'],4),
+   MA('3. Match the number to its name. Write the letter in the box. (4 marks)',['17','39','44','31'],['seventeen','thirty-nine','forty-four','thirty-one']),
+   F('4. Write the number in words. (3 marks)',['15 = {{fifteen}}','28 = {{twenty-eight}}','46 = {{forty-six}}'],3),
+   F('5. Write the number. (3 marks)',['nineteen = {{19}}','thirty-five = {{35}}','forty-two = {{42}}'],3)),
+  pg('Maths Practice Paper (2)','Add and take away within 20. Use counting on, counting back and making 10.','Practise adding, taking away and fact families within 20.',
+   F('6. Order from smallest to biggest. (2 marks)',['15, 9, 19, 12 → {{9, 12, 15, 19}}','18, 20, 11, 14 → {{11, 14, 18, 20}}'],1),
+   CN(['hand-with-fingers-splayed','hand-with-fingers-splayed'],'Making 10: for 8 + 5, take 2 from the 5 to make 10. Then 10 + 3 = 13.','Make 10 first'),
+   F('7. Add by counting on. (4 marks)',['12 + 3 = {{15}}','15 + 4 = {{19}}','11 + 6 = {{17}}','13 + 5 = {{18}}'],4),
+   F('8. Add by making 10. (4 marks)',['9 + 4 = {{13}}','8 + 6 = {{14}}','7 + 5 = {{12}}','9 + 8 = {{17}}'],4),
+   F('9. Take away by counting back. (4 marks)',['17 - 3 = {{14}}','19 - 5 = {{14}}','15 - 4 = {{11}}','20 - 6 = {{14}}'],4),
+   F('10. Take away from 10. (3 marks)',['10 - 4 = {{6}}','10 - 7 = {{3}}','10 - 9 = {{1}}'],3),
+   F('11. Complete the fact family for 6, 8 and 14. (4 marks)',['6 + 8 = {{14}}','8 + 6 = {{14}}','14 - 6 = {{8}}','14 - 8 = {{6}}'],4)),
+  pg('Maths Practice Paper (3)','Numbers to 100. Think about tens and ones.','Practise tens and ones, number patterns, comparing and ordering to 100.',
+   F('12. Tens and ones. (4 marks)',['5 tens and 3 ones = {{53}}','7 tens and 0 ones = {{70}}','86 = {{8}} tens and 6 ones','49 = 4 tens and {{9}} ones'],2),
+   BX('13. Count in ones and tens. (4 marks)',['34|35|{{36}}|37|{{38}}|39','45|55|{{65}}|75|{{85}}']),
+   F('14. Continue the pattern. (4 marks)',['2, 4, 6, {{8}}, {{10}}','5, 10, 15, {{20}}, {{25}}'],2),
+   WP('15. Compare by taking away. (3 marks)',['Ali has 18 marbles. Sara has 12. Ali has {{6}} more marbles than Sara.','A red ribbon is 15 cm long. A blue ribbon is 9 cm long. The red ribbon is {{6}} cm longer.','Class A has 30 children. Class B has 27. Class B has {{3}} fewer children.']),
+   F('16. Order from biggest to smallest. (2 marks)',['64, 46, 82, 28 → {{82, 64, 46, 28}}','57, 75, 70, 50 → {{75, 70, 57, 50}}'],1),
+   F('17. Write the smaller number. (3 marks)',['67 or 76 → {{67}}','90 or 89 → {{89}}','41 or 14 → {{14}}'],3)),
+  pg('Maths Practice Paper (4)','Times tables and picture problems. Add up your marks from all four pages.','Practise the 2 and 3 times tables and picture problems.',
+   F('18. Times tables of 2 and 3. (6 marks)',['3 × 2 = {{6}}','5 × 2 = {{10}}','9 × 2 = {{18}}','4 × 3 = {{12}}','6 × 3 = {{18}}','10 × 3 = {{30}}'],3),
+   BX('19. Count in threes. (3 marks)',['3|6|{{9}}|12|{{15}}|18|{{21}}']),
+   FP('20. Look and write the answer. (3 marks)',[['bicycle','4 bikes, 2 wheels each: {{8}} wheels'],['hand-with-fingers-splayed','2 hands, 5 fingers each: {{10}} fingers'],['honeybee','3 groups of 3 bees: {{9}} bees']],3),
+   WP('21. Picture problems. (4 marks)',['There are 5 bicycles. Each has 2 wheels. There are {{10}} wheels.','3 children each have 3 balloons. They have {{9}} balloons in all.','Hira has 9 stickers. She gets 6 more. Now she has {{15}} stickers.','There were 16 birds on a tree. 7 flew away. {{9}} birds are left.']),
+   WR(...HOW))]);
+
+ addPaper('g1-english',[
+  pg('English Practice Paper (1)',ASK+'54.','Practise reading a story and answering questions.',
+   SC(54),
+   PA('The Lost Lunch Box\nSana goes to school on a big yellow bus. She has a new blue lunch box. In class, she reads a book and paints a duck.\nAt lunch time, her lunch box is not in her bag! Sana looks under her desk. She looks in the art room. At last, she finds it next to the paint pots. "Silly me!" she says, and she eats her lunch with a big smile.'),
+   CH('1. Circle the right answer. (4 marks)',[['How does Sana go to school?',['by car','by bus'],1],['What colour is the lunch box?',['blue','red'],0],['What does Sana paint?',['a dog','a duck'],1],['Where does she find the lunch box?',['next to the paint pots','under her desk'],0]]),
+   CH('2. True or false? Circle. (3 marks)',[['The bus is yellow.',0],['Sana reads a book in class.',0],['Sana is sad at the end.',1]],TF)),
+
+  pg('English Practice Paper (2)','A statement tells. A question asks.','Practise statements, questions and capital letters.',
+   CN(['speech-balloon','red-question-mark'],'A statement tells us something and ends with a full stop (.). A question asks something and ends with a question mark (?).','Statements and questions'),
+   CH('3. Statement or question? Circle. (4 marks)',[['Where is my pencil',1],['The sun is hot',0],['Can you swim',1],['I like mangoes',0]],['statement','question']),
+   F('4. Add a full stop (.) or a question mark (?). (4 marks)',['What is your name{{?}}','My cat is black{{.}}','Do you like rice{{?}}','We go to school by bus{{.}}'],2),
+   F('5. Turn the statement into a question. (2 marks)',['It is cold. → {{Is it cold?}}','Ali is tall. → {{Is Ali tall?}}'],2),
+   F('6. Write each sentence again with capital letters. (4 marks)',['my book is red. → {{My book is red.}}','i can run fast. → {{I can run fast.}}','we live in karachi. → {{We live in Karachi.}}','the shop opens on monday. → {{The shop opens on Monday.}}'],1)),
+  pg('English Practice Paper (3)','Names start with a capital letter. A verb is a doing word.','Practise names, initials and verbs.',
+   F('7. Write the initials. (4 marks)',['Sana Malik → {{S. M.}}','Umar Farooq → {{U. F.}}','Ayaan Raza → {{A. R.}}','Hiba Qureshi → {{H. Q.}}'],2),
+   CH('8. Circle the word that should start with a capital letter. (3 marks)',[['',['river','ravi'],1],['',['zara','girl'],0],['',['month','june'],1]]),
+   F('9. Write these names correctly. (3 marks)',['ali → {{Ali}}','pakistan → {{Pakistan}}','friday → {{Friday}}'],3),
+   CH('10. Circle the verb. (4 marks)',[['The dog runs.',['dog','runs'],1],['Sara reads a book.',['reads','book'],0],['Birds fly high.',['Birds','fly'],1],['I eat an apple.',['eat','apple'],0]]),
+   BK(['swims','barks','sings','kicks']),
+   F('11. Fill in the verb. (4 marks)',['A fish {{swims}} in the pond.','The dog {{barks}} at night.','The bird {{sings}} in the tree.','Bilal {{kicks}} the ball.'],2)),
+  pg('English Practice Paper (4)','Listen for the last sound. Add up your marks from all four pages.','Practise ending sounds m, d, n and t, and creative writing.',
+   BK(['m','d','n','t']),
+   FP('12. Write the last sound. (6 marks)',[['bed','be{{d}}'],['drum','dru{{m}}'],['pen','pe{{n}}'],['cat','ca{{t}}'],['bread','brea{{d}}'],['sun','su{{n}}']],3),
+   CH('13. Circle the word with the right ending. (3 marks)',[['ends in m',['had','ham','hat'],1],['ends in n',['tent','ted','ten'],2],['ends in d',['red','ram','rat'],0]]),
+   CN(['kite','sun','national-park'],'Look at the pictures. A child is flying a kite in the park on a sunny day.','Picture prompt'),
+   WR('14. Write three sentences about the picture prompt. Use capital letters and full stops. (6 marks)',['______________________________________________________','______________________________________________________','______________________________________________________']))]);
+
+ addPaper('g1-urdu',[
+  pg('امتحانی پرچہ (۱)|Practice paper 1','ہر سوال کریں۔ بڑے سوال پڑھ کر سنا سکتے ہیں۔ ۴۶ میں سے نمبر دیں۔','Practise breaking and joining heavy sounds for the December test.',
+   SCU(46),
+   CN(['open-book','writing-hand'],'بھاری آواز کے لیے حرف کے ساتھ دو چشمی ھ لگاتے ہیں: ب + ھ = بھ ، چ + ھ = چھ ، ت + ھ = تھ','دو چشمی ھ'),
+   F('۱۔ توڑ کر لکھیں۔ (۶ نمبر)',['بھا = {{ب + ھ + ا}}','چھو = {{چ + ھ + و}}','تھی = {{ت + ھ + ی}}','جھے = {{ج + ھ + ے}}','پھا = {{پ + ھ + ا}}','ٹھو = {{ٹ + ھ + و}}'],2,1),
+   F('۲۔ جوڑ کر لکھیں۔ (۶ نمبر)',['پ + ھ + ی = {{پھی}}','ٹ + ھ + ا = {{ٹھا}}','ب + ھ + و = {{بھو}}','چ + ھ + ے = {{چھے}}','ج + ھ + ا = {{جھا}}','ت + ھ + و = {{تھو}}'],2,1)),
+  pg('امتحانی پرچہ (۲)|Practice paper 2','ھ کو ا، و، ی اور ے سے ملائیں۔','Practise joining ھ with ا و ی ے.',
+   MA('۳۔ ملائیں۔ خانے میں حرف لکھیں۔ (۴ نمبر)',['بھ + ا','چھ + و','تھ + ی','جھ + ے'],['بھا','چھو','تھی','جھے']),
+   CH('۴۔ صحیح جوڑ پر دائرہ لگائیں۔ (۴ نمبر)',[['ک + ھ + ا',['کھا','کہا'],0],['گ + ھ + ی',['گہی','گھی'],1],['د + ھ + و',['دھو','دہو'],0],['پ + ھ + ے',['پہے','پھے'],1]]),
+   CH('۵۔ بھاری لفظ پر دائرہ لگائیں۔ (۳ نمبر)',[['',['گھر','گر'],0],['',['کتا','کھانا'],1],['',['دودھ','دود'],0]])),
+  pg('امتحانی پرچہ (۳)|Practice paper 3','تصویر دیکھیں اور بھاری لفظ لکھیں۔','Practise writing heavy words from pictures.',
+   BK(['ہاتھی','ڈھول','بھالو','ہاتھ','جھاگ','گھوڑا','گھڑی','پھول']),
+   FP('۶۔ تصویر دیکھ کر نام لکھیں۔ (۸ نمبر)',[['elephant','{{ہاتھی}}'],['drum','{{ڈھول}}'],['bear','{{بھالو}}'],['raised-hand','{{ہاتھ}}'],['bubbles','{{جھاگ}}'],['horse','{{گھوڑا}}'],['alarm-clock','{{گھڑی}}'],['tulip','{{پھول}}']],3),
+   CH('۷۔ بھاری لفظ ہے یا نہیں؟ بھاری لفظ میں رنگ بھریں۔ (۴ نمبر)',[['مچھلی',0],['کتاب',1],['بھائی',0],['قلم',1]],['بھاری','بھاری نہیں'])),
+  pg('امتحانی پرچہ (۴)|Practice paper 4','گنتی ایک سے پانچ تک۔ چاروں صفحوں کے نمبر جمع کریں۔','Practise counting from one to five in Urdu.',
+   F('۸۔ گنتی لفظوں میں لکھیں۔ (۵ نمبر)',['۱ = {{ایک}}','۲ = {{دو}}','۳ = {{تین}}','۴ = {{چار}}','۵ = {{پانچ}}'],5,1),
+   F('۹۔ خالی جگہ پر گنتی لکھیں۔ (۴ نمبر)',['ایک، {{دو}}، تین، {{چار}}، پانچ','پانچ، {{چار}}، تین، {{دو}}، ایک'],1,1),
+   WR('۱۰۔ دو بھاری لفظوں سے ایک جملہ بنائیں۔ (۲ نمبر)',['____________________________________']),
+   WR('میں نے کیسا کیا؟ ایک بات لکھیں جو اب مجھے آتی ہے۔',['مجھے ______________ آتا ہے۔']))]);
+
+ addPaper('science',[
+  pg('Science Practice Paper (1)',ASK+'43.','Practise groups of living things for the December test.',
+   SC(43),
+   CN(['cow','eagle','fish','snake','frog','ant'],'Plants and animals are living things. Animal groups: mammals, birds, fish, reptiles, amphibians, insects.','Groups of living things'),
+   CP('1. Living or non-living? Circle. (4 marks)',[['cat','a cat',0],['rock','a rock',1],['sunflower','a sunflower',0],['pencil','a pencil',1]],['living','non-living']),
+   MA('2. Match the animal to its group. Write the letter in the box. (6 marks)',['cow','parrot','shark','lizard','frog','bee'],['mammal','bird','fish','reptile','amphibian','insect'])),
+
+  pg('Science Practice Paper (2)','Name the parts of a plant.','Practise the parts of a plant.',
+   CN(['potted-plant','sunflower'],'A plant has roots, a stem, leaves and flowers. Many also make fruit and seeds.','Parts of a plant'),
+   BK(['roots','stem','leaves','flower','seeds']),
+   F('3. Fill in the part. (5 marks)',['The {{roots}} take in water from the soil.','The {{stem}} holds the plant up.','The {{leaves}} make food using sunlight.','The {{flower}} makes seeds.','New plants grow from {{seeds}}.'],1),
+   CP('4. Which part do we eat? Circle. (4 marks)',[['carrot','carrot',0],['leafy-green','spinach',1],['broccoli','broccoli',2],['red-apple','apple',3]],['root','leaf','flower','fruit']),
+   CH('5. True or false? Circle. (2 marks)',[['The stem carries water up the plant.',0],['Roots grow up in the air.',1]],TF)),
+  pg('Science Practice Paper (3)','How does a seed grow?','Practise how plants grow and what they need.',
+   BK(['seed','shoot','leaves','flower']),
+   CY('6. How a plant grows. Fill in the missing words. (4 marks)',[['droplet','Plant the {{seed}} and water it'],['seedling','A tiny {{shoot}} comes up'],['potted-plant','It grows more {{leaves}}'],['sunflower','It grows a {{flower}}']]),
+   CP('7. Does a plant need it to grow? Circle. (4 marks)',[['droplet','water',0],['sun','sunlight',0],['candy','sweets',1],['television','a TV',1]],['needs','does not need']),
+   CH('8. Circle the right answer. (2 marks)',[['A plant kept in a dark cupboard will ...',['grow well','turn yellow and weak'],1],['A plant with no water will ...',['wilt','grow faster'],0]])),
+
+  pg('Science Practice Paper (4)','Animals grow and change. Add up your marks from all four pages.','Practise how animals grow.',
+   BK(['egg','caterpillar','pupa']),
+   CY('9. The life cycle of a butterfly. Fill in. (3 marks)',[['egg','{{egg}}'],['bug','{{caterpillar}}'],['leaf-fluttering-in-wind','{{pupa}}'],['butterfly','butterfly']],true),
+   MA('10. Match the animal to its young one. Write the letter in the box. (4 marks)',['cat','dog','hen','cow'],['kitten','puppy','chick','calf']),
+   CH('11. True or false? Circle. (3 marks)',[['A chick hatches from an egg.',0],['A tadpole grows into a frog.',0],['A baby always looks just like its parent.',1]],TF),
+   WR('12. Write one way you have changed since you were a baby. (2 marks)',['______________________________________________________']))]);
+
+ addPaper('social',[
+  pg('Social Studies Practice Paper (1)',ASK+'42.','Practise our neighbourhood for the December test.',
+   SC(42),
+   CN(['house','school','hospital','convenience-store','national-park','mosque'],'A neighbourhood is the area around our home, with places we use.','Neighbourhood'),
+   CH('1. Where do we go? Circle. (4 marks)',[['To buy bread, we go to the ...',['bakery','hospital'],0],['When we are ill, we go to the ...',['park','hospital'],1],['To post a letter, we go to the ...',['post office','school'],0],['To play on the swings, we go to the ...',['shop','park'],1]]),
+   MA('2. Match the helper to the job. Write the letter in the box. (4 marks)',['doctor','postman','firefighter','police officer'],['looks after sick people','brings letters','puts out fires','keeps us safe on the roads']),
+   CH('3. True or false? Circle. (2 marks)',[['Good neighbours help each other.',0],['We should throw litter in the street.',1]],TF)),
+  pg('Social Studies Practice Paper (2)','Think about your school: the people, the places and the rules.','Practise learning about school.',
+   CH('4. Who is it? Circle. (4 marks)',[['Who teaches us?',['teacher','driver'],0],['Who looks after the school gate?',['cook','guard'],1],['Who is in charge of the school?',['principal','gardener'],0],['Who keeps the school clean?',['pilot','cleaner'],1]]),
+   MA('5. Match the place to what we do there. Write the letter in the box. (4 marks)',['library','playground','classroom','canteen'],['read books','play games','learn lessons','buy food']),
+   CP('6. Good or not good? Circle. (4 marks)',[['person-running','running in the corridor',1],['raised-hand','putting up my hand to speak',0],['litter-in-bin-sign','putting litter in the bin',0],['pouting-face','shouting in class',1]],['good','not good']),
+   WR('7. Write two things you like about your school. (2 marks)',['1. __________________   2. __________________'])),
+  pg('Social Studies Practice Paper (3)','Look at the map carefully. North is at the top.','Practise reading a map with directions.',
+   CN(['world-map','compass'],'A map is a drawing of a place seen from above. A key tells us what the symbols mean. N, S, E and W stand for north, south, east and west.','Maps'),
+   {t:"map",rows:["bread:Bakery|mosque:Mosque|national-park:Park","school:School|house:My house|hospital:Hospital","convenience-store:Shop|fire-engine:Fire station|post-office:Post office"]},
+   CH('8. Use the map. Circle. (5 marks)',[['What is north of My house?',['Mosque','Shop'],0],['What is south of My house?',['Bakery','Fire station'],1],['What is east of My house?',['Hospital','School'],0],['What is west of My house?',['Park','School'],1],['What is in the top right corner?',['Park','Shop'],0]])),
+
+  pg('Social Studies Practice Paper (4)','Think about maps, then draw your own. Add up your marks from all four pages.','Practise maps and our neighbourhood.',
+   BK(['above','key','north']),
+   F('9. Fill in. (3 marks)',['A map shows a place from {{above}}.','The {{key}} tells us what the symbols mean.','N stands for {{north}}.'],1),
+   CH('10. True or false? Circle. (4 marks)',[['A map can show roads and buildings.',0],['North is at the top of most maps.',0],['A map key tells us the time.',1],['A compass helps us find directions.',0]],TF),
+   DR('11. Draw a map of your classroom. Add a key with three symbols. (4 marks)',130),
+   WR('12. Write the names of two places near your home. (2 marks)',['1. ____________________   2. ____________________']))]);
+
+ addPaper('g1-computer',[
+  pg('ICT Practice Paper (1)',ASK+'40.','Practise the keyboard and typing my name.',
+   SC(40),
+   MA('1. Match the key to its job. Write the letter in the box. (4 marks)',['Shift','Space bar','Backspace','Enter'],['makes a capital letter','makes a gap','deletes a letter','starts a new line']),
+   CY('2. Steps to type my name. Fill in. (3 marks)',[['keyboard','Hold {{Shift}} and press the first letter'],['input-latin-letters','Type the other {{letters}}'],['keyboard','Press the {{Space bar}}'],['desktop-computer','Type your surname']]),
+   CH('3. Sit well at the computer. Circle. (3 marks)',[['Sit with your back ...',['straight','bent'],0],['Keep your eyes ... from the screen.',['very close','an arm away'],1],['Put your feet ...',['flat on the floor','up on the chair'],0]])),
+  pg('ICT Practice Paper (2)','Think about using a tablet and its apps.','Practise touch moves, apps and caring for a tablet.',
+   CN(['mobile-phone','hand-with-fingers-splayed'],'We use a tablet by touching the screen. An app is a program on the tablet, like the camera or a drawing app.','Tablets'),
+   CH('4. Which touch move is it? Circle. (4 marks)',[['Touch the screen once, quickly.',['swipe','tap'],1],['Slide your finger across the screen.',['swipe','tap'],0],['Move two fingers apart to make it bigger.',['tap','pinch out'],1],['Keep your finger down on an icon.',['press and hold','swipe'],0]]),
+   CH('5. Which app do I open? Circle. (3 marks)',[['To take a photo, open the ...',['camera app','calculator app'],0],['To draw a picture, open the ...',['music app','drawing app'],1],['To do sums, open the ...',['calculator app','camera app'],0]]),
+   CH('6. True or false? Circle. (4 marks)',[['Charge the tablet when the battery is low.',0],['Eat and drink over the tablet.',1],['Hold the tablet with two hands.',0],['Wash the tablet in water.',1]],TF)),
+  pg('ICT Practice Paper (3)','Pictures and sounds go in and come out of a computer. Stay safe online.','Practise input and output devices and asking a grown-up online.',
+   CP('7. In or out? Circle. (4 marks)',[['microphone','microphone',0],['speaker-high-volume','speaker',1],['camera','camera',0],['printer','printer',1]],['in (input)','out (output)']),
+   MA('8. Match the device to its job. Write the letter in the box. (3 marks)',['headphones','microphone','printer'],['to hear sounds','to record my voice','to print a picture on paper']),
+   CH('9. What should I do? Circle. (4 marks)',[['A pop-up says I won a prize.',['click it','ask a grown-up'],1],['Someone online asks for my address.',['tell them','stop and ask a grown-up'],1],['I see something that scares me.',['tell a grown-up','keep it secret'],0],['A game asks for my password.',['ask a grown-up','type it in'],0]]),
+   CH('10. Private or OK to share? Circle. (2 marks)',[['my home address',0],['my favourite colour',1]],['private','OK to share'])),
+  pg('ICT Practice Paper (4)','Follow the arrows. Add up all your marks.','Practise coding with arrows and finding bugs.',
+   {t:"map",rows:["robot:Start|leaf-fluttering-in-wind:Grass|red-apple:Apple","leaf-fluttering-in-wind:Grass|rock:Rock|leaf-fluttering-in-wind:Grass","house:Home|leaf-fluttering-in-wind:Grass|battery:Battery"]},
+   CH('11. The robot starts at Start. Where does it stop? Circle. (4 marks)',[['→ →',['Apple','Rock'],0],['↓ ↓',['Battery','Home'],1],['→ ↓',['Rock','Grass'],0],['→ → ↓ ↓',['Home','Battery'],1]]),
+   F('12. Find the bug. The code to go from Start to Home should be ↓ ↓, but it is ↓ →. (2 marks)',['The bug is {{→}}. It should be {{↓}}.'],1),
+   WR(...HOW))]);
+
+ addPaper('g1-ai',[
+  pg('AI Practice Paper (1)',ASK+'43.','Practise how AI spots patterns in pictures.',
+   SC(43),
+   CH('1. Which clue helps? Circle. (3 marks)',[['A bird has ...',['four legs','wings'],1],['A cat has ...',['whiskers','feathers'],0],['A fish has ...',['fur','fins'],1]]),
+   BX('2. What comes next? (4 marks)',['circle|square|circle|square|{{circle}}','red|red|blue|red|red|{{blue}}','1|2|3|1|2|{{3}}','A|B|B|A|B|{{B}}']),
+   CP('3. Wings or no wings? Circle. (4 marks)',[['eagle','eagle',0],['dog','dog',1],['butterfly','butterfly',0],['fish','fish',1]],['wings','no wings'])),
+  pg('AI Practice Paper (2)','Robots need clear instructions, one step at a time.','Practise giving clear instructions in order.',
+   CN(['robot','right-arrow'],'A robot cannot guess. It needs clear instructions in the right order.','Instructions'),
+   CH('4. Clear or not clear? Circle. (4 marks)',[['Go forward 3 steps.',0],['Go somewhere.',1],['Turn right, then stop.',0],['Do the thing.',1]],['clear','not clear']),
+   F('5. Making a sandwich. Write 1, 2, 3 or 4 to put the steps in order. (4 marks)',['Put jam on the bread. {{2}}','Take two slices of bread. {{1}}','Eat the sandwich. {{4}}','Put the second slice on top. {{3}}'],2),
+   CH('6. Circle the right answer. (3 marks)',[['A robot needs ... instructions.',['silly','clear'],1],['If an instruction is wrong, the robot ...',['still follows it','fixes it by itself'],0],['Robots follow steps ...',['in any mix','in order'],1]])),
+  pg('AI Practice Paper (3)','Mistakes help us learn. AI can help animals too.','Practise learning from mistakes and how AI helps animals.',
+   BK(['Try','Check','Fix']),
+   CY('7. Try, check, fix. Fill in. (3 marks)',[['thinking-face','{{Try}} it'],['magnifying-glass-tilted-left','{{Check}} it'],['check-mark-button','{{Fix}} it']]),
+   CH('8. True or false? Circle. (4 marks)',[['AI can make mistakes.',0],['Mistakes help us learn.',0],['People can help AI fix its mistakes.',0],['AI is always right.',1]],TF),
+   CH('9. How does AI help animals? Circle. (4 marks)',[['A camera in the forest can count ...',['animals','clouds'],0],['A smart collar can show where a ... is.',['rock','cow'],1],['An app can listen to ... and name them.',['bird songs','cars'],0],['Who still looks after animals?',['only robots','people'],1]])),
+  pg('AI Practice Paper (4)','Rules keep us safe when we use AI. Add up your marks from all four pages.','Practise my AI rules.',
+   CH('10. Private or OK to share? Circle. (4 marks)',[['my full name and address',0],['my favourite animal',1],['my password',0],['the colour I like',1]],['private','OK to share']),
+   CH('11. What do I do? Circle. (3 marks)',[['AI gives an answer that looks wrong.',['believe it','check with a grown-up'],1],['I want to use an AI app.',['ask a grown-up first','use it alone'],0],['AI says something unkind.',['say it to a friend','tell a grown-up'],1]]),
+   WR('12. Write three rules for using AI safely. (3 marks)',['1. ______________________________________','2. ______________________________________','3. ______________________________________']),
+   WR(...HOW))]);
+});

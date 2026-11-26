@@ -8,7 +8,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 - 2026-11-24 | Grade 1 | Science | science-t12 Parts of a Plant | posted
 - 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | setting: playroom (toy blocks) | v2 song 8c739dd6 (learning time intro); verse 4 ends at "look at the tens" in this take, so the compare scene shows 5 tens beat 2 tens on screen
-- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | lyrics
+- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | song 6c0ae148
 
 ## Nursery
 
@@ -577,7 +577,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| Mesopotamia | g3-history-t1 | lyrics |  |  |  |  |
+| Mesopotamia | g3-history-t1 | song (flow 6c0ae148-08bc-40c0-8bd4-41affedfe57e) |  |  |  |  |
 | Ancient China | g3-history-t2 | todo |  |  |  |  |
 | Gandhara | g3-history-t3 | todo |  |  |  |  |
 | Allama Iqbal | g3-history-t4 | todo |  |  |  |  |

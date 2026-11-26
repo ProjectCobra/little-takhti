@@ -1225,88 +1225,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p85 0.30 Healthy habits and germs / Spread or Stop?
 - p86 0.43 Healthy habits and germs / My Healthy Week
 
-## nursery-maths (80 pages)
-- p1 0.31 Numbers 1 to 5 / Count and Circle
-- p2 0.61 Numbers 1 to 5 / Trace 1 to 5
-- p3 0.31 Numbers 1 to 5 / Count and Write
-- p4 0.36 Numbers 6 to 10 / Count and Circle
-- p5 0.61 Numbers 6 to 10 / Trace 6 to 10
-- p6 0.31 Numbers 6 to 10 / Count and Write
-- p7 0.43 Shapes / Colour the Shapes
-- p8 0.44 Shapes / Find the Shape
-- p9 0.36 Shapes / Trace the Shapes
-- p10 0.31 Numbers in order / Count and Write
-- p11 0.20 Numbers in order / What Comes Next?
-- p12 0.14 Numbers in order / Before and After
-- p13 0.36 Sorting and matching / More or Fewer?
-- p14 0.20 Sorting and matching / Same or Different?
-- p15 0.21 Sorting and matching / Sort by Colour
-- p16 0.30 Long, short, heavy, light / Long or Short?
-- p17 0.30 Long, short, heavy, light / Tall or Short?
-- p18 0.30 Long, short, heavy, light / Heavy or Light?
-- p19 0.14 One more, one less / One More
-- p20 0.14 One more, one less / One Less
-- p21 0.20 One more, one less / Count the Stars
-- p22 0.22 Simple patterns / What Comes Next?
-- p23 0.15 Simple patterns / Colour Patterns
-- p24 0.30 Simple patterns / Make a Pattern
-- p25 0.25 First, next, last / Who Is First?
-- p26 0.15 First, next, last / In Order
-- p27 0.30 First, next, last / Draw the Line
-- p28 0.13 Counting back and zero / Rocket Countdown
-- p29 0.19 Counting back and zero / Zero Means None
-- p30 0.43 Counting back and zero / Count and Colour
-- p31 0.29 Numbers to 15 / After Ten
-- p32 0.27 Numbers to 15 / Count and Write
-- p33 0.37 Numbers to 15 / Write 11, 12, 13
-- p34 0.25 Numbers to 15 / Write 14 and 15
-- p35 0.27 Numbers to 15 / Missing Numbers
-- p36 0.35 Numbers to 15 / How Many?
-- p37 0.32 Numbers to 15 / Which Has More?
-- p38 0.21 Numbers to 15 / Ten and Some More
-- p39 0.35 Numbers to 15 / Number Stories
-- p40 0.50 Numbers to 15 / Draw 13
-- p41 0.41 Big and small, tall and short / Big and Small
-- p42 0.51 Big and small, tall and short / Small, Bigger, Biggest
-- p43 0.41 Big and small, tall and short / Tall and Short
-- p44 0.51 Big and small, tall and short / Short to Tall
-- p45 0.25 Big and small, tall and short / Which Is Bigger?
-- p46 0.26 Big and small, tall and short / Taller or Shorter?
-- p47 0.26 Big and small, tall and short / Big or Small?
-- p48 0.24 Big and small, tall and short / Size Pictures
-- p49 0.35 Big and small, tall and short / Size Stories
-- p50 0.55 Big and small, tall and short / Draw Big and Small
-- p51 0.38 Circles, squares and triangles around us / Three Shapes
-- p52 0.36 Circles, squares and triangles around us / Trace the Shapes
-- p53 0.37 Circles, squares and triangles around us / Shapes at Home
-- p54 0.35 Circles, squares and triangles around us / Sides and Corners
-- p55 0.43 Circles, squares and triangles around us / Colour the Shapes
-- p56 0.21 Circles, squares and triangles around us / Sort the Things
-- p57 0.20 Circles, squares and triangles around us / Count the Shapes
-- p58 0.20 Circles, squares and triangles around us / Which Shape?
-- p59 0.35 Circles, squares and triangles around us / Shape Stories
-- p60 0.52 Circles, squares and triangles around us / Shape House
-- p61 0.29 Adding with pictures / Putting Together
-- p62 0.39 Adding with pictures / Count and Add
-- p63 0.32 Adding with pictures / Fruit Sums
-- p64 0.25 Adding with pictures / Add One More
-- p65 0.21 Adding with pictures / Toy Sums
-- p66 0.20 Adding with pictures / Which Sum?
-- p67 0.46 Adding with pictures / Draw and Add
-- p68 0.32 Adding with pictures / Animal Stories
-- p69 0.25 Adding with pictures / Match the Sum
-- p70 0.42 Adding with pictures / My Adding Picture
-- p71 0.33 Counting to 20 with objects / Up to Twenty
-- p72 0.34 Counting to 20 with objects / Count and Write
-- p73 0.37 Counting to 20 with objects / Write 16, 17, 18
-- p74 0.25 Counting to 20 with objects / Write 19 and 20
-- p75 0.27 Counting to 20 with objects / Missing Numbers
-- p76 0.45 Counting to 20 with objects / How Many?
-- p77 0.38 Counting to 20 with objects / Ten and Some More
-- p78 0.19 Counting to 20 with objects / One More, One Less
-- p79 0.32 Counting to 20 with objects / Counting Stories
-- p80 0.42 Counting to 20 with objects / My Collection
-
 ## nursery-gk (80 pages)
 - p1 0.30 My body / My Five Senses
 - p2 0.14 My body / How Many?
@@ -2929,6 +2847,76 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p68 0.37 واحد اور جمع / صحیح لفظ چنیں
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
+
+## nursery-maths (68 pages)
+- p13 0.36 Sorting and matching / More or Fewer?
+- p14 0.20 Sorting and matching / Same or Different?
+- p15 0.21 Sorting and matching / Sort by Colour
+- p16 0.30 Long, short, heavy, light / Long or Short?
+- p17 0.30 Long, short, heavy, light / Tall or Short?
+- p18 0.30 Long, short, heavy, light / Heavy or Light?
+- p19 0.14 One more, one less / One More
+- p20 0.14 One more, one less / One Less
+- p21 0.20 One more, one less / Count the Stars
+- p22 0.22 Simple patterns / What Comes Next?
+- p23 0.15 Simple patterns / Colour Patterns
+- p24 0.30 Simple patterns / Make a Pattern
+- p25 0.25 First, next, last / Who Is First?
+- p26 0.15 First, next, last / In Order
+- p27 0.30 First, next, last / Draw the Line
+- p28 0.13 Counting back and zero / Rocket Countdown
+- p29 0.19 Counting back and zero / Zero Means None
+- p30 0.43 Counting back and zero / Count and Colour
+- p31 0.29 Numbers to 15 / After Ten
+- p32 0.27 Numbers to 15 / Count and Write
+- p33 0.37 Numbers to 15 / Write 11, 12, 13
+- p34 0.25 Numbers to 15 / Write 14 and 15
+- p35 0.27 Numbers to 15 / Missing Numbers
+- p36 0.35 Numbers to 15 / How Many?
+- p37 0.32 Numbers to 15 / Which Has More?
+- p38 0.21 Numbers to 15 / Ten and Some More
+- p39 0.35 Numbers to 15 / Number Stories
+- p40 0.50 Numbers to 15 / Draw 13
+- p41 0.41 Big and small, tall and short / Big and Small
+- p42 0.51 Big and small, tall and short / Small, Bigger, Biggest
+- p43 0.41 Big and small, tall and short / Tall and Short
+- p44 0.51 Big and small, tall and short / Short to Tall
+- p45 0.25 Big and small, tall and short / Which Is Bigger?
+- p46 0.26 Big and small, tall and short / Taller or Shorter?
+- p47 0.26 Big and small, tall and short / Big or Small?
+- p48 0.24 Big and small, tall and short / Size Pictures
+- p49 0.35 Big and small, tall and short / Size Stories
+- p50 0.55 Big and small, tall and short / Draw Big and Small
+- p51 0.38 Circles, squares and triangles around us / Three Shapes
+- p52 0.36 Circles, squares and triangles around us / Trace the Shapes
+- p53 0.37 Circles, squares and triangles around us / Shapes at Home
+- p54 0.35 Circles, squares and triangles around us / Sides and Corners
+- p55 0.43 Circles, squares and triangles around us / Colour the Shapes
+- p56 0.21 Circles, squares and triangles around us / Sort the Things
+- p57 0.20 Circles, squares and triangles around us / Count the Shapes
+- p58 0.20 Circles, squares and triangles around us / Which Shape?
+- p59 0.35 Circles, squares and triangles around us / Shape Stories
+- p60 0.52 Circles, squares and triangles around us / Shape House
+- p61 0.29 Adding with pictures / Putting Together
+- p62 0.39 Adding with pictures / Count and Add
+- p63 0.32 Adding with pictures / Fruit Sums
+- p64 0.25 Adding with pictures / Add One More
+- p65 0.21 Adding with pictures / Toy Sums
+- p66 0.20 Adding with pictures / Which Sum?
+- p67 0.46 Adding with pictures / Draw and Add
+- p68 0.32 Adding with pictures / Animal Stories
+- p69 0.25 Adding with pictures / Match the Sum
+- p70 0.42 Adding with pictures / My Adding Picture
+- p71 0.33 Counting to 20 with objects / Up to Twenty
+- p72 0.34 Counting to 20 with objects / Count and Write
+- p73 0.37 Counting to 20 with objects / Write 16, 17, 18
+- p74 0.25 Counting to 20 with objects / Write 19 and 20
+- p75 0.27 Counting to 20 with objects / Missing Numbers
+- p76 0.45 Counting to 20 with objects / How Many?
+- p77 0.38 Counting to 20 with objects / Ten and Some More
+- p78 0.19 Counting to 20 with objects / One More, One Less
+- p79 0.32 Counting to 20 with objects / Counting Stories
+- p80 0.42 Counting to 20 with objects / My Collection
 
 ## g2-islamiat (30 pages)
 - p1 0.31 Allah the Creator / Allah Is One

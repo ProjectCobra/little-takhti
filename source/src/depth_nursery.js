@@ -209,3 +209,168 @@ DEPTH.push(({addPaper})=>{
    WR('35. Write or draw one way you help at home. (2 marks)',['______________________________________']),
    WR(...HOW))]);
 });
+
+/* D1: Nursery Maths topics 1 to 4 (Numbers 1 to 5, Numbers 6 to 10, Shapes, Numbers in order).
+   Top up the old 3-page packs, then a Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat per topic.
+   Old pages share titles (Count and Write), so they are found by page number and checked by title. */
+DEPTH.push(({addPages})=>{const S='nursery-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Draw a smiley face or write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+
+ /* ---- Topic 1: Numbers 1 to 5 ---- */
+ mo(1,'Count and Circle',
+  PI('B. Count again. Circle the right number.',[[2,'heart',[1,2,3]],[4,'star',[4,2,5]],[1,'square',[3,1,2]],[5,'circle',[5,4,3]]]),
+  CM('C. Circle the group with more.',[[2,4,'star'],[5,3,'heart']]));
+ mo(2,'Trace 1 to 5',
+  BX('Fill in the missing numbers. Say them aloud.',['1|{{2}}|3|{{4}}|5','1|2|{{3}}|4|{{5}}','{{1}}|2|3|{{4}}|5']));
+ mo(3,'Count and Write',
+  {t:'draw',grid:1,boxes:[['Draw 3 balls.',120],['Draw 5 dots.',120],['Draw 2 flowers.',120],['Draw 4 stars.',120]]},
+  CM('Circle the group with more.',[[3,1,'heart'],[2,4,'square']]));
+ addPages(S,'Numbers 1 to 5',[
+  pg('Numbers 1 to 5 Warm-up ★','Start here if counting is new. Touch each picture as you count.','Count up to 3, then up to 5, with lots of help.',
+   CT('A. Count and write.',[[1,'star'],[2,'heart'],[3,'circle'],[2,'square']]),
+   TR('B. Trace the numbers.',['1','2','3'],7),
+   PI('C. Count. Circle the number.',[[3,'heart',[3,1]],[1,'star',[2,1]],[2,'circle',[2,3]]]),
+   ),
+  pg('Numbers 1 to 5 Challenge ★★★','A grown-up reads each question. Think carefully.','Use numbers to 5: order, one more, one less and comparing.',
+   CH('A. True or false? Circle.',[['2 comes after 1.',0],['5 is less than 3.',1],['4 comes before 5.',0],['3 comes after 4.',1]],TF),
+   BX('B. Count back. Fill in.',['5|4|{{3}}|2|{{1}}','5|{{4}}|3|{{2}}|1']),
+   F('C. Think it through.',['I am one more than 3. I am {{4}}.','I am one less than 2. I am {{1}}.','I come just after 4. I am {{5}}.','I am between 2 and 4. I am {{3}}.'],2),
+   CM('D. Circle the group with more.',[[4,5,'circle'],[3,2,'tri']])),
+  pg('Topic Test: Numbers 1 to 5 (1)','A grown-up reads each question and marks it out of 20.','Check counting and writing numbers 1 to 5.',
+   SC(20,10,16),
+   CT('1. Count and write. (4 marks)',[[3,'star'],[5,'heart'],[2,'circle'],[4,'square']]),
+   BX('2. Write the missing numbers. (4 marks)',['1|{{2}}|3|{{4}}|5','{{1}}|2|{{3}}|4|5']),
+   PI('3. Count. Circle the right number. (3 marks)',[[1,'heart',[1,2,3]],[4,'star',[3,4,5]],[5,'tri',[5,2,4]]])),
+  pg('Topic Test: Numbers 1 to 5 (2)','Add up your marks from both pages.','Check comparing groups and matching numbers to 5.',
+   CM('4. Circle the group with more. (3 marks)',[[2,5,'star'],[4,1,'circle'],[3,5,'heart']]),
+   MA('5. Match the number to the dots. (4 marks)',['3','5','1','4'],['● ● ●','● ● ● ● ●','●','● ● ● ●']),
+   WP('6. A grown-up reads. Write the answer. (2 marks)',['Hamza has 3 cars and 1 bus. How many toys? {{4}}','Sara sees 5 ducks. She counts them: 1, 2, 3, 4, 5. How many ducks? {{5}}']),
+   HOW),
+  pg('Word Mat: Numbers 1 to 5','Keep this mat on the table. Point and say each number.','Know the numbers 1 to 5, their names and their dots.',
+   NO('<b>Numbers and names</b><br><span style="font-size:26px">1 one ● &nbsp; 2 two ●● &nbsp; 3 three ●●● &nbsp; 4 four ●●●● &nbsp; 5 five ●●●●●</span>'),
+   CT('Count with me.',[[1,'star'],[2,'star'],[3,'star'],[4,'star'],[5,'star']]),
+   NO('<b>Maths words</b><br><b>count</b>: say one number for each thing · <b>how many?</b>: the last number you say<br><b>more</b>: the bigger group · <b>before</b> and <b>after</b>: 2 comes before 3, 4 comes after 3'),
+   BK(['one','two','three','four','five','count','more','how many']),
+   DR('Show 5 on your fingers. Draw your hand.',150))]);
+
+ /* ---- Topic 2: Numbers 6 to 10 ---- */
+ mo(4,'Count and Circle',
+  PI('B. Count again. Circle the right number.',[[7,'circle',[7,8,6]],[10,'star',[9,10,8]],[6,'square',[6,9,7]]]),
+  CM('C. Circle the group with more.',[[6,9,'heart'],[8,7,'star']]));
+ mo(5,'Trace 6 to 10',
+  BX('Fill in the missing numbers. Say them aloud.',['6|{{7}}|8|{{9}}|10','1|2|3|4|5|{{6}}|7|{{8}}|9|{{10}}']));
+ mo(6,'Count and Write',
+  F('Write the number that comes next.',['5, {{6}}','7, {{8}}','8, {{9}}','9, {{10}}','6, {{7}}','4, {{5}}'],3),
+  {t:'draw',grid:1,boxes:[['Draw 6 dots.',110],['Draw 8 lines.',110]]},
+  CT('Count and write.',[[8,'tri'],[10,'circle']]));
+ addPages(S,'Numbers 6 to 10',[
+  pg('Numbers 6 to 10 Warm-up ★','Start here if numbers after 5 are new. Count slowly with a grown-up.','Count 6 to 10 objects with support.',
+   CT('A. Count and write.',[[6,'star'],[7,'circle'],[6,'heart'],[8,'square']]),
+   TR('B. Trace the numbers.',['6','7','8'],7),
+   BX('C. Fill in.',['5|{{6}}|7|8','6|7|{{8}}|9|10'])),
+  pg('Numbers 6 to 10 Challenge ★★★','A grown-up reads each question. Think carefully.','Order, compare and count back with numbers to 10.',
+   CH('A. True or false? Circle.',[['9 comes after 8.',0],['6 is more than 10.',1],['7 comes before 8.',0],['10 comes before 9.',1]],TF),
+   BX('B. Count back from 10. Fill in.',['10|9|{{8}}|7|{{6}}','10|{{9}}|8|{{7}}|6|{{5}}']),
+   F('C. Think it through.',['I am one more than 9. I am {{10}}.','I am one less than 7. I am {{6}}.','I am between 7 and 9. I am {{8}}.','I come just before 10. I am {{9}}.'],2),
+   CH('D. Circle the bigger number.',[['6 or 9',['6','9'],1],['10 or 7',['10','7'],0],['8 or 6',['8','6'],0]])),
+  pg('Topic Test: Numbers 6 to 10 (1)','A grown-up reads each question and marks it out of 21.','Check counting and writing numbers 6 to 10.',
+   SC(21,11,17),
+   CT('1. Count and write. (4 marks)',[[6,'star'],[9,'heart'],[7,'circle'],[10,'square']]),
+   BX('2. Write the missing numbers. (4 marks)',['6|{{7}}|8|{{9}}|10','{{6}}|7|8|9|{{10}}']),
+   PI('3. Count. Circle the right number. (3 marks)',[[8,'heart',[7,8,9]],[6,'star',[6,10,8]],[9,'tri',[10,9,7]]])),
+  pg('Topic Test: Numbers 6 to 10 (2)','Add up your marks from both pages.','Check comparing and ordering numbers to 10.',
+   CM('4. Circle the group with more. (3 marks)',[[6,9,'star'],[10,7,'circle'],[8,6,'heart']]),
+   F('5. What comes next? (4 marks)',['6, {{7}}','8, {{9}}','9, {{10}}','7, {{8}}'],2),
+   WP('6. A grown-up reads. Write the answer. (3 marks)',['There are 6 eggs and 1 more. How many eggs? {{7}}','Ali counts 10 fingers. How many fingers? {{10}}','There are 9 kites. 1 flies away. How many are left? {{8}}']),
+   HOW),
+  pg('Word Mat: Numbers 6 to 10','Keep this mat on the table. Point and say each number.','Know the numbers 6 to 10, their names and their dots.',
+   NO('<b>Numbers and names</b><br><span style="font-size:24px">6 six ●●●●● ● &nbsp; 7 seven ●●●●● ●●<br>8 eight ●●●●● ●●● &nbsp; 9 nine ●●●●● ●●●● &nbsp; 10 ten ●●●●● ●●●●●</span>'),
+   CT('Count with me.',[[6,'heart'],[7,'heart'],[8,'heart'],[9,'heart'],[10,'heart']]),
+   NO('<b>Maths words</b><br><b>ten</b>: all the fingers on two hands · <b>next</b>: the number that comes after · <b>count back</b>: 10, 9, 8, 7, 6'),
+   BK(['six','seven','eight','nine','ten','next','count back']),
+   DR('Show 10 on your fingers. Draw your two hands.',150))]);
+
+ /* ---- Topic 3: Shapes ---- */
+ mo(7,'Colour the Shapes',
+  CP('B. What shape is it? Circle.',[['coin','a coin',0],['window','a window',1],['triangular-flag','a flag',2],['soccer-ball','a ball',0]],['circle','square','triangle']),
+  CT('C. Count the shapes.',[[3,'tri'],[5,'circle']]));
+ mo(8,'Find the Shape',
+  SP('B. Circle the same shape.',[['Find a circle.',['star','circle','square'],1],['Find a triangle.',['heart','square','tri'],2],['Find a square.',['square','tri','circle'],0]]));
+ mo(9,'Trace the Shapes',
+  PT('B. What comes next? Draw it.',[[['circle','square','circle','square','circle'],'square'],[['tri','tri','star','tri','tri'],'star']]),
+  SP('C. Circle the same shape.',[['Find a star.',['star','heart','circle'],0],['Find a heart.',['square','tri','heart'],2],['Find a circle.',['tri','circle','star'],1]]));
+ addPages(S,'Shapes',[
+  pg('Shapes Warm-up ★','Start here if shapes are new. Trace with your finger first.','Name and trace circles, squares and triangles.',
+   TS('A. Trace the shapes.',['circle','square','tri']),
+   SP('B. Circle the shape the grown-up says.',[['circle',['circle','square'],0],['square',['tri','square'],1],['triangle',['tri','circle'],0]]),
+   CO('C. Colour the shapes.',[['circle','red'],['square','blue'],['tri','yellow']])),
+  pg('Shapes Challenge ★★★','A grown-up reads each question. Think carefully.','Know sides and corners and find shapes around us.',
+   CH('A. How many sides or corners?',[['A triangle has ... sides.',['3','4'],0],['A square has ... sides.',['3','4'],1],['A circle has ... corners.',['0','4'],0]]),
+   CH('B. True or false? Circle.',[['A ball is round like a circle.',0],['A triangle has 4 corners.',1],['A square has 4 sides the same.',0]],TF),
+   CP('C. Circle the shape.',[['cookie','a biscuit',0],['window','a window',1],['triangular-flag','a flag',2],['full-moon','the full moon',0]],['circle','square','triangle']),
+   PT('D. What comes next? Draw it.',[[['circle','tri','square','circle','tri'],'square']])),
+  pg('Topic Test: Shapes (1)','A grown-up reads each question and marks it out of 20.','Check naming and tracing shapes.',
+   SC(20,10,16),
+   SP('1. Circle the shape the grown-up says. (4 marks)',[['circle',['square','circle','tri'],1],['triangle',['tri','heart','square'],0],['square',['star','circle','square'],2],['star',['heart','star','tri'],1]]),
+   CT('2. Count the shapes. (4 marks)',[[2,'tri'],[5,'circle'],[3,'square'],[4,'heart']]),
+   TS('3. Trace the shapes. (2 marks)',['circle','tri'])),
+  pg('Topic Test: Shapes (2)','Add up your marks from both pages.','Check finding shapes around us and patterns.',
+   CP('4. What shape is it? Circle. (4 marks)',[['alarm-clock','a clock',0],['wrapped-gift','a gift box',1],['pizza','a slice of pizza',2],['cookie','a biscuit',0]],['circle','square','triangle']),
+   CH('5. How many sides? (2 marks)',[['triangle',['3','4'],0],['square',['3','4'],1]]),
+   PT('6. What comes next? Draw it. (2 marks)',[[['star','heart','star','heart','star'],'heart'],[['square','square','circle','square','square'],'circle']]),
+   DR('7. Draw a circle and a triangle. (2 marks)',120),
+   HOW),
+  pg('Word Mat: Shapes','Keep this mat on the table. Trace each shape with your finger.','Know the names of shapes and the words sides and corners.',
+   CO('Shapes and their names: circle, square, triangle, star, heart',[['circle','red'],['square','blue'],['tri','yellow'],['star','green'],['heart','pink']]),
+   NO('<b>Shape words</b><br><b>circle</b>: round, no corners, like a roti or a coin<br><b>square</b>: 4 sides the same, 4 corners, like a window<br><b>triangle</b>: 3 sides, 3 corners, like a samosa<br><b>side</b>: a straight edge · <b>corner</b>: where two sides meet'),
+   BK(['circle','square','triangle','star','heart','side','corner','round']),
+   DR('Draw something round from your home.',130))]);
+
+ /* ---- Topic 4: Numbers in order ---- */
+ mo(10,'Count and Write',
+  CM('B. Circle the group with more.',[[6,8,'star'],[9,5,'circle']]),
+  BX('C. Write the numbers in order.',['1|{{2}}|{{3}}|4|{{5}}|6|{{7}}|8|{{9}}|10']),
+  F('D. What comes next?',['4, 5, {{6}}','7, 8, {{9}}','1, 2, {{3}}'],3));
+ mo(11,'What Comes Next?',
+  F('B. What comes next?',['2, 3, {{4}}','5, 6, {{7}}','7, 8, {{9}}','1, 2, {{3}}','8, 9, {{10}}','3, 4, {{5}}'],3),
+  BX('C. Count back. Fill in.',['10|9|{{8}}|7|{{6}}','5|{{4}}|3|{{2}}|1']),
+  CT('D. Count and write.',[[4,'heart'],[9,'square']]),
+  CM('E. Circle the group with more.',[[5,7,'circle'],[8,6,'star']]));
+ mo(12,'Before and After',
+  BX('B. Write the number in between.',['2|{{3}}|4','5|{{6}}|7','8|{{9}}|10','6|{{7}}|8']),
+  CH('C. Circle the number that comes first.',[['4 or 7',['4','7'],0],['9 or 3',['9','3'],1],['6 or 5',['6','5'],1],['2 or 8',['2','8'],0]]),
+  F('D. A grown-up reads. Write the answer.',['Ali is number 5 in the line. Who is just after him? Number {{6}}.','The bus is number 9. The bus just before it is number {{8}}.']));
+ addPages(S,'Numbers in order',[
+  pg('Numbers in Order Warm-up ★','Start here if counting in order is new. Say the numbers together.','Say and write numbers 1 to 10 in order with support.',
+   TR('A. Trace 1 to 10.',['1 2 3 4 5','6 7 8 9 10'],3),
+   BX('B. Fill in the missing numbers.',['1|2|{{3}}|4|5','6|7|{{8}}|9|10']),
+   F('C. What comes next?',['1, 2, {{3}}','4, 5, {{6}}','8, 9, {{10}}'],3),
+   CT('D. Count and write.',[[5,'star'],[7,'circle']]),
+   DR('E. Draw 3 balls.',110)),
+  pg('Numbers in Order Challenge ★★★','A grown-up reads each question. Think carefully.','Order numbers to 10, count back and find numbers between.',
+   CH('A. True or false? Circle.',[['7 comes just after 6.',0],['4 is between 5 and 6.',1],['After 9 comes 10.',0],['3 comes after 8.',1]],TF),
+   F('B. Put the numbers in order, smallest first.',['5, 2, 8 → {{2, 5, 8}}','9, 4, 6 → {{4, 6, 9}}','10, 1, 7 → {{1, 7, 10}}','3, 7, 5 → {{3, 5, 7}}'],2),
+   BX('C. Count back. Fill in.',['10|{{9}}|{{8}}|7|6|{{5}}|4|{{3}}|2|1']),
+   F('D. Think it through.',['I am just after 7 and just before 9. I am {{8}}.','Count back from 4: 4, 3, {{2}}, {{1}}.'],1),
+   CM('E. Circle the group with more.',[[7,9,'star'],[10,8,'heart']])),
+  pg('Topic Test: Numbers in Order (1)','A grown-up reads each question and marks it out of 26.','Check counting and writing numbers in order to 10.',
+   SC(26,13,21),
+   CT('1. Count and write. (4 marks)',[[8,'star'],[5,'heart'],[10,'circle'],[6,'square']]),
+   BX('2. Fill in the missing numbers. (4 marks)',['1|2|{{3}}|4|{{5}}','6|{{7}}|8|9|{{10}}']),
+   F('3. What comes next? (3 marks)',['3, 4, {{5}}','6, 7, {{8}}','8, 9, {{10}}'],3),
+   PI('4. Count. Circle the right number. (3 marks)',[[7,'heart',[6,7,8]],[9,'star',[9,10,8]],[6,'tri',[5,6,7]]])),
+  pg('Topic Test: Numbers in Order (2)','Add up your marks from both pages.','Check before, after and between.',
+   F('5. Just before or just after. (4 marks)',['Just after 4 comes {{5}}.','Just before 7 comes {{6}}.','Just after 9 comes {{10}}.','Just before 3 comes {{2}}.'],2),
+   BX('6. Write the number in between. (3 marks)',['1|{{2}}|3','4|{{5}}|6','8|{{9}}|10']),
+   BX('7. Count back. (2 marks)',['5|4|{{3}}|{{2}}|1']),
+   CH('8. Circle the bigger number. (3 marks)',[['4 or 9',['4','9'],1],['10 or 6',['10','6'],0],['7 or 8',['7','8'],1]]),
+   HOW),
+  pg('Word Mat: Numbers in Order','Keep this mat on the table. Count along the line.','Know the order of numbers 0 to 10 and the words before, after and between.',
+   NO('<b>Count to 10</b><br><span style="font-size:24px">1&nbsp;one · 2&nbsp;two · 3&nbsp;three · 4&nbsp;four · 5&nbsp;five · 6&nbsp;six · 7&nbsp;seven · 8&nbsp;eight · 9&nbsp;nine · 10&nbsp;ten</span>'),
+   {t:'numline'},
+   NO('<b>Order words</b><br><b>before</b>: just behind (4 is before 5) · <b>after</b>: just ahead (6 is after 5)<br><b>between</b>: in the middle (5 is between 4 and 6) · <b>first</b>, <b>next</b>, <b>last</b><br><b>count on</b>: 1, 2, 3 … · <b>count back</b>: 10, 9, 8 …'),
+   BK(['before','after','between','first','next','last','order','count back']),
+   DR('Draw 10 beads on a string.',240))]);
+});

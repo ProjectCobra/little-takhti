@@ -2,7 +2,7 @@
 
 Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content depth). Pages under target, by subject:
 
-## g2-ai (150 pages)
+## g2-ai (151 pages)
 - p1 0.43 Data all around us / What Is Data?
 - p2 0.20 Data all around us / Tally It
 - p3 0.25 Data all around us / Read the Chart
@@ -153,6 +153,7 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p148 0.25 Designing an AI helper / Safe and Kind Helpers
 - p149 0.31 Designing an AI helper / Design Words
 - p150 0.36 Designing an AI helper / My AI Helper Plan
+- p154 0.65 Practice paper / AI Practice Paper (4)
 
 ## g3-ai (150 pages)
 - p1 0.44 How AI sees, hears and talks / Sensing the World
@@ -893,6 +894,255 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p80 0.44 Poems about winter / My Winter Poem
 - p85 0.73 Writing practice / Story: The Lion and the Mouse
 
+## g2-maths (81 pages)
+- p1 0.33 Numbers to 1000 / Hundreds, Tens and Ones
+- p2 0.31 Numbers to 1000 / Number Words
+- p3 0.34 Numbers to 1000 / Compare and Order
+- p4 0.20 Adding and subtracting / Add with Regrouping
+- p5 0.14 Adding and subtracting / Subtract with Regrouping
+- p6 0.22 Adding and subtracting / Word Problems
+- p7 0.14 Multiplying by 2, 5 and 10 / Groups Of
+- p8 0.26 Multiplying by 2, 5 and 10 / Times Tables 2, 5 and 10
+- p9 0.19 Multiplying by 2, 5 and 10 / Word Problems
+- p10 0.17 Money and shopping / Count the Money
+- p11 0.24 Money and shopping / Change Please
+- p12 0.19 Money and shopping / Bazaar Problems
+- p13 0.53 Time and calendar / Quarter Past and To
+- p14 0.29 Time and calendar / Minutes and Hours
+- p15 0.33 Time and calendar / Reading a Calendar
+- p16 0.30 Length, mass and capacity / Which Unit?
+- p17 0.19 Length, mass and capacity / Measure and Compare
+- p18 0.20 Length, mass and capacity / Heavier or Lighter?
+- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
+- p20 0.20 Shapes and symmetry / Symmetry
+- p21 0.34 Shapes and symmetry / Draw the Other Half
+- p22 0.30 Halves and quarters / Halves and Quarters
+- p23 0.14 Halves and quarters / Half of a Number
+- p24 0.14 Halves and quarters / Quarters
+- p25 0.37 Pictographs / Read the Pictograph
+- p26 0.09 Pictographs / Tally Marks
+- p27 0.15 Pictographs / Make a Pictograph
+- p28 0.19 Sharing and division / Share Equally
+- p29 0.14 Sharing and division / Groups Of
+- p30 0.09 Sharing and division / Division Facts
+- p31 0.38 Place value to 1000 / Hundreds, Tens and Ones
+- p32 0.20 Place value to 1000 / Build the Number
+- p33 0.20 Place value to 1000 / Expanded Form
+- p34 0.25 Place value to 1000 / What Is the Digit Worth?
+- p35 0.28 Place value to 1000 / Compare Numbers
+- p36 0.19 Place value to 1000 / In Order
+- p37 0.14 Place value to 1000 / More and Less
+- p38 0.59 Place value to 1000 / Rupee Notes
+- p39 0.24 Place value to 1000 / Number Patterns
+- p40 0.49 Place value to 1000 / Number Puzzles
+- p41 0.33 Adding and subtracting with regrouping / Carrying a Ten
+- p42 0.20 Adding and subtracting with regrouping / Carrying a Hundred
+- p43 0.36 Adding and subtracting with regrouping / Borrowing a Ten
+- p44 0.14 Adding and subtracting with regrouping / Bigger Take-aways
+- p45 0.37 Adding and subtracting with regrouping / Regroup or Not?
+- p46 0.25 Adding and subtracting with regrouping / Check It
+- p47 0.47 Adding and subtracting with regrouping / Shop and School Problems
+- p48 0.14 Adding and subtracting with regrouping / Missing Digits
+- p49 0.40 Adding and subtracting with regrouping / Spot the Mistake
+- p50 0.50 Adding and subtracting with regrouping / Number Puzzles
+- p51 0.30 Multiplying by 3 and 4 / Groups of 3
+- p52 0.24 Multiplying by 3 and 4 / The 3 Times Table
+- p53 0.29 Multiplying by 3 and 4 / Count in 3s and 4s
+- p54 0.33 Multiplying by 3 and 4 / Double, Double
+- p55 0.24 Multiplying by 3 and 4 / The 4 Times Table
+- p56 0.43 Multiplying by 3 and 4 / Picture Groups
+- p57 0.30 Multiplying by 3 and 4 / Turn It Around
+- p58 0.40 Multiplying by 3 and 4 / Shopping in 3s and 4s
+- p59 0.30 Multiplying by 3 and 4 / Right or Wrong?
+- p60 0.30 Multiplying by 3 and 4 / Make Your Own
+- p61 0.45 Fractions of shapes and amounts / Equal Parts
+- p62 0.67 Fractions of shapes and amounts / Name the Fraction
+- p63 0.25 Fractions of shapes and amounts / Halves, Thirds, Quarters
+- p64 0.30 Fractions of shapes and amounts / Half of an Amount
+- p65 0.20 Fractions of shapes and amounts / Quarters and Thirds of Amounts
+- p66 0.32 Fractions of shapes and amounts / Picture Fractions
+- p67 0.30 Fractions of shapes and amounts / Is It Fair?
+- p68 0.28 Fractions of shapes and amounts / Halves Are the Same
+- p69 0.43 Fractions of shapes and amounts / Fraction Stories
+- p70 0.30 Fractions of shapes and amounts / Make Your Own Fractions
+- p71 0.46 Telling time to 5 minutes / Counting in Fives
+- p72 0.53 Telling time to 5 minutes / Read the Clock
+- p73 0.53 Telling time to 5 minutes / More Clocks
+- p74 0.33 Telling time to 5 minutes / Past and To
+- p75 0.30 Telling time to 5 minutes / Match the Times
+- p76 0.55 Telling time to 5 minutes / My Day
+- p77 0.43 Telling time to 5 minutes / How Long?
+- p78 0.14 Telling time to 5 minutes / Before and After
+- p79 0.47 Telling time to 5 minutes / Time Stories
+- p80 0.44 Telling time to 5 minutes / Draw the Hands
+- p90 0.72 Practice paper / Maths Practice Paper (4)
+
+## g2-science (81 pages)
+- p1 0.31 Living and non-living / Living or Non-living?
+- p2 0.30 Living and non-living / Signs of Life
+- p3 0.36 Living and non-living / What Living Things Need
+- p4 0.30 Plants / Parts and Jobs
+- p5 0.19 Plants / How a Plant Grows
+- p6 0.33 Plants / Plant Experiment
+- p7 0.35 Animal habitats / Where Do They Live?
+- p8 0.26 Animal habitats / Water or Land?
+- p9 0.20 Animal habitats / Made for Their Home
+- p10 0.30 Food and teeth / Food Groups
+- p11 0.31 Food and teeth / Our Teeth
+- p12 0.25 Food and teeth / A Balanced Meal
+- p13 0.30 Water / Uses of Water
+- p14 0.19 Water / The Water Cycle
+- p15 0.25 Water / Save Water
+- p16 0.30 Earth and sky / Day and Night
+- p17 0.31 Earth and sky / Sun, Moon and Earth
+- p18 0.36 Earth and sky / Shapes of the Moon
+- p19 0.30 Materials / Natural or Man-made?
+- p20 0.25 Materials / Properties
+- p21 0.14 Materials / Right Material
+- p22 0.25 Push and pull / Push or Pull?
+- p23 0.26 Push and pull / Forces Change Things
+- p24 0.10 Push and pull / Rough or Smooth
+- p25 0.30 Light and shadows / Light Sources
+- p26 0.20 Light and shadows / Shadows
+- p27 0.34 Light and shadows / Shadow Fun
+- p28 0.21 What animals eat / Plant or Meat Eaters
+- p29 0.29 What animals eat / Food Chains
+- p30 0.14 What animals eat / Teeth Tell
+- p31 0.45 Our senses / Our Five Senses
+- p32 0.40 Our senses / Sense Organs
+- p33 0.30 Our senses / Which Sense?
+- p34 0.37 Our senses / Tastes
+- p35 0.30 Our senses / Touch and Feel
+- p36 0.31 Our senses / Senses Keep Us Safe
+- p37 0.40 Our senses / Animal Senses
+- p38 0.40 Our senses / The Mystery Box
+- p39 0.35 Our senses / Sense Sums
+- p40 0.45 Our senses / My Senses
+- p41 0.48 Hot and cold / Hot or Cold?
+- p42 0.35 Hot and cold / Sort Hot and Cold
+- p43 0.37 Hot and cold / Picture Check
+- p44 0.43 Hot and cold / Reading a Thermometer
+- p45 0.57 Hot and cold / Melting and Freezing
+- p46 0.40 Hot and cold / Heat Moves
+- p47 0.45 Hot and cold / Keeping Warm
+- p48 0.30 Hot and cold / Safe with Heat
+- p49 0.35 Hot and cold / Temperature Sums
+- p50 0.52 Hot and cold / Ice Cube Race
+- p51 0.45 Magnets / What Is a Magnet?
+- p52 0.37 Magnets / Will It Stick?
+- p53 0.35 Magnets / Magnetic or Not?
+- p54 0.43 Magnets / North and South Poles
+- p55 0.37 Magnets / Push or Pull?
+- p56 0.30 Magnets / Through Things
+- p57 0.63 Magnets / Magnets at Work
+- p58 0.62 Magnets / Test It
+- p59 0.35 Magnets / Magnet Maths
+- p60 0.42 Magnets / Magnet Fishing Game
+- p61 0.48 Sound around us / What Is Sound?
+- p62 0.36 Sound around us / Feel the Vibration
+- p63 0.40 Sound around us / Sounds Around Us
+- p64 0.37 Sound around us / Loud or Soft?
+- p65 0.52 Sound around us / High or Low?
+- p66 0.30 Sound around us / Musical Instruments
+- p67 0.40 Sound around us / Sound Travels
+- p68 0.51 Sound around us / Echoes and Ears
+- p69 0.35 Sound around us / Sound Sums
+- p70 0.59 Sound around us / Make a String Telephone
+- p71 0.45 Weather and seasons / What Is Weather?
+- p72 0.40 Weather and seasons / Weather Words
+- p73 0.63 Weather and seasons / Four Seasons
+- p74 0.37 Weather and seasons / Which Season?
+- p75 0.31 Weather and seasons / Measuring Weather
+- p76 0.33 Weather and seasons / Hot or Cold?
+- p77 0.35 Weather and seasons / Dress for the Weather
+- p78 0.33 Weather and seasons / Weather Chart
+- p79 0.46 Weather and seasons / Weather Sums
+- p80 0.43 Weather and seasons / My Weather Diary
+- p84 0.72 Practice paper / Science Practice Paper (4)
+
+## g2-social (81 pages)
+- p1 0.30 Villages and cities / Village or City?
+- p2 0.26 Villages and cities / Jobs in Villages and Cities
+- p3 0.19 Villages and cities / Where I Live
+- p4 0.25 Rights and responsibilities / Rights
+- p5 0.30 Rights and responsibilities / Responsibilities
+- p6 0.16 Rights and responsibilities / Good Citizens
+- p7 0.31 Festivals of Pakistan / Which Festival?
+- p8 0.31 Festivals of Pakistan / Festival Facts
+- p9 0.30 Festivals of Pakistan / My Favourite Festival
+- p10 0.30 Needs and wants / Need or Want?
+- p11 0.26 Needs and wants / Basic Needs
+- p12 0.09 Needs and wants / Saving Money
+- p13 0.21 Transport / Land, Water, Air
+- p14 0.19 Transport / Then and Now
+- p15 0.26 Transport / Pakistani Transport
+- p16 0.25 Communication / Ways to Talk
+- p17 0.20 Communication / Then or Now?
+- p18 0.20 Communication / Write a Message
+- p19 0.20 A clean environment / Clean or Dirty?
+- p20 0.25 A clean environment / Pollution
+- p21 0.09 A clean environment / Clean-up Plan
+- p22 0.20 Rules and laws / Why Rules?
+- p23 0.25 Rules and laws / Where Is the Rule?
+- p24 0.15 Rules and laws / Class Rules
+- p25 0.20 Helping others / Ways to Help
+- p26 0.31 Helping others / Abdul Sattar Edhi
+- p27 0.04 Helping others / My Helping Plan
+- p28 0.30 Goods and services / Goods or Services?
+- p29 0.25 Goods and services / At the Bazaar
+- p30 0.26 Goods and services / Buyers and Sellers
+- p31 0.40 Our local government / Who Looks After Our Town?
+- p32 0.32 Our local government / Local Services
+- p33 0.46 Our local government / Our Leaders
+- p34 0.56 Our local government / How Voting Works
+- p35 0.30 Our local government / Who Should Fix It?
+- p36 0.61 Our local government / Paying for Services
+- p37 0.30 Our local government / Helping Our Town
+- p38 0.44 Our local government / The Council Meeting
+- p39 0.34 Our local government / A Letter to the Councillor
+- p40 0.39 Our local government / If I Were Mayor
+- p41 0.40 Money and saving / Our Money
+- p42 0.40 Money and saving / Coins and Notes
+- p43 0.54 Money and saving / Needs and Wants
+- p44 0.30 Money and saving / Saving or Spending?
+- p45 0.41 Money and saving / The Bank
+- p46 0.40 Money and saving / My Saving Goal
+- p47 0.32 Money and saving / Money Problems
+- p48 0.25 Money and saving / The School Fair
+- p49 0.25 Money and saving / Good Money Habits
+- p50 0.45 Money and saving / My Money Box
+- p51 0.40 Markets and shops / Buyers and Sellers
+- p52 0.34 Markets and shops / Kinds of Markets
+- p53 0.46 Markets and shops / Goods and Services
+- p54 0.47 Markets and shops / What Do They Sell?
+- p55 0.56 Markets and shops / From Farm to Shop
+- p56 0.30 Markets and shops / Famous Bazaars
+- p57 0.38 Markets and shops / At the Shop
+- p58 0.30 Markets and shops / Honest Shopping
+- p59 0.25 Markets and shops / Shopping Lists
+- p60 0.42 Markets and shops / My Own Shop
+- p61 0.45 Caring for animals / Animals Need Care
+- p62 0.43 Caring for animals / What Do They Eat?
+- p63 0.37 Caring for animals / Kind or Unkind?
+- p64 0.48 Caring for animals / Who Helps Animals?
+- p65 0.40 Caring for animals / Pet Care Every Day
+- p66 0.35 Caring for animals / Pets and Wild Animals
+- p67 0.38 Caring for animals / Stay Safe With Animals
+- p68 0.46 Caring for animals / Animals in Winter
+- p69 0.32 Caring for animals / Animal Sums
+- p70 0.42 Caring for animals / My Animal Promise
+- p71 0.48 Being a good neighbour / Who Are Neighbours?
+- p72 0.63 Being a good neighbour / Kind Neighbours
+- p73 0.43 Being a good neighbour / Good or Not Good?
+- p74 0.52 Being a good neighbour / Helping Out
+- p75 0.35 Being a good neighbour / Respect and Peace
+- p76 0.40 Being a good neighbour / A Good Neighbourhood
+- p77 0.33 Being a good neighbour / Neighbours Help Each Other
+- p78 0.51 Being a good neighbour / Neighbours in Our Country
+- p79 0.35 Being a good neighbour / Neighbour Sums
+- p80 0.40 Being a good neighbour / My Neighbour Plan
+- p84 0.68 Practice paper / Social Studies Practice Paper (4)
+
 ## science (80 pages)
 - p1 0.53 Energy / We Need Energy
 - p2 0.66 Energy / Energy From Food
@@ -1549,170 +1799,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p79 0.36 مختصر کہانی اور سوالات / گنتی
 - p80 0.41 مختصر کہانی اور سوالات / میری کہانی
 
-## g2-maths (80 pages)
-- p1 0.33 Numbers to 1000 / Hundreds, Tens and Ones
-- p2 0.31 Numbers to 1000 / Number Words
-- p3 0.34 Numbers to 1000 / Compare and Order
-- p4 0.20 Adding and subtracting / Add with Regrouping
-- p5 0.14 Adding and subtracting / Subtract with Regrouping
-- p6 0.22 Adding and subtracting / Word Problems
-- p7 0.14 Multiplying by 2, 5 and 10 / Groups Of
-- p8 0.26 Multiplying by 2, 5 and 10 / Times Tables 2, 5 and 10
-- p9 0.19 Multiplying by 2, 5 and 10 / Word Problems
-- p10 0.17 Money and shopping / Count the Money
-- p11 0.24 Money and shopping / Change Please
-- p12 0.19 Money and shopping / Bazaar Problems
-- p13 0.53 Time and calendar / Quarter Past and To
-- p14 0.29 Time and calendar / Minutes and Hours
-- p15 0.33 Time and calendar / Reading a Calendar
-- p16 0.30 Length, mass and capacity / Which Unit?
-- p17 0.19 Length, mass and capacity / Measure and Compare
-- p18 0.20 Length, mass and capacity / Heavier or Lighter?
-- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
-- p20 0.20 Shapes and symmetry / Symmetry
-- p21 0.34 Shapes and symmetry / Draw the Other Half
-- p22 0.30 Halves and quarters / Halves and Quarters
-- p23 0.14 Halves and quarters / Half of a Number
-- p24 0.14 Halves and quarters / Quarters
-- p25 0.37 Pictographs / Read the Pictograph
-- p26 0.09 Pictographs / Tally Marks
-- p27 0.15 Pictographs / Make a Pictograph
-- p28 0.19 Sharing and division / Share Equally
-- p29 0.14 Sharing and division / Groups Of
-- p30 0.09 Sharing and division / Division Facts
-- p31 0.38 Place value to 1000 / Hundreds, Tens and Ones
-- p32 0.20 Place value to 1000 / Build the Number
-- p33 0.20 Place value to 1000 / Expanded Form
-- p34 0.25 Place value to 1000 / What Is the Digit Worth?
-- p35 0.28 Place value to 1000 / Compare Numbers
-- p36 0.19 Place value to 1000 / In Order
-- p37 0.14 Place value to 1000 / More and Less
-- p38 0.59 Place value to 1000 / Rupee Notes
-- p39 0.24 Place value to 1000 / Number Patterns
-- p40 0.49 Place value to 1000 / Number Puzzles
-- p41 0.33 Adding and subtracting with regrouping / Carrying a Ten
-- p42 0.20 Adding and subtracting with regrouping / Carrying a Hundred
-- p43 0.36 Adding and subtracting with regrouping / Borrowing a Ten
-- p44 0.14 Adding and subtracting with regrouping / Bigger Take-aways
-- p45 0.37 Adding and subtracting with regrouping / Regroup or Not?
-- p46 0.25 Adding and subtracting with regrouping / Check It
-- p47 0.47 Adding and subtracting with regrouping / Shop and School Problems
-- p48 0.14 Adding and subtracting with regrouping / Missing Digits
-- p49 0.40 Adding and subtracting with regrouping / Spot the Mistake
-- p50 0.50 Adding and subtracting with regrouping / Number Puzzles
-- p51 0.30 Multiplying by 3 and 4 / Groups of 3
-- p52 0.24 Multiplying by 3 and 4 / The 3 Times Table
-- p53 0.29 Multiplying by 3 and 4 / Count in 3s and 4s
-- p54 0.33 Multiplying by 3 and 4 / Double, Double
-- p55 0.24 Multiplying by 3 and 4 / The 4 Times Table
-- p56 0.43 Multiplying by 3 and 4 / Picture Groups
-- p57 0.30 Multiplying by 3 and 4 / Turn It Around
-- p58 0.40 Multiplying by 3 and 4 / Shopping in 3s and 4s
-- p59 0.30 Multiplying by 3 and 4 / Right or Wrong?
-- p60 0.30 Multiplying by 3 and 4 / Make Your Own
-- p61 0.45 Fractions of shapes and amounts / Equal Parts
-- p62 0.67 Fractions of shapes and amounts / Name the Fraction
-- p63 0.25 Fractions of shapes and amounts / Halves, Thirds, Quarters
-- p64 0.30 Fractions of shapes and amounts / Half of an Amount
-- p65 0.20 Fractions of shapes and amounts / Quarters and Thirds of Amounts
-- p66 0.32 Fractions of shapes and amounts / Picture Fractions
-- p67 0.30 Fractions of shapes and amounts / Is It Fair?
-- p68 0.28 Fractions of shapes and amounts / Halves Are the Same
-- p69 0.43 Fractions of shapes and amounts / Fraction Stories
-- p70 0.30 Fractions of shapes and amounts / Make Your Own Fractions
-- p71 0.46 Telling time to 5 minutes / Counting in Fives
-- p72 0.53 Telling time to 5 minutes / Read the Clock
-- p73 0.53 Telling time to 5 minutes / More Clocks
-- p74 0.33 Telling time to 5 minutes / Past and To
-- p75 0.30 Telling time to 5 minutes / Match the Times
-- p76 0.55 Telling time to 5 minutes / My Day
-- p77 0.43 Telling time to 5 minutes / How Long?
-- p78 0.14 Telling time to 5 minutes / Before and After
-- p79 0.47 Telling time to 5 minutes / Time Stories
-- p80 0.44 Telling time to 5 minutes / Draw the Hands
-
-## g2-science (80 pages)
-- p1 0.31 Living and non-living / Living or Non-living?
-- p2 0.30 Living and non-living / Signs of Life
-- p3 0.36 Living and non-living / What Living Things Need
-- p4 0.30 Plants / Parts and Jobs
-- p5 0.19 Plants / How a Plant Grows
-- p6 0.33 Plants / Plant Experiment
-- p7 0.35 Animal habitats / Where Do They Live?
-- p8 0.26 Animal habitats / Water or Land?
-- p9 0.20 Animal habitats / Made for Their Home
-- p10 0.30 Food and teeth / Food Groups
-- p11 0.31 Food and teeth / Our Teeth
-- p12 0.25 Food and teeth / A Balanced Meal
-- p13 0.30 Water / Uses of Water
-- p14 0.19 Water / The Water Cycle
-- p15 0.25 Water / Save Water
-- p16 0.30 Earth and sky / Day and Night
-- p17 0.31 Earth and sky / Sun, Moon and Earth
-- p18 0.36 Earth and sky / Shapes of the Moon
-- p19 0.30 Materials / Natural or Man-made?
-- p20 0.25 Materials / Properties
-- p21 0.14 Materials / Right Material
-- p22 0.25 Push and pull / Push or Pull?
-- p23 0.26 Push and pull / Forces Change Things
-- p24 0.10 Push and pull / Rough or Smooth
-- p25 0.30 Light and shadows / Light Sources
-- p26 0.20 Light and shadows / Shadows
-- p27 0.34 Light and shadows / Shadow Fun
-- p28 0.21 What animals eat / Plant or Meat Eaters
-- p29 0.29 What animals eat / Food Chains
-- p30 0.14 What animals eat / Teeth Tell
-- p31 0.45 Our senses / Our Five Senses
-- p32 0.40 Our senses / Sense Organs
-- p33 0.30 Our senses / Which Sense?
-- p34 0.37 Our senses / Tastes
-- p35 0.30 Our senses / Touch and Feel
-- p36 0.31 Our senses / Senses Keep Us Safe
-- p37 0.40 Our senses / Animal Senses
-- p38 0.40 Our senses / The Mystery Box
-- p39 0.35 Our senses / Sense Sums
-- p40 0.45 Our senses / My Senses
-- p41 0.48 Hot and cold / Hot or Cold?
-- p42 0.35 Hot and cold / Sort Hot and Cold
-- p43 0.37 Hot and cold / Picture Check
-- p44 0.43 Hot and cold / Reading a Thermometer
-- p45 0.57 Hot and cold / Melting and Freezing
-- p46 0.40 Hot and cold / Heat Moves
-- p47 0.45 Hot and cold / Keeping Warm
-- p48 0.30 Hot and cold / Safe with Heat
-- p49 0.35 Hot and cold / Temperature Sums
-- p50 0.52 Hot and cold / Ice Cube Race
-- p51 0.45 Magnets / What Is a Magnet?
-- p52 0.37 Magnets / Will It Stick?
-- p53 0.35 Magnets / Magnetic or Not?
-- p54 0.43 Magnets / North and South Poles
-- p55 0.37 Magnets / Push or Pull?
-- p56 0.30 Magnets / Through Things
-- p57 0.63 Magnets / Magnets at Work
-- p58 0.62 Magnets / Test It
-- p59 0.35 Magnets / Magnet Maths
-- p60 0.42 Magnets / Magnet Fishing Game
-- p61 0.48 Sound around us / What Is Sound?
-- p62 0.36 Sound around us / Feel the Vibration
-- p63 0.40 Sound around us / Sounds Around Us
-- p64 0.37 Sound around us / Loud or Soft?
-- p65 0.52 Sound around us / High or Low?
-- p66 0.30 Sound around us / Musical Instruments
-- p67 0.40 Sound around us / Sound Travels
-- p68 0.51 Sound around us / Echoes and Ears
-- p69 0.35 Sound around us / Sound Sums
-- p70 0.59 Sound around us / Make a String Telephone
-- p71 0.45 Weather and seasons / What Is Weather?
-- p72 0.40 Weather and seasons / Weather Words
-- p73 0.63 Weather and seasons / Four Seasons
-- p74 0.37 Weather and seasons / Which Season?
-- p75 0.31 Weather and seasons / Measuring Weather
-- p76 0.33 Weather and seasons / Hot or Cold?
-- p77 0.35 Weather and seasons / Dress for the Weather
-- p78 0.33 Weather and seasons / Weather Chart
-- p79 0.46 Weather and seasons / Weather Sums
-- p80 0.43 Weather and seasons / My Weather Diary
-
 ## g2-history (80 pages)
 - p1 0.30 Early people / How Early People Lived
 - p2 0.30 Early people / Then and Now
@@ -1795,87 +1881,87 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p79 0.32 How we learn about the past / History Sums
 - p80 0.37 How we learn about the past / My Family History
 
-## g2-social (80 pages)
-- p1 0.30 Villages and cities / Village or City?
-- p2 0.26 Villages and cities / Jobs in Villages and Cities
-- p3 0.19 Villages and cities / Where I Live
-- p4 0.25 Rights and responsibilities / Rights
-- p5 0.30 Rights and responsibilities / Responsibilities
-- p6 0.16 Rights and responsibilities / Good Citizens
-- p7 0.31 Festivals of Pakistan / Which Festival?
-- p8 0.31 Festivals of Pakistan / Festival Facts
-- p9 0.30 Festivals of Pakistan / My Favourite Festival
-- p10 0.30 Needs and wants / Need or Want?
-- p11 0.26 Needs and wants / Basic Needs
-- p12 0.09 Needs and wants / Saving Money
-- p13 0.21 Transport / Land, Water, Air
-- p14 0.19 Transport / Then and Now
-- p15 0.26 Transport / Pakistani Transport
-- p16 0.25 Communication / Ways to Talk
-- p17 0.20 Communication / Then or Now?
-- p18 0.20 Communication / Write a Message
-- p19 0.20 A clean environment / Clean or Dirty?
-- p20 0.25 A clean environment / Pollution
-- p21 0.09 A clean environment / Clean-up Plan
-- p22 0.20 Rules and laws / Why Rules?
-- p23 0.25 Rules and laws / Where Is the Rule?
-- p24 0.15 Rules and laws / Class Rules
-- p25 0.20 Helping others / Ways to Help
-- p26 0.31 Helping others / Abdul Sattar Edhi
-- p27 0.04 Helping others / My Helping Plan
-- p28 0.30 Goods and services / Goods or Services?
-- p29 0.25 Goods and services / At the Bazaar
-- p30 0.26 Goods and services / Buyers and Sellers
-- p31 0.40 Our local government / Who Looks After Our Town?
-- p32 0.32 Our local government / Local Services
-- p33 0.46 Our local government / Our Leaders
-- p34 0.56 Our local government / How Voting Works
-- p35 0.30 Our local government / Who Should Fix It?
-- p36 0.61 Our local government / Paying for Services
-- p37 0.30 Our local government / Helping Our Town
-- p38 0.44 Our local government / The Council Meeting
-- p39 0.34 Our local government / A Letter to the Councillor
-- p40 0.39 Our local government / If I Were Mayor
-- p41 0.40 Money and saving / Our Money
-- p42 0.40 Money and saving / Coins and Notes
-- p43 0.54 Money and saving / Needs and Wants
-- p44 0.30 Money and saving / Saving or Spending?
-- p45 0.41 Money and saving / The Bank
-- p46 0.40 Money and saving / My Saving Goal
-- p47 0.32 Money and saving / Money Problems
-- p48 0.25 Money and saving / The School Fair
-- p49 0.25 Money and saving / Good Money Habits
-- p50 0.45 Money and saving / My Money Box
-- p51 0.40 Markets and shops / Buyers and Sellers
-- p52 0.34 Markets and shops / Kinds of Markets
-- p53 0.46 Markets and shops / Goods and Services
-- p54 0.47 Markets and shops / What Do They Sell?
-- p55 0.56 Markets and shops / From Farm to Shop
-- p56 0.30 Markets and shops / Famous Bazaars
-- p57 0.38 Markets and shops / At the Shop
-- p58 0.30 Markets and shops / Honest Shopping
-- p59 0.25 Markets and shops / Shopping Lists
-- p60 0.42 Markets and shops / My Own Shop
-- p61 0.45 Caring for animals / Animals Need Care
-- p62 0.43 Caring for animals / What Do They Eat?
-- p63 0.37 Caring for animals / Kind or Unkind?
-- p64 0.48 Caring for animals / Who Helps Animals?
-- p65 0.40 Caring for animals / Pet Care Every Day
-- p66 0.35 Caring for animals / Pets and Wild Animals
-- p67 0.38 Caring for animals / Stay Safe With Animals
-- p68 0.46 Caring for animals / Animals in Winter
-- p69 0.32 Caring for animals / Animal Sums
-- p70 0.42 Caring for animals / My Animal Promise
-- p71 0.48 Being a good neighbour / Who Are Neighbours?
-- p72 0.63 Being a good neighbour / Kind Neighbours
-- p73 0.43 Being a good neighbour / Good or Not Good?
-- p74 0.52 Being a good neighbour / Helping Out
-- p75 0.35 Being a good neighbour / Respect and Peace
-- p76 0.40 Being a good neighbour / A Good Neighbourhood
-- p77 0.33 Being a good neighbour / Neighbours Help Each Other
-- p78 0.51 Being a good neighbour / Neighbours in Our Country
-- p79 0.35 Being a good neighbour / Neighbour Sums
-- p80 0.40 Being a good neighbour / My Neighbour Plan
+## g2-computer (80 pages)
+- p1 0.35 Input and output / Input or Output?
+- p2 0.26 Input and output / What Does It Do?
+- p3 0.15 Input and output / Storage
+- p4 0.33 The desktop / Desktop Words
+- p5 0.14 The desktop / Starting and Stopping
+- p6 0.15 The desktop / Save Your Work
+- p7 0.25 Staying safe online / Safe or Not Safe?
+- p8 0.30 Staying safe online / Private Information
+- p9 0.14 Staying safe online / If Something Feels Wrong
+- p10 0.25 Files and folders / File Words
+- p11 0.21 Files and folders / Organise
+- p12 0.10 Files and folders / Good Names
+- p13 0.25 Paint tools / Tool Jobs
+- p14 0.15 Paint tools / Make a Poster
+- p15 0.10 Paint tools / Undo Helps
+- p16 0.21 Algorithms / What Is an Algorithm?
+- p17 0.19 Algorithms / Fix the Algorithm
+- p18 0.20 Algorithms / Write an Algorithm
+- p19 0.10 Searching online / Search Words
+- p20 0.15 Searching online / Is It True?
+- p21 0.09 Searching online / My Search
+- p22 0.25 Email / Email Parts
+- p23 0.10 Email / Kind Emails
+- p24 0.20 Email / Write an Email
+- p25 0.20 Screen time balance / Healthy Habits
+- p26 0.15 Screen time balance / My Day
+- p27 0.34 Screen time balance / Fun Without Screens
+- p28 0.20 Taking care of devices / Device Care
+- p29 0.15 Taking care of devices / Battery Tips
+- p30 0.15 Taking care of devices / Care Checklist
+- p31 0.40 Typing practice / The Home Row
+- p32 0.30 Typing practice / Fingers and Keys
+- p33 0.16 Typing practice / Home Row Words
+- p34 0.26 Typing practice / Which Row?
+- p35 0.25 Typing practice / Handy Keys
+- p36 0.41 Typing practice / Fix the Typing
+- p37 0.39 Typing practice / Typing Sums
+- p38 0.30 Typing practice / Sit Well, Type Well
+- p39 0.56 Typing practice / My Practice Plan
+- p40 0.43 Typing practice / Practice Sheet
+- p41 0.40 Simple slides / What Is a Slide?
+- p42 0.26 Simple slides / Parts of a Slide
+- p43 0.40 Simple slides / Making a Slide
+- p44 0.30 Simple slides / Good Slide or Not?
+- p45 0.25 Simple slides / Which Button?
+- p46 0.24 Simple slides / Slides in Order
+- p47 0.41 Simple slides / Plan on Paper
+- p48 0.35 Simple slides / Slide Sums
+- p49 0.25 Simple slides / Presenting Well
+- p50 0.47 Simple slides / My Slide Checklist
+- p51 0.40 Block coding: sequences / What Is a Sequence?
+- p52 0.39 Block coding: sequences / Everyday Sequences
+- p53 0.30 Block coding: sequences / Coding Blocks
+- p55 0.24 Block coding: sequences / Which Way?
+- p56 0.34 Block coding: sequences / Find the Bug
+- p57 0.40 Block coding: sequences / Steps for a Sprite
+- p58 0.23 Block coding: sequences / Repeat Blocks
+- p59 0.32 Block coding: sequences / Code Sums
+- p60 0.35 Block coding: sequences / Code a Path
+- p61 0.45 Passwords and privacy / What Is a Password?
+- p62 0.50 Passwords and privacy / Strong or Weak?
+- p63 0.40 Passwords and privacy / What Is Private?
+- p64 0.63 Passwords and privacy / Keep It Locked
+- p65 0.34 Passwords and privacy / Safe or Not Safe?
+- p66 0.50 Passwords and privacy / Make a Strong Password
+- p67 0.30 Passwords and privacy / Spot the Trick
+- p68 0.28 Passwords and privacy / Who Can Know?
+- p69 0.39 Passwords and privacy / Password Sums
+- p70 0.40 Passwords and privacy / My Safety Rules
+- p71 0.48 Using a tablet camera safely / The Tablet Camera
+- p72 0.40 Using a tablet camera safely / Camera Words
+- p73 0.48 Using a tablet camera safely / Ask First
+- p74 0.37 Using a tablet camera safely / Safe or Not Safe?
+- p75 0.56 Using a tablet camera safely / Take a Good Photo
+- p76 0.40 Using a tablet camera safely / Private Details
+- p77 0.31 Using a tablet camera safely / Who Can See It?
+- p78 0.31 Using a tablet camera safely / Camera Care
+- p79 0.32 Using a tablet camera safely / Camera Sums
+- p80 0.37 Using a tablet camera safely / My Photo Rules
+- p84 0.65 Practice paper / ICT Practice Paper (4)
 
 ## g3-maths (80 pages)
 - p1 0.14 Multiplication and division / Times Tables 3 and 4
@@ -2529,87 +2615,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p78 0.41 کہانی اور سوالات / اچھی عادتیں
 - p79 0.27 کہانی اور سوالات / گنتی کے سوال
 - p80 0.37 کہانی اور سوالات / سبق اور تصویر
-
-## g2-computer (79 pages)
-- p1 0.35 Input and output / Input or Output?
-- p2 0.26 Input and output / What Does It Do?
-- p3 0.15 Input and output / Storage
-- p4 0.33 The desktop / Desktop Words
-- p5 0.14 The desktop / Starting and Stopping
-- p6 0.15 The desktop / Save Your Work
-- p7 0.25 Staying safe online / Safe or Not Safe?
-- p8 0.30 Staying safe online / Private Information
-- p9 0.14 Staying safe online / If Something Feels Wrong
-- p10 0.25 Files and folders / File Words
-- p11 0.21 Files and folders / Organise
-- p12 0.10 Files and folders / Good Names
-- p13 0.25 Paint tools / Tool Jobs
-- p14 0.15 Paint tools / Make a Poster
-- p15 0.10 Paint tools / Undo Helps
-- p16 0.21 Algorithms / What Is an Algorithm?
-- p17 0.19 Algorithms / Fix the Algorithm
-- p18 0.20 Algorithms / Write an Algorithm
-- p19 0.10 Searching online / Search Words
-- p20 0.15 Searching online / Is It True?
-- p21 0.09 Searching online / My Search
-- p22 0.25 Email / Email Parts
-- p23 0.10 Email / Kind Emails
-- p24 0.20 Email / Write an Email
-- p25 0.20 Screen time balance / Healthy Habits
-- p26 0.15 Screen time balance / My Day
-- p27 0.34 Screen time balance / Fun Without Screens
-- p28 0.20 Taking care of devices / Device Care
-- p29 0.15 Taking care of devices / Battery Tips
-- p30 0.15 Taking care of devices / Care Checklist
-- p31 0.40 Typing practice / The Home Row
-- p32 0.30 Typing practice / Fingers and Keys
-- p33 0.16 Typing practice / Home Row Words
-- p34 0.26 Typing practice / Which Row?
-- p35 0.25 Typing practice / Handy Keys
-- p36 0.41 Typing practice / Fix the Typing
-- p37 0.39 Typing practice / Typing Sums
-- p38 0.30 Typing practice / Sit Well, Type Well
-- p39 0.56 Typing practice / My Practice Plan
-- p40 0.43 Typing practice / Practice Sheet
-- p41 0.40 Simple slides / What Is a Slide?
-- p42 0.26 Simple slides / Parts of a Slide
-- p43 0.40 Simple slides / Making a Slide
-- p44 0.30 Simple slides / Good Slide or Not?
-- p45 0.25 Simple slides / Which Button?
-- p46 0.24 Simple slides / Slides in Order
-- p47 0.41 Simple slides / Plan on Paper
-- p48 0.35 Simple slides / Slide Sums
-- p49 0.25 Simple slides / Presenting Well
-- p50 0.47 Simple slides / My Slide Checklist
-- p51 0.40 Block coding: sequences / What Is a Sequence?
-- p52 0.39 Block coding: sequences / Everyday Sequences
-- p53 0.30 Block coding: sequences / Coding Blocks
-- p55 0.24 Block coding: sequences / Which Way?
-- p56 0.34 Block coding: sequences / Find the Bug
-- p57 0.40 Block coding: sequences / Steps for a Sprite
-- p58 0.23 Block coding: sequences / Repeat Blocks
-- p59 0.32 Block coding: sequences / Code Sums
-- p60 0.35 Block coding: sequences / Code a Path
-- p61 0.45 Passwords and privacy / What Is a Password?
-- p62 0.50 Passwords and privacy / Strong or Weak?
-- p63 0.40 Passwords and privacy / What Is Private?
-- p64 0.63 Passwords and privacy / Keep It Locked
-- p65 0.34 Passwords and privacy / Safe or Not Safe?
-- p66 0.50 Passwords and privacy / Make a Strong Password
-- p67 0.30 Passwords and privacy / Spot the Trick
-- p68 0.28 Passwords and privacy / Who Can Know?
-- p69 0.39 Passwords and privacy / Password Sums
-- p70 0.40 Passwords and privacy / My Safety Rules
-- p71 0.48 Using a tablet camera safely / The Tablet Camera
-- p72 0.40 Using a tablet camera safely / Camera Words
-- p73 0.48 Using a tablet camera safely / Ask First
-- p74 0.37 Using a tablet camera safely / Safe or Not Safe?
-- p75 0.56 Using a tablet camera safely / Take a Good Photo
-- p76 0.40 Using a tablet camera safely / Private Details
-- p77 0.31 Using a tablet camera safely / Who Can See It?
-- p78 0.31 Using a tablet camera safely / Camera Care
-- p79 0.32 Using a tablet camera safely / Camera Sums
-- p80 0.37 Using a tablet camera safely / My Photo Rules
 
 ## g3-science (79 pages)
 - p1 0.30 The human body / Organs and Their Jobs

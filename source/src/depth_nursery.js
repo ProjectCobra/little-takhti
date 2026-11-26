@@ -779,3 +779,222 @@ DEPTH.push(({addPages})=>{const S='nursery-maths';
    CY('Short, taller, tallest',[['evergreen-tree','short',34],['evergreen-tree','taller',54],['evergreen-tree','tallest',80]]),
    BK(['big','small','bigger','smaller','tall','short','taller','shorter']))]);
 });
+
+/* D4: Nursery Maths topics 13 to 15 (Circles, squares and triangles around us; Adding with pictures; Counting to 20 with objects).
+   Same method as D1 to D3: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='nursery-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Draw a smiley face or write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const SH=['circle','square','triangle'];
+ const PSUM=(h,items)=>({t:'picsum',h,items});
+
+ /* ---- Topic 13: Circles, squares and triangles around us ---- */
+ mo(51,'Three Shapes',
+  CP('B. Look again. Circle the shape.',[['wheel','a wheel',0],['game-die','a dice',1],['pizza','a slice of pizza',2],['cookie','a biscuit',0]],SH),
+  CT('C. Count the shapes. Write how many.',[[3,'circle'],[4,'square'],[5,'tri'],[2,'circle']]));
+ mo(52,'Trace the Shapes',
+  CH('B. Name the shape you traced. Circle.',[['It is round.',['circle','square'],0],['It has 3 sides.',['triangle','square'],0],['It has 4 sides.',['circle','square'],1]]),
+  F('C. Write the number.',['A square has {{4}} sides.','A triangle has {{3}} sides.'],2),
+  BK(['circle','square','triangle','round','sides']),
+  NO('Tip: run your finger along each side and count out loud: one, two, three.'));
+ mo(53,'Shapes at Home',
+  SO('B. Write each thing under its shape.',SH,['plate','dice','pizza slice','wheel','window','flag'],[0,1,2,0,1,2]),
+  CH('C. Circle the shape.',[['A coin is a ...',['circle','triangle'],0],['A tile is a ...',['square','circle'],0],['A slice of cheese can be a ...',['triangle','circle'],0]]),
+  DR('D. Draw one round thing in your home.',90));
+ mo(54,'Sides and Corners',
+  CH('B. True or false? Circle.',[['A square has 4 corners.',0],['A triangle has 4 sides.',1],['A circle is round.',0],['A circle has 3 corners.',1]],TF),
+  CP('C. How many sides? Circle.',[['triangular-flag','a flag',0],['yellow-square','a square',1]],['3 sides','4 sides']));
+ mo(55,'Colour the Shapes',
+  CT('B. Count. Write how many.',[[6,'circle'],[4,'tri'],[5,'square'],[3,'star']]),
+  CH('C. Circle the answer.',[['Which shape is round?',['circle','square'],0],['Which shape has 3 corners?',['square','triangle'],1]]),
+  BK(['circle','square','triangle','round','sides','corners']));
+ mo(56,'Sort the Things',
+  CP('B. Look. Circle the shape.',[['coin','a coin',0],['window','a window',1],['triangular-flag','a flag',2],['doughnut','a doughnut',0],['framed-picture','a frame',1],['cheese-wedge','cheese',2]],SH),
+  CT('C. Count. Write how many.',[[5,'circle'],[3,'tri'],[4,'square'],[6,'circle']]),
+  DR('D. Draw a square tile and a round plate.',50));
+ mo(57,'Count the Shapes',
+  CM('B. Circle the group that has more.',[[3,5,'tri'],[6,2,'circle'],[4,1,'square']]),
+  PI('C. Count. Circle the right number.',[[5,'square',[4,5,6]],[3,'circle',[3,2,4]],[7,'tri',[6,7,8]]]),
+  F('D. Count the sides and write.',['1 triangle has {{3}} sides.','2 triangles have {{6}} sides.','1 square has {{4}} sides.'],1));
+ mo(58,'Which Shape?',
+  CP('B. Look and circle.',[['wheel','a wheel is a ...',0],['game-die','a dice is a ...',1],['pizza','a pizza slice is a ...',2],['coin','a coin is a ...',0]],SH),
+  CH('C. Listen. Circle the shape.',[['I am round and I roll.',['circle','square'],0],['I have 3 sides.',['triangle','circle'],0],['I have 4 sides the same.',['square','triangle'],0],['I have no corners.',['circle','triangle'],0]]),
+  DR('D. Draw a shape. Say its name.',50));
+ mo(59,'Shape Stories',
+  CT('B. Count the shapes. Write how many.',[[3,'circle'],[2,'square'],[4,'tri'],[5,'circle']]),
+  CH('C. Listen. Circle the answer.',[['Zara has 2 round biscuits and eats 1. How many left?',['1','2'],0],['Ali draws 1 square and 1 triangle. How many shapes?',['2','3'],0]]));
+ mo(60,'Shape House',
+  CH('B. Look at your house. Circle.',[['The roof is a ...',['triangle','circle'],0],['The sun is a ...',['circle','square'],0]]),
+  F('C. How many did you draw? Write.',['triangles: {{____}}','squares: {{____}}','circles: {{____}}'],3));
+ addPages(S,'Circles, squares and triangles around us',[
+  pg('Shapes Warm-up ★','Start here if shapes are new. Hold a plate, a book and a sandwich cut in half.','Name a circle, a square and a triangle with help.',
+   CN(['blue-circle','yellow-square','triangular-flag'],'This is a <b>circle</b>. This is a <b>square</b>. This is a <b>triangle</b>.','Three shapes'),
+   TS('A. Trace each shape with your finger, then a crayon.',['circle','square','tri']),
+   CP('B. Circle the shape.',[['coin','a coin',0],['window','a window',1],['triangular-flag','a flag',2]],SH),
+   CO('C. Colour the shapes.',[['circle','red'],['square','blue'],['tri','yellow']])),
+  pg('Shapes Challenge ★★★','A grown-up reads each question. Think carefully.','Use sides and corners to name and sort shapes, and explain.',
+   CH('A. True or false? Circle.',[['A square turned on its corner is still a square.',0],['A triangle has 3 corners.',0],['A circle has 1 corner.',1],['A dice has square faces.',0]],TF),
+   CH('B. Guess my shape. Circle.',[['I have 4 sides and 4 corners.',['square','triangle'],0],['I have no sides that are straight.',['circle','square'],0],['I have 1 fewer side than a square.',['triangle','circle'],0]]),
+   CH('C. Spot the odd one out. Circle it.',[['coin, plate, wheel, flag',['flag','coin'],0],['window, tile, dice, pizza slice',['pizza slice','tile'],0]]),
+   F('D. Count all the sides.',['2 squares have {{8}} sides.','1 triangle and 1 square have {{7}} sides.'],1),
+   DR('E. Draw a robot using circles, squares and triangles.',60)),
+  pg('Topic Test: Shapes (1)','A grown-up reads each question and marks it out of 22.','Check naming circles, squares and triangles.',
+   SC(22,11,18),
+   CP('1. Circle the shape. (6 marks)',[['wheel','a wheel',0],['game-die','a dice',1],['pizza','a pizza slice',2],['coin','a coin',0],['window','a window',1],['triangular-flag','a flag',2]],SH),
+   CT('2. Count. Write how many. (4 marks)',[[4,'circle'],[3,'square'],[5,'tri'],[2,'square']])),
+  pg('Topic Test: Shapes (2)','Add up your marks from both pages.','Check sides, corners and sorting shapes.',
+   F('3. Write the number. (4 marks)',['A triangle has {{3}} sides.','A square has {{4}} sides.','A triangle has {{3}} corners.','A circle has {{0}} corners.'],1),
+   SO('4. Write each thing under its shape. (6 marks)',SH,['coin','tile','flag','plate','window','cheese'],[0,1,2,0,1,2]),
+   DR('5. Draw a triangle and a square. (2 marks)',150),
+   HOW),
+  pg('Word Mat: Shapes','Keep this mat on the table. Point and say each word.','Know the names of circles, squares and triangles.',
+   CN(['blue-circle','coin','wheel'],'A <b>circle</b> is round. It has no sides and no corners. A coin and a wheel are circles.','Circle'),
+   CN(['yellow-square','window','game-die'],'A <b>square</b> has 4 straight sides that are the same and 4 corners. A window and a dice face are squares.','Square'),
+   CN(['triangular-flag','pizza','cheese-wedge'],'A <b>triangle</b> has 3 sides and 3 corners. A flag and a pizza slice can be triangles.','Triangle'),
+   NO('<b>Shape words</b><br><b>side</b>: a straight edge · <b>corner</b>: where two sides meet · <b>round</b>: curved, no corners'),
+   TS('Trace and say',['circle','square','tri']),
+   BK(['circle','square','triangle','side','corner','round','straight','shape']))]);
+
+ /* ---- Topic 14: Adding with pictures ---- */
+ mo(61,'Putting Together',
+  PSUM('B. Count both groups. How many in all?',[[3,1,'heart'],[2,2,'square'],[1,4,'circle']]),
+  FP('C. Look and write how many in all.',[['red-apple','2 apples and 1 more apple make {{3}}.'],['banana','1 banana and 1 more make {{2}}.'],['balloon','3 balloons and 2 more make {{5}}.'],['duck','2 ducks and 2 more make {{4}}.']],2),
+  BK(['add','+','in all','more','together']));
+ mo(62,'Count and Add',
+  F('B. Add. Write the answer.',['1 + 2 = {{3}}','2 + 2 = {{4}}','3 + 1 = {{4}}','2 + 3 = {{5}}','1 + 1 = {{2}}','4 + 1 = {{5}}'],3),
+  CH('C. Circle the right answer.',[['2 + 1',['3','4'],0],['3 + 2',['4','5'],1]]),
+  PSUM('D. Count and add.',[[1,3,'star'],[2,2,'circle']]));
+ mo(63,'Fruit Sums',
+  FP('B. Look and add.',[['grapes','2 + 2 = {{4}}'],['tangerine','1 + 3 = {{4}}'],['red-apple','3 + 2 = {{5}}'],['banana','2 + 1 = {{3}}']],2),
+  PSUM('C. Count and add.',[[2,1,'circle'],[3,2,'star']]),
+  DR('D. Draw 2 mangoes and 1 more mango.',90));
+ mo(64,'Add One More',
+  PSUM('B. Add one more. Count them all.',[[1,1,'star'],[2,1,'heart'],[3,1,'circle'],[4,1,'square']]),
+  F('C. One more than ...',['One more than 2 is {{3}}.','One more than 4 is {{5}}.','One more than 1 is {{2}}.','One more than 3 is {{4}}.'],2),
+  DR('D. Draw 3 stars. Draw 1 more. How many now?',80));
+ mo(65,'Toy Sums',
+  PSUM('B. Count and add.',[[2,2,'circle'],[1,3,'heart'],[3,2,'square'],[4,1,'star']]),
+  WP('C. A grown-up reads. Write the answer.',['Ali has 2 kites. He gets 2 more. How many kites now? {{4}}','Sara has 3 dolls and 1 teddy. How many toys? {{4}}','There are 1 red ball and 4 blue balls. How many balls? {{5}}']),
+  CH('D. Circle the answer.',[['1 car + 2 cars',['3','4'],0],['2 drums + 1 drum',['2','3'],1]]));
+ mo(66,'Which Sum?',
+  PSUM('B. Count and add.',[[1,2,'circle'],[2,3,'heart'],[3,1,'star']]),
+  CH('C. Which sum makes 5? Circle.',[['2 + 3 or 2 + 2',['2 + 3','2 + 2'],0],['4 + 1 or 3 + 1',['4 + 1','3 + 1'],0],['1 + 3 or 1 + 4',['1 + 3','1 + 4'],1]]),
+  MA('D. Draw a line from each sum to its answer.',['1 + 3','2 + 3','1 + 1'],['2','4','5']));
+ mo(67,'Draw and Add',
+  PSUM('B. Count and add.',[[2,2,'star'],[4,1,'circle']]),
+  F('C. Add.',['1 + 4 = {{5}}','3 + 1 = {{4}}','2 + 1 = {{3}}'],3),
+  CH('D. Circle the answer.',[['1 + 2',['3','2'],0],['2 + 3',['4','5'],1]]));
+ mo(68,'Animal Stories',
+  FP('B. Look and add.',[['rabbit','1 rabbit + 2 rabbits = {{3}}'],['cat','2 cats + 1 cat = {{3}}'],['bird','3 birds + 2 birds = {{5}}'],['fish','2 fish + 2 fish = {{4}}']],2),
+  CH('C. Listen. Circle the answer.',[['4 hens eat. 1 more hen comes. How many hens?',['5','4'],0],['1 cow and 1 goat. How many animals?',['1','2'],1]]),
+  DR('D. Draw 2 frogs and 1 more frog.',80));
+ mo(69,'Match the Sum',
+  MA('B. Draw a line again.',['4 + 1','1 + 2','1 + 1','2 + 2'],['3','2','4','5']),
+  PSUM('C. Count and add.',[[1,3,'heart'],[2,1,'circle'],[3,2,'square']]),
+  F('D. Fill in the answer.',['2 + 2 = {{4}}','3 + 1 = {{4}}'],2));
+ mo(70,'My Adding Picture',
+  WP('B. A grown-up reads. Write the answer.',['There are 3 cookies on a plate. Ammi puts 1 more. How many cookies? {{4}}','2 children play. 3 more come. How many children? {{5}}']),
+  PSUM('C. Count and add.',[[2,1,'star']]));
+ addPages(S,'Adding with pictures',[
+  pg('Adding Warm-up ★','Start here if adding is new. Use real spoons or blocks: make two groups, push them together and count.','Add two small groups to 3 with help.',
+   CN(['red-apple','red-apple'],'1 apple and 1 more apple. Push them together. Count: one, two. 1 + 1 = 2.','Put together'),
+   PSUM('A. Count both groups. How many in all?',[[1,1,'circle'],[1,2,'star'],[2,1,'heart']]),
+   FP('B. Look and add.',[['balloon','1 + 1 = {{2}}'],['kite','2 + 1 = {{3}}']],2),
+   CH('C. Circle the answer.',[['1 + 1',['2','3'],0],['1 + 2',['3','4'],0]]),
+   DR('D. Draw 1 ball. Draw 1 more ball.',100)),
+  pg('Adding Challenge ★★★','A grown-up reads each question. Think carefully.','Add to 5, find missing parts and spot mistakes.',
+   CH('A. True or false? Circle.',[['2 + 2 = 4',0],['3 + 1 = 5',1],['1 + 4 = 4 + 1',0],['When we add, the number gets smaller.',1]],TF),
+   F('B. What is missing?',['2 + {{1}} = 3','{{3}} + 1 = 4','1 + {{4}} = 5','2 + {{3}} = 5'],2),
+   CH('C. Spot the mistake. Which sum is wrong?',[['2 + 1 = 3 or 2 + 2 = 5',['2 + 1 = 3','2 + 2 = 5'],1],['1 + 3 = 4 or 3 + 2 = 4',['1 + 3 = 4','3 + 2 = 4'],1]]),
+   WP('D. A grown-up reads. Write the answer.',['Hamza has 5 sweets in two hands. 2 are in one hand. How many are in the other hand? {{3}}','Zara has 2 red beads and 2 blue beads. Bilal has 3 beads. Who has more? {{Zara}}']),
+   DR('E. Draw two groups that make 5 in all.',60)),
+  pg('Topic Test: Adding (1)','A grown-up reads each question and marks it out of 20.','Check adding pictures to 5.',
+   SC(20,10,16),
+   PSUM('1. Count and add. (4 marks)',[[2,1,'circle'],[3,2,'star'],[1,3,'heart'],[2,2,'square']]),
+   FP('2. Look and add. (4 marks)',[['red-apple','2 + 1 = {{3}}'],['duck','1 + 1 = {{2}}'],['balloon','3 + 1 = {{4}}'],['teddy-bear','4 + 1 = {{5}}']],2),
+   NO('Use your fingers, the pictures or the number line to help you count them all.'),{t:'numline'}),
+  pg('Topic Test: Adding (2)','Add up your marks from both pages.','Check sums and adding stories.',
+   F('3. Add. (4 marks)',['1 + 2 = {{3}}','2 + 3 = {{5}}','3 + 1 = {{4}}','2 + 2 = {{4}}'],2),
+   MA('4. Draw a line from each sum to its answer. (3 marks)',['1 + 1','4 + 1','2 + 1'],['5','3','2']),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['2 birds sit on a wall. 2 more come. How many birds? {{4}}','Ali has 3 cars. He gets 1 more. How many cars? {{4}}','There are 4 eggs and 1 more egg. How many eggs? {{5}}']),
+   DR('6. Draw 1 + 2 with stars. (2 marks)',60),
+   HOW),
+  pg('Word Mat: Adding','Keep this mat on the table. Point and say each word.','Know the words and sign for adding.',
+   CN(['red-apple','red-apple','red-apple'],'<b>Adding</b> means putting groups together. 2 apples + 1 apple = 3 apples. Count them all.','Adding'),
+   NO('<b>Signs</b><br><b>+</b> means add, put together · <b>=</b> means makes, is the same as<br>Say it: two <b>plus</b> one <b>makes</b> three.'),
+   PSUM('Sums to 5',[[1,1,'star'],[2,1,'star'],[2,2,'star'],[3,2,'star']]),
+   BX('Ways to make 5',['1 + 4|2 + 3|3 + 2|4 + 1']),
+   {t:'numline'},
+   BK(['add','plus','+','makes','=','in all','more','together']))]);
+
+ /* ---- Topic 15: Counting to 20 with objects ---- */
+ mo(71,'Up to Twenty',
+  CT('B. Count. Write how many.',[[18,'heart'],[20,'circle']]),
+  BX('C. Say and write 11 to 20.',['11|{{12}}|13|{{14}}|15','16|{{17}}|18|{{19}}|20']),
+  F('D. Ten and some more.',['10 and 6 more is {{16}}','10 and 9 more is {{19}}','10 and 10 more is {{20}}'],3));
+ mo(72,'Count and Write',
+  CT('B. Count again. Write how many.',[[17,'tri'],[16,'square']]),
+  CH('C. Which number is bigger? Circle.',[['16 or 19',['16','19'],1],['20 or 17',['20','17'],0],['18 or 15',['18','15'],0]]));
+ mo(73,'Write 16, 17, 18',
+  CT('B. Count. Write 16, 17 or 18.',[[16,'star'],[18,'circle'],[17,'heart'],[18,'square']]),
+  BX('C. Write the missing numbers.',['15|{{16}}|{{17}}|{{18}}|19']));
+ mo(74,'Write 19 and 20',
+  CT('B. Count. Write 19 or 20.',[[19,'star'],[20,'heart'],[20,'square'],[19,'circle']]),
+  F('C. What comes next?',['17, 18, {{19}}','18, 19, {{20}}'],2),
+  BX('D. Fill in 11 to 20.',['11|12|{{13}}|14|{{15}}','{{16}}|17|18|{{19}}|{{20}}']));
+ mo(75,'Missing Numbers',
+  BX('B. Count back. Fill in.',['20|{{19}}|18|{{17}}|16','15|{{14}}|13|{{12}}|11']),
+  F('C. What comes just before?',['{{19}}, 20','{{16}}, 17','{{13}}, 14','{{17}}, 18'],4),
+  F('D. What comes just after?',['18, {{19}}','15, {{16}}','19, {{20}}','11, {{12}}'],4),
+  {t:'numline'});
+ mo(76,'How Many?',
+  CM('B. Circle the group that has more.',[[16,12,'star'],[14,19,'circle']]),
+  DR('C. Draw 16 dots in two rows.',90));
+ mo(77,'Ten and Some More',
+  PSUM('B. Ten and some more. Count them all.',[[10,6,'circle'],[10,9,'star']]),
+  F('C. Fill in.',['10 and {{7}} more make 17.','10 and {{8}} more make 18.','10 and {{9}} more make 19.','10 and {{6}} more make 16.'],2),
+  BK(['ten','sixteen','seventeen','eighteen','nineteen','twenty']));
+ mo(78,'One More, One Less',
+  F('B. One more. Write it.',['One more than 15 is {{16}}.','One more than 17 is {{18}}.','One more than 18 is {{19}}.'],1),
+  F('C. One less. Write it.',['One less than 17 is {{16}}.','One less than 19 is {{18}}.','One less than 16 is {{15}}.'],1),
+  BX('D. Write the numbers on both sides.',['{{15}}|16|{{17}}','{{17}}|18|{{19}}','{{18}}|19|{{20}}']),
+  CH('E. Circle the answer.',[['Which is one more than 19?',['20','18'],0],['Which is one less than 17?',['18','16'],1]]));
+ mo(79,'Counting Stories',
+  WP('B. A grown-up reads. Write the answer.',['There are 17 eggs. Ammi buys 1 more. How many now? {{18}}','Hamza has 20 sweets. He eats 1. How many now? {{19}}']),
+  CH('C. Listen. Circle the answer.',[['10 cars and 7 more cars. How many?',['17','16'],0],['One less than 20 is ...',['19','18'],0]]),
+  DR('D. Draw a story about 16 balloons.',80));
+ mo(80,'My Collection',
+  CH('B. Look at your 20 things. Circle.',[['How many in each row?',['10','5'],0],['How many rows?',['2','3'],0]]),
+  F('C. Fill in.',['10 and 10 make {{20}}.','Twenty is {{two}} tens.'],2),
+  BX('D. Count your things in tens.',['1|2|3|4|5|6|7|8|9|10','11|12|13|14|15|16|17|18|19|20']));
+ addPages(S,'Counting to 20 with objects',[
+  pg('Counting to 20 Warm-up ★','Start here if 16 to 20 are new. Count real beans or buttons with a grown-up, moving each one.','Count and write 16 to 20 with help.',
+   CN(['star'],'After 15 we say 16, 17, 18, 19, 20. Line up 10 first, then count on.','Count on from 10'),
+   CT('A. Count. Write how many.',[[16,'circle'],[18,'star']]),
+   TR('B. Trace the numbers.',['16','18','20'],5),
+   BX('C. Write the missing numbers.',['15|16|{{17}}|18','18|{{19}}|20'])),
+  pg('Counting to 20 Challenge ★★★','A grown-up reads each question. Think carefully.','Order, compare and use numbers to 20 and explain.',
+   CH('A. True or false? Circle.',[['19 is more than 17.',0],['After 18 comes 20.',1],['20 is two tens.',0],['16 is less than 14.',1]],TF),
+   F('B. Think it through.',['I am one more than 17. I am {{18}}.','I am one less than 20. I am {{19}}.','I am 10 and 6 more. I am {{16}}.','I come just before 17. I am {{16}}.'],2),
+   CH('C. Spot the mistake. Which number is wrong?',[['16, 17, 19, 19, 20',['the first 19','16'],0],['20, 19, 18, 18, 16',['the second 18','20'],0]]),
+   WP('D. A grown-up reads. Write the answer.',['There are 18 children. 2 more come. How many now? {{20}}','Ali has 16 stickers. Sara has 19 stickers. Who has more? {{Sara}}','A box has 10 pencils. There are 7 more on the table. How many pencils? {{17}}'])),
+  pg('Topic Test: Counting to 20 (1)','A grown-up reads each question and marks it out of 22.','Check counting and writing 16 to 20.',
+   SC(22,11,18),
+   CT('1. Count. Write how many. (4 marks)',[[17,'star'],[19,'circle'],[16,'heart'],[20,'square']]),
+   BX('2. Write the missing numbers. (6 marks)',['14|{{15}}|16|{{17}}|18','{{16}}|17|{{18}}|19|{{20}}','{{11}}|12|13|14|15']),
+   NO('Use the number line to help you.'),{t:'numline'}),
+  pg('Topic Test: Counting to 20 (2)','Add up your marks from both pages.','Check ten and some more, one more, one less and stories.',
+   F('3. Ten and some more. (3 marks)',['10 and 8 more is {{18}}','10 and 6 more is {{16}}','10 and 9 more is {{19}}'],3),
+   F('4. One more and one less. (4 marks)',['One more than 16 is {{17}}.','One more than 19 is {{20}}.','One less than 18 is {{17}}.','One less than 17 is {{16}}.'],1),
+   CH('5. Which is more? Circle. (2 marks)',[['17 or 20',['17','20'],1],['18 or 16',['18','16'],0]]),
+   WP('6. A grown-up reads. Write the answer. (3 marks)',['There are 10 ducks and 7 more. How many ducks? {{17}}','Zara has 19 beads. She gets 1 more. How many beads? {{20}}','There are 18 cups. 1 breaks. How many cups now? {{17}}']),
+   HOW),
+  pg('Word Mat: Counting to 20','Keep this mat on the table. Point and count.','Know the numbers 16 to 20 as ten and some more.',
+   CN(['star'],'16 to 20 are ten and some more. <b>16</b> is ten and 6. <b>17</b> is ten and 7. <b>18</b> is ten and 8. <b>19</b> is ten and 9. <b>20</b> is two tens.','Ten and some more'),
+   BX('Count from 1 to 20',['1|2|3|4|5|6|7|8|9|10','11|12|13|14|15|16|17|18|19|20']),
+   NO('<b>Number names</b><br>16 sixteen · 17 seventeen · 18 eighteen · 19 nineteen · 20 twenty<br><b>One more</b>: count on one · <b>One less</b>: count back one'),
+   PSUM('10 and 10 more is 20',[[10,10,'circle']]),
+   {t:'numline'},
+   BK(['sixteen','seventeen','eighteen','nineteen','twenty','ten','one more','one less']))]);
+});

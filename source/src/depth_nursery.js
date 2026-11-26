@@ -1,1 +1,94 @@
-/* Content depth for this grade: DEPTH.push(({more,addPages})=>{...}). See depth_g1.js and CLAUDE.md "Content depth". */
+/* Content depth for this grade: DEPTH.push(({more,addPages,addPaper})=>{...}). See depth_g1.js and CLAUDE.md "Content depth". */
+
+/* P1: Nursery Term 2 Practice Papers (Maths, English, Urdu, General Knowledge), 4 pages each, marks on every question */
+DEPTH.push(({addPaper})=>{
+ const HOW=['How did I do? Draw a smiley face or write one thing you can do now.',['I can ______________________________.']];
+ addPaper('nursery-maths',[
+  pg('Maths Practice Paper (1)','Answer every question. A grown-up reads each question aloud and marks it out of 39.','Practise numbers to 20 for the end of term test.',
+   NO('Score: ______ / 39<br>★ 0 to 19 keep practising &nbsp; ★★ 20 to 30 good work &nbsp; ★★★ 31 to 39 super!'),
+   CT('1. Count and write the number. (4 marks)',[[11,'star'],[14,'heart'],[17,'circle'],[20,'square']]),
+   BX('2. Write the missing numbers. (4 marks)',['10|11|{{12}}|13|{{14}}|15','16|{{17}}|18|{{19}}|20']),
+   CH('3. Circle the bigger number. (3 marks)',[['11 or 15',['11','15'],1],['18 or 13',['18','13'],0],['20 or 16',['20','16'],0]])),
+  pg('Maths Practice Paper (2)','Look at each picture carefully before you circle.','Practise big and small, tall and short, and shapes.',
+   CP('4. Circle big or small. (4 marks)',[['elephant','an elephant',0],['ant','an ant',1],['spouting-whale','a whale',0],['mouse','a mouse',1]],['big','small']),
+   CP('5. Circle tall or short. (2 marks)',[['giraffe','a giraffe',0],['potted-plant','a little plant',1]],['tall','short']),
+   SP('6. Circle the right shape. (4 marks)',[['circle',['square','circle','tri'],1],['triangle',['tri','star','square'],0],['square',['heart','circle','square'],2],['star',['tri','circle','star'],2]])),
+  pg('Maths Practice Paper (3)','Count each group, then add.','Practise adding with pictures and numbers.',
+   {t:'picsum',h:'7. Count and add. (4 marks)',items:[[2,1,'star'],[3,2,'heart'],[4,1,'circle'],[2,2,'square']]},
+   F('8. Add. (4 marks)',['1 + 1 = {{2}}','2 + 3 = {{5}}','4 + 2 = {{6}}','3 + 3 = {{6}}'],2),
+   CH('9. How many sides? (2 marks)',[['A triangle has ... sides.',['3','4'],0],['A square has ... sides.',['3','4'],1]]),
+   DR('10. Draw 3 circles and 2 triangles. (2 marks)',130)),
+  pg('Maths Practice Paper (4)','A grown-up reads the word problems aloud. Add up your marks from all four pages.','Practise comparing groups and simple word problems.',
+   CM('11. Circle the group with more. (2 marks)',[[6,4,'star'],[3,7,'circle']]),
+   WP('12. Word problems. (4 marks)',['Ali has 2 red balloons and 2 blue balloons. How many balloons does he have? {{4}}','There are 3 ducks in the pond. 1 more comes. How many ducks are there now? {{4}}','Sara has 5 apples. Hamza has 3 apples. Who has more? {{Sara}}','Dada buys 2 oranges and 3 bananas. How many fruits does he buy? {{5}}']),
+   WR(...HOW))]);
+
+ addPaper('nursery-english',[
+  pg('English Practice Paper (1)','Answer every question. A grown-up reads each question aloud and marks it out of 52.','Practise the sounds o, g, u, l, f, b, e and h.',
+   NO('Score: ______ / 52<br>★ 0 to 25 keep practising &nbsp; ★★ 26 to 39 good work &nbsp; ★★★ 40 to 52 super!'),
+   FP('1. Write the first sound. (6 marks)',[['octopus','{{o}}ctopus'],['goat','{{g}}oat'],['lion','{{l}}ion'],['fish','{{f}}ish'],['banana','{{b}}anana'],['horse','{{h}}orse']],3),
+   CP('2. Does it start with e? Circle yes or no. (4 marks)',[['egg','egg',0],['elephant','elephant',0],['cat','cat',1],['bed','bed',1]],['Yes','No']),
+   FP('3. Write u or l. (2 marks)',[['bug','b{{u}}g'],['leaf-fluttering-in-wind','{{l}}eaf']])),
+  pg('English Practice Paper (2)','Look at each big letter. Circle its small letter partner.','Practise big (capital) and small letters.',
+   CH('4. Circle the small letter partner. (6 marks)',[['A',['a','e'],0],['B',['d','b'],1],['G',['g','q'],0],['H',['n','h'],1],['L',['l','i'],0],['F',['t','f'],1]]),
+   CH('5. Names start with a big letter. Circle the right one. (4 marks)',[['',['ali','Ali'],1],['',['Sara','sara'],0],['',['bilal','Bilal'],1],['',['Zoya','zoya'],0]]),
+   F('6. Write the big letter. (4 marks)',['a → {{A}}','b → {{B}}','e → {{E}}','h → {{H}}'],4),
+   F('7. Write the small letter. (4 marks)',['G → {{g}}','L → {{l}}','F → {{f}}','U → {{u}}'],4)),
+  pg('English Practice Paper (3)','Look at each picture. Circle or write its label.','Practise reading and writing picture labels.',
+   {t:'choice',h:'8. Circle the right label. (4 marks)',img:['cat','bus','sun','dog'],items:[['',['cat','sun'],0],['',['dog','bus'],1],['',['sun','cat'],0],['',['bus','dog'],1]]},
+   FP('9. Write the label. (4 marks)',[['egg','{{egg}}'],['fox','{{fox}}'],['bed','{{bed}}'],['fish','{{fish}}']]),
+   CP('10. Is the label right? Circle yes or no. (4 marks)',[['frog','frog',0],['duck','dog',1],['sun','sun',0],['horse','house',1]],['Yes','No'])),
+  pg('English Practice Paper (4)','Say each pair out loud. Add up your marks from all four pages.','Practise hearing words that rhyme.',
+   CH('11. Do they rhyme? Circle yes or no. (4 marks)',[['cat and hat',0],['sun and run',0],['bed and cup',1],['snow and go',0]],['Yes','No']),
+   CH('12. Which word rhymes? (2 marks)',[['hat rhymes with ...',['mat','dog'],0],['fun rhymes with ...',['bed','sun'],1]]),
+   CH('13. Circle the odd one out. (2 marks)',[['cap, map, dog',['cap','map','dog'],2],['fox, sun, box',['fox','sun','box'],1]]),
+   BK(['mat','fun']),
+   F('14. Write a rhyming word from the box. (2 marks)',['cat, hat, {{mat}}','sun, run, {{fun}}'],2),
+   WR(...HOW))]);
+
+ addPaper('nursery-urdu',[
+  pg('امتحانی پرچہ (۱)|Practice paper 1','ہر سوال کریں۔ بڑے سوال پڑھ کر سنائیں اور ۳۵ میں سے نمبر دیں۔','Practise letters with dots for the end of term test.',
+   NO('نمبر: ______ / ۳۵<br>★ ۰ سے ۱۷: اور مشق کریں &nbsp; ★★ ۱۸ سے ۲۶: اچھا کام &nbsp; ★★★ ۲۷ سے ۳۵: شاباش!'),
+   CH('۱۔ کتنے نقطے ہیں؟ دائرہ لگائیں۔ (۴ نمبر)',[['ب',0],['ت',1],['پ',2],['ق',1]],['ایک','دو','تین']),
+   CH('۲۔ نقطہ اوپر ہے یا نیچے؟ (۴ نمبر)',[['ن',0],['ب',1],['ف',0],['ج',1]],['اوپر','نیچے'])),
+  pg('امتحانی پرچہ (۲)|Practice paper 2','حروف جوڑ کر لفظ بنائیں اور لفظ توڑیں۔','Practise joining two letters and breaking words.',
+   F('۳۔ حروف جوڑ کر لکھیں۔ (۴ نمبر)',['ب + ا = {{با}}','ک + ب = {{کب}}','د + ل = {{دل}}','س + ب = {{سب}}'],2,1),
+   F('۴۔ لفظ توڑیں۔ (۴ نمبر)',['بس = {{ب}} + س','گل = گ + {{ل}}','تب = {{ت}} + ب','اب = ا + {{ب}}'],2,1),
+   TR('۵۔ خوش خط لکھیں۔ (۱ نمبر)',['بس'],4),
+   CH('۶۔ کتنے حروف ہیں؟ دائرہ لگائیں۔ (۴ نمبر)',[['بس',0],['دل',0],['مور',1],['کتا',1]],['دو','تین'])),
+  pg('امتحانی پرچہ (۳)|Practice paper 3','تصویر دیکھیں اور صحیح جواب پر دائرہ لگائیں۔','Practise two-letter picture words and winter words.',
+   {t:'choice',h:'۷۔ تصویر دیکھ کر صحیح لفظ پر دائرہ لگائیں۔ (۴ نمبر)',img:['mango','fire','snowflake','coat'],items:[['',['آم','آگ'],0],['',['کپ','آگ'],1],['',['برف','ٹب'],0],['',['چائے','کوٹ'],1]]},
+   CH('۸۔ سردی یا گرمی؟ دائرہ لگائیں۔ (۴ نمبر)',[['مفلر',0],['آئس کریم',1],['کوٹ',0],['تربوز',1]],['سردی','گرمی']),
+   F('۹۔ پہلا حرف لکھیں۔ (۲ نمبر)',['{{ک}}وٹ','{{ب}}رف'],2,1)),
+  pg('امتحانی پرچہ (۴)|Practice paper 4','نظم سنیں اور ساتھ پڑھیں۔ پھر سوال کریں۔ چاروں صفحوں کے نمبر جمع کریں۔','Practise a short poem and rhyming words.',
+   PA('بادل آئے، بادل آئے\nساتھ میں بارش لے کر آئے\nٹپ ٹپ بوندیں، چھم چھم پانی\nخوش ہیں بچے، خوش ہیں نانی'),
+   CH('۱۰۔ صحیح جواب پر دائرہ لگائیں۔ (۲ نمبر)',[['بادل اپنے ساتھ کیا لائے؟',['بارش','برف'],0],['بوندیں کیسے گرتی ہیں؟',['ٹپ ٹپ','دھم دھم'],0]]),
+   BK(['نانی','اندھیرا']),
+   F('۱۱۔ ہم آواز لفظ لکھیں۔ (۲ نمبر)',['پانی ۔ {{نانی}}','سویرا ۔ {{اندھیرا}}'],2,1),
+   WR('میں نے کیسا کیا؟ ایک بات لکھیں جو اب مجھے آتی ہے۔',['مجھے ______________ آتا ہے۔']))]);
+
+ addPaper('nursery-gk',[
+  pg('General Knowledge Practice Paper (1)','Answer every question. A grown-up reads each question aloud and marks it out of 42.','Practise my family for the end of term test.',
+   NO('Score: ______ / 42<br>★ 0 to 20 keep practising &nbsp; ★★ 21 to 32 good work &nbsp; ★★★ 33 to 42 super!'),
+   MA('1. Match. Write the letter in the box. (4 marks)',['Abbu','Ammi','Dada','Nani'],['my father','my mother',"Abbu's father","Ammi's mother"]),
+   CP('2. Young or old? Circle. (4 marks)',[['baby','a baby',0],['old-man','Nana',1],['boy','my big brother',0],['old-woman','Dadi',1]],['young','old']),
+   BK(['father','brother']),
+   F('3. Fill in. (2 marks)',['This is Abbu. He is my {{father}}.','This is my baby {{brother}}.'])),
+  pg('General Knowledge Practice Paper (2)','Use the word box. Then circle the magic word.','Practise our helpers at home and kind words.',
+   BK(['cook','driver','gardener','guard']),
+   F('4. Name the helper. (4 marks)',['The {{cook}} makes roti.','The {{driver}} drives the car.','The {{gardener}} waters the plants.','The {{guard}} opens the gate.']),
+   CH('5. Magic words. Circle the right one. (2 marks)',[['Ammi gives me food. I say ...',['thank you','sorry'],0],['I broke a cup. I say ...',['please','sorry'],1]]),
+   CH('6. What is it for? (3 marks)',[['A broom is for ...',['sweeping','cooking'],0],['Soap is for ...',['sleeping','washing'],1],['A basket is for ...',['carrying clothes','driving'],0]]),
+   CH('7. Safe or not safe? (2 marks)',[['Touching the hot stove',1],['Asking a grown-up to cut fruit',0]],['safe','not safe'])),
+  pg('General Knowledge Practice Paper (3)','Look at the pictures. Circle or fill in.','Practise winter in Pakistan and washing hands.',
+   CP('8. Winter or summer? Circle. (4 marks)',[['scarf','a scarf',0],['watermelon','a watermelon',1],['gloves','gloves',0],['sunglasses','sunglasses',1]],['winter','summer']),
+   BK(['water','soap','rub','dry']),
+   CY('9. Wash your hands. Fill in the steps. (4 marks)',[['droplet','Wet hands with {{water}}'],['soap','Put on {{soap}}'],['bubbles','{{rub}} and count to 20'],['hand-with-fingers-splayed','Rinse and {{dry}}']]),
+   CH('10. Yes or no? (2 marks)',[['It snows in the mountains in winter.',0],['We can drink dirty water.',1]],['Yes','No'])),
+  pg('General Knowledge Practice Paper (4)','Listen and think. Add up your marks from all four pages.','Practise sounds around us and keeping clean.',
+   CP('11. Loud or quiet? Circle. (4 marks)',[['drum','a drum',0],['mouse','a mouse',1],['ambulance','an ambulance',0],['feather','a falling feather',1]],['loud','quiet']),
+   BK(['moo','quack','woof','tweet']),
+   F('12. Animal sounds. (4 marks)',['The cow says {{moo}}.','The duck says {{quack}}.','The dog says {{woof}}.','The bird says {{tweet}}.'],2),
+   CH('13. Clean or not clean? Circle. (3 marks)',[['Brushing teeth every morning',0],['Licking dirty fingers',1],['Cutting our nails',0]],['clean','not clean']),
+   WR(...HOW))]);
+});

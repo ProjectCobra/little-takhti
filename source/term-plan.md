@@ -115,6 +115,7 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 - 21 Nov 2026: batch 20 (AI Grades 1 to 3, topics 14 and 15). Grade 1: AI and animals; My AI rules. Grade 2: Fair or unfair?; Designing an AI helper. Grade 3: AI and the environment; Build a prompt plan. File: ai.js. New picture: bullseye. New words: turtle, whale, polite, rules (Grade 1); fair, equal, designer, include (Grade 2); environment, satellite, prompt, energy, recycle (Grade 3). All AI topics 4 to 15 are now built, and the term plan is finished.
 - 21 Nov 2026: weekly mode, Grade 1 catch-up to Week 14. Maths: Place value: tens and ones. Science: What plants need to grow. Social Studies: Transport then and now; Festivals and celebrations. Urdu: ہفتے کے دن (days of the week); الٹ الفاظ (opposites). File: term2_g1.js. New pictures: auto rickshaw, locomotive, motorcycle, fireworks, birthday cake, wilted flower, sparkler, calendar. New Grade 1 words: seed, soil, sunlight, festival, balloon, transport, train, bundle.
 - 22 Nov 2026: weekly mode, Grade 1 Week 15. Maths: Ordering numbers to 100. Science: Healthy habits and germs. Social Studies: Saving water and electricity. Urdu: واحد اور جمع (singular and plural). File: term2_g1.js. New pictures: microbe, sneezing face, electric plug, roll of paper, toilet. New Grade 1 words: germs, soap, healthy, between, order, save, switch.
+- 26 Nov 2026: depth batch P1. Nursery Term 2 Practice Papers for Maths (39 marks), English (52), Urdu (35) and General Knowledge (42): 4 pages each, marks on every question, score and star bands on page 1, a "How did I do?" line, answer keys. They cover the five term 2 topics of each subject and sit with the term 2 revision week. File: depth_nursery.js. PDFs: nursery-maths-paper2, nursery-english-paper2, nursery-urdu-paper2, nursery-gk-paper2. Every paper page is 0.75 full or more.
 
 ## Status
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).
@@ -125,8 +126,13 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 ## Content depth programme (Sumbul, 26 Nov 2026)
 Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (breadth only, never copy their content). The content builder works through these batches, one per run, every 2 hours, before going back to weekly mode. Rules are in CLAUDE.md, "Content depth". Pilot done: Grade 1 Maths, Numbers to 20 (`source/src/depth_g1.js`).
 
+<<<<<<< HEAD
 Covers every grade and every subject, including the English and Urdu Warm-ups and Islamiat (Sumbul, 26 Nov 2026). Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
 - [ ] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
+=======
+Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
+- [x] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
+>>>>>>> d5655e6 (Depth P1: Nursery Term 2 Practice Papers (Maths, English, Urdu, General Knowledge))
 - [ ] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
 - [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer, AI
 - [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI

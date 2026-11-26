@@ -151,13 +151,19 @@ if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';
 
 /* content depth (depth_*.js): runs last, so new pages go at the very end and no existing page number moves.
    DEPTH functions get helpers: P(sid,title) finds a page; more(sid,title,...blocks) adds blocks to it;
-   addPages(sid,topic,pages) appends pages and adds them to that topic's pack. */
+   addPages(sid,topic,pages) appends pages and adds them to that topic's pack;
+   addPaper(sid,pages) makes the subject's Term 2 Practice Paper pack (shown with the term 2 revision week). */
 if(typeof DEPTH!=='undefined'){const P=(sid,title)=>PAGES[sid].find(p=>p.title===title),
  more=(sid,title,...b)=>{const p=P(sid,title);if(p)p.blocks=p.blocks.concat(b);else console.warn('depth: no page',sid,title)},
  addPages=(sid,topic,pages)=>{const r=RES.find(x=>x.sub===sid&&!x.set&&x.topic===topic);if(!r){console.warn('depth: no pack',sid,topic);return}
   pages.forEach(p=>{PAGES[sid].push({...p,topic});r.pages.push(PAGES[sid].length-1)});
   r.desc=r.desc.replace(/^\d+ pages/,r.pages.length+' pages')};
- DEPTH.forEach(f=>f({P,more,addPages}))}
+ addPaper=(sid,pages)=>{const s=SUB[sid];if(!s||RID[sid+'-paper2'])return;const ur=!!s.rtl,G=GR[s.grade].name,start=PAGES[sid].length;
+  pages.forEach(p=>PAGES[sid].push({...p,topic:ur?'امتحانی پرچہ':'Practice paper'}));
+  const r={id:sid+'-paper2',sub:sid,set:true,rev:true,title:ur?'دوسری ٹرم کا امتحانی پرچہ':s.name+' Term 2 Practice Paper',en:ur?'Urdu term 2 practice paper':'',topic:ur?'امتحانی پرچہ':'Practice paper',
+   pages:pages.map((_,i)=>start+i),desc:`A ${pages.length}-page ${G} ${s.name} term 2 practice paper with marks for every question and an answer key, to try before the end of term test.`,obj:['Practise for the end of term test under test conditions.'],isNew:true};
+  RES.push(r);RID[r.id]=r;const e=(PLAN[sid]||[]).find(x=>x[1]&&x[1].includes('rev2'));if(e)e[1]=e[1].concat('paper2')};
+ DEPTH.forEach(f=>f({P,more,addPages,addPaper}))}
 
 /* subject colour classes for every subject id */
 (function(){let css='';SUBJECTS.forEach(s=>{const k=KIND[s.kind].sheet;css+=`.s-${s.id}{--sc:var(--k-${s.kind});--st:var(--k-${s.kind}-t)}.sheet.s-${s.id}{--pc:${k[0]};--pt:${k[1]}}`});

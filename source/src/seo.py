@@ -23,7 +23,7 @@ def topic_en(r):
     if r['id']=='english-write' or r['id'].endswith('-write-warmup'): return 'Warm-up Handwriting Practice'
     if r['id'].endswith('-write'): return 'Handwriting Practice'
     if r['set']:
-        base = 'Revision Pack' if r['id'].endswith('-set') else 'Term 2 Revision' if r['id'].endswith('-rev2') else 'Revision'
+        base = 'Revision Pack' if r['id'].endswith('-set') else 'Term 2 Revision' if r['id'].endswith('-rev2') else 'Term 2 Practice Paper' if r['id'].endswith('-paper2') else 'Revision'
         return ('Warm-up ' + base) if r['sub'] in ('english', 'urdu') else base
     if r['rtl']: return r['topicEn'] or r['en'] or 'Urdu'
     return re.sub(r' Practice$', '', r['title'])

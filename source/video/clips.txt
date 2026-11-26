@@ -1,2 +1,3 @@
 # Parts of a Plant song scenery clip (Canva AI, bright preschool style, 1920x1080). Canva links valid a few hours; fetched by the "Fetch clips" workflow into the videos branch under clips/
 scene-veg-garden.mp4 https://export-download.canva.com/xAAno/DAHb1BxAAno/-1/0-6873016210042698277.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH4R7NKVBA%2F20261123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261123T190157Z&X-Amz-Expires=67687&X-Amz-Signature=c2a75fff7981c9e16d150e3a1d45ccb48578059ffe71f53cbd5a58eb527c2007&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2024%20Nov%202026%2013%3A50%3A04%20GMT
+g3-history-t1-song.m4a https://storage.googleapis.com/producer-app-public/clips/6c0ae148-08bc-40c0-8bd4-41affedfe57e.m4a

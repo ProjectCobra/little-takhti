@@ -1,0 +1,3080 @@
+# Page fill report
+
+Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content depth). Pages under target, by subject:
+
+## g2-ai (150 pages)
+- p1 0.43 Data all around us / What Is Data?
+- p2 0.20 Data all around us / Tally It
+- p3 0.25 Data all around us / Read the Chart
+- p4 0.26 Data all around us / Labels Help Sort
+- p5 0.23 Data all around us / My Data Survey
+- p6 0.25 Data all around us / Kinds of Data
+- p7 0.31 Data all around us / Make a Pictogram
+- p8 0.20 Data all around us / Ask a Good Question
+- p9 0.30 Data all around us / Data in Real Life
+- p10 0.23 Data all around us / Data Detective
+- p11 0.46 How AI learns from examples / Training With Examples
+- p12 0.21 How AI learns from examples / Label the Examples
+- p13 0.24 How AI learns from examples / More Is Better
+- p14 0.27 How AI learns from examples / Spot the Mistake
+- p15 0.37 How AI learns from examples / Be the Trainer
+- p16 0.21 How AI learns from examples / Training and Testing
+- p17 0.26 How AI learns from examples / Sort the Training Cards
+- p18 0.20 How AI learns from examples / Good Labels, Bad Labels
+- p19 0.18 How AI learns from examples / Teach a Friend
+- p20 0.23 How AI learns from examples / Think About It
+- p21 0.42 Using AI to learn / AI as a Study Buddy
+- p22 0.29 Using AI to learn / Ask a Clear Question
+- p23 0.26 Using AI to learn / Check It
+- p24 0.21 Using AI to learn / My Own Work
+- p25 0.15 Using AI to learn / Plan a Learning Question
+- p26 0.26 Using AI to learn / Explain It Back
+- p27 0.23 Using AI to learn / Practice Partner
+- p28 0.26 Using AI to learn / Question Words
+- p29 0.29 Using AI to learn / Fact Check
+- p30 0.20 Using AI to learn / My Learning Plan
+- p31 0.49 Sorting and labelling / Sort, Then Label
+- p32 0.29 Sorting and labelling / Label the Pictures
+- p33 0.37 Sorting and labelling / Living or Not Living?
+- p34 0.32 Sorting and labelling / Two Rules at Once
+- p35 0.37 Sorting and labelling / Wrong Labels
+- p36 0.41 Sorting and labelling / Why Labels Matter
+- p37 0.40 Sorting and labelling / How AI Sorts Photos
+- p38 0.35 Sorting and labelling / Sorting Sums
+- p39 0.33 Sorting and labelling / Labels All Around
+- p40 0.39 Sorting and labelling / My Sorting Project
+- p41 0.49 Predictions / What Is a Prediction?
+- p42 0.24 Predictions / What Comes Next?
+- p43 0.24 Predictions / Weather Predictions
+- p44 0.28 Predictions / Read the Chart
+- p45 0.37 Predictions / Good Guess or Wild Guess?
+- p46 0.40 Predictions / How AI Predicts
+- p47 0.30 Predictions / AI Predictions Every Day
+- p48 0.39 Predictions / Prediction Problems
+- p49 0.25 Predictions / When Predictions Go Wrong
+- p50 0.37 Predictions / My Prediction Diary
+- p51 0.49 Robots and sensors / Robots Sense the World
+- p52 0.32 Robots and sensors / Our Senses, Robot Sensors
+- p53 0.28 Robots and sensors / Which Sensor?
+- p54 0.40 Robots and sensors / Input, Think, Output
+- p55 0.28 Robots and sensors / Robot in the Maze
+- p56 0.40 Robots and sensors / Sensors at Home
+- p57 0.39 Robots and sensors / Sensor Sums
+- p58 0.30 Robots and sensors / When Sensors Get Confused
+- p59 0.33 Robots and sensors / Sensors Helping People
+- p60 0.43 Robots and sensors / Design a Sensor Robot
+- p61 0.49 Asking clear questions / Clear Questions Get Clear Answers
+- p62 0.25 Asking clear questions / Three Parts of a Question
+- p63 0.39 Asking clear questions / Pick the Clearer Question
+- p64 0.29 Asking clear questions / Picture Prompts
+- p65 0.25 Asking clear questions / Add a Detail
+- p66 0.40 Asking clear questions / Steps for a Good Prompt
+- p67 0.34 Asking clear questions / Polite and Clear
+- p68 0.32 Asking clear questions / Question Puzzles
+- p69 0.26 Asking clear questions / Follow-up Questions
+- p70 0.20 Asking clear questions / Write Your Own Prompts
+- p71 0.46 Checking answers / Stop and Check
+- p72 0.30 Checking answers / Right or Wrong?
+- p73 0.19 Checking answers / Work It Out
+- p74 0.28 Checking answers / Where Would You Check?
+- p75 0.30 Checking answers / Trusted or Not Sure?
+- p76 0.40 Checking answers / The Checking Steps
+- p77 0.29 Checking answers / Spot the Made-Up Fact
+- p78 0.32 Checking answers / Checking Problems
+- p79 0.34 Checking answers / Sure or Check?
+- p80 0.33 Checking answers / My Checking Badge
+- p81 0.49 Pictures made by AI / AI Can Make Pictures
+- p82 0.37 Pictures made by AI / Could It Be Real?
+- p83 0.36 Pictures made by AI / Clues in a Picture
+- p84 0.29 Pictures made by AI / Picture Words
+- p85 0.25 Pictures made by AI / Made by a Person or AI?
+- p86 0.40 Pictures made by AI / Think Before You Share
+- p87 0.34 Pictures made by AI / Kind or Unkind?
+- p88 0.35 Pictures made by AI / Picture Problems
+- p89 0.33 Pictures made by AI / Artists and AI
+- p90 0.36 Pictures made by AI / Your Own Picture
+- p91 0.49 Privacy and safety / Keep It Private
+- p92 0.37 Privacy and safety / Private or OK?
+- p93 0.35 Privacy and safety / Strong Passwords
+- p94 0.23 Privacy and safety / What Would You Do?
+- p95 0.40 Privacy and safety / Safe Steps Online
+- p96 0.37 Privacy and safety / What Should I Do?
+- p97 0.25 Privacy and safety / Photos Are Personal
+- p98 0.35 Privacy and safety / Safety Sums
+- p99 0.30 Privacy and safety / Private Words
+- p100 0.46 Privacy and safety / My Safety Shield
+- p101 0.49 AI in the doctor's clinic / AI Helps Doctors
+- p102 0.40 AI in the doctor's clinic / Clinic Tools
+- p103 0.33 AI in the doctor's clinic / Who Does It?
+- p104 0.56 AI in the doctor's clinic / A Visit to the Clinic
+- p105 0.41 AI in the doctor's clinic / How AI Learned
+- p106 0.39 AI in the doctor's clinic / Clinic Maths
+- p107 0.25 AI in the doctor's clinic / Health Data Is Private
+- p108 0.37 AI in the doctor's clinic / Staying Healthy
+- p109 0.34 AI in the doctor's clinic / Helpers in Health
+- p110 0.43 AI in the doctor's clinic / Design a Clinic Helper
+- p111 0.49 AI on the farm / Smart Farming
+- p112 0.38 AI on the farm / Crops of Pakistan
+- p113 0.31 AI on the farm / Farm Helpers
+- p114 0.40 AI on the farm / From Seed to Food
+- p115 0.30 AI on the farm / Who Does It?
+- p116 0.38 AI on the farm / Read the Sensor
+- p117 0.39 AI on the farm / Farm Maths
+- p118 0.37 AI on the farm / Good Idea or Not?
+- p119 0.31 AI on the farm / Farm Words
+- p120 0.37 AI on the farm / Design a Farm Helper
+- p121 0.49 Training a model (unplugged) / What Is a Model?
+- p122 0.40 Training a model (unplugged) / Steps to Train a Model
+- p123 0.40 Training a model (unplugged) / Label the Training Data
+- p124 0.46 Training a model (unplugged) / Be the Model
+- p125 0.41 Training a model (unplugged) / Test Results
+- p126 0.33 Training a model (unplugged) / Good Training Data?
+- p127 0.39 Training a model (unplugged) / Model Maths
+- p128 0.30 Training a model (unplugged) / Training Words
+- p129 0.46 Training a model (unplugged) / Unplugged Game
+- p130 0.32 Training a model (unplugged) / My Own Model
+- p131 0.49 Fair or unfair? / What Is Fair?
+- p132 0.30 Fair or unfair? / Fair or Unfair?
+- p133 0.44 Fair or unfair? / The Unfair Camera
+- p134 0.40 Fair or unfair? / Fixing Unfair AI
+- p135 0.39 Fair or unfair? / Who Is Missing?
+- p136 0.39 Fair or unfair? / Sharing Fairly
+- p137 0.31 Fair or unfair? / Fair Words
+- p138 0.37 Fair or unfair? / Picture Sort
+- p139 0.43 Fair or unfair? / Speak Up
+- p140 0.36 Fair or unfair? / Make It Fair
+- p141 0.49 Designing an AI helper / Designers Solve Problems
+- p142 0.40 Designing an AI helper / The Design Steps
+- p143 0.40 Designing an AI helper / Helper Senses
+- p144 0.39 Designing an AI helper / Good Problem to Solve?
+- p145 0.31 Designing an AI helper / Who Needs Help?
+- p146 0.44 Designing an AI helper / Ali's Plant Helper
+- p147 0.32 Designing an AI helper / Design Maths
+- p148 0.25 Designing an AI helper / Safe and Kind Helpers
+- p149 0.31 Designing an AI helper / Design Words
+- p150 0.36 Designing an AI helper / My AI Helper Plan
+
+## g3-ai (150 pages)
+- p1 0.44 How AI sees, hears and talks / Sensing the World
+- p2 0.26 How AI sees, hears and talks / Seeing With AI
+- p3 0.25 How AI sees, hears and talks / Hearing and Talking
+- p4 0.33 How AI sees, hears and talks / Real or Made by AI?
+- p5 0.35 How AI sees, hears and talks / Design a Helper
+- p6 0.23 How AI sees, hears and talks / Pixels Up Close
+- p7 0.34 How AI sees, hears and talks / Pixel Art
+- p8 0.19 How AI sees, hears and talks / Speech to Text
+- p9 0.25 How AI sees, hears and talks / Sensors Everywhere
+- p10 0.32 How AI sees, hears and talks / Think Like a Scientist
+- p11 0.43 Good prompts and checking answers / What Is a Prompt?
+- p12 0.29 Good prompts and checking answers / Better Prompts
+- p13 0.25 Good prompts and checking answers / Fact or Made Up?
+- p14 0.19 Good prompts and checking answers / How to Check
+- p15 0.15 Good prompts and checking answers / Improve the Prompt
+- p16 0.26 Good prompts and checking answers / Parts of a Good Prompt
+- p17 0.18 Good prompts and checking answers / Fix the Prompt
+- p18 0.26 Good prompts and checking answers / Follow-up Questions
+- p19 0.25 Good prompts and checking answers / Sources
+- p20 0.15 Good prompts and checking answers / Prompt Challenge
+- p21 0.46 AI, fairness and being responsible / Fair for Everyone
+- p22 0.23 AI, fairness and being responsible / Fair or Unfair?
+- p23 0.25 AI, fairness and being responsible / Privacy
+- p24 0.31 AI, fairness and being responsible / AI Helping Pakistan
+- p25 0.28 AI, fairness and being responsible / Be a Responsible User
+- p26 0.20 AI, fairness and being responsible / Strong Passwords
+- p27 0.26 AI, fairness and being responsible / Be Kind Online
+- p28 0.23 AI, fairness and being responsible / AI and Jobs
+- p29 0.30 AI, fairness and being responsible / Fair Robot Design
+- p30 0.31 AI, fairness and being responsible / Responsible Choices
+- p31 0.51 How chatbots work / What Is a Chatbot?
+- p32 0.36 How chatbots work / Guess the Next Word
+- p33 0.36 How chatbots work / Chatbot or Person?
+- p34 0.40 How chatbots work / How a Chat Works
+- p35 0.34 How chatbots work / Chatbot Words
+- p36 0.30 How chatbots work / True or False?
+- p37 0.42 How chatbots work / Chatbot Maths
+- p38 0.41 How chatbots work / Spot the Mistake
+- p39 0.30 How chatbots work / Chat Safely
+- p40 0.25 How chatbots work / My Chatbot Questions
+- p41 0.46 Data and bias / What Is Data?
+- p42 0.29 Data and bias / Kinds of Data
+- p43 0.41 Data and bias / The Fruit Robot
+- p44 0.39 Data and bias / Fair Data or Not?
+- p45 0.38 Data and bias / Make a Tally
+- p46 0.39 Data and bias / Who Was Left Out?
+- p47 0.33 Data and bias / Data Words
+- p48 0.26 Data and bias / Fix the Data
+- p49 0.39 Data and bias / Data Problems
+- p50 0.36 Data and bias / My Fair Survey
+- p51 0.51 Image recognition / How AI Sees Pictures
+- p52 0.35 Image recognition / Spot the Features
+- p53 0.40 Image recognition / Teach the Computer
+- p54 0.31 Image recognition / Where Is It Used?
+- p55 0.33 Image recognition / Tricky Pictures
+- p56 0.41 Image recognition / Pixel Grid
+- p57 0.35 Image recognition / Image Maths
+- p58 0.30 Image recognition / When AI Gets It Wrong
+- p59 0.25 Image recognition / Faces Are Private
+- p60 0.34 Image recognition / Be the Image AI
+- p61 0.51 AI and creativity / Can AI Be Creative?
+- p62 0.34 AI and creativity / Who Made It?
+- p63 0.38 AI and creativity / Creative Tools
+- p64 0.31 AI and creativity / Using AI Fairly
+- p65 0.40 AI and creativity / From Idea to Art
+- p66 0.31 AI and creativity / Creative Words
+- p67 0.26 AI and creativity / Poem Patterns
+- p68 0.35 AI and creativity / Art Maths
+- p69 0.41 AI and creativity / Why People Create
+- p70 0.35 AI and creativity / My Creative Plan
+- p71 0.51 Deepfakes and fake news / Real or Fake?
+- p72 0.39 Deepfakes and fake news / Clues to Spot a Fake
+- p73 0.40 Deepfakes and fake news / The STOP Steps
+- p74 0.25 Deepfakes and fake news / Is It Believable?
+- p75 0.31 Deepfakes and fake news / Detective Words
+- p76 0.25 Deepfakes and fake news / Fact or Opinion?
+- p77 0.42 Deepfakes and fake news / How Fast It Spreads
+- p78 0.41 Deepfakes and fake news / Who Is Hurt?
+- p79 0.31 Deepfakes and fake news / What Would You Do?
+- p80 0.38 Deepfakes and fake news / My Detective Badge
+- p81 0.51 AI and jobs / AI at Work
+- p82 0.40 AI and jobs / People at Work
+- p83 0.30 AI and jobs / Who Is Better At It?
+- p84 0.33 AI and jobs / AI Helps Each Job
+- p85 0.44 AI and jobs / New Jobs
+- p86 0.30 AI and jobs / Skills for the Future
+- p87 0.39 AI and jobs / Workplace Maths
+- p88 0.56 AI and jobs / Work Together
+- p89 0.20 AI and jobs / Interview a Grown-up
+- p90 0.36 AI and jobs / My Future Job
+- p91 0.49 Machine learning steps / How Machines Learn
+- p92 0.40 Machine learning steps / The Five Steps
+- p93 0.42 Machine learning steps / Rules or Learning?
+- p94 0.44 Machine learning steps / Unplugged Model
+- p95 0.25 Machine learning steps / Training and Testing
+- p96 0.33 Machine learning steps / ML Words
+- p97 0.35 Machine learning steps / Accuracy Maths
+- p98 0.35 Machine learning steps / Sort the Training Data
+- p99 0.30 Machine learning steps / Bad Labels
+- p100 0.25 Machine learning steps / Design a Model
+- p101 0.51 Translation and languages / Machines That Translate
+- p102 0.36 Translation and languages / Urdu and English Words
+- p103 0.37 Translation and languages / Languages of Pakistan
+- p104 0.41 Translation and languages / Word for Word?
+- p105 0.33 Translation and languages / Good Job for an App?
+- p106 0.40 Translation and languages / How Translation Works
+- p107 0.42 Translation and languages / Language Maths
+- p108 0.15 Translation and languages / Spot the Translation Mistake
+- p109 0.31 Translation and languages / Hello Around the World
+- p110 0.35 Translation and languages / My Language Map
+- p111 0.51 AI in games / Game AI
+- p112 0.40 AI in games / How a Computer Player Thinks
+- p113 0.33 AI in games / AI or Not in Games?
+- p114 0.47 AI in games / Learning by Playing
+- p115 0.30 AI in games / Game Words
+- p116 0.35 AI in games / Game Maths
+- p117 0.36 AI in games / Smart Gamer
+- p118 0.40 AI in games / Games That Keep You Playing
+- p119 0.39 AI in games / Fair Play
+- p120 0.35 AI in games / Design a Game Character
+- p121 0.51 Ethics: who decides? / What Is Ethics?
+- p122 0.31 Ethics: who decides? / Who Decides?
+- p123 0.40 Ethics: who decides? / Five Good Rules
+- p124 0.31 Ethics: who decides? / Which Rule Is Broken?
+- p125 0.56 Ethics: who decides? / Thinking It Through
+- p126 0.44 Ethics: who decides? / The School Camera
+- p127 0.35 Ethics: who decides? / Survey Maths
+- p128 0.28 Ethics: who decides? / Agree or Disagree?
+- p129 0.31 Ethics: who decides? / Ethics Words
+- p130 0.35 Ethics: who decides? / My AI Rules
+- p131 0.51 AI and the environment / AI for the Planet
+- p132 0.56 AI and the environment / How AI Warns of Floods
+- p133 0.30 AI and the environment / Help or Harm?
+- p134 0.47 AI and the environment / Watching From Space
+- p135 0.35 AI and the environment / Green Words
+- p136 0.39 AI and the environment / Energy Maths
+- p137 0.40 AI and the environment / Smart Choices
+- p138 0.40 AI and the environment / Weighing It Up
+- p139 0.32 AI and the environment / Pakistan Cares
+- p140 0.35 AI and the environment / My Green AI Idea
+- p141 0.51 Build a prompt plan / What Is a Prompt?
+- p142 0.40 Build a prompt plan / The Prompt Plan
+- p143 0.39 Build a prompt plan / Better Prompt
+- p144 0.41 Build a prompt plan / Parts of a Prompt
+- p145 0.33 Build a prompt plan / Safe Prompts
+- p146 0.33 Build a prompt plan / Prompt Words
+- p147 0.42 Build a prompt plan / Prompt Maths
+- p148 0.43 Build a prompt plan / Follow Up
+- p149 0.31 Build a prompt plan / Fix the Prompt
+- p150 0.43 Build a prompt plan / My Prompt Plan
+
+## g1-ai (150 pages)
+- p1 0.46 What is AI? / Smart Machines
+- p2 0.30 What is AI? / AI or Not AI?
+- p3 0.25 What is AI? / Alive or Not Alive?
+- p4 0.33 What is AI? / Where Do We See AI?
+- p5 0.33 What is AI? / Draw a Helpful Robot
+- p6 0.26 What is AI? / Who Makes AI?
+- p7 0.25 What is AI? / Human or Machine?
+- p8 0.26 What is AI? / AI at Home
+- p9 0.26 What is AI? / AI Words
+- p10 0.32 What is AI? / What Did You Learn?
+- p11 0.38 Machines learn from patterns / What Is a Pattern?
+- p12 0.32 Machines learn from patterns / Learning From Examples
+- p13 0.20 Machines learn from patterns / Teach the Robot
+- p14 0.20 Machines learn from patterns / Guess What Comes Next
+- p15 0.28 Machines learn from patterns / My Pattern
+- p16 0.19 Machines learn from patterns / Shape Patterns
+- p17 0.20 Machines learn from patterns / Odd One Out
+- p18 0.26 Machines learn from patterns / Sort by a Rule
+- p19 0.20 Machines learn from patterns / Weather Patterns
+- p20 0.27 Machines learn from patterns / Pattern Puzzle
+- p21 0.43 Asking AI safely / Safe With a Grown-up
+- p22 0.30 Asking AI safely / Private or OK to Share?
+- p23 0.20 Asking AI safely / AI Can Be Wrong
+- p24 0.21 Asking AI safely / Kind Words
+- p25 0.26 Asking AI safely / My Safety Promise
+- p26 0.23 Asking AI safely / Who Can Help?
+- p27 0.29 Asking AI safely / Good Questions
+- p28 0.26 Asking AI safely / Screen Time
+- p29 0.14 Asking AI safely / Think, Check, Ask
+- p30 0.36 Asking AI safely / Safety Poster
+- p31 0.45 Smart helpers at home / Smart Helpers
+- p32 0.43 Smart helpers at home / Which One Is Smart?
+- p33 0.31 Smart helpers at home / What Can It Do?
+- p34 0.32 Smart helpers at home / Name the Helper
+- p35 0.40 Smart helpers at home / Asking a Speaker
+- p36 0.39 Smart helpers at home / Helper Problems
+- p37 0.30 Smart helpers at home / Helper or Person?
+- p38 0.25 Smart helpers at home / Helper Rules
+- p39 0.43 Smart helpers at home / Helper Words
+- p40 0.39 Smart helpers at home / My Dream Helper
+- p41 0.45 Robots around us / What Is a Robot?
+- p42 0.43 Robots around us / Robot or Not?
+- p43 0.30 Robots around us / Robot Jobs
+- p44 0.57 Robots around us / Sense, Think, Act
+- p45 0.29 Robots around us / Robot Parts
+- p46 0.49 Robots around us / Robot or Person?
+- p47 0.32 Robots around us / Robot Maths
+- p48 0.30 Robots around us / Can a Robot?
+- p49 0.26 Robots around us / Robots Need People
+- p50 0.39 Robots around us / Design a Robot
+- p51 0.46 Sorting like a computer / What Is Sorting?
+- p52 0.37 Sorting like a computer / Fruit or Toy?
+- p53 0.26 Sorting like a computer / Sort by Colour
+- p54 0.26 Sorting like a computer / Sort by Legs
+- p55 0.46 Sorting like a computer / Is It Round?
+- p56 0.37 Sorting like a computer / Summer or Winter?
+- p57 0.20 Sorting like a computer / Odd One Out
+- p58 0.40 Sorting like a computer / Sorting Steps
+- p59 0.39 Sorting like a computer / Photo App Problems
+- p60 0.39 Sorting like a computer / My Sorting Rule
+- p61 0.46 Good questions / What Is a Good Question?
+- p62 0.31 Good questions / Question Words
+- p63 0.30 Good questions / Clear or Not Clear?
+- p64 0.25 Good questions / The Better Question
+- p65 0.29 Good questions / Picture Questions
+- p66 0.30 Good questions / Kind or Not Kind?
+- p67 0.40 Good questions / Think, Ask, Listen, Check
+- p68 0.40 Good questions / Question or Telling?
+- p69 0.35 Good questions / Question Puzzles
+- p70 0.37 Good questions / My Questions
+- p71 0.45 Real or pretend? / Real or Pretend?
+- p72 0.37 Real or pretend? / Real or Pretend Animal?
+- p73 0.30 Real or pretend? / Could It Happen?
+- p74 0.36 Real or pretend? / Pretend Pictures
+- p75 0.25 Real or pretend? / Spot the Clue
+- p76 0.40 Real or pretend? / Stop, Think, Ask
+- p77 0.34 Real or pretend? / Fact or Pretend?
+- p78 0.35 Real or pretend? / Real and Pretend Maths
+- p79 0.25 Real or pretend? / Match the Pretend Creature
+- p80 0.41 Real or pretend? / Draw Real and Pretend
+- p81 0.45 Voices and speakers / Machines That Hear and Talk
+- p82 0.30 Voices and speakers / Hear or Talk?
+- p83 0.40 Voices and speakers / How a Voice Helper Works
+- p84 0.25 Voices and speakers / Speak Clearly
+- p85 0.37 Voices and speakers / Loud or Quiet?
+- p86 0.39 Voices and speakers / Volume Maths
+- p87 0.33 Voices and speakers / Oops, Wrong Word!
+- p88 0.30 Voices and speakers / Machines That Talk
+- p89 0.25 Voices and speakers / Voice Manners
+- p90 0.39 Voices and speakers / My Talking Machine
+- p91 0.40 Kind and fair / Kind and Fair
+- p92 0.37 Kind and fair / Kind or Unkind?
+- p93 0.32 Kind and fair / Fair Shares
+- p94 0.36 Kind and fair / A Robot That Was Not Fair
+- p95 0.32 Kind and fair / For Everyone
+- p96 0.30 Kind and fair / Kind Words
+- p97 0.40 Kind and fair / Taking Turns
+- p98 0.25 Kind and fair / Fair or Not Fair?
+- p99 0.35 Kind and fair / What Would You Do?
+- p100 0.43 Kind and fair / My Kindness Promise
+- p101 0.46 Pictures and patterns / How AI Knows Pictures
+- p102 0.40 Pictures and patterns / Spot the Clues
+- p103 0.25 Pictures and patterns / Which Animal?
+- p104 0.38 Pictures and patterns / What Comes Next?
+- p105 0.37 Pictures and patterns / Shapes in Pictures
+- p106 0.27 Pictures and patterns / Teach the Computer
+- p107 0.35 Pictures and patterns / Picture Maths
+- p108 0.30 Pictures and patterns / Animal Patterns
+- p109 0.26 Pictures and patterns / Wings or No Wings?
+- p110 0.33 Pictures and patterns / My Picture Pattern
+- p111 0.49 Instructions for robots / Robots Need Instructions
+- p112 0.29 Instructions for robots / Arrow Words
+- p113 0.66 Instructions for robots / Help Robo Get There
+- p114 0.40 Instructions for robots / Steps in Order
+- p115 0.30 Instructions for robots / Clear or Not Clear?
+- p116 0.30 Instructions for robots / Silly Robot
+- p117 0.32 Instructions for robots / Robot Maths
+- p118 0.30 Instructions for robots / Instruction Words
+- p119 0.43 Instructions for robots / Be the Robot
+- p120 0.37 Instructions for robots / My Robot Steps
+- p121 0.49 Learning from mistakes / Mistakes Help Us Learn
+- p122 0.37 Learning from mistakes / Right or Wrong?
+- p123 0.35 Learning from mistakes / Fix Robo's Guess
+- p124 0.25 Learning from mistakes / Try, Check, Fix
+- p125 0.25 Learning from mistakes / Good Ways to Feel
+- p126 0.30 Learning from mistakes / Robo Learns
+- p127 0.39 Learning from mistakes / Mistake Maths
+- p128 0.30 Learning from mistakes / Helpful Words
+- p129 0.43 Learning from mistakes / Checking Matters
+- p130 0.38 Learning from mistakes / My Mistake Story
+- p131 0.49 AI and animals / AI Helps Animals
+- p132 0.32 AI and animals / Name the Animal
+- p133 0.37 AI and animals / Where Does It Live?
+- p134 0.40 AI and animals / How the Camera Helps
+- p135 0.33 AI and animals / Listening to Birds
+- p136 0.31 AI and animals / Smart Collars
+- p137 0.35 AI and animals / Animal Maths
+- p138 0.30 AI and animals / Kind to Animals
+- p139 0.43 AI and animals / People Still Care
+- p140 0.37 AI and animals / My Animal Helper
+- p141 0.49 My AI rules / Rules Keep Us Safe
+- p142 0.40 My AI rules / Rule Pictures
+- p143 0.30 My AI rules / Follow the Rule?
+- p144 0.40 My AI rules / What I Do
+- p145 0.34 My AI rules / Private or OK to Share?
+- p146 0.30 My AI rules / Robo Gets It Wrong
+- p147 0.42 My AI rules / Rule Maths
+- p148 0.20 My AI rules / Good Words for Machines
+- p149 0.31 My AI rules / Rule Words
+- p150 0.37 My AI rules / My AI Rules Poster
+
+## g1-english (92 pages)
+- p1 0.30 Nouns and verbs / Naming Words
+- p2 0.25 Nouns and verbs / Action Words
+- p3 0.41 Nouns and verbs / Noun or Verb?
+- p4 0.30 Adjectives / Describing Words
+- p5 0.36 Adjectives / Add an Adjective
+- p6 0.15 Adjectives / Describe It
+- p7 0.14 Sentences and punctuation / Capitals and Full Stops
+- p8 0.30 Sentences and punctuation / Asking or Telling?
+- p9 0.23 Sentences and punctuation / Build a Sentence
+- p10 0.35 Pronouns, is/am/are and past tense / Am, Is, Are
+- p11 0.29 Pronouns, is/am/are and past tense / Yesterday
+- p12 0.25 Pronouns, is/am/are and past tense / And, But, Because
+- p13 0.21 Blends and long vowels / Blends
+- p14 0.30 Blends and long vowels / Long Vowel Teams
+- p15 0.41 Blends and long vowels / Y at the End
+- p16 0.45 Poems about the world / My Shadow
+- p17 0.52 Poems about the world / What Is Pink?
+- p18 0.26 Poems about the world / Write a Colour Poem
+- p19 0.44 Reading for meaning / Eid at Nani's House
+- p20 0.30 Reading for meaning / Fact or Opinion?
+- p21 0.46 Reading for meaning / What Happens Next?
+- p22 0.30 My day and speech bubbles / Order Words
+- p23 0.28 My day and speech bubbles / My Morning
+- p24 0.19 My day and speech bubbles / Speech Bubbles
+- p25 0.30 Synonyms and compound words / Same Meaning
+- p26 0.14 Synonyms and compound words / Compound Words
+- p27 0.15 Synonyms and compound words / Better Words
+- p28 0.19 Writing a letter / Parts of a Letter
+- p29 0.26 Writing a letter / Fill the Letter
+- p30 0.25 Writing a letter / My Letter
+- p31 0.36 What is happening? (is + -ing) / Is it Happening Now?
+- p32 0.25 What is happening? (is + -ing) / Is or Are?
+- p33 0.29 What is happening? (is + -ing) / Add -ing
+- p34 0.31 What is happening? (is + -ing) / Am, Is or Are?
+- p35 0.21 What is happening? (is + -ing) / What Are They Doing?
+- p36 0.30 What is happening? (is + -ing) / Drop the e
+- p37 0.30 What is happening? (is + -ing) / Double It
+- p38 0.36 What is happening? (is + -ing) / Picture Story
+- p39 0.25 What is happening? (is + -ing) / Fix It
+- p40 0.23 What is happening? (is + -ing) / My Family Now
+- p41 0.40 Alphabetical order / The Alphabet
+- p42 0.29 Alphabetical order / Letter Detective
+- p43 0.14 Alphabetical order / Before, After, Between
+- p44 0.24 Alphabetical order / Jumbled Letters
+- p45 0.25 Alphabetical order / First Letters
+- p46 0.36 Alphabetical order / Order the Words
+- p47 0.31 Alphabetical order / Flower Shop
+- p48 0.30 Alphabetical order / Class List
+- p49 0.14 Alphabetical order / Missing Letters
+- p50 0.20 Alphabetical order / My ABC Words
+- p51 0.40 Capital letters, full stops and question marks / Sentence Rules
+- p52 0.19 Capital letters, full stops and question marks / Capital Starts
+- p53 0.30 Capital letters, full stops and question marks / Full Stop or Question Mark?
+- p54 0.24 Capital letters, full stops and question marks / Names Need Capitals
+- p55 0.19 Capital letters, full stops and question marks / I Is Always Big
+- p56 0.31 Capital letters, full stops and question marks / Asking Sentences
+- p57 0.20 Capital letters, full stops and question marks / About the Rabbit
+- p58 0.25 Capital letters, full stops and question marks / Fix the Sentences
+- p59 0.25 Capital letters, full stops and question marks / Telling or Asking?
+- p60 0.20 Capital letters, full stops and question marks / Write Your Own
+- p61 0.30 Ending sounds d, m and n / Listen to the End
+- p62 0.31 Ending sounds d, m and n / Ends With d
+- p63 0.31 Ending sounds d, m and n / Ends With m
+- p64 0.31 Ending sounds d, m and n / Ends With n
+- p65 0.41 Ending sounds d, m and n / m or n?
+- p66 0.30 Ending sounds d, m and n / d or m?
+- p67 0.26 Ending sounds d, m and n / Sort the Words
+- p68 0.24 Ending sounds d, m and n / Change the End
+- p69 0.21 Ending sounds d, m and n / Picture Words
+- p70 0.24 Ending sounds d, m and n / Write Your Own
+- p71 0.30 Tanka poems / What Is a Tanka?
+- p72 0.23 Tanka poems / Clap the Syllables
+- p73 0.25 Tanka poems / The Tanka Pattern
+- p74 0.39 Tanka poems / A Flower Tanka
+- p75 0.39 Tanka poems / A Winter Tanka
+- p76 0.25 Tanka poems / Season Words
+- p77 0.31 Tanka poems / Describing Words
+- p78 0.27 Tanka poems / Finish the Tanka
+- p79 0.29 Tanka poems / My Tanka
+- p80 0.36 Tanka poems / Draw Your Poem
+- p81 0.38 Writing a story / Every Story Has Three Parts
+- p82 0.20 Writing a story / Story Starters
+- p83 0.36 Writing a story / Who, Where, What
+- p84 0.19 Writing a story / Order the Story
+- p85 0.26 Writing a story / Joining Words
+- p86 0.20 Writing a story / Feelings in Stories
+- p87 0.25 Writing a story / Using the Senses
+- p88 0.20 Writing a story / Plan Your Story
+- p89 0.29 Writing a story / Write Your Story
+- p90 0.45 Writing a story / Check and Draw
+- p96 0.69 Writing practice / Story: The Thirsty Crow
+- p97 0.69 Writing practice / Story: A Trip to the Zoo
+
+## social (89 pages)
+- p1 0.63 Family / My Family
+- p2 0.67 Family / Family Words
+- p3 0.53 Family / Big and Small Families
+- p4 0.50 Family / Helping at Home
+- p5 0.38 Feelings / How Do They Feel?
+- p6 0.44 Feelings / Feelings Faces
+- p7 0.49 Feelings / What Can I Do?
+- p8 0.50 House rules / House Rules
+- p9 0.45 House rules / Safe at Home
+- p10 0.50 House rules / Social Studies Review
+- p11 0.30 My school / People at School
+- p12 0.30 My school / School Rules
+- p13 0.41 My school / All About My School
+- p14 0.30 Community helpers / Who Helps Us?
+- p15 0.25 Community helpers / Where Do They Work?
+- p16 0.23 Community helpers / Thank You, Helpers
+- p17 0.30 Pakistan, my country / National Symbols
+- p18 0.26 Pakistan, my country / Special Days
+- p19 0.20 Pakistan, my country / Our Leaders
+- p20 0.19 Road safety / Traffic Lights
+- p21 0.25 Road safety / Safe or Not Safe?
+- p22 0.19 Road safety / Stop, Look, Listen
+- p23 0.51 Maps and directions / What Is a Map?
+- p24 0.63 Maps and directions / The Four Directions
+- p26 0.62 Maps and directions / Map Key
+- p28 0.65 Maps and directions / Opposite Directions
+- p29 0.74 Maps and directions / Places in Our Town
+- p30 0.72 Maps and directions / My Classroom Map
+- p32 0.55 Maps and directions / Maps Review
+- p33 0.43 Learning at school / My School
+- p34 0.35 Learning at school / People at School
+- p35 0.26 Learning at school / Our Principal
+- p36 0.31 Learning at school / Places in School
+- p37 0.30 Learning at school / School Rules
+- p38 0.25 Learning at school / KG and Grade 1
+- p39 0.25 Learning at school / We Learn Everywhere
+- p40 0.40 Learning at school / Main Ideas
+- p41 0.24 Learning at school / My Day at School
+- p42 0.37 Learning at school / I Love My School
+- p43 0.35 Days, weeks and the calendar / Days of the Week
+- p44 0.24 Days, weeks and the calendar / Before and After
+- p45 0.30 Days, weeks and the calendar / Weekday or Weekend?
+- p46 0.28 Days, weeks and the calendar / Months of the Year
+- p47 0.28 Days, weeks and the calendar / Reading a Calendar
+- p48 0.19 Days, weeks and the calendar / How Many?
+- p49 0.21 Days, weeks and the calendar / Yesterday, Today, Tomorrow
+- p50 0.20 Days, weeks and the calendar / My Week
+- p51 0.39 Days, weeks and the calendar / Calendar Word Problems
+- p52 0.26 Days, weeks and the calendar / Special Days
+- p53 0.43 Our neighbourhood / What Is a Neighbourhood?
+- p54 0.43 Our neighbourhood / Places Near Home
+- p55 0.35 Our neighbourhood / Neighbourhood Helpers
+- p56 0.24 Our neighbourhood / Who Helps?
+- p57 0.68 Our neighbourhood / Read a Map
+- p58 0.26 Our neighbourhood / Where Is It?
+- p59 0.28 Our neighbourhood / Safe on the Street
+- p60 0.25 Our neighbourhood / Good Neighbours
+- p61 0.42 Our neighbourhood / Neighbourhood Sums
+- p62 0.44 Our neighbourhood / My Neighbourhood
+- p63 0.43 Transport then and now / What Is Transport?
+- p64 0.29 Transport then and now / Name the Transport
+- p65 0.30 Transport then and now / Then or Now?
+- p66 0.21 Transport then and now / Land, Water or Air?
+- p67 0.20 Transport then and now / Which Is Faster?
+- p68 0.40 Transport then and now / Trains in Pakistan
+- p69 0.30 Transport then and now / Who Uses It?
+- p70 0.30 Transport then and now / Travel Safely
+- p71 0.32 Transport then and now / Transport Sums
+- p72 0.43 Transport then and now / My Way to School
+- p73 0.40 Festivals and celebrations / Special Days
+- p74 0.25 Festivals and celebrations / Our National Days
+- p75 0.37 Festivals and celebrations / Independence Day
+- p76 0.40 Festivals and celebrations / Party Things
+- p77 0.34 Festivals and celebrations / Birthday or Independence Day?
+- p78 0.40 Festivals and celebrations / Eid at Home
+- p79 0.39 Festivals and celebrations / Celebration Sums
+- p80 0.34 Festivals and celebrations / Celebrate Safely
+- p81 0.40 Festivals and celebrations / Getting Ready for a Party
+- p82 0.43 Festivals and celebrations / My Favourite Celebration
+- p83 0.43 Saving water and electricity / Precious Things
+- p84 0.40 Saving water and electricity / Uses of Water
+- p85 0.29 Saving water and electricity / Uses of Electricity
+- p86 0.30 Saving water and electricity / Save or Waste?
+- p87 0.26 Saving water and electricity / Water or Electricity?
+- p88 0.45 Saving water and electricity / Hira's Saving Family
+- p89 0.30 Saving water and electricity / The Better Way
+- p90 0.42 Saving water and electricity / Saving Sums
+- p91 0.40 Saving water and electricity / Brushing the Saving Way
+- p92 0.43 Saving water and electricity / My Saving Promise
+
+## g3-english (82 pages)
+- p1 0.30 Kinds of nouns / Common, Proper or Collective?
+- p2 0.30 Kinds of nouns / Collective Nouns
+- p3 0.50 Kinds of nouns / Abstract Nouns
+- p4 0.29 Tenses / Simple Past
+- p5 0.30 Tenses / Present Continuous
+- p6 0.69 Tenses / Which Tense?
+- p7 0.26 Subject and verb agreement / Is, Are, Was, Were
+- p8 0.30 Subject and verb agreement / Has or Have, Do or Does
+- p9 0.29 Subject and verb agreement / Adding -s or -es
+- p10 0.14 Comparing adjectives / -er and -est
+- p11 0.25 Comparing adjectives / More and Most
+- p12 0.36 Comparing adjectives / Good, Better, Best
+- p13 0.31 Prepositions and conjunctions / Prepositions
+- p14 0.39 Prepositions and conjunctions / Joining Words
+- p15 0.28 Prepositions and conjunctions / Join the Sentences
+- p16 0.14 Apostrophes and commas / Short Forms
+- p17 0.25 Apostrophes and commas / Belonging
+- p18 0.39 Apostrophes and commas / Commas in Lists
+- p19 0.39 Direct speech / Speech Marks
+- p20 0.26 Direct speech / Said, Asked, Shouted
+- p21 0.31 Direct speech / Who Is Speaking?
+- p22 0.30 Synonyms, antonyms and homophones / Homophones
+- p23 0.30 Synonyms, antonyms and homophones / Synonyms
+- p24 0.30 Synonyms, antonyms and homophones / Antonyms
+- p25 0.43 Reading: sequencing and summarising / How Mangoes Reach Us
+- p26 0.26 Reading: sequencing and summarising / Put It in Order
+- p27 0.42 Reading: sequencing and summarising / Summarise It
+- p28 0.30 Letters and emails / Parts of a Letter
+- p29 0.30 Letters and emails / Formal or Informal?
+- p30 0.36 Letters and emails / Write an Email
+- p31 0.45 Adverbs and adverbials / Adverbs Add Detail
+- p32 0.56 Adverbs and adverbials / How, When, Where, How Often
+- p33 0.59 Adverbs and adverbials / Adverbial Phrases
+- p34 0.60 Adverbs and adverbials / Fronted Adverbials
+- p35 0.35 Adverbs and adverbials / Move the Adverbial
+- p36 0.46 Adverbs and adverbials / Adverbs of Degree
+- p37 0.43 Adverbs and adverbials / Comparing Adverbs
+- p38 0.46 Adverbs and adverbials / Pick the Best Adverb
+- p39 0.45 Adverbs and adverbials / Adverbials in a Story
+- p40 0.48 Adverbs and adverbials / Write with Adverbials
+- p41 0.48 Figurative language / Words That Paint Pictures
+- p42 0.44 Figurative language / Similes and Metaphors
+- p43 0.55 Figurative language / Finish the Simile
+- p44 0.45 Figurative language / Personification
+- p45 0.62 Figurative language / Sound Words and Same Sounds
+- p46 0.50 Figurative language / Hyperbole
+- p47 0.45 Figurative language / Idioms
+- p48 0.59 Figurative language / Name the Device
+- p49 0.65 Figurative language / Figurative Language in a Poem
+- p50 0.48 Figurative language / Write with Figurative Language
+- p51 0.48 Persuasive writing / What Is Persuasive Writing?
+- p52 0.46 Persuasive writing / Opinion and Reasons
+- p53 0.40 Persuasive writing / Fact or Opinion?
+- p54 0.53 Persuasive writing / Power Words
+- p55 0.49 Persuasive writing / Persuasive Tricks
+- p56 0.41 Persuasive writing / Linking Words
+- p57 0.66 Persuasive writing / Read and Spot
+- p58 0.46 Persuasive writing / Advert Detective
+- p59 0.38 Persuasive writing / Plan an Argument
+- p60 0.47 Persuasive writing / Write a Persuasive Poster
+- p61 0.48 Poetry: rhyme and rhythm / What Makes a Poem?
+- p62 0.40 Poetry: rhyme and rhythm / Rhyming Words
+- p63 0.54 Poetry: rhyme and rhythm / Rhyme Patterns
+- p64 0.49 Poetry: rhyme and rhythm / Finish the Rhyme
+- p65 0.39 Poetry: rhyme and rhythm / Feel the Rhythm
+- p66 0.45 Poetry: rhyme and rhythm / Sound Words
+- p67 0.49 Poetry: rhyme and rhythm / Repetition and Alliteration
+- p68 0.57 Poetry: rhyme and rhythm / Read and Respond
+- p69 0.37 Poetry: rhyme and rhythm / Rhyme or No Rhyme?
+- p70 0.50 Poetry: rhyme and rhythm / Write Your Own Poem
+- p71 0.51 Reading comprehension: non-fiction / Fiction or Non-fiction?
+- p72 0.56 Reading comprehension: non-fiction / Features of Non-fiction
+- p73 0.70 Reading comprehension: non-fiction / Read and Find
+- p74 0.69 Reading comprehension: non-fiction / Main Idea and Details
+- p75 0.61 Reading comprehension: non-fiction / Using a Contents Page
+- p76 0.59 Reading comprehension: non-fiction / Which Heading Fits?
+- p77 0.46 Reading comprehension: non-fiction / Glossary Words
+- p78 0.69 Reading comprehension: non-fiction / Read a Table
+- p79 0.68 Reading comprehension: non-fiction / Look Closer
+- p80 0.43 Reading comprehension: non-fiction / Make a Fact File
+- p85 0.73 Writing practice / Story: The Honest Woodcutter
+- p86 0.73 Writing practice / Story: The Ant and the Grasshopper
+
+## nursery-english (81 pages)
+- p1 0.53 Pencil control / Lines Left to Right
+- p2 0.53 Pencil control / Waves and Zigzags
+- p3 0.42 Pencil control / Loops and Circles
+- p4 0.49 Letter sounds a to m / Trace a b c d
+- p5 0.61 Letter sounds a to m / Trace e f g h i
+- p7 0.61 Letter sounds n to z / Trace n o p q r
+- p8 0.61 Letter sounds n to z / Trace s t u v w
+- p9 0.62 Letter sounds n to z / Trace x y z
+- p10 0.30 Talking words / Big and Small
+- p11 0.25 Talking words / In, On, Under
+- p12 0.31 Talking words / Magic Words
+- p13 0.49 First sounds s a t p / Trace s a t p
+- p14 0.30 First sounds s a t p / Which Sound First?
+- p15 0.30 First sounds s a t p / Same Sound?
+- p16 0.40 Nursery rhymes / Twinkle, Twinkle
+- p17 0.37 Nursery rhymes / Humpty Dumpty
+- p18 0.50 Nursery rhymes / Rhyme Time
+- p19 0.34 Listen and answer / Moti's Bone
+- p20 0.34 Listen and answer / Rain, Rain
+- p21 0.20 Listen and answer / What Comes First?
+- p22 0.38 Draw and tell / My Favourite Fruit
+- p23 0.49 Draw and tell / Trace and Say
+- p24 0.36 Draw and tell / My Family
+- p25 0.25 Action words / Do the Action
+- p26 0.25 Action words / What Do We Do?
+- p27 0.36 Action words / Draw an Action
+- p28 0.49 Sounds c, m, d, g / Trace c m d g
+- p29 0.30 Sounds c, m, d, g / First Sound
+- p30 0.36 Sounds c, m, d, g / Sound Hunt
+- p31 0.38 Sounds o, g, u, l / The Sound o
+- p32 0.46 Sounds o, g, u, l / Write o and O
+- p33 0.38 Sounds o, g, u, l / The Sound g
+- p34 0.46 Sounds o, g, u, l / Write g and G
+- p35 0.35 Sounds o, g, u, l / The Sound u
+- p36 0.46 Sounds o, g, u, l / Write u and U
+- p37 0.38 Sounds o, g, u, l / The Sound l
+- p38 0.46 Sounds o, g, u, l / Write l and L
+- p39 0.37 Sounds o, g, u, l / Which Sound?
+- p40 0.45 Sounds o, g, u, l / My l Picture
+- p41 0.38 Sounds f, b, e, h / The Sound f
+- p42 0.46 Sounds f, b, e, h / Write f and F
+- p43 0.38 Sounds f, b, e, h / The Sound b
+- p44 0.46 Sounds f, b, e, h / Write b and B
+- p45 0.41 Sounds f, b, e, h / The Sound e
+- p46 0.46 Sounds f, b, e, h / Write e and E
+- p47 0.38 Sounds f, b, e, h / The Sound h
+- p48 0.46 Sounds f, b, e, h / Write h and H
+- p49 0.37 Sounds f, b, e, h / Which Sound?
+- p50 0.45 Sounds f, b, e, h / My b Picture
+- p51 0.41 Big and small letters / Two Ways to Write
+- p52 0.37 Big and small letters / Trace Aa, Bb, Cc
+- p53 0.30 Big and small letters / Find the Partner
+- p54 0.37 Big and small letters / Same Shape, Bigger
+- p55 0.29 Big and small letters / First Letter
+- p56 0.37 Big and small letters / Names Start Big
+- p57 0.16 Big and small letters / Spot the Big Letters
+- p58 0.26 Big and small letters / Big or Small?
+- p59 0.32 Big and small letters / Count Them
+- p60 0.52 Big and small letters / My Name
+- p61 0.41 Picture words and labels / Words Tell Us
+- p62 0.49 Picture words and labels / Read the Labels
+- p63 0.29 Picture words and labels / Write the Label
+- p64 0.29 Picture words and labels / First Sound
+- p65 0.37 Picture words and labels / Which Label?
+- p66 0.41 Picture words and labels / Labels at Home
+- p67 0.16 Picture words and labels / Find the Word
+- p68 0.17 Picture words and labels / Label the Face
+- p69 0.32 Picture words and labels / Count the Labels
+- p70 0.50 Picture words and labels / My Labelled Picture
+- p71 0.42 Rhymes and songs about winter / Words That Rhyme
+- p72 0.42 Rhymes and songs about winter / Snow Is Falling
+- p73 0.24 Rhymes and songs about winter / Which Word Rhymes?
+- p74 0.74 Rhymes and songs about winter / Trace the Rhymes
+- p75 0.48 Rhymes and songs about winter / Hot Tea Song
+- p76 0.16 Rhymes and songs about winter / Find the Rhymes
+- p77 0.20 Rhymes and songs about winter / Odd One Out
+- p78 0.60 Rhymes and songs about winter / Getting Ready Song
+- p79 0.32 Rhymes and songs about winter / Snowflake Count
+- p80 0.58 Rhymes and songs about winter / My Winter Rhyme
+- p86 0.61 Writing practice / Capital Letter Z and My Name
+- p90 0.65 Writing practice / Story: My Cat
+
+## g2-english (81 pages)
+- p1 0.30 Parts of speech / Noun, Verb or Adjective?
+- p2 0.31 Parts of speech / Pronouns
+- p3 0.29 Parts of speech / Adverbs
+- p4 0.20 Prefixes and suffixes / Prefixes un- and re-
+- p5 0.14 Prefixes and suffixes / Suffixes -ful, -less, -er
+- p6 0.30 Prefixes and suffixes / Word Meanings
+- p7 0.29 Paragraph writing / Topic Sentences
+- p8 0.36 Paragraph writing / Key Word Outline
+- p9 0.23 Paragraph writing / Write a Paragraph
+- p10 0.35 Nouns, plurals and tenses / Common or Proper?
+- p11 0.19 Nouns, plurals and tenses / Tricky Plurals
+- p12 0.30 Nouns, plurals and tenses / Past, Present, Future
+- p13 0.14 Spelling patterns / Magic E
+- p14 0.26 Spelling patterns / Silent Letters
+- p15 0.30 Spelling patterns / Sounds of -ed
+- p16 0.70 Classic poems / Who Has Seen the Wind?
+- p17 0.48 Classic poems / Where Go the Boats?
+- p18 0.27 Classic poems / Acrostic Poem
+- p19 0.55 Main idea and inference / The Markhor
+- p20 0.35 Main idea and inference / Inference
+- p21 0.51 Main idea and inference / Road Safety
+- p22 0.29 Diary, invitation and instructions / An Invitation
+- p23 0.33 Diary, invitation and instructions / How to Make Nimbu Pani
+- p24 0.36 Diary, invitation and instructions / My Diary
+- p25 0.15 Punctuation / Commas in Lists
+- p26 0.29 Punctuation / Speech Marks
+- p27 0.14 Punctuation / Apostrophes
+- p28 0.21 Story writing / Beginning, Middle, End
+- p29 0.20 Story writing / Plan a Story
+- p30 0.25 Story writing / Write Your Story
+- p31 0.45 Adverbs / What Is an Adverb?
+- p32 0.25 Adverbs / Adding -ly
+- p33 0.52 Adverbs / Spelling Rules
+- p34 0.36 Adverbs / Adverbs of When
+- p35 0.33 Adverbs / How, When or Where?
+- p36 0.46 Adverbs / How Often?
+- p37 0.40 Adverbs / Picture Sentences
+- p38 0.30 Adverbs / Match the Adverb
+- p39 0.45 Adverbs / Adverb Hunt
+- p40 0.46 Adverbs / My Adverb Sentences
+- p41 0.45 Similes / What Is a Simile?
+- p42 0.21 Similes / As ... As
+- p43 0.40 Similes / Picture Similes
+- p44 0.30 Similes / Like a ...
+- p45 0.32 Similes / Like or As?
+- p46 0.30 Similes / Two Things Compared
+- p47 0.36 Similes / A Winter Poem
+- p48 0.30 Similes / Sort the Similes
+- p49 0.32 Similes / Make It Your Own
+- p50 0.45 Similes / My Simile Poem
+- p51 0.45 Fact and opinion / What Is a Fact?
+- p52 0.32 Fact and opinion / Can You Check It?
+- p53 0.40 Fact and opinion / Opinion Words
+- p54 0.40 Fact and opinion / Picture Facts
+- p55 0.34 Fact and opinion / Sort Them
+- p56 0.37 Fact and opinion / Fact or Opinion About Animals
+- p57 0.40 Fact and opinion / A Trip to the Zoo
+- p58 0.21 Fact and opinion / Change It
+- p59 0.32 Fact and opinion / Fact Sums
+- p60 0.43 Fact and opinion / Facts and My Opinion
+- p61 0.48 Book review / What Is a Book Review?
+- p62 0.31 Book review / Parts of a Book
+- p63 0.48 Book review / Read a Story
+- p64 0.35 Book review / Characters and Setting
+- p65 0.43 Book review / Review Words
+- p66 0.30 Book review / Fact or Opinion?
+- p67 0.25 Book review / Star Ratings
+- p68 0.36 Book review / Spoiler Alert
+- p69 0.32 Book review / Library Sums
+- p70 0.46 Book review / My Book Review
+- p71 0.45 Poems about winter / What Makes a Poem?
+- p72 0.52 Poems about winter / Read a Winter Poem
+- p73 0.21 Poems about winter / Rhyming Pairs
+- p74 0.63 Poems about winter / Winter Senses
+- p75 0.25 Poems about winter / Winter Describing Words
+- p76 0.51 Poems about winter / Similes in Poems
+- p77 0.20 Poems about winter / Rhythm and Beats
+- p78 0.50 Poems about winter / An Acrostic Poem
+- p79 0.32 Poems about winter / Poem Sums
+- p80 0.44 Poems about winter / My Winter Poem
+- p85 0.73 Writing practice / Story: The Lion and the Mouse
+
+## science (80 pages)
+- p1 0.53 Energy / We Need Energy
+- p2 0.66 Energy / Energy From Food
+- p3 0.49 Heat / Hot or Cold?
+- p4 0.56 Heat / Sources of Heat
+- p5 0.43 Heat / Heat Changes Things
+- p6 0.44 Light / Sources of Light
+- p7 0.55 Light / Light and Shadow
+- p8 0.44 Sound / Loud or Soft?
+- p9 0.49 Sound / Sounds Around Us
+- p10 0.55 Sound / Science Review
+- p11 0.44 Energy / Energy at Home
+- p12 0.40 Energy / Saving Energy
+- p13 0.45 Light / Day and Night
+- p14 0.44 Light / Shiny or Dull?
+- p15 0.30 My body and senses / Body Parts
+- p16 0.25 My body and senses / Five Senses
+- p17 0.30 My body and senses / Look After Your Body
+- p18 0.36 Healthy food / Healthy or Not?
+- p19 0.30 Healthy food / Food Groups
+- p20 0.30 Healthy food / Where Does It Come From?
+- p21 0.30 Materials around us / What Is It Made Of?
+- p22 0.30 Materials around us / Hard or Soft?
+- p23 0.30 Materials around us / Floats or Sinks?
+- p24 0.25 Plants around us / Parts of a Plant
+- p25 0.25 Plants around us / What Plants Need
+- p26 0.33 Plants around us / Grow a Seed
+- p28 0.65 How animals grow / How People Grow
+- p32 0.62 How animals grow / Butterfly Life Cycle
+- p34 0.74 How animals grow / Animal Babies
+- p36 0.66 How animals grow / Life Cycle Review
+- p37 0.46 Animals with and without a backbone / What Is a Backbone?
+- p38 0.40 Animals with and without a backbone / Two Big Groups
+- p39 0.49 Animals with and without a backbone / Backbone or No Backbone?
+- p40 0.35 Animals with and without a backbone / Sort the Animals
+- p41 0.29 Animals with and without a backbone / Soft Bodies and Shells
+- p42 0.30 Animals with and without a backbone / True or False?
+- p43 0.43 Animals with and without a backbone / Feel Your Backbone
+- p44 0.15 Animals with and without a backbone / Know, Want, Learned
+- p45 0.34 Animals with and without a backbone / Match the Animal
+- p46 0.32 Animals with and without a backbone / Show What You Know
+- p47 0.49 Animal groups / Groups of Animals
+- p48 0.32 Animal groups / Mammals
+- p49 0.29 Animal groups / Birds
+- p50 0.29 Animal groups / Fish
+- p51 0.29 Animal groups / Reptiles
+- p52 0.29 Animal groups / Amphibians
+- p53 0.40 Animal groups / Insects
+- p54 0.59 Animal groups / Which Group?
+- p55 0.25 Animal groups / Animal Groups Quiz
+- p56 0.37 Animal groups / My Favourite Animal
+- p57 0.48 Parts of a plant / Parts of a Plant
+- p58 0.26 Parts of a plant / Roots
+- p59 0.26 Parts of a plant / Stem
+- p60 0.26 Parts of a plant / Leaves
+- p61 0.32 Parts of a plant / Flowers, Fruit and Seeds
+- p62 0.25 Parts of a plant / Which Part Does This?
+- p63 0.59 Parts of a plant / Parts We Eat
+- p64 0.27 Parts of a plant / What Plants Need
+- p65 0.42 Parts of a plant / Grow and Watch
+- p66 0.36 Parts of a plant / Draw and Label
+- p67 0.40 What plants need to grow / What Do Plants Need?
+- p68 0.29 What plants need to grow / Name What They Need
+- p69 0.40 What plants need to grow / Will It Grow Well?
+- p70 0.40 What plants need to grow / From Seed to Plant
+- p71 0.38 What plants need to grow / The Two Pots
+- p72 0.25 What plants need to grow / Parts That Help
+- p73 0.30 What plants need to grow / Too Much or Just Right?
+- p74 0.35 What plants need to grow / Plant Maths
+- p75 0.26 What plants need to grow / Needs or Not?
+- p76 0.43 What plants need to grow / My Plant Diary
+- p77 0.40 Healthy habits and germs / What Are Germs?
+- p78 0.40 Healthy habits and germs / Good Habits
+- p79 0.40 Healthy habits and germs / Washing My Hands
+- p80 0.30 Healthy habits and germs / Healthy or Not?
+- p81 0.25 Healthy habits and germs / When Do We Wash?
+- p82 0.41 Healthy habits and germs / The Glitter Test
+- p83 0.30 Healthy habits and germs / Why Do We Do It?
+- p84 0.35 Healthy habits and germs / Healthy Sums
+- p85 0.30 Healthy habits and germs / Spread or Stop?
+- p86 0.43 Healthy habits and germs / My Healthy Week
+
+## nursery-maths (80 pages)
+- p1 0.31 Numbers 1 to 5 / Count and Circle
+- p2 0.61 Numbers 1 to 5 / Trace 1 to 5
+- p3 0.31 Numbers 1 to 5 / Count and Write
+- p4 0.36 Numbers 6 to 10 / Count and Circle
+- p5 0.61 Numbers 6 to 10 / Trace 6 to 10
+- p6 0.31 Numbers 6 to 10 / Count and Write
+- p7 0.43 Shapes / Colour the Shapes
+- p8 0.44 Shapes / Find the Shape
+- p9 0.36 Shapes / Trace the Shapes
+- p10 0.31 Numbers in order / Count and Write
+- p11 0.20 Numbers in order / What Comes Next?
+- p12 0.14 Numbers in order / Before and After
+- p13 0.36 Sorting and matching / More or Fewer?
+- p14 0.20 Sorting and matching / Same or Different?
+- p15 0.21 Sorting and matching / Sort by Colour
+- p16 0.30 Long, short, heavy, light / Long or Short?
+- p17 0.30 Long, short, heavy, light / Tall or Short?
+- p18 0.30 Long, short, heavy, light / Heavy or Light?
+- p19 0.14 One more, one less / One More
+- p20 0.14 One more, one less / One Less
+- p21 0.20 One more, one less / Count the Stars
+- p22 0.22 Simple patterns / What Comes Next?
+- p23 0.15 Simple patterns / Colour Patterns
+- p24 0.30 Simple patterns / Make a Pattern
+- p25 0.25 First, next, last / Who Is First?
+- p26 0.15 First, next, last / In Order
+- p27 0.30 First, next, last / Draw the Line
+- p28 0.13 Counting back and zero / Rocket Countdown
+- p29 0.19 Counting back and zero / Zero Means None
+- p30 0.43 Counting back and zero / Count and Colour
+- p31 0.29 Numbers to 15 / After Ten
+- p32 0.27 Numbers to 15 / Count and Write
+- p33 0.37 Numbers to 15 / Write 11, 12, 13
+- p34 0.25 Numbers to 15 / Write 14 and 15
+- p35 0.27 Numbers to 15 / Missing Numbers
+- p36 0.35 Numbers to 15 / How Many?
+- p37 0.32 Numbers to 15 / Which Has More?
+- p38 0.21 Numbers to 15 / Ten and Some More
+- p39 0.35 Numbers to 15 / Number Stories
+- p40 0.50 Numbers to 15 / Draw 13
+- p41 0.41 Big and small, tall and short / Big and Small
+- p42 0.51 Big and small, tall and short / Small, Bigger, Biggest
+- p43 0.41 Big and small, tall and short / Tall and Short
+- p44 0.51 Big and small, tall and short / Short to Tall
+- p45 0.25 Big and small, tall and short / Which Is Bigger?
+- p46 0.26 Big and small, tall and short / Taller or Shorter?
+- p47 0.26 Big and small, tall and short / Big or Small?
+- p48 0.24 Big and small, tall and short / Size Pictures
+- p49 0.35 Big and small, tall and short / Size Stories
+- p50 0.55 Big and small, tall and short / Draw Big and Small
+- p51 0.38 Circles, squares and triangles around us / Three Shapes
+- p52 0.36 Circles, squares and triangles around us / Trace the Shapes
+- p53 0.37 Circles, squares and triangles around us / Shapes at Home
+- p54 0.35 Circles, squares and triangles around us / Sides and Corners
+- p55 0.43 Circles, squares and triangles around us / Colour the Shapes
+- p56 0.21 Circles, squares and triangles around us / Sort the Things
+- p57 0.20 Circles, squares and triangles around us / Count the Shapes
+- p58 0.20 Circles, squares and triangles around us / Which Shape?
+- p59 0.35 Circles, squares and triangles around us / Shape Stories
+- p60 0.52 Circles, squares and triangles around us / Shape House
+- p61 0.29 Adding with pictures / Putting Together
+- p62 0.39 Adding with pictures / Count and Add
+- p63 0.32 Adding with pictures / Fruit Sums
+- p64 0.25 Adding with pictures / Add One More
+- p65 0.21 Adding with pictures / Toy Sums
+- p66 0.20 Adding with pictures / Which Sum?
+- p67 0.46 Adding with pictures / Draw and Add
+- p68 0.32 Adding with pictures / Animal Stories
+- p69 0.25 Adding with pictures / Match the Sum
+- p70 0.42 Adding with pictures / My Adding Picture
+- p71 0.33 Counting to 20 with objects / Up to Twenty
+- p72 0.34 Counting to 20 with objects / Count and Write
+- p73 0.37 Counting to 20 with objects / Write 16, 17, 18
+- p74 0.25 Counting to 20 with objects / Write 19 and 20
+- p75 0.27 Counting to 20 with objects / Missing Numbers
+- p76 0.45 Counting to 20 with objects / How Many?
+- p77 0.38 Counting to 20 with objects / Ten and Some More
+- p78 0.19 Counting to 20 with objects / One More, One Less
+- p79 0.32 Counting to 20 with objects / Counting Stories
+- p80 0.42 Counting to 20 with objects / My Collection
+
+## nursery-gk (80 pages)
+- p1 0.30 My body / My Five Senses
+- p2 0.14 My body / How Many?
+- p3 0.54 My body / Keeping Clean
+- p4 0.43 Colours / Colour Them Right
+- p5 0.35 Colours / What Colour Is It?
+- p6 0.30 Colours / Colour Sort
+- p7 0.35 Animals / Animal Sounds
+- p8 0.30 Animals / Animal Homes
+- p9 0.31 Animals / Farm or Jungle?
+- p10 0.30 Fruits and vegetables / Fruit or Vegetable?
+- p11 0.30 Fruits and vegetables / What Colour?
+- p12 0.43 Fruits and vegetables / My Favourite
+- p13 0.20 My home / Rooms of the House
+- p14 0.25 My home / Things at Home
+- p15 0.36 My home / My Family
+- p16 0.30 Transport / Land, Water or Air?
+- p17 0.09 Transport / How Many Wheels?
+- p18 0.34 Transport / Draw a Ride
+- p19 0.20 Weather / What Is the Weather?
+- p20 0.19 Weather / What Do I Wear?
+- p21 0.36 Weather / Today's Weather
+- p22 0.30 Day and night / Day or Night?
+- p23 0.34 Day and night / Sun and Moon
+- p24 0.20 Day and night / My Bedtime
+- p25 0.25 Clothes / Name the Clothes
+- p26 0.25 Clothes / Hot or Cold?
+- p27 0.36 Clothes / Dress Up
+- p28 0.15 Good manners / Magic Words
+- p29 0.25 Good manners / Kind or Unkind?
+- p30 0.34 Good manners / My Kind Act
+- p31 0.41 My family / This Is a Family
+- p32 0.29 My family / Who Is It?
+- p33 0.24 My family / Young or Old?
+- p34 0.25 My family / We Grow Up
+- p35 0.25 My family / Kind at Home
+- p36 0.25 My family / Things We Do Together
+- p37 0.20 My family / Happy or Sad?
+- p38 0.21 My family / Magic Words
+- p39 0.27 My family / Counting My Family
+- p40 0.50 My family / My Family
+- p41 0.40 Our helpers at home / Who Helps at Home?
+- p42 0.25 Our helpers at home / Who Does It?
+- p43 0.29 Our helpers at home / Name the Helper
+- p44 0.24 Our helpers at home / Tools Helpers Use
+- p45 0.25 Our helpers at home / I Can Help Too
+- p46 0.21 Our helpers at home / Say Thank You
+- p47 0.40 Our helpers at home / A Day at Home
+- p48 0.24 Our helpers at home / Safe at Home
+- p49 0.32 Our helpers at home / Helper Sums
+- p50 0.50 Our helpers at home / How I Help
+- p51 0.40 Winter in Pakistan / Winter Is Here
+- p52 0.29 Winter in Pakistan / Warm Clothes
+- p53 0.37 Winter in Pakistan / Winter or Summer?
+- p54 0.40 Winter in Pakistan / Snow on the Mountains
+- p55 0.29 Winter in Pakistan / Winter Food
+- p56 0.37 Winter in Pakistan / Foggy Mornings
+- p57 0.25 Winter in Pakistan / What Do We Do?
+- p58 0.25 Winter in Pakistan / A Cold Morning
+- p59 0.32 Winter in Pakistan / Winter Sums
+- p60 0.50 Winter in Pakistan / Me in Winter
+- p61 0.40 Water and keeping clean / We Need Water
+- p62 0.29 Water and keeping clean / Uses of Water
+- p63 0.40 Water and keeping clean / Wash Your Hands
+- p64 0.37 Water and keeping clean / When Do We Wash?
+- p65 0.24 Water and keeping clean / Clean Things
+- p66 0.25 Water and keeping clean / Clean or Not Clean?
+- p67 0.37 Water and keeping clean / Save Water
+- p68 0.25 Water and keeping clean / Match It
+- p69 0.35 Water and keeping clean / Water Sums
+- p70 0.50 Water and keeping clean / I Keep Clean
+- p71 0.40 Sounds around us / We Hear Sounds
+- p72 0.29 Sounds around us / Animal Sounds
+- p73 0.37 Sounds around us / Loud or Quiet?
+- p74 0.41 Sounds around us / Sounds at Home
+- p75 0.37 Sounds around us / Home or Outside?
+- p76 0.37 Sounds around us / Sounds That Help Us
+- p77 0.29 Sounds around us / Music Sounds
+- p78 0.26 Sounds around us / Sort the Sounds
+- p79 0.35 Sounds around us / Sound Stories
+- p80 0.46 Sounds around us / My Loud Sound
+
+## nursery-urdu (80 pages)
+- p1 0.57 لکیروں کی مشق / سیدھی لکیریں
+- p2 0.57 لکیروں کی مشق / لہریں اور زگ زیگ
+- p3 0.45 لکیروں کی مشق / گول لکیریں
+- p4 0.53 حروف ا سے خ / ا ب پ ت
+- p5 0.53 حروف ا سے خ / ٹ ث ج چ
+- p6 0.50 حروف ا سے خ / ح خ اور پہچان
+- p7 0.53 حروف د سے ی / د ذ ر ز
+- p8 0.53 حروف د سے ی / س ش ک گ
+- p9 0.53 حروف د سے ی / م ن و ی
+- p10 0.45 حروف اور تصویریں / پہلا حرف
+- p11 0.34 حروف اور تصویریں / ملائیں
+- p12 0.53 حروف اور تصویریں / لکھیں
+- p13 0.34 رنگ اور گنتی / رنگوں کے نام
+- p14 0.37 رنگ اور گنتی / کیا رنگ ہے؟
+- p15 0.20 رنگ اور گنتی / گنتی
+- p16 0.38 ننھی نظمیں / مچھلی جل کی رانی
+- p17 0.30 ننھی نظمیں / ہم آواز
+- p18 0.39 ننھی نظمیں / تصویر بنائیں
+- p19 0.34 جسم کے حصے / جسم کے حصے
+- p20 0.13 جسم کے حصے / کتنے ہیں؟
+- p21 0.39 جسم کے حصے / تصویر بنائیں
+- p22 0.45 پھل اور سبزیاں / پھل یا سبزی
+- p23 0.22 پھل اور سبزیاں / رنگ ملائیں
+- p24 0.39 پھل اور سبزیاں / پسندیدہ پھل
+- p25 0.28 جانوروں کے نام / جانور پہچانیں
+- p26 0.30 جانوروں کے نام / گھر کا یا جنگل کا
+- p27 0.39 جانوروں کے نام / تصویر بنائیں
+- p28 0.20 گنتی ۶ سے ۱۰ / گنتی لکھیں
+- p29 0.14 گنتی ۶ سے ۱۰ / ترتیب
+- p30 0.22 گنتی ۶ سے ۱۰ / گنیں
+- p31 0.57 نقطے والے حروف / ایک نقطہ
+- p32 0.39 نقطے والے حروف / دو نقطے
+- p33 0.39 نقطے والے حروف / تین نقطے
+- p34 0.45 نقطے والے حروف / نقطے گنیں
+- p35 0.45 نقطے والے حروف / اوپر یا نیچے؟
+- p36 0.30 نقطے والے حروف / ب پ ت ث
+- p37 0.33 نقطے والے حروف / پہلا حرف
+- p38 0.45 نقطے والے حروف / نقطے والا حرف
+- p39 0.17 نقطے والے حروف / نقطے والے حروف ڈھونڈیں
+- p40 0.39 نقطے والے حروف / میرا حرف
+- p41 0.30 دو حروف جوڑنا / حروف ملائیں
+- p42 0.53 دو حروف جوڑنا / لکھیں
+- p43 0.13 دو حروف جوڑنا / اور جوڑیں
+- p44 0.13 دو حروف جوڑنا / لفظ توڑیں
+- p45 0.46 دو حروف جوڑنا / کون نہیں ملتا؟
+- p46 0.53 دو حروف جوڑنا / لکھیں
+- p47 0.21 دو حروف جوڑنا / تصویر والے لفظ
+- p48 0.28 دو حروف جوڑنا / جوڑی ملائیں
+- p49 0.45 دو حروف جوڑنا / کتنے حروف؟
+- p50 0.57 دو حروف جوڑنا / میرا لفظ
+- p51 0.44 تصویر والے دو حرفی الفاظ / تصویر اور لفظ
+- p52 0.53 تصویر والے دو حرفی الفاظ / لکھیں
+- p53 0.33 تصویر والے دو حرفی الفاظ / پہلا حرف
+- p54 0.33 تصویر والے دو حرفی الفاظ / آخری حرف
+- p55 0.31 تصویر والے دو حرفی الفاظ / صحیح لفظ
+- p56 0.13 تصویر والے دو حرفی الفاظ / حروف جوڑیں
+- p57 0.13 تصویر والے دو حرفی الفاظ / لفظ توڑیں
+- p58 0.17 تصویر والے دو حرفی الفاظ / آم ڈھونڈیں
+- p59 0.33 تصویر والے دو حرفی الفاظ / یہ کیا ہے؟
+- p60 0.57 تصویر والے دو حرفی الفاظ / میرا لفظ
+- p61 0.44 سردی کے الفاظ / سردی آ گئی
+- p62 0.53 سردی کے الفاظ / لکھیں
+- p63 0.33 سردی کے الفاظ / یہ کیا ہے؟
+- p64 0.33 سردی کے الفاظ / پہلا حرف
+- p65 0.31 سردی کے الفاظ / صحیح لفظ
+- p66 0.47 سردی کے الفاظ / سردی یا گرمی؟
+- p67 0.28 سردی کے الفاظ / ملائیں
+- p68 0.17 سردی کے الفاظ / برف ڈھونڈیں
+- p69 0.36 سردی کے الفاظ / گنتی
+- p70 0.57 سردی کے الفاظ / میں سردی میں
+- p71 0.38 ننھی نظمیں: بارش اور دھوپ / بارش کی نظم
+- p72 0.33 ننھی نظمیں: بارش اور دھوپ / یہ کیا ہے؟
+- p73 0.39 ننھی نظمیں: بارش اور دھوپ / لکھیں
+- p74 0.38 ننھی نظمیں: بارش اور دھوپ / دھوپ کی نظم
+- p75 0.39 ننھی نظمیں: بارش اور دھوپ / لکھیں
+- p76 0.48 ننھی نظمیں: بارش اور دھوپ / ہم آواز لفظ
+- p77 0.47 ننھی نظمیں: بارش اور دھوپ / بارش یا دھوپ؟
+- p78 0.28 ننھی نظمیں: بارش اور دھوپ / ملائیں
+- p79 0.36 ننھی نظمیں: بارش اور دھوپ / گنتی
+- p80 0.62 ننھی نظمیں: بارش اور دھوپ / میری تصویر
+
+## kg-english (80 pages)
+- p1 0.25 Short vowel sounds / Short a and e
+- p2 0.14 Short vowel sounds / Short i, o and u
+- p3 0.30 Short vowel sounds / Which Vowel?
+- p4 0.14 CVC words / Blend the Sounds
+- p5 0.30 CVC words / Rhyming Words
+- p6 0.25 CVC words / Read and Choose
+- p7 0.61 Sight words / Trace the Sight Words
+- p8 0.36 Sight words / Fill In the Sight Word
+- p9 0.26 Sight words / Find the Word
+- p10 0.25 Position and comparing / Where Is It?
+- p11 0.36 Position and comparing / Tall, Taller, Tallest
+- p12 0.19 Position and comparing / Days of the Week
+- p13 0.41 Sounds sh, ch, th / sh or ch?
+- p14 0.26 Sounds sh, ch, th / Add the Sound
+- p15 0.30 Sounds sh, ch, th / Read and Match
+- p16 0.44 Rhymes and rhyming words / Hickory Dickory Dock
+- p17 0.26 Rhymes and rhyming words / Rhyme Families
+- p18 0.39 Rhymes and rhyming words / Hot Cross Buns
+- p19 0.29 Read and answer / Sam and the Cat
+- p20 0.34 Read and answer / The Hen
+- p21 0.14 Read and answer / Story Order
+- p22 0.26 Writing words / Missing Letter
+- p23 0.15 Writing words / Copy the Sentence
+- p24 0.41 Writing words / All About Me
+- p25 0.30 Capital and small letters / Match the Letters
+- p26 0.19 Capital and small letters / Write the Small Letter
+- p27 0.30 Capital and small letters / Capital or Small?
+- p28 0.20 Naming and doing words / Naming Words
+- p29 0.20 Naming and doing words / Doing Words
+- p30 0.26 Naming and doing words / Naming or Doing?
+- p31 0.47 Long vowel sounds with e / The Long e Sound
+- p32 0.21 Long vowel sounds with e / Words with ee
+- p33 0.21 Long vowel sounds with e / Words with ea
+- p34 0.30 Long vowel sounds with e / Just e
+- p35 0.31 Long vowel sounds with e / Sort the Words
+- p36 0.25 Long vowel sounds with e / Choose the Word
+- p37 0.34 Long vowel sounds with e / Read and Answer
+- p38 0.30 Long vowel sounds with e / Rhyme Time
+- p39 0.23 Long vowel sounds with e / Count the Long e
+- p40 0.32 Long vowel sounds with e / My Long e Sentence
+- p41 0.56 Blends bl, cl, fl / What Is a Blend?
+- p42 0.17 Blends bl, cl, fl / Words with bl
+- p43 0.21 Blends bl, cl, fl / Words with cl
+- p44 0.21 Blends bl, cl, fl / Words with fl
+- p45 0.14 Blends bl, cl, fl / Build the Words
+- p46 0.26 Blends bl, cl, fl / Sort the Blends
+- p47 0.25 Blends bl, cl, fl / Choose the Word
+- p48 0.34 Blends bl, cl, fl / Read and Answer
+- p49 0.32 Blends bl, cl, fl / Count the Blends
+- p50 0.38 Blends bl, cl, fl / My Blend Sentence
+- p51 0.29 Sentences with I can / I Can!
+- p52 0.40 Sentences with I can / What Can I Do?
+- p53 0.20 Sentences with I can / Capital I
+- p54 0.20 Sentences with I can / Right Order
+- p55 0.47 Sentences with I can / Can or Cannot?
+- p56 0.34 Sentences with I can / Read About Zain
+- p57 0.30 Sentences with I can / Me or Not Me?
+- p58 0.30 Sentences with I can / Finish the Sentence
+- p59 0.32 Sentences with I can / Count the Words
+- p60 0.38 Sentences with I can / My I Can Sentences
+- p61 0.41 Opposites / What Is an Opposite?
+- p62 0.29 Opposites / Picture Opposites
+- p63 0.47 Opposites / Day and Night
+- p64 0.37 Opposites / Trace the Pairs
+- p65 0.24 Opposites / Which Is It?
+- p66 0.26 Opposites / Finish the Sentence
+- p67 0.26 Opposites / Sort the Words
+- p68 0.34 Opposites / Read and Answer
+- p69 0.32 Opposites / Opposite Sums
+- p70 0.45 Opposites / Draw Opposites
+- p71 0.40 Reading short stories / What Is a Story?
+- p72 0.38 Reading short stories / The Red Kite
+- p73 0.26 Reading short stories / Who, Where, What?
+- p74 0.38 Reading short stories / The Lost Shoe
+- p75 0.56 Reading short stories / Story in Order
+- p76 0.29 Reading short stories / Story Words
+- p77 0.42 Reading short stories / The Hen and the Egg
+- p78 0.20 Reading short stories / How Do They Feel?
+- p79 0.32 Reading short stories / Story Sums
+- p80 0.45 Reading short stories / My Favourite Story
+
+## kg-maths (80 pages)
+- p1 0.47 Numbers to 20 / Count and Write
+- p2 0.61 Numbers to 20 / Trace 11 to 19
+- p3 0.13 Numbers to 20 / Number Track
+- p4 0.36 More and less / Which Has More?
+- p5 0.29 More and less / One More, One Less
+- p6 0.34 More and less / Biggest and Smallest
+- p7 0.30 Patterns / What Comes Next?
+- p8 0.27 Patterns / Number Patterns
+- p9 0.41 Patterns / Make a Pattern
+- p10 0.19 Adding to 10 / Add the Shapes
+- p11 0.19 Adding to 10 / Story Sums
+- p12 0.14 Adding to 10 / Make 10
+- p13 0.19 Taking away / Take Away
+- p14 0.19 Taking away / How Many Left?
+- p15 0.25 Taking away / Add or Take Away?
+- p16 0.35 Shapes all around / Name the Shape
+- p17 0.30 Shapes all around / Shapes at Home
+- p18 0.42 Shapes all around / Count the Sides
+- p19 0.30 Ordinal numbers / 1st to 5th
+- p20 0.29 Ordinal numbers / The Race
+- p21 0.14 Ordinal numbers / Days in Order
+- p22 0.13 Counting in 2s, 5s and 10s / Count in 2s
+- p23 0.13 Counting in 2s, 5s and 10s / Count in 10s
+- p24 0.13 Counting in 2s, 5s and 10s / Count in 5s
+- p25 0.09 Coins and notes / Know the Coins
+- p26 0.20 Coins and notes / Which Is More?
+- p27 0.09 Coins and notes / Add the Coins
+- p28 0.25 Time words / Morning, Afternoon, Night
+- p29 0.14 Time words / Days of the Week
+- p30 0.26 Time words / O'Clock
+- p31 0.25 Numbers to 50 / Tens and Ones
+- p32 0.13 Numbers to 50 / Count to 30
+- p33 0.27 Numbers to 50 / Count to 50
+- p34 0.30 Numbers to 50 / Counting in Tens
+- p35 0.29 Numbers to 50 / Before, After, Between
+- p36 0.25 Numbers to 50 / Which Is Bigger?
+- p37 0.24 Numbers to 50 / Trays and Bundles
+- p38 0.35 Numbers to 50 / Number Stories
+- p39 0.09 Numbers to 50 / Count On
+- p40 0.25 Numbers to 50 / Write to 50
+- p41 0.28 Number bonds to 10 / What Is a Number Bond?
+- p42 0.34 Number bonds to 10 / Bonds to 5
+- p43 0.40 Number bonds to 10 / Bonds to 10
+- p44 0.25 Number bonds to 10 / Part, Part, Whole
+- p45 0.24 Number bonds to 10 / Picture Bonds
+- p46 0.25 Number bonds to 10 / Make 10
+- p47 0.30 Number bonds to 10 / Bond Partners
+- p48 0.35 Number bonds to 10 / Bond Stories
+- p49 0.14 Number bonds to 10 / Ten Fingers
+- p50 0.37 Number bonds to 10 / Draw a Bond
+- p51 0.28 Adding and taking away stories / Put Together, Take Away
+- p52 0.21 Adding and taking away stories / Adding Pictures
+- p53 0.21 Adding and taking away stories / Taking Away Pictures
+- p54 0.25 Adding and taking away stories / Add or Take Away?
+- p55 0.09 Adding and taking away stories / Adding Sums
+- p56 0.09 Adding and taking away stories / Taking Away Sums
+- p57 0.35 Adding and taking away stories / Adding Stories
+- p58 0.32 Adding and taking away stories / Taking Away Stories
+- p59 0.33 Adding and taking away stories / Story Strip
+- p60 0.40 Adding and taking away stories / My Number Story
+- p61 0.35 Measuring with hands and feet / How Long Is It?
+- p62 0.27 Measuring with hands and feet / Hand Spans
+- p63 0.37 Measuring with hands and feet / Longer or Shorter?
+- p64 0.27 Measuring with hands and feet / Foot Steps
+- p65 0.37 Measuring with hands and feet / Hands or Feet?
+- p66 0.40 Measuring with hands and feet / Measure in Order
+- p67 0.21 Measuring with hands and feet / Which Is Longest?
+- p68 0.40 Measuring with hands and feet / Big Hands, Small Hands
+- p69 0.35 Measuring with hands and feet / Measuring Stories
+- p70 0.20 Measuring with hands and feet / My Measuring
+- p71 0.37 Halves / What Is Half?
+- p72 0.30 Halves / Shaded Halves
+- p73 0.20 Halves / Equal or Not?
+- p74 0.43 Halves / Half of a Group
+- p75 0.21 Halves / Food Halves
+- p76 0.20 Halves / Share Fairly
+- p77 0.40 Halves / Cutting a Roti
+- p78 0.25 Halves / Which Is Half?
+- p79 0.32 Halves / Half Stories
+- p80 0.42 Halves / Draw the Halves
+
+## kg-gk (80 pages)
+- p1 0.25 Seasons and weather / Four Seasons
+- p2 0.26 Seasons and weather / What to Wear?
+- p3 0.46 Seasons and weather / The Weather Today
+- p4 0.30 Plants / Parts of a Plant
+- p5 0.30 Plants / What Plants Need
+- p6 0.35 Plants / Fruits and Vegetables
+- p7 0.35 Community helpers / Who Helps Us?
+- p8 0.30 Community helpers / Tools They Use
+- p9 0.30 Community helpers / Who Would You Call?
+- p10 0.30 Healthy habits and safety / Healthy Habits
+- p11 0.30 Healthy habits and safety / Stay Safe
+- p12 0.40 Healthy habits and safety / Emergency Numbers
+- p13 0.30 Animals and their young / Baby Animals
+- p14 0.30 Animals and their young / Where Do They Live?
+- p15 0.30 Animals and their young / Pet or Wild?
+- p16 0.38 Our country Pakistan / Our Flag
+- p17 0.25 Our country Pakistan / Pakistan Facts
+- p18 0.35 Our country Pakistan / Our Hero
+- p19 0.25 My five senses / Which Sense?
+- p20 0.30 My five senses / Match the Sense
+- p21 0.20 My five senses / Loud or Soft?
+- p22 0.25 Water / Uses of Water
+- p23 0.25 Water / Where Is Water?
+- p24 0.20 Water / Save Water
+- p25 0.25 Festivals / Which Festival?
+- p26 0.20 Festivals / Eid Day
+- p27 0.36 Festivals / My Festival
+- p28 0.30 Birds and insects / Bird or Insect?
+- p29 0.14 Birds and insects / Count the Legs
+- p30 0.25 Birds and insects / Where Do They Live?
+- p31 0.41 Our solar system / The Sun and Its Planets
+- p32 0.30 Our solar system / Planet Facts
+- p33 0.26 Our solar system / Eight Planets
+- p34 0.37 Our solar system / Day and Night
+- p35 0.32 Our solar system / The Moon
+- p36 0.25 Our solar system / Our Star, the Sun
+- p37 0.42 Our solar system / Going to Space
+- p38 0.26 Our solar system / In the Sky
+- p39 0.39 Our solar system / Space Sums
+- p40 0.50 Our solar system / My Space Picture
+- p41 0.56 Food we eat / Why We Eat
+- p42 0.29 Food we eat / Name the Food
+- p43 0.45 Food we eat / Everyday or Sometimes?
+- p44 0.30 Food we eat / Where Does It Come From?
+- p45 0.37 Food we eat / Plant or Animal?
+- p46 0.40 Food we eat / Meals of the Day
+- p47 0.30 Food we eat / Good Eating Habits
+- p48 0.34 Food we eat / Food at Home
+- p49 0.35 Food we eat / Food Sums
+- p50 0.49 Food we eat / My Healthy Plate
+- p51 0.56 Clothes for each season / Weather and Clothes
+- p52 0.29 Clothes for each season / Name the Clothes
+- p53 0.25 Clothes for each season / What Should I Wear?
+- p54 0.37 Clothes for each season / Cotton and Wool
+- p55 0.26 Clothes for each season / Summer or Winter?
+- p56 0.20 Clothes for each season / Pick the Right One
+- p57 0.38 Clothes for each season / A Trip to Murree
+- p58 0.40 Clothes for each season / Getting Dressed
+- p59 0.32 Clothes for each season / Clothes Sums
+- p60 0.44 Clothes for each season / Dress for a Season
+- p61 0.40 Places in our town / Our Town
+- p62 0.40 Places in our town / Name the Place
+- p63 0.25 Places in our town / Who Works Here?
+- p64 0.37 Places in our town / Where Do We Go?
+- p65 0.37 Places in our town / Places and Things
+- p66 0.40 Places in our town / Getting There
+- p67 0.21 Places in our town / Sort the Places
+- p68 0.63 Places in our town / Read the Map
+- p69 0.32 Places in our town / Town Sums
+- p70 0.42 Places in our town / My Town
+- p71 0.40 Winter animals and birds / Keeping Warm
+- p72 0.56 Winter animals and birds / Sleeping Through Winter
+- p73 0.40 Winter animals and birds / Birds That Travel
+- p74 0.29 Winter animals and birds / Snow Animals
+- p75 0.25 Winter animals and birds / How Do They Stay Warm?
+- p76 0.35 Winter animals and birds / Storing Food
+- p77 0.21 Winter animals and birds / Sort the Animals
+- p78 0.20 Winter animals and birds / Helping Birds in Winter
+- p79 0.35 Winter animals and birds / Winter Animal Sums
+- p80 0.45 Winter animals and birds / My Winter Animal
+
+## kg-urdu (80 pages)
+- p1 0.22 حروفِ تہجی / حروف ترتیب سے لکھیں
+- p2 0.14 حروفِ تہجی / مزید حروف
+- p3 0.20 حروفِ تہجی / پہلا حرف
+- p4 0.20 دو حرفی الفاظ / حروف جوڑیں
+- p5 0.13 دو حرفی الفاظ / لفظ توڑیں
+- p6 0.37 دو حرفی الفاظ / صحیح لفظ
+- p7 0.20 تین حرفی الفاظ / حروف جوڑیں
+- p8 0.20 تین حرفی الفاظ / لفظ توڑیں
+- p9 0.45 تین حرفی الفاظ / جملہ مکمل کریں
+- p10 0.37 زبر، زیر، پیش / آواز پہچانیں
+- p11 0.13 زبر، زیر، پیش / پڑھیں
+- p12 0.22 زبر، زیر، پیش / صحیح لفظ
+- p13 0.38 نظم: ہماری گائے / نظم پڑھیں
+- p14 0.37 نظم: ہماری گائے / گائے سے کیا ملتا ہے؟
+- p15 0.13 نظم: ہماری گائے / ہم قافیہ
+- p16 0.22 جملے پڑھنا / جملہ پڑھیں
+- p17 0.30 جملے پڑھنا / خالی جگہ
+- p18 0.13 جملے پڑھنا / نقل کریں
+- p19 0.45 آسان واحد جمع / ایک یا بہت
+- p20 0.20 آسان واحد جمع / جمع لکھیں
+- p21 0.36 آسان واحد جمع / گن کر بولیں
+- p22 0.28 آسان متضاد / الٹ ملائیں
+- p23 0.22 آسان متضاد / صحیح لفظ
+- p24 0.36 آسان متضاد / تصویر
+- p25 0.20 دنوں کے نام / دن ترتیب سے
+- p26 0.28 دنوں کے نام / ملائیں
+- p27 0.36 دنوں کے نام / میرا دن
+- p28 0.28 آسان مذکر مؤنث / جوڑے
+- p29 0.30 آسان مذکر مؤنث / لڑکا یا لڑکی
+- p30 0.36 آسان مذکر مؤنث / میرا خاندان
+- p31 0.30 چار حرفی الفاظ / چار حروف جوڑیں
+- p32 0.33 چار حرفی الفاظ / تصویر اور لفظ
+- p33 0.13 چار حرفی الفاظ / لفظ توڑیں
+- p34 0.45 چار حرفی الفاظ / کتنے حروف؟
+- p35 0.23 چار حرفی الفاظ / حرف لکھیں
+- p36 0.34 چار حرفی الفاظ / معنی ملائیں
+- p37 0.30 چار حرفی الفاظ / جملہ پورا کریں
+- p38 0.34 چار حرفی الفاظ / جانور یا چیز؟
+- p39 0.27 چار حرفی الفاظ / گنتی کے سوال
+- p40 0.39 چار حرفی الفاظ / لکھیں
+- p41 0.54 آسان جملے / جملہ کیا ہے؟
+- p42 0.33 آسان جملے / یہ کیا ہے؟
+- p43 0.30 آسان جملے / کیسا ہے؟
+- p44 0.50 آسان جملے / ہے یا ہیں؟
+- p45 0.34 آسان جملے / کون کیا کرتا ہے؟
+- p46 0.30 آسان جملے / صحیح جملہ
+- p47 0.44 آسان جملے / کہانی پڑھیں
+- p48 0.37 آسان جملے / لفظ چنیں
+- p49 0.27 آسان جملے / گنتی کے جملے
+- p50 0.48 آسان جملے / میرے جملے
+- p51 0.50 رنگ اور شکلیں / رنگ
+- p52 0.33 رنگ اور شکلیں / اور رنگ
+- p53 0.34 رنگ اور شکلیں / معنی ملائیں
+- p54 0.39 رنگ اور شکلیں / کس رنگ کا؟
+- p55 0.46 رنگ اور شکلیں / شکلیں
+- p56 0.48 رنگ اور شکلیں / شکلیں بنائیں
+- p57 0.23 رنگ اور شکلیں / جملے پورے کریں
+- p58 0.34 رنگ اور شکلیں / رنگ یا شکل؟
+- p59 0.36 رنگ اور شکلیں / گنتی
+- p60 0.46 رنگ اور شکلیں / میری تصویر
+- p61 0.55 نظم: سردی / نظم پڑھیں
+- p62 0.45 نظم: سردی / مشکل الفاظ
+- p63 0.41 نظم: سردی / ہم قافیہ الفاظ
+- p64 0.37 نظم: سردی / نظم پوری کریں
+- p65 0.33 نظم: سردی / تصویر اور لفظ
+- p66 0.30 نظم: سردی / سوال و جواب
+- p67 0.34 نظم: سردی / سردی یا گرمی؟
+- p68 0.49 نظم: سردی / ترتیب
+- p69 0.36 نظم: سردی / گنتی
+- p70 0.41 نظم: سردی / میری سردی
+- p71 0.38 مختصر کہانی اور سوالات / کہانی پڑھیں
+- p72 0.28 مختصر کہانی اور سوالات / نئے الفاظ
+- p73 0.37 مختصر کہانی اور سوالات / خالی جگہ پُر کریں
+- p74 0.30 مختصر کہانی اور سوالات / صحیح یا غلط؟
+- p75 0.31 مختصر کہانی اور سوالات / ترتیب
+- p76 0.33 مختصر کہانی اور سوالات / تصویر اور لفظ
+- p77 0.22 مختصر کہانی اور سوالات / علی کیسا محسوس کرتا ہے؟
+- p78 0.37 مختصر کہانی اور سوالات / دوسری کہانی
+- p79 0.36 مختصر کہانی اور سوالات / گنتی
+- p80 0.41 مختصر کہانی اور سوالات / میری کہانی
+
+## g2-maths (80 pages)
+- p1 0.33 Numbers to 1000 / Hundreds, Tens and Ones
+- p2 0.31 Numbers to 1000 / Number Words
+- p3 0.34 Numbers to 1000 / Compare and Order
+- p4 0.20 Adding and subtracting / Add with Regrouping
+- p5 0.14 Adding and subtracting / Subtract with Regrouping
+- p6 0.22 Adding and subtracting / Word Problems
+- p7 0.14 Multiplying by 2, 5 and 10 / Groups Of
+- p8 0.26 Multiplying by 2, 5 and 10 / Times Tables 2, 5 and 10
+- p9 0.19 Multiplying by 2, 5 and 10 / Word Problems
+- p10 0.17 Money and shopping / Count the Money
+- p11 0.24 Money and shopping / Change Please
+- p12 0.19 Money and shopping / Bazaar Problems
+- p13 0.53 Time and calendar / Quarter Past and To
+- p14 0.29 Time and calendar / Minutes and Hours
+- p15 0.33 Time and calendar / Reading a Calendar
+- p16 0.30 Length, mass and capacity / Which Unit?
+- p17 0.19 Length, mass and capacity / Measure and Compare
+- p18 0.20 Length, mass and capacity / Heavier or Lighter?
+- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
+- p20 0.20 Shapes and symmetry / Symmetry
+- p21 0.34 Shapes and symmetry / Draw the Other Half
+- p22 0.30 Halves and quarters / Halves and Quarters
+- p23 0.14 Halves and quarters / Half of a Number
+- p24 0.14 Halves and quarters / Quarters
+- p25 0.37 Pictographs / Read the Pictograph
+- p26 0.09 Pictographs / Tally Marks
+- p27 0.15 Pictographs / Make a Pictograph
+- p28 0.19 Sharing and division / Share Equally
+- p29 0.14 Sharing and division / Groups Of
+- p30 0.09 Sharing and division / Division Facts
+- p31 0.38 Place value to 1000 / Hundreds, Tens and Ones
+- p32 0.20 Place value to 1000 / Build the Number
+- p33 0.20 Place value to 1000 / Expanded Form
+- p34 0.25 Place value to 1000 / What Is the Digit Worth?
+- p35 0.28 Place value to 1000 / Compare Numbers
+- p36 0.19 Place value to 1000 / In Order
+- p37 0.14 Place value to 1000 / More and Less
+- p38 0.59 Place value to 1000 / Rupee Notes
+- p39 0.24 Place value to 1000 / Number Patterns
+- p40 0.49 Place value to 1000 / Number Puzzles
+- p41 0.33 Adding and subtracting with regrouping / Carrying a Ten
+- p42 0.20 Adding and subtracting with regrouping / Carrying a Hundred
+- p43 0.36 Adding and subtracting with regrouping / Borrowing a Ten
+- p44 0.14 Adding and subtracting with regrouping / Bigger Take-aways
+- p45 0.37 Adding and subtracting with regrouping / Regroup or Not?
+- p46 0.25 Adding and subtracting with regrouping / Check It
+- p47 0.47 Adding and subtracting with regrouping / Shop and School Problems
+- p48 0.14 Adding and subtracting with regrouping / Missing Digits
+- p49 0.40 Adding and subtracting with regrouping / Spot the Mistake
+- p50 0.50 Adding and subtracting with regrouping / Number Puzzles
+- p51 0.30 Multiplying by 3 and 4 / Groups of 3
+- p52 0.24 Multiplying by 3 and 4 / The 3 Times Table
+- p53 0.29 Multiplying by 3 and 4 / Count in 3s and 4s
+- p54 0.33 Multiplying by 3 and 4 / Double, Double
+- p55 0.24 Multiplying by 3 and 4 / The 4 Times Table
+- p56 0.43 Multiplying by 3 and 4 / Picture Groups
+- p57 0.30 Multiplying by 3 and 4 / Turn It Around
+- p58 0.40 Multiplying by 3 and 4 / Shopping in 3s and 4s
+- p59 0.30 Multiplying by 3 and 4 / Right or Wrong?
+- p60 0.30 Multiplying by 3 and 4 / Make Your Own
+- p61 0.45 Fractions of shapes and amounts / Equal Parts
+- p62 0.67 Fractions of shapes and amounts / Name the Fraction
+- p63 0.25 Fractions of shapes and amounts / Halves, Thirds, Quarters
+- p64 0.30 Fractions of shapes and amounts / Half of an Amount
+- p65 0.20 Fractions of shapes and amounts / Quarters and Thirds of Amounts
+- p66 0.32 Fractions of shapes and amounts / Picture Fractions
+- p67 0.30 Fractions of shapes and amounts / Is It Fair?
+- p68 0.28 Fractions of shapes and amounts / Halves Are the Same
+- p69 0.43 Fractions of shapes and amounts / Fraction Stories
+- p70 0.30 Fractions of shapes and amounts / Make Your Own Fractions
+- p71 0.46 Telling time to 5 minutes / Counting in Fives
+- p72 0.53 Telling time to 5 minutes / Read the Clock
+- p73 0.53 Telling time to 5 minutes / More Clocks
+- p74 0.33 Telling time to 5 minutes / Past and To
+- p75 0.30 Telling time to 5 minutes / Match the Times
+- p76 0.55 Telling time to 5 minutes / My Day
+- p77 0.43 Telling time to 5 minutes / How Long?
+- p78 0.14 Telling time to 5 minutes / Before and After
+- p79 0.47 Telling time to 5 minutes / Time Stories
+- p80 0.44 Telling time to 5 minutes / Draw the Hands
+
+## g2-science (80 pages)
+- p1 0.31 Living and non-living / Living or Non-living?
+- p2 0.30 Living and non-living / Signs of Life
+- p3 0.36 Living and non-living / What Living Things Need
+- p4 0.30 Plants / Parts and Jobs
+- p5 0.19 Plants / How a Plant Grows
+- p6 0.33 Plants / Plant Experiment
+- p7 0.35 Animal habitats / Where Do They Live?
+- p8 0.26 Animal habitats / Water or Land?
+- p9 0.20 Animal habitats / Made for Their Home
+- p10 0.30 Food and teeth / Food Groups
+- p11 0.31 Food and teeth / Our Teeth
+- p12 0.25 Food and teeth / A Balanced Meal
+- p13 0.30 Water / Uses of Water
+- p14 0.19 Water / The Water Cycle
+- p15 0.25 Water / Save Water
+- p16 0.30 Earth and sky / Day and Night
+- p17 0.31 Earth and sky / Sun, Moon and Earth
+- p18 0.36 Earth and sky / Shapes of the Moon
+- p19 0.30 Materials / Natural or Man-made?
+- p20 0.25 Materials / Properties
+- p21 0.14 Materials / Right Material
+- p22 0.25 Push and pull / Push or Pull?
+- p23 0.26 Push and pull / Forces Change Things
+- p24 0.10 Push and pull / Rough or Smooth
+- p25 0.30 Light and shadows / Light Sources
+- p26 0.20 Light and shadows / Shadows
+- p27 0.34 Light and shadows / Shadow Fun
+- p28 0.21 What animals eat / Plant or Meat Eaters
+- p29 0.29 What animals eat / Food Chains
+- p30 0.14 What animals eat / Teeth Tell
+- p31 0.45 Our senses / Our Five Senses
+- p32 0.40 Our senses / Sense Organs
+- p33 0.30 Our senses / Which Sense?
+- p34 0.37 Our senses / Tastes
+- p35 0.30 Our senses / Touch and Feel
+- p36 0.31 Our senses / Senses Keep Us Safe
+- p37 0.40 Our senses / Animal Senses
+- p38 0.40 Our senses / The Mystery Box
+- p39 0.35 Our senses / Sense Sums
+- p40 0.45 Our senses / My Senses
+- p41 0.48 Hot and cold / Hot or Cold?
+- p42 0.35 Hot and cold / Sort Hot and Cold
+- p43 0.37 Hot and cold / Picture Check
+- p44 0.43 Hot and cold / Reading a Thermometer
+- p45 0.57 Hot and cold / Melting and Freezing
+- p46 0.40 Hot and cold / Heat Moves
+- p47 0.45 Hot and cold / Keeping Warm
+- p48 0.30 Hot and cold / Safe with Heat
+- p49 0.35 Hot and cold / Temperature Sums
+- p50 0.52 Hot and cold / Ice Cube Race
+- p51 0.45 Magnets / What Is a Magnet?
+- p52 0.37 Magnets / Will It Stick?
+- p53 0.35 Magnets / Magnetic or Not?
+- p54 0.43 Magnets / North and South Poles
+- p55 0.37 Magnets / Push or Pull?
+- p56 0.30 Magnets / Through Things
+- p57 0.63 Magnets / Magnets at Work
+- p58 0.62 Magnets / Test It
+- p59 0.35 Magnets / Magnet Maths
+- p60 0.42 Magnets / Magnet Fishing Game
+- p61 0.48 Sound around us / What Is Sound?
+- p62 0.36 Sound around us / Feel the Vibration
+- p63 0.40 Sound around us / Sounds Around Us
+- p64 0.37 Sound around us / Loud or Soft?
+- p65 0.52 Sound around us / High or Low?
+- p66 0.30 Sound around us / Musical Instruments
+- p67 0.40 Sound around us / Sound Travels
+- p68 0.51 Sound around us / Echoes and Ears
+- p69 0.35 Sound around us / Sound Sums
+- p70 0.59 Sound around us / Make a String Telephone
+- p71 0.45 Weather and seasons / What Is Weather?
+- p72 0.40 Weather and seasons / Weather Words
+- p73 0.63 Weather and seasons / Four Seasons
+- p74 0.37 Weather and seasons / Which Season?
+- p75 0.31 Weather and seasons / Measuring Weather
+- p76 0.33 Weather and seasons / Hot or Cold?
+- p77 0.35 Weather and seasons / Dress for the Weather
+- p78 0.33 Weather and seasons / Weather Chart
+- p79 0.46 Weather and seasons / Weather Sums
+- p80 0.43 Weather and seasons / My Weather Diary
+
+## g2-history (80 pages)
+- p1 0.30 Early people / How Early People Lived
+- p2 0.30 Early people / Then and Now
+- p3 0.48 Early people / Cave Painting
+- p4 0.31 The Indus Valley / Mohenjo-daro
+- p5 0.25 The Indus Valley / Indus Valley Facts
+- p6 0.45 The Indus Valley / Design a Seal
+- p7 0.31 Ancient Egypt / Life by the Nile
+- p8 0.31 Ancient Egypt / Egypt Words
+- p9 0.41 Ancient Egypt / Picture Writing
+- p10 0.30 Then and now / Past or Present?
+- p11 0.24 Then and now / Timeline
+- p12 0.15 Then and now / Ask an Elder
+- p13 0.31 Quaid-e-Azam / Life of the Quaid
+- p14 0.21 Quaid-e-Azam / Unity, Faith, Discipline
+- p15 0.19 Quaid-e-Azam / Order the Events
+- p16 0.26 Ancient Greece / Greek Facts
+- p17 0.19 Ancient Greece / Then and Now
+- p18 0.34 Ancient Greece / My Olympic Event
+- p19 0.27 The Mughals / Mughal Buildings
+- p20 0.26 The Mughals / Mughal Facts
+- p21 0.34 The Mughals / Design a Garden
+- p22 0.14 Inventions / Old and New
+- p23 0.25 Inventions / What Did It Change?
+- p24 0.34 Inventions / Invent Something
+- p25 0.27 Pakistani heroes / Who Is It?
+- p26 0.15 Pakistani heroes / Heroes Help
+- p27 0.09 Pakistani heroes / My Hero
+- p28 0.25 Old places / Famous Old Places
+- p29 0.26 Old places / Museums
+- p30 0.15 Old places / Time Capsule
+- p31 0.40 The Harappan city / A City by the River
+- p32 0.44 The Harappan city / Built with Bricks
+- p33 0.39 The Harappan city / Clean Drains
+- p34 0.48 The Harappan city / Seals and Signs
+- p35 0.37 The Harappan city / Life in Harappa
+- p36 0.30 The Harappan city / Then and Now
+- p37 0.56 The Harappan city / How We Found It
+- p38 0.35 The Harappan city / Harappa Sums
+- p39 0.33 The Harappan city / Facts Quiz
+- p40 0.42 The Harappan city / A Day in Harappa
+- p41 0.40 Ancient India and Gandhara art / The Land of Gandhara
+- p42 0.40 Ancient India and Gandhara art / A Long Timeline
+- p43 0.48 Ancient India and Gandhara art / Visitors from Far Away
+- p44 0.40 Ancient India and Gandhara art / Gandhara Art
+- p45 0.54 Ancient India and Gandhara art / Learning at Taxila
+- p46 0.35 Ancient India and Gandhara art / Places to Visit Today
+- p47 0.35 Ancient India and Gandhara art / Long Ago or Today?
+- p48 0.30 Ancient India and Gandhara art / Caring for Old Places
+- p49 0.42 Ancient India and Gandhara art / History Sums
+- p50 0.46 Ancient India and Gandhara art / Little Archaeologist
+- p51 0.43 Islamic golden age scholars / A Golden Age of Learning
+- p52 0.30 Islamic golden age scholars / Meet the Scholars
+- p53 0.48 Islamic golden age scholars / Al-Khwarizmi, Maths Master
+- p54 0.49 Islamic golden age scholars / Ibn Sina, the Doctor
+- p55 0.40 Islamic golden age scholars / Ibn al-Haytham and Light
+- p56 0.48 Islamic golden age scholars / Al-Biruni Visits Our Land
+- p57 0.51 Islamic golden age scholars / Old Ideas, New Things
+- p58 0.35 Islamic golden age scholars / How Scholars Learned
+- p59 0.35 Islamic golden age scholars / History Sums
+- p60 0.44 Islamic golden age scholars / My Big Question
+- p61 0.48 Allama Iqbal's dream / Who Was Allama Iqbal?
+- p62 0.24 Allama Iqbal's dream / His Life Story
+- p63 0.31 Allama Iqbal's dream / Iqbal Facts
+- p64 0.48 Allama Iqbal's dream / The Dream
+- p65 0.49 Allama Iqbal's dream / Poet of the East
+- p66 0.33 Allama Iqbal's dream / Places in His Life
+- p67 0.37 Allama Iqbal's dream / Iqbal's Message
+- p68 0.25 Allama Iqbal's dream / Remembering Iqbal
+- p69 0.39 Allama Iqbal's dream / History Sums
+- p70 0.37 Allama Iqbal's dream / My Dream
+- p71 0.48 How we learn about the past / Clues from the Past
+- p72 0.63 How we learn about the past / Kinds of Sources
+- p73 0.46 How we learn about the past / Artefacts
+- p74 0.56 How we learn about the past / Archaeologists
+- p75 0.55 How we learn about the past / Mohenjo-daro Clues
+- p76 0.30 How we learn about the past / Then and Now
+- p77 0.30 How we learn about the past / Old or New?
+- p78 0.43 How we learn about the past / Make a Timeline
+- p79 0.32 How we learn about the past / History Sums
+- p80 0.37 How we learn about the past / My Family History
+
+## g2-social (80 pages)
+- p1 0.30 Villages and cities / Village or City?
+- p2 0.26 Villages and cities / Jobs in Villages and Cities
+- p3 0.19 Villages and cities / Where I Live
+- p4 0.25 Rights and responsibilities / Rights
+- p5 0.30 Rights and responsibilities / Responsibilities
+- p6 0.16 Rights and responsibilities / Good Citizens
+- p7 0.31 Festivals of Pakistan / Which Festival?
+- p8 0.31 Festivals of Pakistan / Festival Facts
+- p9 0.30 Festivals of Pakistan / My Favourite Festival
+- p10 0.30 Needs and wants / Need or Want?
+- p11 0.26 Needs and wants / Basic Needs
+- p12 0.09 Needs and wants / Saving Money
+- p13 0.21 Transport / Land, Water, Air
+- p14 0.19 Transport / Then and Now
+- p15 0.26 Transport / Pakistani Transport
+- p16 0.25 Communication / Ways to Talk
+- p17 0.20 Communication / Then or Now?
+- p18 0.20 Communication / Write a Message
+- p19 0.20 A clean environment / Clean or Dirty?
+- p20 0.25 A clean environment / Pollution
+- p21 0.09 A clean environment / Clean-up Plan
+- p22 0.20 Rules and laws / Why Rules?
+- p23 0.25 Rules and laws / Where Is the Rule?
+- p24 0.15 Rules and laws / Class Rules
+- p25 0.20 Helping others / Ways to Help
+- p26 0.31 Helping others / Abdul Sattar Edhi
+- p27 0.04 Helping others / My Helping Plan
+- p28 0.30 Goods and services / Goods or Services?
+- p29 0.25 Goods and services / At the Bazaar
+- p30 0.26 Goods and services / Buyers and Sellers
+- p31 0.40 Our local government / Who Looks After Our Town?
+- p32 0.32 Our local government / Local Services
+- p33 0.46 Our local government / Our Leaders
+- p34 0.56 Our local government / How Voting Works
+- p35 0.30 Our local government / Who Should Fix It?
+- p36 0.61 Our local government / Paying for Services
+- p37 0.30 Our local government / Helping Our Town
+- p38 0.44 Our local government / The Council Meeting
+- p39 0.34 Our local government / A Letter to the Councillor
+- p40 0.39 Our local government / If I Were Mayor
+- p41 0.40 Money and saving / Our Money
+- p42 0.40 Money and saving / Coins and Notes
+- p43 0.54 Money and saving / Needs and Wants
+- p44 0.30 Money and saving / Saving or Spending?
+- p45 0.41 Money and saving / The Bank
+- p46 0.40 Money and saving / My Saving Goal
+- p47 0.32 Money and saving / Money Problems
+- p48 0.25 Money and saving / The School Fair
+- p49 0.25 Money and saving / Good Money Habits
+- p50 0.45 Money and saving / My Money Box
+- p51 0.40 Markets and shops / Buyers and Sellers
+- p52 0.34 Markets and shops / Kinds of Markets
+- p53 0.46 Markets and shops / Goods and Services
+- p54 0.47 Markets and shops / What Do They Sell?
+- p55 0.56 Markets and shops / From Farm to Shop
+- p56 0.30 Markets and shops / Famous Bazaars
+- p57 0.38 Markets and shops / At the Shop
+- p58 0.30 Markets and shops / Honest Shopping
+- p59 0.25 Markets and shops / Shopping Lists
+- p60 0.42 Markets and shops / My Own Shop
+- p61 0.45 Caring for animals / Animals Need Care
+- p62 0.43 Caring for animals / What Do They Eat?
+- p63 0.37 Caring for animals / Kind or Unkind?
+- p64 0.48 Caring for animals / Who Helps Animals?
+- p65 0.40 Caring for animals / Pet Care Every Day
+- p66 0.35 Caring for animals / Pets and Wild Animals
+- p67 0.38 Caring for animals / Stay Safe With Animals
+- p68 0.46 Caring for animals / Animals in Winter
+- p69 0.32 Caring for animals / Animal Sums
+- p70 0.42 Caring for animals / My Animal Promise
+- p71 0.48 Being a good neighbour / Who Are Neighbours?
+- p72 0.63 Being a good neighbour / Kind Neighbours
+- p73 0.43 Being a good neighbour / Good or Not Good?
+- p74 0.52 Being a good neighbour / Helping Out
+- p75 0.35 Being a good neighbour / Respect and Peace
+- p76 0.40 Being a good neighbour / A Good Neighbourhood
+- p77 0.33 Being a good neighbour / Neighbours Help Each Other
+- p78 0.51 Being a good neighbour / Neighbours in Our Country
+- p79 0.35 Being a good neighbour / Neighbour Sums
+- p80 0.40 Being a good neighbour / My Neighbour Plan
+
+## g3-maths (80 pages)
+- p1 0.14 Multiplication and division / Times Tables 3 and 4
+- p2 0.23 Multiplication and division / Sharing Equally
+- p3 0.22 Multiplication and division / Word Problems
+- p4 0.46 Fractions / Halves, Thirds, Quarters
+- p5 0.14 Fractions / Fraction of a Number
+- p6 0.34 Fractions / Compare Fractions
+- p7 0.52 Bar models / Part-Whole Bar Models
+- p8 0.24 Bar models / Comparison Problems
+- p9 0.24 Bar models / Two-Step Problems
+- p10 0.20 Measurement / Units of Length
+- p11 0.20 Measurement / Mass and Capacity
+- p12 0.19 Measurement / Measurement Problems
+- p13 0.37 Data handling / Pictograph
+- p14 0.34 Data handling / Tally Marks
+- p15 0.25 Data handling / Bar Graph Questions
+- p16 0.25 Angles and perimeter / Right Angles
+- p17 0.19 Angles and perimeter / Perimeter
+- p18 0.30 Angles and perimeter / Lines
+- p19 0.14 Place value to 10,000 / Thousands, Hundreds, Tens, Ones
+- p20 0.14 Place value to 10,000 / Number Words
+- p21 0.24 Place value to 10,000 / Compare and Order
+- p22 0.09 Adding and subtracting big numbers / Add with Carrying
+- p23 0.09 Adding and subtracting big numbers / Subtract with Borrowing
+- p24 0.14 Adding and subtracting big numbers / Word Problems
+- p25 0.20 Time and timetables / a.m. and p.m.
+- p26 0.19 Time and timetables / How Long?
+- p27 0.20 Time and timetables / Train Timetable
+- p28 0.20 Money and bills / Read the Bill
+- p29 0.14 Money and bills / Multiply Money
+- p30 0.10 Money and bills / Best Buy
+- p31 0.33 Multiplying 2-digit numbers / Multiplying by 10
+- p32 0.20 Multiplying 2-digit numbers / Multiples of 10
+- p33 0.25 Multiplying 2-digit numbers / Split It Up
+- p34 0.25 Multiplying 2-digit numbers / The Grid Method
+- p35 0.33 Multiplying 2-digit numbers / Column Method
+- p36 0.28 Multiplying 2-digit numbers / Two 2-digit Numbers
+- p37 0.39 Multiplying 2-digit numbers / Picture Problems
+- p38 0.47 Multiplying 2-digit numbers / Word Problems
+- p39 0.28 Multiplying 2-digit numbers / Estimate First
+- p40 0.39 Multiplying 2-digit numbers / Number Detective
+- p41 0.36 Long division basics / Sharing and Grouping
+- p42 0.25 Long division basics / Fact Families
+- p43 0.33 Long division basics / Remainders
+- p44 0.20 Long division basics / Dividing Tens
+- p45 0.25 Long division basics / Split It Up
+- p46 0.36 Long division basics / Short Division
+- p47 0.42 Long division basics / Picture Problems
+- p48 0.52 Long division basics / Word Problems
+- p49 0.28 Long division basics / Check by Multiplying
+- p50 0.39 Long division basics / Number Detective
+- p51 0.43 Equivalent fractions / Fractions Are Equal Parts
+- p52 0.33 Equivalent fractions / Same Amount, Different Names
+- p53 0.40 Equivalent fractions / The Fraction Wall
+- p54 0.26 Equivalent fractions / Multiply Top and Bottom
+- p55 0.26 Equivalent fractions / Simplify It
+- p56 0.36 Equivalent fractions / Picture Fractions
+- p57 0.30 Equivalent fractions / Fractions of Amounts
+- p58 0.35 Equivalent fractions / Compare Fractions
+- p59 0.43 Equivalent fractions / Word Problems
+- p60 0.51 Equivalent fractions / Fraction Challenge
+- p61 0.41 Area and perimeter / What Is Perimeter?
+- p62 0.23 Area and perimeter / Add the Sides
+- p63 0.41 Area and perimeter / What Is Area?
+- p64 0.26 Area and perimeter / Rows Times Columns
+- p65 0.37 Area and perimeter / Area or Perimeter?
+- p66 0.42 Area and perimeter / Real-Life Measuring
+- p67 0.36 Area and perimeter / Find the Missing Side
+- p68 0.51 Area and perimeter / Same Area, Different Shape
+- p69 0.47 Area and perimeter / Word Problems
+- p70 0.46 Area and perimeter / Design a Garden
+- p71 0.39 Roman numerals / Numbers from Rome
+- p72 0.31 Roman numerals / Adding Letters
+- p73 0.28 Roman numerals / Taking Away
+- p74 0.53 Roman numerals / Roman Rules
+- p75 0.33 Roman numerals / Write in Roman Numerals
+- p76 0.36 Roman numerals / Roman Numerals Around Us
+- p77 0.30 Roman numerals / Which Is Bigger?
+- p78 0.36 Roman numerals / Spot the Mistake
+- p79 0.47 Roman numerals / Word Problems
+- p80 0.42 Roman numerals / My Roman Numerals
+
+## g3-social (80 pages)
+- p1 0.30 Our government / What Does Government Do?
+- p2 0.31 Our government / Levels of Government
+- p3 0.20 Our government / Taxes
+- p4 0.30 Jobs and professions / Who Makes What?
+- p5 0.30 Jobs and professions / Goods or Services?
+- p6 0.15 Jobs and professions / When I Grow Up
+- p7 0.30 Cultures of Pakistan / Provinces and Languages
+- p8 0.31 Cultures of Pakistan / Food and Dress
+- p9 0.19 Cultures of Pakistan / Unity in Diversity
+- p10 0.26 Democracy and voting / How We Choose Leaders
+- p11 0.20 Democracy and voting / Fair or Unfair?
+- p12 0.15 Democracy and voting / Class Election
+- p13 0.25 Children's rights / Rights
+- p14 0.25 Children's rights / Who Protects Rights?
+- p15 0.09 Children's rights / Speak Up
+- p16 0.26 Trade / Imports and Exports
+- p17 0.09 Trade / Made Where?
+- p18 0.15 Trade / Trade Helps
+- p19 0.25 Media and news / Kinds of Media
+- p20 0.20 Media and news / Fact or Opinion?
+- p21 0.09 Media and news / Write a Headline
+- p22 0.30 Climate change / What Is It?
+- p23 0.25 Climate change / Helping the Planet
+- p24 0.15 Climate change / My Promise
+- p25 0.25 Respect and tolerance / Respect
+- p26 0.25 Respect and tolerance / Many Faiths
+- p27 0.09 Respect and tolerance / Same and Different
+- p28 0.15 Saving and banks / Why Save?
+- p29 0.25 Saving and banks / Bank Words
+- p30 0.15 Saving and banks / Savings Plan
+- p31 0.43 Provinces and their capitals / Pakistan's Provinces
+- p32 0.35 Provinces and their capitals / Match the Capital
+- p33 0.68 Provinces and their capitals / Find It on the Map
+- p34 0.40 Provinces and their capitals / Punjab
+- p35 0.46 Provinces and their capitals / Sindh
+- p36 0.42 Provinces and their capitals / Khyber Pakhtunkhwa
+- p37 0.43 Provinces and their capitals / Balochistan
+- p38 0.26 Provinces and their capitals / Who Am I?
+- p39 0.46 Provinces and their capitals / Travel Maths
+- p40 0.47 Provinces and their capitals / My Province
+- p41 0.43 Our constitution / What Is a Constitution?
+- p42 0.38 Our constitution / Class Rules and Country Rules
+- p43 0.44 Our constitution / Pakistan's Constitutions
+- p44 0.52 Our constitution / Who Does What?
+- p45 0.57 Our constitution / Our Parliament
+- p46 0.53 Our constitution / Our Rights
+- p47 0.51 Our constitution / Our Duties
+- p48 0.44 Our constitution / Changing the Constitution
+- p49 0.35 Our constitution / Constitution Maths
+- p50 0.46 Our constitution / Our Class Constitution
+- p51 0.59 Taxes and public services / What Are Public Services?
+- p52 0.44 Taxes and public services / What Are Taxes?
+- p53 0.43 Taxes and public services / Where Does Tax Money Go?
+- p54 0.58 Taxes and public services / Kinds of Tax
+- p55 0.52 Taxes and public services / Public or Private?
+- p56 0.47 Taxes and public services / Emergency Helpers
+- p57 0.37 Taxes and public services / Looking After Public Things
+- p58 0.43 Taxes and public services / Who Decides?
+- p59 0.40 Taxes and public services / Tax Maths
+- p60 0.45 Taxes and public services / If I Spent the Taxes
+- p61 0.51 Volunteering / What Is Volunteering?
+- p62 0.43 Volunteering / Ways to Volunteer
+- p63 0.61 Volunteering / Abdul Sattar Edhi
+- p64 0.43 Volunteering / Why Volunteer?
+- p65 0.36 Volunteering / Skills to Share
+- p66 0.51 Volunteering / Helping in an Emergency
+- p67 0.37 Volunteering / Safe Helping
+- p68 0.71 Volunteering / Plan a Project
+- p69 0.47 Volunteering / Volunteer Maths
+- p70 0.42 Volunteering / My Volunteer Plan
+- p71 0.53 Global citizens / What Is a Global Citizen?
+- p72 0.49 Global citizens / A Connected World
+- p73 0.61 Global citizens / The United Nations
+- p74 0.55 Global citizens / Rights of the Child
+- p75 0.52 Global citizens / The Global Goals
+- p76 0.35 Global citizens / Hello, World!
+- p77 0.56 Global citizens / Respecting Cultures
+- p78 0.71 Global citizens / Small Actions, Big Change
+- p79 0.57 Global citizens / World Maths
+- p80 0.46 Global citizens / My Global Citizen Pledge
+
+## g3-urdu (80 pages)
+- p1 0.30 اسم / اسم پہچانیں
+- p2 0.34 اسم / اسم کی قسمیں
+- p3 0.20 اسم / جملے بنائیں
+- p4 0.30 فعل / فعل پہچانیں
+- p5 0.45 فعل / صحیح فعل لکھیں
+- p6 0.37 فعل / زمانہ
+- p7 0.37 صفت / صفت پہچانیں
+- p8 0.45 صفت / صفت لکھیں
+- p9 0.20 صفت / بیان کریں
+- p10 0.30 ضمیر / ضمیر پہچانیں
+- p11 0.30 ضمیر / نام کی جگہ ضمیر
+- p12 0.27 ضمیر / قسمیں
+- p13 0.59 نظم: ہمدردی / نظم پڑھیں
+- p14 0.27 نظم: ہمدردی / کہانی سمجھیں
+- p15 0.28 نظم: ہمدردی / معنی
+- p16 0.45 درخواست اور خط / چھٹی کی درخواست
+- p17 0.27 درخواست اور خط / خط کے حصے
+- p18 0.31 درخواست اور خط / دادی کے نام خط
+- p19 0.28 محاورے / معنی ملائیں
+- p20 0.23 محاورے / جملے میں
+- p21 0.04 محاورے / اپنا جملہ
+- p22 0.30 حروفِ جار / پہچانیں
+- p23 0.37 حروفِ جار / خالی جگہ
+- p24 0.13 حروفِ جار / جملے بنائیں
+- p25 0.27 مضمون: میرا اسکول / خیالات
+- p26 0.20 مضمون: میرا اسکول / ترتیب
+- p27 0.27 مضمون: میرا اسکول / مضمون لکھیں
+- p28 0.41 کہانی: محنت کا پھل / کہانی پڑھیں
+- p29 0.10 کہانی: محنت کا پھل / سبق
+- p30 0.28 کہانی: محنت کا پھل / معنی
+- p31 0.58 زمانہ / زمانہ کیا ہے؟
+- p32 0.39 زمانہ / ماضی
+- p33 0.46 زمانہ / حال
+- p34 0.36 زمانہ / مستقبل
+- p35 0.20 زمانہ / تین زمانے
+- p36 0.41 زمانہ / الفاظ اور زمانہ
+- p37 0.58 زمانہ / تصویر دیکھیں
+- p38 0.31 زمانہ / گنتی کے سوال
+- p39 0.46 زمانہ / کہانی میں زمانہ
+- p40 0.46 زمانہ / میری ڈائری
+- p41 0.44 رموزِ اوقاف / رموزِ اوقاف کیا ہیں؟
+- p42 0.59 رموزِ اوقاف / ختمہ اور سوالیہ
+- p43 0.50 رموزِ اوقاف / سوال یا بیان؟
+- p44 0.72 رموزِ اوقاف / سکتہ
+- p45 0.51 رموزِ اوقاف / ندائیہ نشان
+- p46 0.57 رموزِ اوقاف / واوین اور رابطہ
+- p47 0.47 رموزِ اوقاف / نشان پہچانیں
+- p48 0.46 رموزِ اوقاف / کہانی میں نشان
+- p49 0.58 رموزِ اوقاف / غلطی درست کریں
+- p50 0.57 رموزِ اوقاف / خود لکھیں
+- p51 0.65 کہانی نویسی / کہانی کے حصے
+- p52 0.44 کہانی نویسی / کردار اور جگہ
+- p53 0.48 کہانی نویسی / آغاز، درمیان، انجام
+- p54 0.39 کہانی نویسی / جوڑنے والے الفاظ
+- p55 0.67 کہانی نویسی / تصویری کہانی
+- p56 0.51 کہانی نویسی / مکالمہ
+- p57 0.34 کہانی نویسی / کہانی کا سبق
+- p58 0.56 کہانی نویسی / کہانی ترتیب دیں
+- p59 0.43 کہانی نویسی / خاکے سے کہانی
+- p60 0.61 کہانی نویسی / اپنی کہانی لکھیں
+- p61 0.65 نظم کا مطالعہ / نظم کیا ہے؟
+- p62 0.73 نظم کا مطالعہ / نظم پڑھیں
+- p63 0.59 نظم کا مطالعہ / قافیہ
+- p64 0.61 نظم کا مطالعہ / ردیف
+- p65 0.39 نظم کا مطالعہ / الفاظ و معانی
+- p66 0.47 نظم کا مطالعہ / تصویر اور مصرع
+- p67 0.50 نظم کا مطالعہ / مرکزی خیال
+- p68 0.57 نظم کا مطالعہ / نظم یا نثر؟
+- p69 0.30 نظم کا مطالعہ / ہم قافیہ الفاظ لکھیں
+- p70 0.54 نظم کا مطالعہ / اپنا شعر لکھیں
+- p71 0.68 فہمِ عبارت / فہمِ عبارت کیا ہے؟
+- p72 0.69 فہمِ عبارت / عبارت پڑھیں
+- p73 0.39 فہمِ عبارت / الفاظ و معانی
+- p74 0.30 فہمِ عبارت / سوالات کے جوابات
+- p75 0.45 فہمِ عبارت / درست یا غلط
+- p76 0.30 فہمِ عبارت / مترادف اور متضاد
+- p77 0.45 فہمِ عبارت / واحد اور جمع
+- p78 0.68 فہمِ عبارت / مرکزی خیال
+- p79 0.65 فہمِ عبارت / ایک اور عبارت
+- p80 0.54 فہمِ عبارت / اپنی عبارت لکھیں
+
+## g3-computer (80 pages)
+- p1 0.35 Hardware and software / Hardware or Software?
+- p2 0.26 Hardware and software / What Is It?
+- p3 0.25 Hardware and software / Computer Jobs
+- p4 0.30 Typing and documents / Word Processor Words
+- p5 0.19 Typing and documents / Keyboard Shortcuts
+- p6 0.20 Typing and documents / Home Row
+- p7 0.30 The internet / Internet Words
+- p8 0.29 The internet / Strong Passwords
+- p9 0.23 The internet / Being Kind Online
+- p10 0.25 Making slides / Slide Words
+- p11 0.20 Making slides / Good Slides
+- p12 0.15 Making slides / Plan Slides
+- p13 0.25 Spreadsheets / Spreadsheet Words
+- p14 0.20 Spreadsheets / Read the Table
+- p15 0.19 Spreadsheets / My Table
+- p16 0.21 Loops / Repeat It
+- p17 0.10 Loops / Find the Loop
+- p18 0.04 Loops / Write a Loop
+- p19 0.21 Debugging / What Is a Bug?
+- p20 0.18 Debugging / Find the Bug
+- p21 0.20 Debugging / Fix It
+- p22 0.20 Kindness online / Kind or Unkind?
+- p23 0.14 Kindness online / What to Do
+- p24 0.04 Kindness online / Kind Message
+- p25 0.21 Digital footprint / What Is It?
+- p26 0.20 Digital footprint / Post or Not?
+- p27 0.15 Digital footprint / Think First
+- p28 0.25 Robots and AI / Robots Around Us
+- p29 0.15 Robots and AI / Smart Machines
+- p30 0.34 Robots and AI / Design a Robot
+- p31 0.40 Spreadsheets: totals / Cells, Rows and Columns
+- p32 0.23 Spreadsheets: totals / Cell Addresses
+- p33 0.46 Spreadsheets: totals / Formulas
+- p34 0.32 Spreadsheets: totals / The SUM Function
+- p35 0.41 Spreadsheets: totals / Pocket Money Tracker
+- p36 0.28 Spreadsheets: totals / Fix the Formula
+- p37 0.33 Spreadsheets: totals / Tools of a Spreadsheet
+- p38 0.26 Spreadsheets: totals / Class Survey
+- p39 0.40 Spreadsheets: totals / Plan Your Spreadsheet
+- p40 0.46 Spreadsheets: totals / My Spending Sheet
+- p41 0.43 Making a poster / What Makes a Good Poster?
+- p42 0.43 Making a poster / Purpose and Audience
+- p43 0.43 Making a poster / Parts of a Poster
+- p44 0.30 Making a poster / Fonts and Sizes
+- p45 0.48 Making a poster / Colour and Contrast
+- p46 0.36 Making a poster / Computer Tools
+- p47 0.46 Making a poster / Using Pictures Safely
+- p48 0.56 Making a poster / Steps to a Poster
+- p49 0.35 Making a poster / Poster Maths
+- p50 0.49 Making a poster / Plan My Poster
+- p51 0.40 Coding with loops and conditions / Algorithms and Sequences
+- p52 0.38 Coding with loops and conditions / What Is a Loop?
+- p53 0.39 Coding with loops and conditions / Loops in Real Life
+- p54 0.31 Coding with loops and conditions / Draw with Loops
+- p55 0.45 Coding with loops and conditions / What Is a Condition?
+- p56 0.33 Coding with loops and conditions / If Then Else
+- p57 0.34 Coding with loops and conditions / Loops or Conditions?
+- p58 0.36 Coding with loops and conditions / Run the Code
+- p59 0.49 Coding with loops and conditions / Debug It!
+- p60 0.50 Coding with loops and conditions / Design a Game
+- p61 0.48 Online research and checking sources / What Is Research?
+- p62 0.38 Online research and checking sources / Keywords
+- p63 0.53 Online research and checking sources / Reading Search Results
+- p64 0.62 Online research and checking sources / Can I Trust It?
+- p65 0.40 Online research and checking sources / Fact Check
+- p66 0.50 Online research and checking sources / Real or Fake?
+- p67 0.41 Online research and checking sources / Your Own Words
+- p68 0.56 Online research and checking sources / Research Steps
+- p69 0.37 Online research and checking sources / Safe Searching
+- p70 0.45 Online research and checking sources / My Research Project
+- p71 0.53 Cyberbullying and kindness / What Is Cyberbullying?
+- p72 0.40 Cyberbullying and kindness / Kind or Unkind?
+- p73 0.50 Cyberbullying and kindness / How Does It Feel?
+- p74 0.56 Cyberbullying and kindness / Stop, Block, Tell
+- p75 0.53 Cyberbullying and kindness / Be an Upstander
+- p76 0.41 Cyberbullying and kindness / THINK Before You Post
+- p77 0.40 Cyberbullying and kindness / Kind Words Online
+- p78 0.49 Cyberbullying and kindness / What Would You Do?
+- p79 0.54 Cyberbullying and kindness / Kindness Maths
+- p80 0.42 Cyberbullying and kindness / My Kindness Pledge
+
+## g1-computer (80 pages)
+- p1 0.30 Parts of a computer / Name the Parts
+- p2 0.30 Parts of a computer / Is It a Computer?
+- p3 0.26 Parts of a computer / Computer Words
+- p4 0.25 Mouse and keyboard / Mouse Actions
+- p5 0.20 Mouse and keyboard / Special Keys
+- p6 0.25 Mouse and keyboard / Sit Right
+- p7 0.30 Using computers / What Can We Do?
+- p8 0.20 Using computers / Screen Time
+- p9 0.36 Using computers / Draw a Computer
+- p10 0.14 Switching on and off / Steps to Start
+- p11 0.14 Switching on and off / Steps to Shut Down
+- p12 0.20 Switching on and off / Do and Don't
+- p13 0.25 Drawing on the computer / Paint Tools
+- p14 0.15 Drawing on the computer / Shapes
+- p15 0.36 Drawing on the computer / Plan a Picture
+- p16 0.14 Letters on the keyboard / Find the Letters
+- p17 0.04 Letters on the keyboard / Type My Name
+- p18 0.05 Letters on the keyboard / Capital Letters
+- p19 0.20 Caring for computers / Good Care
+- p20 0.19 Caring for computers / Why?
+- p21 0.09 Caring for computers / Computer Rules
+- p22 0.25 Devices around us / Which Device?
+- p23 0.20 Devices around us / Digital or Not?
+- p24 0.36 Devices around us / My Favourite Device
+- p25 0.19 Instructions in order / Right Order
+- p26 0.12 Instructions in order / Robot Moves
+- p27 0.15 Instructions in order / Give Instructions
+- p28 0.15 Safe internet / Ask First
+- p29 0.20 Safe internet / Private Things
+- p30 0.04 Safe internet / Safe Rules
+- p31 0.37 Typing my name / The Keyboard
+- p32 0.30 Typing my name / Special Keys
+- p33 0.20 Typing my name / Letter Rows
+- p34 0.20 Typing my name / Which Key?
+- p35 0.40 Typing my name / Steps to Type My Name
+- p36 0.31 Typing my name / Capital or Small?
+- p37 0.30 Typing my name / Sit Well
+- p38 0.35 Typing my name / Fix It
+- p39 0.09 Typing my name / Count the Keys
+- p40 0.41 Typing my name / My Name
+- p41 0.43 Simple apps on a tablet / What Is a Tablet?
+- p42 0.30 Simple apps on a tablet / Touch Moves
+- p43 0.40 Simple apps on a tablet / Which App?
+- p44 0.20 Simple apps on a tablet / Which Move?
+- p45 0.40 Simple apps on a tablet / Open a Drawing App
+- p46 0.32 Simple apps on a tablet / The Battery
+- p47 0.30 Simple apps on a tablet / Care for the Tablet
+- p48 0.26 Simple apps on a tablet / App or Not?
+- p49 0.39 Simple apps on a tablet / Tablet Sums
+- p50 0.40 Simple apps on a tablet / My Tablet Screen
+- p51 0.43 Pictures and sounds on a computer / Seeing and Hearing
+- p52 0.44 Pictures and sounds on a computer / Name the Device
+- p53 0.45 Pictures and sounds on a computer / In or Out?
+- p54 0.40 Pictures and sounds on a computer / Loud and Quiet
+- p55 0.40 Pictures and sounds on a computer / Take a Photo
+- p56 0.24 Pictures and sounds on a computer / Which Device?
+- p57 0.24 Pictures and sounds on a computer / Look After Your Ears
+- p58 0.30 Pictures and sounds on a computer / Drawing App Tools
+- p59 0.39 Pictures and sounds on a computer / Picture and Sound Sums
+- p60 0.42 Pictures and sounds on a computer / My Computer Picture
+- p61 0.40 Asking a grown-up online / Ask First
+- p62 0.40 Asking a grown-up online / Stop, Think, Ask
+- p63 0.28 Asking a grown-up online / Ask or Carry On?
+- p64 0.29 Asking a grown-up online / Who Can Help?
+- p65 0.52 Asking a grown-up online / Private Things
+- p66 0.24 Asking a grown-up online / Pop-ups and Prizes
+- p67 0.27 Asking a grown-up online / What Should I Do?
+- p68 0.26 Asking a grown-up online / Good Words to Say
+- p69 0.46 Asking a grown-up online / Screen Time Sums
+- p70 0.44 Asking a grown-up online / My Ask Card
+- p71 0.43 Coding with arrows / What Is Code?
+- p72 0.29 Coding with arrows / Arrow Words
+- p73 0.68 Coding with arrows / Robot on the Grid
+- p74 0.31 Coding with arrows / Write the Code
+- p75 0.25 Coding with arrows / Step by Step
+- p76 0.48 Coding with arrows / Find the Bug
+- p77 0.38 Coding with arrows / Say It Shorter
+- p78 0.30 Coding with arrows / Code Words
+- p79 0.35 Coding with arrows / Robot Sums
+- p80 0.44 Coding with arrows / My Robot Game
+
+## maths (79 pages)
+- p4 0.55 Number bonds / Number Bonds to 10
+- p5 0.50 Number bonds / Number Bonds to 20
+- p6 0.42 Addition / Adding Within 10
+- p7 0.49 Addition / Adding Within 20
+- p8 0.39 Subtraction / Taking Away Within 10
+- p9 0.43 Subtraction / Subtracting Within 20
+- p10 0.47 2 times table / The 2 Times Table
+- p11 0.71 Numbers to 20 / Tens and Ones
+- p12 0.55 Number bonds / Number Bond Practice
+- p13 0.35 Number bonds / How Many More to Make 10?
+- p14 0.38 Addition / Doubles
+- p15 0.38 Addition / Adding Three Numbers
+- p16 0.38 Subtraction / Missing Numbers in Subtraction
+- p17 0.41 Subtraction / Counting Back
+- p18 0.56 2 times table / Counting in Twos
+- p19 0.32 2 times table / Twos Word Problems
+- p20 0.19 Shapes and lines / Flat Shapes
+- p21 0.30 Shapes and lines / Solid Shapes
+- p22 0.30 Shapes and lines / Straight or Curved?
+- p23 0.14 Money / Pakistani Coins and Notes
+- p24 0.14 Money / Add the Money
+- p25 0.25 Money / At the Shop
+- p26 0.53 Time / O'Clock
+- p27 0.53 Time / Half Past
+- p28 0.25 Time / My Day
+- p29 0.20 Measuring / Longer or Shorter?
+- p30 0.15 Measuring / Measure with Hands
+- p31 0.15 Measuring / Holds More
+- p32 0.26 Number names to 20 / Number Names 0 to 10
+- p33 0.26 Number names to 20 / Number Names 11 to 20
+- p34 0.14 Number names to 20 / Words to Numbers
+- p35 0.30 Number names to 20 / Match Them
+- p36 0.25 Number names to 20 / Spot the Spelling
+- p37 0.25 Number names to 20 / Teen Numbers
+- p38 0.21 Number names to 20 / Count and Write
+- p39 0.24 Number names to 20 / Before, After, Between
+- p40 0.32 Number names to 20 / Number Name Problems
+- p41 0.20 Number names to 20 / Write Them All
+- p42 0.37 Comparing numbers / More or Less?
+- p43 0.23 Comparing numbers / The Hungry Crocodile
+- p44 0.14 Comparing numbers / Equal To
+- p45 0.25 Comparing numbers / Which Is Bigger?
+- p46 0.21 Comparing numbers / Count and Compare
+- p47 0.19 Comparing numbers / Order the Numbers
+- p48 0.20 Comparing numbers / Biggest and Smallest
+- p49 0.24 Comparing numbers / One More, One Less
+- p50 0.35 Comparing numbers / Compare Word Problems
+- p51 0.25 Comparing numbers / Make It True
+- p52 0.40 Adding and taking away stories / Story Sums
+- p53 0.37 Adding and taking away stories / Take Away Stories
+- p54 0.25 Adding and taking away stories / Add or Take Away?
+- p55 0.25 Adding and taking away stories / Number Line Hops
+- p56 0.15 Adding and taking away stories / Fact Families
+- p57 0.14 Adding and taking away stories / Missing Numbers
+- p58 0.23 Adding and taking away stories / Shop Stories
+- p59 0.23 Adding and taking away stories / Healthy Plate Maths
+- p60 0.27 Adding and taking away stories / Write a Story Sum
+- p61 0.14 Adding and taking away stories / Exit Ticket
+- p62 0.28 Place value: tens and ones / Tens and Ones
+- p63 0.24 Place value: tens and ones / Bundles and Loose Ones
+- p64 0.14 Place value: tens and ones / Make the Number
+- p65 0.35 Place value: tens and ones / What Is the Digit Worth?
+- p66 0.14 Place value: tens and ones / Split the Number
+- p67 0.23 Place value: tens and ones / Compare with Tens
+- p68 0.33 Place value: tens and ones / Ten More, Ten Less
+- p69 0.35 Place value: tens and ones / Tens and Ones Stories
+- p70 0.26 Place value: tens and ones / Sort the Numbers
+- p71 0.30 Place value: tens and ones / Exit Ticket
+- p72 0.38 Ordering numbers to 100 / Numbers in Order
+- p73 0.23 Ordering numbers to 100 / Before, After, Between
+- p74 0.19 Ordering numbers to 100 / Number Line Jumps
+- p75 0.28 Ordering numbers to 100 / Smallest to Biggest
+- p76 0.19 Ordering numbers to 100 / Biggest to Smallest
+- p77 0.25 Ordering numbers to 100 / Circle the Number
+- p78 0.24 Ordering numbers to 100 / Count in Tens and Twos
+- p79 0.27 Ordering numbers to 100 / Numbers Around Us
+- p80 0.32 Ordering numbers to 100 / Order Stories
+- p81 0.30 Ordering numbers to 100 / Exit Ticket
+- p94 0.72 Numbers to 20 / Numbers to 20 Warm-up ★
+
+## g2-geography (79 pages)
+- p1 0.25 Maps and directions / North, South, East, West
+- p2 0.30 Maps and directions / Map Key
+- p3 0.50 Maps and directions / Draw a Map
+- p4 0.30 Continents and oceans / Seven Continents
+- p5 0.43 Continents and oceans / Five Oceans
+- p6 0.30 Continents and oceans / Animals Around the World
+- p7 0.42 Provinces of Pakistan / Our Provinces
+- p8 0.20 Provinces of Pakistan / Pakistan Facts
+- p9 0.53 Provinces of Pakistan / Map of Pakistan
+- p10 0.30 Cities and landmarks / Which City?
+- p11 0.31 Cities and landmarks / Capital Cities
+- p12 0.25 Cities and landmarks / Port City
+- p13 0.31 Seasons in Pakistan / Four Seasons
+- p14 0.30 Seasons in Pakistan / What Do We Wear?
+- p15 0.26 Seasons in Pakistan / Hot and Cold Places
+- p16 0.26 Land and water / Land or Water?
+- p17 0.25 Land and water / Match the Meaning
+- p18 0.26 Land and water / In Pakistan
+- p19 0.26 Globes and maps / Globe Words
+- p20 0.25 Globes and maps / Map Symbols
+- p21 0.15 Globes and maps / Hot or Cold?
+- p22 0.25 My neighbourhood map / Places Nearby
+- p23 0.26 My neighbourhood map / Directions
+- p24 0.36 My neighbourhood map / Draw My Area
+- p25 0.26 Countries and flags / Neighbours
+- p26 0.25 Countries and flags / Capital Cities
+- p27 0.35 Countries and flags / Our Flag
+- p28 0.27 Natural wonders / Wonders of Pakistan
+- p29 0.20 Natural wonders / Facts
+- p30 0.32 Natural wonders / Postcard
+- p31 0.40 Weather maps / What Is Weather?
+- p32 0.29 Weather maps / Weather Symbols
+- p33 0.73 Weather maps / A Weather Map of Pakistan
+- p34 0.24 Weather maps / Read the Map
+- p35 0.37 Weather maps / Hot or Cold?
+- p36 0.39 Weather maps / Temperature Sums
+- p37 0.31 Weather maps / Dress for the Weather
+- p38 0.41 Weather maps / The Weather Forecast
+- p39 0.25 Weather maps / Weather in Pakistan
+- p40 0.39 Weather maps / My Weather Diary
+- p41 0.40 Mountains of Pakistan / Our High Mountains
+- p42 0.33 Mountains of Pakistan / The Tallest Peaks
+- p43 0.29 Mountains of Pakistan / Parts of a Mountain
+- p44 0.40 Mountains of Pakistan / Mountain Animals
+- p45 0.47 Mountains of Pakistan / Water from the Mountains
+- p46 0.30 Mountains of Pakistan / Life in the Mountains
+- p47 0.26 Mountains of Pakistan / Hills Across Pakistan
+- p48 0.30 Mountains of Pakistan / Mountains or Plains?
+- p49 0.39 Mountains of Pakistan / Mountain Maths
+- p50 0.45 Mountains of Pakistan / My Mountain Trip
+- p51 0.48 Rivers and lakes / Rivers of Pakistan
+- p52 0.45 Rivers and lakes / Parts of a River
+- p53 0.39 Rivers and lakes / Land of Five Rivers
+- p54 0.44 Rivers and lakes / What Is a Lake?
+- p55 0.26 Rivers and lakes / River, Lake or Sea?
+- p56 0.63 Rivers and lakes / Rivers Help Us
+- p57 0.33 Rivers and lakes / Dams on Our Rivers
+- p58 0.30 Rivers and lakes / Keep Rivers Clean
+- p59 0.39 Rivers and lakes / River Maths
+- p60 0.42 Rivers and lakes / My River Journey
+- p61 0.48 Farming in Pakistan / A Farming Country
+- p62 0.43 Farming in Pakistan / Crops We Grow
+- p63 0.45 Farming in Pakistan / Winter and Summer Crops
+- p64 0.53 Farming in Pakistan / Water for Farms
+- p65 0.40 Farming in Pakistan / From Seed to Roti
+- p66 0.30 Farming in Pakistan / Farm Animals
+- p67 0.67 Farming in Pakistan / A Farm Map
+- p68 0.30 Farming in Pakistan / Farmers Then and Now
+- p69 0.35 Farming in Pakistan / Farm Sums
+- p70 0.42 Farming in Pakistan / My Farm
+- p71 0.51 Winter around the world / Not the Same Everywhere
+- p72 0.31 Winter around the world / North and South
+- p74 0.63 Winter around the world / Winter Places
+- p75 0.30 Winter around the world / December Weather
+- p76 0.33 Winter around the world / Keeping Warm
+- p77 0.63 Winter around the world / Winter Fun
+- p78 0.30 Winter around the world / Animals in Winter
+- p79 0.35 Winter around the world / Winter Sums
+- p80 0.43 Winter around the world / Postcard from Winter
+
+## g2-urdu (79 pages)
+- p1 0.27 واحد جمع / جمع بنائیں
+- p2 0.20 واحد جمع / واحد بنائیں
+- p3 0.30 واحد جمع / صحیح لفظ چنیں
+- p4 0.20 مذکر مؤنث / مؤنث لکھیں
+- p5 0.20 مذکر مؤنث / مذکر لکھیں
+- p6 0.40 مذکر مؤنث / ترتیب دیں
+- p7 0.27 متضاد الفاظ / الٹ لکھیں
+- p8 0.34 متضاد الفاظ / جوڑ ملائیں
+- p9 0.27 متضاد الفاظ / جملہ مکمل کریں
+- p10 0.34 فہمِ عبارت / عید کا دن
+- p11 0.30 فہمِ عبارت / صحیح یا غلط
+- p12 0.16 فہمِ عبارت / آپ کی عید
+- p13 0.59 نظم: ایک گائے اور بکری / نظم پڑھیں
+- p14 0.28 نظم: ایک گائے اور بکری / معنی
+- p15 0.41 نظم: ایک گائے اور بکری / ہم قافیہ
+- p16 0.20 جملے اور کہانی / جملے بنائیں
+- p17 0.13 جملے اور کہانی / ترتیب دیں
+- p18 0.32 جملے اور کہانی / تصویری کہانی
+- p19 0.28 ہم آواز الفاظ / ہم آواز ملائیں
+- p20 0.20 ہم آواز الفاظ / ہم آواز لکھیں
+- p21 0.13 ہم آواز الفاظ / نظم بنائیں
+- p22 0.13 حروفِ تہجی کی ترتیب / ترتیب دیں
+- p23 0.22 حروفِ تہجی کی ترتیب / پہلا حرف
+- p24 0.13 حروفِ تہجی کی ترتیب / لغت
+- p25 0.28 دعوت نامہ / حصے
+- p26 0.37 دعوت نامہ / مکمل کریں
+- p27 0.26 دعوت نامہ / اپنا دعوت نامہ
+- p28 0.41 کہانی: لالچی کتا / کہانی پڑھیں
+- p29 0.18 کہانی: لالچی کتا / سبق
+- p30 0.20 کہانی: لالچی کتا / ترتیب
+- p31 0.50 فعل / فعل کیا ہے؟
+- p32 0.46 فعل / تصویر اور فعل
+- p33 0.40 فعل / اسم یا فعل؟
+- p34 0.34 فعل / کون کیا کرتا ہے؟
+- p35 0.30 فعل / الٹے فعل
+- p36 0.46 فعل / لڑکا یا لڑکی؟
+- p37 0.49 فعل / صبح کے کام
+- p38 0.27 فعل / گنتی کے سوال
+- p39 0.41 فعل / کہانی میں فعل
+- p40 0.46 فعل / میرے جملے
+- p41 0.58 صفت کے الفاظ / صفت کیا ہے؟
+- p42 0.45 صفت کے الفاظ / رنگوں کی صفت
+- p43 0.30 صفت کے الفاظ / الٹ صفت
+- p44 0.40 صفت کے الفاظ / اسم یا صفت؟
+- p45 0.34 صفت کے الفاظ / مزہ اور چھونا
+- p46 0.46 صفت کے الفاظ / لڑکا یا لڑکی؟
+- p47 0.46 صفت کے الفاظ / تصویر اور جملہ
+- p48 0.46 صفت کے الفاظ / باغ کی سیر
+- p49 0.27 صفت کے الفاظ / گنتی کے سوال
+- p50 0.46 صفت کے الفاظ / میرے جملے
+- p51 0.50 مختصر پیراگراف لکھنا / پیراگراف کیا ہے؟
+- p52 0.37 مختصر پیراگراف لکھنا / پہلا جملہ
+- p53 0.40 مختصر پیراگراف لکھنا / کون سا جملہ الگ ہے؟
+- p54 0.46 مختصر پیراگراف لکھنا / جوڑنے والے الفاظ
+- p55 0.27 مختصر پیراگراف لکھنا / جملے ترتیب دیں
+- p56 0.46 مختصر پیراگراف لکھنا / تصویر دیکھ کر لکھیں
+- p57 0.46 مختصر پیراگراف لکھنا / میری گڑیا
+- p58 0.45 مختصر پیراگراف لکھنا / سردیوں کا دن
+- p59 0.27 مختصر پیراگراف لکھنا / گنتی کے سوال
+- p60 0.52 مختصر پیراگراف لکھنا / میرا پیراگراف
+- p62 0.34 سردی کی نظم / مشکل الفاظ
+- p63 0.54 سردی کی نظم / ہم قافیہ الفاظ
+- p64 0.45 سردی کی نظم / نظم پوری کریں
+- p65 0.37 سردی کی نظم / سوال جواب
+- p66 0.45 سردی کی نظم / سردی کی چیزیں
+- p67 0.34 سردی کی نظم / گرمی یا سردی؟
+- p68 0.30 سردی کی نظم / نظم کا مطلب
+- p69 0.27 سردی کی نظم / گنتی کے سوال
+- p70 0.43 سردی کی نظم / میری نظم
+- p71 0.62 کہانی اور سوالات / کہانی پڑھیں
+- p72 0.34 کہانی اور سوالات / مشکل الفاظ
+- p73 0.37 کہانی اور سوالات / سوال جواب
+- p74 0.34 کہانی اور سوالات / کہانی کی ترتیب
+- p75 0.46 کہانی اور سوالات / کہانی کے کردار
+- p76 0.34 کہانی اور سوالات / الٹے الفاظ
+- p77 0.31 کہانی اور سوالات / احساسات
+- p78 0.41 کہانی اور سوالات / اچھی عادتیں
+- p79 0.27 کہانی اور سوالات / گنتی کے سوال
+- p80 0.37 کہانی اور سوالات / سبق اور تصویر
+
+## g2-computer (79 pages)
+- p1 0.35 Input and output / Input or Output?
+- p2 0.26 Input and output / What Does It Do?
+- p3 0.15 Input and output / Storage
+- p4 0.33 The desktop / Desktop Words
+- p5 0.14 The desktop / Starting and Stopping
+- p6 0.15 The desktop / Save Your Work
+- p7 0.25 Staying safe online / Safe or Not Safe?
+- p8 0.30 Staying safe online / Private Information
+- p9 0.14 Staying safe online / If Something Feels Wrong
+- p10 0.25 Files and folders / File Words
+- p11 0.21 Files and folders / Organise
+- p12 0.10 Files and folders / Good Names
+- p13 0.25 Paint tools / Tool Jobs
+- p14 0.15 Paint tools / Make a Poster
+- p15 0.10 Paint tools / Undo Helps
+- p16 0.21 Algorithms / What Is an Algorithm?
+- p17 0.19 Algorithms / Fix the Algorithm
+- p18 0.20 Algorithms / Write an Algorithm
+- p19 0.10 Searching online / Search Words
+- p20 0.15 Searching online / Is It True?
+- p21 0.09 Searching online / My Search
+- p22 0.25 Email / Email Parts
+- p23 0.10 Email / Kind Emails
+- p24 0.20 Email / Write an Email
+- p25 0.20 Screen time balance / Healthy Habits
+- p26 0.15 Screen time balance / My Day
+- p27 0.34 Screen time balance / Fun Without Screens
+- p28 0.20 Taking care of devices / Device Care
+- p29 0.15 Taking care of devices / Battery Tips
+- p30 0.15 Taking care of devices / Care Checklist
+- p31 0.40 Typing practice / The Home Row
+- p32 0.30 Typing practice / Fingers and Keys
+- p33 0.16 Typing practice / Home Row Words
+- p34 0.26 Typing practice / Which Row?
+- p35 0.25 Typing practice / Handy Keys
+- p36 0.41 Typing practice / Fix the Typing
+- p37 0.39 Typing practice / Typing Sums
+- p38 0.30 Typing practice / Sit Well, Type Well
+- p39 0.56 Typing practice / My Practice Plan
+- p40 0.43 Typing practice / Practice Sheet
+- p41 0.40 Simple slides / What Is a Slide?
+- p42 0.26 Simple slides / Parts of a Slide
+- p43 0.40 Simple slides / Making a Slide
+- p44 0.30 Simple slides / Good Slide or Not?
+- p45 0.25 Simple slides / Which Button?
+- p46 0.24 Simple slides / Slides in Order
+- p47 0.41 Simple slides / Plan on Paper
+- p48 0.35 Simple slides / Slide Sums
+- p49 0.25 Simple slides / Presenting Well
+- p50 0.47 Simple slides / My Slide Checklist
+- p51 0.40 Block coding: sequences / What Is a Sequence?
+- p52 0.39 Block coding: sequences / Everyday Sequences
+- p53 0.30 Block coding: sequences / Coding Blocks
+- p55 0.24 Block coding: sequences / Which Way?
+- p56 0.34 Block coding: sequences / Find the Bug
+- p57 0.40 Block coding: sequences / Steps for a Sprite
+- p58 0.23 Block coding: sequences / Repeat Blocks
+- p59 0.32 Block coding: sequences / Code Sums
+- p60 0.35 Block coding: sequences / Code a Path
+- p61 0.45 Passwords and privacy / What Is a Password?
+- p62 0.50 Passwords and privacy / Strong or Weak?
+- p63 0.40 Passwords and privacy / What Is Private?
+- p64 0.63 Passwords and privacy / Keep It Locked
+- p65 0.34 Passwords and privacy / Safe or Not Safe?
+- p66 0.50 Passwords and privacy / Make a Strong Password
+- p67 0.30 Passwords and privacy / Spot the Trick
+- p68 0.28 Passwords and privacy / Who Can Know?
+- p69 0.39 Passwords and privacy / Password Sums
+- p70 0.40 Passwords and privacy / My Safety Rules
+- p71 0.48 Using a tablet camera safely / The Tablet Camera
+- p72 0.40 Using a tablet camera safely / Camera Words
+- p73 0.48 Using a tablet camera safely / Ask First
+- p74 0.37 Using a tablet camera safely / Safe or Not Safe?
+- p75 0.56 Using a tablet camera safely / Take a Good Photo
+- p76 0.40 Using a tablet camera safely / Private Details
+- p77 0.31 Using a tablet camera safely / Who Can See It?
+- p78 0.31 Using a tablet camera safely / Camera Care
+- p79 0.32 Using a tablet camera safely / Camera Sums
+- p80 0.37 Using a tablet camera safely / My Photo Rules
+
+## g3-science (79 pages)
+- p1 0.30 The human body / Organs and Their Jobs
+- p2 0.30 The human body / Healthy or Unhealthy?
+- p3 0.31 The human body / Body Facts
+- p4 0.30 Forces and magnets / Push or Pull?
+- p5 0.30 Forces and magnets / Magnetic or Not?
+- p6 0.25 Forces and magnets / Magnet Facts
+- p7 0.26 States of matter / Solid, Liquid or Gas?
+- p8 0.37 States of matter / Changing State
+- p9 0.20 States of matter / Properties
+- p10 0.19 Life cycles / Butterfly Life Cycle
+- p11 0.26 Life cycles / Frog Life Cycle
+- p12 0.30 Life cycles / Plant Life Cycle
+- p13 0.36 Natural resources / Natural or Man-made?
+- p14 0.31 Natural resources / The 3 Rs
+- p15 0.31 Natural resources / Pollution
+- p16 0.31 The Sun and shadows / The Solar System
+- p17 0.25 The Sun and shadows / Shadows
+- p18 0.19 The Sun and shadows / Directions
+- p19 0.30 Habitats and adaptation / Habitats
+- p20 0.25 Habitats and adaptation / Adaptations
+- p21 0.15 Habitats and adaptation / Protect Habitats
+- p22 0.25 Electricity and safety / Uses Electricity?
+- p23 0.26 Electricity and safety / Circuits
+- p24 0.20 Electricity and safety / Be Safe
+- p25 0.30 Simple machines / Which Machine?
+- p26 0.15 Simple machines / Why Use Machines?
+- p27 0.09 Simple machines / Find Machines
+- p28 0.25 Rocks and soil / Kinds of Rock
+- p29 0.26 Rocks and soil / Soil
+- p30 0.14 Rocks and soil / Soil Test
+- p31 0.43 Food chains / Energy from the Sun
+- p32 0.42 Food chains / Producers and Consumers
+- p33 0.42 Food chains / Follow the Arrows
+- p34 0.40 Food chains / Herbivores, Carnivores, Omnivores
+- p35 0.45 Food chains / Predator and Prey
+- p36 0.22 Food chains / Build a Chain
+- p37 0.60 Food chains / Decomposers
+- p38 0.36 Food chains / What If?
+- p39 0.32 Food chains / Food Chain Maths
+- p40 0.48 Food chains / My Food Chain
+- p41 0.43 Teeth and digestion / Why We Have Teeth
+- p42 0.50 Teeth and digestion / Three Kinds of Teeth
+- p43 0.53 Teeth and digestion / Inside a Tooth
+- p44 0.46 Teeth and digestion / Caring for Teeth
+- p45 0.43 Teeth and digestion / What Is Digestion?
+- p47 0.40 Teeth and digestion / Parts and Their Jobs
+- p48 0.49 Teeth and digestion / Healthy Tummy
+- p49 0.54 Teeth and digestion / Body Maths
+- p50 0.45 Teeth and digestion / My Healthy Teeth Plan
+- p51 0.56 Light and reflection / Light Sources
+- p52 0.38 Light and reflection / Light Travels in Straight Lines
+- p53 0.52 Light and reflection / Let the Light Through
+- p54 0.44 Light and reflection / Shadows
+- p55 0.48 Light and reflection / Reflection
+- p56 0.44 Light and reflection / Mirror Images
+- p57 0.53 Light and reflection / Mirrors Help Us
+- p58 0.56 Light and reflection / How Light Bounces
+- p59 0.50 Light and reflection / Light Maths
+- p60 0.47 Light and reflection / Shadow Investigation
+- p61 0.51 Sound and vibration / Sound Is a Vibration
+- p62 0.40 Sound and vibration / What Vibrates?
+- p63 0.47 Sound and vibration / How Sound Travels
+- p64 0.71 Sound and vibration / How We Hear
+- p65 0.59 Sound and vibration / High and Low
+- p66 0.38 Sound and vibration / Loud and Soft
+- p67 0.44 Sound and vibration / String Telephone
+- p68 0.40 Sound and vibration / Protect Your Ears
+- p69 0.47 Sound and vibration / Sound Maths
+- p70 0.46 Sound and vibration / Make a Musical Instrument
+- p71 0.48 Earth and the Moon / Our Planet Earth
+- p72 0.49 Earth and the Moon / Day and Night
+- p73 0.50 Earth and the Moon / Light or Reflected Light?
+- p74 0.51 Earth and the Moon / Our Moon
+- p75 0.69 Earth and the Moon / Phases of the Moon
+- p76 0.34 Earth and the Moon / Earth, Moon or Both?
+- p77 0.66 Earth and the Moon / People on the Moon
+- p78 0.50 Earth and the Moon / Gravity
+- p79 0.58 Earth and the Moon / Space Maths
+- p80 0.41 Earth and the Moon / My Moon Diary
+
+## g3-history (79 pages)
+- p1 0.31 Mesopotamia / Land Between Two Rivers
+- p2 0.30 Mesopotamia / Great Inventions
+- p3 0.40 Mesopotamia / Then and Now
+- p4 0.30 Ancient China / Gifts from China
+- p5 0.25 Ancient China / China Facts
+- p6 0.36 Ancient China / The Silk Road
+- p7 0.35 Gandhara / The Land of Gandhara
+- p8 0.27 Gandhara / Gandhara Places
+- p9 0.23 Gandhara / A Museum Visit
+- p10 0.31 Allama Iqbal / Life of Iqbal
+- p11 0.25 Allama Iqbal / Iqbal's Dream
+- p12 0.26 Allama Iqbal / The Falcon
+- p13 0.26 The Pakistan Movement / Key Events
+- p14 0.35 The Pakistan Movement / 23 March 1940
+- p15 0.33 The Pakistan Movement / Leaders of the Movement
+- p16 0.35 Mehrgarh / The First Farmers
+- p17 0.25 Mehrgarh / Hunters to Farmers
+- p18 0.14 Mehrgarh / Timeline
+- p19 0.26 Ancient Rome / Roman Facts
+- p20 0.25 Ancient Rome / Rome Today
+- p21 0.34 Ancient Rome / Design an Arch
+- p22 0.35 The Silk Road / Trade Routes
+- p23 0.25 The Silk Road / What Travelled?
+- p24 0.15 The Silk Road / Trader's Diary
+- p25 0.25 Muslim scientists / Who Did What?
+- p26 0.30 Muslim scientists / Al-Biruni in Pakistan
+- p27 0.09 Muslim scientists / Be a Scientist
+- p28 0.35 Independence in 1947 / 1947
+- p29 0.15 Independence in 1947 / Then and Now
+- p30 0.15 Independence in 1947 / Ask an Elder
+- p31 0.43 The Mughal empire / Who Were the Mughals?
+- p32 0.45 The Mughal empire / The Great Mughals
+- p33 0.44 The Mughal empire / Akbar the Great
+- p34 0.36 The Mughal empire / Mughal Buildings in Pakistan
+- p35 0.46 The Mughal empire / Mughal Gardens
+- p36 0.37 The Mughal empire / Arts and Crafts
+- p37 0.41 The Mughal empire / Life at Court
+- p38 0.42 The Mughal empire / Mughal Timeline Maths
+- p39 0.71 The Mughal empire / The End of the Empire
+- p40 0.39 The Mughal empire / Be a Historian
+- p41 0.40 Sir Syed Ahmad Khan / Who Was Sir Syed?
+- p42 0.56 Sir Syed Ahmad Khan / Sir Syed's Timeline
+- p43 0.44 Sir Syed Ahmad Khan / After 1857
+- p44 0.47 Sir Syed Ahmad Khan / Aligarh College
+- p45 0.47 Sir Syed Ahmad Khan / Books for Everyone
+- p46 0.61 Sir Syed Ahmad Khan / The Aligarh Movement
+- p47 0.39 Sir Syed Ahmad Khan / Match the Facts
+- p48 0.40 Sir Syed Ahmad Khan / Then and Now
+- p49 0.35 Sir Syed Ahmad Khan / Timeline Maths
+- p50 0.39 Sir Syed Ahmad Khan / Be a Historian
+- p51 0.46 Fatima Jinnah / Who Was Fatima Jinnah?
+- p52 0.71 Fatima Jinnah / Her Timeline
+- p53 0.57 Fatima Jinnah / A Dentist
+- p54 0.43 Fatima Jinnah / Beside the Quaid
+- p55 0.47 Fatima Jinnah / Women in the Pakistan Movement
+- p56 0.55 Fatima Jinnah / Madar-e-Millat
+- p57 0.50 Fatima Jinnah / Places Named After Her
+- p58 0.39 Fatima Jinnah / Match the Facts
+- p59 0.42 Fatima Jinnah / Timeline Maths
+- p60 0.43 Fatima Jinnah / Be a Historian
+- p61 0.48 Ancient Persia / Where Was Ancient Persia?
+- p62 0.57 Ancient Persia / Cyrus the Great
+- p63 0.43 Ancient Persia / Darius and Persepolis
+- p64 0.47 Ancient Persia / Running a Big Empire
+- p65 0.56 Ancient Persia / The Royal Road
+- p66 0.53 Ancient Persia / Clever Persian Ideas
+- p67 0.55 Ancient Persia / Persia and Our Land
+- p68 0.56 Ancient Persia / The End of the Empire
+- p69 0.55 Ancient Persia / Timeline Maths
+- p70 0.42 Ancient Persia / Be a Historian
+- p71 0.54 Explorers and maps / Who Are Explorers?
+- p72 0.66 Explorers and maps / Ibn Battuta
+- p73 0.51 Explorers and maps / Al-Idrisi's Map
+- p74 0.42 Explorers and maps / Famous Explorers
+- p75 0.49 Explorers and maps / Tools for the Journey
+- p76 0.52 Explorers and maps / Old Maps and New Maps
+- p77 0.61 Explorers and maps / The Spice Routes
+- p79 0.54 Explorers and maps / Timeline Maths
+- p80 0.46 Explorers and maps / Be an Explorer
+
+## g3-geography (78 pages)
+- p1 0.35 Landforms and water / Landforms
+- p2 0.31 Landforms and water / Water Bodies
+- p3 0.20 Landforms and water / Landforms of Pakistan
+- p4 0.35 Weather and climate / Weather Words
+- p5 0.25 Weather and climate / Seasons in Pakistan
+- p6 0.25 Weather and climate / Weather Diary
+- p7 0.31 Pakistan and its neighbours / Our Neighbours
+- p8 0.26 Pakistan and its neighbours / Neighbour Facts
+- p9 0.46 Pakistan and its neighbours / Map Work
+- p10 0.40 Rivers of Pakistan / The Indus River
+- p11 0.33 Rivers of Pakistan / Rivers of Punjab
+- p12 0.30 Rivers of Pakistan / Why Rivers Matter
+- p13 0.26 Crops and resources / Crops of Pakistan
+- p14 0.25 Crops and resources / Where Is It Found?
+- p15 0.31 Crops and resources / Uses of Resources
+- p16 0.19 Mountain ranges / Three Great Ranges
+- p17 0.20 Mountain ranges / Mountain Facts
+- p18 0.09 Mountain ranges / Mountain Life
+- p19 0.19 Deserts and coasts / Deserts of Pakistan
+- p20 0.26 Deserts and coasts / The Coast
+- p21 0.20 Deserts and coasts / Desert or Coast?
+- p22 0.20 Map skills / Grid References
+- p23 0.26 Map skills / Compass Points
+- p24 0.14 Map skills / Scale
+- p25 0.25 Cities and population / Biggest Cities
+- p26 0.15 Cities and population / City Life
+- p27 0.15 Cities and population / My City
+- p28 0.25 Floods and earthquakes / Natural Disasters
+- p29 0.20 Floods and earthquakes / Stay Safe
+- p30 0.09 Floods and earthquakes / Helping After a Flood
+- p31 0.40 Climate zones of the world / Weather and Climate
+- p32 0.44 Climate zones of the world / The Equator and the Poles
+- p33 0.63 Climate zones of the world / Five Climate Zones
+- p34 0.42 Climate zones of the world / Rainforests
+- p35 0.43 Climate zones of the world / Deserts
+- p36 0.53 Climate zones of the world / Polar Lands
+- p37 0.73 Climate zones of the world / Climates of Pakistan
+- p38 0.33 Climate zones of the world / Living in Each Climate
+- p39 0.41 Climate zones of the world / Climate Graph
+- p40 0.47 Climate zones of the world / My Climate Fact File
+- p41 0.50 Natural resources of Pakistan / Gifts from Nature
+- p42 0.48 Natural resources of Pakistan / Renewable or Not?
+- p43 0.53 Natural resources of Pakistan / Water: Rivers and Dams
+- p44 0.46 Natural resources of Pakistan / Under the Ground
+- p45 0.43 Natural resources of Pakistan / The Khewra Salt Mine
+- p46 0.49 Natural resources of Pakistan / Forests
+- p47 0.66 Natural resources of Pakistan / Resource Map
+- p48 0.37 Natural resources of Pakistan / Using Resources Wisely
+- p49 0.32 Natural resources of Pakistan / Resource Maths
+- p50 0.47 Natural resources of Pakistan / Resource Fact File
+- p51 0.45 Population and cities / What Is Population?
+- p52 0.55 Population and cities / Village, Town or City?
+- p53 0.57 Population and cities / Pakistan's Biggest Cities
+- p54 0.66 Population and cities / City Map
+- p55 0.46 Population and cities / Why Do Cities Grow?
+- p56 0.37 Population and cities / City Life
+- p57 0.42 Population and cities / Busy and Empty Places
+- p58 0.34 Population and cities / Solving City Problems
+- p59 0.43 Population and cities / Population Maths
+- p60 0.43 Population and cities / My City or Village
+- p61 0.43 Pollution and the environment / What Is Pollution?
+- p62 0.42 Pollution and the environment / Kinds of Pollution
+- p63 0.57 Pollution and the environment / Smog in Our Cities
+- p64 0.51 Pollution and the environment / Air Quality
+- p65 0.43 Pollution and the environment / Who Is Harmed?
+- p66 0.56 Pollution and the environment / Reduce, Reuse, Recycle
+- p67 0.37 Pollution and the environment / Helps or Harms?
+- p69 0.43 Pollution and the environment / Pollution Maths
+- p70 0.46 Pollution and the environment / My Clean Earth Pledge
+- p71 0.51 Reading atlases / What Is an Atlas?
+- p72 0.42 Reading atlases / Parts of an Atlas Map
+- p74 0.60 Reading atlases / Continents and Oceans
+- p75 0.60 Reading atlases / Lines on the Globe
+- p76 0.72 Reading atlases / Grid References
+- p77 0.56 Reading atlases / Physical or Political?
+- p78 0.53 Reading atlases / Using the Scale
+- p79 0.53 Reading atlases / Using the Index
+- p80 0.42 Reading atlases / My Atlas Quest
+
+## g1-urdu (70 pages)
+- p1 0.20 حروف اور جوڑ توڑ / حروفِ تہجی
+- p2 0.20 حروف اور جوڑ توڑ / حروف جوڑیں
+- p3 0.13 حروف اور جوڑ توڑ / لفظ توڑیں
+- p4 0.34 دو حرفی الفاظ / دو حرفی الفاظ پڑھیں
+- p5 0.20 دو حرفی الفاظ / دو حروف جوڑیں
+- p6 0.34 دو حرفی الفاظ / و اور ی والے لفظ
+- p7 0.20 تین اور چار حرفی الفاظ / حروف جوڑیں
+- p8 0.45 تین اور چار حرفی الفاظ / کتنے حروف؟
+- p9 0.30 تین اور چار حرفی الفاظ / صحیح لفظ چنیں
+- p10 0.34 اعراب: زبر، زیر، پیش / اعراب پہچانیں
+- p11 0.45 اعراب: زبر، زیر، پیش / کون سا اعراب؟
+- p12 0.30 اعراب: زبر، زیر، پیش / لمبی آوازیں
+- p13 0.39 مد، تشدید اور ہمزہ / مد
+- p14 0.54 مد، تشدید اور ہمزہ / تشدید
+- p15 0.30 مد، تشدید اور ہمزہ / ہمزہ
+- p16 0.34 ی، ے اور و کی آوازیں / چھوٹی یے اور بڑی یے
+- p17 0.20 ی، ے اور و کی آوازیں / درمیان میں ی
+- p18 0.45 ی، ے اور و کی آوازیں / و کی آوازیں
+- p19 0.34 میں اور میرا گھر / میرا نام علی ہے
+- p20 0.28 میں اور میرا گھر / گھر کے حصے
+- p21 0.20 میں اور میرا گھر / اپنے بارے میں
+- p22 0.37 میرا اسکول اور اچھی باتیں / میرا اسکول
+- p23 0.34 میرا اسکول اور اچھی باتیں / اسکول کی چیزیں
+- p24 0.45 میرا اسکول اور اچھی باتیں / اچھی باتیں
+- p25 0.37 کہانی: شیر آیا شیر آیا / کہانی پڑھیں
+- p26 0.37 کہانی: شیر آیا شیر آیا / ترتیب
+- p27 0.21 کہانی: شیر آیا شیر آیا / سبق
+- p28 0.40 سبزیاں، پھل اور بارش / سبزی یا پھل؟
+- p29 0.34 سبزیاں، پھل اور بارش / رنگ ملائیں
+- p30 0.37 سبزیاں، پھل اور بارش / بارش
+- p31 0.43 سردی کے الفاظ / سردی آ گئی
+- p32 0.34 سردی کے الفاظ / گرم کپڑے
+- p33 0.34 سردی کے الفاظ / معنی ملائیں
+- p34 0.37 سردی کے الفاظ / سردیوں کی صبح
+- p35 0.34 سردی کے الفاظ / سردی یا گرمی؟
+- p36 0.37 سردی کے الفاظ / جملے پورے کریں
+- p37 0.23 سردی کے الفاظ / الٹ الفاظ
+- p38 0.43 سردی کے الفاظ / برف والے شہر
+- p39 0.23 سردی کے الفاظ / ایک اور دو
+- p40 0.48 سردی کے الفاظ / میری سردی
+- p41 0.47 ہفتے کے دن / سات دن
+- p42 0.23 ہفتے کے دن / دنوں کی ترتیب
+- p43 0.45 ہفتے کے دن / دن ملائیں
+- p44 0.27 ہفتے کے دن / پہلے اور بعد
+- p45 0.37 ہفتے کے دن / حمزہ کا ہفتہ
+- p46 0.34 ہفتے کے دن / دن یا مہینہ؟
+- p47 0.34 ہفتے کے دن / صبح سے رات تک
+- p48 0.29 ہفتے کے دن / آج اور کل
+- p49 0.37 ہفتے کے دن / گنتی کریں
+- p50 0.48 ہفتے کے دن / میرا پسندیدہ دن
+- p51 0.50 الٹ الفاظ / الٹ کیا ہے؟
+- p52 0.34 الٹ الفاظ / جوڑے ملائیں
+- p53 0.33 الٹ الفاظ / تصویر دیکھیں
+- p54 0.39 الٹ الفاظ / گرم یا ٹھنڈا؟
+- p55 0.37 الٹ الفاظ / الٹ چنیں
+- p56 0.37 الٹ الفاظ / جملے پورے کریں
+- p57 0.37 الٹ الفاظ / کچھوا اور خرگوش
+- p58 0.30 الٹ الفاظ / الٹ لکھیں
+- p59 0.37 الٹ الفاظ / جوڑی پہچانیں
+- p60 0.41 الٹ الفاظ / میرے الٹ الفاظ
+- p61 0.50 واحد اور جمع / ایک یا بہت سے؟
+- p62 0.45 واحد اور جمع / تصویر دیکھیں
+- p63 0.29 واحد اور جمع / ا اور ہ والے الفاظ
+- p64 0.29 واحد اور جمع / ی والے الفاظ
+- p65 0.29 واحد اور جمع / یں والی جمع
+- p66 0.36 واحد اور جمع / ایک جیسے الفاظ
+- p67 0.34 واحد اور جمع / واحد یا جمع؟
+- p68 0.37 واحد اور جمع / صحیح لفظ چنیں
+- p69 0.37 واحد اور جمع / باغ کی سیر
+- p70 0.48 واحد اور جمع / میری چیزیں
+
+## g2-islamiat (30 pages)
+- p1 0.31 Allah the Creator / Allah Is One
+- p2 0.30 Allah the Creator / Blessings
+- p3 0.19 Allah the Creator / Saying Thank You
+- p4 0.33 Wudu and Salah / Steps of Wudu
+- p5 0.20 Wudu and Salah / Wudu Facts
+- p6 0.26 Wudu and Salah / Salah
+- p7 0.26 Islamic months / Months in Order
+- p8 0.26 Islamic months / Special Months
+- p9 0.20 Islamic months / The Moon
+- p10 0.29 Angels / Four Angels
+- p11 0.20 Angels / About Angels
+- p12 0.09 Angels / Good Deeds
+- p13 0.31 The Holy Prophet's childhood / Early Years
+- p14 0.20 The Holy Prophet's childhood / Good Qualities
+- p15 0.04 The Holy Prophet's childhood / Like the Holy Prophet (PBUH)
+- p16 0.26 Zakat and charity / Giving
+- p17 0.15 Zakat and charity / Ways to Give
+- p18 0.09 Zakat and charity / My Giving Box
+- p19 0.26 Hajj / Hajj Facts
+- p20 0.15 Hajj / Hajj and Eid
+- p21 0.36 Hajj / Kaaba
+- p22 0.15 Keeping promises / Promises
+- p23 0.18 Keeping promises / Trust
+- p24 0.04 Keeping promises / A Promise
+- p25 0.20 Neighbours and guests / Good Neighbours
+- p26 0.14 Neighbours and guests / Welcoming Guests
+- p27 0.04 Neighbours and guests / Help a Neighbour
+- p28 0.26 Hazrat Ibrahim (AS) / His Story
+- p29 0.15 Hazrat Ibrahim (AS) / Lessons
+- p30 0.09 Hazrat Ibrahim (AS) / Eid-ul-Adha
+
+## g3-islamiat (30 pages)
+- p1 0.34 The Holy Quran / Quran Facts
+- p2 0.25 The Holy Quran / Respecting the Quran
+- p3 0.26 The Holy Quran / Holy Books
+- p4 0.26 Prophets of Allah / First and Last
+- p5 0.26 Prophets of Allah / Stories of Prophets
+- p6 0.23 Prophets of Allah / What Prophets Taught
+- p7 0.31 Life of the Holy Prophet (PBUH) / Early Life
+- p8 0.40 Life of the Holy Prophet (PBUH) / Hijrah
+- p9 0.30 Life of the Holy Prophet (PBUH) / His Good Qualities
+- p10 0.19 Khulafa-e-Rashideen / The Four Caliphs
+- p11 0.32 Khulafa-e-Rashideen / Famous For
+- p12 0.09 Khulafa-e-Rashideen / Good Leaders
+- p13 0.26 Madinah / Hijrah to Madinah
+- p14 0.15 Madinah / Brotherhood
+- p15 0.04 Madinah / Helping New Friends
+- p16 0.31 Articles of faith / What Muslims Believe
+- p17 0.15 Articles of faith / More Beliefs
+- p18 0.09 Articles of faith / In My Words
+- p19 0.26 Jumu'ah and congregation / Friday Prayer
+- p20 0.20 Jumu'ah and congregation / Getting Ready
+- p21 0.09 Jumu'ah and congregation / Our Friday
+- p22 0.25 Rights of others / Whose Right?
+- p23 0.20 Rights of others / Fair or Unfair?
+- p24 0.04 Rights of others / Being Fair
+- p25 0.25 Patience and gratitude / Sabr and Shukr
+- p26 0.10 Patience and gratitude / What Would You Do?
+- p27 0.15 Patience and gratitude / Gratitude List
+- p28 0.26 Hazrat Khadija (RA) / Her Life
+- p29 0.20 Hazrat Khadija (RA) / Her Qualities
+- p30 0.04 Hazrat Khadija (RA) / Supporting Others
+
+## g1-islamiat (30 pages)
+- p1 0.38 Kalima and Bismillah / Kalima Tayyiba
+- p2 0.34 Kalima and Bismillah / Bismillah
+- p3 0.39 Kalima and Bismillah / Allah's Gifts
+- p4 0.31 Pillars of Islam / Five Pillars
+- p5 0.30 Pillars of Islam / Five Prayers
+- p6 0.20 Pillars of Islam / Ramadan
+- p7 0.30 Good manners / Greetings
+- p8 0.30 Good manners / Good or Not Good?
+- p9 0.09 Good manners / My Good Deed
+- p10 0.25 Allah's beautiful names / Names and Meanings
+- p11 0.20 Allah's beautiful names / Allah Gives Us
+- p12 0.36 Allah's beautiful names / Thank You, Allah
+- p13 0.25 Cleanliness / Clean Habits
+- p14 0.25 Cleanliness / Keep It Clean
+- p15 0.15 Cleanliness / My Clean Routine
+- p16 0.25 Respecting parents / Respect at Home
+- p17 0.09 Respecting parents / Ways to Help
+- p18 0.36 Respecting parents / A Card for Parents
+- p19 0.20 Truthfulness / True or Not?
+- p20 0.10 Truthfulness / Honest Choices
+- p21 0.04 Truthfulness / My Promise
+- p22 0.20 The mosque / At the Mosque
+- p23 0.25 The mosque / Mosque Words
+- p24 0.36 The mosque / Our Mosque
+- p25 0.25 Ramadan and Eid / Ramadan Words
+- p26 0.20 Ramadan and Eid / Good Deeds
+- p27 0.36 Ramadan and Eid / My Eid
+- p28 0.20 Kindness to animals / Kind or Unkind?
+- p29 0.15 Kindness to animals / Caring for Plants
+- p30 0.09 Kindness to animals / Bird Water Pot
+
+## english (29 pages)
+- p1 0.56 Alphabet / Missing Letters
+- p2 0.60 Alphabet / Capital and Small
+- p3 0.48 Alphabet / Beginning Sounds
+- p4 0.55 Alphabet / Vowel Hunt
+- p5 0.50 Vocabulary / My Classroom
+- p6 0.60 Vocabulary / Opposites
+- p7 0.35 Vocabulary / Sort the Words
+- p8 0.53 -ing verbs / Adding -ing
+- p9 0.44 -ing verbs / Choose the -ing Word
+- p10 0.64 Vocabulary / Read and Answer
+- p11 0.36 -ing verbs / Using -ing Words
+- p12 0.50 -ing verbs / What Are They Doing?
+- p13 0.25 A, an, plurals and pronouns / A or An?
+- p14 0.14 A, an, plurals and pronouns / One and Many
+- p15 0.25 A, an, plurals and pronouns / He, She, It, They
+- p16 0.26 Word families and digraphs / Word Families
+- p17 0.30 Word families and digraphs / sh, ch, th
+- p18 0.26 Word families and digraphs / ck, ll, ss, ff
+- p19 0.45 Rhyming poems / Rain
+- p20 0.48 Rhyming poems / Two Little Dicky Birds
+- p21 0.39 Rhyming poems / Rhyming Pairs
+- p22 0.32 Read and answer / Ali's Kite
+- p23 0.38 Read and answer / The Thirsty Crow
+- p24 0.36 Read and answer / First, Next, Last
+- p25 0.14 Sentences about me / Fix the Sentence
+- p26 0.25 Sentences about me / All About Me
+- p27 0.28 Sentences about me / Picture Story
+- p33 0.69 Writing practice / Story: The Red Kite
+- p34 0.69 Writing practice / Story: Eid Day
+
+## urdu (24 pages)
+- p1 0.41 چھوٹی اشکال / حروف کی چھوٹی اشکال
+- p2 0.34 چھوٹی اشکال / حروف جوڑ کر لفظ بنائیں
+- p3 0.48 چھوٹی اشکال / لفظ توڑ کر لکھیں
+- p4 0.51 شرارتی نو / شرارتی نو
+- p5 0.61 شرارتی نو / شرارتی نو والے لفظ
+- p6 0.58 مصوّتے / زبر، زیر، پیش
+- p7 0.34 مصوّتے / اعراب کے مطابق لفظ
+- p8 0.37 مصوّتے / لمبی آوازیں: ا، و، ی
+- p9 0.52 بصری الفاظ / بصری الفاظ
+- p10 0.56 بصری الفاظ / صحیح لفظ چنیں
+- p11 0.68 شرارتی نو / لفظوں میں شرارتی حروف
+- p12 0.52 بصری الفاظ / مزید بصری الفاظ
+- p13 0.20 واحد اور جمع / جمع لکھیں
+- p14 0.45 واحد اور جمع / ایک یا بہت؟
+- p15 0.22 واحد اور جمع / جملہ مکمل کریں
+- p16 0.59 نظم: بچے کی دعا / نظم پڑھیں
+- p17 0.28 نظم: بچے کی دعا / مشکل الفاظ
+- p18 0.20 نظم: بچے کی دعا / متضاد
+- p19 0.34 کہانی پڑھیں / پیاسا کوا
+- p20 0.30 کہانی پڑھیں / صحیح یا غلط
+- p21 0.20 کہانی پڑھیں / ترتیب
+- p22 0.13 جملے بنائیں / لفظ جوڑیں
+- p23 0.30 جملے بنائیں / خالی جگہ
+- p24 0.13 جملے بنائیں / اپنا جملہ
+

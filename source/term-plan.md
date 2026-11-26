@@ -120,3 +120,154 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).
 - 21 Nov 2026 (later run): the Saturday Classroom task is paused, so weekly mode now also keeps Grade 1 Maths, Science, Social Studies and Urdu two weeks ahead with the fallback topics. Switching this task to weekly still needs Sumbul.
 - 23 Nov 2026: Sumbul moved the content builder to weekly, Fridays at 14:49 Pakistan time.
+
+
+## Content depth programme (Sumbul, 26 Nov 2026)
+Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (breadth only, never copy their content). The content builder works through these batches, one per run, every 2 hours, before going back to weekly mode. Rules are in CLAUDE.md, "Content depth". Pilot done: Grade 1 Maths, Numbers to 20 (`source/src/depth_g1.js`).
+
+Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
+- [ ] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
+- [ ] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
+- [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer
+- [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer
+- [ ] P5. Term 2 practice papers, Grade 3: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer
+
+Depth batches. For each topic: fill every existing page to 0.75 or more (fill-report.md), then add a Warm-up ★ page, a Challenge ★★★ page, a 2-page Topic Test and a Word Mat (see CLAUDE.md). Grade 1 Maths topic 1 is done (pilot): start that subject at its topic 2.
+- [ ] D1. Nursery Maths (`nursery-maths`), topics 1 to 4
+- [ ] D2. Nursery Maths (`nursery-maths`), topics 5 to 8
+- [ ] D3. Nursery Maths (`nursery-maths`), topics 9 to 12
+- [ ] D4. Nursery Maths (`nursery-maths`), topics 13 to 15
+- [ ] D5. KG Maths (`kg-maths`), topics 1 to 4
+- [ ] D6. KG Maths (`kg-maths`), topics 5 to 8
+- [ ] D7. KG Maths (`kg-maths`), topics 9 to 12
+- [ ] D8. KG Maths (`kg-maths`), topics 13 to 15
+- [ ] D9. Grade 1 Maths (`maths`), topics 1 to 4
+- [ ] D10. Grade 1 Maths (`maths`), topics 5 to 8
+- [ ] D11. Grade 1 Maths (`maths`), topics 9 to 12
+- [ ] D12. Grade 1 Maths (`maths`), topics 13 to 14
+- [ ] D13. Grade 2 Maths (`g2-maths`), topics 1 to 4
+- [ ] D14. Grade 2 Maths (`g2-maths`), topics 5 to 8
+- [ ] D15. Grade 2 Maths (`g2-maths`), topics 9 to 12
+- [ ] D16. Grade 2 Maths (`g2-maths`), topics 13 to 15
+- [ ] D17. Grade 3 Maths (`g3-maths`), topics 1 to 4
+- [ ] D18. Grade 3 Maths (`g3-maths`), topics 5 to 8
+- [ ] D19. Grade 3 Maths (`g3-maths`), topics 9 to 12
+- [ ] D20. Grade 3 Maths (`g3-maths`), topics 13 to 15
+- [ ] D21. Nursery English (`nursery-english`), topics 1 to 4
+- [ ] D22. Nursery English (`nursery-english`), topics 5 to 8
+- [ ] D23. Nursery English (`nursery-english`), topics 9 to 12
+- [ ] D24. Nursery English (`nursery-english`), topics 13 to 15
+- [ ] D25. KG English (`kg-english`), topics 1 to 4
+- [ ] D26. KG English (`kg-english`), topics 5 to 8
+- [ ] D27. KG English (`kg-english`), topics 9 to 12
+- [ ] D28. KG English (`kg-english`), topics 13 to 15
+- [ ] D29. Grade 1 English (`g1-english`), topics 1 to 4
+- [ ] D30. Grade 1 English (`g1-english`), topics 5 to 8
+- [ ] D31. Grade 1 English (`g1-english`), topics 9 to 12
+- [ ] D32. Grade 1 English (`g1-english`), topics 13 to 16
+- [ ] D33. Grade 2 English (`g2-english`), topics 1 to 4
+- [ ] D34. Grade 2 English (`g2-english`), topics 5 to 8
+- [ ] D35. Grade 2 English (`g2-english`), topics 9 to 12
+- [ ] D36. Grade 2 English (`g2-english`), topics 13 to 15
+- [ ] D37. Grade 3 English (`g3-english`), topics 1 to 4
+- [ ] D38. Grade 3 English (`g3-english`), topics 5 to 8
+- [ ] D39. Grade 3 English (`g3-english`), topics 9 to 12
+- [ ] D40. Grade 3 English (`g3-english`), topics 13 to 15
+- [ ] D41. Nursery Urdu (`nursery-urdu`), topics 1 to 4
+- [ ] D42. Nursery Urdu (`nursery-urdu`), topics 5 to 8
+- [ ] D43. Nursery Urdu (`nursery-urdu`), topics 9 to 12
+- [ ] D44. Nursery Urdu (`nursery-urdu`), topics 13 to 15
+- [ ] D45. KG Urdu (`kg-urdu`), topics 1 to 4
+- [ ] D46. KG Urdu (`kg-urdu`), topics 5 to 8
+- [ ] D47. KG Urdu (`kg-urdu`), topics 9 to 12
+- [ ] D48. KG Urdu (`kg-urdu`), topics 13 to 15
+- [ ] D49. Grade 1 Urdu (`g1-urdu`), topics 1 to 4
+- [ ] D50. Grade 1 Urdu (`g1-urdu`), topics 5 to 8
+- [ ] D51. Grade 1 Urdu (`g1-urdu`), topics 9 to 12
+- [ ] D52. Grade 1 Urdu (`g1-urdu`), topics 13 to 14
+- [ ] D53. Grade 2 Urdu (`g2-urdu`), topics 1 to 4
+- [ ] D54. Grade 2 Urdu (`g2-urdu`), topics 5 to 8
+- [ ] D55. Grade 2 Urdu (`g2-urdu`), topics 9 to 12
+- [ ] D56. Grade 2 Urdu (`g2-urdu`), topics 13 to 15
+- [ ] D57. Grade 3 Urdu (`g3-urdu`), topics 1 to 4
+- [ ] D58. Grade 3 Urdu (`g3-urdu`), topics 5 to 8
+- [ ] D59. Grade 3 Urdu (`g3-urdu`), topics 9 to 12
+- [ ] D60. Grade 3 Urdu (`g3-urdu`), topics 13 to 15
+- [ ] D61. Grade 1 Science (`science`), topics 1 to 4
+- [ ] D62. Grade 1 Science (`science`), topics 5 to 8
+- [ ] D63. Grade 1 Science (`science`), topics 9 to 12
+- [ ] D64. Grade 1 Science (`science`), topics 13 to 14
+- [ ] D65. Grade 2 Science (`g2-science`), topics 1 to 4
+- [ ] D66. Grade 2 Science (`g2-science`), topics 5 to 8
+- [ ] D67. Grade 2 Science (`g2-science`), topics 9 to 12
+- [ ] D68. Grade 2 Science (`g2-science`), topics 13 to 15
+- [ ] D69. Grade 3 Science (`g3-science`), topics 1 to 4
+- [ ] D70. Grade 3 Science (`g3-science`), topics 5 to 8
+- [ ] D71. Grade 3 Science (`g3-science`), topics 9 to 12
+- [ ] D72. Grade 3 Science (`g3-science`), topics 13 to 15
+- [ ] D73. Nursery General Knowledge (`nursery-gk`), topics 1 to 4
+- [ ] D74. Nursery General Knowledge (`nursery-gk`), topics 5 to 8
+- [ ] D75. Nursery General Knowledge (`nursery-gk`), topics 9 to 12
+- [ ] D76. Nursery General Knowledge (`nursery-gk`), topics 13 to 15
+- [ ] D77. KG General Knowledge (`kg-gk`), topics 1 to 4
+- [ ] D78. KG General Knowledge (`kg-gk`), topics 5 to 8
+- [ ] D79. KG General Knowledge (`kg-gk`), topics 9 to 12
+- [ ] D80. KG General Knowledge (`kg-gk`), topics 13 to 15
+- [ ] D81. Grade 1 Social Studies (`social`), topics 1 to 4
+- [ ] D82. Grade 1 Social Studies (`social`), topics 5 to 8
+- [ ] D83. Grade 1 Social Studies (`social`), topics 9 to 12
+- [ ] D84. Grade 1 Social Studies (`social`), topics 13 to 14
+- [ ] D85. Grade 2 Social Studies (`g2-social`), topics 1 to 4
+- [ ] D86. Grade 2 Social Studies (`g2-social`), topics 5 to 8
+- [ ] D87. Grade 2 Social Studies (`g2-social`), topics 9 to 12
+- [ ] D88. Grade 2 Social Studies (`g2-social`), topics 13 to 15
+- [ ] D89. Grade 3 Social Studies (`g3-social`), topics 1 to 4
+- [ ] D90. Grade 3 Social Studies (`g3-social`), topics 5 to 8
+- [ ] D91. Grade 3 Social Studies (`g3-social`), topics 9 to 12
+- [ ] D92. Grade 3 Social Studies (`g3-social`), topics 13 to 15
+- [ ] D93. Grade 2 History (`g2-history`), topics 1 to 4
+- [ ] D94. Grade 2 History (`g2-history`), topics 5 to 8
+- [ ] D95. Grade 2 History (`g2-history`), topics 9 to 12
+- [ ] D96. Grade 2 History (`g2-history`), topics 13 to 15
+- [ ] D97. Grade 3 History (`g3-history`), topics 1 to 4
+- [ ] D98. Grade 3 History (`g3-history`), topics 5 to 8
+- [ ] D99. Grade 3 History (`g3-history`), topics 9 to 12
+- [ ] D100. Grade 3 History (`g3-history`), topics 13 to 15
+- [ ] D101. Grade 2 Geography (`g2-geography`), topics 1 to 4
+- [ ] D102. Grade 2 Geography (`g2-geography`), topics 5 to 8
+- [ ] D103. Grade 2 Geography (`g2-geography`), topics 9 to 12
+- [ ] D104. Grade 2 Geography (`g2-geography`), topics 13 to 15
+- [ ] D105. Grade 3 Geography (`g3-geography`), topics 1 to 4
+- [ ] D106. Grade 3 Geography (`g3-geography`), topics 5 to 8
+- [ ] D107. Grade 3 Geography (`g3-geography`), topics 9 to 12
+- [ ] D108. Grade 3 Geography (`g3-geography`), topics 13 to 15
+- [ ] D109. Grade 1 ICT (`g1-computer`), topics 1 to 4
+- [ ] D110. Grade 1 ICT (`g1-computer`), topics 5 to 8
+- [ ] D111. Grade 1 ICT (`g1-computer`), topics 9 to 12
+- [ ] D112. Grade 1 ICT (`g1-computer`), topics 13 to 15
+- [ ] D113. Grade 2 ICT (`g2-computer`), topics 1 to 4
+- [ ] D114. Grade 2 ICT (`g2-computer`), topics 5 to 8
+- [ ] D115. Grade 2 ICT (`g2-computer`), topics 9 to 12
+- [ ] D116. Grade 2 ICT (`g2-computer`), topics 13 to 15
+- [ ] D117. Grade 3 ICT (`g3-computer`), topics 1 to 4
+- [ ] D118. Grade 3 ICT (`g3-computer`), topics 5 to 8
+- [ ] D119. Grade 3 ICT (`g3-computer`), topics 9 to 12
+- [ ] D120. Grade 3 ICT (`g3-computer`), topics 13 to 15
+- [ ] D121. Grade 1 AI (`g1-ai`), topics 1 to 4
+- [ ] D122. Grade 1 AI (`g1-ai`), topics 5 to 8
+- [ ] D123. Grade 1 AI (`g1-ai`), topics 9 to 12
+- [ ] D124. Grade 1 AI (`g1-ai`), topics 13 to 15
+- [ ] D125. Grade 2 AI (`g2-ai`), topics 1 to 4
+- [ ] D126. Grade 2 AI (`g2-ai`), topics 5 to 8
+- [ ] D127. Grade 2 AI (`g2-ai`), topics 9 to 12
+- [ ] D128. Grade 2 AI (`g2-ai`), topics 13 to 15
+- [ ] D129. Grade 3 AI (`g3-ai`), topics 1 to 4
+- [ ] D130. Grade 3 AI (`g3-ai`), topics 5 to 8
+- [ ] D131. Grade 3 AI (`g3-ai`), topics 9 to 12
+- [ ] D132. Grade 3 AI (`g3-ai`), topics 13 to 15
+
+Daily practice and fun, after the depth batches:
+- [ ] Q1. 5-a-day morning sheets: one pack per grade per week for weeks 1 to 17 (Monday to Friday, 5 quick mixed questions a day from that week's Maths and English topics)
+- [ ] Q2. Fun practice packs per grade for Maths: colour by number, mosaics, cut and stick sorting, number tracing strips, challenge cards
+- [ ] Q3. Display posters and topic summaries for parents: one A4 poster per topic (key facts and words), Maths and Science first
+- [ ] Q4. When every batch is ticked: switch the content builder back to weekly ("CRON_TZ=Asia/Karachi 49 14 * * 5") and tell Sumbul in one line

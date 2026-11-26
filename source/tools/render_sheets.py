@@ -60,6 +60,21 @@ with sync_playwright() as p:
             pg.evaluate(f'''()=>{{let x=document.getElementById('x');if(!x){{x=document.createElement('div');x.id='x';x.style.cssText='position:fixed;top:0;left:0;z-index:99999';document.body.appendChild(x)}}x.style.setProperty('display','block','important');x.innerHTML=sheetHTML('{sub}',{int(n)-1},{str(len(sys.argv)>3).lower()})}}''')
             pg.wait_for_timeout(300)
             pg.screenshot(path=f'{OUTD}/sheets/{sid}.png', clip={'x': 0, 'y': 0, 'width': 794, 'height': 1123})
+    elif mode == 'fill':
+        # page fill audit (Sumbul, Nov 2026: pages must be well filled): share of the page body used at zoom 1
+        r = pg.evaluate('''()=>{const box=document.createElement('div');document.body.appendChild(box);const out=[];
+          for(const s of SUBJECTS){PAGES[s.id].forEach((p,i)=>{const k=s.id+'-'+(i+1),z=ZOOM[k];ZOOM[k]=1;box.innerHTML=sheetHTML(s.id,i,false);
+            const b=box.querySelector('.sh-body'),c=box.querySelector('.sh-in');out.push([s.id,i+1,s.grade,+(c.getBoundingClientRect().height/b.clientHeight).toFixed(2),p.topic,p.title]);ZOOM[k]=z})}box.remove();return out}''')
+        if os.environ.get('ONLY'): r = [x for x in r if os.environ['ONLY'] in x[0]]
+        low = [x for x in r if x[3] < 0.75]
+        import statistics
+        print(f'pages: {len(r)}  median fill: {statistics.median([x[3] for x in r]):.2f}  under 75%: {len(low)}')
+        with open(os.path.join(SITE, 'fill-report.md'), 'w') as f:
+            f.write('# Page fill report\n\nShare of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content depth). Pages under target, by subject:\n\n')
+            subs = {}
+            for x in low: subs.setdefault(x[0], []).append(x)
+            for sid in sorted(subs, key=lambda k: -len(subs[k])):
+                f.write(f'## {sid} ({len(subs[sid])} pages)\n' + ''.join(f'- p{x[1]} {x[3]:.2f} {x[4]} / {x[5]}\n' for x in subs[sid]) + '\n')
     elif mode == 'pdf':
         os.makedirs(SITE + '/pdf', exist_ok=True)
         for rid in ids:

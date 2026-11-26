@@ -149,6 +149,16 @@ if(typeof WRITE!=='undefined'){UR_EN['خوش خطی']='Handwriting practice';
    obj:[...new Set(pages.map(p=>p.obj))],isNew:true};
   RES.push(r);RID[r.id]=r})))}
 
+/* content depth (depth_*.js): runs last, so new pages go at the very end and no existing page number moves.
+   DEPTH functions get helpers: P(sid,title) finds a page; more(sid,title,...blocks) adds blocks to it;
+   addPages(sid,topic,pages) appends pages and adds them to that topic's pack. */
+if(typeof DEPTH!=='undefined'){const P=(sid,title)=>PAGES[sid].find(p=>p.title===title),
+ more=(sid,title,...b)=>{const p=P(sid,title);if(p)p.blocks=p.blocks.concat(b);else console.warn('depth: no page',sid,title)},
+ addPages=(sid,topic,pages)=>{const r=RES.find(x=>x.sub===sid&&!x.set&&x.topic===topic);if(!r){console.warn('depth: no pack',sid,topic);return}
+  pages.forEach(p=>{PAGES[sid].push({...p,topic});r.pages.push(PAGES[sid].length-1)});
+  r.desc=r.desc.replace(/^\d+ pages/,r.pages.length+' pages')};
+ DEPTH.forEach(f=>f({P,more,addPages}))}
+
 /* subject colour classes for every subject id */
 (function(){let css='';SUBJECTS.forEach(s=>{const k=KIND[s.kind].sheet;css+=`.s-${s.id}{--sc:var(--k-${s.kind});--st:var(--k-${s.kind}-t)}.sheet.s-${s.id}{--pc:${k[0]};--pt:${k[1]}}`});
  const st=document.createElement('style');st.textContent=css;document.head.appendChild(st)})();

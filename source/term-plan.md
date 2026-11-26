@@ -125,12 +125,12 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 ## Content depth programme (Sumbul, 26 Nov 2026)
 Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (breadth only, never copy their content). The content builder works through these batches, one per run, every 2 hours, before going back to weekly mode. Rules are in CLAUDE.md, "Content depth". Pilot done: Grade 1 Maths, Numbers to 20 (`source/src/depth_g1.js`).
 
-Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
+Covers every grade and every subject, including the English and Urdu Warm-ups and Islamiat (Sumbul, 26 Nov 2026). Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
 - [ ] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
 - [ ] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
-- [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer
-- [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer
-- [ ] P5. Term 2 practice papers, Grade 3: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer
+- [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer, AI
+- [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI
+- [ ] P5. Term 2 practice papers, Grade 3: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI
 
 Depth batches. For each topic: fill every existing page to 0.75 or more (fill-report.md), then add a Warm-up ★ page, a Challenge ★★★ page, a 2-page Topic Test and a Word Mat (see CLAUDE.md). Grade 1 Maths topic 1 is done (pilot): start that subject at its topic 2.
 - [ ] D1. Nursery Maths (`nursery-maths`), topics 1 to 4
@@ -265,6 +265,20 @@ Depth batches. For each topic: fill every existing page to 0.75 or more (fill-re
 - [ ] D130. Grade 3 AI (`g3-ai`), topics 5 to 8
 - [ ] D131. Grade 3 AI (`g3-ai`), topics 9 to 12
 - [ ] D132. Grade 3 AI (`g3-ai`), topics 13 to 15
+
+- [ ] D133. Grade 1 English Warm-up (`english`), topics 1 to 4
+- [ ] D134. Grade 1 English Warm-up (`english`), topics 5 to 8
+- [ ] D135. Grade 1 Urdu Warm-up (`urdu`), topics 1 to 4
+- [ ] D136. Grade 1 Urdu Warm-up (`urdu`), topics 5 to 8
+- [ ] D137. Grade 1 Islamiat (`g1-islamiat`), topics 1 to 4 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D138. Grade 1 Islamiat (`g1-islamiat`), topics 5 to 8 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D139. Grade 1 Islamiat (`g1-islamiat`), topics 9 to 10 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D140. Grade 2 Islamiat (`g2-islamiat`), topics 1 to 4 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D141. Grade 2 Islamiat (`g2-islamiat`), topics 5 to 8 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D142. Grade 2 Islamiat (`g2-islamiat`), topics 9 to 10 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D143. Grade 3 Islamiat (`g3-islamiat`), topics 1 to 4 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D144. Grade 3 Islamiat (`g3-islamiat`), topics 5 to 8 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
+- [ ] D145. Grade 3 Islamiat (`g3-islamiat`), topics 9 to 10 (Islamiat: only facts and exercises from the official PCTB / Single National Curriculum Islamiat textbook for this grade; Quran verses, Hadith and duas only if quoted exactly from that book; leave out anything unsure)
 
 Daily practice and fun, after the depth batches:
 - [ ] Q1. 5-a-day morning sheets: one pack per grade per week for weeks 1 to 17 (Monday to Friday, 5 quick mixed questions a day from that week's Maths and English topics)

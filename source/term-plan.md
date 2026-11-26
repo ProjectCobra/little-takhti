@@ -130,7 +130,8 @@ Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (brea
 Covers every grade and every subject, including the English and Urdu Warm-ups and Islamiat (Sumbul, 26 Nov 2026). Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
 - [x] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
 - [x] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
-- [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer, AI
+- [ ] P3a. Grade 1 December test prep (Sumbul, 26 Nov: the class's December syllabus is in `source/references/lgs-grade1-december-2026.md`): new 10-page topics with depth pages for the gaps listed there, in `source/src/classroom_g1.js` or `depth_g1.js`: Maths "Times Table of 3", Maths "Number Names to 50", Maths "Making 10 and Fact Families", English "Names and Initials", English "Ending Sounds t", Urdu "دو چشمی ھ اور بھاری الفاظ" (ھ joined with ا و ی ے, the listed words, picture naming, counting ایک تا پانچ)
+- [ ] P3. Term 2 practice papers, Grade 1, matching the December syllabus in `source/references/lgs-grade1-december-2026.md` exactly (same sections and question types, original questions): Maths, English, Urdu, Science, Social Studies; then Computer and AI
 - [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI
 - [ ] P5. Term 2 practice papers, Grade 3: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI
 

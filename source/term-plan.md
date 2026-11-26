@@ -126,13 +126,8 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 ## Content depth programme (Sumbul, 26 Nov 2026)
 Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (breadth only, never copy their content). The content builder works through these batches, one per run, every 2 hours, before going back to weekly mode. Rules are in CLAUDE.md, "Content depth". Pilot done: Grade 1 Maths, Numbers to 20 (`source/src/depth_g1.js`).
 
-<<<<<<< HEAD
 Covers every grade and every subject, including the English and Urdu Warm-ups and Islamiat (Sumbul, 26 Nov 2026). Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
-- [ ] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
-=======
-Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
 - [x] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
->>>>>>> d5655e6 (Depth P1: Nursery Term 2 Practice Papers (Maths, English, Urdu, General Knowledge))
 - [ ] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
 - [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer, AI
 - [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI

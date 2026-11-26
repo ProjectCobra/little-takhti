@@ -374,3 +374,178 @@ DEPTH.push(({addPages})=>{const S='nursery-maths';
    BK(['before','after','between','first','next','last','order','count back']),
    DR('Draw 10 beads on a string.',240))]);
 });
+
+/* D2: Nursery Maths topics 5 to 8 (Sorting and matching; Long, short, heavy, light; One more, one less; Simple patterns).
+   Same method as D1: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='nursery-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Draw a smiley face or write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const SD=['same','different'];
+
+ /* ---- Topic 5: Sorting and matching ---- */
+ mo(13,'More or Fewer?',
+  CT('B. Count each group. Write the number.',[[5,'star'],[3,'heart'],[6,'circle'],[2,'square']]),
+  CH('C. Which group has fewer? Circle.',[['5 stars or 3 stars',['5 stars','3 stars'],1],['2 balls or 6 balls',['2 balls','6 balls'],0],['7 cats or 4 cats',['7 cats','4 cats'],1],['1 kite or 5 kites',['1 kite','5 kites'],0]]));
+ mo(14,'Same or Different?',
+  MA('B. Match the groups with the same number.',['● ● ●','● ●','● ● ● ●','●'],['★ ★ ★','★ ★','★ ★ ★ ★','★']),
+  CP('C. Look at the two things. Same or different?',[['red-apple','an apple and an apple',0],['cat','a cat and a dog',1],['banana','a banana and a banana',0],['kite','a kite and a bus',1]],SD));
+ mo(15,'Sort by Colour',
+  SO('B. Sort: animal or food?',['animal','food'],['cat','mango','dog','bread','cow','egg'],[0,1,0,1,0,1]),
+  CH('C. Circle the odd one out.',[['apple, mango, banana, bus',['mango','bus'],1],['cat, dog, cow, spoon',['spoon','cow'],0]]),
+  CP('D. What colour is it? Circle.',[['banana','a banana',1],['red-apple','an apple',0],['leafy-green','a leaf',2],['tomato','a tomato',0]],['red','yellow','green']));
+ addPages(S,'Sorting and matching',[
+  pg('Sorting and Matching Warm-up ★','Start here if sorting is new. Use real toys or fruit first.','Sort into two groups and find the group with more, with help.',
+   CP('A. Is it an animal or a food? Circle.',[['cat','a cat',0],['banana','a banana',1],['dog','a dog',0],['bread','bread',1]],['animal','food']),
+   CM('B. Circle the group with more.',[[2,5,'star'],[4,1,'heart']]),
+   CT('C. Count and write.',[[3,'circle'],[3,'square']]),
+   CH('D. Are the two groups above the same?',[['3 circles and 3 squares',0]],SD),
+   DR('E. Draw 2 balls and 2 kites.',110)),
+  pg('Sorting and Matching Challenge ★★★','A grown-up reads each question. Think carefully.','Sort in more than one way, compare groups and explain.',
+   CH('A. True or false? Circle.',[['5 is more than 3.',0],['2 apples and 2 mangoes are the same number.',0],['A cow is a food.',1],['4 is fewer than 1.',1]],TF),
+   SO('B. Sort the things: sky, sea or land?',['sky','sea','land'],['kite','fish','cow','bird','boat','car'],[0,1,2,0,1,2]),
+   WP('C. A grown-up reads. Write the answer.',['Ali has 3 cars. Sara has 3 cars. Do they have the same? {{yes}}','There are 5 red balls and 2 blue balls. Which colour has more? {{red}}','Make the groups the same: 4 cups and 3 plates. How many more plates? {{1}}']),
+   CH('D. Circle the odd one out.',[['cat, cow, dog, mango',['mango','cow'],0],['bus, car, kite, rickshaw',['car','kite'],1]])),
+  pg('Topic Test: Sorting and Matching (1)','A grown-up reads each question and marks it out of 20.','Check sorting into groups and comparing groups.',
+   SC(20,10,16),
+   CM('1. Circle the group with more. (3 marks)',[[3,6,'star'],[5,2,'circle'],[4,7,'heart']]),
+   CH('2. Same or different number? (3 marks)',[['4 apples and 4 mangoes',0],['2 dogs and 5 dogs',1],['3 hats and 3 coats',0]],SD),
+   SO('3. Sort: animal or food? (4 marks)',['animal','food'],['duck','rice','horse','egg'],[0,1,0,1])),
+  pg('Topic Test: Sorting and Matching (2)','Add up your marks from both pages.','Check colours, odd one out and matching groups.',
+   CP('4. What colour is it? Circle. (4 marks)',[['sun','the sun',1],['tomato','a tomato',0],['leafy-green','a leaf',2],['lemon','a lemon',1]],['red','yellow','green']),
+   CH('5. Circle the odd one out. (2 marks)',[['red, green, blue, cat',['cat','red'],0],['bus, car, apple, bicycle',['car','apple'],1]]),
+   MA('6. Match the same number. (4 marks)',['● ●','● ● ● ●','●','● ● ●'],['2','4','1','3']),
+   HOW),
+  pg('Word Mat: Sorting and Matching','Keep this mat on the table. Point and say each word.','Know the words for sorting and comparing groups.',
+   CN(['red-apple','banana','leafy-green'],'We can sort things by colour, by kind (animals, food, toys) or by size. Things in one group are the same in some way.','Sorting'),
+   CM('more and fewer: the left group has more, the right group has fewer.',[[6,3,'star']]),
+   NO('<b>Maths words</b><br><b>sort</b>: put things that are alike together · <b>group</b>: things that go together<br><b>more</b>: the bigger number · <b>fewer</b>: the smaller number · <b>the same</b>: equal, none left over<br><b>match</b>: find the pair · <b>odd one out</b>: the one that does not belong'),
+   BK(['sort','group','more','fewer','same','different','match','odd one out']),
+   DR('Draw 3 red things and 3 yellow things.',140))]);
+
+ /* ---- Topic 6: Long, short, heavy, light ---- */
+ mo(16,'Long or Short?',
+  CP('B. Long or short? Circle.',[['snake','a snake',0],['ant','an ant',1],['locomotive','a train',0],['crayon','a crayon',1]],['long','short']),
+  CH('C. Which is longer? Circle.',[['a bus or a bicycle',['bus','bicycle'],0],['a pencil or a road',['pencil','road'],1],['a worm or a snake',['worm','snake'],1]]),
+  DR('D. Draw a long line and a short line.',80));
+ mo(17,'Tall or Short?',
+  CP('B. Tall or short? Circle.',[['giraffe','a giraffe',0],['mouse','a mouse',1],['palm-tree','a palm tree',0],['mushroom','a mushroom',1]],['tall','short']),
+  CY('C. Short, taller, tallest. Write the missing word.',[['deciduous-tree','{{short}}',34],['deciduous-tree','taller',54],['deciduous-tree','{{tallest}}',80]]));
+ mo(18,'Heavy or Light?',
+  CP('B. Heavy or light? Circle.',[['elephant','an elephant',0],['feather','a feather',1],['watermelon','a watermelon',0],['balloon','a balloon',1]],['heavy','light']),
+  CH('C. Which is heavier? Circle.',[['a book or a feather',['book','feather'],0],['a leaf or a rock',['leaf','rock'],1]]),
+  CN(['balance-scale'],'The heavy side of a balance goes down. The light side goes up.','How a balance works'));
+ addPages(S,'Long, short, heavy, light',[
+  pg('Long, Short, Heavy, Light Warm-up ★','Start here if these words are new. Hold real things and compare.','Use long, short, tall, heavy and light with help.',
+   CP('A. Long or short? Circle.',[['snake','a snake',0],['ant','an ant',1]],['long','short']),
+   CP('B. Tall or short? Circle.',[['giraffe','a giraffe',0],['mouse','a mouse',1]],['tall','short']),
+   CP('C. Heavy or light? Circle.',[['elephant','an elephant',0],['feather','a feather',1]],['heavy','light']),
+   CH('D. Which is longer? Circle.',[['a bus or a bicycle',['bus','bicycle'],0],['a worm or a snake',['worm','snake'],1]]),
+   DR('E. Draw a long snake.',110)),
+  pg('Long, Short, Heavy, Light Challenge ★★★','A grown-up reads each question. Think carefully.','Compare and order by length, height and weight, and explain.',
+   CH('A. True or false? Circle.',[['A big thing is always heavy.',1],['A giraffe is taller than a cat.',0],['A feather is light.',0],['A train is shorter than a pencil.',1]],TF),
+   CY('B. Put in order: shortest to longest. Write the words.',[['pencil','{{shortest}}',34],['pencil','longer',54],['pencil','{{longest}}',80]]),
+   WP('C. A grown-up reads. Write the answer.',['A balloon is big. Is it heavy or light? {{light}}','Ali is taller than Sara. Who is shorter? {{Sara}}','A rock and a leaf are on a balance. Which side goes down? {{rock}}']),
+   DR('D. Draw something big but light.',120)),
+  pg('Topic Test: Long, Short, Heavy, Light (1)','A grown-up reads each question and marks it out of 23.','Check long and short, tall and short.',
+   SC(23,12,19),
+   CP('1. Long or short? Circle. (4 marks)',[['snake','a snake',0],['ant','an ant',1],['locomotive','a train',0],['crayon','a crayon',1]],['long','short']),
+   CP('2. Tall or short? Circle. (4 marks)',[['giraffe','a giraffe',0],['mushroom','a mushroom',1],['palm-tree','a palm tree',0],['cat','a cat',1]],['tall','short']),
+   CH('3. Who is taller? Circle. (3 marks)',[['a man or a baby',['man','baby'],0],['a cat or a horse',['cat','horse'],1],['a tree or a flower',['tree','flower'],0]])),
+  pg('Topic Test: Long, Short, Heavy, Light (2)','Add up your marks from both pages.','Check heavy and light and comparing two things.',
+   CP('4. Heavy or light? Circle. (4 marks)',[['elephant','an elephant',0],['feather','a feather',1],['watermelon','a watermelon',0],['balloon','a balloon',1]],['heavy','light']),
+   CH('5. Which is heavier? Circle. (3 marks)',[['a bag of books or a leaf',['bag','leaf'],0],['a sponge or a brick',['sponge','brick'],1],['a cow or a duck',['cow','duck'],0]]),
+   CH('6. Which is longer? Circle. (3 marks)',[['a bus or a bicycle',['bus','bicycle'],0],['a worm or a snake',['worm','snake'],1],['a road or a pencil',['road','pencil'],0]]),
+   DR('7. Draw a tall tree. (2 marks)',80),
+   HOW),
+  pg('Word Mat: Long, Short, Heavy, Light','Keep this mat on the table. Point and say each word.','Know the words for comparing length, height and weight.',
+   CN(['snake','ant'],'A snake is <b>long</b>. An ant is <b>short</b>. We compare length side by side, starting at the same line.','Long and short'),
+   CN(['giraffe','mouse'],'A giraffe is <b>tall</b>. A mouse is <b>short</b>. We compare height standing up, feet on the floor.','Tall and short'),
+   CN(['elephant','feather'],'An elephant is <b>heavy</b>. A feather is <b>light</b>. Hold them or use a balance: the heavy side goes down.','Heavy and light'),
+   CY('Short, taller, tallest',[['deciduous-tree','short',34],['deciduous-tree','taller',54],['deciduous-tree','tallest',80]]),
+   BK(['long','short','tall','heavy','light','longer','taller','heavier']))]);
+
+ /* ---- Topic 7: One more, one less ---- */
+ mo(19,'One More',
+  WP('B. A grown-up reads. Write the answer.',['Ali has 4 balloons. He gets one more. How many now? {{5}}','There are 6 ducks. One more comes. How many now? {{7}}','Sara has 2 books. Ammi gives her one more. How many now? {{3}}']),
+  {t:'draw',grid:1,boxes:[['Draw 3 stars. Then draw one more.',110],['Draw 5 dots. Then draw one more.',110]]},
+  CH('D. Circle one more.',[['one more than 6',['5','7'],1],['one more than 3',['4','2'],0],['one more than 9',['8','10'],1]]));
+ mo(20,'One Less',
+  WP('B. A grown-up reads. Write the answer.',['There are 5 mangoes. Zara eats one. How many now? {{4}}','There are 8 birds. One flies away. How many now? {{7}}','Hamza has 3 kites. One is lost. How many now? {{2}}']),
+  {t:'draw',grid:1,boxes:[['Draw 4 balls. Cross out one.',110],['Draw 6 dots. Cross out one.',110]]},
+  CH('D. Circle one less.',[['one less than 6',['5','7'],0],['one less than 4',['5','3'],1],['one less than 10',['9','11'],0]]));
+ mo(21,'Count the Stars',
+  BX('B. Write one less and one more.',['{{3}}|4|{{5}}','{{6}}|7|{{8}}','{{1}}|2|{{3}}','{{8}}|9|{{10}}']),
+  PI('C. Count. Circle the right number.',[[5,'star',[4,5,6]],[8,'heart',[8,7,9]],[3,'circle',[2,4,3]]]),
+  F('D. Fill in.',['One more than 5 is {{6}}.','One less than 5 is {{4}}.','One more than 7 is {{8}}.','One less than 1 is {{0}}.'],2));
+ addPages(S,'One more, one less',[
+  pg('One More, One Less Warm-up ★','Start here if this is new. Use real spoons or blocks: add one, take one.','Find one more and one less with numbers to 5, with help.',
+   CT('A. Count and write.',[[2,'star'],[3,'star'],[4,'heart'],[5,'heart']]),
+   CH('B. Which group has one more? Circle.',[['2 stars or 3 stars',['2 stars','3 stars'],1]]),
+   F('C. One more.',['1, one more is {{2}}','3, one more is {{4}}','4, one more is {{5}}'],3),
+   F('D. One less.',['2, one less is {{1}}','5, one less is {{4}}','3, one less is {{2}}'],3),
+   DR('E. Draw 2 apples. Then draw one more.',170)),
+  pg('One More, One Less Challenge ★★★','A grown-up reads each question. Think carefully.','Use one more and one less to 10 and explain answers.',
+   CH('A. True or false? Circle.',[['One more than 8 is 9.',0],['One less than 4 is 5.',1],['One less than 1 is 0.',0],['One more than 9 is 8.',1]],TF),
+   BX('B. Write one less and one more.',['{{4}}|5|{{6}}','{{8}}|9|{{10}}','{{0}}|1|{{2}}','{{5}}|6|{{7}}']),
+   F('C. Think it through.',['I am one more than 6. I am {{7}}.','I am one less than 10. I am {{9}}.','One more than me is 4. I am {{3}}.','One less than me is 7. I am {{8}}.'],2),
+   WP('D. A grown-up reads.',['5 children are on the bus. One gets off and one gets on. How many now? {{5}}'])),
+  pg('Topic Test: One More, One Less (1)','A grown-up reads each question and marks it out of 25.','Check one more than a number to 10.',
+   SC(25,13,20),
+   F('1. Write one more. (4 marks)',['2, one more is {{3}}','5, one more is {{6}}','7, one more is {{8}}','9, one more is {{10}}'],2),
+   CH('2. Circle one more. (3 marks)',[['one more than 4',['5','3'],0],['one more than 6',['5','7'],1],['one more than 1',['2','0'],0]]),
+   WP('3. A grown-up reads. Write the answer. (2 marks)',['Bilal has 3 cars. He gets one more. How many now? {{4}}','There are 7 eggs. Ammi puts in one more. How many now? {{8}}']),
+   BX('4. Write one more. (3 marks)',['3|{{4}}','6|{{7}}','8|{{9}}'])),
+  pg('Topic Test: One More, One Less (2)','Add up your marks from both pages.','Check one less than a number to 10.',
+   F('5. Write one less. (4 marks)',['4, one less is {{3}}','6, one less is {{5}}','10, one less is {{9}}','2, one less is {{1}}'],2),
+   BX('6. Write one less and one more. (6 marks)',['{{2}}|3|{{4}}','{{7}}|8|{{9}}','{{5}}|6|{{7}}']),
+   WP('7. A grown-up reads. Write the answer. (3 marks)',['There are 5 birds. One flies away. How many now? {{4}}','There are 9 sweets. Sara eats one. How many now? {{8}}','There is 1 cup. It breaks. How many now? {{0}}']),
+   HOW),
+  pg('Word Mat: One More, One Less','Keep this mat on the table. Hop along the line.','Know that one more is the next number and one less is the number before.',
+   CN(['red-apple'],'<b>One more</b>: add one and count on. 3 apples and one more makes 4.<br><b>One less</b>: take one away and count back. 3 apples, one less makes 2.','One more, one less'),
+   {t:'numline'},
+   NO('<b>Hop on the line</b><br>One more: hop one step forward → &nbsp; 5 → 6<br>One less: hop one step back ← &nbsp; 5 → 4<br>One less than 1 is 0: none left.'),
+   BK(['one more','one less','add','take away','count on','count back','none','zero']),
+   DR('Draw 4 balloons. Draw one more.',170))]);
+
+ /* ---- Topic 8: Simple patterns ---- */
+ mo(22,'What Comes Next?',
+  PT('B. Draw the next two shapes, one at a time.',[[['star','heart','star','heart','star'],'heart'],[['square','tri','square','tri','square'],'tri']]),
+  CH('C. What comes next? Circle.',[['cat, dog, cat, dog, ...',['cat','dog'],0],['up, down, up, down, ...',['up','down'],0],['big, small, big, small, big, ...',['big','small'],1]]),
+  CH('D. Is it a pattern? Circle.',[['● ○ ● ○ ● ○',0],['● ● ○ ○ ○ ●',1]],YN));
+ mo(23,'Colour Patterns',
+  CO('B. Colour the pattern: yellow, green, yellow, green.',[['square','yellow'],['square','green'],['square','yellow'],['square','green']]),
+  PT('C. What comes next? Draw it.',[[['circle','circle','star','circle','circle'],'star'],[['heart','tri','heart','tri','heart'],'tri']]),
+  CH('D. Clap and stamp. What comes next?',[['clap, stamp, clap, stamp, ...',['clap','stamp'],0]]));
+ mo(24,'Make a Pattern',
+  PT('B. Finish the patterns first.',[[['circle','square','circle','square','circle'],'square'],[['star','star','heart','star','star'],'heart']]),
+  CH('C. Is it a pattern? Circle.',[['red, blue, red, blue, red, blue',0],['red, red, blue, green, yellow',1]],YN),
+  CH('D. What comes next? Circle.',[['red, yellow, red, yellow, ...',['red','blue'],0],['sun, moon, sun, moon, sun, ...',['sun','moon'],1]]));
+ addPages(S,'Simple patterns',[
+  pg('Simple Patterns Warm-up ★','Start here if patterns are new. Say the pattern aloud first.','Copy and continue AB patterns with help.',
+   PT('A. What comes next? Draw it.',[[['circle','star','circle','star','circle'],'star'],[['heart','square','heart','square','heart'],'square']]),
+   CO('B. Colour: red, yellow, red, yellow.',[['circle','red'],['circle','yellow'],['circle','red'],['circle','yellow']]),
+   CH('C. What comes next? Circle.',[['clap, stamp, clap, ...',['stamp','clap'],0]]),
+   DR('D. Copy this pattern: ● ○ ● ○ ● ○',100)),
+  pg('Simple Patterns Challenge ★★★','A grown-up reads each question. Think carefully.','Continue harder patterns (ABB, ABC), find mistakes and make patterns.',
+   PT('A. What comes next? Draw it.',[[['star','heart','heart','star','heart'],'heart'],[['circle','square','tri','circle','square'],'tri']]),
+   CH('B. Spot the mistake. Which one is wrong?',[['red, blue, red, red, red, blue (which place?)',['3rd','4th'],1],['cat, dog, cat, dog, dog, dog (which place?)',['5th','2nd'],0]]),
+   CH('C. True or false? Circle.',[['A pattern repeats again and again.',0],['circle, square, circle, square is a pattern.',0],['1, 2, 1, 2, 1 comes next is 1.',1]],TF),
+   DR('D. Make your own pattern with three shapes.',170)),
+  pg('Topic Test: Simple Patterns (1)','A grown-up reads each question and marks it out of 20.','Check continuing shape and colour patterns.',
+   SC(20,10,16),
+   PT('1. What comes next? Draw it. (4 marks)',[[['circle','tri','circle','tri','circle'],'tri'],[['star','square','star','square','star'],'square'],[['heart','heart','circle','heart','heart'],'circle'],[['square','circle','square','circle','square'],'circle']]),
+   CO('2. Colour the pattern: green, red, green, red. (2 marks)',[['tri','green'],['tri','red'],['tri','green'],['tri','red']])),
+  pg('Topic Test: Simple Patterns (2)','Add up your marks from both pages.','Check sound and word patterns and making a pattern.',
+   CH('3. What comes next? Circle. (4 marks)',[['clap, stamp, clap, stamp, ...',['clap','stamp'],0],['big, small, big, small, big, ...',['big','small'],1],['red, blue, red, blue, ...',['red','green'],0],['up, down, up, ...',['up','down'],1]]),
+   CH('4. Is it a pattern? Circle. (4 marks)',[['● ○ ● ○ ● ○',0],['● ● ○ ● ○ ○',1],['★ ♥ ★ ♥ ★ ♥',0],['★ ★ ★ ♥ ★',1]],YN),
+   DR('5. Make your own pattern with two shapes. (6 marks)',120),
+   HOW),
+  pg('Word Mat: Simple Patterns','Keep this mat on the table. Say each pattern aloud.','Know that a pattern repeats in the same order.',
+   CN(['red-circle','blue-circle','red-circle','blue-circle'],'A <b>pattern</b> repeats in the same order again and again. Say it, then say what comes next: red, blue, red, blue, <b>red</b>!','Pattern'),
+   PT('AB pattern: two things take turns.',[[['circle','star','circle','star','circle'],'star']]),
+   PT('ABB pattern: one, then two the same.',[[['heart','square','square','heart','square'],'square']]),
+   NO('<b>Pattern words</b><br><b>pattern</b>: the same order again and again · <b>repeat</b>: do it again<br><b>next</b>: what comes after · <b>mistake</b>: the part that does not fit'),
+   BK(['pattern','repeat','next','colour','shape','clap','stamp','mistake']),
+   DR('Draw a bead pattern: red, blue, red, blue.',130))]);
+});

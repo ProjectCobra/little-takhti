@@ -1,3 +1,5 @@
 # Mesopotamia Song (Little Takhti), Google Flow Music, Grade 3 History, topic g3-history-t1
 https://storage.googleapis.com/producer-app-public/clips/6c0ae148-08bc-40c0-8bd4-41affedfe57e.m4a
 topic: A cheerful children's song about Mesopotamia, the land between the rivers: the Tigris and Euphrates, Iraq today, farmers, the first cities, mud bricks, cuneiform writing with a reed on clay tablets, the wheel, the plough, the ziggurat temple tower, the Indus Valley, quiz time.
+segments: 28-45.5, 61.5-82, 150.5-174.5
+prompt: Mesopotamia, long ago, between two rivers, watch it grow! Tigris, Euphrates, side by side, the first big cities, far and wide! Writing and wheels, a stepped tower too, gifts from the past for me and you!

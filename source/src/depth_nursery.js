@@ -549,3 +549,233 @@ DEPTH.push(({addPages})=>{const S='nursery-maths';
    BK(['pattern','repeat','next','colour','shape','clap','stamp','mistake']),
    DR('Draw a bead pattern: red, blue, red, blue.',130))]);
 });
+
+/* D3: Nursery Maths topics 9 to 12 (First, next, last; Counting back and zero; Numbers to 15; Big and small, tall and short).
+   Same method as D1 and D2: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='nursery-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Draw a smiley face or write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const PS=(h,items)=>({t:'picsub',h,items});
+ const FNL=['first','next','last'];
+
+ /* ---- Topic 9: First, next, last ---- */
+ mo(25,'Who Is First?',
+  PA('Four animals run a race. The rabbit is first. The dog is second. The duck is third. The turtle is last.'),
+  CH('B. Listen again. Circle the answer.',[['Who is first?',['rabbit','duck'],0],['Who is last?',['dog','turtle'],1],['Who is second?',['dog','rabbit'],0],['Who is third?',['turtle','duck'],1]]),
+  CY('C. Look at the race. Write first or last.',[['rabbit','{{first}}'],['dog','second'],['duck','third'],['turtle','{{last}}']]));
+ mo(26,'In Order',
+  CH('B. What happens first? Circle.',[['Open the door or walk in?',['open the door','walk in'],0],['Take a bath or put on clothes?',['take a bath','put on clothes'],0],['Eat the mango or cut the mango?',['eat','cut'],1]]),
+  BK(FNL),
+  CY('C. A chick hatches. Write first, next, last.',[['egg','{{first}}'],['hatching-chick','{{next}}'],['chicken','{{last}}']]),
+  CY('D. A plant grows. Write first, next, last.',[['seedling','{{first}}'],['potted-plant','{{next}}'],['sunflower','{{last}}']]));
+ mo(27,'Draw the Line',
+  CY('B. Look at the line of things that go.',[['bus','1st'],['automobile','2nd'],['bicycle','3rd'],['auto-rickshaw','last']]),
+  CH('C. Circle the answer.',[['Which is first?',['bus','bicycle'],0],['Which is last?',['car','rickshaw'],1],['Which is second?',['car','bus'],0],['Which is third?',['bicycle','bus'],0]]));
+ addPages(S,'First, next, last',[
+  pg('First, Next, Last Warm-up ★','Start here if these words are new. Line up three toys and say first, next, last.','Use first, next and last with help.',
+   CY('A. Look at the line.',[['cat','first'],['dog','next'],['cow','last']]),
+   CH('B. Circle the answer.',[['Who is first?',['cat','cow'],0],['Who is last?',['dog','cow'],1],['Who is next after the cat?',['dog','cow'],0]]),
+   CH('C. What happens first? Circle.',[['Wake up or go to school?',['wake up','go to school'],0],['Wash hands or eat?',['wash hands','eat'],0]]),
+   CY('D. Write first or last.',[['egg','{{first}}'],['hatching-chick','next'],['chicken','{{last}}']]),
+   DR('E. Draw 3 balls in a line. Colour the first ball red.',120)),
+  pg('First, Next, Last Challenge ★★★','A grown-up reads each question. Think carefully.','Use first, second, third and last, and put events in order.',
+   CH('A. True or false? Circle.',[['First comes before last.',0],['In a line of 3, the second one is in the middle.',0],['We put on shoes, then socks.',1],['The last one in a line is at the end.',0]],TF),
+   PA('Five children wait for the bus. Ali is first. Sara is second. Hamza is third. Zara is fourth. Bilal is last.'),
+   CH('B. Listen. Circle the answer.',[['Who is third?',['Hamza','Ali'],0],['Who is just after Ali?',['Sara','Zara'],0],['Who is just before Bilal?',['Zara','Hamza'],0],['How many children wait?',['4','5'],1]]),
+   CY('C. Put in order: first, next, last.',[['cloud','{{first}}'],['cloud-with-rain','{{next}}'],['rainbow','{{last}}']]),
+   DR('D. Draw what you do first, next and last in the morning.',55)),
+  pg('Topic Test: First, Next, Last (1)','A grown-up reads each question and marks it out of 20.','Check first, second, third and last in a line.',
+   SC(20,10,16),
+   PA('The ducks walk to the pond. The big duck is first. The brown duck is second. The small duck is last.'),
+   CH('1. Listen. Circle the answer. (3 marks)',[['Who is first?',['big duck','small duck'],0],['Who is last?',['brown duck','small duck'],1],['Who is second?',['brown duck','big duck'],0]]),
+   CY('2. Look at the line. Write first or last. (2 marks)',[['lion','{{first}}'],['horse','second'],['goat','third'],['mouse','{{last}}']]),
+   CH('3. Look at the line above. Circle. (3 marks)',[['Which animal is second?',['horse','goat'],0],['Which animal is third?',['lion','goat'],1],['Which animal is just after the lion?',['horse','mouse'],0]])),
+  pg('Topic Test: First, Next, Last (2)','Add up your marks from both pages.','Check putting events in order.',
+   CH('4. What happens first? Circle. (4 marks)',[['Brush teeth or go to bed?',['brush teeth','go to bed'],0],['Plant a seed or pick a flower?',['plant a seed','pick a flower'],0],['Eat or wash the plate?',['eat','wash the plate'],0],['Put on a coat or go out in the cold?',['put on a coat','go out'],0]]),
+   CY('5. Write first, next, last. (3 marks)',[['egg','{{first}}'],['hatching-chick','{{next}}'],['chicken','{{last}}']]),
+   CY('6. Write first, next, last. (3 marks)',[['seedling','{{first}}'],['potted-plant','{{next}}'],['sunflower','{{last}}']]),
+   DR('7. Draw 3 cars in a line. Colour the last car blue. (2 marks)',70),
+   HOW),
+  pg('Word Mat: First, Next, Last','Keep this mat on the table. Point and say each word.','Know the words for order and position.',
+   CN(['rabbit','dog','turtle'],'In a race, the one at the front is <b>first</b>. The one at the end is <b>last</b>. The ones in between are <b>second</b>, <b>third</b> and so on.','Order in a line'),
+   CY('First, next, last',[['egg','first'],['hatching-chick','next'],['chicken','last']]),
+   CY('1st, 2nd, 3rd, 4th',[['bus','1st first'],['automobile','2nd second'],['bicycle','3rd third'],['auto-rickshaw','4th last']]),
+   NO('<b>Order words</b><br><b>first</b>: at the front, comes before all · <b>next</b>: comes after<br><b>last</b>: at the end · <b>before</b> and <b>after</b> · <b>second</b>, <b>third</b>: 2nd and 3rd in line'),
+   BK(['first','next','last','second','third','before','after','line']))]);
+
+ /* ---- Topic 10: Counting back and zero ---- */
+ mo(28,'Rocket Countdown',
+  CN(['rocket'],'Count back to make the rocket fly: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0. Blast off!','Counting back'),
+  BX('B. Count back. Write the missing numbers.',['{{10}}|9|8|{{7}}|6|{{5}}','4|{{3}}|2|{{1}}|0','8|{{7}}|6|{{5}}|4|{{3}}']),
+  F('C. What comes just before? Write it.',['{{4}}, 5','{{8}}, 9','{{2}}, 3','{{9}}, 10'],4),
+  PS('D. Cross out one. How many are left?',[[5,1,'star'],[3,1,'heart'],[7,1,'circle']]));
+ mo(29,'Zero Means None',
+  CN(['basket'],'<b>Zero</b> means none. If you eat all 3 sweets, there are 0 left. We write zero like this: 0.','Zero'),
+  PS('B. Cross them all out. How many are left?',[[3,3,'circle'],[2,2,'star'],[4,4,'heart']]),
+  WP('C. A grown-up reads. Write the answer.',['There are 2 kites in the sky. Both fly away. How many now? {{0}}','There are 4 cups. None break. How many now? {{4}}','There is 1 egg. Ammi cooks it. How many now? {{0}}']));
+ mo(30,'Count and Colour',
+  BX('B. Count back from 10 to 0.',['10|{{9}}|8|{{7}}|6|{{5}}','{{4}}|3|{{2}}|1|{{0}}']),
+  PI('C. Count. Circle the right number.',[[6,'star',[6,5,7]],[3,'heart',[2,3,4]],[9,'circle',[8,10,9]]]),
+  DR('D. Draw 0 apples on the plate. What do you see?',55));
+ addPages(S,'Counting back and zero',[
+  pg('Counting Back and Zero Warm-up ★','Start here if counting back is new. Hold up 5 fingers and fold one down at a time.','Count back from 5 and know that 0 means none, with help.',
+   BX('A. Count back from 5. Say each number.',['5|4|3|2|1|0']),
+   BX('B. Write the missing numbers.',['5|{{4}}|3|{{2}}|1','5|4|{{3}}|2|{{1}}']),
+   PS('C. Cross out one. How many are left?',[[3,1,'star'],[4,1,'circle']]),
+   PS('D. Cross them all out. How many are left?',[[2,2,'heart']]),
+   CH('E. Circle the zero.',[['Which number means none?',['1','0'],1]]),
+   DR('F. Draw an empty plate. It has 0 cookies.',100)),
+  pg('Counting Back and Zero Challenge ★★★','A grown-up reads each question. Think carefully.','Count back from 10, use zero and solve stories.',
+   CH('A. True or false? Circle.',[['When we count back, the numbers get smaller.',0],['Zero means a lot.',1],['Just before 6 comes 5.',0],['10, 9, 7, 8 is counting back.',1]],TF),
+   BX('B. Count back. Fill in.',['{{10}}|{{9}}|8|7|{{6}}','6|{{5}}|{{4}}|3|{{2}}','{{3}}|2|{{1}}|{{0}}']),
+   WP('C. A grown-up reads. Write the answer.',['There are 4 birds on a wall. One flies away, then another. How many now? {{2}}','Hamza has 3 sweets. He eats them all. How many now? {{0}}','A rocket count starts at 5. What number comes last? {{0}}']),
+   CH('D. Spot the mistake. Which number is wrong?',[['7, 6, 5, 3, 2',['5','3'],1],['9, 8, 7, 7, 5',['the second 7','9'],0]])),
+  pg('Topic Test: Counting Back and Zero (1)','A grown-up reads each question and marks it out of 25.','Check counting back from 10.',
+   SC(25,13,20),
+   BX('1. Count back. Write the missing numbers. (6 marks)',['10|{{9}}|8|{{7}}|6','5|{{4}}|3|{{2}}|1|{{0}}','9|8|{{7}}|6|5']),
+   NO('Use the number line to help you count back.'),{t:'numline'},
+   F('2. What comes just before? (6 marks)',['{{6}}, 7','{{2}}, 3','{{9}}, 10','{{0}}, 1','{{4}}, 5','{{7}}, 8'],3),
+   PS('3. Cross out one. How many are left? (3 marks)',[[6,1,'star'],[4,1,'heart'],[8,1,'circle']])),
+  pg('Topic Test: Counting Back and Zero (2)','Add up your marks from both pages.','Check zero and counting back stories.',
+   PS('4. Cross them all out. How many are left? (2 marks)',[[3,3,'circle'],[5,5,'star']]),
+   CH('5. Is the answer zero? Circle. (4 marks)',[['2 ducks, 2 swim away',0],['4 mangoes, eat 2',1],['1 cup breaks',0],['5 balls, lose none',1]],YN),
+   WP('6. A grown-up reads. Write the answer. (3 marks)',['There are 3 cars. One drives away. How many now? {{2}}','There are 2 apples. Sara eats both. How many now? {{0}}','There are 6 kites. One gets lost. How many now? {{5}}']),
+   CH('7. Circle the number that means none. (1 mark)',[['Which is zero?',['0','10'],0]]),
+   HOW),
+  pg('Word Mat: Counting Back and Zero','Keep this mat on the table. Count back with your finger.','Know how to count back and that 0 means none.',
+   CN(['rocket'],'<b>Counting back</b>: say the numbers getting smaller. 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0. Blast off!','Count back'),
+   CN(['basket'],'<b>Zero</b> means none, nothing left. An empty basket has 0 things in it.','Zero: 0'),
+   {t:'numline'},
+   NO('<b>Hop back on the line</b><br>Start at 10 and hop back one step at a time ← until you reach 0.<br>One less than 1 is 0.'),
+   BX('Count back from 10 to 0',['10|9|8|7|6|5','5|4|3|2|1|0']),
+   PS('5 take away 5 leaves 0',[[5,5,'star']]),
+   BK(['count back','zero','none','empty','before','one less','left','blast off']))]);
+
+ /* ---- Topic 11: Numbers to 15 ---- */
+ mo(31,'After Ten',
+  CT('B. Count and write.',[[13,'heart'],[15,'circle'],[14,'star'],[11,'square']]),
+  F('C. Ten and some more.',['10 and 1 more is {{11}}','10 and 3 more is {{13}}','10 and 5 more is {{15}}','10 and 2 more is {{12}}'],2));
+ mo(32,'Count and Write',
+  CT('B. Count again. Write how many.',[[12,'star'],[15,'heart'],[11,'square'],[14,'circle']]),
+  CH('C. Which number is bigger? Circle.',[['12 or 15',['12','15'],1],['14 or 11',['14','11'],0],['13 or 10',['13','10'],0]]));
+ mo(33,'Write 11, 12, 13',
+  BX('B. Write the missing numbers.',['10|{{11}}|12|{{13}}','{{11}}|12|{{13}}|14']),
+  CT('C. Count. Write 11, 12 or 13.',[[12,'heart'],[13,'star'],[11,'circle'],[12,'square']]));
+ mo(34,'Write 14 and 15',
+  TR('B. Trace again.',['14','15'],6),
+  CT('C. Count. Write 14 or 15.',[[14,'star'],[15,'heart'],[15,'circle'],[14,'square']]));
+ mo(35,'Missing Numbers',
+  BX('B. Count back. Fill in.',['15|{{14}}|13|{{12}}|11','{{10}}|9|8|{{7}}|6']),
+  F('C. What comes next?',['11, 12, {{13}}','13, 14, {{15}}','9, 10, {{11}}','12, 13, {{14}}'],2),
+  F('D. What comes just before?',['{{14}}, 15','{{11}}, 12','{{12}}, 13','{{10}}, 11'],4),
+  BX('E. Fill in 1 to 15.',['{{1}}|2|3|{{4}}|5|{{6}}|7|8','{{9}}|10|11|{{12}}|13|14|{{15}}']));
+ mo(36,'How Many?',
+  PI('B. Count again. Circle the number.',[[13,'heart',[13,14,12]],[15,'star',[11,15,14]],[12,'circle',[12,13,11]]]),
+  DR('C. Draw 11 dots.',100));
+ mo(37,'Which Has More?',
+  CM('B. Circle the group that has more.',[[11,15,'star'],[13,8,'square']]),
+  CH('C. Which is more? Circle.',[['11 or 14',['11','14'],1],['15 or 12',['15','12'],0],['10 or 13',['10','13'],1],['14 or 9',['14','9'],0]]));
+ mo(38,'Ten and Some More',
+  {t:'picsum',h:'B. Ten and some more. Count them all.',items:[[10,1,'circle'],[10,3,'star'],[10,4,'heart']]},
+  F('C. Fill in.',['10 and {{2}} more make 12.','10 and {{5}} more make 15.','10 and {{3}} more make 13.','10 and {{1}} more make 11.'],2),
+  WP('D. A grown-up reads. Write the answer.',['A box has 10 crayons and 4 more crayons. How many crayons? {{14}}','There are 10 children and 1 teacher. How many people? {{11}}']));
+ mo(39,'Number Stories',
+  WP('B. A grown-up reads. Write the answer.',['There are 14 crayons. Ali takes 1. How many now? {{13}}','Zara has 11 stickers. She gets 1 more. How many now? {{12}}','There are 10 cars and 5 more come. How many cars? {{15}}']),
+  DR('C. Draw a story about 12 stars.',110));
+ mo(40,'Draw 13',
+  DR('B. Draw 15 dots.',140),
+  CH('C. Circle the right number.',[['ten and three more',['13','15'],0],['ten and five more',['14','15'],1]]));
+ addPages(S,'Numbers to 15',[
+  pg('Numbers to 15 Warm-up ★','Start here if 11 to 15 are new. Count real buttons or beans with a grown-up.','Count and write 11 to 15 with help.',
+   CN(['star'],'After 10 we say 11, 12, 13, 14, 15. Count on from 10, one at a time.','Count on from 10'),
+   CT('A. Count. Write how many.',[[11,'circle'],[12,'star']]),
+   TR('B. Trace the numbers.',['11','13','15'],5),
+   BX('C. Write the missing numbers.',['10|11|{{12}}|13','13|{{14}}|15'])),
+  pg('Numbers to 15 Challenge ★★★','A grown-up reads each question. Think carefully.','Order, compare and use numbers to 15 and explain.',
+   CH('A. True or false? Circle.',[['14 is more than 12.',0],['After 13 comes 15.',1],['15 is ten and five more.',0],['11 is less than 10.',1]],TF),
+   BX('B. Count back from 15. Fill in.',['15|{{14}}|{{13}}|12|{{11}}|10']),
+   F('C. Think it through.',['I am one more than 13. I am {{14}}.','I am one less than 12. I am {{11}}.','I come just after 14. I am {{15}}.','I am 10 and 3 more. I am {{13}}.'],2),
+   WP('D. A grown-up reads.',['There are 12 eggs. Ammi buys 2 more. How many eggs now? {{14}}','Bilal has 15 marbles. He gives 1 away. How many now? {{14}}','A tray holds 10 cups and 3 more. How many cups? {{13}}'])),
+  pg('Topic Test: Numbers to 15 (1)','A grown-up reads each question and marks it out of 22.','Check counting, writing and comparing 11 to 15.',
+   SC(22,11,18),
+   CT('1. Count. Write how many. (4 marks)',[[12,'star'],[14,'circle'],[11,'heart'],[15,'square']]),
+   BX('2. Write the missing numbers. (5 marks)',['10|{{11}}|12|{{13}}|14|{{15}}','11|12|{{13}}|{{14}}|15']),
+   CM('3. Circle the group that has more. (2 marks)',[[13,10,'star'],[11,15,'circle']])),
+  pg('Topic Test: Numbers to 15 (2)','Add up your marks from both pages.','Check ten and some more, bigger numbers and stories.',
+   F('4. Ten and some more. (4 marks)',['10 and 2 more is {{12}}','10 and 4 more is {{14}}','10 and 1 more is {{11}}','10 and 5 more is {{15}}'],2),
+   CH('5. Which is more? Circle. (4 marks)',[['12 or 14',['12','14'],1],['15 or 11',['15','11'],0],['13 or 9',['13','9'],0],['10 or 12',['10','12'],1]]),
+   WP('6. A grown-up reads. Write the answer. (3 marks)',['There are 13 balloons. 1 pops. How many now? {{12}}','Sara has 14 beads. She gets 1 more. How many now? {{15}}','Ali counts 10 ducks and 1 more. How many ducks? {{11}}']),
+   HOW),
+  pg('Word Mat: Numbers to 15','Keep this mat on the table. Point and count.','Know the numbers 11 to 15 as ten and some more.',
+   CN(['star'],'11 to 15 are ten and some more. <b>11</b> is ten and 1. <b>12</b> is ten and 2. <b>13</b> is ten and 3. <b>14</b> is ten and 4. <b>15</b> is ten and 5.','Ten and some more'),
+   {t:'numline'},
+   BX('Count from 1 to 15',['1|2|3|4|5','6|7|8|9|10','11|12|13|14|15']),
+   NO('<b>Number names</b><br>11 eleven · 12 twelve · 13 thirteen · 14 fourteen · 15 fifteen'),
+   {t:'picsum',h:'10 and 5 more is 15',items:[[10,5,'circle']]},
+   BK(['eleven','twelve','thirteen','fourteen','fifteen','ten','more','count on']))]);
+
+ /* ---- Topic 12: Big and small, tall and short ---- */
+ mo(41,'Big and Small',
+  CP('B. Big or small? Circle.',[['bus','a bus',0],['honeybee','a bee',1],['house','a house',0],['red-apple','an apple',1]],['big','small']),
+  CH('C. Which is bigger? Circle.',[['a lion or a cat',['lion','cat'],0],['a pea or a watermelon',['pea','watermelon'],1]]));
+ mo(42,'Small, Bigger, Biggest',
+  CY('B. Write small or big under the first and last.',[['soccer-ball','{{small}}',34],['soccer-ball','middle',54],['soccer-ball','{{big}}',80]]),
+  CH('C. Which is the biggest? Circle.',[['a cat, a cow, an elephant',['cat','elephant'],1],['a car, a bus, a bicycle',['bus','bicycle'],0]]));
+ mo(43,'Tall and Short',
+  CP('B. Tall or short? Circle.',[['palm-tree','a palm tree',0],['mushroom','a mushroom',1],['giraffe','a giraffe',0],['duck','a duck',1]],['tall','short']),
+  CH('C. Who is taller? Circle.',[['Abbu or a baby',['Abbu','baby'],0],['a goat or a camel',['goat','camel'],1]]));
+ mo(44,'Short to Tall',
+  CY('B. Write short or tall under the first and last.',[['person','{{short}}',34],['person','middle',54],['person','{{tall}}',80]]),
+  CH('C. Which is the tallest? Circle.',[['a hut, a house, a tall building',['hut','tall building'],1],['a flower, a bush, a tree',['tree','flower'],0]]));
+ mo(45,'Which Is Bigger?',
+  CP('B. Big or small? Circle.',[['elephant','an elephant',0],['ant','an ant',1],['whale','a whale',0],['mouse','a mouse',1]],['big','small']),
+  CH('C. Which is smaller? Circle.',[['a cup or a bucket?',['cup','bucket'],0],['a ship or a boat?',['ship','boat'],1],['a mango or a grape?',['mango','grape'],1]]),
+  DR('D. Draw a big circle and a small circle.',90));
+ mo(46,'Taller or Shorter?',
+  CP('B. Tall or short? Circle.',[['giraffe','a giraffe',0],['rabbit','a rabbit',1],['office-building','a tall building',0],['hut','a hut',1]],['tall','short']),
+  F('C. Write taller or shorter.',['A camel is {{taller}} than a dog.','A mouse is {{shorter}} than a horse.','A pencil is {{shorter}} than a door.'],1));
+ mo(47,'Big or Small?',
+  SO('B. Sort again: big or small?',['big','small'],['elephant','ant','ship','button','tree','grape'],[0,1,0,1,0,1]),
+  CP('C. Big or small? Circle.',[['camel','a camel',0],['honeybee','a bee',1],['bus','a bus',0],['lady-beetle','a ladybird',1]],['big','small']));
+ mo(48,'Size Pictures',
+  CP('B. Look and circle.',[['palm-tree','A palm tree is ...',0],['ant','An ant is ...',1]],['tall','short']),
+  CP('C. Look and circle.',[['elephant','An elephant is ...',0],['grapes','A grape is ...',1],['house','A house is ...',0],['mouse','A mouse is ...',1]],['big','small']),
+  CH('D. Which is taller? Circle.',[['a giraffe or a mouse',['giraffe','mouse'],0],['a tulip or a palm tree',['tulip','palm tree'],1]]));
+ mo(49,'Size Stories',
+  WP('B. A grown-up reads. Write the answer.',['Ali has a big kite and a small kite. How many kites? {{2}}','There are 4 tall trees. 1 falls down. How many tall trees now? {{3}}','Sara has 2 small dolls and 2 big dolls. How many dolls? {{4}}']),
+  CH('C. Listen. Circle the answer.',[['A cow and a cat. Which is bigger?',['cow','cat'],0],['A tree and a flower. Which is shorter?',['tree','flower'],1]]));
+ mo(50,'Draw Big and Small',
+  CH('B. Look at your pictures. Circle.',[['Which ball is big?',['the first','the second'],0],['Which is taller, the tree or the flower?',['tree','flower'],0]]),
+  DR('C. Draw a small house and a big house.',140));
+ addPages(S,'Big and small, tall and short',[
+  pg('Big and Small, Tall and Short Warm-up ★','Start here if these words are new. Compare real things at home.','Use big, small, tall and short with help.',
+   CP('A. Big or small? Circle.',[['elephant','an elephant',0],['mouse','a mouse',1]],['big','small']),
+   CP('B. Tall or short? Circle.',[['giraffe','a giraffe',0],['rabbit','a rabbit',1]],['tall','short']),
+   CH('C. Which is bigger? Circle.',[['a ball or a house',['ball','house'],1],['a bus or a car',['bus','car'],0]]),
+   CY('D. Look: small to big.',[['red-apple','small',34],['red-apple','middle',54],['red-apple','big',80]]),
+   DR('E. Draw a big ball.',110)),
+  pg('Big and Small, Tall and Short Challenge ★★★','A grown-up reads each question. Think carefully.','Compare and order sizes and explain answers.',
+   CH('A. True or false? Circle.',[['A cat is bigger than a cow.',1],['A tree is taller than a flower.',0],['A mouse is small.',0],['A hut is taller than a tall building.',1]],TF),
+   CY('B. Order from small to big. Write small, bigger, biggest.',[['balloon','{{small}}',34],['balloon','{{bigger}}',54],['balloon','{{biggest}}',80]]),
+   WP('C. A grown-up reads. Write the answer.',['Ali is taller than Hamza. Hamza is taller than baby. Who is the tallest? {{Ali}}','A box is too small for a ball. Do we need a bigger box or a smaller box? {{bigger}}']),
+   CH('D. Circle the odd one out.',[['elephant, whale, ant, bus',['ant','bus'],0],['giraffe, tree, tall building, mushroom',['mushroom','tree'],0]])),
+  pg('Topic Test: Big and Small, Tall and Short (1)','A grown-up reads each question and marks it out of 22.','Check big and small.',
+   SC(22,11,18),
+   CP('1. Big or small? Circle. (4 marks)',[['elephant','an elephant',0],['ant','an ant',1],['house','a house',0],['honeybee','a bee',1]],['big','small']),
+   CH('2. Which is bigger? Circle. (3 marks)',[['a cow or a cat',['cow','cat'],0],['a grape or a melon',['grape','melon'],1],['a bus or a bicycle',['bus','bicycle'],0]]),
+   CY('3. Write small or big. (2 marks)',[['balloon','{{small}}',34],['balloon','middle',54],['balloon','{{big}}',80]])),
+  pg('Topic Test: Big and Small, Tall and Short (2)','Add up your marks from both pages.','Check tall and short and taller and shorter.',
+   CP('4. Tall or short? Circle. (4 marks)',[['giraffe','a giraffe',0],['mushroom','a mushroom',1],['palm-tree','a palm tree',0],['rabbit','a rabbit',1]],['tall','short']),
+   BK(['taller','shorter']),
+   F('5. Write taller or shorter. (3 marks)',['A tree is {{taller}} than a flower.','A baby is {{shorter}} than Ammi.','A camel is {{taller}} than a goat.'],1),
+   CY('6. Write short or tall. (2 marks)',[['evergreen-tree','{{short}}',34],['evergreen-tree','middle',54],['evergreen-tree','{{tall}}',80]]),
+   DR('7. Draw a tall tree and a short flower. (4 marks)',60),
+   HOW),
+  pg('Word Mat: Big and Small, Tall and Short','Keep this mat on the table. Point and say each word.','Know the words for size and height.',
+   CN(['elephant','mouse'],'An elephant is <b>big</b>. A mouse is <b>small</b>.','Big and small'),
+   CN(['giraffe','rabbit'],'A giraffe is <b>tall</b>. A rabbit is <b>short</b>. Stand them side by side to compare.','Tall and short'),
+   CY('Small, bigger, biggest',[['red-apple','small',34],['red-apple','bigger',54],['red-apple','biggest',80]]),
+   CY('Short, taller, tallest',[['evergreen-tree','short',34],['evergreen-tree','taller',54],['evergreen-tree','tallest',80]]),
+   BK(['big','small','bigger','smaller','tall','short','taller','shorter']))]);
+});

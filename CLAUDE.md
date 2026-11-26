@@ -65,6 +65,7 @@ New worksheet packs need their Google page: `build.sh` runs `tools/gen_seo.py`, 
 ## Learning songs
 
 - Song intros say "Hello friends, it's learning time!", never "Takhti time": Flow Music mispronounces Takhti (Sumbul, Nov 2026).
+- All text in a video, reel, thumbnail or post must sit fully inside its card, chip or box with proper padding on every side (Sumbul, 26 Nov 2026). Widen the container (or shorten or wrap the text) when needed, and check preview frames for this before rendering.
 - Every song video gets its own setting, matched to the topic where it fits (Sumbul, Nov 2026): never the same background as the previous song. Set `"scene_bg": "<name>"` in the lesson spec (uses `source/tools/video2/assets/glow/bg-<name>.webp`, 1920x1080; `"bg_fx": {"rays": false, "fireflies": false}` for scenes where forest light rays and fireflies look wrong, such as a beach or classroom), pass the same name to `source/video/thumbs/song_thumb.py`, and write the setting in the `source/video/plan.md` log line. Add new backgrounds there in the same soft 3D cartoon style as `bg-garden.webp`; never overwrite one.
 
 ## Instagram

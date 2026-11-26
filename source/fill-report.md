@@ -549,8 +549,8 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p88 0.20 Writing a story / Plan Your Story
 - p89 0.29 Writing a story / Write Your Story
 - p90 0.45 Writing a story / Check and Draw
-- p96 0.69 Writing practice / Story: The Thirsty Crow
-- p97 0.69 Writing practice / Story: A Trip to the Zoo
+- p116 0.69 Writing practice / Story: The Thirsty Crow
+- p117 0.69 Writing practice / Story: A Trip to the Zoo
 
 ## social (89 pages)
 - p1 0.63 Family / My Family
@@ -2366,7 +2366,7 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p79 0.27 Ordering numbers to 100 / Numbers Around Us
 - p80 0.32 Ordering numbers to 100 / Order Stories
 - p81 0.30 Ordering numbers to 100 / Exit Ticket
-- p94 0.72 Numbers to 20 / Numbers to 20 Warm-up ★
+- p124 0.72 Numbers to 20 / Numbers to 20 Warm-up ★
 
 ## g2-geography (79 pages)
 - p1 0.25 Maps and directions / North, South, East, West

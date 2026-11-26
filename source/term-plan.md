@@ -116,6 +116,7 @@ Earlier note: Next in sequence if the Classroom task stays paused: Maths Week 15
 - 21 Nov 2026: weekly mode, Grade 1 catch-up to Week 14. Maths: Place value: tens and ones. Science: What plants need to grow. Social Studies: Transport then and now; Festivals and celebrations. Urdu: ہفتے کے دن (days of the week); الٹ الفاظ (opposites). File: term2_g1.js. New pictures: auto rickshaw, locomotive, motorcycle, fireworks, birthday cake, wilted flower, sparkler, calendar. New Grade 1 words: seed, soil, sunlight, festival, balloon, transport, train, bundle.
 - 22 Nov 2026: weekly mode, Grade 1 Week 15. Maths: Ordering numbers to 100. Science: Healthy habits and germs. Social Studies: Saving water and electricity. Urdu: واحد اور جمع (singular and plural). File: term2_g1.js. New pictures: microbe, sneezing face, electric plug, roll of paper, toilet. New Grade 1 words: germs, soap, healthy, between, order, save, switch.
 - 26 Nov 2026: depth batch P1. Nursery Term 2 Practice Papers for Maths (39 marks), English (52), Urdu (35) and General Knowledge (42): 4 pages each, marks on every question, score and star bands on page 1, a "How did I do?" line, answer keys. They cover the five term 2 topics of each subject and sit with the term 2 revision week. File: depth_nursery.js. PDFs: nursery-maths-paper2, nursery-english-paper2, nursery-urdu-paper2, nursery-gk-paper2. Every paper page is 0.75 full or more.
+- 26 Nov 2026: depth batch P2. KG Term 2 Practice Papers for Maths (58 marks), English (48), Urdu (36) and General Knowledge (41): 4 pages each, marks on every question, score and star bands on page 1, answer keys. They cover the five term 2 topics of each subject (Urdu story and English story are new and original). File: depth_kg.js. PDFs: kg-maths-paper2, kg-english-paper2, kg-urdu-paper2, kg-gk-paper2. Every paper page is 0.75 full or more.
 
 ## Status
 - 21 Nov 2026: term plan finished (all batches ticked). Sumbul has been told. The content builder could not switch itself to weekly (changing a scheduled task needs Sumbul's approval in a live chat), so it may still fire every 2 hours; weekly-mode runs simply stop when every subject already has topics up to (current week + 2).
@@ -128,7 +129,7 @@ Sumbul asked for fuller worksheets, benchmarked on Twinkl's numeracy range (brea
 
 Covers every grade and every subject, including the English and Urdu Warm-ups and Islamiat (Sumbul, 26 Nov 2026). Practice papers first (term 2 tests are in December), then depth batches, then daily practice.
 - [x] P1. Term 2 practice papers, Nursery: one 4-page paper per subject (Maths, English, Urdu, General Knowledge), marked, with answer key
-- [ ] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
+- [x] P2. Term 2 practice papers, KG: Maths, English, Urdu, General Knowledge
 - [ ] P3. Term 2 practice papers, Grade 1: Maths, English, Urdu, Science, Social Studies, Computer, AI
 - [ ] P4. Term 2 practice papers, Grade 2: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI
 - [ ] P5. Term 2 practice papers, Grade 3: Maths, English, Urdu, Science, Social Studies, History, Geography, Computer, AI

@@ -602,3 +602,268 @@ DEPTH.push(({addPages})=>{const S='kg-maths';
    BK(['pair','count in 2s','count in 5s','count in 10s','skip count','pattern']),
    DR('Draw 5 hands. Count the fingers in 5s.',90))]);
 });
+
+/* D7: KG Maths topics 9 to 12 (Coins and notes, Time words, Numbers to 50, Number bonds to 10).
+   Same method as D5 and D6: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='kg-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const BOND=items=>({t:'bond',items});
+ const PSUM=(h,items)=>({t:'picsum',h,items});
+
+ /* ---- Topic 9: Coins and notes ---- */
+ mo(25,'Know the Coins',
+  CN(['coin','coin','coin'],'Pakistan has coins of 1, 2, 5 and 10 rupees. Notes are paper money: 10, 20, 50, 100 rupees and more. Look at the number to know what it is worth.','Coins and notes'),
+  CH('B. Coin or note? Circle.',[['Rs 1',['coin','note'],0],['Rs 50',['coin','note'],1],['Rs 2',['coin','note'],0],['Rs 100',['coin','note'],1]]),
+  F('C. Write the value of the note.',['the 20 rupee note: Rs {{20}}','the 50 rupee note: Rs {{50}}','the 100 rupee note: Rs {{100}}','the 10 rupee note: Rs {{10}}'],4),
+  MA('D. Match the words to the money.',['one rupee','two rupees','five rupees','ten rupees'],['Rs 1','Rs 2','Rs 5','Rs 10']));
+ mo(26,'Which Is More?',
+  CH('B. Circle the one worth less.',[['',['Rs 5','Rs 1'],1],['',['Rs 10','Rs 2'],1],['',['Rs 20','Rs 50'],0],['',['Rs 100','Rs 10'],1]]),
+  F('C. Write more or less.',['Rs 10 is {{more}} than Rs 5.','Rs 2 is {{less}} than Rs 5.','Rs 50 is {{more}} than Rs 20.','Rs 1 is {{less}} than Rs 2.'],2),
+  F('D. Put in order, smallest first.',['Rs 5, Rs 1, Rs 2 → {{Rs 1, Rs 2, Rs 5}}','Rs 50, Rs 10, Rs 20 → {{Rs 10, Rs 20, Rs 50}}'],1),
+  WP('E. A grown-up reads. Write the answer.',['Ali has a Rs 5 coin. Sara has a Rs 2 coin. Who has more money? {{Ali}}','A toy costs Rs 10. Hamza has Rs 5. Does he have enough? {{no}}']));
+ mo(27,'Add the Coins',
+  F('B. How much in all?',['Rs 10 + Rs 5 = Rs {{15}}','Rs 2 + Rs 1 = Rs {{3}}','Rs 10 + Rs 10 = Rs {{20}}','Rs 5 + Rs 1 = Rs {{6}}','Rs 2 + Rs 2 + Rs 1 = Rs {{5}}','Rs 5 + Rs 2 + Rs 2 = Rs {{9}}'],2),
+  FP('C. Play shop. How much for both?',[['candy','a sweet Rs 2 and a sweet Rs 2: Rs {{4}}'],['balloon','a balloon Rs 5 and a sweet Rs 2: Rs {{7}}'],['pencil','a pencil Rs 5 and a pencil Rs 5: Rs {{10}}'],['lollipop','a lollipop Rs 3 and a sweet Rs 2: Rs {{5}}']]),
+  WP('D. A grown-up reads. Write the answer.',['Hamza has a Rs 5 coin and a Rs 2 coin. He has Rs {{7}}.','Zara has two Rs 10 notes. She has Rs {{20}}.','Bilal has Rs 10. He spends Rs 5. He has Rs {{5}} left.']),
+  DR('E. Draw coins that make Rs 8.',100));
+ addPages(S,'Coins and notes',[
+  pg('Coins and Notes Warm-up ★','Start here if money is new. Look at real coins with a grown-up.','Know the coins Rs 1, 2, 5 and 10 and add two small coins.',
+   FP('A. Write the value of each coin.',[['coin','This coin says 1. It is Rs {{1}}.'],['coin','This coin says 2. It is Rs {{2}}.'],['coin','This coin says 5. It is Rs {{5}}.'],['coin','This coin says 10. It is Rs {{10}}.']]),
+   CH('B. Circle the one worth more.',[['',['Rs 1','Rs 2'],1],['',['Rs 5','Rs 2'],0],['',['Rs 1','Rs 5'],1]]),
+   F('C. Add the coins.',['Rs 1 + Rs 1 = Rs {{2}}','Rs 2 + Rs 1 = Rs {{3}}','Rs 2 + Rs 2 = Rs {{4}}'],3),
+   WP('D. A grown-up reads. Write the answer.',['Ali has a Rs 1 coin and another Rs 1 coin. He has Rs {{2}}.']),
+   DR('E. Draw a piggy bank with 3 coins inside.',90)),
+  pg('Coins and Notes Challenge ★★★','A grown-up reads each question. Think carefully.','Make amounts in different ways, find change and spot mistakes.',
+   CH('A. True or false? Circle.',[['Rs 5 is worth more than Rs 2.',0],['Two Rs 5 coins make Rs 10.',0],['Rs 1 + Rs 2 = Rs 4',1],['Rs 50 is less than Rs 20.',1]],TF),
+   F('B. Two ways to make Rs 10.',['Rs 5 + Rs {{5}} = Rs 10','Rs 2 + Rs 2 + Rs 2 + Rs 2 + Rs {{2}} = Rs 10'],1),
+   F('C. Spot the mistake. Write the right answer.',['Sara says Rs 5 + Rs 2 = Rs 8. It is Rs {{7}}.','Ali says Rs 10 + Rs 5 = Rs 20. It is Rs {{15}}.'],1),
+   WP('D. Word problems.',['A toy car costs Rs 10. Hamza pays with a Rs 20 note. He gets Rs {{10}} back.','Sara has Rs 5. A sweet costs Rs 2. She buys 2 sweets. She has Rs {{1}} left.','Bilal has three Rs 5 coins. He has Rs {{15}}.']),
+   DR('E. Draw the fewest coins that make Rs 7.',70)),
+  pg('Topic Test: Coins and Notes (1)','A grown-up reads each question and marks it out of 23.','Check knowing coins and notes and comparing them.',
+   SC(23,12,19),
+   F('1. Write the value. (4 marks)',['the 1 rupee coin: Rs {{1}}','the 5 rupee coin: Rs {{5}}','the 20 rupee note: Rs {{20}}','the 100 rupee note: Rs {{100}}'],2),
+   CH('2. Coin or note? Circle. (4 marks)',[['Rs 2',['coin','note'],0],['Rs 20',['coin','note'],1],['Rs 1',['coin','note'],0],['Rs 50',['coin','note'],1]]),
+   CH('3. Circle the one worth more. (4 marks)',[['',['Rs 2','Rs 5'],1],['',['Rs 10','Rs 1'],0],['',['Rs 20','Rs 50'],1],['',['Rs 100','Rs 10'],0]]),
+   NO('Tip: a coin is round metal money and a note is paper money. Look at the number to see what it is worth.')),
+  pg('Topic Test: Coins and Notes (2)','Add up your marks from both pages.','Check adding coins and money stories.',
+   F('4. How much in all? (4 marks)',['Rs 2 + Rs 2 = Rs {{4}}','Rs 5 + Rs 1 = Rs {{6}}','Rs 5 + Rs 5 = Rs {{10}}','Rs 10 + Rs 2 = Rs {{12}}'],2),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['Ali has a Rs 5 coin and a Rs 1 coin. He has Rs {{6}}.','A sweet costs Rs 2. Sara buys 2 sweets. She pays Rs {{4}}.','Hamza has Rs 10. He spends Rs 2. He has Rs {{8}} left.']),
+   CH('6. True or false? Circle. (2 marks)',[['Rs 10 is more than Rs 5.',0],['Rs 2 + Rs 2 = Rs 5',1]],TF),
+   DR('7. Draw coins that make Rs 6. (2 marks)',90),
+   HOW),
+  pg('Word Mat: Coins and Notes','Keep this mat on the table. Point and say each amount.','Know Pakistani coins and notes and the words for money.',
+   NO('<b>Coins</b>: <span style="font-size:20px">Rs 1 &nbsp; Rs 2 &nbsp; Rs 5 &nbsp; Rs 10</span><br><b>Notes</b>: <span style="font-size:20px">Rs 10 &nbsp; Rs 20 &nbsp; Rs 50 &nbsp; Rs 100 &nbsp; Rs 500 &nbsp; Rs 1000</span>'),
+   CN(['coin','money-bag','shopping-bags'],'We use coins and notes to buy things at a shop. Rs means rupees. A bigger coin is not always worth more: look at the number.','Money'),
+   NO('<b>Ways to make Rs 10</b><br><span style="font-size:19px">Rs 5 + Rs 5 &nbsp; Rs 5 + Rs 2 + Rs 2 + Rs 1 &nbsp; one Rs 10 coin &nbsp; one Rs 10 note</span>'),
+   NO('<b>Maths words</b><br><b>coin</b>: round metal money · <b>note</b>: paper money · <b>rupee</b> (Rs): money in Pakistan<br><b>cost</b>: how much we pay · <b>pay</b>: give money · <b>change</b>: money we get back · <b>worth</b>: how much it is'),
+   CH('Which is worth more? Point and say.',[['',['Rs 5','Rs 10'],1],['',['Rs 50','Rs 20'],0]]),
+   BK(['coin','note','rupee','cost','pay','change','spend','save']),
+   DR('Draw your own shop with prices.',90))]);
+
+ /* ---- Topic 10: Time words ---- */
+ mo(28,'Morning, Afternoon, Night',
+  CY('B. A day in order.',[['sunrise','morning'],['sun','afternoon'],['sunset','evening'],['crescent-moon','night']]),
+  F('C. Fill in: morning, afternoon or night.',['The sun comes up in the {{morning}}.','We see the moon at {{night}}.','We eat lunch in the {{afternoon}}.','We go to bed at {{night}}.'],1),
+  CH('D. True or false? Circle.',[['We eat breakfast at night.',1],['We wake up in the morning.',0],['It is dark at night.',0]],TF));
+ mo(29,'Days of the Week',
+  NO('<b>The 7 days of the week</b><br><span style="font-size:20px">Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</span>'),
+  F('B. Write the day after.',['After Monday comes {{Tuesday}}.','After Wednesday comes {{Thursday}}.','After Saturday comes {{Sunday}}.','After Sunday comes {{Monday}}.'],2),
+  F('C. Write the day before.',['Before Tuesday comes {{Monday}}.','Before Friday comes {{Thursday}}.','Before Sunday comes {{Saturday}}.'],1),
+  F('D. Think about it.',['There are {{7}} days in a week.','The day after today is called {{tomorrow}}.','The day before today is called {{yesterday}}.'],1),
+  WP('E. A grown-up reads. Write the answer.',['If today is Monday, tomorrow is {{Tuesday}}.','If today is Thursday, yesterday was {{Wednesday}}.']));
+ mo(30,"O'Clock",
+  CN(['alarm-clock'],"A clock has a short hand and a long hand. The short hand shows the hour. When the long hand points to 12, it is o'clock.","O'clock"),
+  CL('B. What time is it?',[[1,0],[6,0],[10,0]]),
+  F('C. Fill in.',["At 7 o'clock the long hand points to {{12}} and the short hand points to {{7}}."],1));
+ addPages(S,'Time words',[
+  pg('Time Words Warm-up ★','Start here if time words are new. Talk about your own day.','Use morning and night, and name the days of the week.',
+   CY('A. Point and say.',[['sunrise','morning'],['crescent-moon','night']]),
+   CH('B. Morning or night? Circle.',[['wake up',['morning','night'],0],['sleep in bed',['morning','night'],1],['see the stars',['morning','night'],1]]),
+   BX('C. Fill in the days.',['Monday|{{Tuesday}}|Wednesday|{{Thursday}}','Friday|{{Saturday}}|Sunday']),
+   CL('D. Say the time with a grown-up.',[[2,0],[5,0],[9,0]])),
+  pg('Time Words Challenge ★★★','A grown-up reads each question. Think carefully.','Order the days, use yesterday and tomorrow, and read o\'clock and half past.',
+   CH('A. True or false? Circle.',[['There are 7 days in a week.',0],['Friday comes just after Saturday.',1],['At 3 o\'clock the long hand points to 12.',0]],TF),
+   F('B. Think it through.',['Today is Tuesday. Tomorrow is {{Wednesday}}.','Today is Sunday. Yesterday was {{Saturday}}.','Today is Friday. The day after tomorrow is {{Sunday}}.'],1),
+   NO('<b>Half past</b>: when the long hand points to 6, it is half past. The short hand is just past the hour.'),
+   CL('C. What time is it?',[[4,0],[6,30],[11,0]]),
+   WP('D. Word problems.',["Ali goes to bed at 8 o'clock. Sara goes 1 hour later. Sara goes at {{9}} o'clock."])),
+  pg('Topic Test: Time Words (1)','A grown-up reads each question and marks it out of 21.','Check times of day and days of the week.',
+   SC(21,11,17),
+   CH('1. Morning, afternoon or night? Circle. (4 marks)',[['wake up',0],['see the moon',2],['come home from school',1],['go to sleep',2]],['morning','afternoon','night']),
+   BX('2. Fill in the days. (4 marks)',['Monday|{{Tuesday}}|Wednesday|{{Thursday}}','{{Friday}}|Saturday|{{Sunday}}']),
+   F('3. Fill in. (4 marks)',['There are {{7}} days in a week.','The day after Friday is {{Saturday}}.','The day before Monday is {{Sunday}}.','We eat lunch in the {{afternoon}}.'],1),
+   NO('Tip: say the days of the week like a song before you start.')),
+  pg('Topic Test: Time Words (2)','Add up your marks from both pages.','Check reading o\'clock times.',
+   CL('4. What time is it? (3 marks)',[[3,0],[7,0],[12,0]]),
+   F('5. Fill in. (2 marks)',["At 5 o'clock the short hand points to {{5}}.","At o'clock the long hand points to {{12}}."],1),
+   WP('6. A grown-up reads. Write the answer. (2 marks)',['Today is Wednesday. Tomorrow is {{Thursday}}.',"School starts at 8 o'clock. One hour later it is {{9}} o'clock."]),
+   DR("7. Draw a clock showing 6 o'clock. (2 marks)",80),
+   HOW),
+  pg('Word Mat: Time Words','Keep this mat on the table. Use the words when you talk about your day.','Know the words for parts of the day, the days of the week and o\'clock.',
+   CY('Parts of the day',[['sunrise','morning'],['sun','afternoon'],['sunset','evening'],['crescent-moon','night']]),
+   NO('<b>Days of the week</b><br><span style="font-size:19px">1 Monday · 2 Tuesday · 3 Wednesday · 4 Thursday · 5 Friday · 6 Saturday · 7 Sunday</span>'),
+   CL('O\'clock times',[[3,0],[9,0],[12,0]]),
+   NO("<b>Time words</b><br><b>today</b>: this day · <b>yesterday</b>: the day before today · <b>tomorrow</b>: the day after today<br><b>hour hand</b>: the short hand · <b>minute hand</b>: the long hand · <b>o'clock</b>: the long hand points to 12"),
+   BK(['morning','afternoon','evening','night','today','yesterday','tomorrow',"o'clock"]))]);
+
+ /* ---- Topic 11: Numbers to 50 ---- */
+ mo(31,'Tens and Ones',
+  F('B. How many tens and ones?',['27 = {{2}} tens and {{7}} ones','45 = {{4}} tens and {{5}} ones','38 = {{3}} tens and {{8}} ones','19 = {{1}} ten and {{9}} ones'],2),
+  CH('C. Circle the number.',[['3 tens and 2 ones',['32','23'],0],['4 tens and 6 ones',['64','46'],1],['2 tens and 0 ones',['20','2'],0],['1 ten and 5 ones',['15','51'],0]]),
+  WP('D. A grown-up reads. Write the answer.',['Ali has 4 bundles of 10 sticks and 3 more sticks. He has {{43}} sticks.','Sara has 2 trays of 10 eggs and 8 more eggs. She has {{28}} eggs.']));
+ mo(32,'Count to 30',
+  BX('B. Count on. Fill in.',['18|19|{{20}}|21|{{22}}','24|{{25}}|26|{{27}}|28']),
+  BX('C. Count back. Fill in.',['30|29|{{28}}|27|{{26}}','25|{{24}}|23|{{22}}|21']),
+  F('D. Just before and just after.',['Just after 23 comes {{24}}.','Just before 30 comes {{29}}.','Just after 29 comes {{30}}.','Just before 21 comes {{20}}.'],2),
+  F('E. Tens and ones.',['2 tens and 6 ones = {{26}}','2 tens and 9 ones = {{29}}','3 tens and 0 ones = {{30}}'],3),
+  WP('F. A grown-up reads. Write the answer.',['There are 25 children in a class. 1 more comes. Now there are {{26}} children.']));
+ mo(33,'Count to 50',
+  BX('B. Count back. Fill in.',['50|49|{{48}}|47|{{46}}','40|{{39}}|38|{{37}}|36']),
+  MA('C. Match the number to its word.',['20','30','40','50'],['twenty','thirty','forty','fifty']),
+  F('D. What comes next?',['37, 38, 39, {{40}}','46, 47, 48, {{49}}','29, 30, 31, {{32}}'],3),
+  WP('E. A grown-up reads. Write the answer.',['Hamza counts 39 steps. He takes 1 more step. Now he has counted {{40}} steps.']));
+ mo(34,'Counting in Tens',
+  FP('B. Count in tens.',[['hand-with-fingers-splayed','3 children show both hands: {{30}} fingers.'],['coin','4 notes of Rs 10: Rs {{40}}.'],['pencil','5 boxes of 10 pencils: {{50}} pencils.'],['crayon','2 boxes of 10 crayons: {{20}} crayons.']]),
+  BX('C. Count back in tens.',['50|{{40}}|30|{{20}}|10']),
+  F('D. How many tens?',['20 is {{2}} tens.','40 is {{4}} tens.','50 is {{5}} tens.'],3),
+  WP('E. A grown-up reads. Write the answer.',['Ammi buys 3 trays of 10 eggs. She has {{30}} eggs.']));
+ mo(35,'Before, After, Between',
+  BX('B. Write the number in between.',['22|{{23}}|24','31|{{32}}|33','39|{{40}}|41','47|{{48}}|49']),
+  CH('C. True or false? Circle.',[['The number after 39 is 40.',0],['The number before 30 is 31.',1],['35 is between 34 and 36.',0]],TF));
+ mo(36,'Which Is Bigger?',
+  CH('B. Circle the smaller number.',[['',['27','37'],0],['',['44','40'],1],['',['15','50'],0],['',['33','38'],0]]),
+  F('C. Put in order, smallest first.',['34, 19, 27 → {{19, 27, 34}}','42, 50, 24 → {{24, 42, 50}}'],1),
+  F('D. Write more or less.',['40 is {{more}} than 30.','21 is {{less}} than 29.','48 is {{more}} than 39.'],1),
+  WP('E. A grown-up reads. Write the answer.',['Ali has 35 marbles. Bilal has 41 marbles. Who has more? {{Bilal}}']));
+ mo(37,'Trays and Bundles',
+  F('B. Write the number.',['3 bundles of 10 and 4 more = {{34}}','1 bundle of 10 and 8 more = {{18}}','5 bundles of 10 = {{50}}','2 bundles of 10 and 2 more = {{22}}'],2),
+  CN(['pencil','pencil','pencil'],'Tie 10 pencils with a band to make a bundle. Count the bundles in tens, then count the loose ones: 10, 20, 30, 31, 32.','Bundles of ten'),
+  WP('C. A grown-up reads. Write the answer.',['A shop has 4 trays of 10 eggs and 7 loose eggs. That is {{47}} eggs.','Hamza has 26 sticks. He makes bundles of 10. He makes {{2}} bundles and has {{6}} sticks left over.']));
+ mo(38,'Number Stories',
+  WP('B. More number stories.',['There are 20 girls and 10 boys on the bus. There are {{30}} children.','Bilal has 45 stickers. He gives 1 away. He has {{44}} left.','A tree has 30 mangoes. 10 more grow. Now it has {{40}} mangoes.']),
+  CH('C. Who has more? Circle.',[['Ali 28 sweets, Sara 32 sweets',['Ali','Sara'],1],['Zara 46 beads, Hamza 39 beads',['Zara','Hamza'],0]]),
+  DR('D. Draw 3 bundles of 10 sticks and 2 more. Write the number.',100));
+ mo(39,'Count On',
+  F('B. Count back. Write where you stop.',['Start at 30. Count back 2: {{28}}','Start at 45. Count back 3: {{42}}','Start at 21. Count back 4: {{17}}','Start at 50. Count back 5: {{45}}'],2),
+  BX('C. Count on in ones. Fill in.',['36|37|{{38}}|{{39}}|40','{{41}}|42|43|{{44}}|45']),
+  F('D. Count on 10.',['20 and 10 more is {{30}}.','14 and 10 more is {{24}}.','33 and 10 more is {{43}}.'],1),
+  WP('E. A grown-up reads. Write the answer.',['Sara has 25 beads. She gets 3 more. Count on: she has {{28}} beads.','There are 40 chairs. 2 more come. Now there are {{42}} chairs.']),
+  DR('F. Draw jumps on a number line from 23 to 26.',90));
+ mo(40,'Write to 50',
+  BX('B. Fill in the missing numbers.',['21|22|{{23}}|24|25|{{26}}|27|28|{{29}}|30','31|{{32}}|33|34|{{35}}|36|37|{{38}}|39|40','41|42|43|{{44}}|45|46|{{47}}|48|49|{{50}}']),
+  F('C. Write the number for the word.',['thirty-five {{35}}','forty-two {{42}}','twenty-eight {{28}}','fifty {{50}}'],2),
+  F('D. What comes next?',['19, 20, {{21}}','39, 40, {{41}}','48, 49, {{50}}'],3),
+  CH('E. True or false? Circle.',[['After 29 comes 30.',0],['After 40 comes 50.',1]],TF));
+ addPages(S,'Numbers to 50',[
+  pg('Numbers to 50 Warm-up ★','Start here if numbers past 20 are new. Count with a grown-up.','Count and write numbers from 20 to 30 and count in tens.',
+   BX('A. Fill in.',['20|21|{{22}}|23|{{24}}|25','25|26|{{27}}|28|{{29}}|30']),
+   TR('B. Trace the numbers.',['21','25','30'],5),
+   BX('C. Count in tens.',['10|{{20}}|30|{{40}}|50']),
+   F('D. Tens and ones.',['2 tens and 1 one = {{21}}','2 tens and 5 ones = {{25}}'],2),
+   WP('E. A grown-up reads. Write the answer.',['Ali has 2 bundles of 10 sticks. He has {{20}} sticks.'])),
+  pg('Numbers to 50 Challenge ★★★','A grown-up reads each question. Think carefully.','Use tens and ones, compare and order numbers to 50, and spot mistakes.',
+   CH('A. True or false? Circle.',[['43 is 4 tens and 3 ones.',0],['28 is bigger than 32.',1],['After 39 comes 40.',0],['50 is 4 tens.',1]],TF),
+   F('B. Who am I?',['I have 3 tens and 6 ones. I am {{36}}.','I am 10 more than 25. I am {{35}}.','I am between 47 and 49. I am {{48}}.','I am one less than 40. I am {{39}}.'],2),
+   F('C. Spot the mistake. Write the right number.',['37, 38, 39, 30, 41: 30 should be {{40}}','2 tens and 4 ones is 42: it should be {{24}}'],1),
+   F('D. Put in order, biggest first.',['29, 41, 35 → {{41, 35, 29}}','18, 50, 23 → {{50, 23, 18}}'],1),
+   WP('E. Word problem.',['Sara has 3 bundles of 10 sticks and 5 more. Ali has 38 sticks. Who has more? {{Ali}}'])),
+  pg('Topic Test: Numbers to 50 (1)','A grown-up reads each question and marks it out of 30.','Check counting, tens and ones to 50.',
+   SC(30,15,24),
+   BX('1. Write the missing numbers. (8 marks)',['26|{{27}}|28|{{29}}|30','33|{{34}}|35|{{36}}|37','41|{{42}}|43|{{44}}|{{45}}|{{46}}']),
+   F('2. Tens and ones. (6 marks)',['3 tens and 5 ones = {{35}}','4 tens and 2 ones = {{42}}','27 = {{2}} tens and {{7}} ones','50 = {{5}} tens and {{0}} ones'],1),
+   BX('3. Count in tens, then count back in tens. (5 marks)',['10|20|{{30}}|{{40}}|{{50}}','50|{{40}}|30|{{20}}|10'])),
+  pg('Topic Test: Numbers to 50 (2)','Add up your marks from both pages.','Check comparing, before and after, and number stories.',
+   CH('4. Circle the bigger number. (3 marks)',[['',['34','43'],1],['',['50','45'],0],['',['29','31'],1]]),
+   F('5. Before, after and between. (3 marks)',['The number after 39 is {{40}}.','The number before 25 is {{24}}.','The number between 47 and 49 is {{48}}.'],1),
+   WP('6. A grown-up reads. Write the answer. (3 marks)',['Ammi has 2 trays of 10 eggs and 4 more. She has {{24}} eggs.','There are 30 children. 1 more comes. There are {{31}}.','Start at 44. Count on 3. You stop at {{47}}.']),
+   CH('7. True or false? Circle. (2 marks)',[['50 is 5 tens.',0],['19 is bigger than 30.',1]],TF),
+   HOW),
+  pg('Word Mat: Numbers to 50','Keep this mat on the table. Point and say each number.','Know the numbers to 50 as tens and ones.',
+   BX('Numbers 1 to 50',['1|2|3|4|5|6|7|8|9|10','11|12|13|14|15|16|17|18|19|20','21|22|23|24|25|26|27|28|29|30','31|32|33|34|35|36|37|38|39|40','41|42|43|44|45|46|47|48|49|50']),
+   NO('<b>Tens</b>: <span style="font-size:19px">10 ten · 20 twenty · 30 thirty · 40 forty · 50 fifty</span><br><b>34</b> = 3 tens and 4 ones = thirty-four'),
+   CN(['abacus','egg'],'One tray holds 10 eggs. Count the full trays in tens, then the loose eggs in ones.','Tens and ones'),
+   NO('<b>Maths words</b><br><b>tens</b>: groups of ten · <b>ones</b>: single ones · <b>bundle</b>: ten tied together<br><b>before</b>, <b>after</b>, <b>between</b> · <b>count on</b> · <b>count back</b>'),
+   BK(['twenty','thirty','forty','fifty','tens','ones','bundle','between']))]);
+
+ /* ---- Topic 12: Number bonds to 10 ---- */
+ mo(41,'What Is a Number Bond?',
+  NO('<b>B. Fill in the missing part.</b>'),
+  BOND([[10,7,3,2],[10,4,6,2],[10,9,1,2],[10,2,8,1]]),
+  WP('C. A grown-up reads. Write the answer.',['Hold up 10 fingers. Put 4 down. {{6}} are up.','10 children play. 3 go home. {{7}} are still playing.']));
+ mo(42,'Bonds to 5',
+  NO('<b>B. Fill in the missing part.</b>'),
+  BOND([[5,3,2,2],[5,1,4,1],[5,4,1,2],[5,0,5,2]]),
+  WP('C. A grown-up reads. Write the answer.',['Sara has 5 bangles. 2 are red. {{3}} are green.']));
+ mo(43,'Bonds to 10',
+  F('B. Write the missing first number.',['{{3}} + 7 = 10','{{6}} + 4 = 10','{{8}} + 2 = 10','{{10}} + 0 = 10'],4),
+  NO('<b>C. Fill in the missing part.</b>'),
+  BOND([[10,5,5,2],[10,3,7,1],[10,6,4,2]]));
+ mo(44,'Part, Part, Whole',
+  NO('<b>B. Fill in the missing part.</b>'),
+  BOND([[8,5,3,2],[6,2,4,1],[9,4,5,2],[7,7,0,2]]),
+  WP('C. A grown-up reads. Write the answer.',['There are 9 sweets. 6 are red. {{3}} are yellow.']),
+  F('D. Find the whole.',['Parts 3 and 4. Whole {{7}}','Parts 5 and 1. Whole {{6}}','Parts 2 and 6. Whole {{8}}'],3));
+ mo(45,'Picture Bonds',
+  PSUM('B. Count the two parts. Write the whole.',[[6,4,'star'],[3,7,'circle'],[8,2,'heart']]),
+  FP('C. Look and write the missing part.',[['kite','10 kites: 3 fly high, {{7}} fly low.'],['duck','10 ducks: 9 swim, {{1}} sleeps.']]),
+  NO('<b>D. Fill in the missing part.</b>'),
+  BOND([[10,6,4,2],[10,1,9,2]]));
+ mo(46,'Make 10',
+  F('B. Make 10.',['4 + {{6}} = 10','7 + {{3}} = 10','2 + {{8}} = 10','9 + {{1}} = 10','5 + {{5}} = 10','0 + {{10}} = 10'],3),
+  NO('<b>C. Fill in the missing part.</b>'),
+  BOND([[10,8,2,2],[10,3,7,2],[10,6,4,1]]),
+  WP('D. A grown-up reads. Write the answer.',['A box holds 10 pencils. It has 6. {{4}} more are needed to fill it.']));
+ mo(47,'Bond Partners',
+  F('B. Write the partner that makes 10.',['6 and {{4}}','8 and {{2}}','3 and {{7}}','9 and {{1}}','10 and {{0}}','5 and {{5}}'],3),
+  CH('C. True or false? Circle.',[['7 and 3 make 10.',0],['6 and 5 make 10.',1],['2 and 8 make 10.',0],['4 and 4 make 10.',1]],TF),
+  BOND([[10,2,8,2],[10,7,3,1]]));
+ mo(48,'Bond Stories',
+  WP('B. More bond stories.',['There are 10 birds. 6 sit on the wall. {{4}} sit on the tree.','Zara has 5 sweets. She eats 2. {{3}} are left.','10 kites fly. 5 come down. {{5}} are still flying.']),
+  DR('C. Draw 10 apples: some in a basket and some on a plate. Write your bond.',100),
+  WR('',['______ in the basket and ______ on the plate make 10.']));
+ mo(49,'Ten Fingers',
+  CN(['hand-with-fingers-splayed','hand-with-fingers-splayed'],'Two hands have 10 fingers. Fingers up and fingers down always make 10. 8 up and 2 down make 10.','Ten fingers'),
+  NO('<b>B. Fill in the missing part.</b>'),
+  BOND([[10,8,2,2],[10,1,9,2],[10,4,6,1]]),
+  CH('C. Circle the right answer.',[['7 fingers up. How many down?',['3','4'],0],['5 fingers down. How many up?',['5','6'],0],['1 finger up. How many down?',['8','9'],1]]));
+ mo(50,'Draw a Bond',
+  NO('<b>Fill in the missing part.</b>'),
+  BOND([[10,3,7,2],[10,8,2,1],[10,5,5,2]]),
+  F('Write a bond to 10.',['{{1}} and {{9}}','{{2}} and {{8}}','{{4}} and {{6}}'],3),
+  WP('A grown-up reads. Write the answer.',['There are 10 cups. 6 are full. {{4}} are empty.']));
+ addPages(S,'Number bonds to 10',[
+  pg('Number Bonds Warm-up ★','Start here if number bonds are new. Use fingers or beads.','Find bonds to 5 using pictures and fingers.',
+   PSUM('A. Count the two parts. Write the whole.',[[2,3,'star'],[4,1,'heart'],[1,4,'circle']]),
+   NO('<b>B. Fill in the missing part.</b>'),
+   BOND([[5,3,2,2],[5,4,1,2],[5,2,3,2]]),
+   F('C. Bonds to 5.',['2 and {{3}} make 5.','1 and {{4}} make 5.','5 and {{0}} make 5.'],3),
+   WP('D. A grown-up reads. Write the answer.',['Hold up 5 fingers. Put 2 down. {{3}} are up.']),
+   DR('E. Draw 5 beads. Colour some red and the rest blue.',70)),
+  pg('Number Bonds Challenge ★★★','A grown-up reads each question. Think carefully.','Use bonds to 10 to find missing parts and spot mistakes.',
+   CH('A. True or false? Circle.',[['3 and 7 make 10.',0],['6 and 3 make 10.',1],['10 and 0 make 10.',0],['5 and 4 make 10.',1]],TF),
+   F('B. Missing numbers.',['{{2}} + 8 = 10','10 = 6 + {{4}}','10 = {{1}} + 9','7 + {{3}} = 10'],2),
+   F('C. Spot the mistake. Write the right number.',['Ali says 4 and 5 make 10. 4 and {{6}} make 10.','Sara says 8 and 3 make 10. 8 and {{2}} make 10.'],1),
+   F('D. How many bonds to 10 can you find?',['0 + 10, 1 + {{9}}, 2 + {{8}}, 3 + {{7}}, 4 + {{6}}, 5 + {{5}}'],1),
+   WP('E. Word problem.',['Hamza needs 10 marbles. He has 3 in one pocket and 4 in the other. He needs {{3}} more.'])),
+  pg('Topic Test: Number Bonds (1)','A grown-up reads each question and marks it out of 24.','Check bonds to 5 and to 10.',
+   SC(24,12,19),
+   NO('<b>1. Fill in the missing part. (4 marks)</b>'),
+   BOND([[5,2,3,2],[10,6,4,2],[10,3,7,1],[8,5,3,2]]),
+   F('2. Make 10. (6 marks)',['9 + {{1}} = 10','7 + {{3}} = 10','4 + {{6}} = 10','5 + {{5}} = 10','2 + {{8}} = 10','0 + {{10}} = 10'],3),
+   CH('3. Circle the pair that makes 10. (3 marks)',[['',['6 and 4','6 and 5'],0],['',['8 and 1','8 and 2'],1],['',['3 and 7','3 and 6'],0]])),
+  pg('Topic Test: Number Bonds (2)','Add up your marks from both pages.','Check part, part, whole and bond stories.',
+   F('4. Find the missing part. (4 marks)',['Whole 7: parts 4 and {{3}}','Whole 9: parts 6 and {{3}}','Whole 10: parts 8 and {{2}}','Whole 5: parts 1 and {{4}}'],2),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['There are 10 eggs. 7 are white. {{3}} are brown.','Hold up 10 fingers. Put 5 down. {{5}} are up.','Sara needs 10 beads. She has 9. She needs {{1}} more.']),
+   CH('6. True or false? Circle. (2 marks)',[['4 and 6 make 10.',0],['3 and 3 make 10.',1]],TF),
+   DR('7. Draw 10 balls. Colour some red and the rest blue. Write your bond. (2 marks)',100),
+   HOW),
+  pg('Word Mat: Number Bonds to 10','Keep this mat on the table. Say each bond like a rhyme.','Know the pairs that make 5 and 10.',
+   NO('<b>Bonds to 10</b><br><span style="font-size:20px">0 + 10 &nbsp; 1 + 9 &nbsp; 2 + 8 &nbsp; 3 + 7 &nbsp; 4 + 6 &nbsp; 5 + 5</span><br><b>Bonds to 5</b><br><span style="font-size:20px">0 + 5 &nbsp; 1 + 4 &nbsp; 2 + 3</span>'),
+   BOND([[10,7,3,-1],[5,2,3,-1]]),
+   CN(['hand-with-fingers-splayed','hand-with-fingers-splayed'],'Fingers up and fingers down always make 10. Say it like a rhyme: seven and three make ten!','Ten fingers'),
+   NO('<b>Maths words</b><br><b>whole</b>: the total · <b>part</b>: one of the groups · <b>bond</b>: two parts that make a whole<br><b>partner</b>: the number that goes with another to make 10 · <b>make</b>: add up to'),
+   BK(['whole','part','bond','partner','make 10','pair']),
+   DR('Draw your own number bond.',80))]);
+});

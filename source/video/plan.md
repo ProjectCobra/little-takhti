@@ -8,7 +8,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 - 2026-11-24 | Grade 1 | Science | science-t12 Parts of a Plant | posted
 - 2026-11-25 | Grade 2 | Maths | g2-maths-t1 Numbers to 1000 | setting: playroom (toy blocks) | v2 song 8c739dd6 (learning time intro); verse 4 ends at "look at the tens" in this take, so the compare scene shows 5 tens beat 2 tens on screen
-- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | setting: mesopotamia (riverside with a ziggurat, palms and mud-brick houses) | song 6c0ae148; Flow sang the Q1 and Q3 answers straight away, so 8 s tick-tock breaks from the Q2 break were spliced in (lessons/g3-history-t1-song/song-timer.m4a)
+- 2026-11-26 | Grade 3 | History | g3-history-t1 Mesopotamia | setting: mesopotamia (riverside with a ziggurat, palms and mud-brick houses) | song 6c0ae148; Flow sang the Q1 and Q3 answers straight away, so 8 s tick-tock breaks from the Q2 break were spliced in (lessons/g3-history-t1-song/song-timer.m4a) | posted 27 Nov
 - 2026-11-27 | Nursery | General Knowledge | nursery-gk-t1 My body | lyrics written 26 Nov evening (no Nursery subject done yet; GK picked as no grade has had a GK song) | setting: to choose at song stage
 
 ## Nursery
@@ -578,7 +578,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| Mesopotamia | g3-history-t1 | approved (flow 6c0ae148-08bc-40c0-8bd4-41affedfe57e, mesopotamia setting; rendered 26 Nov) |  |  |  |  |
+| Mesopotamia | g3-history-t1 | posted (flow 6c0ae148-08bc-40c0-8bd4-41affedfe57e, mesopotamia setting) | littletakhti.com (topic page) | https://youtu.be/ECam2NpWHyA | https://youtube.com/shorts/pOVtadRklkE | none (even day, no reel) |
 | Ancient China | g3-history-t2 | todo |  |  |  |  |
 | Gandhara | g3-history-t3 | todo |  |  |  |  |
 | Allama Iqbal | g3-history-t4 | todo |  |  |  |  |

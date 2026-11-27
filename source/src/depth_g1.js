@@ -1397,3 +1397,285 @@ DEPTH.push(({addPages})=>{const S='maths';
    BK(['hour','minute',"o'clock",'half past','day','week','month','year']),
    DR('Draw a clock showing the time you wake up.',110))]);
 });
+
+/* D11: Grade 1 Maths topics 9 to 12 (Measuring, Number names to 20, Comparing numbers, Adding and taking away stories).
+   Same method as D9 and D10: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const MA=(h,left,right)=>({t:'match',h,left,right});
+ const CM=(h,items)=>({t:'cmp',h,items});
+ const LS=['longer','shorter'], HL=['heavier','lighter'], ML=['more','less'], AT=['add','take away'];
+
+ /* ---- Topic 9: Measuring ---- */
+ mo(29,'Longer or Shorter?',
+  CN(['straight-ruler','pencil'],'We measure to find how long, how tall or how heavy something is. Put the ends together to compare. The one that goes further is longer. The other one is shorter.','Longer and shorter'),
+  CP('B. Longer or shorter? Circle.',[['snake','A snake is ___ than a worm.',0],['pencil','A pencil is ___ than a ruler.',1],['bus','A bus is ___ than a car.',0],['ant','An ant is ___ than a dog.',1]],LS),
+  WP('C. Think it through.',['Ali\'s ribbon is 8 cubes long. Sara\'s is 5 cubes long. {{Ali\'s}} ribbon is longer.','A red pencil is 6 clips long. A blue pencil is 9 clips long. The blue pencil is {{3}} clips longer.']));
+ mo(30,'Measure with Hands',
+  NO('A <b>hand span</b> is from the tip of your thumb to the tip of your little finger, with your hand stretched wide. Big hands and small hands give different answers, so we also use cubes, clips and rulers.'),
+  WR('B. Measure with hand spans. Write the number.',['My door is about ______ hand spans wide.','A chair is about ______ hand spans tall.','My school bag is about ______ hand spans long.']),
+  FP('C. How many cubes long?',[['pencil','The pencil is 7 cubes long. It is {{7}} cubes.'],['crayon','The crayon is 4 cubes long. It is {{4}} cubes.'],['spoon','The spoon is 5 cubes long. It is {{5}} cubes.'],['straight-ruler','The ruler is 10 cubes long. It is {{10}} cubes.']]),
+  F('D. Longer by how much?',['A ribbon is 9 cubes. A string is 6 cubes. The ribbon is {{3}} cubes longer.','A stick is 12 clips. A pen is 7 clips. The stick is {{5}} clips longer.'],1));
+ mo(31,'Holds More',
+  CN(['bucket','teacup-without-handle'],'Capacity is how much a container holds. A bucket holds more water than a cup. A full container cannot hold any more. An empty one holds nothing.','Holds more, holds less'),
+  CP('B. Holds more or holds less? Circle.',[['bathtub','A bath tub holds ___ than a bucket.',0],['spoon','A spoon holds ___ than a cup.',1],['glass-of-milk','A glass holds ___ than a bucket.',1],['bucket','A bucket holds ___ than a spoon.',0]],ML),
+  F('C. Fill in.',['A jug fills {{4}} cups. 4 cups of water fill 1 jug.','A bucket fills 10 cups. 2 buckets fill {{20}} cups.','A full cup holds more than a {{half full}} cup.'],1));
+ addPages(S,'Measuring',[
+  pg('Measuring Warm-up ★','Start here if measuring is new. Use real things from home.','Say which is longer, taller, heavier and holds more.',
+   CN(['giraffe','cat'],'The giraffe is taller. The cat is shorter.','Tall and short'),
+   CH('A. Circle the longer one.',[['',['a train','a car'],0],['',['a crayon','a broom'],1],['',['a rope','a button'],0]]),
+   CH('B. Circle the heavier one.',[['',['a ball','a bus'],1],['',['a cow','a hen'],0],['',['a book','a leaf'],0]]),
+   CH('C. Circle the one that holds more.',[['',['a cup','a bucket'],1],['',['a bath tub','a spoon'],0]]),
+   FP('D. Count the cubes.',[['pencil','The pencil is {{3}} cubes long.'],['crayon','The crayon is {{2}} cubes long.']]),
+   DR('E. Draw something taller than you.',58)),
+  pg('Measuring Challenge ★★★','Think carefully. Show your thinking.','Compare and order lengths, weights and amounts, and spot mistakes.',
+   CH('A. True or false? Circle.',[['A feather is heavier than a brick.',1],['A bucket holds more than a cup.',0],['A bus is longer than a pencil.',0],['Hand spans always give the same answer for everyone.',1],['An empty glass holds no water.',0]],TF),
+   F('B. Order from shortest to longest.',['pencil 7 cm, crayon 4 cm, ruler 15 cm: {{crayon}}, {{pencil}}, {{ruler}}','rope 9 m, string 2 m, ribbon 5 m: {{string}}, {{ribbon}}, {{rope}}'],1),
+   F('C. Spot the mistake. Write the right word.',['Hira says a mouse is heavier than a cat. It is {{lighter}}.','Bilal says a spoon holds more than a jug. It holds {{less}}.'],1),
+   WP('D. Think it through.',['Ali is taller than Sara. Sara is taller than Zain. The shortest is {{Zain}}.','A box is heavier than a bag. The bag is heavier than a ball. The heaviest is the {{box}}.','A jug fills 5 cups. 2 jugs fill {{10}} cups.'])),
+  pg('Topic Test: Measuring (1)','Answer every question. Ask a grown-up to mark it out of 24.','Check longer, shorter, taller and measuring with cubes.',
+   SC(24,12,20),
+   CP('1. Longer or shorter? Circle. (4 marks)',[['snake','A snake is ___ than an ant.',0],['crayon','A crayon is ___ than a broom.',1],['bus','A bus is ___ than a bike.',0],['spoon','A spoon is ___ than a table.',1]],LS),
+   CH('2. Circle the taller one. (3 marks)',[['',['a tree','a flower'],0],['',['a cat','a giraffe'],1],['',['a house','a chair'],0]]),
+   FP('3. How many cubes long? (4 marks)',[['pencil','{{6}} cubes (the pencil is 6 cubes long)'],['straight-ruler','{{9}} cubes (the ruler is 9 cubes long)'],['crayon','{{3}} cubes (the crayon is 3 cubes long)'],['spoon','{{5}} cubes (the spoon is 5 cubes long)']])),
+  pg('Topic Test: Measuring (2)','Answer every question. Add up your marks from both pages.','Check heavier, lighter, capacity and measuring word problems.',
+   CP('4. Heavier or lighter? Circle. (4 marks)',[['elephant','An elephant is ___ than a mouse.',0],['feather','A feather is ___ than a rock.',1],['watermelon','A watermelon is ___ than a cherry.',0],['balloon','A balloon is ___ than a school bag.',1]],HL),
+   CH('5. Circle the one that holds more. (3 marks)',[['',['a bucket','a cup'],0],['',['a spoon','a glass'],1],['',['a bath tub','a bottle'],0]]),
+   WP('6. Word problems. (6 marks: 2 each)',['A red ribbon is 8 cubes. A green ribbon is 5 cubes. The red ribbon is {{3}} cubes longer.','A jug fills 3 glasses. 2 jugs fill {{6}} glasses.','Sara is taller than Ali. Ali is taller than Hira. The tallest is {{Sara}}.']),
+   HOW),
+  pg('Word Mat: Measuring','Keep this mat on the table while you work. Read the words together.','Know the words for length, height, weight and capacity.',
+   CN(['straight-ruler','giraffe','balance-scale','bucket'],'Length: how long. Height: how tall. Weight: how heavy. Capacity: how much a container holds. We can measure with cubes, clips, hand spans or a ruler.','Ways to measure'),
+   NO('<b>Length</b>: long · longer · longest · short · shorter · shortest<br><b>Height</b>: tall · taller · tallest<br><b>Weight</b>: heavy · heavier · heaviest · light · lighter · lightest<br><b>Capacity</b>: full · half full · empty · holds more · holds less'),
+   NO('<b>Tips</b><br>1. Line up the ends when you compare lengths.<br>2. On a balance scale, the heavier side goes down.<br>3. Use the same unit (all cubes or all clips) when you measure and compare.'),
+   BK(['long','short','tall','heavy','light','full','empty','measure']),
+   DR('Draw a full glass, a half full glass and an empty glass.',135))]);
+
+ /* ---- Topic 10: Number names to 20 ---- */
+ mo(32,'Number Names 0 to 10',
+  FP('B. Count and write the number name.',[['star','3 stars: {{three}}'],['red-apple','6 apples: {{six}}'],['balloon','9 balloons: {{nine}}'],['kite','4 kites: {{four}}']]),
+  F('C. Write the number.',['one = {{1}}','two = {{2}}','six = {{6}}','nine = {{9}}','four = {{4}}','ten = {{10}}'],3),
+  CT('D. Count. Write the number, then say its name.',[[5,'star'],[7,'circle'],[2,'square'],[8,'tri']]));
+ mo(33,'Number Names 11 to 20',
+  NO('Most teen names end in <b>teen</b>: thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen. Eleven and twelve are special. Twenty means two tens.'),
+  F('B. Write the number name.',['14 = {{fourteen}}','16 = {{sixteen}}','17 = {{seventeen}}','19 = {{nineteen}}'],2),
+  F('C. Write the number.',['eleven = {{11}}','sixteen = {{16}}','thirteen = {{13}}','twenty = {{20}}','eighteen = {{18}}','fifteen = {{15}}'],3),
+  BX('D. Fill in the missing number names.',['eleven|{{twelve}}|thirteen|{{fourteen}}','fifteen|{{sixteen}}|seventeen|{{eighteen}}']),
+  DR('E. Draw fifteen dots.',80));
+ mo(34,'Words to Numbers',
+  F('B. Write the number.',['two = {{2}}','eight = {{8}}','eleven = {{11}}','sixteen = {{16}}','twenty = {{20}}','zero = {{0}}','fifteen = {{15}}','thirteen = {{13}}'],4),
+  FP('C. Read the words. Write the number.',[['cherries','eighteen cherries: {{18}}'],['star','seven stars: {{7}}'],['duck','twelve ducks: {{12}}'],['fish','five fish: {{5}}']]),
+  WP('D. Read and write the number.',['Ali has fourteen marbles. He has {{14}} marbles.','There are nineteen children in the class. There are {{19}} children.','Sara reads ten pages. She reads {{10}} pages.']));
+ mo(35,'Match Them',
+  MA('B. Match the number to its name. Write the letter in the box.',['3','8','12','15','19'],['three','eight','twelve','fifteen','nineteen']),
+  MA('C. Match the name to the number. Write the letter in the box.',['seven','ten','fourteen','seventeen','eighteen'],['7','10','14','17','18']));
+ mo(36,'Spot the Spelling',
+  CH('B. Circle the right spelling.',[['3',['three','thre'],0],['11',['elevan','eleven'],1],['13',['thirteen','thirdteen'],0],['19',['nineteen','nintene'],0],['20',['twenty','twentey'],0]]),
+  F('C. Fix the spelling. Write it correctly.',['sevan: {{seven}}','fore: {{four}}','eigthteen: {{eighteen}}','twelf: {{twelve}}','fivteen: {{fifteen}}','won: {{one}}'],2),
+  WR('D. Write these number names neatly.',['5: ____________  6: ____________  10: ____________','16: ____________  17: ____________  20: ____________']));
+ mo(37,'Teen Numbers',
+  F('B. Ten and some more.',['Eleven is 10 and {{1}}.','Twelve is 10 and {{2}}.','Eighteen is 10 and {{8}}.','Fourteen is 10 and {{4}}.','10 and 7 is {{seventeen}}.','10 and 3 is {{thirteen}}.'],2),
+  CT('C. Count. Write the number. Is it a teen number?',[[13,'circle'],[16,'star']]),
+  WP('D. Think it through.',['A box holds 10 eggs. There are 6 more eggs outside the box. There are {{sixteen}} eggs.','Hira has 10 stickers and gets 5 more. She has {{fifteen}} stickers.']),
+  NO('<b>Remember</b>: thirteen and thirty sound alike. Thirteen is 13 (ten and three). Listen for <b>teen</b> at the end.'));
+ mo(38,'Count and Write',
+  FP('B. Count and write the number name.',[['duck','7 ducks: {{seven}}'],['fish','15 fish: {{fifteen}}'],['balloon','11 balloons: {{eleven}}'],['cherries','18 cherries: {{eighteen}}']]),
+  CT('C. Count the shapes. Write the number.',[[9,'star'],[14,'circle'],[6,'tri'],[12,'square']]),
+  WR('D. Write the number names for your answers in C.',['________________  ________________  ________________  ________________']));
+ mo(39,'Before, After, Between',
+  F('B. Write the number name.',['After two comes {{three}}.','Before eight comes {{seven}}.','After fourteen comes {{fifteen}}.','Before seventeen comes {{sixteen}}.','Between four and six is {{five}}.','Between eighteen and twenty is {{nineteen}}.'],2),
+  BX('C. Fill in the missing numbers.',['8|{{9}}|10|{{11}}|12','15|{{16}}|17|{{18}}|{{19}}|20']),
+  F('D. Write the number and its name.',['one more than 9: {{10}}, {{ten}}','one less than 13: {{12}}, {{twelve}}'],1),
+  {t:'numline'});
+ mo(40,'Number Name Problems',
+  WP('B. More problems. Write the answer as a word.',['There are six ducks. Three more come. Now there are {{nine}} ducks.','Zain has twelve stickers. He gives away two. He has {{ten}} left.','A spider has {{eight}} legs.','Sara has two hands. She has {{ten}} fingers.']),
+  WP('C. Write the answer as a number.',['Ammi buys fifteen eggs. She uses five. {{10}} eggs are left.','There are eleven boys and two girls. There are {{13}} children.']),
+  DR('D. Draw a picture for: four cats and three dogs. How many animals?',70));
+ mo(41,'Write Them All',
+  BX('B. Fill in the number names.',['one|{{two}}|three|{{four}}|five','{{six}}|seven|{{eight}}|nine|{{ten}}']),
+  F('C. Write the number name.',['11: {{eleven}}','12: {{twelve}}','13: {{thirteen}}','14: {{fourteen}}','15: {{fifteen}}','16: {{sixteen}}','17: {{seventeen}}','18: {{eighteen}}'],4),
+  WR('D. Write these numbers as words.',['20: ____________  19: ____________  0: ____________']),
+  DR('E. Draw your favourite number and write its name.',90));
+ addPages(S,'Number names to 20',[
+  pg('Number Names Warm-up ★','Start here if number names are new. Say each word aloud with a grown-up.','Read and write number names from zero to ten.',
+   BK(['one','two','three','four','five','six','seven','eight','nine','ten']),
+   CT('A. Count. Write the number.',[[3,'star'],[5,'circle'],[2,'square'],[4,'tri']]),
+   MA('B. Match the number to its name.',['1','2','3','4','5'],['one','two','three','four','five']),
+   F('C. Write the number name.',['6 = {{six}}','7 = {{seven}}','8 = {{eight}}','10 = {{ten}}'],2),
+   DR('D. Draw five stars. Write the word five.',100)),
+  pg('Number Names Challenge ★★★','Think carefully. Show your thinking.','Use number names to solve puzzles and spot mistakes.',
+   CH('A. True or false? Circle.',[['Fourteen is 10 and 4.',0],['Twenty comes before nineteen.',1],['Eleven is a teen number with "teen" at the end.',1],['Twelve is more than ten.',0],['Sixteen is spelled sixteen.',0]],TF),
+   F('B. Riddles. Write the number name.',['I am 10 and 9. I am {{nineteen}}.','I come just after twelve. I am {{thirteen}}.','I am the number of days in a week. I am {{seven}}.','Double five is {{ten}}.']),
+   F('C. Spot the mistake. Write it right.',['Ali writes 15 as fiveteen. It is {{fifteen}}.','Hira says thirteen is 30. It is {{13}}.'],1),
+   WP('D. Think it through.',['I have ten fingers and ten toes. That is {{twenty}} in all.','Sara has eight sweets. Ali has three more than Sara. Ali has {{eleven}}.'])),
+  pg('Topic Test: Number names to 20 (1)','Answer every question. Ask a grown-up to mark it out of 39.','Check reading and writing number names.',
+   SC(39,20,31),
+   F('1. Write the number name. (8 marks)',['4 = {{four}}','9 = {{nine}}','11 = {{eleven}}','12 = {{twelve}}','15 = {{fifteen}}','17 = {{seventeen}}','19 = {{nineteen}}','20 = {{twenty}}'],2),
+   F('2. Write the number. (6 marks)',['three = {{3}}','eight = {{8}}','fourteen = {{14}}','sixteen = {{16}}','thirteen = {{13}}','ten = {{10}}'],3),
+   MA('3. Match the number to its name. (5 marks)',['2','7','13','16','18'],['two','seven','thirteen','sixteen','eighteen']),
+   F('4. Write the number name. (4 marks)',['5 stars: {{five}}','9 ducks: {{nine}}','12 balloons: {{twelve}}','20 fish: {{twenty}}'],2)),
+  pg('Topic Test: Number names to 20 (2)','Answer every question. Add up your marks from both pages.','Check spelling, order and number name problems.',
+   CH('5. Circle the right spelling. (4 marks)',[['8',['eight','eigth'],0],['12',['twelf','twelve'],1],['15',['fifteen','fiveteen'],0],['18',['eightteen','eighteen'],1]]),
+   F('6. Before, after, between. (4 marks)',['After six: {{seven}}','Before eleven: {{ten}}','Between fifteen and seventeen: {{sixteen}}','After nineteen: {{twenty}}'],2),
+   WP('7. Word problems. Write the answer as a word. (8 marks: 2 each)',['Ali has five pens. He gets four more. He has {{nine}} pens.','There are twelve birds. Two fly away. {{ten}} are left.','A box holds 10 eggs. There are 4 more outside. There are {{fourteen}} eggs.','Hira is six. Next year she will be {{seven}}.']),
+   HOW),
+  pg('Word Mat: Number names to 20','Keep this mat on the table while you work. Point and read each word.','Know the number names from zero to twenty.',
+   NO('<span style="font-size:19px">0 zero &nbsp; 1 one &nbsp; 2 two &nbsp; 3 three &nbsp; 4 four &nbsp; 5 five &nbsp; 6 six<br>7 seven &nbsp; 8 eight &nbsp; 9 nine &nbsp; 10 ten &nbsp; 11 eleven &nbsp; 12 twelve &nbsp; 13 thirteen<br>14 fourteen &nbsp; 15 fifteen &nbsp; 16 sixteen &nbsp; 17 seventeen &nbsp; 18 eighteen &nbsp; 19 nineteen &nbsp; 20 twenty</span>'),
+   CN(['star','star'],'Teen numbers are ten and some more. Fourteen is 10 and 4. Watch the tricky ones: fifteen (not fiveteen), twelve (not twelf), eight has "gh".','Teen numbers'),
+   {t:'numline'},
+   NO('<b>Words</b>: <b>number</b> · <b>name</b> · <b>before</b> · <b>after</b> · <b>between</b> · <b>teen</b> · <b>spell</b> · <b>count</b>'),
+   BK(['zero','eleven','twelve','thirteen','fifteen','eighteen','twenty','teen']),
+   DR('Write your age as a number and as a word.',110))]);
+
+ /* ---- Topic 11: Comparing numbers ---- */
+ mo(42,'More or Less?',
+  CM('B. Circle the group with more.',[[5,3,'star'],[2,6,'circle'],[7,4,'square']]),
+  WP('C. Think it through.',['Ali has 9 cars. Sara has 6 cars. {{Ali}} has more cars.']));
+ mo(43,'The Hungry Crocodile',
+  CN(['crocodile'],'The crocodile is hungry. It opens its mouth to the bigger number. > means greater than. < means less than. = means equal to.','Greater and less'),
+  F('B. Write > or <.',['16 {{>}} 6','8 {{<}} 18','13 {{<}} 15','20 {{>}} 10','11 {{<}} 19','17 {{>}} 7'],3),
+  WR('C. Read it aloud. Write it in words.',['9 > 4: nine is ______________________ four.','3 < 8: three is ______________________ eight.']),
+  DR('D. Draw a hungry crocodile eating the bigger number: 12 or 21?',100));
+ mo(44,'Equal To',
+  NO('<b>Equal</b> means the same. = means equal to. 5 = 5. Two groups are equal when they have the same number of things. 3 + 2 = 5 too, because both sides are the same.'),
+  CM('B. Circle the group with more. If they are equal, circle both.',[[4,4,'circle'],[6,3,'star'],[5,5,'square'],[2,7,'tri']]),
+  F('C. Write >, < or =.',['8 {{=}} 8','12 {{>}} 9','14 {{<}} 20','3 + 3 {{=}} 6','11 {{<}} 13','18 {{>}} 16'],3),
+  WP('D. Equal or not equal?',['Ali has 6 sweets. Sara has 6 sweets. They have {{equal}} sweets.']));
+ mo(45,'Which Is Bigger?',
+  CH('B. Which is bigger? Circle.',[['15 or 12',0],['8 or 18',1],['17 or 7',0],['10 or 16',1],['19 or 11',0]],['first','second']),
+  F('C. Write the bigger number.',['9 and 13: {{13}}','20 and 14: {{20}}','6 and 16: {{16}}','12 and 11: {{12}}'],2),
+  {t:'numline'},
+  F('D. Write the smaller number.',['18 and 15: {{15}}','4 and 14: {{4}}'],2));
+ mo(46,'Count and Compare',
+  CM('B. Count both groups. Circle the group with more.',[[6,9,'star'],[8,5,'circle'],[3,4,'square']]),
+  WP('C. Count and compare.',['A tree has 7 birds. Another tree has 4 birds. The first tree has {{3}} more birds.','There are 5 cats and 8 dogs. There are {{3}} fewer cats.']));
+ mo(47,'Order the Numbers',
+  F('B. Order from smallest to biggest.',['9, 4, 6: {{4}}, {{6}}, {{9}}','13, 18, 11: {{11}}, {{13}}, {{18}}','20, 10, 15: {{10}}, {{15}}, {{20}}','7, 17, 12: {{7}}, {{12}}, {{17}}'],1),
+  F('C. Order from biggest to smallest.',['5, 8, 3: {{8}}, {{5}}, {{3}}','14, 19, 16: {{19}}, {{16}}, {{14}}','2, 12, 20: {{20}}, {{12}}, {{2}}'],1),
+  WP('D. Line up by height.',['Ali is 7, Sara is 5 and Zain is 9 cubes tall. From shortest to tallest: {{Sara}}, {{Ali}}, {{Zain}}.']));
+ mo(48,'Biggest and Smallest',
+  CH('B. Circle the biggest.',[['',['15','5','11'],0],['',['9','19','10'],1],['',['13','3','16'],2],['',['18','8','12'],0]]),
+  CH('C. Circle the smallest.',[['',['14','4','10'],1],['',['7','17','11'],0],['',['20','12','15'],1],['',['16','19','6'],2]]),
+  WP('D. Think it through.',['Hira scored 8, Ali scored 13 and Sara scored 10. The highest score was {{13}}.']));
+ mo(49,'One More, One Less',
+  BX('B. One less, the number, one more.',['{{4}}|5|{{6}}','{{10}}|11|{{12}}','{{16}}|17|{{18}}','{{18}}|19|{{20}}']),
+  F('C. Fill in.',['One less than 14 is {{13}}.','One more than 7 is {{8}}.','One less than 11 is {{10}}.','One more than 19 is {{20}}.'],2),
+  WP('D. Word problems.',['Sara has 12 beads. She finds one more. She has {{13}} beads.','Ali is 7. His brother is one year younger. His brother is {{6}}.']));
+ mo(50,'Compare Word Problems',
+  WP('B. More word problems.',['Ali has 15 stickers. Hira has 11. {{Ali}} has more.','A red bag has 7 books. A blue bag has 12 books. The {{blue}} bag has more.','Zain ran 9 laps. Bilal ran 6. Zain ran {{3}} more laps.','There are 10 cups and 10 plates. There are {{equal}} cups and plates.']),
+  FP('C. How many more?',[['red-apple','8 apples and 5 apples: {{3}} more'],['kite','12 kites and 10 kites: {{2}} more']]),
+  DR('D. Draw 7 stars and 4 stars. How many more stars in the first group?',55));
+ mo(51,'Make It True',
+  NO('There can be more than one right answer. Any number bigger than 7 makes ____ > 7 true: 8, 9, 10 and more.'),
+  WR('B. Write a number to make it true.',['____ > 15','____ < 10','18 < ____','9 = ____']),
+  WR('D. Write two numbers to make it true.',['____ > ____']),
+  F('C. Write >, < or =.',['10 {{>}} 9','7 {{<}} 17','4 + 1 {{=}} 5','16 {{>}} 13'],2));
+ addPages(S,'Comparing numbers',[
+  pg('Comparing Numbers Warm-up ★','Start here if comparing is new. Count each group with your finger.','Find the group with more and the group with less.',
+   CN(['red-apple','red-apple','red-apple','banana'],'3 apples and 1 banana. 3 is more than 1. 1 is less than 3.','More and less'),
+   CM('A. Circle the group with more.',[[4,2,'star'],[1,5,'circle'],[3,6,'square']]),
+   CH('B. Circle the bigger number.',[['',['3','7'],1],['',['9','2'],0],['',['5','8'],1],['',['10','6'],0]]),
+   DR('C. Draw 2 balls and 5 balls. Circle the group with more.',100)),
+  pg('Comparing Numbers Challenge ★★★','Think carefully. Show your thinking.','Compare, order and reason about numbers to 20.',
+   CH('A. True or false? Circle.',[['17 > 13',0],['9 > 19',1],['12 = 12',0],['20 < 2',1],['5 + 5 = 10',0]],TF),
+   F('B. Spot the mistake. Write the right sign.',['Ali wrote 15 < 11. It should be 15 {{>}} 11.','Sara wrote 8 > 18. It should be 8 {{<}} 18.','Zain wrote 6 + 3 < 9. It should be 6 + 3 {{=}} 9.'],1),
+   F('C. Puzzles.',['I am bigger than 14 and smaller than 16. I am {{15}}.','I am one less than 20. I am {{19}}.','I am an even number between 11 and 13. I am {{12}}.']),
+   WP('D. Think it through.',['Hira has 8 beads. Ali has 3 more than Hira. Ali has {{11}} beads.','Bilal has 14 marbles. Zain has 10. Bilal must give {{2}} marbles to Zain to make them equal.'])),
+  pg('Topic Test: Comparing numbers (1)','Answer every question. Ask a grown-up to mark it out of 32.','Check more, less and the signs >, < and =.',
+   SC(32,16,26),
+   CM('1. Circle the group with more. (3 marks)',[[6,4,'star'],[3,7,'circle'],[8,5,'square']]),
+   CH('2. More or less? Circle. (4 marks)',[['Is 12 more or less than 9?',0],['Is 6 more or less than 16?',1],['Is 20 more or less than 18?',0],['Is 11 more or less than 14?',1]],ML),
+   F('3. Write >, < or =. (8 marks)',['7 {{>}} 3','10 {{<}} 15','13 {{=}} 13','19 {{>}} 9','4 {{<}} 14','17 {{>}} 12','8 {{=}} 8','11 {{<}} 20'],4)),
+  pg('Topic Test: Comparing numbers (2)','Answer every question. Add up your marks from both pages.','Check ordering, one more and one less, and compare problems.',
+   F('4. Order from smallest to biggest. (6 marks)',['8, 3, 5: {{3}}, {{5}}, {{8}}','16, 12, 19: {{12}}, {{16}}, {{19}}'],1),
+   F('5. One more and one less. (4 marks)',['One more than 13: {{14}}','One less than 10: {{9}}','One more than 19: {{20}}','One less than 16: {{15}}'],2),
+   WP('6. Word problems. (4 marks: 2 each)',['Ali has 9 cars. Sara has 13. {{Sara}} has more cars.','There are 12 boys and 8 girls. There are {{4}} more boys.']),
+   CH('7. Circle the biggest. (3 marks)',[['',['14','18','11'],1],['',['9','19','10'],1],['',['20','2','12'],0]]),
+   HOW),
+  pg('Word Mat: Comparing numbers','Keep this mat on the table while you work. Read the words together.','Know the signs and words for comparing numbers.',
+   CN(['crocodile'],'The crocodile eats the bigger number. 9 > 4: nine is greater than four. 4 < 9: four is less than nine. 6 = 6: six is equal to six.','The crocodile'),
+   NO('<span style="font-size:24px"><b>&gt;</b> greater than &nbsp;&nbsp; <b>&lt;</b> less than &nbsp;&nbsp; <b>=</b> equal to</span>'),
+   {t:'numline'},
+   NO('<b>Tips</b><br>1. On a number line, numbers get bigger as you go right.<br>2. One more: count on 1. One less: count back 1.<br>3. To order, find the smallest first.'),
+   NO('<b>Maths words</b>: <b>more</b> · <b>less</b> · <b>fewer</b> · <b>greater</b> · <b>equal</b> · <b>same</b> · <b>biggest</b> · <b>smallest</b> · <b>order</b> · <b>compare</b>'),
+   BK(['more','less','fewer','greater','equal','biggest','smallest','order']),
+   DR('Draw 5 stars and 8 stars. Write > or < between the numbers.',90))]);
+
+ /* ---- Topic 12: Adding and taking away stories ---- */
+ mo(52,'Story Sums',
+  FP('B. Read the story. Write the answer.',[['duck','4 ducks swim. 3 more ducks come. There are {{7}} ducks.'],['balloon','Ali has 6 balloons. He gets 2 more. He has {{8}} balloons.'],['fish','5 fish and 5 more fish make {{10}} fish.'],['cherries','Sara picks 9 cherries and then 3 more. She has {{12}} cherries.']]),
+  WP('C. Write the number sentence, then the answer.',['There are 7 boys and 6 girls. 7 + 6 = {{13}} children.','Zain has 8 books. He buys 4 more. 8 + 4 = {{12}} books.']),
+  NO('<b>Add words</b>: more · altogether · in all · total · and · both · plus'));
+ mo(53,'Take Away Stories',
+  FP('B. Read the story. Write the answer.',[['balloon','There are 9 balloons. 4 pop. {{5}} balloons are left.'],['cookie','Ammi baked 12 cookies. We ate 5. {{7}} cookies are left.'],['bird','11 birds sit on a wall. 3 fly away. {{8}} birds are left.'],['red-apple','Hira had 7 apples. She gave 2 away. She has {{5}} apples.']]),
+  WP('C. Write the number sentence, then the answer.',['Ali had 15 marbles. He lost 6. 15 − 6 = {{9}} marbles.','There were 10 cakes. 4 were sold. 10 − 4 = {{6}} cakes.']),
+  NO('<b>Take away words</b>: left · fewer · gave away · ate · flew away · popped · lost · minus'));
+ mo(54,'Add or Take Away?',
+  CH('B. Add or take away? Circle.',[['8 children play. 3 go home.',1],['Ali has 5 pens and Sara has 4 pens. How many in all?',0],['12 cookies on a plate. We eat 5.',1],['7 red cars and 6 blue cars.',0]],AT),
+  WP('C. Now solve the stories in B.',['8 − 3 = {{5}} children','5 + 4 = {{9}} pens','12 − 5 = {{7}} cookies','7 + 6 = {{13}} cars']),
+  NO('<b>Tip</b>: if the story gets bigger, add. If the story gets smaller, take away.'));
+ mo(55,'Number Line Hops',
+  {t:'numline'},
+  F('B. Hop on the number line.',['Start at 8, hop forward 5: {{13}}','Start at 15, hop back 6: {{9}}','Start at 11, hop forward 7: {{18}}','Start at 20, hop back 9: {{11}}','Start at 6, hop forward 6: {{12}}','Start at 14, hop back 4: {{10}}'],2),
+  WP('C. Hop stories.',['A frog sits on 4. It hops forward 3 and then 3 more. It lands on {{10}}.','A rabbit is on 17. It hops back 5. It lands on {{12}}.']),
+  NO('<b>Remember</b>: start on the first number. Then count the hops, not the numbers.'));
+ mo(56,'Fact Families',
+  CN(['star','star','star','circle','circle'],'Three numbers can make a fact family: 3, 2 and 5. Two add sums and two take away sums: 3 + 2 = 5, 2 + 3 = 5, 5 − 2 = 3, 5 − 3 = 2.','Fact family'),
+  F('B. Finish the fact family for 4, 6 and 10.',['4 + 6 = {{10}}','6 + 4 = {{10}}','10 − 6 = {{4}}','10 − 4 = {{6}}'],2),
+  F('C. Finish the fact family for 5, 7 and 12.',['5 + 7 = {{12}}','7 + 5 = {{12}}','12 − 7 = {{5}}','12 − 5 = {{7}}'],2),
+  WR('D. Write a fact family for 3, 8 and 11.',['_____ + _____ = _____    _____ + _____ = _____','_____ − _____ = _____    _____ − _____ = _____']));
+ mo(57,'Missing Numbers',
+  NO('<b>Tip</b>: for 4 + ? = 7, count on from 4 to 7. You count 3, so the missing number is 3.'),
+  F('B. Find the missing number.',['7 + {{5}} = 12','{{8}} + 6 = 14','15 − {{5}} = 10','{{13}} − 3 = 10','9 + {{9}} = 18','11 − {{4}} = 7','{{10}} + 10 = 20','16 − {{8}} = 8'],2),
+  WP('C. Missing number stories.',['Ali has 6 pencils. He gets some more. Now he has 10. He got {{4}} pencils.','There were some birds. 5 flew away. 7 are left. There were {{12}} birds.']),
+  BX('D. Fill the missing numbers to make 10.',['1 + {{9}}|2 + {{8}}|3 + {{7}}|4 + {{6}}|5 + {{5}}']));
+ mo(58,'Shop Stories',
+  NO('<b>Shop prices</b>: toffee Rs 2 · pencil Rs 5 · eraser Rs 3 · juice Rs 10 · biscuit Rs 4'),
+  F('B. Use the prices. How much?',['a pencil and a juice: Rs {{15}}','two toffees: Rs {{4}}','an eraser and a biscuit: Rs {{7}}','a juice and a biscuit: Rs {{14}}'],2),
+  F('C. Find the money left.',['Ali has Rs 10. He buys a pencil. He has Rs {{5}} left.','Sara has Rs 12. She buys a juice. She has Rs {{2}} left.','Zain has Rs 8. He buys a biscuit. He has Rs {{4}} left.'],1),
+  WP('D. Think it through.',['Hira buys 3 erasers. She pays Rs {{9}}.']));
+ mo(59,'Healthy Plate Maths',
+  FP('B. Healthy food stories.',[['carrot','Ammi cut 6 carrot sticks and 5 cucumber sticks. That is {{11}} sticks.'],['banana','There were 10 bananas. We ate 4. {{6}} are left.'],['grapes','I had 15 grapes. I gave 5 to my brother. I have {{10}} grapes.'],['tangerine','Dad bought 8 oranges and 4 more. He bought {{12}} oranges.']]),
+  WP('C. Write the number sentence, then the answer.',['A plate has 7 apple slices. Ali eats 3. 7 − 3 = {{4}} slices left.','Sara drinks 2 glasses of milk in the morning and 1 at night. 2 + 1 = {{3}} glasses.']),
+  DR('D. Draw a healthy plate with 4 fruits and 3 vegetables. How many foods?',100));
+ mo(60,'Write a Story Sum',
+  NO('<b>A good story sum</b> has: who (Ali, a cat), what (sweets, birds), the numbers, and a question. Example: Ali has 4 sweets. He gets 3 more. How many sweets does he have now? 4 + 3 = 7.'),
+  WR('B. Write a story for each sum.',['5 + 5 = 10: ________________________________','12 − 4 = 8: ________________________________','9 + 3 = 12: ________________________________']),
+  DR('C. Draw your story for 8 − 2.',110));
+ mo(61,'Exit Ticket',
+  WP('B. Story sums.',['There are 9 cars. 5 more come. There are {{14}} cars.','Ali had 13 sweets. He ate 4. He has {{9}} left.','Sara has 7 red beads and 8 blue beads. She has {{15}} beads.']),
+  CH('C. Add or take away? Circle.',[['10 birds. 4 fly away.',1],['6 cats and 6 dogs.',0],['15 cookies. We eat 7.',1]],AT),
+  F('D. Missing numbers.',['6 + {{4}} = 10','12 − {{2}} = 10','{{9}} + 3 = 12','{{17}} − 7 = 10'],2),
+  WR('E. Tick one. ☐ I can do story sums. ☐ I need more practice.',['The trickiest part was ________________________.']));
+ addPages(S,'Adding and taking away stories',[
+  pg('Story Sums Warm-up ★','Start here if story sums are new. Use real things to act out each story.','Act out and solve small add and take away stories.',
+   CN(['duck','duck','duck','duck'],'3 ducks swim. 1 more comes. Now there are 4 ducks. The story got bigger, so we add: 3 + 1 = 4.','Act it out'),
+   {t:'picsum',h:'A. Add the pictures.',items:[[2,3,'star'],[4,1,'circle'],[3,3,'square']]},
+   {t:'picsub',h:'B. Cross out and take away.',items:[[5,2,'star'],[6,3,'circle'],[4,1,'square']]},
+   WP('C. A grown-up reads. Write the answer.',['2 cats and 2 more cats make {{4}} cats.','5 sweets. Ali eats 1. {{4}} sweets are left.'])),
+  pg('Story Sums Challenge ★★★','Think carefully. Show your thinking.','Solve two-step stories, find missing numbers and spot mistakes.',
+   CH('A. True or false? Circle.',[['"Left" in a story usually means take away.',0],['7 + 5 = 13',1],['15 − 5 = 10',0],['If 4 + 6 = 10, then 10 − 6 = 4.',0]],TF),
+   F('B. Spot the mistake. Write the right answer.',['Ali says 8 birds and 5 more birds make 12. It is {{13}}.','Hira says 14 sweets take away 6 is 9. It is {{8}}.'],1),
+   WP('C. Two-step stories.',['There were 10 children. 4 went home. Then 3 more came. Now there are {{9}} children.','Sara had 6 stickers. She got 6 more. Then she gave 5 away. She has {{7}} stickers.','A bus had 12 people. 5 got off and 2 got on. Now there are {{9}} people.']),
+   F('D. Make it true. Write the missing number.',['8 + {{7}} = 10 + 5','12 − {{2}} = 5 + 5'],1)),
+  pg('Topic Test: Adding and taking away stories (1)','Answer every question. Ask a grown-up to mark it out of 34.','Check add stories, take away stories and choosing add or take away.',
+   SC(34,17,27),
+   WP('1. Add stories. (6 marks: 2 each)',['5 birds sit on a tree. 4 more come. There are {{9}} birds.','Ali has 8 cars. He gets 6 more. He has {{14}} cars.','There are 7 boys and 7 girls. There are {{14}} children.']),
+   WP('2. Take away stories. (6 marks: 2 each)',['There were 11 kites. 3 flew away. {{8}} are left.','Sara had 15 sweets. She ate 5. She has {{10}} left.','12 eggs. 4 broke. {{8}} eggs are not broken.']),
+   CH('3. Add or take away? Circle. (4 marks)',[['6 cakes. We eat 2.',1],['3 red balls and 5 blue balls.',0],['9 balloons. 4 pop.',1],['8 ducks. 2 more come.',0]],AT)),
+  pg('Topic Test: Adding and taking away stories (2)','Answer every question. Add up your marks from both pages.','Check number line hops, fact families and missing numbers.',
+   F('4. Number line hops. (4 marks)',['Start at 6, hop forward 5: {{11}}','Start at 14, hop back 4: {{10}}','Start at 9, hop forward 8: {{17}}','Start at 18, hop back 9: {{9}}'],2),
+   F('5. Finish the fact family for 6, 8 and 14. (4 marks)',['6 + 8 = {{14}}','8 + 6 = {{14}}','14 − 8 = {{6}}','14 − 6 = {{8}}'],2),
+   F('6. Missing numbers. (4 marks)',['5 + {{6}} = 11','{{7}} + 3 = 10','13 − {{3}} = 10','{{16}} − 8 = 8'],2),
+   WP('7. Shop story. (2 marks)',['A pencil costs Rs 5 and a juice costs Rs 10. Ali has Rs 20. After buying both he has Rs {{5}} left.']),
+   F('8. Solve. (4 marks)',['9 + 6 = {{15}}','14 − 7 = {{7}}','8 + 8 = {{16}}','20 − 10 = {{10}}'],2),
+   HOW),
+  pg('Word Mat: Adding and taking away stories','Keep this mat on the table while you work. Read the words together.','Know the words that tell us to add or take away.',
+   CN(['balloon','balloon','balloon'],'A story sum tells a little story with numbers. Read it, decide add or take away, write the number sentence and answer the question.','Story sums'),
+   NO('<b>Add words</b> (+): more · altogether · in all · total · and · both · plus · join<br><b>Take away words</b> (−): left · fewer · gave away · ate · flew away · popped · lost · minus'),
+   {t:'numline'},
+   NO('<b>Fact family</b>: 4, 5 and 9 → 4 + 5 = 9 · 5 + 4 = 9 · 9 − 5 = 4 · 9 − 4 = 5<br><b>Number line</b>: add = hop forward · take away = hop back'),
+   BK(['add','take away','altogether','left','total','fewer','plus','minus']),
+   DR('Draw a story for 7 + 3.',100))]);
+});

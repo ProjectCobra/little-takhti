@@ -2685,61 +2685,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
 
-## maths (53 pages)
-- p29 0.20 Measuring / Longer or Shorter?
-- p30 0.15 Measuring / Measure with Hands
-- p31 0.15 Measuring / Holds More
-- p32 0.26 Number names to 20 / Number Names 0 to 10
-- p33 0.26 Number names to 20 / Number Names 11 to 20
-- p34 0.14 Number names to 20 / Words to Numbers
-- p35 0.30 Number names to 20 / Match Them
-- p36 0.25 Number names to 20 / Spot the Spelling
-- p37 0.25 Number names to 20 / Teen Numbers
-- p38 0.21 Number names to 20 / Count and Write
-- p39 0.24 Number names to 20 / Before, After, Between
-- p40 0.32 Number names to 20 / Number Name Problems
-- p41 0.20 Number names to 20 / Write Them All
-- p42 0.37 Comparing numbers / More or Less?
-- p43 0.23 Comparing numbers / The Hungry Crocodile
-- p44 0.14 Comparing numbers / Equal To
-- p45 0.25 Comparing numbers / Which Is Bigger?
-- p46 0.21 Comparing numbers / Count and Compare
-- p47 0.19 Comparing numbers / Order the Numbers
-- p48 0.20 Comparing numbers / Biggest and Smallest
-- p49 0.24 Comparing numbers / One More, One Less
-- p50 0.35 Comparing numbers / Compare Word Problems
-- p51 0.25 Comparing numbers / Make It True
-- p52 0.40 Adding and taking away stories / Story Sums
-- p53 0.37 Adding and taking away stories / Take Away Stories
-- p54 0.25 Adding and taking away stories / Add or Take Away?
-- p55 0.25 Adding and taking away stories / Number Line Hops
-- p56 0.15 Adding and taking away stories / Fact Families
-- p57 0.14 Adding and taking away stories / Missing Numbers
-- p58 0.23 Adding and taking away stories / Shop Stories
-- p59 0.23 Adding and taking away stories / Healthy Plate Maths
-- p60 0.27 Adding and taking away stories / Write a Story Sum
-- p61 0.14 Adding and taking away stories / Exit Ticket
-- p62 0.28 Place value: tens and ones / Tens and Ones
-- p63 0.24 Place value: tens and ones / Bundles and Loose Ones
-- p64 0.14 Place value: tens and ones / Make the Number
-- p65 0.35 Place value: tens and ones / What Is the Digit Worth?
-- p66 0.14 Place value: tens and ones / Split the Number
-- p67 0.23 Place value: tens and ones / Compare with Tens
-- p68 0.33 Place value: tens and ones / Ten More, Ten Less
-- p69 0.35 Place value: tens and ones / Tens and Ones Stories
-- p70 0.26 Place value: tens and ones / Sort the Numbers
-- p71 0.30 Place value: tens and ones / Exit Ticket
-- p72 0.38 Ordering numbers to 100 / Numbers in Order
-- p73 0.23 Ordering numbers to 100 / Before, After, Between
-- p74 0.19 Ordering numbers to 100 / Number Line Jumps
-- p75 0.28 Ordering numbers to 100 / Smallest to Biggest
-- p76 0.19 Ordering numbers to 100 / Biggest to Smallest
-- p77 0.25 Ordering numbers to 100 / Circle the Number
-- p78 0.24 Ordering numbers to 100 / Count in Tens and Twos
-- p79 0.27 Ordering numbers to 100 / Numbers Around Us
-- p80 0.32 Ordering numbers to 100 / Order Stories
-- p81 0.30 Ordering numbers to 100 / Exit Ticket
-
 ## g2-islamiat (30 pages)
 - p1 0.31 Allah the Creator / Allah Is One
 - p2 0.30 Allah the Creator / Blessings
@@ -2892,4 +2837,26 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p22 0.13 جملے بنائیں / لفظ جوڑیں
 - p23 0.30 جملے بنائیں / خالی جگہ
 - p24 0.13 جملے بنائیں / اپنا جملہ
+
+## maths (20 pages)
+- p62 0.28 Place value: tens and ones / Tens and Ones
+- p63 0.24 Place value: tens and ones / Bundles and Loose Ones
+- p64 0.14 Place value: tens and ones / Make the Number
+- p65 0.35 Place value: tens and ones / What Is the Digit Worth?
+- p66 0.14 Place value: tens and ones / Split the Number
+- p67 0.23 Place value: tens and ones / Compare with Tens
+- p68 0.33 Place value: tens and ones / Ten More, Ten Less
+- p69 0.35 Place value: tens and ones / Tens and Ones Stories
+- p70 0.26 Place value: tens and ones / Sort the Numbers
+- p71 0.30 Place value: tens and ones / Exit Ticket
+- p72 0.38 Ordering numbers to 100 / Numbers in Order
+- p73 0.23 Ordering numbers to 100 / Before, After, Between
+- p74 0.19 Ordering numbers to 100 / Number Line Jumps
+- p75 0.28 Ordering numbers to 100 / Smallest to Biggest
+- p76 0.19 Ordering numbers to 100 / Biggest to Smallest
+- p77 0.25 Ordering numbers to 100 / Circle the Number
+- p78 0.24 Ordering numbers to 100 / Count in Tens and Twos
+- p79 0.27 Ordering numbers to 100 / Numbers Around Us
+- p80 0.32 Ordering numbers to 100 / Order Stories
+- p81 0.30 Ordering numbers to 100 / Exit Ticket
 

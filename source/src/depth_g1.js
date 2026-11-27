@@ -1051,3 +1051,164 @@ DEPTH.push(({addPaper})=>{
    CH('11. What do I do? Circle. (4 marks)',[['AI gives an answer that looks wrong.',['believe it','check with a grown-up'],1],['I want to use an AI app.',['ask a grown-up first','use it alone'],0],['AI says something unkind.',['say it to a friend','tell a grown-up'],1],['I have played on the tablet for a long time.',['take a break','play all night'],0]]),
    WR('12. Write three rules for using AI safely. (3 marks)',['1. ______________________________________','2. ______________________________________','3. ______________________________________']))].concat(EXTRA['g1-ai']));
 });
+
+/* D9: Grade 1 Maths topics 1 to 4 (topic 1 was the pilot: two small top-ups only; Number bonds, Addition, Subtraction).
+   Same method as the KG D batches: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const PSUM=(h,items)=>({t:'picsum',h,items});
+ const PSUB=(h,items)=>({t:'picsub',h,items});
+ const BOND=items=>({t:'bond',items});
+
+ /* ---- Topic 1 top-ups (pilot pages just under 0.75) ---- */
+ mo(11,'Tens and Ones',
+  WP('D. Word problem.',['Ammi has 1 box of 10 eggs and 7 more eggs. She has {{17}} eggs.']));
+ const wu=PAGES[S].find(p=>p.title==='Numbers to 20 Warm-up ★');
+ if(wu)wu.blocks.push(F('D. One more.',['One more than 6 is {{7}}.','One more than 11 is {{12}}.','One more than 15 is {{16}}.','One more than 19 is {{20}}.'],2));
+
+ /* ---- Topic 2: Number bonds ---- */
+ mo(4,'Number Bonds to 10',
+  F('Find all the ways to make 10.',['0 + {{10}} = 10','1 + {{9}} = 10','2 + {{8}} = 10','3 + {{7}} = 10','4 + {{6}} = 10','5 + {{5}} = 10'],3),
+  WP('Word problems.',['There are 10 sweets. 6 are red and the rest are green. {{4}} sweets are green.','Hamza has 10 marbles. He has 3 in one hand. He has {{7}} in the other hand.']));
+ mo(5,'Number Bonds to 20',
+  NO('Tip: use a bond to 10 to help. 3 + 7 = 10, so 13 + 7 = 20.'),
+  F('Use the bond to 10.',['4 + 6 = 10, so 14 + {{6}} = 20','2 + 8 = 10, so 12 + {{8}} = 20','5 + 5 = 10, so 15 + {{5}} = 20','9 + 1 = 10, so 19 + {{1}} = 20'],2),
+  WP('Word problems.',['A book has 20 pages. Sara has read 16 pages. She has {{4}} pages left to read.','There are 20 children. 11 are girls. {{9}} are boys.']));
+ mo(12,'Number Bond Practice',
+  F('Find two ways to make each number.',['6 = 1 + {{5}} = 2 + {{4}}','8 = 6 + {{2}} = 3 + {{5}}','9 = 7 + {{2}} = 4 + {{5}}','7 = 5 + {{2}} = 1 + {{6}}'],2),
+  CH('Circle the pair that makes 8.',[['',['5 and 3','4 and 3'],0],['',['6 and 1','6 and 2'],1]]),
+  WP('Word problem.',['Zara has 9 bangles. 4 are on her left arm. {{5}} are on her right arm.']));
+ mo(13,'How Many More to Make 10?',
+  FP('How many more to make 10?',[['egg','7 eggs. {{3}} more make 10.'],['red-apple','2 apples. {{8}} more make 10.'],['balloon','5 balloons. {{5}} more make 10.'],['pencil','9 pencils. {{1}} more makes 10.']]),
+  WP('More word problems.',['A box holds 10 crayons. There are 4 in it. {{6}} more crayons fill the box.']));
+ addPages(S,'Number bonds',[
+  pg('Number Bonds Warm-up ★','Start here if number bonds are new. Use your fingers to help.','Find number bonds to 5 and to 10 with support.',
+   CN(['hand-with-fingers-splayed','hand-with-fingers-splayed'],'A number bond shows two parts that make a whole. Hold up 10 fingers. Fold down 3. You can see 7 standing up: 3 and 7 make 10.','Two parts make a whole'),
+   BOND([[5,2,3,2],[5,4,1,2],[5,5,0,2],[10,6,4,2],[10,8,2,2],[10,1,9,2]]),
+   PSUM('Count both groups. How many in all?',[[4,1,'star'],[3,2,'circle'],[6,4,'heart']]),
+   F('Make 5.',['1 + {{4}} = 5','2 + {{3}} = 5','0 + {{5}} = 5','4 + {{1}} = 5'],2)),
+  pg('Number Bonds Challenge ★★★','Think carefully. Show your thinking.','Reason with number bonds to 10 and 20.',
+   F('A. True or false? Write T or F.',['6 + 4 = 10 {{T}}','7 + 2 = 10 {{F}}','12 + 8 = 20 {{T}}','15 + 4 = 20 {{F}}','10 + 10 = 20 {{T}}','9 + 1 = 10 {{T}}'],2),
+   F('B. Spot the mistake. Write the right answer.',['Raza says 3 + 6 = 10. The right sum is 3 + {{7}} = 10.','Hira says 14 + 4 = 20. The right sum is 14 + {{6}} = 20.'],1),
+   F('C. Missing numbers.',['{{7}} + 3 = 6 + {{4}}','8 + 2 = {{5}} + 5','11 + {{9}} = 20','{{0}} + 20 = 20'],2),
+   F('D. Puzzles.',['I am a number. If you add me to 7, you get 10. I am {{3}}.','Two numbers that are the same make 10. Each one is {{5}}.','A whole is 20. One part is 13. The other part is {{7}}.']),
+   WP('E. Think it through.',['Ammi bakes 20 biscuits. 10 go in a tin and 6 go on a plate. {{4}} biscuits are left.'])),
+  pg('Topic Test: Number bonds (1)','Answer every question. Ask a grown-up to mark it out of 34.','Check number bonds to 10.',
+   SC(34,17,27),
+   NO('1. Write the missing part in each bond. (6 marks)'),
+   BOND([[10,7,3,2],[10,4,6,1],[10,5,5,2],[10,9,1,1],[8,6,2,2],[9,3,6,1]]),
+   F('2. Make 10. (6 marks)',['8 + {{2}} = 10','{{6}} + 4 = 10','1 + {{9}} = 10','{{3}} + 7 = 10','5 + {{5}} = 10','{{10}} + 0 = 10'],3),
+   CH('3. Circle the pair that makes 10. (3 marks)',[['',['6 and 4','6 and 3'],0],['',['8 and 1','8 and 2'],1],['',['7 and 3','5 and 4'],0]])),
+  pg('Topic Test: Number bonds (2)','Answer every question. Add up your marks from both pages.','Check number bonds to 20 and word problems.',
+   F('4. Make 20. (6 marks)',['12 + {{8}} = 20','{{5}} + 15 = 20','17 + {{3}} = 20','{{11}} + 9 = 20','10 + {{10}} = 20','{{2}} + 18 = 20'],3),
+   F('5. How many more to make 10? (6 marks)',['6 → {{4}}','8 → {{2}}','1 → {{9}}','3 → {{7}}','5 → {{5}}','9 → {{1}}'],3),
+   WP('6. Word problems. (3 marks)',['There are 10 birds. 4 fly away. {{6}} birds stay.','Bilal has 20 rupees. He spends 12 rupees. He has {{8}} rupees left.','A team needs 10 players. 7 are here. {{3}} more players must come.']),
+   F('7. True or false? Write T or F. (4 marks)',['2 + 8 = 10 {{T}}','13 + 6 = 20 {{F}}','5 + 4 = 10 {{F}}','16 + 4 = 20 {{T}}'],2),
+   HOW),
+  pg('Word Mat: Number bonds','Keep this mat on the table while you work. Read the bonds aloud.','Know the bonds to 10 and to 20 and the words for them.',
+   NO('<b>Bonds to 10</b><br><span style="font-size:20px">0 + 10 &nbsp; 1 + 9 &nbsp; 2 + 8 &nbsp; 3 + 7 &nbsp; 4 + 6 &nbsp; 5 + 5</span>'),
+   NO('<b>Bonds to 20</b><br><span style="font-size:20px">10 + 10 &nbsp; 11 + 9 &nbsp; 12 + 8 &nbsp; 13 + 7 &nbsp; 14 + 6 &nbsp; 15 + 5 &nbsp; 16 + 4 &nbsp; 17 + 3 &nbsp; 18 + 2 &nbsp; 19 + 1 &nbsp; 20 + 0</span>'),
+   BOND([[10,6,4,-1],[20,13,7,-1]]),
+   NO('<b>Maths words</b><br><b>whole</b>: the total · <b>part</b>: one of the numbers that make the whole<br><b>number bond</b>: two parts that make a whole · <b>make 10</b> · <b>how many more?</b><br>Tip: if you know 3 + 7 = 10, you also know 7 + 3 = 10 and 13 + 7 = 20.'),
+   {t:'numline'},
+   BK(['whole','part','bond','make','more','total','pair','add']),
+   DR('Draw 10 dots in two colours. Write the bond.',110))]);
+
+ /* ---- Topic 3: Addition ---- */
+ mo(6,'Adding Within 10',
+  PSUM('C. Count and add.',[[2,6,'square'],[5,3,'circle']]),
+  FP('D. Add the pictures.',[['mango','3 mangoes and 4 mangoes make {{7}}.'],['balloon','5 balloons and 2 balloons make {{7}}.'],['egg','6 eggs and 3 eggs make {{9}}.'],['kite','4 kites and 4 kites make {{8}}.']]));
+ mo(7,'Adding Within 20',
+  F('C. Count on from the bigger number.',['3 + 12 = {{15}}','2 + 16 = {{18}}','4 + 13 = {{17}}','5 + 11 = {{16}}','1 + 18 = {{19}}','6 + 10 = {{16}}'],3),
+  WP('D. More word problems.',['A class has 11 girls and 8 boys. There are {{19}} children.','Hira picks 7 roses and 6 tulips. She has {{13}} flowers.']));
+ mo(14,'Doubles',
+  FP('C. Double the pictures.',[['lady-beetle','A ladybird has 3 spots on each wing. It has {{6}} spots.'],['hand-with-fingers-splayed','Two hands have 5 fingers each. That is {{10}} fingers.'],['spider','A spider has 4 legs on each side. It has {{8}} legs.'],['game-die','Two dice both show 6. That makes {{12}}.']]),
+  F('D. Near doubles. Use the double to help.',['5 + 5 = 10, so 5 + 6 = {{11}}','4 + 4 = 8, so 4 + 5 = {{9}}','7 + 7 = 14, so 7 + 8 = {{15}}','6 + 6 = 12, so 6 + 7 = {{13}}'],2));
+ mo(15,'Adding Three Numbers',
+  NO('Tip: look for two numbers that make 10 first. 7 + 5 + 3: 7 + 3 = 10, then 10 + 5 = 15.'),
+  F('C. Find the 10 first.',['6 + 3 + 4 = {{13}}','2 + 9 + 8 = {{19}}','5 + 5 + 7 = {{17}}','1 + 6 + 9 = {{16}}','8 + 4 + 2 = {{14}}','3 + 7 + 7 = {{17}}'],2),
+  WP('D. Word problem.',['In the garden there are 4 hens, 6 ducks and 3 goats. There are {{13}} animals.','Bilal reads 5 pages, then 5 pages, then 8 pages. He reads {{18}} pages.']));
+ addPages(S,'Addition',[
+  pg('Addition Warm-up ★','Start here if adding is new. Count all the pictures.','Add two small groups with a total up to 10.',
+   PSUM('A. Count and add.',[[2,1,'star'],[3,3,'heart'],[4,2,'circle'],[5,1,'square']]),
+   FP('B. Add.',[['red-apple','2 apples and 2 apples make {{4}}.'],['duck','3 ducks and 1 duck make {{4}}.']]),
+   F('C. Solve.',['1 + 2 = {{3}}','3 + 2 = {{5}}','4 + 1 = {{5}}','2 + 4 = {{6}}','5 + 3 = {{8}}','6 + 1 = {{7}}'],3),
+   WP('D. A grown-up reads. Write the answer.',['Ali has 3 kites. He gets 2 more. He has {{5}} kites.','There are 4 cats and 4 dogs. There are {{8}} pets.']),
+   NO('Tip: put the bigger number in your head and count on with your fingers.')),
+  pg('Addition Challenge ★★★','Think carefully. Show your thinking.','Reason about adding within 20.',
+   F('A. True or false? Write T or F.',['8 + 5 = 13 {{T}}','6 + 6 = 13 {{F}}','9 + 7 = 7 + 9 {{T}}','10 + 9 = 18 {{F}}','4 + 4 + 4 = 12 {{T}}','12 + 0 = 12 {{T}}'],2),
+   F('B. Spot the mistake. Write the right answer.',['Zain says 7 + 8 = 14. It is {{15}}.','Hira says 9 + 9 = 19. It is {{18}}.'],1),
+   F('C. Missing numbers.',['8 + {{6}} = 14','{{9}} + 5 = 14','7 + {{7}} = 14','{{11}} + 3 = 14','5 + 5 + {{4}} = 14','6 + {{2}} + 6 = 14'],2),
+   F('D. Puzzles.',['I am double 8. I am {{16}}.','I am 3 more than 15. I am {{18}}.','Write two different sums that make 12: {{6 + 6}} and {{8 + 4}}.']),
+   WP('E. Think it through.',['Sara has 7 shells. Ali has 5 more than Sara. Ali has {{12}} shells.'])),
+  pg('Topic Test: Addition (1)','Answer every question. Ask a grown-up to mark it out of 39.','Check adding within 10 and 20.',
+   SC(39,20,31),
+   PSUM('1. Count and add. (3 marks)',[[4,3,'star'],[5,5,'circle'],[6,2,'heart']]),
+   F('2. Solve. (9 marks)',['5 + 4 = {{9}}','3 + 6 = {{9}}','7 + 2 = {{9}}','10 + 6 = {{16}}','8 + 7 = {{15}}','12 + 5 = {{17}}','9 + 4 = {{13}}','14 + 3 = {{17}}','11 + 9 = {{20}}'],3),
+   F('3. Count on from the bigger number. (6 marks)',['2 + 9 = {{11}}','3 + 14 = {{17}}','1 + 15 = {{16}}','4 + 12 = {{16}}','2 + 17 = {{19}}','5 + 13 = {{18}}'],3),
+   CH('4. Circle the right answer. (3 marks)',[['7 + 6 =',['13','12'],0],['9 + 8 =',['16','17'],1],['5 + 9 =',['14','15'],0]])),
+  pg('Topic Test: Addition (2)','Answer every question. Add up your marks from both pages.','Check doubles, adding three numbers and word problems.',
+   F('5. Doubles. (4 marks)',['3 + 3 = {{6}}','6 + 6 = {{12}}','Double 8 is {{16}}.','Double 10 is {{20}}.'],2),
+   F('6. Add three numbers. (4 marks)',['3 + 4 + 2 = {{9}}','5 + 5 + 6 = {{16}}','8 + 1 + 2 = {{11}}','4 + 6 + 7 = {{17}}'],2),
+   WP('7. Word problems. (6 marks: 2 each)',['There are 9 cars in a car park. 6 more come. There are {{15}} cars.','Ammi buys 8 oranges and 8 bananas. She buys {{16}} fruits.','Zara has 5 red, 4 yellow and 5 green crayons. She has {{14}} crayons.']),
+   F('8. Missing numbers. (4 marks)',['6 + {{7}} = 13','{{8}} + 8 = 16','9 + {{9}} = 18','{{10}} + 5 = 15'],2),
+   HOW),
+  pg('Word Mat: Addition','Keep this mat on the table while you work. Read the words together.','Know the words and ways to add within 20.',
+   NO('<b>Adding words</b><br><b>add</b> · <b>plus</b> (+) · <b>altogether</b> · <b>in all</b> · <b>total</b> · <b>sum</b> · <b>more</b> · <b>equals</b> (=)'),
+   CN(['red-apple','red-apple'],'Adding puts groups together. 4 apples and 3 apples make 7 apples: 4 + 3 = 7. You can add in any order: 3 + 4 = 7 too.','Putting together'),
+   {t:'numline'},
+   NO('<b>Ways to add</b><br>1. Count on from the bigger number: 9 + 3 → 9 … 10, 11, 12.<br>2. Use doubles: 6 + 6 = 12, so 6 + 7 = 13.<br>3. Make 10 first: 8 + 5 = 8 + 2 + 3 = 13.<br><b>Doubles:</b> 1+1=2 · 2+2=4 · 3+3=6 · 4+4=8 · 5+5=10 · 6+6=12 · 7+7=14 · 8+8=16 · 9+9=18 · 10+10=20'),
+   BK(['add','plus','total','sum','altogether','double','count on','equals']),
+   DR('Draw a picture for 6 + 5. Write the answer.',110))]);
+
+ /* ---- Topic 4: Subtraction ---- */
+ mo(8,'Taking Away Within 10',
+  PSUB('C. Cross out and write.',[[8,2,'square'],[5,3,'circle']]),
+  FP('D. Take away.',[['cookie','8 biscuits. Ali eats 3. {{5}} are left.'],['balloon','6 balloons. 2 pop. {{4}} are left.'],['bird','9 birds. 4 fly away. {{5}} are left.'],['fish','7 fish. 7 swim away. {{0}} are left.']]));
+ mo(9,'Subtracting Within 20',
+  F('C. Take away 10.',['17 − 10 = {{7}}','14 − 10 = {{4}}','20 − 10 = {{10}}','19 − 10 = {{9}}','12 − 10 = {{2}}','15 − 10 = {{5}}'],3),
+  CH('D. Circle the right answer.',[['16 − 7 =',['9','8'],0],['13 − 5 =',['7','8'],1],['20 − 4 =',['16','14'],0],['11 − 3 =',['9','8'],1]]),
+  WP('E. Word problem.',['There are 18 eggs. 9 break. {{9}} eggs are not broken.']));
+ mo(16,'Missing Numbers in Subtraction',
+  NO('Tip: adding and taking away are a family. 6 + 4 = 10, so 10 − 4 = 6 and 10 − 6 = 4.'),
+  F('C. Write the fact family.',['5 + 3 = 8, 3 + 5 = 8, 8 − 3 = {{5}}, 8 − 5 = {{3}}','9 + 6 = 15, 6 + 9 = 15, 15 − 6 = {{9}}, 15 − 9 = {{6}}'],1),
+  WP('D. Word problems.',['Zain had some kites. He gave away 3. He has 7 left. He had {{10}} kites.','There were 12 mangoes. Some were eaten. 5 are left. {{7}} were eaten.']));
+ mo(17,'Counting Back',
+  BX('C. Count back. Fill in.',['20|19|{{18}}|17|{{16}}|15|{{14}}','13|{{12}}|11|{{10}}|9|{{8}}|7']),
+  F('D. Count back to subtract.',['15 − 3 = {{12}}','18 − 5 = {{13}}','10 − 4 = {{6}}','13 − 7 = {{6}}'],2),
+  WP('E. Word problem.',['Sara has 17 rupees. A pencil costs 5 rupees. After buying it she has {{12}} rupees.']));
+ addPages(S,'Subtraction',[
+  pg('Subtraction Warm-up ★','Start here if taking away is new. Cross out the pictures.','Take away from a small group and count what is left.',
+   PSUB('A. Cross out and write.',[[4,1,'star'],[5,2,'heart'],[6,3,'circle'],[3,3,'square']]),
+   FP('B. Take away.',[['red-apple','5 apples. Eat 1. {{4}} are left.'],['duck','4 ducks. 2 swim away. {{2}} are left.']]),
+   F('C. Solve.',['3 − 1 = {{2}}','5 − 2 = {{3}}','4 − 4 = {{0}}','6 − 1 = {{5}}','7 − 2 = {{5}}','5 − 0 = {{5}}'],3),
+   WP('D. A grown-up reads. Write the answer.',['There are 6 birds. 2 fly away. {{4}} birds are left.','Sara has 5 sweets. She eats 3. She has {{2}} sweets left.']),
+   NO('Tip: start at the big number and count back on your fingers.')),
+  pg('Subtraction Challenge ★★★','Think carefully. Show your thinking.','Reason about subtracting within 20.',
+   F('A. True or false? Write T or F.',['14 − 6 = 8 {{T}}','10 − 3 = 6 {{F}}','9 − 0 = 9 {{T}}','12 − 12 = 1 {{F}}','20 − 5 = 15 {{T}}','16 − 8 = 8 {{T}}'],2),
+   F('B. Spot the mistake. Write the right answer.',['Bilal says 15 − 7 = 9. It is {{8}}.','Hira says 13 − 4 = 8. It is {{9}}.'],1),
+   F('C. Missing numbers.',['{{17}} − 8 = 9','14 − {{5}} = 9','{{20}} − 11 = 9','12 − {{3}} = 9'],2),
+   F('D. Puzzles.',['I am 6 less than 15. I am {{9}}.','Take me away from 18 and you get 10. I am {{8}}.','Write two different take aways that give 5: {{10 − 5}} and {{12 − 7}}.']),
+   WP('E. Think it through.',['Ali has 16 marbles. He gives 4 to Sara and 5 to Zain. He has {{7}} marbles left.'])),
+  pg('Topic Test: Subtraction (1)','Answer every question. Ask a grown-up to mark it out of 38.','Check taking away within 10 and 20.',
+   SC(38,19,30),
+   PSUB('1. Cross out and write. (3 marks)',[[9,5,'star'],[7,4,'circle'],[10,8,'heart']]),
+   F('2. Solve. (9 marks)',['8 − 3 = {{5}}','10 − 6 = {{4}}','7 − 7 = {{0}}','15 − 5 = {{10}}','18 − 9 = {{9}}','14 − 6 = {{8}}','20 − 7 = {{13}}','16 − 4 = {{12}}','13 − 8 = {{5}}'],3),
+   F('3. Take away 10. (6 marks)',['16 − 10 = {{6}}','13 − 10 = {{3}}','18 − 10 = {{8}}','11 − 10 = {{1}}','20 − 10 = {{10}}','19 − 10 = {{9}}'],3),
+   CH('4. Circle the right answer. (3 marks)',[['12 − 5 =',['7','8'],0],['17 − 9 =',['9','8'],1],['14 − 7 =',['7','6'],0]])),
+  pg('Topic Test: Subtraction (2)','Answer every question. Add up your marks from both pages.','Check missing numbers, counting back and word problems.',
+   F('5. Missing numbers. (4 marks)',['12 − {{4}} = 8','{{15}} − 5 = 10','19 − {{9}} = 10','{{9}} − 3 = 6'],2),
+   F('6. Fact family. Use 7 + 5 = 12. (3 marks)',['5 + 7 = {{12}}','12 − 5 = {{7}}','12 − 7 = {{5}}'],3),
+   WP('7. Word problems. (6 marks: 2 each)',['There are 15 children in the park. 6 go home. {{9}} children are still there.','Ammi made 20 samosas. We ate 12. {{8}} samosas are left.','Hamza had 11 balloons. 3 popped. He has {{8}} balloons.']),
+   F('8. True or false? Write T or F. (4 marks)',['10 − 4 = 6 {{T}}','15 − 8 = 6 {{F}}','20 − 9 = 11 {{T}}','13 − 5 = 9 {{F}}'],2),
+   HOW),
+  pg('Word Mat: Subtraction','Keep this mat on the table while you work. Read the words together.','Know the words and ways to subtract within 20.',
+   NO('<b>Take away words</b><br><b>take away</b> · <b>minus</b> (−) · <b>subtract</b> · <b>left</b> · <b>fewer</b> · <b>less</b> · <b>difference</b> · <b>how many more?</b>'),
+   CN(['cookie','cookie'],'Taking away means some go and we count what is left. 7 biscuits, eat 3, 4 are left: 7 − 3 = 4.','Taking away'),
+   {t:'numline'},
+   NO('<b>Ways to subtract</b><br>1. Cross out pictures and count what is left.<br>2. Count back on a number line: 12 − 3 → 11, 10, 9.<br>3. Use a fact family: 9 + 6 = 15, so 15 − 6 = 9 and 15 − 9 = 6.<br>4. Take away 10: 17 − 10 = 7.'),
+   BK(['take away','minus','subtract','left','fewer','count back','difference','equals']),
+   DR('Draw 12 circles. Cross out 5. Write the sum.',110))]);
+});

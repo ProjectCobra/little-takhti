@@ -894,89 +894,6 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p80 0.44 Poems about winter / My Winter Poem
 - p85 0.73 Writing practice / Story: The Lion and the Mouse
 
-## g2-maths (81 pages)
-- p1 0.33 Numbers to 1000 / Hundreds, Tens and Ones
-- p2 0.31 Numbers to 1000 / Number Words
-- p3 0.34 Numbers to 1000 / Compare and Order
-- p4 0.20 Adding and subtracting / Add with Regrouping
-- p5 0.14 Adding and subtracting / Subtract with Regrouping
-- p6 0.22 Adding and subtracting / Word Problems
-- p7 0.14 Multiplying by 2, 5 and 10 / Groups Of
-- p8 0.26 Multiplying by 2, 5 and 10 / Times Tables 2, 5 and 10
-- p9 0.19 Multiplying by 2, 5 and 10 / Word Problems
-- p10 0.17 Money and shopping / Count the Money
-- p11 0.24 Money and shopping / Change Please
-- p12 0.19 Money and shopping / Bazaar Problems
-- p13 0.53 Time and calendar / Quarter Past and To
-- p14 0.29 Time and calendar / Minutes and Hours
-- p15 0.33 Time and calendar / Reading a Calendar
-- p16 0.30 Length, mass and capacity / Which Unit?
-- p17 0.19 Length, mass and capacity / Measure and Compare
-- p18 0.20 Length, mass and capacity / Heavier or Lighter?
-- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
-- p20 0.20 Shapes and symmetry / Symmetry
-- p21 0.34 Shapes and symmetry / Draw the Other Half
-- p22 0.30 Halves and quarters / Halves and Quarters
-- p23 0.14 Halves and quarters / Half of a Number
-- p24 0.14 Halves and quarters / Quarters
-- p25 0.37 Pictographs / Read the Pictograph
-- p26 0.09 Pictographs / Tally Marks
-- p27 0.15 Pictographs / Make a Pictograph
-- p28 0.19 Sharing and division / Share Equally
-- p29 0.14 Sharing and division / Groups Of
-- p30 0.09 Sharing and division / Division Facts
-- p31 0.38 Place value to 1000 / Hundreds, Tens and Ones
-- p32 0.20 Place value to 1000 / Build the Number
-- p33 0.20 Place value to 1000 / Expanded Form
-- p34 0.25 Place value to 1000 / What Is the Digit Worth?
-- p35 0.28 Place value to 1000 / Compare Numbers
-- p36 0.19 Place value to 1000 / In Order
-- p37 0.14 Place value to 1000 / More and Less
-- p38 0.59 Place value to 1000 / Rupee Notes
-- p39 0.24 Place value to 1000 / Number Patterns
-- p40 0.49 Place value to 1000 / Number Puzzles
-- p41 0.33 Adding and subtracting with regrouping / Carrying a Ten
-- p42 0.20 Adding and subtracting with regrouping / Carrying a Hundred
-- p43 0.36 Adding and subtracting with regrouping / Borrowing a Ten
-- p44 0.14 Adding and subtracting with regrouping / Bigger Take-aways
-- p45 0.37 Adding and subtracting with regrouping / Regroup or Not?
-- p46 0.25 Adding and subtracting with regrouping / Check It
-- p47 0.47 Adding and subtracting with regrouping / Shop and School Problems
-- p48 0.14 Adding and subtracting with regrouping / Missing Digits
-- p49 0.40 Adding and subtracting with regrouping / Spot the Mistake
-- p50 0.50 Adding and subtracting with regrouping / Number Puzzles
-- p51 0.30 Multiplying by 3 and 4 / Groups of 3
-- p52 0.24 Multiplying by 3 and 4 / The 3 Times Table
-- p53 0.29 Multiplying by 3 and 4 / Count in 3s and 4s
-- p54 0.33 Multiplying by 3 and 4 / Double, Double
-- p55 0.24 Multiplying by 3 and 4 / The 4 Times Table
-- p56 0.43 Multiplying by 3 and 4 / Picture Groups
-- p57 0.30 Multiplying by 3 and 4 / Turn It Around
-- p58 0.40 Multiplying by 3 and 4 / Shopping in 3s and 4s
-- p59 0.30 Multiplying by 3 and 4 / Right or Wrong?
-- p60 0.30 Multiplying by 3 and 4 / Make Your Own
-- p61 0.45 Fractions of shapes and amounts / Equal Parts
-- p62 0.67 Fractions of shapes and amounts / Name the Fraction
-- p63 0.25 Fractions of shapes and amounts / Halves, Thirds, Quarters
-- p64 0.30 Fractions of shapes and amounts / Half of an Amount
-- p65 0.20 Fractions of shapes and amounts / Quarters and Thirds of Amounts
-- p66 0.32 Fractions of shapes and amounts / Picture Fractions
-- p67 0.30 Fractions of shapes and amounts / Is It Fair?
-- p68 0.28 Fractions of shapes and amounts / Halves Are the Same
-- p69 0.43 Fractions of shapes and amounts / Fraction Stories
-- p70 0.30 Fractions of shapes and amounts / Make Your Own Fractions
-- p71 0.46 Telling time to 5 minutes / Counting in Fives
-- p72 0.53 Telling time to 5 minutes / Read the Clock
-- p73 0.53 Telling time to 5 minutes / More Clocks
-- p74 0.33 Telling time to 5 minutes / Past and To
-- p75 0.30 Telling time to 5 minutes / Match the Times
-- p76 0.55 Telling time to 5 minutes / My Day
-- p77 0.43 Telling time to 5 minutes / How Long?
-- p78 0.14 Telling time to 5 minutes / Before and After
-- p79 0.47 Telling time to 5 minutes / Time Stories
-- p80 0.44 Telling time to 5 minutes / Draw the Hands
-- p90 0.72 Practice paper / Maths Practice Paper (4)
-
 ## g2-science (81 pages)
 - p1 0.31 Living and non-living / Living or Non-living?
 - p2 0.30 Living and non-living / Signs of Life
@@ -2684,6 +2601,77 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p68 0.37 واحد اور جمع / صحیح لفظ چنیں
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
+
+## g2-maths (69 pages)
+- p13 0.53 Time and calendar / Quarter Past and To
+- p14 0.29 Time and calendar / Minutes and Hours
+- p15 0.33 Time and calendar / Reading a Calendar
+- p16 0.30 Length, mass and capacity / Which Unit?
+- p17 0.19 Length, mass and capacity / Measure and Compare
+- p18 0.20 Length, mass and capacity / Heavier or Lighter?
+- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
+- p20 0.20 Shapes and symmetry / Symmetry
+- p21 0.34 Shapes and symmetry / Draw the Other Half
+- p22 0.30 Halves and quarters / Halves and Quarters
+- p23 0.14 Halves and quarters / Half of a Number
+- p24 0.14 Halves and quarters / Quarters
+- p25 0.37 Pictographs / Read the Pictograph
+- p26 0.09 Pictographs / Tally Marks
+- p27 0.15 Pictographs / Make a Pictograph
+- p28 0.19 Sharing and division / Share Equally
+- p29 0.14 Sharing and division / Groups Of
+- p30 0.09 Sharing and division / Division Facts
+- p31 0.38 Place value to 1000 / Hundreds, Tens and Ones
+- p32 0.20 Place value to 1000 / Build the Number
+- p33 0.20 Place value to 1000 / Expanded Form
+- p34 0.25 Place value to 1000 / What Is the Digit Worth?
+- p35 0.28 Place value to 1000 / Compare Numbers
+- p36 0.19 Place value to 1000 / In Order
+- p37 0.14 Place value to 1000 / More and Less
+- p38 0.59 Place value to 1000 / Rupee Notes
+- p39 0.24 Place value to 1000 / Number Patterns
+- p40 0.49 Place value to 1000 / Number Puzzles
+- p41 0.33 Adding and subtracting with regrouping / Carrying a Ten
+- p42 0.20 Adding and subtracting with regrouping / Carrying a Hundred
+- p43 0.36 Adding and subtracting with regrouping / Borrowing a Ten
+- p44 0.14 Adding and subtracting with regrouping / Bigger Take-aways
+- p45 0.37 Adding and subtracting with regrouping / Regroup or Not?
+- p46 0.25 Adding and subtracting with regrouping / Check It
+- p47 0.47 Adding and subtracting with regrouping / Shop and School Problems
+- p48 0.14 Adding and subtracting with regrouping / Missing Digits
+- p49 0.40 Adding and subtracting with regrouping / Spot the Mistake
+- p50 0.50 Adding and subtracting with regrouping / Number Puzzles
+- p51 0.30 Multiplying by 3 and 4 / Groups of 3
+- p52 0.24 Multiplying by 3 and 4 / The 3 Times Table
+- p53 0.29 Multiplying by 3 and 4 / Count in 3s and 4s
+- p54 0.33 Multiplying by 3 and 4 / Double, Double
+- p55 0.24 Multiplying by 3 and 4 / The 4 Times Table
+- p56 0.43 Multiplying by 3 and 4 / Picture Groups
+- p57 0.30 Multiplying by 3 and 4 / Turn It Around
+- p58 0.40 Multiplying by 3 and 4 / Shopping in 3s and 4s
+- p59 0.30 Multiplying by 3 and 4 / Right or Wrong?
+- p60 0.30 Multiplying by 3 and 4 / Make Your Own
+- p61 0.45 Fractions of shapes and amounts / Equal Parts
+- p62 0.67 Fractions of shapes and amounts / Name the Fraction
+- p63 0.25 Fractions of shapes and amounts / Halves, Thirds, Quarters
+- p64 0.30 Fractions of shapes and amounts / Half of an Amount
+- p65 0.20 Fractions of shapes and amounts / Quarters and Thirds of Amounts
+- p66 0.32 Fractions of shapes and amounts / Picture Fractions
+- p67 0.30 Fractions of shapes and amounts / Is It Fair?
+- p68 0.28 Fractions of shapes and amounts / Halves Are the Same
+- p69 0.43 Fractions of shapes and amounts / Fraction Stories
+- p70 0.30 Fractions of shapes and amounts / Make Your Own Fractions
+- p71 0.46 Telling time to 5 minutes / Counting in Fives
+- p72 0.53 Telling time to 5 minutes / Read the Clock
+- p73 0.53 Telling time to 5 minutes / More Clocks
+- p74 0.33 Telling time to 5 minutes / Past and To
+- p75 0.30 Telling time to 5 minutes / Match the Times
+- p76 0.55 Telling time to 5 minutes / My Day
+- p77 0.43 Telling time to 5 minutes / How Long?
+- p78 0.14 Telling time to 5 minutes / Before and After
+- p79 0.47 Telling time to 5 minutes / Time Stories
+- p80 0.44 Telling time to 5 minutes / Draw the Hands
+- p90 0.72 Practice paper / Maths Practice Paper (4)
 
 ## g2-islamiat (30 pages)
 - p1 0.31 Allah the Creator / Allah Is One

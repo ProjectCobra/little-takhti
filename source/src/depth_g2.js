@@ -505,3 +505,198 @@ EXTRA['g2-urdu']=[
    F('11. The design steps. Fill in. (4 marks)',['A designer starts with a {{problem}}.','They draw {{ideas}} and choose the best one.','They make a {{model}}.','People {{try}} it and say what to make better.'],1),
    WR('12. Plan an AI helper. (2 marks)',['My AI helper would help ______________ by ______________.'])),].concat(EXTRA['g2-ai']));
 });
+
+/* D13: Grade 2 Maths topics 1 to 4 (Numbers to 1000, Adding and subtracting, Multiplying by 2, 5 and 10, Money and shopping).
+   Same method as depth_g1.js D9 to D12: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='g2-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const AS=['add','subtract'];
+ const TB=(rows,head)=>{let s='<table style="border-collapse:collapse;margin:0 auto;font-size:16px">';if(head)s+='<tr>'+head.map(h=>`<th style="border:1px solid #9aa;padding:3px 10px;background:#FFF3D1">${h}</th>`).join('')+'</tr>';rows.forEach(r=>{s+='<tr>'+r.map(c=>`<td style="border:1px solid #9aa;padding:3px 10px;text-align:center">${c}</td>`).join('')+'</tr>'});return NO(s+'</table>')};
+
+ /* ---- Topic 1: Numbers to 1000 ---- */
+ mo(1,'Hundreds, Tens and Ones',
+  CN(['abacus'],'A 3-digit number has hundreds, tens and ones. In 472 the 4 is worth 400, the 7 is worth 70 and the 2 is worth 2. 10 ones make 1 ten and 10 tens make 1 hundred.','Hundreds, tens and ones'),
+  F('C. What is the 6 worth?',['In 364, the 6 is worth {{60}}.','In 628, the 6 is worth {{600}}.','In 596, the 6 is worth {{6}}.','In 869, the 6 is worth {{60}}.'],2),
+  F('D. Split into hundreds, tens and ones.',['538 = {{500}} + {{30}} + {{8}}','204 = {{200}} + {{0}} + {{4}}','971 = {{900}} + {{70}} + {{1}}','650 = {{600}} + {{50}} + {{0}}'],2),
+  WP('E. Think it through.',['A shop has 3 boxes of 100 pencils, 6 packs of 10 pencils and 4 loose pencils. It has {{364}} pencils.']));
+ mo(2,'Number Words',
+  F('C. Write the number.',['three hundred and twenty-seven = {{327}}','five hundred and six = {{506}}','eight hundred and ninety = {{890}}','one thousand = {{1000}}','seven hundred and seventy-one = {{771}}','two hundred and fourteen = {{214}}'],2),
+  BX('D. Count in tens, then in fifties.',['340|350|{{360}}|370|{{380}}|{{390}}|400','450|500|{{550}}|600|{{650}}|{{700}}|750']),
+  F('E. Spot the mistake. Write it right.',['Ali writes four hundred and nine as 490. It is {{409}}.','Hira writes 615 as six hundred and fifty. It is {{six hundred and fifteen}}.'],1));
+ mo(3,'Compare and Order',
+  F('C. Write >, < or =.',['356 {{<}} 365','802 {{>}} 799','640 {{=}} 600 + 40','517 {{>}} 471','299 {{<}} 300','905 {{<}} 950'],3),
+  F('D. Order from greatest to smallest.',['627, 762, 276 → {{762, 627, 276}}','409, 490, 449 → {{490, 449, 409}}'],1),
+  WP('E. Think it through.',['Lahore Museum had 845 visitors on Saturday and 854 on Sunday. More came on {{Sunday}}.','The smallest 3-digit number is {{100}}. The greatest is {{999}}.']));
+ addPages(S,'Numbers to 1000',[
+  pg('Numbers to 1000 Warm-up ★','Start here if 3-digit numbers are new. Use bundles of sticks if you can.','Count in hundreds and read hundreds, tens and ones.',
+   CN(['coin'],'100 is ten tens. 200 is two hundreds. In 235 there are 2 hundreds, 3 tens and 5 ones.','Hundreds'),
+   BX('A. Count in hundreds.',['100|{{200}}|300|{{400}}|500|{{600}}|700|{{800}}|900|{{1000}}']),
+   F('B. How many hundreds, tens and ones?',['123 = {{1}} hundred, {{2}} tens, {{3}} ones','241 = {{2}} hundreds, {{4}} tens, {{1}} one','315 = {{3}} hundreds, {{1}} ten, {{5}} ones','402 = {{4}} hundreds, {{0}} tens, {{2}} ones'],1),
+   F('C. Write the number.',['2 hundreds, 1 ten, 3 ones = {{213}}','1 hundred, 5 tens, 0 ones = {{150}}','3 hundreds, 3 tens, 3 ones = {{333}}','5 hundreds, 0 tens, 4 ones = {{504}}'],2),
+   CH('D. Circle the greater number.',[['',['120','210'],1],['',['305','350'],1],['',['499','500'],1],['',['601','106'],0]])),
+  pg('Numbers to 1000 Challenge ★★★','Think carefully. Show your thinking.','Reason about 3-digit numbers: spot mistakes, solve puzzles and make numbers.',
+   CH('A. True or false? Circle.',[['In 583, the 8 is worth 80.',0],['Six hundred and four is 640.',1],['10 tens make 100.',0],['The greatest 3-digit number is 999.',0]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says 7 hundreds and 9 ones is 79. It is {{709}}.','Sara orders 430, 403, 340 smallest first as 403, 340, 430. It should be {{340}}, {{403}}, {{430}}.'],1),
+   F('C. Puzzles.',['I have 6 hundreds, no tens and 2 ones. I am {{602}}.','I am 10 more than 395. I am {{405}}.','I am between 700 and 800. My tens and ones digits are both 5. I am {{755}}.','I am 1 less than 1000. I am {{999}}.']),
+   WP('D. Think it through.',['Use the digits 4, 0 and 7. The greatest 3-digit number is {{740}}. The smallest 3-digit number is {{407}}.','A number has 3 hundreds, 14 tens and 2 ones. It is {{442}}.'])),
+  pg('Topic Test: Numbers to 1000 (1)','Answer every question. Ask a grown-up to mark it out of 40.','Check writing numbers, the value of digits and number words.',
+   SC(40,20,31),
+   F('1. Write the number. (4 marks)',['5 hundreds 3 tens 8 ones = {{538}}','9 hundreds 0 tens 6 ones = {{906}}','2 hundreds 7 tens 0 ones = {{270}}','four hundred and sixty-one = {{461}}'],2),
+   F('2. What is the 7 worth? (4 marks)',['742: {{700}}','374: {{70}}','817: {{7}}','970: {{70}}'],4),
+   F('3. Split the number. (6 marks: 1 for each box)',['463 = {{400}} + {{60}} + 3','805 = 800 + {{0}} + {{5}}','390 = {{300}} + 90 + {{0}}'],1),
+   F('4. Write in words. (2 marks)',['318 = {{three hundred and eighteen}}','750 = {{seven hundred and fifty}}'],1),
+   CH('5. Circle the greater number. (4 marks)',[['',['706','670'],0],['',['389','398'],1],['',['1000','999'],0],['',['514','541'],1]])),
+  pg('Topic Test: Numbers to 1000 (2)','Answer every question. Add up your marks from both pages.','Check comparing, ordering, counting on and back, and word problems.',
+   F('6. Write > or <. (4 marks)',['629 {{>}} 296','451 {{<}} 514','800 {{>}} 799','367 {{<}} 376'],2),
+   F('7. Order from smallest to greatest. (4 marks: 2 each)',['532, 235, 352 → {{235, 352, 532}}','918, 981, 189 → {{189, 918, 981}}'],1),
+   F('8. Count on or back. (6 marks)',['450, 460, 470, {{480}}, {{490}}','300, 400, 500, {{600}}, {{700}}','825, 824, 823, {{822}}, {{821}}'],1),
+   WP('9. Word problems. (6 marks: 2 each)',['A stall has 4 crates of 100 oranges and 25 more oranges. It has {{425}} oranges.','Ali\'s book has 286 pages and Sara\'s has 268 pages. {{Ali}} has the longer book.','Using the digits 2, 9 and 5, the smallest number you can make is {{259}}.']),
+   HOW),
+  pg('Word Mat: Numbers to 1000','Keep this mat on the table while you work. Read the words together.','Know the words for hundreds, tens, ones and comparing.',
+   CN(['abacus'],'A 3-digit number has hundreds, tens and ones. In 472 the 4 is in the hundreds place and is worth 400, the 7 is worth 70 and the 2 is worth 2. So 472 = 400 + 70 + 2.','Place value'),
+   TB([['<b style="font-size:24px">4</b>','<b style="font-size:24px">7</b>','<b style="font-size:24px">2</b>'],['400','70','2']],['hundreds','tens','ones']),
+   NO('<span style="font-size:18px">10 ones = 1 ten &nbsp;·&nbsp; 10 tens = 1 hundred &nbsp;·&nbsp; 10 hundreds = 1000</span><br>100 one hundred · 200 two hundred · 300 three hundred · 400 four hundred · 500 five hundred · 600 six hundred · 700 seven hundred · 800 eight hundred · 900 nine hundred · 1000 one thousand'),
+   NO('<b>Tips</b><br>1. Say "and" after the hundreds: 306 is three hundred and six.<br>2. A zero holds a place: 506 has no tens.<br>3. To compare, look at the hundreds first, then the tens, then the ones.<br>4. &gt; means greater than. &lt; means less than.'),
+   NO('<b>Maths words</b>: <b>hundreds</b> · <b>tens</b> · <b>ones</b> · <b>digit</b> · <b>place value</b> · <b>worth</b> · <b>greater than</b> · <b>less than</b> · <b>order</b> · <b>thousand</b>'),
+   BK(['hundreds','tens','ones','digit','worth','greater','less','thousand']))]);
+
+ /* ---- Topic 2: Adding and subtracting ---- */
+ mo(4,'Add with Regrouping',
+  CN(['abacus'],'Line up the digits: ones under ones, tens under tens. Add the ones first. If they make 10 or more, write the ones and carry 1 ten to the tens column. Then add the tens, then the hundreds.','Column adding'),
+  F('C. Add.',['256 + 137 = {{393}}','348 + 225 = {{573}}','167 + 254 = {{421}}','485 + 316 = {{801}}','93 + 68 = {{161}}','629 + 171 = {{800}}'],2),
+  F('D. Find the missing digit.',['4{{5}} + 27 = 72','36 + 1{{8}} = 54','{{6}}3 + 29 = 92','125 + 2{{4}}6 = 371'],2),
+  WP('E. Think it through.',['A farmer picks 268 mangoes on Monday and 345 on Tuesday. He picks {{613}} mangoes.','A train has 156 people. 79 more get on. Now there are {{235}} people.']));
+ mo(5,'Subtract with Regrouping',
+  CN(['abacus'],'Start with the ones. If the top digit is smaller, take 1 ten from the tens column and change it into 10 ones. Then subtract. Do the same with the hundreds when the tens are too small.','Regrouping'),
+  F('C. Subtract.',['84 − 57 = {{27}}','63 − 29 = {{34}}','325 − 148 = {{177}}','612 − 375 = {{237}}','400 − 164 = {{236}}','851 − 492 = {{359}}'],2),
+  F('D. Check by adding.',['72 − 45 = {{27}}, so {{27}} + 45 = 72','530 − 280 = {{250}}, so {{250}} + 280 = 530'],1),
+  WP('E. Think it through.',['A library had 520 books. 185 were lent out. {{335}} books are still on the shelves.','There were 94 children in the hall. 38 went out to play. {{56}} children are still in the hall.']));
+ mo(6,'Word Problems',
+  NO('<b>Add or subtract?</b> Words like <b>in all</b>, <b>altogether</b>, <b>total</b> and <b>more get on</b> often mean add. Words like <b>left</b>, <b>fewer</b>, <b>how many more</b> and <b>difference</b> often mean subtract.'),
+  WP('B. More problems.',['A school has 375 chairs. It buys 148 more. It now has {{523}} chairs.','There are 640 sheep on a hill. 285 go down to the river. {{355}} sheep are still on the hill.','Ali has 236 stickers and Sara has 318. Sara has {{82}} more stickers than Ali.']),
+  CH('C. Add or subtract? Circle.',[['Hamza had 90 marbles and lost 35. How many are left?',1],['A bus has 42 people. 18 more get on. How many now?',0]],AS));
+ addPages(S,'Adding and subtracting',[
+  pg('Adding and Subtracting Warm-up ★','Start here if column sums are new. No carrying or regrouping on this page.','Add and subtract 2-digit and 3-digit numbers without regrouping.',
+   CN(['abacus'],'Add the ones first, then the tens. 34 + 25: 4 + 5 = 9 ones and 3 + 2 = 5 tens. The answer is 59.','Ones first'),
+   F('A. Add.',['23 + 14 = {{37}}','45 + 32 = {{77}}','61 + 28 = {{89}}','130 + 240 = {{370}}','52 + 36 = {{88}}','215 + 103 = {{318}}'],2),
+   F('B. Subtract.',['58 − 23 = {{35}}','79 − 45 = {{34}}','96 − 54 = {{42}}','480 − 260 = {{220}}','67 − 17 = {{50}}','365 − 142 = {{223}}'],2),
+   F('C. Make 10 and 100.',['7 + {{3}} = 10','70 + {{30}} = 100','4 + {{6}} = 10','40 + {{60}} = 100'],2),
+   WP('D. Think it through.',['Ali has 42 marbles. He gets 15 more. He has {{57}} marbles.','There are 68 birds on a wall. 25 fly away. {{43}} birds are left.'])),
+  pg('Adding and Subtracting Challenge ★★★','Think carefully. Show your thinking.','Reason about adding and subtracting: missing digits, puzzles and two-step problems.',
+   CH('A. True or false? Circle.',[['47 + 38 = 85',0],['60 − 24 = 44',1],['125 + 175 = 300',0],['500 − 1 = 499',0],['83 − 47 = 46',1]],TF),
+   F('B. Find the missing digits.',['5{{7}} + 26 = 83','{{4}}8 + 35 = 83','92 − 3{{6}} = 56','7{{1}} − 28 = 43'],2),
+   F('C. Puzzles.',['Add 45 to me and you get 100. I am {{55}}.','Take 128 from me and you get 300. I am {{428}}.','Two numbers add up to 50. One is 18. The other is {{32}}.','The difference between 400 and 275 is {{125}}.']),
+   WP('D. Think it through.',['Hamza scored 158 runs in two matches. He scored 79 in the first match. He scored {{79}} in the second.','A box held 250 sweets. 65 were eaten on Monday and 80 on Tuesday. {{105}} sweets are left.'])),
+  pg('Topic Test: Adding and subtracting (1)','Answer every question. Ask a grown-up to mark it out of 40.','Check adding and subtracting with regrouping, checking and spotting mistakes.',
+   SC(40,20,31),
+   F('1. Add. (6 marks)',['46 + 37 = {{83}}','158 + 26 = {{184}}','273 + 149 = {{422}}','365 + 235 = {{600}}','507 + 186 = {{693}}','88 + 75 = {{163}}'],2),
+   F('2. Subtract. (6 marks)',['73 − 48 = {{25}}','90 − 37 = {{53}}','254 − 129 = {{125}}','600 − 245 = {{355}}','431 − 176 = {{255}}','805 − 368 = {{437}}'],2),
+   F('3. Missing numbers. (4 marks)',['35 + {{15}} = 50','{{60}} + 40 = 100','100 − {{25}} = 75','{{300}} − 150 = 150'],2),
+   F('4. Subtract, then check by adding. (4 marks)',['84 − 39 = {{45}}, check: {{45}} + 39 = 84','420 − 165 = {{255}}, check: {{255}} + 165 = 420'],1),
+   F('5. Spot the mistake. Write the right answer. (4 marks: 2 each)',['Ali says 67 + 25 = 82. It is {{92}}.','Zain says 503 − 127 = 424. It is {{376}}.'],1)),
+  pg('Topic Test: Adding and subtracting (2)','Answer every question. Add up your marks from both pages.','Check choosing add or subtract, and word problems.',
+   CH('6. Add or subtract? Circle. (4 marks)',[['A shop had 90 pens and sold 45.',1],['Zain has 120 cards and gets 60 more.',0],['How many more is 85 than 50?',1],['There are 36 boys and 41 girls. How many children?',0]],AS),
+   WP('7. Word problems. (8 marks: 2 each)',['A school has 287 girls and 245 boys. There are {{532}} children.','A shop had 700 eggs and sold 365. {{335}} eggs are left.','Sara read 145 pages and Hira read 190. Hira read {{45}} more pages.','Ammi had Rs 1000. She spent Rs 650. She has Rs {{350}} left.']),
+   F('8. Fill in the missing number. (4 marks)',['{{45}} + 55 = 100','250 + {{250}} = 500','1000 − {{400}} = 600','{{90}} − 45 = 45'],2),
+   HOW),
+  pg('Word Mat: Adding and subtracting','Keep this mat on the table while you work. Read the words together.','Know the column method and the words for adding and subtracting.',
+   CN(['abacus'],'Write the numbers in columns: hundreds, tens, ones. Always start with the ones. When adding, carry 1 ten if the ones make 10 or more. When subtracting, regroup 1 ten into 10 ones if the top digit is smaller.','The column method'),
+   TB([['','1',''],['','4','7'],['+','3','6'],['','8','3']],['','tens','ones']),
+   NO('<b>Example</b>: 47 + 36. Ones: 7 + 6 = 13. Write 3, carry 1 ten. Tens: 4 + 3 + 1 = 8. Answer: 83.<br><b>Example</b>: 52 − 27. Ones: 2 − 7 cannot be done, so 52 becomes 4 tens and 12 ones. 12 − 7 = 5 and 4 − 2 = 2. Answer: 25.'),
+   NO('<b>Tips</b><br>1. Line up ones under ones.<br>2. Check a take-away by adding: 25 + 27 = 52.<br>3. Count up to find a difference: from 27 to 52 is 25.<br>4. Read the word problem twice before you choose add or subtract.'),
+   NO('<b>Maths words</b>: <b>add</b> · <b>plus</b> · <b>sum</b> · <b>total</b> · <b>altogether</b> · <b>subtract</b> · <b>minus</b> · <b>difference</b> · <b>left</b> · <b>carry</b> · <b>regroup</b> · <b>column</b>'),
+   BK(['sum','total','difference','carry','regroup','column','plus','minus']))]);
+
+ /* ---- Topic 3: Multiplying by 2, 5 and 10 ---- */
+ mo(7,'Groups Of',
+  CN(['egg'],'Multiplying means adding equal groups. 3 groups of 5 is 5 + 5 + 5 = 15. We write it as 3 × 5 = 15. The × sign means "groups of" or "times".','Equal groups'),
+  FP('B. Look and fill in.',[['egg','4 boxes of 10 eggs: 4 × 10 = {{40}}'],['running-shoe','6 pairs of shoes: 6 × 2 = {{12}}'],['hand-with-fingers-splayed','5 hands of 5 fingers: 5 × 5 = {{25}}'],['bicycle','8 bicycles with 2 wheels: 8 × 2 = {{16}}']],2),
+  F('C. Write as multiplying.',['5 + 5 + 5 + 5 = {{4}} × 5 = {{20}}','2 + 2 + 2 + 2 + 2 + 2 + 2 = {{7}} × 2 = {{14}}','10 + 10 + 10 = {{3}} × 10 = {{30}}'],1),
+  DR('D. Draw 3 groups of 5 stars. Write the multiplication.',90));
+ mo(8,'Times Tables 2, 5 and 10',
+  F('C. Missing numbers.',['{{6}} × 5 = 30','4 × {{2}} = 8','{{9}} × 10 = 90','5 × {{7}} = 35','{{8}} × 2 = 16','10 × {{10}} = 100'],3),
+  BX('D. Count in twos and in tens.',['2|4|{{6}}|8|{{10}}|12|{{14}}|16|{{18}}|20','10|20|{{30}}|40|{{50}}|60|{{70}}|80|{{90}}|100']),
+  CH('E. Is it in the times table? Circle.',[['Is 35 in the 5 times table?',0],['Is 17 in the 2 times table?',1],['Is 60 in the 10 times table?',0],['Is 42 in the 5 times table?',1]],YN));
+ mo(9,'Word Problems',
+  WP('B. More problems.',['Each box holds 10 crayons. Hira has 7 boxes. She has {{70}} crayons.','A star has 5 points. 9 stars have {{45}} points.','Socks come in pairs. 6 pairs are {{12}} socks.','One sweet costs Rs 5. Zain buys 8 sweets. He pays Rs {{40}}.']),
+  F('C. Turn it around.',['2 × 9 = 9 × {{2}} = {{18}}','5 × 6 = 6 × {{5}} = {{30}}','10 × 4 = 4 × {{10}} = {{40}}'],1),
+  WP('D. Two steps.',['Sara buys 3 packs of 10 balloons. 5 balloons pop. She has {{25}} balloons left.']));
+ addPages(S,'Multiplying by 2, 5 and 10',[
+  pg('Times Tables Warm-up ★','Start here if times tables are new. Count on your fingers.','Count in 2s, 5s and 10s and find totals of equal groups.',
+   CN(['hand-with-fingers-splayed'],'Counting in 2s, 5s and 10s helps with times tables. 5, 10, 15, 20: four fives make 20, so 4 × 5 = 20.','Count in steps'),
+   BX('A. Count on.',['2|4|{{6}}|8|{{10}}','5|10|{{15}}|20|{{25}}','10|20|{{30}}|40|{{50}}']),
+   FP('B. Count the groups.',[['running-shoe','3 pairs of shoes: 2 + 2 + 2 = {{6}}'],['hand-with-fingers-splayed','2 hands: 5 + 5 = {{10}} fingers'],['coin','4 coins of Rs 10: Rs {{40}}'],['eye','5 children have {{10}} eyes.']],2),
+   F('C. Times facts.',['1 × 2 = {{2}}','2 × 2 = {{4}}','3 × 5 = {{15}}','2 × 10 = {{20}}','4 × 2 = {{8}}','5 × 10 = {{50}}'],3),
+   DR('D. Draw 4 groups of 2 apples. How many apples?',90)),
+  pg('Times Tables Challenge ★★★','Think carefully. Show your thinking.','Reason about the 2, 5 and 10 times tables.',
+   CH('A. True or false? Circle.',[['7 × 2 = 16',1],['10 × 10 = 100',0],['3 × 5 is the same as 5 × 3.',0],['45 is in the 2 times table.',1]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says 8 × 5 = 45. It is {{40}}.','Sara says 9 × 2 = 11. It is {{18}}.','Zain says 6 × 10 = 16. It is {{60}}.'],1),
+   F('C. Puzzles.',['I am in the 5 and the 10 times tables. I am between 25 and 35. I am {{30}}.','I am in the 2 times table. I am just before 20. I am {{18}}.','{{4}} × 5 = 2 × 10','3 × 10 = {{6}} × 5']),
+   WP('D. Think it through.',['Hira has 5 coins of Rs 10 and 3 coins of Rs 5. She has Rs {{65}}.','A spider has 8 legs. Two spiders have {{16}} legs. Is 16 in the 2 times table? {{yes}}'])),
+  pg('Topic Test: Times tables (1)','Answer every question. Ask a grown-up to mark it out of 40.','Check times facts, repeated adding, missing numbers and counting in steps.',
+   SC(40,20,31),
+   F('1. Times facts. (8 marks)',['4 × 5 = {{20}}','7 × 10 = {{70}}','9 × 2 = {{18}}','6 × 5 = {{30}}','3 × 10 = {{30}}','5 × 2 = {{10}}','8 × 5 = {{40}}','10 × 2 = {{20}}'],4),
+   F('2. Write as multiplying. (4 marks: 2 each)',['5 + 5 + 5 = {{3}} × 5 = {{15}}','2 + 2 + 2 + 2 + 2 = {{5}} × 2 = {{10}}'],1),
+   F('3. Missing numbers. (4 marks)',['{{7}} × 5 = 35','2 × {{6}} = 12','{{4}} × 10 = 40','5 × {{9}} = 45'],2),
+   F('4. Count in steps. (6 marks)',['15, 20, 25, {{30}}, {{35}}','60, 70, 80, {{90}}, {{100}}','8, 10, 12, {{14}}, {{16}}'],1),
+   CH('5. Circle the right answer. (4 marks)',[['5 groups of 2 is',['7','10'],1],['3 × 10 is',['13','30'],1],['8 + 8 is the same as',['2 × 8','8 × 8'],0],['6 × 5 is',['30','11'],0]])),
+  pg('Topic Test: Times tables (2)','Answer every question. Add up your marks from both pages.','Check times table patterns and word problems.',
+   CH('6. Is it in the times table? Circle. (4 marks)',[['Is 25 in the 5 times table?',0],['Is 13 in the 2 times table?',1],['Is 70 in the 10 times table?',0],['Is 52 in the 10 times table?',1]],YN),
+   WP('7. Word problems. (10 marks: 2 each)',['There are 6 boxes of 10 pencils. There are {{60}} pencils.','A hand has 5 fingers. 7 hands have {{35}} fingers.','9 children each have 2 shoes. They have {{18}} shoes.','A pen costs Rs 5. 10 pens cost Rs {{50}}.','Sara has 4 packs of 5 stickers. She gives 6 away. She has {{14}} stickers left.']),
+   HOW),
+  pg('Word Mat: Times tables 2, 5 and 10','Keep this mat on the table while you work. Say the tables out loud.','Know the 2, 5 and 10 times tables and the words for multiplying.',
+   TB([1,2,3,4,5,6,7,8,9,10].map(n=>[`${n} × 2 = <b>${n*2}</b>`,`${n} × 5 = <b>${n*5}</b>`,`${n} × 10 = <b>${n*10}</b>`]),['2 times table','5 times table','10 times table']),
+   NO('<b>Tips</b><br>1. × means "groups of": 4 × 5 is 4 groups of 5.<br>2. Turn it around: 2 × 7 = 7 × 2.<br>3. 2s end in 0, 2, 4, 6, 8. 5s end in 0 or 5. 10s end in 0.<br>4. The 10 times table is double the 5 times table.'),
+   NO('<b>Maths words</b>: <b>times</b> · <b>multiply</b> · <b>groups of</b> · <b>equal groups</b> · <b>repeated adding</b> · <b>pairs</b> · <b>count in steps</b> · <b>even</b> · <b>double</b>'),
+   BK(['times','multiply','groups of','equal','pairs','even','double','steps']),
+   DR('Draw something that comes in 2s, 5s or 10s. Write a times fact for it.',90))]);
+
+ /* ---- Topic 4: Money and shopping ---- */
+ mo(10,'Count the Money',
+  CN(['money-bag'],'Our coins are Rs 1, Rs 2, Rs 5 and Rs 10. Notes we use a lot are Rs 10, Rs 20, Rs 50, Rs 100, Rs 500 and Rs 1000. Count the biggest notes first, then count on with the smaller ones.','Pakistani money'),
+  F('C. Count on.',['Rs 500 + Rs 100 + Rs 50 + Rs 20 = Rs {{670}}','Rs 100 + Rs 100 + Rs 10 + Rs 5 = Rs {{215}}','Rs 50 + Rs 20 + Rs 20 + Rs 2 = Rs {{92}}','Rs 500 + Rs 500 = Rs {{1000}}'],1),
+  F('D. Fill in the missing note or coin.',['Rs 70 = Rs 50 + Rs {{20}}','Rs 150 = Rs 100 + Rs {{50}}','Rs 600 = Rs 500 + Rs {{100}}','Rs 35 = Rs 20 + Rs 10 + Rs {{5}}'],2),
+  WP('E. Think it through.',['Ali has 3 notes of Rs 100 and 4 notes of Rs 20. He has Rs {{380}}.','Hira has 6 coins of Rs 5. She has Rs {{30}}.']));
+ mo(11,'Change Please',
+  CN(['receipt'],'To find change, count up from the price to the money you paid. A toy costs Rs 65 and you pay Rs 100: count up Rs 5 to Rs 70, then Rs 30 to Rs 100. Your change is Rs 35.','Count up for change'),
+  F('C. Find the change.',['Price Rs 85, pay Rs 100. Change: Rs {{15}}','Price Rs 240, pay Rs 500. Change: Rs {{260}}','Price Rs 19, pay Rs 50. Change: Rs {{31}}','Price Rs 675, pay Rs 1000. Change: Rs {{325}}'],2),
+  F('D. Spot the mistake.',['The price is Rs 60. Ali pays Rs 100 and gets Rs 50 back. He should get Rs {{40}}.'],1),
+  WP('E. Think it through.',['Zain buys a ball for Rs 150 and a cap for Rs 220. He pays with Rs 500. His change is Rs {{130}}.']));
+ mo(12,'Bazaar Problems',
+  NO('<b>Bazaar price list</b><br>apples Rs 300 a kilo &nbsp;·&nbsp; bananas Rs 150 a dozen &nbsp;·&nbsp; milk Rs 200 a litre &nbsp;·&nbsp; bread Rs 140 a loaf &nbsp;·&nbsp; eggs Rs 30 each'),
+  WP('B. Use the price list.',['Ammi buys 1 kilo of apples and a loaf of bread. She pays Rs {{440}}.','Abbu buys 2 litres of milk. He pays Rs {{400}}.','Hira buys 10 eggs. She pays Rs {{300}}.']),
+  CH('C. Sara has Rs 250. Can she buy it? Circle.',[['a kilo of apples',1],['a loaf of bread and a dozen bananas',1]],YN),
+  WR('D. You have Rs 500. Choose things from the price list. Add them up.',['I will buy ____________________ and ____________________.','Total: Rs ______   Change from Rs 500: Rs ______']));
+ addPages(S,'Money and shopping',[
+  pg('Money Warm-up ★','Start here if money is new. Use real coins and notes if you can.','Know our coins and notes and add small amounts.',
+   CN(['coin'],'Rs means rupees. We have coins of Rs 1, 2, 5 and 10, and notes of Rs 10, 20, 50, 100, 500 and 1000.','Our money'),
+   F('A. Add.',['Rs 10 + Rs 10 = Rs {{20}}','Rs 20 + Rs 5 = Rs {{25}}','Rs 50 + Rs 50 = Rs {{100}}','Rs 100 + Rs 20 = Rs {{120}}','Rs 5 + Rs 2 + Rs 1 = Rs {{8}}','Rs 100 + Rs 100 + Rs 100 = Rs {{300}}'],2),
+   CH('B. Which is more? Circle.',[['',['Rs 50','Rs 20'],0],['',['Rs 100','Rs 500'],1],['',['Rs 1000','Rs 100'],0]]),
+   F('C. Find the change.',['Price Rs 7, pay Rs 10. Change: Rs {{3}}','Price Rs 4, pay Rs 10. Change: Rs {{6}}','Price Rs 80, pay Rs 100. Change: Rs {{20}}','Price Rs 50, pay Rs 100. Change: Rs {{50}}'],2),
+   WP('D. Think it through.',['A pencil costs Rs 20 and an eraser costs Rs 10. Together they cost Rs {{30}}.'])),
+  pg('Money Challenge ★★★','Think carefully. Show your thinking.','Reason about money: missing amounts, puzzles and two-step problems.',
+   CH('A. True or false? Circle.',[['Rs 500 + Rs 500 = Rs 1000',0],['Two Rs 50 notes make Rs 150.',1],['The change from Rs 100 for a Rs 45 toy is Rs 55.',0],['Rs 20 + Rs 20 + Rs 20 = Rs 80',1],['Five Rs 2 coins make Rs 10.',0]],TF),
+   F('B. Fill in the missing note or coin.',['Rs 100 + Rs {{50}} + Rs 20 = Rs 170','Rs 500 + Rs {{100}} + Rs 5 = Rs 605','Rs {{20}} + Rs 20 + Rs 10 = Rs 50','Rs 50 + Rs 50 + Rs {{10}} = Rs 110'],2),
+   F('C. Puzzles.',['Sara has three notes that make Rs 160. They are Rs 100, Rs 50 and Rs {{10}}.','Zain paid Rs 200 and got Rs 35 change. The price was Rs {{165}}.','Two toys cost the same. Together they cost Rs 90. One toy costs Rs {{45}}.']),
+   WP('D. Think it through.',['Hira wants a book that costs Rs 350. She has Rs 275. She needs Rs {{75}} more.','A juice costs Rs 60. Bilal buys 2 juices and pays with Rs 500. His change is Rs {{380}}.'])),
+  pg('Topic Test: Money and shopping (1)','Answer every question. Ask a grown-up to mark it out of 32.','Check counting money, finding change and comparing amounts.',
+   SC(32,16,25),
+   F('1. Count the money. (4 marks)',['Rs 500 + Rs 100 + Rs 20 = Rs {{620}}','Rs 50 + Rs 20 + Rs 5 + Rs 2 = Rs {{77}}','Rs 100 + Rs 100 + Rs 50 + Rs 10 = Rs {{260}}','Rs 500 + Rs 500 = Rs {{1000}}'],1),
+   F('2. Find the change. (6 marks)',['Price Rs 35, pay Rs 50. Change: Rs {{15}}','Price Rs 72, pay Rs 100. Change: Rs {{28}}','Price Rs 160, pay Rs 200. Change: Rs {{40}}','Price Rs 450, pay Rs 500. Change: Rs {{50}}','Price Rs 315, pay Rs 500. Change: Rs {{185}}','Price Rs 820, pay Rs 1000. Change: Rs {{180}}'],2),
+   CH('3. Circle the greater amount. (4 marks)',[['',['Rs 350','Rs 305'],0],['',['Rs 99','Rs 100'],1],['',['two Rs 50 notes','one Rs 500 note'],1],['',['five Rs 20 notes','one Rs 50 note'],0]])),
+  pg('Topic Test: Money and shopping (2)','Answer every question. Add up your marks from both pages.','Check missing amounts, shopping problems and spotting mistakes.',
+   F('4. Fill in the missing note or coin. (4 marks)',['Rs 100 + Rs {{20}} = Rs 120','Rs {{500}} + Rs 50 = Rs 550','Rs 50 + Rs {{5}} = Rs 55','Rs 10 + Rs 10 + Rs {{2}} = Rs 22'],2),
+   WP('5. Word problems. (10 marks: 2 each)',['A cap costs Rs 180 and a ball costs Rs 120. Together they cost Rs {{300}}.','Zain has Rs 400. He buys shoes for Rs 275. He has Rs {{125}} left.','One mango costs Rs 50. Ammi buys 4 mangoes. She pays Rs {{200}}.','Sara pays Rs 500 for a doll that costs Rs 365. Her change is Rs {{135}}.','Ali saves Rs 10 every day for 7 days. He saves Rs {{70}}.']),
+   F('6. Spot the mistake. Write it right. (4 marks: 2 each)',['A Rs 55 toy, paid with Rs 100, change given Rs 55. It should be Rs {{45}}.','Rs 200 + Rs 50 + Rs 5 was added up as Rs 205. It should be Rs {{255}}.'],1),
+   HOW),
+  pg('Word Mat: Money and shopping','Keep this mat on the table while you work. Read the words together.','Know our coins and notes and the words for shopping.',
+   CN(['money-bag','coin'],'Rs stands for rupees. Count money from the biggest note to the smallest. To find change, count up from the price to the money you paid, or take the price away from the money you paid.','Money'),
+   TB([['Rs 1','Rs 2','Rs 5','Rs 10','',''],['Rs 10','Rs 20','Rs 50','Rs 100','Rs 500','Rs 1000']].map((r,i)=>[i?'<b>notes</b>':'<b>coins</b>'].concat(r))),
+   NO('<b>Example</b>: a book costs Rs 65. You pay Rs 100. Count up: Rs 65 → Rs 70 is Rs 5, Rs 70 → Rs 100 is Rs 30. Change = Rs 5 + Rs 30 = Rs 35.'),
+   NO('<b>Tips</b><br>1. Write Rs before the number: Rs 250.<br>2. Adding prices is just adding numbers. Line up the digits.<br>3. Check your change: price + change = money paid.<br>4. Make a list and a budget before you go shopping.'),
+   NO('<b>Maths words</b>: <b>rupees</b> · <b>coin</b> · <b>note</b> · <b>price</b> · <b>cost</b> · <b>pay</b> · <b>change</b> · <b>total</b> · <b>spend</b> · <b>save</b> · <b>cheaper</b> · <b>more expensive</b>'),
+   BK(['price','cost','pay','change','total','spend','save','cheaper']),
+   DR('Draw a shop with 4 things and their prices. Work out the cost of two of them.',90))]);
+});

@@ -1212,3 +1212,188 @@ DEPTH.push(({addPages})=>{const S='maths';
    BK(['take away','minus','subtract','left','fewer','count back','difference','equals']),
    DR('Draw 12 circles. Cross out 5. Write the sum.',110))]);
 });
+
+/* D10: Grade 1 Maths topics 5 to 8 (2 times table, Shapes and lines, Money, Time).
+   Same method as D9: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const GRP=(h,items)=>({t:'groups',h,items});
+ const OE=['odd','even'];
+
+ /* ---- Topic 5: 2 times table ---- */
+ mo(10,'The 2 Times Table',
+  F('C. Add the twos. Then write the times fact.',['2 + 2 + 2 = {{6}}, so 3 × 2 = {{6}}','2 + 2 + 2 + 2 + 2 = {{10}}, so 5 × 2 = {{10}}','2 + 2 = {{4}}, so 2 × 2 = {{4}}','2 + 2 + 2 + 2 + 2 + 2 = {{12}}, so 6 × 2 = {{12}}'],1),
+  FP('D. Count the pairs.',[['socks','3 pairs of socks: 3 × 2 = {{6}} socks'],['running-shoe','7 pairs of shoes: 7 × 2 = {{14}} shoes'],['gloves','4 pairs of gloves: 4 × 2 = {{8}} gloves'],['eye','5 children have {{10}} eyes.']]));
+ mo(18,'Counting in Twos',
+  NO('Numbers we say when we count in twos are <b>even</b>: 2, 4, 6, 8, 10 … The numbers in between are <b>odd</b>: 1, 3, 5, 7, 9 …'),
+  CH('D. Odd or even? Circle.',[['6',1],['9',0],['14',1],['17',0]],OE));
+ mo(19,'Twos Word Problems',
+  FP('More twos.',[['duck','Each duck has 2 legs. 7 ducks have {{14}} legs.'],['cherries','Each stalk has 2 cherries. 9 stalks have {{18}} cherries.'],['ear','Each child has 2 ears. 4 children have {{8}} ears.'],['socks','A pack has 2 socks. 6 packs have {{12}} socks.']]),
+  WP('Sharing in twos.',['Sara shares 10 sweets equally between 2 friends. Each friend gets {{5}}.','16 children stand in pairs. There are {{8}} pairs.']));
+ addPages(S,'2 times table',[
+  pg('2 Times Table Warm-up ★','Start here if the 2 times table is new. Count in twos on your fingers.','Make groups of 2 and count in twos to 10.',
+   CN(['socks','socks'],'Some things come in twos. A pair of socks is 2 socks. Two pairs is 2, 4: 4 socks.','Pairs'),
+   GRP('A. How many groups of 2? How many in all?',[1,2,3,4]),
+   BX('B. Count in twos.',['2|{{4}}|6|{{8}}|10','10|{{8}}|6|{{4}}|2']),
+   F('C. Solve.',['1 × 2 = {{2}}','2 × 2 = {{4}}','3 × 2 = {{6}}','4 × 2 = {{8}}','5 × 2 = {{10}}','0 × 2 = {{0}}'],3),
+   WP('D. A grown-up reads. Write the answer.',['Ali has 2 hands. Sara has 2 hands. There are {{4}} hands.','3 birds each have 2 wings. There are {{6}} wings.'])),
+  pg('2 Times Table Challenge ★★★','Think carefully. Show your thinking.','Reason with the 2 times table, odd and even, and halves.',
+   F('A. True or false? Write T or F.',['6 × 2 = 12 {{T}}','7 × 2 = 15 {{F}}','2 × 9 = 9 × 2 {{T}}','13 is even {{F}}','10 × 2 = 20 {{T}}','Every number in the 2 times table is even {{T}}'],2),
+   F('B. Spot the mistake. Write the right answer.',['Zain says 8 × 2 = 18. It is {{16}}.','Hira says 9 × 2 = 19. It is {{18}}.'],1),
+   F('C. Missing numbers.',['{{7}} × 2 = 14','{{5}} × 2 = 10','{{9}} × 2 = 18','2 × {{6}} = 12','{{3}} × 2 = 6','2 × {{10}} = 20'],3),
+   F('D. Puzzles.',['I am an even number between 15 and 18. I am {{16}}.','Half of me is 7. I am {{14}}.','10 × 2 = 20, so 11 × 2 = {{22}}.']),
+   WP('E. Think it through.',['Bilal has 6 pairs of socks. He loses 1 sock. He has {{11}} socks left.','A boat holds 2 children. 14 children want a ride. They need {{7}} boats.'])),
+  pg('Topic Test: 2 times table (1)','Answer every question. Ask a grown-up to mark it out of 32.','Check groups of 2 and the 2 times table.',
+   SC(32,16,26),
+   GRP('1. How many groups? How many in all? (6 marks)',[2,5,8]),
+   F('2. Solve. (8 marks)',['3 × 2 = {{6}}','6 × 2 = {{12}}','1 × 2 = {{2}}','9 × 2 = {{18}}','5 × 2 = {{10}}','8 × 2 = {{16}}','10 × 2 = {{20}}','4 × 2 = {{8}}'],4),
+   BX('3. Count in twos. (4 marks)',['2|4|{{6}}|8|{{10}}|12','20|18|{{16}}|14|{{12}}|10']),
+   NO('Tip: count in twos on your fingers to check each answer.<br>Remember: 3 × 2 means 3 groups of 2, which is 2 + 2 + 2 = 6.')),
+  pg('Topic Test: 2 times table (2)','Answer every question. Add up your marks from both pages.','Check odd and even, doubles and twos word problems.',
+   CH('4. Odd or even? Circle. (4 marks)',[['8',1],['15',0],['12',1],['3',0]],OE),
+   F('5. Double it. (4 marks)',['Double 4 = {{8}}','Double 7 = {{14}}','Double 9 = {{18}}','Double 5 = {{10}}'],2),
+   WP('6. Word problems. (6 marks: 2 each)',['A bicycle has 2 wheels. 6 bicycles have {{12}} wheels.','A plate holds 2 parathas. 7 plates hold {{14}} parathas.','Hamza shares 18 marbles equally between 2 boxes. Each box has {{9}} marbles.']),
+   HOW),
+  pg('Word Mat: 2 times table','Keep this mat on the table while you work. Say the table aloud.','Know the 2 times table, odd and even, and the words for groups.',
+   NO('<b>The 2 times table</b><br><span style="font-size:19px">1 × 2 = 2 &nbsp; 2 × 2 = 4 &nbsp; 3 × 2 = 6 &nbsp; 4 × 2 = 8 &nbsp; 5 × 2 = 10<br>6 × 2 = 12 &nbsp; 7 × 2 = 14 &nbsp; 8 × 2 = 16 &nbsp; 9 × 2 = 18 &nbsp; 10 × 2 = 20</span>'),
+   CN(['running-shoe','running-shoe'],'Times (×) means groups of. 3 × 2 is 3 groups of 2. It is the same as 2 + 2 + 2 = 6. Doubling a number is the same as times 2.','Groups of 2'),
+   NO('<b>Even</b>: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 (they end in 0, 2, 4, 6 or 8)<br><b>Odd</b>: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 (they end in 1, 3, 5, 7 or 9)'),
+   NO('<b>Maths words</b><br><b>pair</b>: a group of 2 · <b>groups of</b> · <b>times</b> (×) · <b>double</b>: two lots of the same · <b>half</b>: share into 2 equal parts · <b>equal</b>: the same'),
+   {t:'numline'},
+   BK(['pair','group','times','double','half','even','odd','equal']),
+   DR('Draw 6 pairs of shoes. Write the times fact.',110))]);
+
+ /* ---- Topic 6: Shapes and lines ---- */
+ mo(20,'Flat Shapes',
+  CN(['red-square','blue-circle','yellow-square'],'A flat shape (2-D shape) is like a drawing on paper. It has sides and corners. Sides are lines. A corner is where two sides meet.','Flat shapes'),
+  F('B. More flat shapes.',['pentagon: {{5}} sides, {{5}} corners','hexagon: {{6}} sides, {{6}} corners','oval: {{0}} corners','square: all {{4}} sides are the same length'],1),
+  CH('C. Circle the shape.',[['I have 3 sides.',['triangle','square'],0],['I have no corners.',['circle','rectangle'],0],['I have 6 sides.',['pentagon','hexagon'],1],['I have 4 sides. Two are long and two are short.',['square','rectangle'],1]]));
+ mo(21,'Solid Shapes',
+  CN(['soccer-ball','game-die','soft-ice-cream'],'Solid shapes (3-D shapes) are not flat. You can hold them. They have faces (flat or curved surfaces), edges and corners. A ball is a sphere and a dice is a cube.','Solid shapes'),
+  F('B. Fill in.',['A cube has {{6}} faces.','A sphere has {{0}} corners.','A cylinder has {{2}} flat faces.','A cone has {{1}} flat face.'],2),
+  FP('C. Name the solid shape.',[['package','A box is a {{cuboid}}.'],['soccer-ball','A football is a {{sphere}}.'],['game-die','A dice is a {{cube}}.'],['battery','A battery is a {{cylinder}}.']]));
+ mo(22,'Straight or Curved?',
+  CH('B. Straight sides, curved or both? Circle.',[['square',0],['circle',1],['semicircle (half a circle)',2],['a slice of pizza',2]],['straight','curved','both']),
+  F('C. Count the lines.',['A triangle has {{3}} straight sides.','A rectangle has {{4}} straight sides.','A hexagon has {{6}} straight sides.','A circle has {{0}} straight sides.'],2));
+ addPages(S,'Shapes and lines',[
+  pg('Shapes and Lines Warm-up ★','Start here if shapes are new. Trace with your finger first.','Name circles, squares, triangles and rectangles.',
+   TS('A. Trace the shapes. Say their names.',['circle','square','tri']),
+   CT('B. Count the shapes.',[[3,'tri'],[5,'circle'],[2,'square'],[4,'star']]),
+   CH('C. Circle the name.',[['a shape with 3 sides',['triangle','circle'],0],['a round shape',['square','circle'],1],['a shape with 4 equal sides',['square','triangle'],0]]),
+   F('D. Fill in.',['A triangle has {{3}} sides.','A square has {{4}} corners.'],2),
+   DR('E. Draw a house with a square and a triangle.',110)),
+  pg('Shapes and Lines Challenge ★★★','Think carefully. Show your thinking.','Reason about sides, corners, faces and shape patterns.',
+   CH('A. True or false? Circle.',[['A square is a kind of rectangle.',0],['A circle has 1 corner.',1],['A cube has 6 faces.',0],['A cone can roll.',0],['A triangle can have 4 sides.',1]],TF),
+   F('B. Riddles.',['I have 5 sides and 5 corners. I am a {{pentagon}}.','I am a solid shape. All my 6 faces are squares. I am a {{cube}}.','I roll. I have 2 flat faces. I am a {{cylinder}}.']),
+   F('C. Count all the sides.',['2 triangles: {{6}} sides','1 square and 1 triangle: {{7}} sides','3 rectangles: {{12}} sides','1 hexagon and 1 pentagon: {{11}} sides'],2),
+   PT('D. What comes next? Draw it.',[[['circle','square','circle','square','circle'],'square'],[['tri','tri','circle','tri','tri'],'circle'],[['star','square','square','star','square'],'square']])),
+  pg('Topic Test: Shapes and lines (1)','Answer every question. Ask a grown-up to mark it out of 30.','Check flat shapes, sides and corners.',
+   SC(30,15,24),
+   F('1. Sides and corners. (8 marks)',['triangle: {{3}} sides, {{3}} corners','square: {{4}} sides, {{4}} corners','pentagon: {{5}} sides, {{5}} corners','circle: {{0}} sides, {{0}} corners'],1),
+   CT('2. Count the shapes. (3 marks)',[[6,'tri'],[4,'circle'],[7,'square']]),
+   CH('3. Circle the shape. (4 marks)',[['6 sides',['hexagon','pentagon'],0],['round, no corners',['circle','square'],0],['4 sides, 2 long and 2 short',['square','rectangle'],1],['3 corners',['triangle','rectangle'],0]])),
+  pg('Topic Test: Shapes and lines (2)','Answer every question. Add up your marks from both pages.','Check solid shapes and straight and curved lines.',
+   F('4. Name the solid shape. (4 marks)',['a football: {{sphere}}','a dice: {{cube}}','a tin: {{cylinder}}','an ice cream cone: {{cone}}'],2),
+   F('5. Faces. (3 marks)',['A cube has {{6}} faces.','A cylinder has {{2}} flat faces.','A cone has {{1}} flat face.'],1),
+   CH('6. Straight, curved or both? Circle. (4 marks)',[['triangle',0],['circle',1],['semicircle',2],['rectangle',0]],['straight','curved','both']),
+   WP('7. Word problems. (4 marks: 2 each)',['Sara draws 4 triangles. She draws {{12}} sides.','A box is a cuboid. It has {{6}} faces. Bilal paints 2 of them. {{4}} faces are not painted.']),
+   HOW),
+  pg('Word Mat: Shapes and lines','Keep this mat on the table while you work. Point and say each shape.','Know the names of flat and solid shapes and their sides, corners and faces.',
+   NO('<b>Flat shapes (2-D)</b><br>circle: 0 sides, 0 corners · triangle: 3 sides, 3 corners · square: 4 equal sides, 4 corners<br>rectangle: 4 sides (2 long, 2 short), 4 corners · pentagon: 5 sides · hexagon: 6 sides · oval: 0 corners'),
+   TS('',['circle','square','tri','star']),
+   CN(['soccer-ball','game-die','package','battery','soft-ice-cream'],'Solid shapes (3-D): sphere (a ball), cube (a dice), cuboid (a box), cylinder (a tin), cone (an ice cream cone). A cube and a cuboid have 6 faces, 12 edges and 8 corners.','Solid shapes'),
+   NO('<b>Maths words</b><br><b>side</b>: a straight line of a flat shape · <b>corner</b>: where two sides meet · <b>face</b>: a surface of a solid shape<br><b>edge</b>: where two faces meet · <b>straight</b>: does not bend · <b>curved</b>: bends · <b>roll</b> · <b>stack</b>'))]);
+
+ /* ---- Topic 7: Money ---- */
+ mo(23,'Pakistani Coins and Notes',
+  CN(['coin','money-bag'],'In Pakistan we use rupees (Rs). Coins: Rs 1, Rs 2, Rs 5 and Rs 10. Notes: Rs 10, Rs 20, Rs 50, Rs 100, Rs 500, Rs 1000 and Rs 5000.','Pakistani money'),
+  CH('B. Coin or note? Circle.',[['Rs 2',0],['Rs 100',1],['Rs 5',0],['Rs 500',1]],['coin','note']),
+  CH('C. Circle the one worth more.',[['',['Rs 20','Rs 50'],1],['',['Rs 100','Rs 10'],0],['',['Rs 5','Rs 2'],0],['',['Rs 500','Rs 1000'],1]]));
+ mo(24,'Add the Money',
+  FP('B. How much altogether?',[['candy','a sweet Rs 5 and a lollipop Rs 10: Rs {{15}}'],['balloon','a balloon Rs 20 and a sweet Rs 5: Rs {{25}}'],['pencil','two pencils at Rs 10 each: Rs {{20}}'],['red-apple','an apple Rs 30 and a banana Rs 20: Rs {{50}}']]),
+  F('C. Make the amount.',['Rs 15 = Rs 10 + Rs {{5}}','Rs 30 = Rs 20 + Rs {{10}}','Rs 60 = Rs 50 + Rs {{10}}','Rs 7 = Rs 5 + Rs {{2}}','Rs 70 = Rs 50 + Rs {{20}}','Rs 12 = Rs 10 + Rs {{2}}'],2),
+  WP('D. Word problems.',['Ammi has a Rs 50 note and a Rs 20 note. She has Rs {{70}}.','Ali has three Rs 5 coins. He has Rs {{15}}.','Sara saves Rs 10 on Monday and Rs 10 on Tuesday. She has Rs {{20}}.']),
+  DR('E. Draw coins to make Rs 18.',75));
+ mo(25,'At the Shop',
+  NO('<b>Shop prices</b>: pencil Rs 10 · eraser Rs 5 · sharpener Rs 15 · juice Rs 20 · notebook Rs 50'),
+  F('B. Use the prices. How much?',['a pencil and an eraser: Rs {{15}}','a juice and a pencil: Rs {{30}}','two erasers: Rs {{10}}','a notebook and a juice: Rs {{70}}'],2),
+  F('C. Find the change.',['You pay Rs 20 for a sharpener. Change: Rs {{5}}','You pay Rs 20 for a pencil. Change: Rs {{10}}','You pay Rs 50 for a juice. Change: Rs {{30}}','You pay Rs 100 for a notebook. Change: Rs {{50}}'],1),
+  WP('D. Word problems.',['Hamza has Rs 25. He buys a juice. He has Rs {{5}} left.','Zara buys 3 erasers. She pays Rs {{15}}.']));
+ addPages(S,'Money',[
+  pg('Money Warm-up ★','Start here if money is new. Look at real coins with a grown-up.','Know Pakistani coins and add two small amounts.',
+   FP('A. Write the value.',[['coin','This coin says 1. It is Rs {{1}}.'],['coin','This coin says 2. It is Rs {{2}}.'],['coin','This coin says 5. It is Rs {{5}}.'],['coin','This coin says 10. It is Rs {{10}}.']]),
+   CH('B. Circle the one worth more.',[['',['Rs 1','Rs 5'],1],['',['Rs 10','Rs 2'],0],['',['Rs 2','Rs 5'],1]]),
+   F('C. Add the coins.',['Rs 1 + Rs 1 = Rs {{2}}','Rs 2 + Rs 2 = Rs {{4}}','Rs 5 + Rs 1 = Rs {{6}}','Rs 5 + Rs 5 = Rs {{10}}','Rs 2 + Rs 1 = Rs {{3}}','Rs 10 + Rs 1 = Rs {{11}}'],3),
+   WP('D. A grown-up reads. Write the answer.',['A sweet costs Rs 5. Ali has Rs 5. Can he buy it? {{yes}}','Sara has a Rs 2 coin and a Rs 2 coin. She has Rs {{4}}.']),
+   DR('E. Draw a money box with 4 coins inside.',65)),
+  pg('Money Challenge ★★★','Think carefully. Show your thinking.','Make amounts in different ways, find change and spot mistakes.',
+   CH('A. True or false? Circle.',[['Two Rs 50 notes make Rs 100.',0],['Rs 20 + Rs 5 = Rs 30',1],['Five Rs 2 coins make Rs 10.',0],['Rs 500 is less than Rs 100.',1]],TF),
+   F('B. Three ways to make Rs 20.',['Rs 10 + Rs {{10}}','Rs 5 + Rs 5 + Rs {{10}}','Rs 10 + Rs 5 + Rs 2 + Rs 2 + Rs {{1}}'],1),
+   F('C. Spot the mistake. Write the right answer.',['Ali says Rs 50 + Rs 20 = Rs 80. It is Rs {{70}}.','Hira pays Rs 20 for a Rs 15 toy and says her change is Rs 10. It is Rs {{5}}.'],1),
+   WP('D. Word problems.',['Bilal has Rs 50. He buys a book for Rs 30 and a pencil for Rs 10. He has Rs {{10}} left.','Two friends share Rs 40 equally. Each gets Rs {{20}}.','A juice costs Rs 20. Zain buys 3. He pays Rs {{60}}.'])),
+  pg('Topic Test: Money (1)','Answer every question. Ask a grown-up to mark it out of 30.','Check knowing coins and notes and adding money.',
+   SC(30,15,24),
+   CH('1. Coin or note? Circle. (4 marks)',[['Rs 1',0],['Rs 50',1],['Rs 5',0],['Rs 1000',1]],['coin','note']),
+   CH('2. Circle the one worth more. (3 marks)',[['',['Rs 10','Rs 20'],1],['',['Rs 100','Rs 50'],0],['',['Rs 2','Rs 5'],1]]),
+   F('3. How much altogether? (6 marks)',['Rs 5 + Rs 5 = Rs {{10}}','Rs 10 + Rs 2 = Rs {{12}}','Rs 20 + Rs 10 = Rs {{30}}','Rs 50 + Rs 20 = Rs {{70}}','Rs 10 + Rs 5 + Rs 1 = Rs {{16}}','Rs 20 + Rs 20 + Rs 5 = Rs {{45}}'],2),
+   NO('Tip: start with the biggest coin or note, then count on.')),
+  pg('Topic Test: Money (2)','Answer every question. Add up your marks from both pages.','Check shopping, change and money word problems.',
+   NO('<b>Prices</b>: sweet Rs 5 · pencil Rs 10 · juice Rs 20 · ball Rs 50'),
+   F('4. How much? (4 marks)',['a sweet and a pencil: Rs {{15}}','a juice and a ball: Rs {{70}}','two pencils: Rs {{20}}','a ball and a sweet: Rs {{55}}'],2),
+   F('5. Find the change. (4 marks)',['Pay Rs 10 for a sweet. Change: Rs {{5}}','Pay Rs 50 for a juice. Change: Rs {{30}}','Pay Rs 20 for a pencil. Change: Rs {{10}}','Pay Rs 100 for a ball. Change: Rs {{50}}'],2),
+   WP('6. Word problems. (6 marks: 2 each)',['Hamza has a Rs 20 note and a Rs 5 coin. He has Rs {{25}}.','Sara has Rs 30. She buys a juice. She has Rs {{10}} left.','Ali buys 4 sweets. He pays Rs {{20}}.']),
+   F('7. Make Rs 15 in two ways. (3 marks)',['Rs 10 + Rs {{5}}','Rs 5 + Rs 5 + Rs {{5}}','Rs 10 + Rs 2 + Rs 2 + Rs {{1}}'],1),
+   HOW),
+  pg('Word Mat: Money','Keep this mat on the table. Point and say each amount.','Know Pakistani coins and notes and the words for money.',
+   NO('<b>Coins</b>: <span style="font-size:20px">Rs 1 &nbsp; Rs 2 &nbsp; Rs 5 &nbsp; Rs 10</span><br><b>Notes</b>: <span style="font-size:20px">Rs 10 &nbsp; Rs 20 &nbsp; Rs 50 &nbsp; Rs 100 &nbsp; Rs 500 &nbsp; Rs 1000 &nbsp; Rs 5000</span>'),
+   CN(['coin','money-bag','shopping-bags'],'We use coins and notes to buy things. Rs means rupees. To find the total, add the prices. To find the change, take the price away from the money you pay.','Money'),
+   NO('<b>Ways to make Rs 50</b><br><span style="font-size:19px">one Rs 50 note &nbsp; Rs 20 + Rs 20 + Rs 10 &nbsp; five Rs 10 notes &nbsp; Rs 20 + Rs 10 + Rs 10 + Rs 5 + Rs 5</span>'),
+   NO('<b>Maths words</b><br><b>coin</b>: round metal money · <b>note</b>: paper money · <b>rupee</b> (Rs): money in Pakistan · <b>price</b> or <b>cost</b>: how much it is<br><b>total</b>: all the money added · <b>pay</b>: give money · <b>change</b>: money we get back · <b>spend</b> · <b>save</b>'),
+   BK(['coin','note','rupee','price','total','pay','change','save']),
+   DR('Draw your own shop with 4 things and their prices.',110))]);
+
+ /* ---- Topic 8: Time ---- */
+ mo(26,"O'Clock",
+  CN(['alarm-clock'],"A clock has a short hand and a long hand. The short hand shows the hour. At o'clock the long hand points straight up to 12.","Reading a clock"),
+  F('B. One hour later.',["3 o'clock → {{4}} o'clock","7 o'clock → {{8}} o'clock","11 o'clock → {{12}} o'clock","12 o'clock → {{1}} o'clock"],2),
+  WP('C. Word problem.',["School starts at 8 o'clock. It ends 5 hours later, at {{1}} o'clock."]));
+ mo(27,'Half Past',
+  CN(['mantelpiece-clock'],'Half past means half an hour (30 minutes) after the hour. The long hand points down to 6. The short hand is halfway between two numbers.','Half past'),
+  F('B. Fill in.',['At half past 4 the long hand points to {{6}}.','At half past 9 the short hand is between {{9}} and {{10}}.','Half an hour is {{30}} minutes.','Half past 2 comes after {{2}} o\'clock.'],1));
+ mo(28,'My Day',
+  CY('B. Put the day in order.',[['sunrise','wake up'],['school','go to school'],['bowl-with-spoon','eat lunch'],['crescent-moon','go to sleep']]),
+  F('C. Days and weeks.',['There are {{7}} days in a week.','After Friday comes {{Saturday}}.','Before Monday comes {{Sunday}}.','There are {{12}} months in a year.','There are {{24}} hours in a day.','There are {{60}} minutes in an hour.'],2),
+  CH('D. Which takes longer? Circle.',[['',['brushing teeth','a night of sleep'],1],['',['a school day','eating a biscuit'],0],['',['clapping once','reading a book'],1]]));
+ addPages(S,'Time',[
+  pg('Time Warm-up ★','Start here if telling the time is new. Use a real clock with a grown-up.',"Read o'clock times and say the parts of the day.",
+   CN(['alarm-clock'],"The short hand shows the hour. When the long hand points to 12, it is o'clock.","O'clock"),
+   CL('A. What time is it?',[[2,0],[5,0],[9,0]]),
+   CH('B. Morning, afternoon or night? Circle.',[['eat breakfast',0],['see the stars',2],['come home from school',1]],['morning','afternoon','night']),
+   BX('C. Fill in the days.',['Monday|{{Tuesday}}|Wednesday|{{Thursday}}','Friday|{{Saturday}}|{{Sunday}}']),
+   F('D. Fill in.',["At 6 o'clock the short hand points to {{6}}."],1)),
+  pg('Time Challenge ★★★','Think carefully. Show your thinking.','Work out times later and earlier, and use quarter past.',
+   CH('A. True or false? Circle.',[["At half past 3 the long hand points to 6.",0],['There are 60 minutes in an hour.',0],['A week has 5 days.',1],["At 7 o'clock the short hand points to 12.",1]],TF),
+   NO('<b>Quarter past</b>: 15 minutes after the hour. The long hand points to 3.'),
+   CL('B. What time is it?',[[4,30],[8,15],[11,30]]),
+   F('C. Work it out.',["One hour after half past 6 is half past {{7}}.","2 hours before 1 o'clock is {{11}} o'clock."],1),
+   WP('D. Think it through.',["Sara's lesson starts at half past 9 and lasts half an hour. It ends at {{10}} o'clock."])),
+  pg("Topic Test: Time (1)","Answer every question. Ask a grown-up to mark it out of 28.","Check o'clock and half past.",
+   SC(28,14,23),
+   CL("1. What time is it? (6 marks)",[[3,0],[10,0],[6,30],[1,30],[12,0],[7,30]]),
+   F('2. Fill in. (4 marks)',["At o'clock the long hand points to {{12}}.","At half past the long hand points to {{6}}.","At 8 o'clock the short hand points to {{8}}.","Half an hour is {{30}} minutes."],1)),
+  pg("Topic Test: Time (2)","Answer every question. Add up your marks from both pages.","Check days, units of time and time word problems.",
+   F('3. One hour later. (4 marks)',["2 o'clock → {{3}} o'clock","9 o'clock → {{10}} o'clock","12 o'clock → {{1}} o'clock","half past 4 → half past {{5}}"],4),
+   F('4. Fill in. (6 marks)',['{{7}} days = 1 week','{{60}} minutes = 1 hour','{{24}} hours = 1 day','{{12}} months = 1 year','after Wednesday: {{Thursday}}','before Saturday: {{Friday}}'],3),
+   CH('5. Which takes longer? Circle. (2 marks)',[['',['eating lunch','a week'],1],['',['a day','a minute'],0]]),
+   WP('6. Word problems. (6 marks: 2 each)',["Ali goes to bed at 8 o'clock. Hira goes 1 hour later, at {{9}} o'clock.","Football starts at 3 o'clock and lasts half an hour. It ends at half past {{3}}.","Today is Friday. Tomorrow is {{Saturday}}."]),
+   HOW),
+  pg('Word Mat: Time','Keep this mat on the table while you work. Read the words together.',"Know o'clock and half past, and the words for time.",
+   CL('',[[3,0],[3,30],[9,0]]),
+   NO("<b>Reading the clock</b><br>The <b>short hand</b> shows the hour. The <b>long hand</b> shows the minutes.<br><b>o'clock</b>: long hand on 12 · <b>half past</b>: long hand on 6 · <b>quarter past</b>: long hand on 3"),
+   NO('<b>Days of the week</b>: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday<br><b>Units</b>: 60 minutes = 1 hour · 24 hours = 1 day · 7 days = 1 week · 12 months = 1 year'),
+   NO('<b>Maths words</b><br><b>hour</b> · <b>minute</b> · <b>half an hour</b> · <b>morning</b> · <b>afternoon</b> · <b>evening</b> · <b>night</b> · <b>earlier</b> · <b>later</b> · <b>before</b> · <b>after</b>'),
+   BK(['hour','minute',"o'clock",'half past','day','week','month','year']),
+   DR('Draw a clock showing the time you wake up.',110))]);
+});

@@ -2685,19 +2685,7 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
 
-## maths (65 pages)
-- p10 0.47 2 times table / The 2 Times Table
-- p18 0.56 2 times table / Counting in Twos
-- p19 0.32 2 times table / Twos Word Problems
-- p20 0.19 Shapes and lines / Flat Shapes
-- p21 0.30 Shapes and lines / Solid Shapes
-- p22 0.30 Shapes and lines / Straight or Curved?
-- p23 0.14 Money / Pakistani Coins and Notes
-- p24 0.14 Money / Add the Money
-- p25 0.25 Money / At the Shop
-- p26 0.53 Time / O'Clock
-- p27 0.53 Time / Half Past
-- p28 0.25 Time / My Day
+## maths (53 pages)
 - p29 0.20 Measuring / Longer or Shorter?
 - p30 0.15 Measuring / Measure with Hands
 - p31 0.15 Measuring / Holds More

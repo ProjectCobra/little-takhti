@@ -57,7 +57,7 @@ Status: todo, lyrics, song, rendered, review, posted.
 
 | Topic | Id | Status | Site | YouTube | Short | Instagram |
 |---|---|---|---|---|---|---|
-| My body | nursery-gk-t1 | lyrics |  |  |  |  |
+| My body | nursery-gk-t1 | song (flow da4a9fbb-f7d9-4c52-af8d-036607874964) |  |  |  |  |
 | Colours | nursery-gk-t2 | todo |  |  |  |  |
 | Animals | nursery-gk-t3 | todo |  |  |  |  |
 | Fruits and vegetables | nursery-gk-t4 | todo |  |  |  |  |

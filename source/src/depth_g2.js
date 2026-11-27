@@ -700,3 +700,189 @@ DEPTH.push(({addPages})=>{const S='g2-maths';
    BK(['price','cost','pay','change','total','spend','save','cheaper']),
    DR('Draw a shop with 4 things and their prices. Work out the cost of two of them.',90))]);
 });
+
+/* D14: Grade 2 Maths topics 5 to 8 (Time and calendar, Length, mass and capacity, Shapes and symmetry, Halves and quarters).
+   Same method as D13: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='g2-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const TB=(rows,head)=>{let s='<table style="border-collapse:collapse;margin:0 auto;font-size:16px">';if(head)s+='<tr>'+head.map(h=>`<th style="border:1px solid #9aa;padding:3px 10px;background:#FFF3D1">${h}</th>`).join('')+'</tr>';rows.forEach(r=>{s+='<tr>'+r.map(c=>`<td style="border:1px solid #9aa;padding:3px 10px;text-align:center">${c}</td>`).join('')+'</tr>'});return NO(s+'</table>')};
+
+ /* ---- Topic 5: Time and calendar ---- */
+ mo(13,'Quarter Past and To',
+  CN(['mantelpiece-clock'],'The long hand shows the minutes and the short hand shows the hour. At quarter past, the long hand points to 3. At half past, it points to 6. At quarter to, it points to 9 and the next hour is coming.','Quarter hours'),
+  F('B. Write the time in words.',['3:15 is quarter past {{3}}','7:45 is quarter {{to}} 8','10:30 is {{half}} past 10','5:45 is quarter to {{6}}'],2));
+ mo(14,'Minutes and Hours',
+  CN(['stopwatch'],'60 seconds make 1 minute. 60 minutes make 1 hour. 24 hours make 1 day. 7 days make 1 week. 12 months make 1 year.','Units of time'),
+  F('B. Fill in.',['2 hours = {{120}} minutes','2 weeks = {{14}} days','1 minute = {{60}} seconds','3 days = {{72}} hours','2 years = {{24}} months','half an hour + a quarter of an hour = {{45}} minutes'],2),
+  WP('C. How long?',["Hira stayed at her Nani's house for 3 weeks. That is {{21}} days.",'A cake bakes for 1 hour and 15 minutes. That is {{75}} minutes.']));
+ mo(15,'Reading a Calendar',
+  CN(['spiral-calendar'],'A year has 12 months. April, June, September and November have 30 days. February has 28 days, or 29 in a leap year. All the other months have 31 days.','Months of the year'),
+  BX('B. Write the missing months.',['January|{{February}}|March|{{April}}|May|{{June}}','July|{{August}}|September|{{October}}|November|{{December}}']),
+  F('C. Fill in.',['There are {{30}} days in June.','There are {{31}} days in August.','Iqbal Day is on 9 {{November}}.'],2));
+ addPages(S,'Time and calendar',[
+  pg('Time Warm-up ★','Start here if telling the time is new. Use a real clock if you can.',"Read o'clock and half past, and know days and simple time facts.",
+   CN(['alarm-clock'],"When the long hand points to 12, it is o'clock. When the long hand points to 6, it is half past. The short hand tells you the hour.",'Reading a clock'),
+   CL('A. What time is it?',[[3,0],[6,30],[9,0]]),
+   F('B. Fill in.',['1 hour = {{60}} minutes','half an hour = {{30}} minutes','1 week = {{7}} days','1 day = {{24}} hours'],2),
+   BX('C. Write the missing days.',['Monday|{{Tuesday}}|Wednesday|{{Thursday}}|Friday|{{Saturday}}|Sunday']),
+   CH('D. Circle the right word.',[['We eat breakfast in the',['morning','night'],0],['The day after Sunday is',['Monday','Saturday'],0]])),
+  pg('Time Challenge ★★★','Think carefully. Show your thinking.','Reason about time: spot mistakes, work out times later and earlier, and use the calendar.',
+   CH('A. True or false? Circle.',[['Quarter to 5 is the same as 4:45.',0],['There are 31 days in April.',1],['Half an hour is 50 minutes.',1],['At quarter past, the long hand points to 3.',0]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says 6:45 is quarter past 6. It is quarter to {{7}}.','Sara says 3 hours is 300 minutes. It is {{180}} minutes.'],1),
+   F('C. Puzzles.',['It is quarter past 9. In 30 minutes it will be quarter to {{10}}.','It is half past 11. One hour ago it was half past {{10}}.','1 March is a Sunday. 8 March is a {{Sunday}}.','The month after the shortest month is {{March}}.'],1),
+   WP('D. Think it through.',['A train leaves at quarter past 10. The journey takes 2 hours. It arrives at quarter past {{12}}.','Bilal reads for 15 minutes every day. In one week he reads for {{105}} minutes.'])),
+  pg('Topic Test: Time and calendar (1)','Answer every question. Ask a grown-up to mark it out of 28.','Check reading the clock and time facts.',
+   SC(28,14,22),
+   CL('1. What time is it? (6 marks)',[[2,15],[7,45],[11,30],[4,0],[9,15],[12,45]]),
+   F('2. Fill in. (6 marks)',['1 hour = {{60}} minutes','1 day = {{24}} hours','1 week = {{7}} days','1 year = {{12}} months','a quarter of an hour = {{15}} minutes','1 minute = {{60}} seconds'],2)),
+  pg('Topic Test: Time and calendar (2)','Answer every question. Add up your marks from both pages.','Check the months, the calendar and time word problems.',
+   BX('4. Write the missing months. (4 marks)',['March|{{April}}|May|{{June}}','September|{{October}}|November|{{December}}']),
+   F('5. Fill in. (4 marks)',['There are {{30}} days in September.','There are {{31}} days in January.','Pakistan Day is on 23 {{March}}.','The day after Sunday is {{Monday}}.'],2),
+   WP('6. Word problems. (8 marks: 2 each)',["A film starts at 5 o'clock and lasts 2 hours. It ends at {{7}} o'clock.","Ammi put the rice on at half past 1. It cooked for 30 minutes. It was ready at {{2}} o'clock.","Zara's holiday is 2 weeks and 3 days. That is {{17}} days.",'Today is 25 June. In one week it will be {{2}} July.']),
+   HOW),
+  pg('Word Mat: Time and calendar','Keep this mat on the table while you work. Read the words together.','Know quarter hours, units of time and the months.',
+   CN(['mantelpiece-clock','spiral-calendar'],'The short hand shows the hour and the long hand shows the minutes. There are 60 minutes in an hour, so a quarter of an hour is 15 minutes and half an hour is 30 minutes.','Telling the time'),
+   TB([["o'clock",'12','3:00'],['quarter past','3','3:15'],['half past','6','3:30'],['quarter to','9','3:45 (quarter to 4)']],['We say','Long hand points to','Example']),
+   TB([['60 seconds','1 minute'],['60 minutes','1 hour'],['24 hours','1 day'],['7 days','1 week'],['12 months','1 year']],['This many','make']),
+   NO('<b>Days</b>: Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · Sunday<br><b>Months</b>: January (31) · February (28 or 29) · March (31) · April (30) · May (31) · June (30) · July (31) · August (31) · September (30) · October (31) · November (30) · December (31)'),
+   NO('<b>Time words</b>: <b>hour</b> · <b>minute</b> · <b>second</b> · <b>quarter past</b> · <b>quarter to</b> · <b>half past</b> · <b>o\'clock</b> · <b>calendar</b> · <b>date</b> · <b>month</b> · <b>week</b> · <b>earlier</b> · <b>later</b>'),
+   )]);
+
+ /* ---- Topic 6: Length, mass and capacity ---- */
+ mo(16,'Which Unit?',
+  CN(['straight-ruler','balance-scale'],'We measure length in centimetres (cm) and metres (m): 100 cm = 1 m. We measure mass in grams (g) and kilograms (kg): 1000 g = 1 kg. We measure capacity in millilitres (ml) and litres (l): 1000 ml = 1 l.','Units of measure'),
+  CH('B. Circle the best unit.',[['the mass of an apple',['g','kg'],0],['the length of a cricket pitch',['cm','m'],1]]),
+  FP('C. Choose a sensible measure: 15 cm, 2 m, 250 ml or 5 kg.',[['pencil','A pencil is about {{15 cm}} long.'],['door','A door is about {{2 m}} tall.'],['glass-of-milk','A glass holds about {{250 ml}}.'],['watermelon','A big watermelon is about {{5 kg}}.']],2));
+ mo(17,'Measure and Compare',
+  CN(['straight-ruler'],'To measure with a ruler, put the 0 at one end of the object and read the number at the other end. To compare two measures, make sure they use the same unit first.','Measuring'),
+  F('B. Write >, < or =.',['45 cm {{<}} 54 cm','1 m {{=}} 100 cm','3 kg {{>}} 2 kg','500 g {{<}} 1 kg','2 l {{>}} 1500 ml','1000 ml {{=}} 1 l'],3),
+  F('C. Change the units.',['2 m = {{200}} cm','300 cm = {{3}} m','4 kg = {{4000}} g','1 l = {{1000}} ml'],2),
+  WP('D. Think it through.',['A rope is 50 cm. Another rope is 35 cm. Together they are {{85}} cm.','Hira is 120 cm tall. Her brother is 95 cm tall. Hira is {{25}} cm taller.','A jug holds 1 l. Ammi pours out 400 ml. {{600}} ml is left.']));
+ mo(18,'Heavier or Lighter?',
+  CN(['balance-scale'],'On a balance scale, the heavier side goes down and the lighter side goes up. If both sides are level, they have the same mass. A big thing is not always heavy: a balloon is big but light.','Balance scales'),
+  CH('B. Circle the heavier one.',[['',['900 g','2 kg'],1],['',['a balloon','a mango'],1]]),
+  F('C. Add or take away.',['2 kg + 3 kg = {{5}} kg','500 g + 500 g = {{1000}} g = {{1}} kg','8 kg − 5 kg = {{3}} kg','250 g + 250 g = {{500}} g'],2),
+  WP('D. Shop problems.',['A bag of rice is 5 kg and a bag of sugar is 2 kg. Together they are {{7}} kg.','Ammi buys 3 bags of flour. Each bag is 10 kg. She buys {{30}} kg.']));
+ addPages(S,'Length, mass and capacity',[
+  pg('Measuring Warm-up ★','Start here if measuring is new. Use a ruler, a scale and a jug if you can.','Know length, mass and capacity, and compare simple measures.',
+   CN(['straight-ruler','bucket'],'Length tells how long or tall something is. Mass tells how heavy it is. Capacity tells how much a container holds.','Three kinds of measuring'),
+   CP('A. What are we measuring? Circle.',[['straight-ruler','how long a ruler is',0],['cooked-rice','how heavy a bag of rice is',1],['bucket','how much water a bucket holds',2],['glass-of-milk','how much milk a glass holds',2]],['length','mass','capacity']),
+   CH('B. Circle the longer one.',[['',['a pencil','a bus'],1],['',['10 cm','6 cm'],0],['',['1 m','50 cm'],0]]),
+   F('C. Add.',['3 cm + 4 cm = {{7}} cm','5 kg + 5 kg = {{10}} kg','2 l + 6 l = {{8}} l','10 m + 20 m = {{30}} m'],2),
+   WP('D. Think it through.',['A ribbon is 9 cm. Sara cuts off 4 cm. {{5}} cm is left.','A bottle holds 2 l. Two bottles hold {{4}} l.'])),
+  pg('Measuring Challenge ★★★','Think carefully. Show your thinking.','Reason about measures: change units, spot mistakes and solve puzzles.',
+   CH('A. True or false? Circle.',[['1 m is the same as 100 cm.',0],['A kilogram of feathers is lighter than a kilogram of rice.',1],['500 ml is half a litre.',0],['The biggest thing is always the heaviest.',1]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says 3 m = 30 cm. It is {{300}} cm.','Sara says 2 kg is less than 1500 g. But 2 kg = {{2000}} g, so it is more.'],1),
+   F('C. Puzzles.',['Order from shortest to longest: 1 m, 45 cm, 150 cm → {{45 cm, 1 m, 150 cm}}','How many 250 ml cups fill a 1 l jug? {{4}}','half a kilogram = {{500}} g','a quarter of a metre = {{25}} cm'],1),
+   WP('D. Think it through.',['A 2 m ribbon is cut into 4 equal pieces. Each piece is {{50}} cm.','A tank holds 20 l. Bilal fills 5 l bottles from it. He can fill {{4}} bottles.'])),
+  pg('Topic Test: Length, mass and capacity (1)','Answer every question. Ask a grown-up to mark it out of 32.','Check choosing units, changing units and comparing measures.',
+   SC(32,16,25),
+   CH('1. Circle the best unit. (6 marks)',[['the height of a tree',['cm','m'],1],['the mass of a pencil',['g','kg'],0],['the water in a spoon',['ml','l'],0],['the length of your thumb',['cm','m'],0],['the mass of a goat',['g','kg'],1],['the petrol in a car',['ml','l'],1]]),
+   F('2. Change the units. (6 marks)',['1 m = {{100}} cm','5 m = {{500}} cm','2 kg = {{2000}} g','3 l = {{3000}} ml','200 cm = {{2}} m','1000 g = {{1}} kg'],2),
+   F('3. Write >, < or =. (4 marks)',['80 cm {{<}} 1 m','2 kg {{>}} 1500 g','1000 ml {{=}} 1 l','35 cm {{<}} 53 cm'],2)),
+  pg('Topic Test: Length, mass and capacity (2)','Answer every question. Add up your marks from both pages.','Check comparing mass, adding measures and word problems.',
+   CH('4. Circle the heavier one. (4 marks)',[['',['a cat','an elephant'],1],['',['3 kg','800 g'],0],['',['a pencil','a school bag'],1],['',['600 g','1 kg'],1]]),
+   F('5. Work it out. (4 marks)',['45 cm + 30 cm = {{75}} cm','6 kg − 4 kg = {{2}} kg','700 ml + 300 ml = {{1000}} ml','90 m − 25 m = {{65}} m'],2),
+   WP('6. Word problems. (8 marks: 2 each)',['A table is 75 cm tall. A chair is 45 cm tall. The table is {{30}} cm taller.','Ammi buys 2 kg of onions and 3 kg of potatoes. She buys {{5}} kg.','A bucket holds 10 l. Zain pours in 6 l. He needs {{4}} l more to fill it.','A jug holds 1 l. Sara fills glasses of 200 ml. She fills {{5}} glasses.']),
+   HOW),
+  pg('Word Mat: Length, mass and capacity','Keep this mat on the table while you work. Read the words together.','Know the units and tools for measuring.',
+   CN(['straight-ruler','balance-scale','bucket'],'Length is how long, mass is how heavy, capacity is how much a container holds. Always write the unit after the number: 25 cm, 3 kg, 2 l.','Measuring'),
+   TB([['Length','cm, m','100 cm = 1 m','ruler, measuring tape'],['Mass','g, kg','1000 g = 1 kg','scale, balance'],['Capacity','ml, l','1000 ml = 1 l','jug, bottle, cup']],['Measure','Units','Fact','Tool']),
+   NO('<b>Examples</b>: a pencil is about 15 cm · a door is about 2 m · an apple is about 150 g · a bag of flour is 10 kg · a glass holds about 250 ml · a big bottle holds 1.5 l'),
+   NO('<b>Tips</b><br>1. Start measuring from the 0 on the ruler.<br>2. Change to the same unit before you compare.<br>3. Heavier goes down on a balance.<br>4. Half a metre = 50 cm, half a kilogram = 500 g, half a litre = 500 ml.'),
+   NO('<b>Maths words</b>: <b>length</b> · <b>height</b> · <b>mass</b> · <b>capacity</b> · <b>centimetre</b> · <b>metre</b> · <b>gram</b> · <b>kilogram</b> · <b>millilitre</b> · <b>litre</b> · <b>heavier</b> · <b>lighter</b> · <b>longer</b> · <b>shorter</b>'),
+   BK(['length','mass','capacity','metre','kilogram','litre','heavier','longer']),
+   DR('Draw something you would measure in metres and something you would measure in kilograms.',60))]);
+
+ /* ---- Topic 7: Shapes and symmetry ---- */
+ mo(19,'Faces, Edges, Corners',
+  CN(['package','soccer-ball'],'3D shapes are solid. A face is a flat or curved surface. An edge is where two faces meet. A corner is where edges meet. A cube has 6 square faces, 12 edges and 8 corners.','3D shapes'),
+  F('B. Fill in.',['A cube has {{12}} edges and {{8}} corners.','A cuboid has {{12}} edges and {{8}} corners.','A cylinder has {{2}} flat faces and {{1}} curved face.','A square-based pyramid has {{5}} faces.'],1),
+  FP('C. Name the shape: cube, cuboid, sphere or cylinder.',[['soccer-ball','A football is a {{sphere}}.'],['package','A parcel box is a {{cuboid}}.'],['game-die','A dice is a {{cube}}.'],['birthday-cake','This round cake is a {{cylinder}}.']],2));
+ mo(20,'Symmetry',
+  CN(['butterfly'],'A shape is symmetrical if a fold line splits it into two halves that match exactly. The fold line is called a line of symmetry. A square has 4 lines of symmetry and a rectangle has 2.','Lines of symmetry'),
+  CH('B. Does the letter have a line of symmetry? Circle.',[['A',0],['L',1],['H',0],['G',1],['T',0],['P',1]],YN),
+  F('C. How many lines of symmetry?',['a square: {{4}}','a rectangle: {{2}}','a triangle with 3 equal sides: {{3}}','a heart: {{1}}'],2));
+ mo(21,'Draw the Other Half',
+  CN(['butterfly'],'To draw the other half, look at each part on one side of the line. Draw the same part on the other side, the same distance from the line, like a mirror.','Mirror halves'),
+  F('B. Finish the pattern so both sides match.',['● ○ ▲ | {{▲ ○ ●}}','1 2 3 | {{3 2 1}}','A B C | {{C B A}}'],1),
+  WP('C. Think it through.',['Hira folds paper and cuts out half a heart. When she opens it, she has {{1}} whole heart.','A square tile has {{4}} lines of symmetry.']));
+ addPages(S,'Shapes and symmetry',[
+  pg('Shapes Warm-up ★','Start here if shapes are new. Hold real boxes and balls if you can.','Tell flat and solid shapes apart and count sides.',
+   CN(['blue-square','soccer-ball'],'Flat shapes like squares, circles and triangles are 2D. Solid shapes like cubes, spheres and cones are 3D. You can hold a 3D shape in your hand.','Flat and solid'),
+   F('A. Fill in.',['A triangle has {{3}} sides.','A square has {{4}} sides.','A rectangle has {{4}} sides.','A circle has {{0}} corners.'],2),
+   CH('B. Flat or solid? Circle.',[['a square',0],['a football',1],['a circle',0],['a box',1],['a triangle',0]],['flat (2D)','solid (3D)']),
+   CH('C. Do both sides match after the fold? Circle.',[['a circle folded in half',0],['a heart folded down the middle',0],['the letter F folded down the middle',1]],YN),
+   DR('D. Draw a square. Draw one line of symmetry on it.',70)),
+  pg('Shapes Challenge ★★★','Think carefully. Show your thinking.','Reason about 3D shapes and symmetry: riddles, mistakes and counting.',
+   CH('A. True or false? Circle.',[['A cube and a cuboid both have 6 faces.',0],['A cylinder has corners.',1],['A circle has lots of lines of symmetry.',0],['The letter S has a line of symmetry.',1]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says a cube has 6 corners. It has {{8}} corners.','Sara says a rectangle has 4 lines of symmetry. It has {{2}}.'],1),
+   F('C. Shape riddles.',['I have 6 square faces. I am a {{cube}}.','I have 1 flat face, 1 curved face and 1 corner. I am a {{cone}}.','I have no flat faces and I roll every way. I am a {{sphere}}.','I have 2 circle faces and I can roll. I am a {{cylinder}}.'],1),
+   WP('D. Think it through.',['Two cubes have {{12}} square faces altogether.','Three cuboid boxes have {{24}} corners altogether.'])),
+  pg('Topic Test: Shapes and symmetry (1)','Answer every question. Ask a grown-up to mark it out of 34.','Check faces, edges and corners and naming 3D shapes.',
+   SC(34,17,27),
+   F('1. Fill in. (6 marks)',['A cube has {{6}} faces.','A cube has {{8}} corners.','A cuboid has {{12}} edges.','A cylinder has {{2}} flat faces.','A cone has {{1}} curved face.','A sphere has {{0}} corners.'],2),
+   F('2. Name the shape. (4 marks)',['I am round like a ball. I am a {{sphere}}.','I look like a tissue box. I am a {{cuboid}}.','I look like a tin of milk. I am a {{cylinder}}.','I look like a dice. I am a {{cube}}.'],1),
+   CH('3. Can it roll? Circle. (6 marks)',[['a sphere',0],['a cube',1],['a cylinder',0],['a cone',0],['a cuboid',1],['a square-based pyramid',1]],YN)),
+  pg('Topic Test: Shapes and symmetry (2)','Answer every question. Add up your marks from both pages.','Check lines of symmetry, mirror patterns and shape problems.',
+   CH('4. Does the letter have a line of symmetry? Circle. (4 marks)',[['M',0],['F',1],['U',0],['J',1]],YN),
+   F('5. How many lines of symmetry? (4 marks)',['a square: {{4}}','a rectangle: {{2}}','a triangle with 3 equal sides: {{3}}','the letter A: {{1}}'],2),
+   F('6. Finish the pattern so both sides match. (4 marks: 2 each)',['▲ ■ ● | {{● ■ ▲}}','5 6 7 | {{7 6 5}}'],2),
+   WP('7. Word problems. (6 marks: 2 each)',['Two cubes have {{16}} corners altogether.','A box is a cuboid. It has {{6}} faces.','Bilal folds a square along every line of symmetry. He makes {{4}} folds.']),
+   HOW),
+  pg('Word Mat: Shapes and symmetry','Keep this mat on the table while you work. Read the words together.','Know the 3D shapes and the words for symmetry.',
+   CN(['package','soccer-ball','butterfly'],'A face is a flat or curved surface, an edge is where two faces meet and a corner is where edges meet. A line of symmetry splits a shape into two halves that match.','Shapes and symmetry'),
+   TB([['cube','6','12','8'],['cuboid','6','12','8'],['cylinder','3 (2 flat, 1 curved)','2','0'],['cone','2 (1 flat, 1 curved)','1','1'],['sphere','1 curved','0','0'],['square-based pyramid','5','8','5']],['Shape','Faces','Edges','Corners']),
+   NO('<b>Lines of symmetry</b>: square 4 · rectangle 2 · triangle with 3 equal sides 3 · circle very many<br><b>Letters with a line of symmetry</b>: A, H, M, O, T, U, V, W, X, Y'),
+   NO('<b>Maths words</b>: <b>face</b> · <b>edge</b> · <b>corner</b> · <b>flat</b> · <b>curved</b> · <b>cube</b> · <b>cuboid</b> · <b>cylinder</b> · <b>cone</b> · <b>sphere</b> · <b>pyramid</b> · <b>symmetry</b> · <b>fold</b> · <b>match</b>'),
+   BK(['face','edge','corner','curved','cylinder','sphere','symmetry','fold']),
+   DR('Draw a symmetrical butterfly. Draw its line of symmetry.',110))]);
+
+ /* ---- Topic 8: Halves and quarters ---- */
+ mo(22,'Halves and Quarters',
+  CN(['pizza'],'A half is one of 2 equal parts. We write it ½. A quarter is one of 4 equal parts. We write it ¼. The parts must be equal. Two quarters make one half.','Halves and quarters'),
+  FR('B. What fraction is shaded?',[[4,1,'circle'],[2,1,'circle'],[4,3,'rect'],[4,2,'rect']])
+);
+ mo(23,'Half of a Number',
+  CN(['red-apple'],'To find half of a number, share it into 2 equal groups. Half of 12 is 6, because 6 + 6 = 12. Halving is the opposite of doubling.','Halving'),
+  F('B. Find half.',['Half of 16 = {{8}}','Half of 30 = {{15}}','Half of 40 = {{20}}','Half of 50 = {{25}}','Half of 100 = {{50}}','Half of 18 = {{9}}'],3),
+  FP('C. Share into halves.',[['red-apple','half of 8 apples = {{4}} apples'],['banana','half of 12 bananas = {{6}} bananas'],['mango','half of 10 mangoes = {{5}} mangoes'],['egg','half of 24 eggs = {{12}} eggs']],2),
+  WP('D. Think it through.',['Ali has 20 marbles. He gives half to his brother. He gives away {{10}} marbles.','Half of a class of 32 children are girls. There are {{16}} girls.']));
+ mo(24,'Quarters',
+  CN(['pizza'],'To find a quarter of a number, share it into 4 equal groups. A quarter of 12 is 3, because 3 + 3 + 3 + 3 = 12. You can also halve and halve again: half of 12 is 6, and half of 6 is 3.','Quarters of amounts'),
+  F('B. Find a quarter.',['¼ of 8 = {{2}}','¼ of 12 = {{3}}','¼ of 20 = {{5}}','¼ of 16 = {{4}}','¼ of 40 = {{10}}','¼ of 4 = {{1}}'],3),
+  FP('C. Share into quarters.',[['cookie','¼ of 8 cookies = {{2}} cookies'],['candy','¼ of 20 sweets = {{5}} sweets'],['balloon','¼ of 12 balloons = {{3}} balloons'],['red-apple','¼ of 16 apples = {{4}} apples']],2),
+  WP('D. Think it through.',['A pizza has 8 slices. Zain eats a quarter of it. He eats {{2}} slices.','Ammi has Rs 100. She gives a quarter to Hira. Hira gets Rs {{25}}.']));
+ addPages(S,'Halves and quarters',[
+  pg('Halves and Quarters Warm-up ★','Start here if fractions are new. Fold paper or cut fruit if you can.','Find halves and quarters of shapes and small numbers.',
+   CN(['pizza'],'Cut something into 2 equal parts and each part is a half. Cut it into 4 equal parts and each part is a quarter.','Equal parts'),
+   FR('A. What fraction is shaded?',[[2,1,'circle'],[2,1,'rect'],[4,1,'circle'],[4,1,'rect']]),
+   F('B. Find half.',['Half of 2 = {{1}}','Half of 4 = {{2}}','Half of 6 = {{3}}','Half of 10 = {{5}}'],2),
+   CH('C. Is it cut into halves? Circle.',[['a roti cut into 2 equal pieces',0],['a cake cut into 3 pieces',1],['a sandwich cut into 2 equal triangles',0]],YN),
+   DR('D. Draw a circle. Cut it into 4 equal parts. Colour one quarter.',70)),
+  pg('Halves and Quarters Challenge ★★★','Think carefully. Show your thinking.','Reason about halves and quarters: mistakes, missing wholes and two-step problems.',
+   CH('A. True or false? Circle.',[['Two quarters are the same as one half.',0],['Half of 10 is 2.',1],['A cake cut into 4 pieces of different sizes is cut into quarters.',1],['¼ of 20 is 5.',0]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says half of 30 is 13. It is {{15}}.','Sara says ¼ of 12 is 4. It is {{3}}.'],1),
+   F('C. Puzzles.',['Half of a number is 9. The number is {{18}}.','A quarter of a number is 5. The number is {{20}}.','¾ of 8 = {{6}}','½ of 16 = ¼ of {{32}}'],2),
+   WP('D. Think it through.',['Hira had 24 stickers. She gave half to Sara and a quarter to Ali. She kept {{6}} stickers.','A ribbon is 40 cm long. Bilal cuts it into quarters. Each piece is {{10}} cm.'])),
+  pg('Topic Test: Halves and quarters (1)','Answer every question. Ask a grown-up to mark it out of 34.','Check fractions of shapes and halves and quarters of numbers.',
+   SC(34,17,27),
+   FR('1. What fraction is shaded? (4 marks)',[[2,1,'circle'],[4,1,'rect'],[4,3,'circle'],[4,2,'rect']]),
+   F('2. Find half. (6 marks)',['Half of 10 = {{5}}','Half of 24 = {{12}}','Half of 50 = {{25}}','Half of 36 = {{18}}','Half of 14 = {{7}}','Half of 80 = {{40}}'],3),
+   F('3. Find a quarter. (6 marks)',['¼ of 8 = {{2}}','¼ of 16 = {{4}}','¼ of 28 = {{7}}','¼ of 40 = {{10}}','¼ of 12 = {{3}}','¼ of 100 = {{25}}'],3),
+   CH('4. Circle the right answer. (2 marks)',[['Half of 60 is',['30','20'],0],['A quarter of 20 is',['10','5'],1]])),
+  pg('Topic Test: Halves and quarters (2)','Answer every question. Add up your marks from both pages.','Check equal parts, fraction facts and word problems.',
+   CH('5. Are the parts equal? Circle. (4 marks)',[['a chapati cut into 2 same-size pieces',0],['a cake cut into 1 big and 3 small pieces',1],['a square folded into 4 matching parts',0],['a melon cut into 2 pieces, one bigger',1]],YN),
+   F('6. Fill in. (4 marks)',['{{2}} halves make a whole.','{{4}} quarters make a whole.','2 quarters make a {{half}}.','If half is 7, the whole is {{14}}.'],2),
+   WP('7. Word problems. (8 marks: 2 each)',['There are 18 children. Half go to the park. {{9}} children go.','A bag has 20 oranges. A quarter of them are bad. {{5}} oranges are bad.','Sara has Rs 60. She spends half. She has Rs {{30}} left.','A cake is cut into 4 equal slices. Ali eats 1 slice. He eats a {{quarter}} of the cake.']),
+   HOW),
+  pg('Word Mat: Halves and quarters','Keep this mat on the table while you work. Read the words together.','Know halves, quarters and the words for fractions.',
+   CN(['pizza','red-apple'],'A fraction is an equal part of a whole. To find half, share into 2 equal groups. To find a quarter, share into 4 equal groups, or halve and halve again.','Fractions'),
+   TB([['½','one half','1 of 2 equal parts','half of 12 = 6'],['¼','one quarter','1 of 4 equal parts','a quarter of 12 = 3'],['¾','three quarters','3 of 4 equal parts','three quarters of 12 = 9']],['We write','We say','It means','Example']),
+   NO('<b>Doubles and halves</b>: double 5 = 10, half of 10 = 5 · double 8 = 16, half of 16 = 8 · double 10 = 20, half of 20 = 10 · double 25 = 50, half of 50 = 25 · double 50 = 100, half of 100 = 50'),
+   NO('<b>Tips</b><br>1. The parts must be equal.<br>2. 2 quarters = 1 half. 4 quarters = 1 whole.<br>3. To find a quarter, halve and halve again.<br>4. Check: 4 quarters added together make the whole number.'),
+   NO('<b>Maths words</b>: <b>half</b> · <b>halves</b> · <b>quarter</b> · <b>three quarters</b> · <b>whole</b> · <b>equal parts</b> · <b>share</b> · <b>fraction</b> · <b>double</b> · <b>halve</b>'),
+   BK(['half','quarter','whole','equal','share','fraction','double','halve']))]);
+});

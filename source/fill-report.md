@@ -2602,19 +2602,7 @@ Share of each page body used at zoom 1. Target: 0.75 or more (CLAUDE.md, Content
 - p69 0.37 واحد اور جمع / باغ کی سیر
 - p70 0.48 واحد اور جمع / میری چیزیں
 
-## g2-maths (69 pages)
-- p13 0.53 Time and calendar / Quarter Past and To
-- p14 0.29 Time and calendar / Minutes and Hours
-- p15 0.33 Time and calendar / Reading a Calendar
-- p16 0.30 Length, mass and capacity / Which Unit?
-- p17 0.19 Length, mass and capacity / Measure and Compare
-- p18 0.20 Length, mass and capacity / Heavier or Lighter?
-- p19 0.19 Shapes and symmetry / Faces, Edges, Corners
-- p20 0.20 Shapes and symmetry / Symmetry
-- p21 0.34 Shapes and symmetry / Draw the Other Half
-- p22 0.30 Halves and quarters / Halves and Quarters
-- p23 0.14 Halves and quarters / Half of a Number
-- p24 0.14 Halves and quarters / Quarters
+## g2-maths (57 pages)
 - p25 0.37 Pictographs / Read the Pictograph
 - p26 0.09 Pictographs / Tally Marks
 - p27 0.15 Pictographs / Make a Pictograph

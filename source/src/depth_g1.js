@@ -1679,3 +1679,164 @@ DEPTH.push(({addPages})=>{const S='maths';
    BK(['add','take away','altogether','left','total','fewer','plus','minus']),
    DR('Draw a story for 7 + 3.',100))]);
 });
+
+/* D12: Grade 1 Maths topics 13 and 14 (Place value: tens and ones, Ordering numbers to 100).
+   Same method as D9 to D11: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const MA=(h,left,right)=>({t:'match',h,left,right});
+ const BS=['bigger','smaller'];
+ const SQ=(()=>{let s='<table style="border-collapse:collapse;margin:0 auto;font-size:15px">';for(let r=0;r<10;r++){s+='<tr>';for(let c=1;c<=10;c++){const n=r*10+c;s+=`<td style="border:1px solid #9aa;width:34px;height:24px;text-align:center${c===10?';font-weight:700;background:#FFF3D1':''}">${n}</td>`}s+='</tr>'}return NO(s+'</table>')})();
+
+ /* ---- Topic 13: Place value: tens and ones ---- */
+ mo(62,'Tens and Ones',
+  F('B. How many tens and ones?',['65 = {{6}} tens and {{5}} ones','29 = {{2}} tens and {{9}} ones','40 = {{4}} tens and {{0}} ones','13 = {{1}} ten and {{3}} ones','88 = {{8}} tens and {{8}} ones','71 = {{7}} tens and {{1}} one'],2),
+  WP('C. Think it through.',['Ali ties his straws in bundles of 10. He makes 4 bundles and has 2 straws left. He has {{42}} straws.','Sara has 3 bundles of 10 sticks. She has {{30}} sticks.']),
+  NO('<b>Remember</b>: the digit on the left is the <b>tens</b>. The digit on the right is the <b>ones</b>. In 35, there are 3 tens and 5 ones.'),
+  DR('D. Draw 2 bundles of ten and 4 loose sticks. Write the number.',80));
+ mo(63,'Bundles and Loose Ones',
+  CN(['pencil','pencil','pencil','pencil'],'A bundle has 10 things tied together. Count the bundles in tens: 10, 20, 30. Then count on the loose ones: 31, 32. Three bundles and 2 loose ones make 32.','Count bundles, then loose ones'),
+  FP('B. Count the tens, then the ones. Write the number.',[['egg','3 trays of 10 eggs and 8 eggs: {{38}}'],['candy','5 packs of 10 sweets and 4 sweets: {{54}}'],['balloon','7 bags of 10 balloons and 0 balloons: {{70}}'],['crayon','2 boxes of 10 crayons and 9 crayons: {{29}}']],2),
+  DR('C. Draw 4 bundles of 10 and 3 loose pencils. Write the number.',80));
+ mo(64,'Make the Number',
+  CN(['input-numbers'],'To make a number, write the tens digit first and the ones digit next. 6 tens and 3 ones is 63. If there are no ones, write 0 in the ones place: 4 tens and 0 ones is 40.','Tens first, then ones'),
+  F('B. Write the number.',['2 tens and 8 ones = {{28}}','6 tens and 4 ones = {{64}}','7 tens and 7 ones = {{77}}','3 tens and 0 ones = {{30}}','9 tens and 3 ones = {{93}}','5 tens and 1 one = {{51}}','1 ten and 2 ones = {{12}}','8 tens and 6 ones = {{86}}'],2),
+  WP('C. Think it through.',['Hira has 5 packs of 10 beads and 7 more beads. She has {{57}} beads.','Zain has 9 boxes of 10 pencils. He has {{90}} pencils.','Bilal makes a number with 4 ones and 3 tens. His number is {{34}}.']));
+ mo(65,'What Is the Digit Worth?',
+  F('B. Write what the digit is worth.',['In 46, the 4 is worth {{40}}.','In 46, the 6 is worth {{6}}.','In 83, the 8 is worth {{80}}.','In 83, the 3 is worth {{3}}.','In 29, the 2 is worth {{20}}.','In 91, the 9 is worth {{90}}.'],2),
+  F('C. Which digit is in the tens place?',['72: {{7}}','18: {{1}}','95: {{9}}','40: {{4}}'],4),
+  WP('D. Think it through.',['My number has 5 in the tens place and 2 in the ones place. My number is {{52}}.','In 77, the two 7s are worth {{70}} and {{7}}.']));
+ mo(66,'Split the Number',
+  CN(['coin','coin','coin'],'We can split a number into its tens and its ones. 47 is 40 and 7, so 47 = 40 + 7. Putting them back together makes the number again: 40 + 7 = 47.','Split into tens and ones'),
+  F('B. Split the number.',['34 = {{30}} + {{4}}','62 = {{60}} + {{2}}','18 = {{10}} + {{8}}','76 = {{70}} + {{6}}','53 = {{50}} + {{3}}','99 = {{90}} + {{9}}'],2),
+  F('C. Put it back together.',['30 + 6 = {{36}}','70 + 2 = {{72}}','50 + 9 = {{59}}','20 + 0 = {{20}}','80 + 4 = {{84}}','10 + 5 = {{15}}'],3),
+  WP('D. Think it through.',['Ammi has Rs 40 in notes and Rs 6 in coins. She has Rs {{46}}.','A shop has 58 apples. That is {{50}} apples and {{8}} more.']));
+ mo(67,'Compare with Tens',
+  F('B. Write > or <.',['53 {{>}} 35','47 {{<}} 74','88 {{>}} 80','26 {{<}} 29','61 {{>}} 16','90 {{>}} 9'],3),
+  F('C. Tens first! Fill in.',['45 has {{4}} tens. 54 has {{5}} tens. So {{54}} is bigger.','31 and 37 both have 3 tens. 37 has more ones, so {{37}} is bigger.'],1),
+  WP('D. Think it through.',['Ali has 42 stickers. Sara has 24 stickers. {{Ali}} has more.','A red box has 68 beads. A blue box has 86 beads. The {{blue}} box has more.','Hira scored 55 and Zain scored 58. {{Zain}} scored more.']));
+ mo(68,'Ten More, Ten Less',
+  F('B. Fill in.',['Ten more than 47 is {{57}}.','Ten less than 47 is {{37}}.','Ten more than 63 is {{73}}.','Ten less than 30 is {{20}}.','Ten more than 85 is {{95}}.','Ten less than 19 is {{9}}.'],2),
+  F('C. Count on in tens.',['6, 16, 26, {{36}}, {{46}}','13, 23, {{33}}, {{43}}, 53','71, 61, 51, {{41}}, {{31}}'],1),
+  WP('D. Think it through.',['Zain has 34 marbles. He gets a bag of 10 more. He has {{44}} marbles.','Sara has Rs 56. She spends Rs 10. She has Rs {{46}} left.']));
+ mo(69,'Tens and Ones Stories',
+  FP('B. Read the story. Write the number.',[['egg','Nani buys 6 trays of 10 eggs. She has {{60}} eggs.'],['coin','Ali has 4 piles of 10 coins and 5 coins. He has {{45}} coins.'],['books','A shelf holds 10 books. There are 3 full shelves and 2 more books. There are {{32}} books.'],['crayon','Sara has 7 boxes of 10 crayons. She has {{70}} crayons.']],2),
+  F('C. Make a number story true.',['There are {{2}} bags of 10 apples and 5 apples. That makes 25 apples.','There are 9 packs of 10 cards and {{0}} loose cards. That makes 90 cards.'],1));
+ mo(70,'Sort the Numbers',
+  SO('B. Sort: is the number bigger or smaller than 50?',['Smaller than 50','Bigger than 50'],['27','63','49','81','15','56'],[0,1,0,1,0,1]),
+  F('C. Write the tens digit and the ones digit.',['74: tens {{7}}, ones {{4}}','40: tens {{4}}, ones {{0}}','58: tens {{5}}, ones {{8}}','19: tens {{1}}, ones {{9}}'],2),
+  WR('D. Write three numbers with 3 tens.',['______   ______   ______']));
+ mo(71,'Exit Ticket',
+  F('B. Split and put together.',['84 = {{80}} + {{4}}','30 + 9 = {{39}}','Ten less than 52 is {{42}}.','In 16, the 1 is worth {{10}}.'],2),
+  WP('C. Think it through.',['Ammi has 2 packs of 10 biscuits and 6 more. She has {{26}} biscuits.','Ali has 70 stickers. He gets 10 more. He has {{80}} stickers.']),
+  NO('<b>Remember</b>: tens first, then ones. 6 tens and 2 ones is 62, not 26.'),
+  WR('D. Tick one. ☐ I can show tens and ones. ☐ I need more practice.',['The trickiest part was ________________________.']));
+ addPages(S,'Place value: tens and ones',[
+  pg('Tens and Ones Warm-up ★','Start here if tens and ones are new. Use real sticks or straws.','Make bundles of ten and count tens and ones to 50.',
+   CN(['pencil','pencil'],'Ten pencils make one bundle of ten. One bundle and 3 loose pencils is 13. Two bundles and 3 loose pencils is 23.','One ten'),
+   BX('A. Count in tens.',['10|{{20}}|30|{{40}}|50']),
+   FP('B. Count the tens and ones. Write the number.',[['pencil','1 bundle of 10 and 4 pencils: {{14}}'],['crayon','2 boxes of 10 and 1 crayon: {{21}}'],['coin','3 piles of 10 and 0 coins: {{30}}'],['egg','4 trays of 10 and 2 eggs: {{42}}']],2),
+   F('C. How many tens and ones?',['15 = {{1}} ten and {{5}} ones','24 = {{2}} tens and {{4}} ones','31 = {{3}} tens and {{1}} one','40 = {{4}} tens and {{0}} ones'],2),
+   DR('D. Draw 1 bundle of 10 and 6 loose sticks. Write the number.',100)),
+  pg('Tens and Ones Challenge ★★★','Think carefully. Show your thinking.','Reason about place value: spot mistakes, solve puzzles and make numbers.',
+   CH('A. True or false? Circle.',[['In 64, the 6 is worth 60.',0],['5 tens and 2 ones is 25.',1],['80 has 8 tens and 0 ones.',0],['Ten more than 39 is 40.',1],['73 is bigger than 37.',0]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali says 4 tens and 7 ones is 74. It is {{47}}.','Sara says ten less than 50 is 49. It is {{40}}.','Zain says 90 + 6 is 69. It is {{96}}.'],1),
+   F('C. Puzzles.',['I have 7 tens and 2 ones. I am {{72}}.','My tens digit is 3. My ones digit is one more. I am {{34}}.','I am between 40 and 50. My ones digit is 9. I am {{49}}.','Both my digits are 5. I am {{55}}.']),
+   WP('D. Think it through.',['Use the digits 2 and 8. The biggest number you can make is {{82}}. The smallest is {{28}}.','Hira has 3 bundles of 10 and 14 loose sticks. That is {{44}} sticks.'])),
+  pg('Topic Test: Place value (1)','Answer every question. Ask a grown-up to mark it out of 38.','Check making numbers, tens and ones, and the value of digits.',
+   SC(38,19,31),
+   F('1. Write the number. (4 marks)',['3 tens and 5 ones = {{35}}','7 tens and 1 one = {{71}}','2 tens and 0 ones = {{20}}','9 tens and 9 ones = {{99}}'],2),
+   F('2. How many tens and ones? (8 marks: 1 for each box)',['48 = {{4}} tens and {{8}} ones','63 = {{6}} tens and {{3}} ones','17 = {{1}} ten and {{7}} ones','50 = {{5}} tens and {{0}} ones'],2),
+   FP('3. Count the tens and ones. Write the number. (4 marks)',[['egg','5 trays of 10 eggs and 3 eggs: {{53}}'],['pencil','2 bundles of 10 pencils and 8 pencils: {{28}}'],['coin','8 piles of 10 coins: {{80}}'],['candy','6 packs of 10 sweets and 6 sweets: {{66}}']],2),
+   CH('4. Circle the right value. (4 marks)',[['In 85, the 8 is worth',['8','80'],1],['In 42, the 2 is worth',['2','20'],0],['In 19, the 1 is worth',['1','10'],1],['In 70, the 7 is worth',['7','70'],1]])),
+  pg('Topic Test: Place value (2)','Answer every question. Add up your marks from both pages.','Check splitting, comparing, ten more and ten less, and stories.',
+   F('5. Split the number. (4 marks)',['56 = {{50}} + 6','73 = 70 + {{3}}','28 = {{20}} + 8','94 = 90 + {{4}}'],2),
+   F('6. Write > or <. (4 marks)',['62 {{>}} 26','39 {{<}} 93','45 {{<}} 48','71 {{>}} 17'],2),
+   F('7. Ten more and ten less. (4 marks)',['Ten more than 36 is {{46}}.','Ten less than 36 is {{26}}.','Ten more than 90 is {{100}}.','Ten less than 14 is {{4}}.'],2),
+   WP('8. Word problems. (6 marks: 2 each)',['Ammi buys 4 trays of 10 eggs and 6 more eggs. She has {{46}} eggs.','Ali has 25 marbles. He gets a bag of 10. He has {{35}} marbles.','Sara has 61 beads. Zain has 16 beads. {{Sara}} has more beads.']),
+   HOW),
+  pg('Word Mat: Place value','Keep this mat on the table while you work. Read the words together.','Know the words for tens, ones and place value.',
+   CN(['pencil','pencil','pencil','pencil'],'A 2-digit number has a tens digit and a ones digit. In 34, the 3 is in the tens place and is worth 30. The 4 is in the ones place and is worth 4. So 34 = 30 + 4.','Tens and ones'),
+   NO('<span style="font-size:22px"><b>34</b> &nbsp;=&nbsp; <b>3</b> tens and <b>4</b> ones &nbsp;=&nbsp; 30 + 4</span><br><span style="font-size:18px">10 ones = 1 ten &nbsp;·&nbsp; 10, 20, 30, 40, 50, 60, 70, 80, 90, 100</span>'),
+   NO('<b>Tips</b><br>1. Read the tens digit first: 52 is fifty-two.<br>2. No ones? Write 0 in the ones place: 6 tens is 60.<br>3. Ten more or ten less changes only the tens digit.<br>4. To compare, look at the tens first.'),
+   NO('<b>Maths words</b>: <b>tens</b> · <b>ones</b> · <b>digit</b> · <b>bundle</b> · <b>place</b> · <b>value</b> · <b>worth</b> · <b>split</b> · <b>ten more</b> · <b>ten less</b>'),
+   BK(['tens','ones','digit','bundle','value','worth','split','place']),
+   DR('Draw bundles and loose sticks to show your age or your favourite number.',110))]);
+
+ /* ---- Topic 14: Ordering numbers to 100 ---- */
+ mo(72,'Numbers in Order',
+  F('B. Count back. Fill in.',['45, 44, {{43}}, 42, {{41}}','70, {{69}}, 68, {{67}}, 66','100, 99, {{98}}, {{97}}, 96'],1),
+  WP('C. Think it through.',['Ali counts 58, 59, 60. The next number he says is {{61}}.','Sara counts back 22, 21, 20. The next number she says is {{19}}.']),
+  WR('D. Write the numbers from 41 to 50.',['______________________________________________']));
+ mo(73,'Before, After, Between',
+  F('B. Write the number between.',['36, {{37}}, 38','49, {{50}}, 51','70, {{71}}, 72','98, {{99}}, 100'],4),
+  F('C. Fill in.',['Just before 30 is {{29}}.','Just after 79 is {{80}}.','Just before 61 is {{60}}.','Just after 45 is {{46}}.'],2),
+  WP('D. Think it through.',['Zain lives at number 43. His friend lives just after him, at number {{44}}.','The page before page 70 is page {{69}}.']),
+  DR('E. Draw a number train: write 5 numbers in a row, starting at 85.',70));
+ mo(74,'Number Line Jumps',
+  CN(['frog'],'A number line shows numbers in order. Jumping right makes numbers bigger. Jumping left makes them smaller. Jump 1 at a time, or jump 10 to move faster.','Jump along the line'),
+  F('B. Jump on the number line.',['Start at 40, jump forward 3: {{43}}','Start at 56, jump back 2: {{54}}','Start at 29, jump forward 1: {{30}}','Start at 80, jump back 1: {{79}}','Start at 20, jump forward 10: {{30}}','Start at 75, jump back 10: {{65}}'],2),
+  WP('C. Think it through.',['A frog sits on 47. It jumps forward 2. It lands on {{49}}.','A rabbit sits on 63. It jumps back 10. It lands on {{53}}.']),
+  DR('D. Draw a number line from 50 to 60.',60));
+ mo(75,'Smallest to Biggest',
+  F('B. Order from smallest to biggest.',['34, 43, 30 → {{30}}, {{34}}, {{43}}','81, 18, 88 → {{18}}, {{81}}, {{88}}','62, 26, 60 → {{26}}, {{60}}, {{62}}','15, 51, 55 → {{15}}, {{51}}, {{55}}'],1),
+  F('C. Order four numbers, smallest first.',['47, 74, 7, 70 → {{7}}, {{47}}, {{70}}, {{74}}','99, 19, 91, 9 → {{9}}, {{19}}, {{91}}, {{99}}'],1),
+  WP('D. Think it through.',['Hira is 8, her sister is 12 and Nani is 65. From youngest to oldest: {{8}}, {{12}}, {{65}}.','Three buses are numbers 52, 25 and 55. The smallest number is {{25}}.']));
+ mo(76,'Biggest to Smallest',
+  NO('Find the biggest number first. Look at the tens: the most tens is the biggest. If the tens are the same, the one with more ones is bigger.'),
+  F('B. Order from biggest to smallest.',['33, 53, 35 → {{53}}, {{35}}, {{33}}','80, 8, 18 → {{80}}, {{18}}, {{8}}','67, 76, 66 → {{76}}, {{67}}, {{66}}','21, 12, 22 → {{22}}, {{21}}, {{12}}','49, 94, 90 → {{94}}, {{90}}, {{49}}','58, 85, 55 → {{85}}, {{58}}, {{55}}'],1),
+  WP('C. Think it through.',['In a game, Ali scored 48, Sara scored 84 and Zain scored 44. First place was {{Sara}}.','Three trees are 15, 51 and 50 steps away. The furthest is {{51}} steps.']));
+ mo(77,'Circle the Number',
+  CH('B. Circle the biggest.',[['',['57','75','55'],1],['',['89','98','90'],1],['',['46','64','60'],1],['',['100','10','99'],0]]),
+  CH('C. Circle the number between.',[['between 60 and 70',['59','66','71'],1],['between 25 and 35',['30','20','40'],0],['between 90 and 100',['89','101','95'],2]]),
+  WP('D. Think it through.',['I am between 80 and 90. My ones digit is 5. I am {{85}}.']));
+ mo(78,'Count in Tens and Twos',
+  CN(['candy','candy'],'Counting in twos means skipping a number each time: 2, 4, 6, 8. Counting in tens makes the tens digit go up by one each time: 10, 20, 30. We can also count in fives: 5, 10, 15, 20.','Counting in steps'),
+  F('B. Count in twos.',['20, 22, 24, {{26}}, {{28}}, {{30}}','46, 48, {{50}}, {{52}}, 54','90, 92, 94, {{96}}, {{98}}, {{100}}'],1),
+  F('C. Count in tens.',['7, 17, 27, {{37}}, {{47}}','40, 50, {{60}}, {{70}}, 80','92, 82, 72, {{62}}, {{52}}'],1),
+  F('D. Count in fives.',['5, 10, 15, {{20}}, {{25}}, {{30}}','50, 55, {{60}}, {{65}}, 70'],1));
+ mo(79,'Numbers Around Us',
+  FP('B. Look and fill in.',[['calendar','Today is the 14th. Tomorrow is the {{15th}}.'],['bus','Bus 29 has gone. The next bus is number {{30}}.'],['books','I am on page 99. The next page is {{100}}.'],['house','Our house is number 72. The house before is number {{71}}.']],2),
+  F('C. Write the number you see.',['A clock shows the hours up to {{12}}.','A week has {{7}} days.','A year has {{12}} months.'],1),
+  WR('D. Find 3 numbers at home. Write them, smallest first.',['______   ______   ______']));
+ mo(80,'Order Stories',
+  WP('B. More stories.',['Hira has 38 stickers, Ali has 83 and Zain has 33. {{Ali}} has the most.','The red team scored 56, the blue team scored 65 and the green team scored 60. The {{red}} team scored the least.','A book has 100 pages. Sara is on page 49. The next page is {{50}}.','In a race, Bilal came 1st, Zain came 2nd and Ali came 3rd. {{Zain}} came just after Bilal.']),
+  F('C. Put the children in order, smallest number first.',['Ali 27, Sara 72, Zain 22 → {{Zain}}, {{Ali}}, {{Sara}}'],1),
+  DR('D. Draw three towers with 3, 7 and 5 cubes. Write the numbers smallest first.',90));
+ mo(81,'Exit Ticket',
+  F('B. Order the numbers.',['Biggest first: 37, 73, 70 → {{73}}, {{70}}, {{37}}','Count in twos: 40, 42, {{44}}, {{46}}'],1),
+  CH('C. Circle the biggest.',[['',['91','19','99'],2],['',['64','46','60'],0]]),
+  WP('D. Think it through.',['Hamza is on step 29. He goes up one step. He is on step {{30}}.']),
+  WR('E. Tick one. ☐ I can order numbers to 100. ☐ I need more practice.',['The trickiest part was ________________________.']));
+ addPages(S,'Ordering numbers to 100',[
+  pg('Ordering Numbers Warm-up ★','Start here if numbers to 100 are new. Use the number square on the Word Mat.','Count and order numbers to 50 with support.',
+   CN(['input-numbers'],'Numbers come in order. 21, 22, 23: each number is 1 more than the one before. The number after 29 is 30.','One more each time'),
+   BX('A. Fill in the missing numbers.',['11|12|{{13}}|14|{{15}}','26|{{27}}|28|{{29}}|30','{{40}}|41|42|{{43}}|44']),
+   F('B. Just after.',['After 17 comes {{18}}.','After 24 comes {{25}}.','After 39 comes {{40}}.','After 45 comes {{46}}.'],2),
+   CH('C. Circle the bigger number.',[['',['14','41'],1],['',['30','20'],0],['',['25','35'],1],['',['48','28'],0]]),
+   DR('D. Write the numbers from 30 to 40.',90)),
+  pg('Ordering Numbers Challenge ★★★','Think carefully. Show your thinking.','Order numbers to 100, solve puzzles and spot mistakes.',
+   CH('A. True or false? Circle.',[['The number after 79 is 80.',0],['18 is bigger than 81.',1],['Between 49 and 51 is 50.',0],['Counting in tens: 30, 40, 60.',1],['100 is the biggest number here: 99, 100, 90.',0]],TF),
+   F('B. Spot the mistake. Write it right.',['Ali counts 67, 68, 69, 60. The last number should be {{70}}.','Sara puts 9, 52, 25 in order, smallest first. It should be 9, {{25}}, {{52}}.','Zain counts in twos: 34, 36, 37. The last number should be {{38}}.'],1),
+   F('C. Puzzles.',['I am just before 60. I am {{59}}.','I am between 70 and 80. My digits are the same. I am {{77}}.','I am the smallest 2-digit number. I am {{10}}.','I am the biggest 2-digit number. I am {{99}}.']),
+   WP('D. Think it through.',['Use the digits 4, 1 and 7. Make the biggest 2-digit number: {{74}}. Make the smallest: {{14}}.'])),
+  pg('Topic Test: Ordering numbers (1)','Answer every question. Ask a grown-up to mark it out of 38.','Check counting on and back, before, after and between.',
+   SC(38,19,31),
+   F('1. Fill in the missing numbers. (8 marks)',['46, 47, {{48}}, 49, {{50}}','83, {{84}}, 85, {{86}}, 87','62, 61, {{60}}, {{59}}, 58','{{97}}, 98, 99, {{100}}'],1),
+   F('2. Before, after and between. (6 marks)',['Just before 50 is {{49}}.','Just after 50 is {{51}}.','Between 38 and 40 is {{39}}.','Just before 71 is {{70}}.','Just after 99 is {{100}}.','Between 64 and 66 is {{65}}.'],2),
+   CH('3. Circle the biggest or smallest. (4 marks)',[['The biggest',['42','24','44'],2],['The smallest',['70','17','71'],1],['The biggest',['89','98','80'],1],['The smallest',['36','63','30'],2]])),
+  pg('Topic Test: Ordering numbers (2)','Answer every question. Add up your marks from both pages.','Check ordering, counting in steps and order stories.',
+   F('4. Order from smallest to biggest. (6 marks: 2 each)',['54, 45, 50 → {{45}}, {{50}}, {{54}}','19, 91, 9 → {{9}}, {{19}}, {{91}}','77, 70, 7 → {{7}}, {{70}}, {{77}}'],1),
+   F('5. Order from biggest to smallest. (4 marks: 2 each)',['36, 63, 33 → {{63}}, {{36}}, {{33}}','82, 28, 80 → {{82}}, {{80}}, {{28}}'],1),
+   F('6. Count in tens and twos. (4 marks)',['20, 30, 40, {{50}}, {{60}}','12, 14, 16, {{18}}, {{20}}'],1),
+   WP('7. Word problems. (6 marks: 2 each)',['Sara has 47 beads and Ali has 74 beads. {{Ali}} has more.','Hira is on page 59. The next page is {{60}}.','Three scores are 25, 52 and 22. The top score is {{52}}.']),
+   HOW),
+  pg('Word Mat: Ordering numbers to 100','Keep this mat on the table while you work. Use the number square to count, find and order numbers.','Know the number square and the words for ordering numbers.',
+   SQ,
+   NO('<b>Tips</b><br>1. Across the square, each number is 1 more. Down the square, each number is 10 more.<br>2. To order numbers, look at the tens first, then the ones.<br>3. After a number ending in 9, the tens go up: 49, 50.'),
+   NO('<b>Maths words</b>: <b>before</b> · <b>after</b> · <b>between</b> · <b>order</b> · <b>smallest</b> · <b>biggest</b> · <b>count on</b> · <b>count back</b> · <b>in twos</b> · <b>in tens</b>'),
+   BK(['before','after','between','order','smallest','biggest','count on','count back']),
+   DR('Write the numbers in your house, phone or street, smallest first.',70))]);
+});

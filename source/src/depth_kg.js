@@ -867,3 +867,230 @@ DEPTH.push(({addPages})=>{const S='kg-maths';
    BK(['whole','part','bond','partner','make 10','pair']),
    DR('Draw your own number bond.',80))]);
 });
+
+/* D8: KG Maths topics 13 to 15 (Adding and taking away stories, Measuring with hands and feet, Halves).
+   Same method as D5 to D7: top up old pages by page number (checked by title), then Warm-up ★, Challenge ★★★, 2-page Topic Test and Word Mat. */
+DEPTH.push(({addPages})=>{const S='kg-maths';
+ const mo=(n,title,...b)=>{const p=PAGES[S][n-1];if(p&&p.title===title)p.blocks=p.blocks.concat(b);else console.warn('depth: page mismatch',S,n,title)};
+ const HOW=WR('How did I do? Write one thing you can do now.',['I can ______________________________.']);
+ const SC=(tot,a,b)=>NO(`Score: ______ / ${tot} &nbsp; ★ 0 to ${a-1} keep practising &nbsp; ★★ ${a} to ${b-1} good work &nbsp; ★★★ ${b} to ${tot} super!`);
+ const PSUM=(h,items)=>({t:'picsum',h,items});
+ const AT=['add','take away'];
+
+ /* ---- Topic 13: Adding and taking away stories ---- */
+ mo(51,'Put Together, Take Away',
+  PSUM('B. Count the two groups. Write how many in all.',[[3,2,'star'],[4,4,'heart'],[5,1,'circle']]),
+  CH('C. More or fewer? Circle.',[['3 more birds come.',['more','fewer'],0],['2 sweets are eaten.',['more','fewer'],1],['Ammi buys 5 more eggs.',['more','fewer'],0],['4 balloons pop.',['more','fewer'],1]]),
+  WP('D. A grown-up reads. Write the answer.',['Sara has 4 beads. She gets 2 more. She has {{6}} beads.','Ali has 6 beads. He loses 2. He has {{4}} beads.']));
+ mo(52,'Adding Pictures',
+  PSUM('B. Count and add.',[[2,3,'star'],[4,2,'heart'],[3,5,'circle'],[6,1,'square']]),
+  FP('C. Write the sum.',[['fish','3 fish + 4 fish = {{7}} fish'],['kite','5 kites + 2 kites = {{7}} kites'],['egg','4 eggs + 4 eggs = {{8}} eggs'],['candy','6 sweets + 3 sweets = {{9}} sweets']]),
+  DR('D. Draw 4 balls and 3 more balls. Write how many in all.',90));
+ mo(53,'Taking Away Pictures',
+  CN(['balloon','balloon','balloon'],'To take away, start with the whole group. Cross out the ones that go. Then count the ones that are left. 5 balloons, cross out 2, 3 are left.','Cross out and count'),
+  FP('B. Write how many are left.',[['duck','7 ducks. 2 swim away. {{5}} are left.'],['banana','5 bananas. Hamza eats 1. {{4}} are left.'],['kite','6 kites. 3 come down. {{3}} are still flying.'],['fish','9 fish. 4 hide. {{5}} can be seen.']]),
+  F('C. Write the take away sum.',['5 take away 2: 5 - 2 = {{3}}','8 take away 4: 8 - 4 = {{4}}','10 take away 3: 10 - 3 = {{7}}'],1),
+  DR('D. Draw 6 apples. Cross out 2. How many are left?',75));
+ mo(54,'Add or Take Away?',
+  CH('B. Circle + or -.',[['4 ○ 2 = 6',0],['7 ○ 3 = 4',1],['5 ○ 5 = 10',0],['9 ○ 1 = 8',1],['3 ○ 3 = 0',1]],['+','-']),
+  WP('C. Add or take away? Write the answer.',['There are 6 cats. 2 more come. Now there are {{8}} cats.','There are 6 cats. 2 run off. Now there are {{4}} cats.','Bilal has 3 pencils. Abbu gives him 4 more. He has {{7}} pencils.','There are 10 eggs. 5 break. {{5}} eggs are left.']));
+ mo(55,'Adding Sums',
+  F('B. More sums.',['3 + 4 = {{7}}','5 + 4 = {{9}}','6 + 4 = {{10}}','1 + 8 = {{9}}','0 + 6 = {{6}}','5 + 5 = {{10}}'],3),
+  BR('C. The two parts make the whole. Write the whole in the ? box.',[[4,3,7,2],[5,4,9,2],[6,2,8,2]]),
+  F('D. Missing numbers.',['3 + {{2}} = 5','4 + {{4}} = 8','{{6}} + 1 = 7','{{5}} + 5 = 10'],2));
+ mo(56,'Taking Away Sums',
+  CN(['hand-with-fingers-splayed'],'Use your fingers to take away. Hold up 8 fingers. Put 3 down. Count the fingers still up: 5. So 8 - 3 = 5.','Take away with fingers'),
+  F('B. More take away sums.',['7 - 3 = {{4}}','9 - 2 = {{7}}','10 - 4 = {{6}}','6 - 6 = {{0}}','8 - 5 = {{3}}','10 - 8 = {{2}}'],3),
+  BR('C. Find the missing part. Write it in the ? box.',[[6,3,9,1],[7,3,10,1]]),
+  F('D. Missing numbers.',['8 - {{2}} = 6','6 - {{3}} = 3','{{9}} - 4 = 5','{{10}} - 5 = 5'],2));
+ mo(57,'Adding Stories',
+  FP('B. Picture stories. Write how many in all.',[['bird','4 birds sit on a wall. 3 more land. {{7}} birds'],['red-apple','Ammi buys 5 apples and 5 more. {{10}} apples'],['soccer-ball','2 balls in a box and 6 on the grass. {{8}} balls'],['teddy-bear','Zoya has 3 teddies. She gets 1 more. {{4}} teddies']]),
+  F('C. Write the sum for each story.',['4 birds and 3 more: 4 + 3 = {{7}}','5 apples and 5 more: 5 + 5 = {{10}}'],1),
+  DR('D. Draw a picture for: 3 cars and 4 more cars. How many?',90));
+ mo(58,'Taking Away Stories',
+  FP('B. Picture stories. Write how many are left.',[['balloon','8 balloons. 3 pop. {{5}} left'],['cookie','7 biscuits. Hamza eats 2. {{5}} left'],['duck','10 ducks. 6 go home. {{4}} left'],['pencil','5 pencils. 1 breaks. {{4}} left']]),
+  F('C. Write the sum for each story.',['8 balloons, 3 pop: 8 - 3 = {{5}}','10 ducks, 6 go home: 10 - 6 = {{4}}'],1),
+  DR('D. Draw 7 stars. Cross out 4. How many are left?',90));
+ mo(59,'Story Strip',
+  CY('B. Another story strip.',[['bus','6 children on the bus'],['child','2 get on: {{8}}'],['child','4 get off: {{4}}'],['child','3 get on: {{7}}']]),
+  WP('C. A grown-up reads. Write the answer.',['A plate has 5 rotis. Abbu adds 3. The family eats 6. {{2}} rotis are left.','4 birds sit in a tree. 4 more come. Then 2 fly away. {{6}} birds are in the tree.']));
+ mo(60,'My Number Story',
+  WP('Finish each story with a number.',['There were 5 kites in the sky. Then 2 more came. Now there are {{7}} kites.','There were 9 frogs on a log. Then 4 jumped in the water. Now there are {{5}} frogs.']),
+  WR('Write your own story.',['There were ______ ____________.','Then ______ more came. Now there are ______.']));
+ addPages(S,'Adding and taking away stories',[
+  pg('Adding and Taking Away Warm-up ★','Start here if adding and taking away are new. Use toys or fingers.','Add and take away small groups up to 5.',
+   PSUM('A. Count and add.',[[1,2,'star'],[2,2,'heart'],[3,1,'circle']]),
+   FP('B. How many are left?',[['balloon','3 balloons. 1 pops. {{2}} are left.'],['cookie','4 biscuits. I eat 2. {{2}} are left.']]),
+   F('C. Add and take away.',['2 + 1 = {{3}}','3 + 2 = {{5}}','4 - 1 = {{3}}','5 - 2 = {{3}}'],2),
+   CH('D. Add or take away? Circle.',[['1 more duck comes.',0],['2 ducks swim away.',1]],AT),
+   DR('E. Draw 2 fish and 2 more fish. How many?',80)),
+  pg('Adding and Taking Away Challenge ★★★','A grown-up reads each question. Think carefully.','Find missing numbers, spot mistakes and solve two-step stories.',
+   CH('A. True or false? Circle.',[['6 + 3 = 9',0],['8 - 5 = 2',1],['4 + 4 = 8',0],['10 - 7 = 3',0]],TF),
+   F('B. Missing numbers.',['{{3}} + 4 = 7','9 - {{6}} = 3','5 + {{5}} = 10','{{8}} - 2 = 6'],2),
+   F('C. Spot the mistake. Write the right answer.',['Ali says 7 - 2 = 9. It is {{5}}.','Sara says 3 + 5 = 7. It is {{8}}.'],1),
+   WP('D. Two-step stories.',['There are 4 cows in a field. 3 more come. Then 2 go to the barn. {{5}} cows are in the field.','Bilal has 10 sweets. He gives 3 to Zara and 2 to Omar. He has {{5}} left.'])),
+  pg('Topic Test: Adding and Taking Away (1)','A grown-up reads each question and marks it out of 26.','Check adding and taking away within 10.',
+   SC(26,13,21),
+   PSUM('1. Count and add. (4 marks)',[[4,3,'star'],[2,5,'heart'],[6,2,'circle'],[3,3,'square']]),
+   F('2. Add. (6 marks)',['3 + 2 = {{5}}','4 + 5 = {{9}}','6 + 4 = {{10}}','2 + 7 = {{9}}','5 + 3 = {{8}}','1 + 6 = {{7}}'],3),
+   F('3. Take away. (6 marks)',['5 - 1 = {{4}}','7 - 4 = {{3}}','9 - 3 = {{6}}','10 - 6 = {{4}}','8 - 2 = {{6}}','6 - 5 = {{1}}'],3),
+   NO('Tip: for adding, count on from the bigger number. For taking away, count back or use your fingers.')),
+  pg('Topic Test: Adding and Taking Away (2)','Add up your marks from both pages.','Check choosing add or take away and solving stories.',
+   CH('4. Add or take away? Circle. (4 marks)',[['3 more friends come.',0],['2 cakes are eaten.',1],['5 birds fly away.',1],['Abbu buys 4 more bananas.',0]],AT),
+   WP('5. A grown-up reads. Write the answer. (4 marks)',['Zoya has 6 flowers. She picks 3 more. She has {{9}} flowers.','There are 8 eggs. 2 break. {{6}} eggs are left.','5 boys and 4 girls play. {{9}} children play.','There are 7 mangoes. Dada eats 3. {{4}} are left.']),
+   CH('6. True or false? Circle. (2 marks)',[['5 + 2 = 7',0],['9 - 4 = 6',1]],TF),
+   HOW),
+  pg('Word Mat: Adding and Taking Away','Keep this mat on the table. Use the clue words when you hear a story.','Know the signs and words for adding and taking away.',
+   NO('<b>Add +</b>: put together and get more. <span style="font-size:20px">3 + 2 = 5</span><br><b>Take away -</b>: some go and fewer are left. <span style="font-size:20px">5 - 2 = 3</span>'),
+   CN(['red-apple','red-apple','red-apple'],'Adding stories say more, join, come and in all. Taking away stories say left, eaten, go away, fly off and pop.','Clue words'),
+   BR('Part, part, whole: 3 and 2 make 5',[[3,2,5,-1]]),
+   NO('<b>Maths words</b><br><b>add</b> or <b>plus</b> (+): put together · <b>take away</b> or <b>minus</b> (-): some go<br><b>equals</b> (=): is the same as · <b>in all</b>: the total · <b>left</b>: what is still there'),
+   BK(['add','plus','take away','minus','equals','in all','left','more','fewer']),
+   DR('Draw your own adding story.',80))]);
+
+ /* ---- Topic 14: Measuring with hands and feet ---- */
+ mo(61,'How Long Is It?',
+  CP('B. Long or short? Circle.',[['pencil','a pencil',1],['bed','a bed',0],['bus','a bus',0],['paperclip','a paper clip',1]],['long','short']),
+  DR('C. Draw round your hand. Show the hand span from thumb to little finger.',100));
+ mo(62,'Hand Spans',
+  CN(['hand-with-fingers-splayed'],'Stretch your hand wide. Put your thumb at the start. Put the next span where your little finger ended. Leave no gaps.','No gaps'),
+  CH('B. Which is longer? Circle.',[['',['a book: 2 spans','a desk: 5 spans'],1],['',['a bed: 9 spans','a cup: 1 span'],0],['',['a door: 8 spans','a chair: 3 spans'],0]]),
+  F('C. How many spans?',['A box is 3 spans. Two boxes in a line are {{6}} spans.','A book is 2 spans. A table is 4 spans more. The table is {{6}} spans.'],1),
+  WR('D. Measure at home.',['My book is ______ hand spans long.','My pillow is ______ hand spans long.']));
+ mo(63,'Longer or Shorter?',
+  CP('B. Look and circle.',[['bus','A bus is ... than a bicycle.',0],['spoon','A spoon is ... than a broom.',1],['snake','A snake is ... than a worm.',0],['crayon','A crayon is ... than a ruler.',1]],['longer','shorter']),
+  F('C. Fill in longer or shorter.',['6 spans is {{longer}} than 3 spans.','2 steps is {{shorter}} than 7 steps.','9 spans is {{longer}} than 5 spans.'],1));
+ mo(64,'Foot Steps',
+  CN(['footprints'],'To measure in foot steps, put your heel right against your toes each time. Walk slowly, heel to toe, and count each step.','Heel to toe'),
+  CH('B. More steps or fewer steps? Circle.',[['a long corridor',['more','fewer'],0],['a small mat',['more','fewer'],1],['a big playground',['more','fewer'],0]]),
+  WP('C. A grown-up reads. Write the answer.',['The kitchen is 8 steps. The bathroom is 5 steps. The kitchen is {{3}} steps longer.','Omar walks 4 steps, then 4 more. He walks {{8}} steps.']));
+ mo(65,'Hands or Feet?',
+  CN(['hand-with-fingers-splayed','footprints'],'Use hand spans for small things like a book or a table. Use foot steps for big things like a room or a garden. Big things need lots and lots of hand spans!','Choose a good way'),
+  CH('B. True or false? Circle.',[['We use foot steps to measure a pencil.',1],['We use hand spans to measure a book.',0],['We use foot steps to measure a garden.',0]],TF),
+  F('C. Fill in hands or feet.',['To measure a chair, I use my {{hands}}.','To measure a playground, I use my {{feet}}.'],1));
+ mo(66,'Measure in Order',
+  CY('B. Steps to measure with foot steps.',[['footprints','Stand at one {{end}}'],['footprints','Put heel to toe'],['right-arrow','Walk to the other end'],['input-numbers','{{count}} the steps']]),
+  CH('C. Good or not good? Circle.',[['Leave gaps between spans.',['good','not good'],1],['Count every span.',['good','not good'],0]]));
+ mo(67,'Which Is Longest?',
+  F('B. Order from shortest to longest.',['cup 1, book 2, bed 9 → {{cup, book, bed}}','table 6, pen 1, door 8 → {{pen, table, door}}'],1),
+  CH('C. Circle the shortest.',[['',['rope 5 spans','ribbon 2 spans','stick 4 spans'],1],['',['rug 6 steps','mat 2 steps','room 10 steps'],1]]),
+  WP('D. A grown-up reads. Write the answer.',["Ali, Sara and Omar measure their scarves. Ali: 5 spans. Sara: 7 spans. Omar: 4 spans. The longest scarf is {{Sara's}}.","The shortest scarf is {{Omar's}}."]));
+ mo(68,'Big Hands, Small Hands',
+  F('B. Who needs more?',['Abbu: 4 spans. Omar: 7 spans. {{Omar}} needs more spans.','Ammi: 5 steps. Hira: 8 steps. {{Hira}} needs more steps.'],1),
+  CN(['straight-ruler'],'A ruler is the same for everyone. That is why shops and builders use rulers and measuring tapes, not hands.','Rulers'),
+  WP('C. A grown-up reads. Write the answer.',['Abbu measures the rug: 3 steps. Zoya measures it: 5 steps. Zoya takes {{2}} more steps.']));
+ mo(69,'Measuring Stories',
+  WP('B. More stories.',['A ribbon is 3 spans. Sara cuts 1 span off. Now it is {{2}} spans.','The garden is 10 steps. Omar has walked 6 steps. He has {{4}} steps to go.','Two mats are 3 steps each. In a line they are {{6}} steps.']),
+  CH('C. True or false? Circle.',[['A 7 span table is longer than a 4 span table.',0],['3 steps is longer than 5 steps.',1]],TF),
+  DR('D. Draw a measuring story. Write the number.',90));
+ mo(70,'My Measuring',
+  CN(['hand-with-fingers-splayed','footprints','straight-ruler'],'Measure each thing two times to check. If you get the same number both times, well done!','Check it'),
+  WR('B. Measure with a grown-up.',["The grown-up's spans: the table is ______ spans.",'My spans: the table is ______ spans.','Who needed more spans? ______________']),
+  DR('C. Draw the longest thing you measured.',140));
+ addPages(S,'Measuring with hands and feet',[
+  pg('Measuring Warm-up ★','Start here if measuring is new. Try it with a grown-up.','Know long and short, and count hand spans and foot steps.',
+   CN(['hand-with-fingers-splayed','footprints'],'Stretch your hand wide: that is one hand span. Walk heel to toe: each one is a foot step.','Spans and steps'),
+   CP('A. Long or short? Circle.',[['pencil','a pencil',1],['bus','a bus',0],['spoon','a spoon',1],['snake','a long snake',0]],['long','short']),
+   FP('B. Count and write.',[['books','span, span: {{2}} spans'],['door','step, step, step: {{3}} steps']]),
+   CH('C. Circle the longer one.',[['',['2 spans','5 spans'],1],['',['6 steps','3 steps'],0]]),
+   DR('D. Draw round your hand.',100)),
+  pg('Measuring Challenge ★★★','A grown-up reads each question. Think carefully.','Compare and order lengths, spot mistakes and explain why answers differ.',
+   CH('A. True or false? Circle.',[['A small hand needs more spans than a big hand.',0],['10 steps is shorter than 6 steps.',1],['A room is best measured in foot steps.',0],['Leaving gaps gives the right answer.',1]],TF),
+   F('B. Think it through.',['A table is 6 spans. A desk is 2 spans shorter. The desk is {{4}} spans.','A rope is 3 spans. Two ropes in a line are {{6}} spans.'],1),
+   F('C. Spot the mistake.',['Ali says 8 spans is shorter than 5 spans. 8 spans is {{longer}}.','Sara left gaps and got 2 spans. With no gaps she got 3 spans. The right answer is {{3}} spans.'],1),
+   F('D. Order, longest first.',['door 8, cup 1, table 6 → {{door, table, cup}}'],1),
+   WP('E. Why are the numbers different?',["Omar measures the sofa: 7 spans. Abbu measures it: 4 spans. Abbu's hands are {{bigger}}."])),
+  pg('Topic Test: Measuring (1)','A grown-up reads each question and marks it out of 21.','Check choosing hands or feet and comparing lengths.',
+   SC(21,11,17),
+   CP('1. Hands or feet? Circle. (4 marks)',[['books','a book',0],['school','a classroom',1],['pencil','a pencil',0],['national-park','a park',1]],['hands','feet']),
+   CH('2. Circle the longer one. (4 marks)',[['',['3 spans','7 spans'],1],['',['9 steps','4 steps'],0],['',['1 span','6 spans'],1],['',['10 steps','5 steps'],0]]),
+   F('3. Fill in longer or shorter. (3 marks)',['5 spans is {{shorter}} than 8 spans.','9 steps is {{longer}} than 2 steps.','4 spans is {{longer}} than 1 span.'],1),
+   NO('Tip: more spans or steps means longer.')),
+  pg('Topic Test: Measuring (2)','Add up your marks from both pages.','Check finding the longest and solving measuring stories.',
+   CH('4. Circle the longest. (2 marks)',[['book 2 spans, bed 9 spans, cup 1 span',['book','bed','cup'],1],['rug 5 steps, mat 1 step, room 7 steps',['rug','mat','room'],2]]),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['The table is 6 spans. The book is 2 spans. The table is {{4}} spans longer.','Ali walks 3 steps, then 5 more. He walks {{8}} steps.','The rug is 7 steps. Hira has walked 4 steps. She has {{3}} steps to go.']),
+   CH('6. Yes or no? Circle. (3 marks)',[['All hands are the same size.',1],['We leave no gaps when we measure.',0],['A ruler is the same for everyone.',0]],YN),
+   DR('7. Draw something that is longer than your hand. (2 marks)',90),
+   HOW),
+  pg('Word Mat: Measuring','Keep this mat on the table. Use the words when you compare things.','Know the words for measuring and comparing length.',
+   CN(['hand-with-fingers-splayed','footprints','straight-ruler'],'A hand span goes from thumb to little finger. A foot step goes heel to toe. A ruler is the same for everyone.','Ways to measure'),
+   CY('How to measure',[['hand-with-fingers-splayed','stretch'],['straight-ruler','start at the end'],['right-arrow','no gaps'],['input-numbers','count']]),
+   NO('<b>Compare</b><br><span style="font-size:19px">short · shorter · shortest &nbsp;&nbsp; long · longer · longest</span><br>A bed (9 spans) is longer than a book (2 spans).'),
+   NO('<b>Maths words</b><br><b>measure</b>: find how long · <b>hand span</b>: thumb to little finger · <b>foot step</b>: heel to toe<br><b>compare</b>: see which is longer · <b>gap</b>: a space we must not leave'),
+   BK(['long','short','longer','shorter','longest','shortest','measure','span','step']),
+   DR('Draw three things: short, long and longest.',80))]);
+
+ /* ---- Topic 15: Halves ---- */
+ mo(71,'What Is Half?',
+  FR('B. Each shape has 2 equal parts. One is shaded. Write 1/2.',[[2,1,'circle'],[2,1,'rect']]),
+  FP('C. Look and write.',[['pizza','A pizza cut into 2 equal parts: each part is a {{half}}.'],['sandwich','2 halves make {{1}} whole sandwich.']]),
+  DR('D. Draw a circle. Cut it into 2 halves.',90));
+ mo(72,'Shaded Halves',
+  CN(['pizza'],'Halves must be equal. Fold a paper circle so the edges meet. The fold line cuts it into 2 equal halves.','Fold to check'),
+  CH('B. Is one half shaded? Circle yes or no.',[['A circle in 2 equal parts, 1 part shaded',0],['A square in 2 equal parts, both parts shaded',1],['A square in 2 equal parts, 1 part shaded',0],['A circle in 2 equal parts, no part shaded',1]],YN),
+  F('C. Fill in.',['A shape cut into halves has {{2}} parts.','If 1 half is shaded, {{1}} half is not shaded.'],1));
+ mo(73,'Equal or Not?',
+  CN(['flatbread','flatbread'],'Equal parts are the same size. If one piece is big and one is small, they are not halves.','Equal parts'),
+  CP('B. Halves or not halves? Circle.',[['red-apple','an apple cut down the middle',0],['watermelon','a melon cut into a big and a small piece',1],['cookie','a biscuit broken into 2 same size pieces',0],['birthday-cake','a cake cut into 4 pieces',1]],['halves','not halves']),
+  F('C. Fill in equal or not equal.',['Two pieces the same size are {{equal}}.','A big piece and a tiny piece are {{not equal}}.'],1));
+ mo(74,'Half of a Group',
+  BX('B. Share into 2 equal groups.',['4 apples|{{2}}|{{2}}','6 eggs|{{3}}|{{3}}','10 beads|{{5}}|{{5}}']),
+  WP('C. A grown-up reads. Write the answer.',['Ammi has 8 eggs. She uses half. She uses {{4}} eggs.','A pair has 2 shoes. Half of them is {{1}} shoe.']));
+ mo(75,'Food Halves',
+  CN(['red-apple','banana'],'At home we cut fruit, roti and sandwiches in half to share fairly. Cut down the middle so each half is the same size.','Halves at home'),
+  FP('B. More food halves.',[['flatbread','Half of 2 rotis is {{1}} roti.'],['grapes','Half of 10 grapes is {{5}} grapes.'],['egg','Half of 4 eggs is {{2}} eggs.'],['mango','Half of 8 mangoes is {{4}} mangoes.']]),
+  CH('C. Circle the right answer.',[['2 halves of a roti make',['1 roti','2 rotis'],0],['Half of 6 bananas',['3','4'],0]]),
+  DR('D. Draw a sandwich cut into 2 halves.',70));
+ mo(76,'Share Fairly',
+  CN(['candy','candy'],'To share fairly between 2, give one to you, one to me, one to you, one to me, until none are left. Then count each group.','Fair sharing'),
+  BX('B. More sharing.',['2 cakes|half for me|{{1}}|half for you|{{1}}','4 kites|half for me|{{2}}|half for you|{{2}}']),
+  CH('C. Fair or not fair? Circle.',[['Ali gets 3 sweets, Sara gets 3 sweets.',['fair','not fair'],0],['Ali gets 5 sweets, Sara gets 1 sweet.',['fair','not fair'],1],['Zara gets 2 nuts, Bilal gets 6 nuts.',['fair','not fair'],1]]));
+ mo(77,'Cutting a Roti',
+  CY('B. Share a mango in half.',[['mango','Take one mango'],['fork-and-knife-with-plate','Cut down the {{middle}}'],['mango','Check both parts are {{equal}}'],['busts-in-silhouette','2 children get 2 {{halves}}']]),
+  CH('C. Circle the right word.',[['A roti cut down the middle gives 2 ...',['halves','wholes'],0],['2 halves put back together make a ...',['whole','half'],0]]));
+ mo(78,'Which Is Half?',
+  F('B. Write half of each number.',['Half of 4 = {{2}}','Half of 10 = {{5}}','Half of 6 = {{3}}','Half of 2 = {{1}}','Half of 8 = {{4}}','Half of 12 = {{6}}'],3),
+  CH('C. True or false? Circle.',[['Half of 8 is 4.',0],['Half of 6 is 2.',1],['Half of 10 is 5.',0]],TF),
+  WP('D. A grown-up reads. Write the answer.',['Abbu has Rs 10. He gives half to Omar. Omar gets Rs {{5}}.','There are 4 children. Half are girls. {{2}} are girls.']),
+  DR('E. Draw 8 dots. Circle half of them.',80));
+ mo(79,'Half Stories',
+  FP('B. Picture stories.',[['pizza','A pizza is cut in half. Omar eats 1 half. {{1}} half is left.'],['balloon','6 balloons. Half are red. {{3}} are red.'],['duck','4 ducks. Half swim away. {{2}} are left.'],['cookie','10 biscuits. Half are eaten. {{5}} are left.']]),
+  CH('C. Circle the right answer.',[['Half of the 8 children wear caps. How many?',['4','6'],0],['Half of 2 socks are blue. How many?',['1','2'],0]]),
+  DR('D. Draw a story about sharing in half.',90));
+ mo(80,'Draw the Halves',
+  FR('B. Write 1/2 for each shaded half.',[[2,1,'circle'],[2,1,'rect']]),
+  F('C. Fill in.',['2 halves make {{1}} whole.','Half of 4 is {{2}}.'],2),
+  CH('D. Yes or no? Circle.',[['Both halves are the same size.',0],['A half is bigger than the whole.',1]],YN));
+ addPages(S,'Halves',[
+  pg('Halves Warm-up ★','Start here if halves are new. Cut a roti or fold paper with a grown-up.','Know that a half is one of 2 equal parts and share small groups.',
+   CN(['pizza'],'Cut something into 2 equal parts. Each part is a half.','Half'),
+   FR('A. Write 1/2 in the box.',[[2,1,'circle'],[2,1,'rect']]),
+   CH('B. Halves or not halves? Circle.',[['2 pieces the same size',['halves','not halves'],0],['a big piece and a small piece',['halves','not halves'],1]]),
+   BX('C. Share into 2 equal groups.',['2 sweets|{{1}}|{{1}}','4 sweets|{{2}}|{{2}}']),
+   F('D. Fill in.',['Half of 2 is {{1}}.','Half of 4 is {{2}}.'],2),
+   DR('E. Draw an apple cut in half.',80)),
+  pg('Halves Challenge ★★★','A grown-up reads each question. Think carefully.','Find halves of numbers, work backwards and spot mistakes.',
+   CH('A. True or false? Circle.',[['Half of 10 is 5.',0],['3 equal pieces are halves.',1],['Half of 8 is 3.',1],['2 halves make a whole.',0]],TF),
+   F('B. Who am I?',['Half of me is 3. I am {{6}}.','Half of me is 5. I am {{10}}.','Half of me is 4. I am {{8}}.'],1),
+   F('C. Spot the mistake. Write the right answer.',['Ali says half of 6 is 2. It is {{3}}.','Sara says half of 10 is 4. It is {{5}}.'],1),
+   WP('D. Word problems.',['Zoya has 8 grapes. She gives half to Omar. Then she eats 1. She has {{3}} left.','Abbu cuts 2 rotis in half. There are {{4}} halves.','Can 5 sweets be shared into 2 equal groups with none left over? {{no}}'])),
+  pg('Topic Test: Halves (1)','A grown-up reads each question and marks it out of 24.','Check knowing halves of shapes and numbers.',
+   SC(24,12,19),
+   FR('1. Write 1/2 in the box. (2 marks)',[[2,1,'circle'],[2,1,'rect']]),
+   CH('2. Halves or not halves? Circle. (4 marks)',[['a roti cut into 2 parts the same size',['halves','not halves'],0],['an apple cut into a big and a small piece',['halves','not halves'],1],['a cake cut into 3 pieces',['halves','not halves'],1],['a sandwich cut down the middle',['halves','not halves'],0]]),
+   F('3. Write half of each number. (5 marks)',['Half of 2 = {{1}}','Half of 4 = {{2}}','Half of 6 = {{3}}','Half of 8 = {{4}}','Half of 10 = {{5}}'],3),
+   NO('Tip: to find half, share into 2 equal groups and count one group.')),
+  pg('Topic Test: Halves (2)','Add up your marks from both pages.','Check fair sharing and half stories.',
+   BX('4. Share fairly into 2 groups. (6 marks)',['6 sweets|{{3}}|{{3}}','10 nuts|{{5}}|{{5}}','4 eggs|{{2}}|{{2}}']),
+   WP('5. A grown-up reads. Write the answer. (3 marks)',['Ali has 8 marbles. He gives half to Sara. Sara gets {{4}} marbles.','A mango is cut in half. Hira eats 1 half. {{1}} half is left.','10 children play. Half are girls. {{5}} are girls.']),
+   CH('6. Yes or no? Circle. (2 marks)',[['Both halves are the same size.',0],['A half is one of 3 parts.',1]],YN),
+   DR('7. Draw a circle cut into 2 halves. Colour one half. (2 marks)',90),
+   HOW),
+  pg('Word Mat: Halves','Keep this mat on the table. Fold, cut and share to check.','Know what a half is and find half of small numbers.',
+   CN(['pizza','flatbread'],'A half is one of 2 equal parts. 2 halves make 1 whole. To find half of a group, share it into 2 equal groups.','Halves'),
+   FR('One half is shaded. Write 1/2 in each box.',[[2,1,'circle'],[2,1,'rect']]),
+   NO('<b>Halves of numbers</b><br><span style="font-size:19px">half of 2 is 1 · half of 4 is 2 · half of 6 is 3 · half of 8 is 4 · half of 10 is 5</span>'),
+   NO('<b>Maths words</b><br><b>half</b>: one of 2 equal parts · <b>halves</b>: 2 equal parts · <b>whole</b>: all of it<br><b>equal</b>: the same size · <b>share</b>: give out · <b>fair</b>: everyone gets the same'),
+   BK(['half','halves','whole','equal','share','fair','middle']),
+   DR('Draw something you can cut in half.',80))]);
+});
